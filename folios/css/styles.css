@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    /*background-image: url('img/Digitalizacion-sanidad.jpg'); /* Ruta de tu imagen inicial
+    background-size: cover;
+    background-position: center; */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px; /* Ajusta la altura de la imagen inicial según tus necesidades */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color:#235B4E;
+}
+
+
+
+header a {
+    text-decoration: none;
+    color: #DDC9A3;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+.custom-header{
+    background-color: rgb(230, 230, 250);
+    color: rgb(75, 0, 130);
+}
+
+/* Estilo para centrar la tabla y ajustar su ancho */
+#miTabla, #tabla2 {
+    margin: 0 auto; /* Centra la tabla horizontalmente */
+    width: 90%; /* Define el ancho máximo de la tabla */
+}
+
+/* Estilo para centrar el contenido de las celdas de la tabla */
+#miTabla td, #miTabla th, #tabla2 td, #tabla2 th {
+    text-align: center;
+}
+
+/* Estilo para ajustar el ancho de las celdas de "Acciones" */
+#miTabla td:last-child, #tabla2 td:last-child {
+    width: 100px; /* Ajusta el ancho de la columna de "Acciones" según tus necesidades */
+    text-align: center;
+}
+
+/* Estilo para reducir el espaciado entre filas y agregar espacio entre las filas de la tabla */
+#miTabla tbody tr, #tabla2 tbody tr {
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Estilo para los botones en la columna "Acciones" */
+#miTabla .btn, #tabla2 .btn {
+    margin: 0 5px; /* Agrega espacio entre los botones */
+    text-align: center;
+    margin-top: 12px;
+}
+
+/* Define el fondo transparente para ambas tablas */
+#miTabla, #tabla2 {
+    --bs-table-bg: transparent; 
+}
+
+#tabla2_filter,#miTabla_filter {
+    margin-bottom: 15px; /* Ajusta el valor según la cantidad de espacio que deseas */
+}
+
+
+#miTabla_length label {
+    padding-top: 35px;
+    position: absolute;
+    top: -40px; /* Ajusta la posición vertical según tus necesidades */
+}
+
+#tabla2_length label {
+    padding-top: 35px;
+    position: absolute;
+    top: -40px; /* Ajusta la posición vertical según tus necesidades */
+}
+
+.dt-buttons {
+    position: relative;
+    top: 30px; /* Ajusta la posición vertical según tus necesidades */
+}
+
+/* Estilo general para los botones */
+.dt-buttons .dt-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Estilo para el botón "Copy" cuando se hace hover */
+.dt-buttons .buttons-copy:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al hacer hover */
+}
+
+/* Estilo para el botón "CSV" cuando se hace hover */
+.dt-buttons .buttons-csv:hover {
+    background-color: #E0A21B; /* Cambia el color de fondo al hacer hover */
+}
+
+/* Estilo para el botón "Excel" cuando se hace hover */
+.dt-buttons .buttons-excel:hover {
+    background-color: #1E7E2A; /* Cambia el color de fondo al hacer hover */
+}
+
+/* Estilo para el botón "Print" cuando se hace hover */
+.dt-buttons .buttons-print:hover {
+    background-color: #C82333; /* Cambia el color de fondo al hacer hover */
+}
+
+
+/* Estilo para el botón "Copy" */
+.dt-buttons .buttons-copy {
+    background-color: #007BFF; /* Color para "Copy" */
+    color: #fff;
+}
+
+/* Estilo para el botón "CSV" */
+.dt-buttons .buttons-csv {
+    background-color: #FFC107; /* Color para "CSV" */
+    color: #000;
+}
+
+/* Estilo para el botón "Excel" */
+.dt-buttons .buttons-excel {
+    background-color: #28A745; /* Color para "Excel" */
+    color: #fff;
+}
+
+/* Estilo para el botón "Print" */
+.dt-buttons .buttons-print {
+    background-color: #DC3545; /* Color para "Print" */
+    color: #fff;
+}
+
+
