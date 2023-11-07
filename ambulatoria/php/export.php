@@ -74,7 +74,7 @@ while ($datos = mysqli_fetch_assoc($resultado)) {
 header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 header('Content-Disposition: attachment;filename="datos_cirugia.xlsx"');
 header('Cache-Control: max-age=0');
-    
+
 $writer = new Xlsx($spreadsheet);
 $writer->save('php://output');
     

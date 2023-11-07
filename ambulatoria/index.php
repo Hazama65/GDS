@@ -29,7 +29,6 @@
 <body>
 
     <header>
-        <a href="https://hraei.gob.mx/" target="_blank">HRAEI</a>
         <h5 style="color:#DDC9A3; margin-top: 15px;">Inicio - Cirugía Ambulatoria</h5>
         <br>
         <div style="padding: 20px; text-align: right;">

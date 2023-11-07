@@ -93,7 +93,7 @@
                         <option value="Sala 1"<?php if ($sala == 'Sala 1') echo 'selected'; ?>>Sala 1</option>
                         <option value="Sala 2"<?php if ($sala == 'Sala 2') echo 'selected'; ?>>Sala 2</option>
                         <option value="Sala 3"<?php if ($sala == 'Sala 3') echo 'selected'; ?>>Sala 3</option>
-                        <option value="Endosuite"<?php if ($sala == 'Endosuit') echo 'selected'; ?>>Endosuite</option>
+                        <option value="Endo"<?php if ($sala == 'Endo') echo 'selected'; ?>>Endo</option>
                     </select>
                 </div>
 

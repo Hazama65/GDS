@@ -34,23 +34,34 @@
                         <option value="Cristina Grado Limas">Cristina Grado Limas</option>
                         <option value="Daniel Nazario Cruz">Daniel Nazario Cruz</option>
                         <option value="Diana Rivero Mendez">Diana Rivero Mendez</option>
+                        <option value="Ennia Denisse Trejo Martinez">Ennia Denisse Trejo Martinez</option>
                         <option value="Ernesto Amador Romero Rivera">Ernesto Amador Romero Rivera</option>
-                        <option value="Leopoldo Enrique Gatica Galina">Leopoldo Enrique Gatica Galina</option>
+                        <option value="Ernesto Rebolledo Bello">Ernesto Rebolledo Bello</option>
+                        <option value="Francisco Javier Gonzalez Hernandez">Francisco Javier González Hernández</option>
+                        <option value="Francisco Javier Magana Serrano">Francisco Javier Magana Serrano</option>
                         <option value="Gerardo Garza Sainz">Gerardo Garza Sainz</option>
                         <option value="Janet Miriam Galicia Del Castillo">Janet Miriam Galicia Del Castillo</option>
+                        <option value="Javier Medina Suarez">Javier Medina Suarez</option>
+                        <option value="Javier Silva Martinez">Javier Silva Martínez</option>
                         <option value="Jazmín Rodríguez Tapia ">Jazmín Rodríguez Tapia </option>
                         <option value="Jocelyn  Gonzalez Falcón">Jocelyn González Falcón</option>
+                        <option value="Jonathan Valeriano Macizo">Jonathan Valeriano Macizo</option>
+                        <option value="Jose Miguel Lopez Santana">José Miguel López Santana</option>
+                        <option value="Jose Roberto Lopez Hernandez">José Roberto López Hernández</option>
                         <option value="Juan Antonio Maldonado Moreno">Juan Antonio Maldonado Moreno</option>
                         <option value="Juan Luis Angeles Montoya">Juan Luis Angeles Montoya</option>
                         <option value="Luis Antonio Ortiz Morales">Luis Antonio Ortiz Morales</option>
+                        <option value="Leopoldo Enrique Gatica Galina">Leopoldo Enrique Gatica Galina</option>
                         <option value="Luis Licona Vite">Luis Licona Vite</option>
                         <option value="Luis Trujillo Ortiz">Luis Trujillo Ortiz</option>
                         <option value="Marisol Cuan Contreras">Marisol Cuan Contreras</option>
                         <option value="Misael Silva Gonzalez">Misael Silva González</option>
                         <option value="Mónica Mier Cabrera">Mónica Mier Cabrera</option>
-                        <option value="Roberto Albavera Gutierrez">Roberto Albavera Gutiérrez</option>
+                        <option value="Oscar Arturo Borbolla Garcia">Oscar Arturo Borbolla García</option>
+                        <option value="Roberto Renan Albavera Gutierrez">Roberto Renan Albavera Gutiérrez</option>
                         <option value="Roberto Patricio Lopez Maguey">Roberto Patricio López Maguey</option>
                         <option value="Rodrigo Perez Becerra">Rodrigo Pérez Becerra</option>
+                        <option value="Sandra  Sarahi May Lopez">Sandra  Sarahí May Lopez</option>
                         <option value="Sebastian Rueda Mujica">Sebastian Rueda Mujica</option>
                         <option value="Tania Villagra Sanjurjo">Tania Villagra Sanjurjo</option>
                         <option value="Teresa Margarita Cacares Bran">Teresa Margarita Cacares Bran</option>
@@ -72,7 +83,7 @@
                         <option value="Sala 1">Sala 1</option>
                         <option value="Sala 2">Sala 2</option>
                         <option value="Sala 3">Sala 3</option>
-                        <option value="Endosuite">Endosuite</option>
+                        <option value="Endo">Endo</option>
                     </select>
                 </div>
 

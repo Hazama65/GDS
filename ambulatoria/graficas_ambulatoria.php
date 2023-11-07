@@ -28,22 +28,60 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <style>
-        .graficas{
+        
+        .container {
+           
+           text-align: center;
+           margin-bottom: 80px;
+           }
 
-width: 50%;
-height: 500px;
+       .graficas {
+           display: inline-block;
+           width: 100%; /* el ancho de la gráfica */
+           margin-bottom: 20px; /* Espacio entre las gráficas */
+           height: 400px; /* Reduce la altura para que quepan todas las gráficas en la página */
+           margin-top: 10px; /* Agrega margen superior para separar las gráficas del encabezado */
+           margin-bottom: 5%; /* Agrega margen inferior para separar las gráficas del pie de página */
+           vertical-align: top;
+       }
 
-}
+       .badge {
+           display: block;
+           text-align: center;
+           padding: 10px;
+           margin-bottom: 10px;
+           background-color: rgb(97, 24, 9,0.5); /* Color de fondo */
+           color: white;
+           font-size: 20px;
+           }
 
+           body{
+               text-align: center;
+               
+           }
+
+           .fecha {
+   color: #ff5733; /* Color rojo (#ff5733) para las fechas */
+ }
     </style>
+
+
     <title>Gráficas - Cirugia Ambulatoria</title>
 </head>
+
+
 <body>
     <header>
-        <a href="https://hraei.gob.mx/" target="_blank">HRAEI</a>
+        <a href="index.php"> <!-- Redirige al index -->
+            <button type="button" class="btn btn-outline-light">
+                <i class="bi bi-sign-turn-left"></i>
+            </button>
+        </a>
         <h5 style="color:#DDC9A3; margin-top: 15px;">Gráficas - Cirugia Ambulatoria</h5>
         <br>
     </header>
+
+
     <br>
     <form action="" method="POST" autocomplete="off">
         <label for="fechaInicio">Fecha de inicio:</label>
@@ -58,29 +96,48 @@ height: 500px;
         ?>
     </form>
 
-    <h1>uso de salas</h1>
-    <div class="graficas" id="grafica1"></div>
-    <h1>programada_inicio</h1>
-    <div class="graficas" id="grafica2"></div>
-    <h1>ingreso_egreso</h1>
-    <div class="graficas" id="grafica3"></div>
-    <h1>ingreso_anestesia</h1>
-    <div class="graficas" id="grafica4"></div>
-    <h1>ingreso_inicio</h1>
-    <div class="graficas" id="grafica5"></div>
-    <h1>inicio_fin</h1>
-    <div class="graficas" id="grafica6"></div>
-    <h1>total cirugias</h1>
-    <div class="graficas" id="grafica7"></div>
-    <h1>Suspenciones</h1>
-    <div class="graficas" id="grafica8"></div>
+    <div class="container">
+        <div class="graficas" id="grafica1">
+            <span class="badge">Uso de Salas</span>
+        </div>
+
+        <div class="graficas" id="grafica2">
+            <span class="badge">Programada - Inicio</span>
+        </div>
+
+        <div class="graficas" id="grafica3">
+            <span class="badge">Ingreso - Egreso</span>
+        </div>
+
+        <div class="graficas" id="grafica4">
+            <span class="badge">Ingreso - Anestesia</span>
+        </div>
+
+        <div class="graficas" id="grafica5">
+            <span class="badge">Ingreso - Inicio</span>
+        </div>
+
+        <div class="graficas" id="grafica6">
+            <span class="badge">Inicio de Cirugía - Fin de Cirugía</span>
+        </div>
+
+        <div class="graficas" id="grafica7">
+            <span class="badge">Total de cirugías</span>
+        </div>
+
+        <div class="graficas" id="grafica8">
+            <span class="badge">Cirugías Suspendidas</span>
+        </div>
+
+    </div>
+
+ 
 
 
     <footer>
         Hospital Regional de Alta Especialidad de Ixtapaluca
         <p style="font-size: 10px">
-            Dirección de Operaciones - Subdirección de Tecnologías de la Información 
-            <br> Gestión Digital en Salud - 2023
+            Dirección de Operaciones - Gestión Digital en Salud - 2023
         </p> 
     </footer>
 
