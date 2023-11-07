@@ -26,35 +26,72 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <style>
-        .graficas{
+        .container {
+            
+            text-align: center;
+            margin-bottom: 80px;
+            }
 
-width: 50%;
-height: 500px;
+        .graficas {
+            display: inline-block;
+            width: 100%; /* el ancho de la gráfica */
+            margin-bottom: 20px; /* Espacio entre las gráficas */
+            height: 400px; /* Reduce la altura para que quepan todas las gráficas en la página */
+            margin-top: 10px; /* Agrega margen superior para separar las gráficas del encabezado */
+            margin-bottom: 5%; /* Agrega margen inferior para separar las gráficas del pie de página */
+            vertical-align: top;
+        }
 
-}
+        .badge {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: rgb(113, 172, 247,0.5); /* Color de fondo */
+            color: white;
+            font-size: 20px;
+            }
 
+            body{
+                text-align: center;
+                
+            }
+
+            .fecha {
+            color: #ff5733; /* Color rojo (#ff5733) para las fechas */
+            }
     </style>
     <title>Gráficas - Interconsulta</title>
 </head>
 <body>
     <header>
-        <a href="https://hraei.gob.mx/" target="_blank">HRAEI</a>
+        <a href="index.php">
+            <button type="button" class="btn btn-outline-light" id="inicio-button" title="Inicio">
+                <i class="bi bi-rewind-fill"></i>
+            </button>
+        </a>
         <h5 style="color:#DDC9A3; margin-top: 15px;">Gráficas - Interconsulta</h5>
         <br>
     </header>
     <br>
 
-
-    <h1>Residentes</h1>
-    <div class="graficas" id="grafica1"></div>
-    <h1>Responsable</h1>
-    <div class="graficas" id="grafica2"></div>
-    <h1>Servicio IC</h1>
-    <div class="graficas" id="grafica3"></div>
-    <h1>Servicio Respondiente</h1>  
-    <div class="graficas" id="grafica4"></div>
-    <h1>Tiempo de Respuesta (Dias) </h1>
-    <div class="graficas" id="grafica5"></div>
+    <div class="container">
+        <div class="graficas" id="grafica1">        
+            <span class="badge">Residentes</span>
+        </div>
+        <div class="graficas" id="grafica2">
+            <span class="badge">Responsable</span>
+        </div>
+        <div class="graficas" id="grafica3">
+            <span class="badge">Servicio IC</span>
+        </div>
+        <div class="graficas" id="grafica4">
+            <span class="badge">Servicio Respondiente</span>
+        </div>
+        <div class="graficas" id="grafica5">
+            <span class="badge">Tiempo de Respuesta (Dias)</span>
+        </div>
+    </div>
 
 
 

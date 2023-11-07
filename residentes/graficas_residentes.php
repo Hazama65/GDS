@@ -27,12 +27,51 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <style>
-        .graficas{
+        
+        .container {
+            
+            text-align: center;
+            margin-bottom: 80px;
+            }
 
-width: 50%;
-height: 500px;
+        .graficas {
+            display: inline-block;
+            width: 48%; /* el ancho de la gráfica */
+            margin-bottom: 20px; /* Espacio entre las gráficas */
+            height: 400px; /* Reduce la altura para que quepan todas las gráficas en la página */
+            margin-top: 10px; /* Agrega margen superior para separar las gráficas del encabezado */
+            margin-bottom: 5%; /* Agrega margen inferior para separar las gráficas del pie de página */
+            vertical-align: top;
+        }
 
-}
+        .badge {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #7250be, #aceaa7);
+            color: white;
+            font-size: 20px;
+            }
+
+            body{
+                text-align: center;
+                
+            }
+
+            .fecha {
+            color: #ff5733; /* Color rojo (#ff5733) para las fechas */
+            }
+
+            .graficas-container {
+                display: flex;  /* Usar flexbox para alinear elementos en línea */
+                justify-content: space-between;  /* Espacio igual entre las gráficas */
+                align-items: flex-start; /* Alinear las gráficas en la parte superior */
+                flex-wrap: wrap;  /* Envolver las gráficas si no caben en una sola línea */
+            }
+
+
+    </style>
 
     </style>
     <title>Gráficas - Cirugia Ambulatoria</title>
@@ -40,7 +79,7 @@ height: 500px;
 <body>
     <header>
         <a href="https://hraei.gob.mx/" target="_blank">HRAEI</a>
-        <h5 style="color:#DDC9A3; margin-top: 15px;">Gráficas - Cirugia Ambulatoria</h5>
+        <h5 style="color:white; margin-top: 15px;">Gráficas - Residentes</h5>
         <br>
     </header>
     <br>
@@ -89,64 +128,92 @@ height: 500px;
         ?>
     </form>
 
-    <h1>Conteo Total</h1>
-    <div class="graficas" id="grafica1"></div>
-    <h1>Conteo Residentes</h1>
-    <div class="graficas" id="grafica2"></div>
-    <h1>Datos de: <?php echo $residente; ?></h1>
-    <div class="graficas" id="grafica3"></div>
-    <h1>Intento Punción Lumbar</h1>
-    <div class="graficas" id="grafica4"></div>
-    <h1>Complicaciones Punción Lumbar</h1>
-    <div class="graficas" id="grafica5"></div>
-    <h1>Intento Intubación</h1>
-    <div class="graficas" id="grafica6"></div>
-    <h1>Complicaciones Intubación</h1>
-    <div class="graficas" id="grafica7"></div>
-    <h1>Intento CVC</h1>
-    <div class="graficas" id="grafica8"></div>
-    <h1>Complicaciones CVC</h1>
-    <div class="graficas" id="grafica9"></div>
-    <h1>Intento Paracentesis</h1>
-    <div class="graficas" id="grafica10"></div>
-    <h1>Complicaciones Paracentesis</h1>
-    <div class="graficas" id="grafica11"></div>
-    <h1>Intento Biopsia Piel</h1>
-    <div class="graficas" id="grafica12"></div>
-    <h1>Complicaciones Biopsia Piel</h1>
-    <div class="graficas" id="grafica13"></div>
-    <h1>Intento Biopsia Tejido Celular SUBC</h1>
-    <div class="graficas" id="grafica14"></div>
-    <h1>Complicaciones Biopsia Tejido Celular SUBC</h1>
-    <div class="graficas" id="grafica15"></div>
-    <h1>Intento Biopsia Tiroides</h1>
-    <div class="graficas" id="grafica16"></div>
-    <h1>Complicaciones Biopsia Tiroides</h1>
-    <div class="graficas" id="grafica17"></div>
-    <h1>Intento Toracocentesis</h1>
-    <div class="graficas" id="grafica18"></div>
-    <h1>Complicaciones Toracocentesis</h1>
-    <div class="graficas" id="grafica19"></div>
-    <h1>Intento Artrocentesis</h1>
-    <div class="graficas" id="grafica20"></div>
-    <h1>Complicaciones Artrocentesis</h1>
-    <div class="graficas" id="grafica21"></div>
-    <h1>Intento Aspiración de MO</h1>
-    <div class="graficas" id="grafica22"></div>
-    <h1>Complicaciones Aspiración de MO</h1>
-    <div class="graficas" id="grafica23"></div>
+
+    <div class="container">
+        <div class="graficas" id="grafica1">
+            <span class="badge">Conteo Total</span>
+        </div>
+        <div class="graficas" id="grafica2">
+            <span class="badge">Conteo Residentes</span>
+        </div>
+        <div class="graficas" id="grafica3">
+            <span class="badge">Datos de: <?php echo $residente; ?></span>
+        </div>
+        <div class="graficas-container">
+            <div class="graficas" id="grafica4">
+                <span class="badge">Intento Punción Lumbar</span>
+            </div>
+            <div class="graficas" id="grafica5">
+                <span class="badge">Complicaciones Punción Lumbar</span>
+            </div>
+            <div class="graficas" id="grafica6">
+                <span class="badge">Intento Intubación</span>
+            </div>
+            <div class="graficas" id="grafica7">
+                <span class="badge">Complicaciones Intubación</span>
+            </div>
+            <div class="graficas" id="grafica8">
+                <span class="badge">Intento CVC</span>
+            </div>
+            <div class="graficas" id="grafica9">
+                <span class="badge">Complicaciones CVC</span>
+            </div>
+            <div class="graficas" id="grafica10">
+                <span class="badge">Intento Paracentesis</span>
+            </div>
+            <div class="graficas" id="grafica11">
+                <span class="badge">Complicaciones Paracentesis</span>
+            </div>
+            <div class="graficas" id="grafica12">
+                <span class="badge">Intento Biopsia Piel</span>
+            </div>
+            <div class="graficas" id="grafica13">
+                <span class="badge">Complicaciones Biopsia Piel</span>
+            </div>
+            <div class="graficas" id="grafica14">
+                <span class="badge">Intento Biopsia Tejido Celular SUBC</span>
+            </div>
+            <div class="graficas" id="grafica15">
+                <span class="badge">Complicaciones Biopsia Tejido Celular SUBC</span>
+            </div>
+            <div class="graficas" id="grafica16">
+                <span class="badge">Intento Biopsia Tiroides</span>
+            </div>
+            <div class="graficas" id="grafica17">
+                <span class="badge">Complicaciones Biopsia Tiroides</span>
+            </div>
+            <div class="graficas" id="grafica18">
+                <span class="badge">Intento Toracocentesis</span>
+            </div>
+            <div class="graficas" id="grafica19">
+                <span class="badge">Complicaciones Toracocentesis</span>
+            </div>
+            <div class="graficas" id="grafica20">
+                <span class="badge">Intento Artrocentesis</span>
+            </div>
+            <div class="graficas" id="grafica21">
+                <span class="badge">Complicaciones Artrocentesis</span>
+            </div>
+            <div class="graficas" id="grafica22">
+                <span class="badge">Intento Aspiración de MO</span>
+            </div>
+            <div class="graficas" id="grafica23">
+                <span class="badge">Complicaciones Aspiración de MO</span>
+            </div>
+        </div>
+    </div>
 
 
 
 
-<!-- 
+
     <footer>
         Hospital Regional de Alta Especialidad de Ixtapaluca
         <p style="font-size: 10px">
             Dirección de Operaciones - Subdirección de Tecnologías de la Información 
             <br> Gestión Digital en Salud - 2023
         </p> 
-    </footer> -->
+    </footer>
 
 </body>
 <script src="https://cdn.amcharts.com/lib/5/index.js"></script>

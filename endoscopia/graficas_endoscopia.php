@@ -72,9 +72,9 @@
 <body>
 
     <header>
-        <a href="index.php"> <!-- Reemplaza "index.html" con la URL de tu página principal -->
-            <button type="button" class="btn btn-outline-light">
-                <i class="bi bi-sign-turn-left"></i>
+        <a href="index.php">
+            <button type="button" class="btn btn-outline-light" id="inicio-button" title="Inicio">
+                <i class="bi bi-rewind-fill"></i>
             </button>
         </a>
         <strong style="color:aliceblue; margin-top: 10px; font-size: 25px;">Gráficas de la Clínica de Endoscopía</strong><br>

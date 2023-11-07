@@ -61,8 +61,8 @@
            }
 
            .fecha {
-   color: #ff5733; /* Color rojo (#ff5733) para las fechas */
- }
+        color: #ff5733; /* Color rojo (#ff5733) para las fechas */
+        }
     </style>
 
 
@@ -72,9 +72,9 @@
 
 <body>
     <header>
-        <a href="index.php"> <!-- Redirige al index -->
-            <button type="button" class="btn btn-outline-light">
-                <i class="bi bi-sign-turn-left"></i>
+        <a href="index.php">
+            <button type="button" class="btn btn-outline-light" id="inicio-button" title="Inicio">
+                <i class="bi bi-rewind-fill"></i>
             </button>
         </a>
         <h5 style="color:#DDC9A3; margin-top: 15px;">Gráficas - Cirugia Ambulatoria</h5>

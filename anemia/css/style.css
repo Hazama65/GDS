@@ -25,12 +25,6 @@ header a {
     margin-right: 20px;
 }
 
-.patient-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 footer {
     background-color: #10312b;
     color: rgb(152,152,153,0.5);
@@ -89,7 +83,18 @@ footer {
     overflow-y: auto; /* Agrega scroll vertical si el contenido excede la altura máxima */
     padding: 10px; /* Espaciado opcional */
   }
-  
+
+  .patient-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer; /* Cambia el cursor a un puntero */
+    transition: background-color 0.3s; /* Agrega transición al cambio de color */
+}
+
+.patient-item:hover {
+    background-color: lightgray; /* Cambia el color al pasar el mouse */
+}
   
 
 /*TABLA

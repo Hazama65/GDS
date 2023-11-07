@@ -31,8 +31,13 @@
 
     <header>
         <a href="https://hraei.gob.mx/" target="_blank">HRAEI</a>
-        <h5 style="color:#f0f0f0; margin-top: 15px;">Inicio - Productividad Residentes Medicina Interna</h5>
+        <h5 style="color:#f0f0f0; margin-top: 15px; margin-left: 300px;">Inicio - Productividad Residentes Medicina Interna</h5>
         <br>
+        <div style="padding: 20px; text-align: right;">
+                <button type="button" class="btn btn-outline-light" id="cerrar-sesion-button" title="Cerrar sesión">
+                    <i class="bi bi-power"></i> 
+                </button>
+            </div>
     </header>
     <br>
 
@@ -122,10 +127,21 @@
             <br> Gestión Digital en Salud - 2023
         </p> 
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cerrarSesionButton = document.getElementById('cerrar-sesion-button');
+            
+            cerrarSesionButton.addEventListener('click', function () {
+                // Redirige al usuario a la página de cierre de sesión
+                window.location.href = 'php/destroysession.php';
+            });
+        });
+    </script>
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/javascript.js"></script>
     <script src="js/scriptmodal.js"></script>
     <script src="js/visualizacion.js"></script>
 
