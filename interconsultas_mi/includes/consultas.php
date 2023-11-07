@@ -57,6 +57,19 @@
             );
         }
     }
+
+    $query_diasDiferencia = "SELECT diferencia_dias, COUNT(diferencia_dias) as conteo FROM procedimientos GROUP BY diferencia_dias";
+    $result_diasDiferencia = mysqli_query($conn,$query_diasDiferencia);
+    $data_diasDiferencia = array();
+    
+    if ($result_diasDiferencia->num_rows > 0) {
+        while ($row = $result_diasDiferencia->fetch_assoc()) {
+            $data_diasDiferencia[] = array(
+                "country" => $row["diferencia_dias"],
+                "value" => intval($row["conteo"])
+            );
+        }
+    }
     
 
 

@@ -61,11 +61,18 @@
                     <td><?php echo $fecha_resp; ?></td>
                 </tr>
                 <tr>
+                    <td class="estilo-celda">Tiempo de Respuesta</td>
+                    <td id="diferencia_celda"><?php echo $diferencia_dias; ?> Dia(s)</td>
+                </tr>
+                <tr>
                     <td class="estilo-celda">Observaciones</td>
                     <td><?php echo $observaciones; ?></td>
                 </tr>
         </tbody>
     </table>
+    <script src="js/consulta.js"></script>
+
+
     
 </body>
 </html>

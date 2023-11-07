@@ -24,7 +24,8 @@
         $fecha_ric             = $_POST['fecha_ric'];
         $observaciones         = $_POST['observaciones'];
 
-        $queryProcedimiento ="INSERT INTO procedimientos 
+        $queryProcedimiento ="INSERT INTO procedimientos (servicio_interconsulta,servicio_respondiente,fecha_interconsulta,
+        fecha_respuesta,observaciones,id_paciente)
         VALUES('$servicio_ic','$servicio_respondiente','$fecha_ic','$fecha_ric','$observaciones','$ultimoID')";
 
         $dataProcedimiento = $connectionDB->ShotSimple($queryProcedimiento);

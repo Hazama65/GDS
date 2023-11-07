@@ -4,7 +4,6 @@
     header("Pragma: no-cache");
 
     if (!isset($_SESSION['valid_user'])) {
-        // El usuario no ha iniciado sesión, redirige de vuelta a la página de inicio de sesión
         header('Location: ../login/index.php');
         exit;
     }
@@ -54,6 +53,8 @@ height: 500px;
     <div class="graficas" id="grafica3"></div>
     <h1>Servicio Respondiente</h1>  
     <div class="graficas" id="grafica4"></div>
+    <h1>Tiempo de Respuesta (Dias) </h1>
+    <div class="graficas" id="grafica5"></div>
 
 
 
@@ -74,7 +75,9 @@ height: 500px;
     include('includes/grafica1.php');
     include('includes/grafica2.php');
     include('includes/grafica3.php');
-    include('includes/grafica4.php');
+    include('includes/grafica4.php');    
+    include('includes/grafica5.php');
+
 
 ?>
 </html>

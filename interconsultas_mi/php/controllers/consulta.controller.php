@@ -24,6 +24,7 @@
                 $fecha_inter = $data['fecha_interconsulta'];
                 $fecha_resp =$data ['fecha_respuesta'];
                 $observaciones = $data['observaciones'];
+                $diferencia_dias = intval($data['diferencia_dias']);
             }
         }else {
             echo "No se encontro la informacion";
