@@ -197,6 +197,10 @@
                 <td><?php echo $cv_TpoCVC1; ?></td>
             </tr>
             <tr>
+                <td class="estilo-celda">Sitio Anatomico</td>
+                <td><?php echo $cv_Anatomia1; ?></td>
+            </tr>
+            <tr>
                 <td class="estilo-celda">Intento</td>
                 <td><?php echo $cv_intento1; ?></td>
             </tr>
@@ -226,6 +230,10 @@
                 <td><?php echo $cv_TpoCVC2; ?></td>
             </tr>
             <tr>
+                <td class="estilo-celda">Sitio Anatomico</td>
+                <td><?php echo $cv_Anatomia2; ?></td>
+            </tr>
+            <tr>
                 <td class="estilo-celda">Intento</td>
                 <td><?php echo $cv_intento2; ?></td>
             </tr>
@@ -253,6 +261,10 @@
             <tr>
                 <td class="estilo-celda">Tipo de CVC</td>
                 <td><?php echo $cv_TpoCVC3; ?></td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Sitio Anatomico</td>
+                <td><?php echo $cv_Anatomia3; ?></td>
             </tr>
             <tr>
                 <td class="estilo-celda">Intento</td>

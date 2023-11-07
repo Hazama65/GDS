@@ -59,16 +59,19 @@
                 
 
                 $cv_TpoCVC1 = $data['cv_TpoCVC1'];
+                $cv_Anatomia1 = $data['cv_Anatomia1'];
                 $cv_intento1 = $data['cv_intento1'];
                 $cv_comp1 = $data['cv_comp1'];
                 $cv_TpoComp1 = $data['cv_TpoComp1'];
                 $cv_otros1 = $data['cv_otros1'];
                 $cv_TpoCVC2 = $data['cv_TpoCVC2'];
+                $cv_Anatomia2 = $data['cv_Anatomia2'];
                 $cv_intento2 = $data['cv_intento2'];
                 $cv_comp2 = $data['cv_comp2'];
                 $cv_TpoComp2 = $data['cv_TpoComp2'];
                 $cv_otros2 = $data['cv_otros2'];
                 $cv_TpoCVC3 = $data['cv_TpoCVC3'];
+                $cv_Anatomia3 = $data['cv_Anatomia3'];
                 $cv_intento3 = $data['cv_intento3'];
                 $cv_comp3 = $data['cv_comp3'];
                 $cv_TpoComp3 = $data['cv_TpoComp3'];

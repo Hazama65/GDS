@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background: linear-gradient(45deg, #97ABFF, #50b1d2);
+    height: 50px; /* Ajusta la altura del encabezado según tus necesidades */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: rgb(255, 255, 255); /* Agregué color de texto blanco para mayor visibilidad */
+
+}
+
+header a {  /* COLOR A LA LETRA HRAEI */
+    display: inline;
+    background: linear-gradient(to right, #FFFFFF, #FFFFFF);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 24px; /* Aumenta el tamaño de la letra */
+}
+
+.patient-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    background: linear-gradient(45deg, #97ABFF, #50b1d2);
+    color: #ececec;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+#search {
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+}
+
+#patient-list {
+    list-style: none;
+    padding: 0;
+    background-color: white; /* Fondo blanco */
+    border: 1px solid rgb(62, 104, 170,0.5); /* Borde alrededor de la lista */
+    border-radius: 5px; /* Esquinas redondeadas */
+    margin: 10px;
+}
+
+#patient-list li {
+    margin: 0; /* Elimina el margen entre elementos */
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Borde inferior para separar pacientes */
+}
+
+#patient-list li:last-child {
+    border-bottom: none; /* Elimina el borde inferior del último paciente */
+}
+
+/* Agrega un borde alrededor del contenedor de la tabla */
+#patient-list-container {
+    border: 1px solid #ddd; /* Color y grosor del borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 10px; /* Espacio alrededor de la tabla */
+}
+.custom-header {
+    color: aliceblue;
+    background-color: #ffffff; /* Cambia esto al color que desees */
+    /* Otros estilos opcionales, como color de texto, espaciado, etc. */
+     /* Cambia el color del texto si es necesario */
+    padding: 10px; /* Añade espaciado alrededor del contenido del encabezado */
+  }
+
+  /*SCROLL BUSCADOR*/
+  #patient-list-container {
+    background-color: rgb(62, 104, 170,0.5);
+    max-height: 800px; /* Altura máxima del div */
+    overflow-y: auto; /* Agrega scroll vertical si el contenido excede la altura máxima */
+    padding: 10px; /* Espaciado opcional */
+  }
+  
+  
+
+/*TABLA
+*/
+
+
+ /* Estilo para el encabezado de la tabla */
+ .tabla-consulta th {
+    background-color: #ffffff;
+    color: aliceblue;
+    text-align: left;
+    padding: 10px;
+}
+
+
+/* Estilo para las celdas con la clase "estilo-celda" */
+.tabla-consulta td.estilo-celda {
+    font-weight: bold;
+    color: black; /* Cambia el color del texto de las celdas con esta clase */
+}
+

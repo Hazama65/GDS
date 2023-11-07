@@ -493,8 +493,18 @@
                 <option value="Seleccione">Seleccione</option>  <!-- Estas líneas definen las opciones dentro del menú desplegable Tipó de CVC -->
                 <option value="MAHURKAR">MAHURKAR</option>
                 <option value="NIAGARA">NIAGARA</option>
-
+                <option value="CATÉTER VENOSO CENTRAL">CATÉTER VENOSO CENTRAL</option>
             </select>
+        </div>
+
+        <div class="col-md-3" id="intento_cvc1" >
+                    <span style="font-size: 14px;">Sitio Anatomico</span>
+                    <select name="sitio_anatomico_1" id="sitio_anatomico_1" class="form-control" style="font-size: 14px;" >
+                        <option value="Seleccione">Seleccione</option>  <!-- Estas líneas definen las opciones dentro del menú desplegable de Intentos. -->
+                        <option value="Subclavio">Subclavio</option>
+                        <option value="Yugular">Yugular</option>
+                        <option value="Femoral">Femoral</option>
+                    </select>
         </div>
 
         <div class="col-md-3" id="intento_cvc1" >
@@ -559,8 +569,19 @@
                 <option value="Seleccione">Seleccione</option>
                 <option value="MAHURKAR">MAHURKAR</option>
                 <option value="NIAGARA">NIAGARA</option>
+                <option value="CATÉTER VENOSO CENTRAL">CATÉTER VENOSO CENTRAL</option>
             </select>
         </div>
+
+            <div class="col-md-3" id="intento_cvc1" >
+                <span style="font-size: 14px;">Sitio Anatomico</span>
+                <select name="sitio_anatomico_2" id="sitio_anatomico_2" class="form-control" style="font-size: 14px;" >
+                    <option value="Seleccione">Seleccione</option> 
+                    <option value="Subclavio">Subclavio</option>
+                    <option value="Yugular">Yugular</option>
+                    <option value="Femoral">Femoral</option>
+                </select>
+            </div>
 
         <div class="col-md-3" id="intento_cvc2" >
                     <span style="font-size: 14px;">Intento</span>
@@ -621,8 +642,18 @@
                 <option value="Seleccione">Seleccione</option>
                 <option value="MAHURKAR">MAHURKAR</option>
                 <option value="NIAGARA">NIAGARA</option>
-
+                <option value="CATÉTER VENOSO CENTRAL">CATÉTER VENOSO CENTRAL</option>
             </select>
+        </div>
+
+        <div class="col-md-3" id="intento_cvc1" >
+                    <span style="font-size: 14px;">Sitio Anatomico</span>
+                    <select name="sitio_anatomico_3" id="sitio_anatomico_3" class="form-control" style="font-size: 14px;" >
+                        <option value="Seleccione">Seleccione</option>  
+                        <option value="Subclavio">Subclavio</option>
+                        <option value="Yugular">Yugular</option>
+                        <option value="Femoral">Femoral</option>
+                    </select>
         </div>
 
         <div class="col-md-3" id="intento_cvc3" >

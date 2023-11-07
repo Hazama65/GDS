@@ -73,24 +73,27 @@
 
 
         $tipocvc               = $_POST['tipocvc'];
+        $sitio_anatomico_1     = $_POST['sitio_anatomico_1'];
         $intento_cvc_1         = $_POST['intento_cvc_1'];
         $complicacion_cvc1     = $_POST['complicacion_cvc1'];
         $tipocomplicacion_cvc1 = $_POST['tipocomplicacion_cvc1'];
         $cvc_otros_1           = $_POST['cvc_otros_1'];
         $tipocvc2              = $_POST['tipocvc2'];
+        $sitio_anatomico_2     = $_POST['sitio_anatomico_2'];
         $intento_cvc_2         = $_POST['intento_cvc_2'];
         $complicacion_cvc2     = $_POST['complicacion_cvc2'];
         $tipocomplicacion_cvc2 = $_POST['tipocomplicacion_cvc2'];
         $cvc_otros_2           = $_POST['cvc_otros_2'];
         $tipocvc3              = $_POST['tipocvc3'];
+        $sitio_anatomico_3     = $_POST['sitio_anatomico_3'];
         $intento_cvc_3         = $_POST['intento_cvc_3'];
         $complicacion_cvc3     = $_POST['complicacion_cvc3'];
         $tipocomplicacion_cvc3 = $_POST['tipocomplicacion_cvc3'];
         $cvc_otros_3           = $_POST['cvc_otros_3'];
 
-        $queryCvc = "INSERT INTO cvc VALUES ('$tipocvc','$intento_cvc_1','$complicacion_cvc1','$tipocomplicacion_cvc1',
-        '$cvc_otros_1','$tipocvc2','$intento_cvc_2','$complicacion_cvc2','$tipocomplicacion_cvc2','$cvc_otros_2','$tipocvc3',
-        '$intento_cvc_3','$complicacion_cvc3','$tipocomplicacion_cvc3','$cvc_otros_3','$ultimoId')";
+        $queryCvc = "INSERT INTO cvc VALUES ('$tipocvc','$sitio_anatomico_1','$intento_cvc_1','$complicacion_cvc1','$tipocomplicacion_cvc1',
+        '$cvc_otros_1','$tipocvc2','$sitio_anatomico_2','$intento_cvc_2','$complicacion_cvc2','$tipocomplicacion_cvc2','$cvc_otros_2',
+        '$tipocvc3','$sitio_anatomico_3','$intento_cvc_3','$complicacion_cvc3','$tipocomplicacion_cvc3','$cvc_otros_3','$ultimoId')";
 
         $dataCvc= $connectionDB->ShotSimple($queryCvc);
 

@@ -526,7 +526,18 @@
                     <option value="Seleccione"<?php if ($cv_TpoCVC1 == 'Seleccione') echo 'selected'; ?>>Seleccione</option>  <!-- Estas líneas definen las opciones dentro del menú desplegable Tipó de CVC -->
                     <option value="MAHURKAR"<?php if ($cv_TpoCVC1 == 'MAHURKAR') echo 'selected'; ?>>MAHURKAR</option>
                     <option value="NIAGARA"<?php if ($cv_TpoCVC1 == 'NIAGARA') echo 'selected'; ?>>NIAGARA</option>
+                    <option value="CATÉTER VENOSO CENTRAL"<?php if ($cv_TpoCVC1 == 'CATÉTER VENOSO CENTRAL') echo 'selected'; ?>>CATÉTER VENOSO CENTRAL</option>
                 </select>
+            </div>
+
+            <div class="col-md-3" id="intento_cvc1" >
+                        <span style="font-size: 14px;">Sitio Anatomico</span>
+                        <select name="sitio_anatomico_1" id="sitio_anatomico_1" class="form-control" style="font-size: 14px;" >
+                            <option value="Seleccione"<?php if ($cv_Anatomia1 == 'Seleccione') echo 'selected'; ?>>Seleccione</option>
+                            <option value="Subclavio"<?php if ($cv_Anatomia1 == 'Subclavio') echo 'selected'; ?>>Subclavio</option>
+                            <option value="Yugular"<?php if ($cv_Anatomia1 == 'Yugular') echo 'selected'; ?>>Yugular</option>
+                            <option value="Femoral"<?php if ($cv_Anatomia1 == 'Femoral') echo 'selected'; ?>>Femoral</option>
+                        </select>
             </div>
 
             <div class="col-md-3" id="intento_cvc1" >
@@ -591,7 +602,18 @@
                     <option value="Seleccione"<?php if ($cv_TpoCVC2 == 'Seleccione') echo 'selected'; ?>>Seleccione</option>  <!-- Estas líneas definen las opciones dentro del menú desplegable Tipó de CVC -->
                     <option value="MAHURKAR"<?php if ($cv_TpoCVC2 == 'MAHURKAR') echo 'selected'; ?>>MAHURKAR</option>
                     <option value="NIAGARA"<?php if ($cv_TpoCVC2 == 'NIAGARA') echo 'selected'; ?>>NIAGARA</option>
+                    <option value="CATÉTER VENOSO CENTRAL"<?php if ($cv_TpoCVC2 == 'CATÉTER VENOSO CENTRAL') echo 'selected'; ?>>CATÉTER VENOSO CENTRAL</option>
                 </select>
+            </div>
+
+            <div class="col-md-3" id="intento_cvc1" >
+                        <span style="font-size: 14px;">Sitio Anatomico</span>
+                        <select name="sitio_anatomico_2" id="sitio_anatomico_2" class="form-control" style="font-size: 14px;" >
+                            <option value="Seleccione"<?php if ($cv_Anatomia2 == 'Seleccione') echo 'selected'; ?>>Seleccione</option>
+                            <option value="Subclavio"<?php if ($cv_Anatomia2 == 'Subclavio') echo 'selected'; ?>>Subclavio</option>
+                            <option value="Yugular"<?php if ($cv_Anatomia2 == 'Yugular') echo 'selected'; ?>>Yugular</option>
+                            <option value="Femoral"<?php if ($cv_Anatomia2 == 'Femoral') echo 'selected'; ?>>Femoral</option>
+                        </select>
             </div>
 
             <div class="col-md-3" id="intento_cvc2" >
@@ -653,7 +675,18 @@
                     <option value="Seleccione"<?php if ($cv_TpoCVC3 == 'Seleccione') echo 'selected'; ?>>Seleccione</option>  <!-- Estas líneas definen las opciones dentro del menú desplegable Tipó de CVC -->
                     <option value="MAHURKAR"<?php if ($cv_TpoCVC3 == 'MAHURKAR') echo 'selected'; ?>>MAHURKAR</option>
                     <option value="NIAGARA"<?php if ($cv_TpoCVC3 == 'NIAGARA') echo 'selected'; ?>>NIAGARA</option>
+                    <option value="CATÉTER VENOSO CENTRAL"<?php if ($cv_TpoCVC3 == 'CATÉTER VENOSO CENTRAL') echo 'selected'; ?>>CATÉTER VENOSO CENTRAL</option>
                 </select>
+            </div>
+
+            <div class="col-md-3" id="intento_cvc1" >
+                        <span style="font-size: 14px;">Sitio Anatomico</span>
+                        <select name="sitio_anatomico_3" id="sitio_anatomico_3" class="form-control" style="font-size: 14px;" >
+                            <option value="Seleccione"<?php if ($cv_Anatomia3 == 'Seleccione') echo 'selected'; ?>>Seleccione</option>
+                            <option value="Subclavio"<?php if ($cv_Anatomia3 == 'Subclavio') echo 'selected'; ?>>Subclavio</option>
+                            <option value="Yugular"<?php if ($cv_Anatomia3 == 'Yugular') echo 'selected'; ?>>Yugular</option>
+                            <option value="Femoral"<?php if ($cv_Anatomia3 == 'Femoral') echo 'selected'; ?>>Femoral</option>
+                        </select>
             </div>
 
             <div class="col-md-3" id="intento_cvc3" >

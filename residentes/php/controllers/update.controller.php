@@ -81,16 +81,19 @@
 
         $conteo_cvc = $_POST['conteo_cvc'];
         $tipocvc = $_POST['tipocvc'];
+        $sitio_anatomico_1 = $_POST['sitio_anatomico_1'];
         $intento_cvc_1 = $_POST['intento_cvc_1'];
         $complicacion_cvc1 = $_POST['complicacion_cvc1'];
         $tipocomplicacion_cvc1 = $_POST['tipocomplicacion_cvc1'];
         $cvc_otros_1 = $_POST['cvc_otros_1'];
         $tipocvc2 = $_POST['tipocvc2'];
+        $sitio_anatomico_2 = $_POST['sitio_anatomico_2'];
         $intento_cvc_2 = $_POST['intento_cvc_2'];
         $complicacion_cvc2 = $_POST['complicacion_cvc2'];
         $tipocomplicacion_cvc2 = $_POST['tipocomplicacion_cvc2'];
         $cvc_otros_2 = $_POST['cvc_otros_2'];
         $tipocvc3 = $_POST['tipocvc3'];
+        $sitio_anatomico_3 = $_POST['sitio_anatomico_3'];
         $intento_cvc_3 = $_POST['intento_cvc_3'];
         $complicacion_cvc3 = $_POST['complicacion_cvc3'];
         $tipocomplicacion_cvc3 = $_POST['tipocomplicacion_cvc3'];
@@ -99,16 +102,19 @@
         $queryCvc = "UPDATE cvc
         SET 
             cv_TpoCVC1 = '$tipocvc',
+            cv_Anatomia1 = '$sitio_anatomico_1',
             cv_intento1 = '$intento_cvc_1',
             cv_comp1 = '$complicacion_cvc1',
             cv_TpoComp1 = '$tipocomplicacion_cvc1',
             cv_otros1 = '$cvc_otros_1',
             cv_TpoCVC2 = '$tipocvc2',
+            cv_Anatomia2 = '$sitio_anatomico_2',
             cv_intento2 = '$intento_cvc_2',
             cv_comp2 = '$complicacion_cvc2',
             cv_TpoComp2 = '$tipocomplicacion_cvc2',
             cv_otros2 = '$cvc_otros_2',
             cv_TpoCVC3 = '$tipocvc3',
+            cv_Anatomia3 = '$sitio_anatomico_3',
             cv_intento3 = '$intento_cvc_3',
             cv_comp3 = '$complicacion_cvc3',
             cv_TpoComp3 = '$tipocomplicacion_cvc3',
