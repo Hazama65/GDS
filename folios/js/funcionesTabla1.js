@@ -44,7 +44,7 @@ $(document).ready(function() {
         const diferenciaDias = diferenciaMilisegundos / (1000 * 60 * 60 * 24);
 
         // Verifica si la diferencia de días es mayor que 2
-        if (diferenciaDias > 2) {
+        if (diferenciaDias > 3) {
             if (estatus === "Activo") {
                 var id = this.node().getAttribute('data-id');
                 $.ajax({
@@ -60,7 +60,7 @@ $(document).ready(function() {
             }
         }
 
-        if (diferenciaDias < 2) {
+        if (diferenciaDias < 3) {
             this.nodes().to$().css("background-color", "rgb(143, 188, 143, 0.30)");
         }
 
