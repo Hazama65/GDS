@@ -28,8 +28,14 @@ header a {
 
 .patient-item {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    cursor: pointer; /* Cambia el cursor a un puntero */
+    transition: background-color 0.3s; /* Agrega transición al cambio de color */
+}
+
+.patient-item:hover {
+    background-color: lightgray; /* Cambia el color al pasar el mouse */
 }
 
 footer {

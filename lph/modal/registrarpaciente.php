@@ -6,8 +6,9 @@
             <i class="bi bi-pass-fill"></i>Registro Pacientes</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="">
       <div class="modal-body">
+
+      <form id="lph_form"  method="POST" >
             <div style="background-color:rgb(3, 187, 133);
                         color: aliceblue;
                         text-align: center;
@@ -19,12 +20,12 @@
 
             <div class="col-md-4" id="id_curp"> 
                     <strong style="font-size: 14px;">CURP</strong>
-                    <input type="text" class="form-control" id="curp" placeholder="CURP" style="font-size: 13px;">
+                    <input type="text" class="form-control" id="curp" name="curp" placeholder="CURP" style="font-size: 13px;">
                 </div>
 
                 <div class="col-md-4" id="idnombre">
                     <strong style="font-size: 14px;">Nombre Completo</strong>
-                    <input id="nombre" name="nombre" onblur="calcularEdad();" type="text" class="control form-control" value="" style="font-size: 13px;" required>
+                    <input id="nombre" name="nombre" onblur="calcularEdad();" type="text" class="control form-control" value="" style="font-size: 13px;" >
                 </div>
 
                 <div class="col-md-4">
@@ -43,26 +44,26 @@
 
                 <div class="col-md-4" id="id_estado">
                     <strong style="font-size: 14px;">Estado de Origen</strong>
-                    <input id="estado_Origen" name="Estado" onblur="calcularEdad();" type="text" class="control form-control" value="" style="font-size: 13px;" required>
+                    <input id="estado_Origen" name="Estado" onblur="calcularEdad();" type="text" class="control form-control" value="" style="font-size: 13px;" >
                 </div>
 
                 <div class="col-md-4" id="id_municipio">
                     <strong style="font-size: 14px;"> Alcaldía o Municipio</strong>
-                    <input type="text" class="form-control" id="id_municipio" name="municipio" value="" style="font-size: 13px;" required>
+                    <input type="text" class="form-control" id="id_municipio" name="municipio" value="" style="font-size: 13px;" >
                 </div>
 
                 <div class="col-md-4">
                     <strong style="font-size: 14px;">Referenciado</strong>
                     <select name="referencia" id="refererencia" class="form-control" style="font-size: 13px;">
-                    <option value="Sin Registro">Negado</option>
-                                <option value="Si">Si</option>
+                        <option value="Sin Registro">Sin Registro</option>
+                        <option value="Si">Si</option>
                     </select>
                 </div>
 
                 
                 <div class="col-md-4">
                             <strong style="font-size: 14px;">Número Telefónico</strong>
-                            <input type="tel" id="telefono" name="telefono" class="control form-control" placeholder="55-1234-5678" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" minlength="10" maxlength="10">
+                            <input type="tel" id="telefono" name="telefono" class="control form-control" placeholder="55-1234-5678" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" minlength="10" maxlength="12">
                         </div>
 
                 <div class="col-md-4">
@@ -100,12 +101,12 @@
 
                 <div class="col-md-4">
                     <strong style="font-size: 14px;">Talla</strong>
-                    <input type="text" class="form-control" id="talla" name="talla" placeholder="Ejemplo: 1.50" style="font-size: 13px;" required>
+                    <input type="text" class="form-control" id="talla" name="talla" placeholder="Ejemplo: 1.50" style="font-size: 13px;" >
                 </div>
 
                 <div class="col-md-4">
                     <strong style="font-size: 14px;">Peso</strong>
-                    <input type="number" step="any" class="form-control" id="peso" onblur="calculaIMC();" name="peso" style="font-size: 13px;" required>
+                    <input type="number" step="any" class="form-control" id="peso" onblur="calculaIMC();" name="peso" style="font-size: 13px;" >
                 </div>
 
                 <div class="col-md-4">
@@ -120,7 +121,7 @@
 
                 <div class="col-md-4">
                     <strong style="font-size: 13px;">Circunferencia Abdominal</strong>
-                    <input type="number" step="any" class="form-control" id="circunferencia"  name="circunferencia" style="font-size: 13px;" required>
+                    <input type="number" step="any" class="form-control" id="circunferencia"  name="circunferencia" style="font-size: 13px;" >
                 </div>
 
 
@@ -188,15 +189,15 @@
                        <div class="col-md-3" id="PadreLPH">
                     <span style="font-size: 14px;">Padre</span>
                     <select name="LPH_Padre" id="LPH_Padre" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
-                                <option value="Si">Si</option>
-                            </select>
+                        <option value="no">Negado</option>
+                        <option value="Si">Si</option>
+                    </select>
                     </div>
         <!--===============sI SELECCIONAMOS MADRE  LPH=======================-->
                     <div class="col-md-3" id="MadreLPH" >
                         <span style="font-size: 14px;" >Madre</span>
                             <select name="LPH_Madre" id="LPH_Madre" class="form-control" style="font-size: 14px;">
-                                <option value="negado">Negado</option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Si</option>
                             </select>
                     </div>
@@ -205,7 +206,7 @@
                     <div class="col-md-3" id="Abuelo_MaternoLPH" >
                         <span style="font-size: 14px;">Abuelo Materno</span>
                             <select name="AbueloM_LPH" id="AbueloM_LPH" class="form-control" style="font-size: 14px;">
-                                <option value="negado">Negado</option>
+                                <option value="Negado">Negado</option>
                                     <option value="Si">Si</option>
                                 </select>
                     </div>
@@ -213,7 +214,7 @@
                     <div class="col-md-3" id="Abuela_MaternaLPH" >
                         <span style="font-size: 14px;" >Abuela Materna</span>
                             <select name="AbuelaM_LPH" id="AbuelaM_LPH" class="form-control" style="font-size: 14px;">
-                                    <option value="negado">Negado</option>
+                                    <option value="Negado">Negado</option>
                                     <option value="Si">Si</option>
                                 </select>
                     </div>
@@ -221,7 +222,7 @@
                     <div class="col-md-3" id="Abuelo_PaternoLPH" >
                         <span style="font-size: 14px;" >Abuelo Paterno</span>
                         <select name="AbueloP_LPH" id="AbueloP_LPH" class="form-control" style="font-size: 14px;">
-                            <option value="negado">Negado</option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
                     </div>  
@@ -230,7 +231,7 @@
                     <div class="col-md-3" id="Abuela_PaternaHAS" >
                         <span style="font-size: 14px;" >Abuela Paterna</span>
                             <select name="AbuelaP_LPH" id="AbuelaP_LPH" class="form-control" style="font-size: 14px;">
-                                    <option value="negado">Negado</option>
+                                    <option value="Negado">Negado</option>
                                     <option value="Si">Si</option>
                                 </select>
                     </div>
@@ -238,13 +239,13 @@
 
                     <div class="col-md-3" id="HermanaLPH" >
                     <span style="font-size: 13px;">Número de Hermanas</span>
-                            <input type="number" step="any" class="form-control" id="num_hermanasLPH" name="num_hermanas" required style="font-size: 14px;">
+                            <input type="number" step="any" class="form-control" id="num_hermanasLPH" name="num_hermanas"  style="font-size: 14px;">
                     </div>
         <!--===============sI SELECCIONAMOS HERMANO  LPH =======================-->
                         
                     <div class="col-md-3" id="HermanoLPH">
                         <span style="font-size: 13px;" >Número de Hermanos</span>
-                        <input type="number" step="any" class="form-control" id="num_hermanosLPH" name="num_hermanos" required oninput="mostrarCamposHermanos()" style="font-size: 14px;">
+                        <input type="number" step="any" class="form-control" id="num_hermanosLPH" name="num_hermanos"  oninput="mostrarCamposHermanos()" style="font-size: 14px;">
                     </div>
 
                     </div><!--===========DIV LPH ================--><br> 
@@ -267,13 +268,13 @@
 
                 <div class="col-md-4">
                             <strong style="font-size: 14px;">Semanas Gestación</strong>
-                            <input type="number" min="0" max="40" class="form-control" id="semanasgestacion" name="semanasgestacion" style="font-size: 14px;" required>
+                            <input type="number" min="0" max="40" class="form-control" id="semanasgestacion" name="semanasgestacion" style="font-size: 14px;" >
                         </div>
 
                         <div class="col-md-4">
                             <strong style="font-size: 14px;">Complicaciones en Embarazo</strong>
                             <select name="complicacionesembarazo" id="complicacionesembarazo"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -282,7 +283,7 @@
                         <div class="col-md-4">
                             <strong style="font-size: 14px;">Complicaciones en Parto</strong>
                             <select name="complicacionesparto" id="complicacionesparto" class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -291,7 +292,7 @@
                         <div class="col-md-4">
                             <strong style="font-size: 14px;">Tabaquismo Durante Embarazo</strong>
                             <select name="tabaquismo" id="tabaquismo" class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -300,7 +301,7 @@
                         <div class="col-md-4">
                             <strong style="font-size: 14px;" >Alcoholismo Durante Embarazo</strong>
                             <select name="alcoholismo" style="font-size: 14px;" id="alcoholismo" class="form-control">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -309,7 +310,7 @@
                         <div class="col-md-4">
                             <strong style="font-size: 14px;">Malformaciones Congénitas</strong>
                             <select name="malformaciones" style="font-size: 14px;"  id="malformaciones" class="form-control">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -318,7 +319,7 @@
                         <div class="col-md-4" id="idxfisura">
                             <strong style="font-size: 14px;">Dx de Fisura Durante Embarazo</strong>
                             <select name="dxfisuraembarazo" style="font-size: 14px;" id="dxfisuraembarazo" class="form-control">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -361,7 +362,7 @@
                     <div class="col-md-3" id="anestesicos_medicamentos" >
                         <span style="font-size: 14px;" >Anestesicos</span>
                             <select name="Anestesicos" id="Anestesicos" class="form-control" style="font-size: 14px;">
-                                <option value="negado">Negado</option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Si</option>
                             </select>
                     </div>
@@ -370,7 +371,7 @@
                     <div class="col-md-3" id="antibioticos_medicamentos" >
                         <span style="font-size: 14px;" >Antibioticos</span>
                             <select name="Antibioticos" id="Antibioticos" class="form-control" style="font-size: 14px;">
-                                    <option value="negado">Negado</option>
+                                    <option value="Negado">Negado</option>
                                     <option value="Si">Si</option>
                                 </select>
                     </div>
@@ -378,7 +379,7 @@
                     <div class="col-md-3" id="antiinflamatorios_medicamentos" >
                         <span style="font-size: 14px;" >Antiinflamatorios</span>
                         <select name="Antiinflamatorios" id="Antiinflamatorios" class="form-control" style="font-size: 14px;">
-                            <option value="negado">Negado</option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
                     </div>  
@@ -448,7 +449,7 @@
                     <div class="col-md-3">
                             <strong style="font-size: 14px;">Audiologia</strong>
                             <select name="Audiologia" id="Audiologia_A"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -457,7 +458,7 @@
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Cirugía Maxilofacial</strong>
                             <select name="Maxilofacial" id="Cirugia_Maxilofacial_A"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -466,7 +467,7 @@
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Cirugía Reconstructiva</strong>
                             <select name="Reconstructiva" id="Cirugia_Reconstructiva_A"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -474,8 +475,8 @@
                
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Neonatología</strong>
-                            <select name="Neonatología" id="Neonatologia_A"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                            <select name="Neonatologia" id="Neonatologia_A"  class="form-control" style="font-size: 14px;">
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -484,7 +485,7 @@
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Ortodoncia</strong>
                             <select name="Ortodoncia" id="Ortodoncia_A"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -493,7 +494,7 @@
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Otorrinolaringologia</strong>
                             <select name="Otorrinolaringologia_A" id="Otorrinolaringologia_A"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -502,7 +503,7 @@
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Protesis Maxilofacial</strong>
                             <select name="Protesis_MaxilofacialA" id="Protesis_Maxilofacial_A"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -511,7 +512,7 @@
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Psicologia</strong>
                             <select name="Psicologia_A" id="Psicologia_A"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -519,8 +520,8 @@
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Rehabilitación</strong>
-                            <select name="Rehabilitación_A" id="Rehabilitacion_A"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                            <select name="Rehabilitacion_A" id="Rehabilitacion_A"  class="form-control" style="font-size: 14px;">
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -529,7 +530,7 @@
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Terapia De Lenguaje</strong>
                             <select name="Lenguaje_A" id="Terapia_De_Lenguaje_A"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -538,7 +539,7 @@
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Terapia Fisica</strong>
                             <select name="Fisica_A" id="Terapia_Fisica_A"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -547,7 +548,7 @@
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Terapia Ocupacional</strong>
                             <select name="Ocupacional_A" id="Terapia_Ocupacional_A"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -574,8 +575,8 @@
 
                 <div class="col-md-4">
                         <strong style="font-size: 14px;">Atención Psicomotriz</strong>
-                        <select name="Atención_Psicomotriz_A" id="Atención_Psicomotriz_A"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                        <select name="Atencion_Psicomotriz_A" id="Atención_Psicomotriz_A"  class="form-control" style="font-size: 14px;">
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -584,7 +585,7 @@
                     <div class="col-md-4">
                         <strong style="font-size: 14px;">Curso De Inducción</strong>
                         <select name="Curso_De_Induccion_A" id="Curso_De_Induccion_A"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -593,7 +594,7 @@
                     <div class="col-md-4">
                         <strong style="font-size: 14px;">Curso Lactancia Materna</strong>
                         <select name="Curso_Lactancia_Materna_A" id="Curso_Lactancia_Materna_A"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -602,7 +603,7 @@
                     <div class="col-md-4">
                         <strong style="font-size: 14px;">Estudios Audiológicos</strong>
                         <select name="Estudios_Audiologicos_A" id="Estudios_Audiologicos_A"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -611,7 +612,7 @@
                     <div class="col-md-4">
                         <strong style="font-size: 14px;">Terapia Para Padres</strong>
                         <select name="Terapia_Para_Padres_A" id="Terapia_Para_Padres_A"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -620,7 +621,7 @@
                     <div class="col-md-4">
                         <strong style="font-size: 14px;">Valoración Inicial De Lenguaje</strong>
                         <select name="Valoracion_Inicial_De_Lenguaje_A" id="Valoracion_Inicial_De_Lenguaje_A"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -649,7 +650,7 @@
                 <div class="col-md-4">
                         <strong style="font-size: 14px;">Ortopedia Pre-quirúrgica</strong>
                         <select name="Ortopedia_PreQuirurgica_XA" id="Ortopedia_PreQuirurgica_XA"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -658,7 +659,7 @@
                     <div class="col-md-4">
                         <strong style="font-size: 14px;">Palatoplastia</strong>
                         <select name="Palatoplastia_XA" id="Palatoplastia_XA"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -668,7 +669,7 @@
                     <div class="col-md-4">
                         <strong style="font-size: 14px;">Queiloplastias</strong>
                         <select name="Queiloplastias_XA" id="Queiloplastias_XA"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -725,7 +726,7 @@
                     <div class="col-md-3">
                             <strong style="font-size: 14px;">Audiologia</strong>
                             <select name="Audiologia_B" id="Audiologia_B"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -734,7 +735,7 @@
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Cirugía Maxilofacial</strong>
                             <select name="Cirugoa_Maxilofacial_B" id="Cirugoa_Maxilofacial_B"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -744,7 +745,7 @@
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Cirugía Reconstructiva</strong>
                             <select name="Cirugia_Reconstructiva_B" id="Cirugia_Reconstructiva_B"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -753,7 +754,7 @@
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Nutricion</strong>
                             <select name="Nutricion_B" id="Nutricion_B"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -762,7 +763,7 @@
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Ortodoncia</strong>
                             <select name="Ortodoncia_B" id="Ortodoncia_B"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -771,7 +772,7 @@
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Otorrinolaringologia</strong>
                             <select name="Otorrinolaringologia_B" id="Otorrinolaringologia_B"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -780,7 +781,7 @@
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Pediatría</strong>
                             <select name="Pediatria_B" id="Pediatria_B"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -789,7 +790,7 @@
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Psicologia</strong>
                             <select name="Psicologia_B" id="Psicologia_B"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -798,7 +799,7 @@
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Protesis Maxilofacial</strong>
                             <select name="Protesis_Maxilofacial_B" id="Protesis_Maxilofacial_B"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -807,7 +808,7 @@
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Rehabilitación</strong>
                             <select name="Rehabilitacion_B" id="Rehabilitacion_B"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -816,7 +817,7 @@
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Terapia De Lenguaje</strong>
                             <select name="Terapia_De_Lenguaje_B" id="Terapia_De_Lenguaje_B"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -825,7 +826,7 @@
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Terapia Fisica</strong>
                             <select name="Terapia_Fisica_B" id="Terapia_Fisica_B"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -834,7 +835,7 @@
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Terapia Ocupacional</strong>
                             <select name="Terapia_Ocupacional_B" id="Terapia_Ocupacional_B"  class="form-control" style="font-size: 14px;">
-                                <option value="Negado ">Negado </option>
+                                <option value="Negado">Negado</option>
                                 <option value="Si">Sí</option>
                                 <option value="Desconoce">Desconoce</option>
                             </select>
@@ -864,8 +865,8 @@
 
                 <div class="col-md-4">
                         <strong style="font-size: 14px;">Atención Psicologica</strong>
-                        <select name="Atención_Psicologica_B" id="Atención_Psicologica_B"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                        <select name="Atencion_Psicologica_B" id="Atención_Psicologica_B"  class="form-control" style="font-size: 14px;">
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -874,7 +875,7 @@
                     <div class="col-md-4">
                         <strong style="font-size: 14px;">Curso De Inducción</strong>
                         <select name="Curso_De_Induccion_B" id="Curso_De_Induccion_B"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -884,7 +885,7 @@
                     <div class="col-md-4">
                         <strong style="font-size: 14px;">Estudios Audiológicos</strong>
                         <select name="Estudios_Audiologicos_B" id="Estudios_Audiologicos_B"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -893,7 +894,7 @@
                     <div class="col-md-4">
                         <strong style="font-size: 14px;">Valoración Patrón De Cierre Velar</strong>
                         <select name="Valoracion_Patron_De_Cierre_Velar_B" id="Valoracion_Patron_De_Cierre_Velar_B"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -902,7 +903,7 @@
                     <div class="col-md-4">
                         <strong style="font-size: 14px;">Valoración Del Lenguaje</strong>
                         <select name="Valoracion_Del_Lenguaje_B" id="Valoracion_Del_Lenguaje_B"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -933,8 +934,8 @@
 
                 <div class="col-md-3">
                     <strong style="font-size: 14px;">Injerto Óseo</strong>
-                    <select name="Injerto_Óseo_XB" id="Injerto_Óseo_XB"  class="form-control" style="font-size: 14px;">
-                        <option value="Negado ">Negado </option>
+                    <select name="Injerto_Oseo_XB" id="Injerto_Óseo_XB"  class="form-control" style="font-size: 14px;">
+                        <option value="Negado">Negado</option>
                         <option value="Si">Sí</option>
                         <option value="Desconoce">Desconoce</option>
                     </select>
@@ -943,7 +944,7 @@
                 <div class="col-md-3">
                     <strong style="font-size: 14px;">Ortopedia Maxilar</strong>
                     <select name="Ortopedia_Maxilar_XB" id="Ortopedia_Maxilar_XB"  class="form-control" style="font-size: 14px;">
-                        <option value="Negado ">Negado </option>
+                        <option value="Negado">Negado</option>
                         <option value="Si">Sí</option>
                         <option value="Desconoce">Desconoce</option>
                     </select>
@@ -953,7 +954,7 @@
                 <div class="col-md-3">
                     <strong style="font-size: 14px;">Palatoplastia</strong>
                     <select name="Palatoplastia_XB" id="Palatoplastia_XB"  class="form-control" style="font-size: 14px;">
-                        <option value="Negado ">Negado </option>
+                        <option value="Negado">Negado</option>
                         <option value="Si">Sí</option>
                         <option value="Desconoce">Desconoce</option>
                     </select>
@@ -961,8 +962,8 @@
 
                 <div class="col-md-3">
                     <strong style="font-size: 14px;">Queiloplastia</strong>
-                    <select name="Queiloplastia_XB" id="Queiloplastia_XB"  class="form-control" style="font-size: 14px;">
-                        <option value="Negado ">Negado </option>
+                    <select name="Queiloplastias_XB" id="Queiloplastias_XB"  class="form-control" style="font-size: 14px;">
+                        <option value="Negado">Negado</option>
                         <option value="Si">Sí</option>
                         <option value="Desconoce">Desconoce</option>
                     </select>
@@ -1018,7 +1019,7 @@
                 <div class="col-md-3">
                         <strong style="font-size: 14px;">Audiologia</strong>
                         <select name="Audiologia_C" id="Audiologia_C"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1027,7 +1028,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Cirugía Maxilofacial</strong>
                         <select name="Cirugia_Maxilofacial_C" id="Cirugia_Maxilofacial_C"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1037,7 +1038,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Cirugía Reconstructiva</strong>
                         <select name="Cirugia_Reconstructiva_C" id="Cirugia_Reconstructiva_C"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1046,7 +1047,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Nutricion</strong>
                         <select name="Nutricion_C" id="Nutricion_C"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1055,7 +1056,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Ortodoncia</strong>
                         <select name="Ortodoncia_C" id="Ortodoncia_C"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1064,7 +1065,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Otorrinolaringologia</strong>
                         <select name="Otorrinolaringologia_C" id="Otorrinolaringologia_C"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1073,7 +1074,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Pediatría</strong>
                         <select name="Pediatria_C" id="Pediatria_C"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1081,8 +1082,8 @@
 
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Psicologia</strong>
-                        <select name="Pediatria_C" id="Pediatria_C"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                        <select name="Psicologia_C" id="Psicologia_C"  class="form-control" style="font-size: 14px;">
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1091,7 +1092,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Protesis Maxilofacial</strong>
                         <select name="Protesis_Maxilofacial_C" id="Protesis_Maxilofacial_C"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1100,7 +1101,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Rehabilitación</strong>
                         <select name="Rehabilitacion_C" id="Rehabilitacion_C"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1109,7 +1110,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Terapia De Lenguaje</strong>
                         <select name="Terapia_De_Lenguaje_C" id="Terapia_De_Lenguaje_C"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1118,7 +1119,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Terapia Fisica</strong>
                         <select name="Terapia_Fisica_C" id="Terapia_Fisica_C"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1127,7 +1128,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Terapia Ocupacional</strong>
                         <select name="Terapia_Ocupacional_C" id="Terapia_Ocupacional_C"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1154,8 +1155,8 @@
 
                 <div class="col-md-4">
                     <strong style="font-size: 14px;">Atención Psicologica</strong>
-                    <select name="Atención_Psicologica_C" id="Atención_Psicologica_C"  class="form-control" style="font-size: 14px;">
-                        <option value="Negado ">Negado </option>
+                    <select name="Atencion_Psicologica_C" id="Atención_Psicologica_C"  class="form-control" style="font-size: 14px;">
+                        <option value="Negado">Negado</option>
                         <option value="Si">Sí</option>
                         <option value="Desconoce">Desconoce</option>
                     </select>
@@ -1164,7 +1165,7 @@
                 <div class="col-md-4">
                     <strong style="font-size: 14px;">Curso De Inducción</strong>
                     <select name="Curso_De_Induccion_C" id="Curso_De_Induccion_C"  class="form-control" style="font-size: 14px;">
-                        <option value="Negado ">Negado </option>
+                        <option value="Negado">Negado</option>
                         <option value="Si">Sí</option>
                         <option value="Desconoce">Desconoce</option>
                     </select>
@@ -1174,7 +1175,7 @@
                 <div class="col-md-4">
                     <strong style="font-size: 14px;">Estudios Audiológicos</strong>
                     <select name="Estudios_Audiologicos_C" id="Estudios_Audiologicos_C"  class="form-control" style="font-size: 14px;">
-                        <option value="Negado ">Negado </option>
+                        <option value="Negado">Negado</option>
                         <option value="Si">Sí</option>
                         <option value="Desconoce">Desconoce</option>
                     </select>
@@ -1183,7 +1184,7 @@
                 <div class="col-md-4">
                     <strong style="font-size: 14px;">Valoración Patrón De Cierre Velar</strong>
                     <select name="Valoracion_Patron_De_Cierre_Velar_C" id="Valoracion_Patron_De_Cierre_Velar_C"  class="form-control" style="font-size: 14px;">
-                        <option value="Negado ">Negado </option>
+                        <option value="Negado">Negado</option>
                         <option value="Si">Sí</option>
                         <option value="Desconoce">Desconoce</option>
                     </select>
@@ -1192,7 +1193,7 @@
                 <div class="col-md-4">
                     <strong style="font-size: 14px;">Valoración Del Lenguaje</strong>
                     <select name="Valoracion_Del_Lenguaje_C" id="Valoracion_Del_Lenguaje_C"  class="form-control" style="font-size: 14px;">
-                        <option value="Negado ">Negado </option>
+                        <option value="Negado">Negado</option>
                         <option value="Si">Sí</option>
                         <option value="Desconoce">Desconoce</option>
                     </select>
@@ -1223,8 +1224,8 @@
 
             <div class="col-md-4">
                 <strong style="font-size: 14px;">Injerto Óseo</strong>
-                <select name="Injerto_Óseo_XC" id="Injerto_Óseo_XC"  class="form-control" style="font-size: 14px;">
-                    <option value="Negado ">Negado </option>
+                <select name="Injerto_Oseo_XC" id="Injerto_Óseo_XC"  class="form-control" style="font-size: 14px;">
+                    <option value="Negado">Negado</option>
                     <option value="Si">Sí</option>
                     <option value="Desconoce">Desconoce</option>
                 </select>
@@ -1233,7 +1234,7 @@
             <div class="col-md-4">
                 <strong style="font-size: 14px;">Ortodoncia</strong>
                 <select name="Ortodoncia_XC" id="Ortodoncia_XC"  class="form-control" style="font-size: 14px;">
-                    <option value="Negado ">Negado </option>
+                    <option value="Negado">Negado</option>
                     <option value="Si">Sí</option>
                     <option value="Desconoce">Desconoce</option>
                 </select>
@@ -1242,7 +1243,7 @@
             <div class="col-md-4">
                 <strong style="font-size: 14px;">Ortopedia Maxilar</strong>
                 <select name="Ortopedia_Maxilar_XC" id="Ortopedia_Maxilar_XC"  class="form-control" style="font-size: 14px;">
-                    <option value="Negado ">Negado </option>
+                    <option value="Negado">Negado</option>
                     <option value="Si">Sí</option>
                     <option value="Desconoce">Desconoce</option>
                 </select>
@@ -1251,7 +1252,7 @@
             <div class="col-md-4">
                 <strong style="font-size: 14px;">Otras Plastias</strong>
                 <select name="Otras_Plastias_XC" id="Otras_Plastias_XC"  class="form-control" style="font-size: 14px;">
-                    <option value="Negado ">Negado </option>
+                    <option value="Negado">Negado</option>
                     <option value="Si">Sí</option>
                     <option value="Desconoce">Desconoce</option>
                 </select>
@@ -1260,7 +1261,7 @@
             <div class="col-md-4">
                 <strong style="font-size: 14px;">Palatoplastia</strong>
                 <select name="Palatoplastia_XC" id="Palatoplastia_XC"  class="form-control" style="font-size: 14px;">
-                    <option value="Negado ">Negado </option>
+                    <option value="Negado">Negado</option>
                     <option value="Si">Sí</option>
                     <option value="Desconoce">Desconoce</option>
                 </select>
@@ -1269,7 +1270,7 @@
             <div class="col-md-4">
                 <strong style="font-size: 14px;">Queiloplastia</strong>
                 <select name="Queiloplastia_XC" id="Queiloplastia_XC"  class="form-control" style="font-size: 14px;">
-                    <option value="Negado ">Negado </option>
+                    <option value="Negado">Negado</option>
                     <option value="Si">Sí</option>
                     <option value="Desconoce">Desconoce</option>
                 </select>
@@ -1295,7 +1296,7 @@
                 <!--Etapa C: Fecha de Cirugia-->
         <div class="col-md-6" id="id_fechacirugiac" style="display: none;">
                     <strong style="font-size: 14px;">Etapa C: Fecha de Cirugia</strong>
-                    <input type="date" id="idfechacirugia_c" name="fechacirugiaa" class="form-control">
+                    <input type="date" id="idfechacirugia_c" name="idfechacirugia_c" class="form-control">
                 </div>
 
             </div><!--ROW DE ESTATUS Y FECHA DE CIRUGIA-->
@@ -1326,7 +1327,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Audiologia</strong>
                         <select name="Audiologia_D" id="Audiologia_D"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1335,7 +1336,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Cirugía Maxilofacial</strong>
                         <select name="Cirugia_Maxilofacial_D" id="Cirugia_Maxilofacial_D"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1345,7 +1346,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Cirugía Reconstructiva</strong>
                         <select name="Cirugia_Reconstructiva_D" id="Cirugia_Reconstructiva_D"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1354,7 +1355,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Nutricion</strong>
                         <select name="Nutricion_D" id="Nutricion_D"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1363,7 +1364,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Ortodoncia</strong>
                         <select name="Ortodoncia_D" id="Ortodoncia_D"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1372,7 +1373,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Otorrinolaringologia</strong>
                         <select name="Otorrinolaringologia_D" id="Otorrinolaringologia_D"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1381,7 +1382,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Pediatría</strong>
                         <select name="Pediatria_D" id="Pediatria_D"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1390,7 +1391,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Psicologia</strong>
                         <select name="Psicologia_D" id="Psicologia_D"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1399,7 +1400,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Protesis Maxilofacial</strong>
                         <select name="Protesis_Maxilofacial_D" id="Protesis_Maxilofacial_D"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1408,7 +1409,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Rehabilitación</strong>
                         <select name="Rehabilitacion_D" id="Rehabilitacion_D"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1417,7 +1418,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Terapia De Lenguaje</strong>
                         <select name="Terapia_De_Lenguaje_D" id="Terapia_De_Lenguaje_D"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1426,7 +1427,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Terapia Fisica</strong>
                         <select name="Terapia_Fisica_D" id="Terapia_Fisica_D"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1435,7 +1436,7 @@
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Terapia Ocupacional</strong>
                         <select name="Terapia_Ocupacional_D" id="Terapia_Ocupacional_D"  class="form-control" style="font-size: 14px;">
-                            <option value="Negado ">Negado </option>
+                            <option value="Negado">Negado</option>
                             <option value="Si">Sí</option>
                             <option value="Desconoce">Desconoce</option>
                         </select>
@@ -1465,8 +1466,8 @@
 
                 <div class="col-md-3">
                     <strong style="font-size: 14px;">Atención Psicologica</strong>
-                    <select name="Atención_Psicologica_D" id="Atención_Psicologica_D"  class="form-control" style="font-size: 14px;">
-                        <option value="Negado ">Negado </option>
+                    <select name="Atencion_Psicologica_D" id="Atención_Psicologica_D"  class="form-control" style="font-size: 14px;">
+                        <option value="Negado">Negado</option>
                         <option value="Si">Sí</option>
                         <option value="Desconoce">Desconoce</option>
                     </select>
@@ -1475,7 +1476,7 @@
                 <div class="col-md-3">
                     <strong style="font-size: 14px;">Curso De Inducción</strong>
                     <select name="Curso_De_Induccion_D" id="Curso_De_Induccion_D"  class="form-control" style="font-size: 14px;">
-                        <option value="Negado ">Negado </option>
+                        <option value="Negado">Negado</option>
                         <option value="Si">Sí</option>
                         <option value="Desconoce">Desconoce</option>
                     </select>
@@ -1485,7 +1486,7 @@
                 <div class="col-md-3">
                     <strong style="font-size: 14px;">Estudios Audiológicos</strong>
                     <select name="Estudios_Audiologicos_D" id="Estudios_Audiologicos_D"  class="form-control" style="font-size: 14px;">
-                        <option value="Negado ">Negado </option>
+                        <option value="Negado">Negado</option>
                         <option value="Si">Sí</option>
                         <option value="Desconoce">Desconoce</option>
                     </select>
@@ -1495,7 +1496,7 @@
                 <div class="col-md-3">
                     <strong style="font-size: 14px;">Valoración Del Lenguaje</strong>
                     <select name="Valoracion_Del_Lenguaje_D" id="Valoracion_Del_Lenguaje_D"  class="form-control" style="font-size: 14px;">
-                        <option value="Negado ">Negado </option>
+                        <option value="Negado">Negado</option>
                         <option value="Si">Sí</option>
                         <option value="Desconoce">Desconoce</option>
                     </select>
@@ -1525,8 +1526,8 @@
 
             <div class="col-md-4">
                 <strong style="font-size: 13px;">Cirugía  Ortognatica/Distracción Ósea</strong>
-                <select name="Cirugia_Ortognatica_Distraccion_Ósea_XD" id="Cirugia_Ortognatica_Distraccion_Ósea_XD"  class="form-control" style="font-size: 14px;">
-                    <option value="Negado ">Negado </option>
+                <select name="Cirugia_Ortognatica_Distraccion_Osea_XD" id="Cirugia_Ortognatica_Distraccion_Ósea_XD"  class="form-control" style="font-size: 14px;">
+                    <option value="Negado">Negado</option>
                     <option value="Si">Sí</option>
                     <option value="Desconoce">Desconoce</option>
                 </select>
@@ -1534,8 +1535,8 @@
 
         <div class="col-md-4">
                 <strong style="font-size: 14px;">Injerto Óseo</strong>
-                <select name="Injerto_Óseo_XD" id="Injerto_Óseo_XD"  class="form-control" style="font-size: 14px;">
-                    <option value="Negado ">Negado </option>
+                <select name="Injerto_Oseo_XD" id="Injerto_Óseo_XD"  class="form-control" style="font-size: 14px;">
+                    <option value="Negado">Negado</option>
                     <option value="Si">Sí</option>
                     <option value="Desconoce">Desconoce</option>
                 </select>
@@ -1544,7 +1545,7 @@
             <div class="col-md-4">
                 <strong style="font-size: 14px;">Ortodoncia</strong>
                 <select name="Ortodoncia_XD" id="Ortodoncia_XD"  class="form-control" style="font-size: 14px;">
-                    <option value="Negado ">Negado </option>
+                    <option value="Negado">Negado</option>
                     <option value="Si">Sí</option>
                     <option value="Desconoce">Desconoce</option>
                 </select>
@@ -1553,7 +1554,7 @@
             <div class="col-md-4">
                 <strong style="font-size: 14px;">Ortopedia Maxilar</strong>
                 <select name="Ortopedia_Maxilar_XD" id="Ortopedia_Maxilar_XD"  class="form-control" style="font-size: 14px;">
-                    <option value="Negado ">Negado </option>
+                    <option value="Negado">Negado</option>
                     <option value="Si">Sí</option>
                     <option value="Desconoce">Desconoce</option>
                 </select>
@@ -1562,7 +1563,7 @@
             <div class="col-md-4">
                 <strong style="font-size: 14px;">Otras Plastias</strong>
                 <select name="Otras_Plastias_XD" id="Otras_Plastias_XD"  class="form-control" style="font-size: 14px;">
-                    <option value="Negado ">Negado </option>
+                    <option value="Negado">Negado</option>
                     <option value="Si">Sí</option>
                     <option value="Desconoce">Desconoce</option>
                 </select>
@@ -1571,7 +1572,7 @@
             <div class="col-md-4">
                 <strong style="font-size: 14px;">Palatoplastia</strong>
                 <select name="Palatoplastia_XD" id="Palatoplastia_XD"  class="form-control" style="font-size: 14px;">
-                    <option value="Negado ">Negado </option>
+                    <option value="Negado">Negado</option>
                     <option value="Si">Sí</option>
                     <option value="Desconoce">Desconoce</option>
                 </select>
@@ -1580,7 +1581,7 @@
             <div class="col-md-4">
                 <strong style="font-size: 14px;">Queiloplastia</strong>
                 <select name="Queiloplastia_XD" id="Queiloplastia_XD"  class="form-control" style="font-size: 14px;">
-                    <option value="Negado ">Negado </option>
+                    <option value="Negado">Negado</option>
                     <option value="Si">Sí</option>
                     <option value="Desconoce">Desconoce</option>
                 </select>
@@ -1589,7 +1590,7 @@
             <div class="col-md-4">
                 <strong style="font-size: 14px;">Rinoplastia</strong>
                 <select name="Rinoplastia_XD" id="Rinoplastia_XD"  class="form-control" style="font-size: 14px;">
-                    <option value="Negado ">Negado </option>
+                    <option value="Negado">Negado</option>
                     <option value="Si">Sí</option>
                     <option value="Desconoce">Desconoce</option>
                 </select>
@@ -1614,7 +1615,7 @@
 
                 <div class="col-md-6" id="id_fechacirugiad" style="display: none;">
                     <strong style="font-size: 14px;">Etapa D: Fecha de Cirugia</strong>
-                    <input type="date" id="idfechacirugia_d" name="fechacirugiaa" class="form-control">
+                    <input type="date" id="idfechacirugia_d" name="idfechacirugia_d" class="form-control">
                 </div>
 
                 </div><!--ROW DEL ESTATUS D Y FECHA CIRUGIA -->
@@ -1637,7 +1638,7 @@
 
                 <div class="col-md-12">
                     <strong style="font-size: 14px;">Fisura</strong>
-                    <select name="fisura" id="fisura_or" class="form-control" style="font-size: 14px;">
+                    <select name="fisura_or" id="fisura_or" class="form-control" style="font-size: 14px;">
                     <option value="Negado">Negado</option>
                     <option value="Si">Si</option>
                     <option value="Desconoce">Desconoce</option>
@@ -1653,8 +1654,8 @@
                        <!--===============LABIO DERECHO=======================-->
                        <div class="col-md-4" id="labio_derecho">
                     <span style="font-size: 14px;">Labio Derecho</span>
-                    <select name="LPH_Padre" id="labioderecho" class="form-control" style="font-size: 14px;">
-                            <option value="negado">Negado</option>
+                    <select name="labioderecho" id="labioderecho" class="form-control" style="font-size: 14px;">
+                            <option value="Negado">Negado</option>
                             <option value="Completo">Completo</option>
                             <option value="Incompleto">Incompleto</option>
                             <option value="Sin Fisura">Sin Fisura</option>
@@ -1666,7 +1667,7 @@
                     <div class="col-md-4" id="labio_izq" >
                         <span style="font-size: 14px;" >Labio Izquierdo</span>
                             <select name="labioizq" id="labioizq" class="form-control" style="font-size: 14px;">
-                                <option value="negado">Negado</option>
+                                <option value="Negado">Negado</option>
                                 <option value="Completo">Completo</option>
                                 <option value="Incompleto">Incompleto</option>
                                 <option value="Sin Fisura">Sin Fisura</option>
@@ -1678,7 +1679,7 @@
                     <div class="col-md-4" id="AlveoloDerecho" >
                         <span style="font-size: 14px;">Alveolo Derecho</span>
                             <select name="Alveolo_Derecho" id="Alveolo_Derecho" class="form-control" style="font-size: 14px;">
-                                <option value="negado">Negado</option>
+                                <option value="Negado">Negado</option>
                                 <option value="Completo">Completo</option>
                                 <option value="Incompleto">Incompleto</option>
                                 <option value="Sin Fisura">Sin Fisura</option>
@@ -1689,7 +1690,7 @@
                     <div class="col-md-4" id="Alveolo_Izquierdo" >
                         <span style="font-size: 14px;" >Alveolo Izquierdo</span>
                             <select name="AlveoloIzquierdo" id="AbuelaM_LPH" class="form-control" style="font-size: 14px;">
-                            <option value="negado">Negado</option>
+                            <option value="Negado">Negado</option>
                             <option value="Completo">Completo</option>
                             <option value="Incompleto">Incompleto</option>
                             <option value="Sin Fisura">Sin Fisura</option>
@@ -1700,7 +1701,7 @@
                     <div class="col-md-4" id="paladar_duro" >
                         <span style="font-size: 14px;" >Paladar Duro</span>
                         <select name="paladarduro" id="paladarduro" class="form-control" style="font-size: 14px;">
-                           <option value="negado">Negado</option>
+                           <option value="Negado">Negado</option>
                             <option value="Completo">Completo</option>
                             <option value="Incompleto">Incompleto</option>
                             <option value="Sin Fisura">Sin Fisura</option>
@@ -1712,7 +1713,7 @@
                     <div class="col-md-4" id="velo_paladar" >
                         <span style="font-size: 14px;" >Velo De Paladar</span>
                             <select name="velopaladar" id="velopaladar" class="form-control" style="font-size: 14px;">
-                                    <option value="negado">Negado</option>
+                                    <option value="Negado">Negado</option>
                                     <option value="Completo">Completo</option>
                                     <option value="Incompleto">Incompleto</option>
                                     <option value="Sin Fisura">Sin Fisura</option>
@@ -1732,16 +1733,16 @@
 
             </div> <!-- <row PRIMERO-->
 
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="submit" class="btn btn-primary">Guardar</button>
+                  </div> <!-- <div class="modal-footer">-->
+          
+              </div> <!-- <div class="modal-content">-->
         
             </form>
       </div><!-- <div class="modal-body">-->
         
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Guardar</button>
-        </div> <!-- <div class="modal-footer">-->
-
-    </div> <!-- <div class="modal-content">-->
   </div> <!-- cierra el div <div class="modal-dialog modal-lg">-->
 </div> <!-- cierra el primer div <div class="modal fade" id="RegistrarPacienteInterconsulta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">-->

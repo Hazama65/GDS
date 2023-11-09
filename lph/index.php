@@ -1,6 +1,7 @@
 <?php
 //llamado al modal de registrar paciente de LPH
-include("modal/registrarpaciente.php");
+    require('php/controllers/registros.controller.php');
+    include("modal/registrarpaciente.php");
 ?>
 
 <!DOCTYPE html>
@@ -39,9 +40,9 @@ include("modal/registrarpaciente.php");
                 <i class="bi bi-person-add"> </i> Paciente
             </button>
 
-            <button type="button" class="btn btn-success">
+            <a href="php/export.php" class="btn btn-success">
                 <i class="bi bi-file-earmark-excel"></i> Excel
-            </button>
+            </a>
 
             <a href="graficas_anemia.php">
                 <button type="button" class="btn btn-primary" target="_blank">
@@ -60,103 +61,30 @@ include("modal/registrarpaciente.php");
                         <br>
                         <input type="text" id="search" placeholder="Buscar pacientes...">
                         <ul id="patient-list">
-                            <li class="patient-item">
-                                Jesús Chico López
-                                    <a href="editar_lph.php" >
-                                        <button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Editar
-                                        </button>
-                                    </a>
-    
-                            </li>
+                            <?php
 
-                            
-                            <li class="patient-item">
-                                José Daniel Juárez Martínez
-                                <a href="editar_lph.php" >
-                                        <button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Editar
-                                        </button>
-                                    </a>
-                            </li>
-                            <li class="patient-item">
-                                Nidia Sánchez Balderas
-                                <a href="editar_lph.php" >
-                                        <button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Editar
-                                        </button>
-                                    </a>
-                            </li>
-                            <li class="patient-item">
-                                Jesús Chico López
-                                    <a href="editar_lph.php" >
-                                        <button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Editar
-                                        </button>
-                                    </a>
-                               
-                            </li>
-                            <li class="patient-item">
-                                José Daniel Juárez Martínez
-                                <a href="editar_lph.php" >
-                                        <button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Editar
-                                        </button>
-                                    </a>
-                            </li>
-                            <li class="patient-item">
-                                Nidia Sánchez Balderas
-                                <a href="editar_lph.php" >
-                                        <button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Editar
-                                        </button>
-                                    </a>
-                            </li>
-                            <li class="patient-item">
-                                Jesús Chico López
-                                    <a href="editar_lph.php" >
-                                        <button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Editar
-                                        </button>
-                                    </a>
-                               
-                            </li>
-                            <li class="patient-item">
-                                José Daniel Juárez Martínez
-                                <a href="editar_lph.php" >
-                                        <button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Editar
-                                        </button>
-                                    </a>
-                            </li>
-                            <li class="patient-item">
-                                Nidia Sánchez Balderas
-                                <a href="editar_lph.php" >
-                                        <button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Editar
-                                        </button>
-                                    </a>
-                            </li>
-                            <li class="patient-item">
-                                Jesús Chico López
-                                    <a href="editar_lph.php" >
-                                        <button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Editar
-                                        </button>
-                                    </a>
-                               
-                            </li>
-                            <li class="patient-item">
-                                José Daniel Juárez Martínez
-                                <a href="editar_lph.php" >
-                                        <button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Editar
-                                        </button>
-                                    </a>
-                            </li>
-                          
-                            <!-- Aquí debe ir el script para consultar los pacientes en la base de datos-->
+                                if (!empty($data_Pacientes)) {
+                                    // Comienza a generar la lista de pacientes
+                                    echo '<ul class="patient-list" >';
+                                    foreach($data_Pacientes as $Pacientes) {
+                                        $id_Pacientes = $Pacientes["id_paciente"];
+                                        $nombrePacientes = $Pacientes["nombre_paciente"];
+                                        
+                                        // Genera un elemento de lista para cada paciente
+                                        echo '<li class="patient-item" data-id-paciente="' . $id_Pacientes . '">';
+                                        echo $nombrePacientes;
+                                        echo '<a href="editar_lph.php?id=' . $id_Pacientes . '">';
+                                        echo '<button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Editar</button>';
+                                        echo '</a>';
+                                        echo '</li>';
+                                    }
+                                    echo '</ul>';
+                                } else {
+                                    echo "No se encontraron pacientes";
+                                }
+                            ?>
                         </ul>
+
                     
                 </div> <!-- cierre del <div id="patient-list-container">-->
             </div> <!-- cierre del <div class="col-3">-->
@@ -167,7 +95,7 @@ include("modal/registrarpaciente.php");
 
     <div class="col-7">
         <div class="container">
-            <iframe src="consulta.php" frameborder="0" width="100%" height="800px" style="margin-bottom: 100px;"></iframe>
+            <iframe id="consulta" src="consulta.php" frameborder="0" width="100%" height="800px" style="margin-bottom: 100px;"></iframe>
 
         </div> <!--<div class="container">-->
     </div><!-- FINALIZA EL DIV class col 8-->
@@ -190,9 +118,18 @@ include("modal/registrarpaciente.php");
     
     </footer>
 
-
-    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/visualizacion.js"></script>
     <script src="js/scriptmodal.js"></script>
+
+    <script type="module">
+
+        import { mainForm } from "./js/insert.js";
+        mainForm();
+
+    </script>
+
 </body>
 </html>
 
