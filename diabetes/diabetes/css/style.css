@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background: linear-gradient(45deg, #48cae4, #0096c7);
+    background: linear-gradient(45deg, #97ABFF, #50b1d2);
     height: 50px; /* Ajusta la altura del encabezado según tus necesidades */
     display: flex;
     justify-content: space-between;

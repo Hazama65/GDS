@@ -73,18 +73,18 @@
                 <div class="col-md-4">
                     <strong style="font-size: 14px;">Escolaridad</strong>
                     <select name="Escolaridad" id="Escolaridad" class="form-control" style="font-size: 13px;">
-                        <option value="Sin Registro">Seleccione</option>
-                        <option value="Primaria Completa">Primaria Completa</option>
-                        <option value="Primaria Incompleta">Primaria Incompleta</option>
-                        <option value="Secundaria Completa">Secundaria Completa</option>
-                        <option value="Secundaria Incompleta">Secundaria Incompleta</option>
-                        <option value="Preparatoria Completa">Preparatoria Completa</option>
-                        <option value="Preparatoria Incompleta">Preparatoria Incompleta</option>
-                        <option value ="Licenciatura Completa">Licenciatura Completa</otion>
-                        <option value="Licenciatura Incompleta">Licenciatura Incompleta</option>
-                        <option value="Doctorado Completo">Doctorado Completo</option>
-                        <option value="Doctorado Incompleto">Doctorado Incompleto</option>
-                        <option value="Sin Registro">Sin Registro</option>
+                    <option value="Sin Registro">Seleccione</option>
+                                <option value="">Primaria Completa</option>
+                                <option value="">Primaria Incompleta</option>
+                                <option value="">Secundaria Completa</option>
+                                <option value="">Secundaria Incompleta</option>
+                                <option value="">Preparatoria Completa</option>
+                                <option value="">Preparatoria Incompleta</option>
+                                <option value ="">Licenciatura Completa </otion>
+                                <option value="">Licenciatura Incompleta</option>
+                                <option value="">Doctorado Completo</option>
+                                <option value="">Doctorado Incompleto</option>
+                                <option value="">Sin Registro</option>
                     </select>
                 </div>
 
@@ -139,7 +139,7 @@
                 </div>
 
                 <div class="col-md-4">
-                    <strong style="font-size: 14px;">Circunferencia Cintura</strong>
+                    <strong style="font-size: 14px;">Circunferencia Abdominal</strong>
                     <input type="number" step="any" class="form-control" id="circunferencia"  name="circunferencia" style="font-size: 13px;" >
                 </div>
 
@@ -211,7 +211,7 @@
             <div class="col-md-3" id="PadreField">
                     <span style="font-size: 14px;">Padre - Tipo DM</span>
                     <select name="tipoPadre" id="tipoPadre" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
+                                <option value="negado">Negado</option>
                                 <option value="tipo_1">Tipo 1</option>
                                 <option value="tipo_2">Tipo 2</option>
                                 <option value="Gestacional">Gestacional</option>
@@ -224,7 +224,7 @@
                     <div class="col-md-3" id="MadreField" >
                         <span style="font-size: 14px;" >Madre - Tipo DM</span>
                             <select name="tipo_Madre" id="tipoMadre" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
+                                <option value="negado">Negado</option>
                                 <option value="tipo_1">Tipo 1</option>
                                 <option value="tipo_2">Tipo 2</option>
                                 <option value="Gestacional">Gestacional</option>
@@ -238,7 +238,7 @@
                     <div class="col-md-3" id="Abuelo_MaternoField" >
                         <span style="font-size: 14px;" >Abuelo Materno - Tipo DM</span>
                             <select name="tipoAbueloMaterno" id="tipoAbueloMaterno" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
+                                <option value="negado">Negado</option>
                                 <option value="tipo_1">Tipo 1</option>
                                 <option value="tipo_2">Tipo 2</option>
                                 <option value="Gestacional">Gestacional</option>
@@ -251,7 +251,7 @@
                     <div class="col-md-3" id="Abuela_MaternaField">
                         <span style="font-size: 14px;" >Abuela Materna - Tipo DM</span>
                             <select name="tipoAbuelaMaterna" id="tipoAbuelaMaterna" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
+                                <option value="negado">Negado</option>
                                 <option value="tipo_1">Tipo 1</option>
                                 <option value="tipo_2">Tipo 2</option>
                                 <option value="Gestacional">Gestacional</option>
@@ -264,7 +264,7 @@
                     <div class="col-md-3" id="Abuelo_PaternoField">
                         <span style="font-size: 14px;" >Abuelo Paterno - Tipo DM</span>
                             <select name="tipoAbueloPaterno" id="tipoAbueloPaterno" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
+                                <option value="negado">Negado</option>
                                 <option value="tipo_1">Tipo 1</option>
                                 <option value="tipo_2">Tipo 2</option>
                                 <option value="Gestacional">Gestacional</option>
@@ -278,7 +278,7 @@
                     <div class="col-md-3" id="Abuela_PaternaField" >
                         <span style="font-size: 14px;">Abuela Paterna - Tipo DM</span>
                             <select name="tipoAbuelaPaterna" id="tipoAbuelaPaterna" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
+                                <option value="negado">Negado</option>
                                 <option value="tipo_1">Tipo 1</option>
                                 <option value="tipo_2">Tipo 2</option>
                                 <option value="Gestacional">Gestacional</option>
@@ -332,7 +332,7 @@
                     <div class="col-md-3" id="MadreHAS" >
                         <span style="font-size: 14px;" >Madre - HAS</span>
                             <select name="HAS_Madre" id="HAS_Madre" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
+                                <option value="negado">Negado</option>
                                 <option value="Si">Si</option>
                             </select>
                     </div>
@@ -341,7 +341,7 @@
                     <div class="col-md-3" id="Abuelo_MaternoHAS" >
                         <span style="font-size: 14px;" >Abuelo Materno - HAS</span>
                             <select name="AbueloM_HAS" id="AbueloM_HAS" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
+                                <option value="negado">Negado</option>
                                     <option value="Si">Si</option>
                                 </select>
                     </div>
@@ -349,7 +349,7 @@
                     <div class="col-md-3" id="Abuela_MaternaHAS" >
                         <span style="font-size: 14px;" >Abuela Materno - HAS</span>
                             <select name="AbuelaM_HAS" id="AbuelaM_HAS" class="form-control" style="font-size: 14px;">
-                                    <option value="Negado">Negado</option>
+                                    <option value="negado">Negado</option>
                                     <option value="Si">Si</option>
                                 </select>
                     </div>
@@ -357,7 +357,7 @@
                     <div class="col-md-3" id="Abuelo_PaternoHAS" >
                         <span style="font-size: 14px;" >Abuelo Paterno - HAS</span>
                         <select name="AbueloP_HAS" id="AbueloP_HAS" class="form-control" style="font-size: 14px;">
-                            <option value="Negado">Negado</option>
+                            <option value="negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
                     </div>  
@@ -366,7 +366,7 @@
                     <div class="col-md-3" id="Abuela_PaternaHAS" >
                         <span style="font-size: 14px;" >Abuela Paterna  - HAS</span>
                             <select name="AbuelaP_HAS" id="AbuelaP_HAS" class="form-control" style="font-size: 14px;">
-                                    <option value="Negado">Negado</option>
+                                    <option value="negado">Negado</option>
                                     <option value="Si">Si</option>
                                 </select>
                     </div>
@@ -417,7 +417,7 @@
             <div class="col-md-3" id="PadreECV">
                     <span style="font-size: 14px;">Padre - ECV</span>
                     <select name="ECV_Padre" id="ECV_Padre" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
+                                <option value="negado">Negado</option>
                                 <option value="Si">Si</option>
                             </select>
                     </div>
@@ -425,7 +425,7 @@
                     <div class="col-md-3" id="MadreECV" >
                         <span style="font-size: 14px;" >Madre - ECV</span>
                             <select name="ECV_Madre" id="ECV_Madre" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
+                                <option value="negado">Negado</option>
                                 <option value="Si">Si</option>
                             </select>
                     </div>
@@ -434,7 +434,7 @@
                     <div class="col-md-3" id="Abuelo_MaternoECV" >
                         <span style="font-size: 14px;" >Abuelo Materno - ECV</span>
                             <select name="AbueloM_ECV" id="AbueloM_ECV" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
+                                <option value="negado">Negado</option>
                                     <option value="Si">Si</option>
                                 </select>
                     </div>
@@ -442,7 +442,7 @@
                     <div class="col-md-3" id="Abuela_MaternaECV" >
                         <span style="font-size: 14px;" >Abuela Materno - ECV </span>
                             <select name="AbuelaM_ECV" id="AbuelaM_ECV" class="form-control" style="font-size: 14px;">
-                                    <option value="Negado">Negado</option>
+                                    <option value="negado">Negado</option>
                                     <option value="Si">Si</option>
                                 </select>
                     </div>
@@ -450,7 +450,7 @@
                    <div class="col-md-3" id="Abuelo_PaternoECV" >
                         <span style="font-size: 14px;" >Abuelo Paterno - ECV</span>
                         <select name="AbueloP_ECV" id="AbueloP_ECV" class="form-control" style="font-size: 14px;">
-                            <option value="Negado">Negado</option>
+                            <option value="negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
                     </div>  
@@ -459,7 +459,7 @@
                     <div class="col-md-3" id="Abuela_PaternaECV" >
                         <span style="font-size: 14px;" >Abuela Paterna  - ECV</span>
                             <select name="AbuelaP_ECV" id="AbuelaP_ECV" class="form-control" style="font-size: 14px;">
-                                    <option value="Negado">Negado</option>
+                                    <option value="negado">Negado</option>
                                     <option value="Si">Si</option>
                                 </select>
                     </div>
@@ -501,7 +501,7 @@
             <div class="col-md-3" id="PadreCI">
                     <span style="font-size: 14px;">Padre - CI</span>
                     <select name="CI_Padre" id="CI_Padre" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
+                                <option value="negado">Negado</option>
                                 <option value="Si">Si</option>
                             </select>
                     </div>
@@ -509,7 +509,7 @@
                     <div class="col-md-3" id="MadreCI" >
                         <span style="font-size: 14px;" >Madre - CI</span>
                             <select name="CI_Madre" id="CI_Madre" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
+                                <option value="negado">Negado</option>
                                 <option value="Si">Si</option>
                             </select>
                     </div>
@@ -518,7 +518,7 @@
                     <div class="col-md-3" id="Abuelo_MaternoCI" >
                         <span style="font-size: 14px;" >Abuelo Materno - CI</span>
                             <select name="AbueloM_CI" id="AbueloM_CI" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
+                                <option value="negado">Negado</option>
                                     <option value="Si">Si</option>
                                 </select>
                     </div>
@@ -526,7 +526,7 @@
                     <div class="col-md-3" id="Abuela_MaternaCI" >
                         <span style="font-size: 14px;" >Abuela Materno - CI </span>
                             <select name="AbuelaM_CI" id="AbuelaM_CI" class="form-control" style="font-size: 14px;">
-                                    <option value="Negado">Negado</option>
+                                    <option value="negado">Negado</option>
                                     <option value="Si">Si</option>
                                 </select>
                     </div>
@@ -534,7 +534,7 @@
                    <div class="col-md-3" id="Abuelo_PaternoCI" >
                         <span style="font-size: 14px;" >Abuelo Paterno - CI</span>
                         <select name="AbueloP_CI" id="AbueloP_CI" class="form-control" style="font-size: 14px;">
-                            <option value="Negado">Negado</option>
+                            <option value="negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
                     </div>  
@@ -543,7 +543,7 @@
                     <div class="col-md-3" id="Abuela_PaternaCI" >
                         <span style="font-size: 14px;" >Abuela Paterna  - CI</span>
                             <select name="AbuelaP_CI" id="AbuelaP_CI" class="form-control" style="font-size: 14px;">
-                                    <option value="Negado">Negado</option>
+                                    <option value="negado">Negado</option>
                                     <option value="Si">Si</option>
                                 </select>
                     </div>
@@ -592,7 +592,7 @@
             <div class="col-md-3" id="Padre_trigliceridemia">
                     <span style="font-size: 14px;">Padre - HTG</span>
                     <select name="trigliceridemia_Padre" id="trigliceridemia_Padre" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
+                                <option value="negado">Negado</option>
                                 <option value="Si">Si</option>
                             </select>
                     </div>
@@ -600,7 +600,7 @@
                     <div class="col-md-3" id="Madre_trigliceridemia" >
                         <span style="font-size: 14px;" >Madre - HTG</span>
                             <select name="HTG_Madre" id="HTG_Madre" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
+                                <option value="negado">Negado</option>
                                 <option value="Si">Si</option>
                             </select>
                     </div>
@@ -609,7 +609,7 @@
                     <div class="col-md-3" id="AbueloMaterno_trigliceridemia" >
                         <span style="font-size: 14px;" >Abuelo Materno - HTG</span>
                             <select name="AbueloM_HTG" id="AbueloM_HTG" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
+                                <option value="negado">Negado</option>
                                     <option value="Si">Si</option>
                                 </select>
                     </div>
@@ -617,7 +617,7 @@
                     <div class="col-md-3" id="AbuelaMaterna_trigliceridemia" >
                         <span style="font-size: 14px;" >Abuela Materno - HTG </span>
                             <select name="AbuelaM_HTG" id="AbuelaM_HTG" class="form-control" style="font-size: 14px;">
-                                    <option value="Negado">Negado</option>
+                                    <option value="negado">Negado</option>
                                     <option value="Si">Si</option>
                                 </select>
                     </div>
@@ -625,7 +625,7 @@
                    <div class="col-md-3" id="AbueloPaterno_trigliceridemia" >
                         <span style="font-size: 14px;" >Abuelo Paterno - HTG</span>
                         <select name="AbueloP_HTG" id="AbueloP_HTG" class="form-control" style="font-size: 14px;">
-                            <option value="Negado">Negado</option>
+                            <option value="negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
                     </div>  
@@ -634,7 +634,7 @@
                     <div class="col-md-3" id="AbuelaPaterna_trigliceridemia" >
                         <span style="font-size: 14px;" >Abuela Paterna  - HTG</span>
                             <select name="AbuelaPaterna_HTG" id="AbuelaPaterna_HTG" class="form-control" style="font-size: 14px;">
-                                    <option value="Negado">Negado</option>
+                                    <option value="negado">Negado</option>
                                     <option value="Si">Si</option>
                                 </select>
                     </div>
@@ -676,7 +676,7 @@
             <div class="col-md-3" id="Padre_LDL">
                     <span style="font-size: 14px;">Padre -H-LDL</span>
                     <select name="LDL_Padre" id="LDL_Padre" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
+                                <option value="negado">Negado</option>
                                 <option value="Si">Si</option>
                             </select>
                     </div>
@@ -684,7 +684,7 @@
                     <div class="col-md-3" id="Madre_LDL">
                         <span style="font-size: 14px;" >Madre - H-LDL</span>
                             <select name="LDL_Madre" id="LDL_Madre" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
+                                <option value="negado">Negado</option>
                                 <option value="Si">Si</option>
                             </select>
                     </div>
@@ -693,7 +693,7 @@
                     <div class="col-md-3" id="AbueloMaterno_LDL">
                         <span style="font-size: 14px;" >Abuelo Materno - H-LDL</span>
                             <select name="AbueloM_LDL" id="AbueloM_LDL" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
+                                <option value="negado">Negado</option>
                                     <option value="Si">Si</option>
                                 </select>
                     </div>
@@ -701,7 +701,7 @@
                     <div class="col-md-3" id="AbuelaMaterna_LDL">
                         <span style="font-size: 14px;" >Abuela Materna-H-LDL </span>
                             <select name="AbuelaM_LDL" id="AbuelaM_LDL" class="form-control" style="font-size: 14px;">
-                                    <option value="Negado">Negado</option>
+                                    <option value="negado">Negado</option>
                                     <option value="Si">Si</option>
                                 </select>
                     </div>
@@ -709,7 +709,7 @@
                    <div class="col-md-3" id="AbueloPaterno_LDL">
                         <span style="font-size: 14px;" >Abuelo Paterno - H-LDL</span>
                         <select name="AbueloP_LDL" id="AbueloP_LDL" class="form-control" style="font-size: 14px;">
-                            <option value="Negado">Negado</option>
+                            <option value="negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
                     </div>  
@@ -718,7 +718,7 @@
                     <div class="col-md-3" id="AbuelaPaterna_LDL" >
                         <span style="font-size: 14px;" >Abuela Paterna  - H-LDL</span>
                             <select name="AbuelaP_LDL" id="AbuelaP_LDL" class="form-control" style="font-size: 14px;">
-                                    <option value="Negado">Negado</option>
+                                    <option value="negado">Negado</option>
                                     <option value="Si">Si</option>
                                 </select>
                     </div>
@@ -980,73 +980,7 @@
                             <input type="number" step="any" class="form-control" id="cistatina" name="cistatina">
                         </div>
 
-<!--===============   Laboratorios - Glucosa=======================-->       
-                        <div class="col-md-2">
-                            <strong style="font-size: 14px;">Glucosa</strong>
-                            <input type="number" step="any" class="form-control" id="id_glucosa" name="id_glucosa" >
-                        </div>
-
-<!--===============   Laboratorios- BH Biometría Hemática=======================-->       
-                        <div class="col-md-2">
-                            <strong style="font-size: 14px;">BH</strong>
-                            <input type="number" step="any" class="form-control" id="id_BH" name="id_BH" >
-                        </div>
-<!--===============   Laboratorios- HB Glucosilada=======================-->       
-                        <div class="col-md-2">
-                            <strong style="font-size: 14px;">HB Glucosilada</strong>
-                            <input type="number" step="any" class="form-control" id="id_glucosilada" name="id_glucosilada" >
-                        </div>
-
-<!--===============   Laboratorios- Ácido Úrico=======================-->       
-                        <div class="col-md-2">
-                            <strong style="font-size: 14px;">Ácido Úrico</strong>
-                            <input type="number" step="any" class="form-control" id="id_urico" name="id_urico" >
-                        </div>  
-                    
-<!--===============   Laboratorios- Urea=======================-->       
-                        <div class="col-md-2">
-                            <strong style="font-size: 14px;">Urea</strong>
-                            <input type="number" step="any" class="form-control" id="id_urea" name="id_urea" >
-                        </div>    
-
-<!--===============   Laboratorios- Creatinina=======================-->       
-                        <div class="col-md-2">
-                            <strong style="font-size: 14px;">Creatinina</strong>
-                            <input type="number" step="any" class="form-control" id="id_creatinina" name="id_creatinina" >
-                        </div>
-                                        
-<!--===============   Laboratorios- Colesterol=======================-->       
-                        <div class="col-md-2">
-                            <strong style="font-size: 14px;">Colesterol</strong>
-                            <input type="number" step="any" class="form-control" id="id_colesterol" name="id_colesterol" >
-                        </div> 
-
-<!--===============   Laboratorios- Triglicéridos=======================-->       
-                        <div class="col-md-2">
-                            <strong style="font-size: 14px;">Triglicéridos</strong>
-                            <input type="number" step="any" class="form-control" id="id_trigliceridos" name="id_trigliceridos" >
-                        </div>
-
-<!--===============   Laboratorios- LDL=======================-->       
-                        <div class="col-md-2">
-                            <strong style="font-size: 14px;">LDL</strong>
-                            <input type="number" step="any" class="form-control" id="id_LDL" name="id_LDL" >
-                        </div> 
-
-<!--===============   Laboratorios- HDL=======================-->       
-                        <div class="col-md-2">
-                            <strong style="font-size: 14px;">HDL</strong>
-                            <input type="number" step="any" class="form-control" id="id_HDL" name="id_HDL" >
-                        </div> 
-
-<!--===============   Laboratorios- HBG 24 HRS=======================-->       
-                        <div class="col-md-2">
-                            <strong style="font-size: 14px;">HBG 24 HRS</strong>
-                            <input type="number" step="any" class="form-control" id="id_HBG" name="id_HBG" >
-                        </div> 
-                        
-        
-                        <!-- **********************************COMPLICACIONES*********************************** -->
+<!-- **********************************COMPLICACIONES*********************************** -->
                 <div class="col-md-12">
                     <div class="form-header" style="margin-top:15px">
                         <h5 class="form-title"
@@ -1069,7 +1003,6 @@
                         <option value="Edema Macular de significancia clínica">Edema Macular de significancia clínica</option>
                     </select>
                 </div>
-
 <!--===========             Retinopatía     ================-->
                 <div class="col-md-4" id="com_ceguera ">
                     <strong style="font-size: 14px">Ceguera </strong>
@@ -1078,23 +1011,49 @@
                         <option value="Si">Si</option>
                     </select>
                 </div>
-
 <!--===============  NEFROPATIA  =======================-->
                 <div class="col-md-4" id="com_nefro">
                     <strong style="font-size: 14px;">Nefropatía</strong>
                     <input type="text" class="form-control" id="id_nefro" name="nefro" >
                 </div>
 
-<!--===========         Cardiopatía isquémica     ================-->
-<div class="col-md-4" id="com_cardiopatia ">
+<!--===========     Neuropatía     ================-->
+                <div class="col-md-4" id="com_neuropatia">
+                        <strong style="font-size: 14px">Neuropatía </strong>
+                        <select name="neuropatia" id="neuropatiaSelect" class="form-control" style="font-size: 14px">
+                            <option value="Negado">Negado</option>
+                            <option value="Polineuropatía Simétrica Distal">Polineuropatía Simétrica Distal</option>
+                            <option value="Pie de Charcot">Pie de Charcot</option>
+                            <option value="Neuropatía Gastrointestinal">Neuropatía Gastrointestinal</option>
+                            <option value="Neuropatía Genitourinaria">Neuropatía Genitourinaria</option>
+                            <option value="Neuropatía Cardiovascular">Neuropatía Cardiovascular</option>
+                            <option value="Otra">Otra</option>
+                        </select>
+                    </div>
+
+<!--===========             Cardiopatía isquémica     ================-->
+                <div class="col-md-4" id="com_cardiopatia ">
                         <strong style="font-size: 14px"> Cardiopatía isquémica</strong>
                         <select name="cardiopatia" id="Cardiopatia_isquemicaSelect" class="form-control" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
                     </div>
+<!--===========    Amputaciones    ================-->
+                <div class="col-md-4" id="com_neuropatia">
+                        <strong style="font-size: 14px"> Amputaciones </strong>
+                        <select name="Amputaciones" id="AmputacionesSelect" class="form-control" style="font-size: 14px">
+                            <option value="Negado">Negado</option>
+                            <option value="Dedos">Dedos</option>
+                            <option value="Transmetatarsina">Transmetatarsina</option>
+                            <option value="Infracondílea">Infracondílea</option>
+                            <option value="Supracondílea Derecha">Supracondílea Derecha</option>
+                            <option value="Supracondílea Izquierda">Supracondílea Izquierda</option>
+                        </select>
+                    </div>
+
 <!--===========     Enfermedad Vascular Cerebral Isquémica     ================-->
-                <div class="col-md-4" id="com_isquemica ">
+                <div class="col-md-6" id="com_isquemica ">
                         <strong style="font-size: 14px"> Enfermedad Vascular Cerebral Isquémica </strong>
                         <select name="isquemica" id="IsquemicaSelect" class="form-control" style="font-size: 14px">
                             <option value="Negado">Negado</option>
@@ -1103,188 +1062,13 @@
                     </div>
 
 <!--===========        Insuficiencia Arterial Periférica    ================-->
-                <div class="col-md-4" id="com_cardiopatia ">
+                <div class="col-md-6" id="com_cardiopatia ">
                         <strong style="font-size: 14px"> Insuficiencia Arterial Periférica</strong>
                         <select name="InsuficienciaArterialPeriferica" id="InsuficienciaArterialPerifericaSelect" class="form-control" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
                     </div>
-
-                    <br><br>
-<!--===========     Neuropatía     ================-->
-<div class="col-md-12" id="com_neuropatia">
-                        <strong style="font-size: 14px">Neuropatía </strong>
-                        <select name="neuropatiaSelect" id="neuropatiaSelect" class="form-control" style="font-size: 14px">
-                            <option value="Negado">Negado</option>
-                            <option value="Si">Si</option>
-                        </select>
-                </div>
-
-<div class="container" id="neuropatia">
-                    
-        <div class ="row">
-                
-            <div class="col-md-4" id="neuropatia_polineuropatia">
-                    <span style="font-size: 14px;">Polineuropatía </span>
-                    <select name="polineuropatia" id="polineuropatia" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
-                                <option value="Si">Si</option>
-                            </select>
-                    </div>
-            <!--===============Simétrica Distal=======================-->
-                    <div class="col-md-4" id="neuropatia_simetrica">
-                        <span style="font-size: 14px;" >Simétrica Distal</span>
-                            <select name="Simetrica_Distal" id="Simetrica_Distal" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
-                                <option value="Si">Si</option>
-                            </select>
-                    </div>
-            <!--===============Pie de Charcot =======================-->
-                    
-                    <div class="col-md-4" id="neuropatia_Charcot">
-                        <span style="font-size: 14px;" >Pie de Charcot</span>
-                            <select name="Pie_Charcot" id="Pie_Charcot" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
-                                    <option value="Si">Si</option>
-                                </select>
-                    </div>
-            <!--===============Neuropatía GastrointestinalL=======================-->      
-                    <div class="col-md-4" id="neuropatia_gastrointestinal">
-                        <span style="font-size: 13px;" >Neuropatía Gastrointestinal</span>
-                            <select name="neuropatia_gastro" id="neuropatia_gastro" class="form-control" style="font-size: 14px;">
-                                    <option value="Negado">Negado</option>
-                                    <option value="Si">Si</option>
-                                </select>
-                    </div>
-            <!--===============Neuropatía Genitourinaria =======================-->
-                   <div class="col-md-4" id="neuropatia_genitourinario">
-                        <span style="font-size: 14px;" >Neuropatía Genitourinaria</span>
-                        <select name="neuropatia_genito" id="neuropatia_genito" class="form-control" style="font-size: 14px;">
-                            <option value="Negado">Negado</option>
-                            <option value="Si">Si</option>
-                        </select>
-                    </div>  
-                    
-            <!--===============Neuropatía Cardiovascular=======================-->
-                    <div class="col-md-4" id="neuropatia_Cardiovascular">
-                        <span style="font-size: 14px;" >Neuropatía Cardiovascular</span>
-                            <select name="neuropatia_cardio" id="neuropatia_cardio" class="form-control" style="font-size: 14px;">
-                                    <option value="Negado">Negado</option>
-                                    <option value="Si">Si</option>
-                                </select>
-                    </div>
-
-            </div><!--===========DIV NEUROPATIA================--> <br>
-
-        </div> <!--=========== DIV NEUROPATIA================-->  
-
-
-<!--===========    Amputaciones    ================-->
-                
-<div class="col-md-12" id="com_amputaciones">
-                        <strong style="font-size: 14px">Amputaciones</strong>
-                        <select name="AmputacionesSelect" id="AmputacionesSelect" class="form-control" style="font-size: 14px">
-                            <option value="Negado">Negado</option>
-                            <option value="Si">Si</option>
-                        </select>
-                    </div>
-
-        <div class="container" id="amputaciones">
-                    
-            <div class ="row">
-                
-            <div class="col-md-12" id="Dedos">
-                    <span style="font-size: 14px;">Dedos </span>
-                    <select name="amputaciones_dedos" id="amputaciones_dedos" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
-                                <option value="Si">Si</option>
-                            </select>
-                    </div>
-<!--===============Lateralidad-DEDOS-MANOS =======================-->
-                    <div class="col-md-6" id="dedos_Mano">
-                        <span style="font-size: 14px;">Dedos-Mano </span>
-                        <select name="Mano_dedos" id="Mano_dedos" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
-                                <option value="Derecho">Derecho</option>
-                                <option value="Izquierda">Izquierda</option>
-                                <option value="Bilateral">Bilateral</option>
-                            </select>
-                    </div>
-<!--===============Lateralidad-DEDOS-PIES =======================-->
-                    <div class="col-md-6" id="dedos_Pies">
-                        <span style="font-size: 14px;">Dedos-Pie</span>
-                        <select name="Pies_dedos" id="Pies_dedos" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
-                                <option value="Derecho">Derecho</option>
-                                <option value="Izquierda">Izquierda</option>
-                                <option value="Bilateral">Bilateral</option>
-                            </select>
-                    </div>
-
-
-            <!--===============Transmetatarsiana =======================-->
-                    <div class="col-md-6" id="Transmetatarsiana">
-                        <span style="font-size: 14px;">Transmetatarsiana</span>
-                            <select name="amputaciones_transmetatarsiana" id="amputaciones_transmetatarsiana" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
-                                <option value="Si">Si</option>
-                            </select>
-                    </div>
-<!--===============Lateralidad-Transmetatarsiana =======================-->
-                    <div class="col-md-6" id="Transmetatarsiana_lateralidad" >
-                        <span style="font-size: 14px;">Transmetatarsiana-Lateralidad </span>
-                        <select name="lateralidad_Transmetatarsiana" id="lateralidad_Transmetatarsiana" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
-                                <option value="Derecho">Derecho</option>
-                                <option value="Izquierda">Izquierda</option>
-                                <option value="Bilateral">Bilateral</option>
-                            </select>
-                    </div>
-
-<!--===============Infracondílea =======================-->
-                    
-                    <div class="col-md-6" id="Infracondílea">
-                        <span style="font-size: 14px;">Infracondílea</span>
-                            <select name="amputaciones_infracondilea" id="amputaciones_infracondilea" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
-                                    <option value="Si">Si</option>
-                                </select>
-                    </div>
-
-<!--===============Lateralidad-Infracondílea =======================-->
-                    <div class="col-md-6" id="Infracondílea_lateralidad" >
-                        <span style="font-size: 14px;">Infracondílea-Lateralidad </span>
-                        <select name="lateralidad_Infracondílea" id="lateralidad_Infracondílea" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
-                                <option value="Derecho">Derecho</option>
-                                <option value="Izquierda">Izquierda</option>
-                                <option value="Bilateral">Bilateral</option>
-                            </select>
-                    </div>      
-                    
-<!--===============Supracondílea Derecha=======================-->      
-                    <div class="col-md-6" id="supracondilea">
-                        <span style="font-size: 14px;">Supracondílea</span>
-                            <select name="amputaciones_Supracondilea" id="amputaciones_Supracondilea" class="form-control" style="font-size: 14px;">
-                                    <option value="Negado">Negado</option>
-                                    <option value="Si">Si</option>
-                                </select>
-                    </div>
-           <!--===============Lateralidad-Supracondilea =======================-->
-                    <div class="col-md-6" id="Supracondilea_lateralidad" >
-                        <span style="font-size: 14px;">Supracondilea-Lateralidad </span>
-                        <select name="lateralidad_Supracondilea" id="lateralidad_Supracondilea" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
-                                <option value="Derecho">Derecho</option>
-                                <option value="Izquierda">Izquierda</option>
-                                <option value="Bilateral">Bilateral</option>
-                            </select>
-                    </div>     
-                    
-            </div><!--===========DIV AMPUTACIONES================--> 
-
-        </div> <!--=========== DIV AMPUTACIONES================-->  
 
 
 <!-- ********************************** TRATAMIENTOS *********************************** -->
@@ -1300,17 +1084,6 @@
                         TRATAMIENTO</h5>
                     </div>
                 </div>
-<!-- ********************************** Tratamiento Farmacolofico *********************************** -->
-            <div class="form-header">
-                <h5 class="form-title"
-                style="text-align: center;
-                background-color:rgb(80, 177, 210,0.5);
-                color: aliceblue;
-                margin-top:5px;
-                font-size: 13px;">
-                Tratamiento Farmacológico</h5>
-            </div>
-
 
             <div class="col-md-12" id="id_tx1">
                 <strong style="font-size: 14px">Hipoglucemiantes</strong>
@@ -1610,7 +1383,7 @@
                 <!--===============Si con Tratamiento Hipolipemiantes=======================-->
     
     <!--===========    Hipolipemiantes    ================-->
-            <div class="col-md-3" id="tx_Estatinas" >
+            <div class="col-md-4" id="tx_Estatinas" >
                             <span style="font-size: 14px">Estatinas</span>
                             <select name="Estatinas" id="EstatinasSelect" class="form-control" style="font-size: 14px">
                                 <option value="Negado">Negado</option>
@@ -1622,7 +1395,7 @@
                             </select>
                     </div>
     
-                    <div class="col-md-3" id="tx_Fibratos" >
+                    <div class="col-md-4" id="tx_Fibratos" >
                             <span style="font-size: 14px">Fibratos</span>
                             <select name="Fibratos" id="FibratosSelect" class="form-control" style="font-size: 14px">
                                 <option value="Negado">Negado</option>
@@ -1632,23 +1405,14 @@
                             </select>
                     </div>
     
-                    <div class="col-md-3" id="tx_Omega">
+                    <div class="col-md-4" id="tx_Omega">
                             <span style="font-size: 14px">Omega 3</span>
                             <select name="Omega" id="OmegaSelect" class="form-control" style="font-size: 14px">
                                 <option value="Negado">Negado</option>
                                 <option value="Si">Si</option>
                             </select>
                     </div>
-
-
-                    <div class="col-md-3" id="tx_absorcion">
-                        <span style="font-size: 14px">Inhibidores de la Absorción</span>
-                        <select name="Inhibidores_AbsorcionSelect" id="OmegaSInhibidores_AbsorcionSelectelect" class="form-control" style="font-size: 14px">
-                            <option value="Negado">Negado</option>
-                            <option value="Ezetimiba">Ezetimiba</option>
-                        </select>
-                    </div>    
-
+    
         </div><!--===========DIV TX Hipolipemiantes ================--> <br> 
     
     </div> <!--=========== DIV DEL ROW DE Hipolipemiantes================-->
@@ -1850,62 +1614,10 @@
     </div> <!--=========== DIV DEL ROW DE OTROS================-->
 
 <!--===========Numero de Farmacos Totales ================-->
-            <div class="col-md-6">
-                <strong style="font-size: 14px;">Número de Fármacos Totales utilizados </strong>
-                <input type="number" class="form-control" id="Farmacos_utilizados" name="Farmacos_utilizados" style="font-size: 13px;" >
-                </div><br> <br>
-
-            <div class="form-header">
-                <h5 class="form-title"
-                style="text-align: center;
-                background-color:rgb(80, 177, 210,0.5);
-                color: aliceblue;
-                margin-top:5px;
-                font-size: 14px;">
-                Medidas Generales</h5>
-            </div>
-
-            <div class="col-md-12" id="id_Ejercicio">
-                <strong style="font-size: 14px">Ejercicio</strong>
-                <select name="EjercicioSelect" id="EjercicioSelect" class="form-control" style="font-size: 14px">
-                    <option value="Negado">Negado</option>
-                    <option value="Si">Si</option>
-                </select>
-            </div>
-            <div class="container" id="tx_ejercicio">
-                    
-                    <div class ="row">
-                        
-                    <!--===============Si EJERCICIO=======================-->
-        
-                <!-- Veces a la Semana -->
-                <div class="col-md-3" id="Veces_tiempo">
-                    <strong style="font-size: 14px;">Veces a la Semana</strong>
-                    <input type="number" class="form-control" id="id_vecestiempo" name="id_vecestiempo">
-                </div>
-
-                <!-- Apego Veces -->
-                <div class="col-md-3" id="Apego_tiempo">
-                    <strong style="font-size: 14px;">Apego Veces</strong>
-                    <input type="text" class="form-control" id="id_apegotiempo" name="id_apegotiempo" readonly>
-                </div>
-
-                <!-- Tiempo a la Semana -->
-                <div class="col-md-3" id="Tiempo_Semana">
-                    <strong style="font-size: 14px;">Tiempo a la Semana</strong>
-                    <input type="number" class="form-control" id="id_tiemposemana" name="id_tiemposemana" placeholder="min">
-                </div>
-
-                <!-- Apego a la Semana -->
-                <div class="col-md-3" id="Apego_Veces">
-                    <strong style="font-size: 14px;">Apego a la Semana</strong>
-                    <input type="text" class="form-control" id="id_apegoveces" name="id_apegoveces" readonly>
-                </div>
-        
-
-            </div><!--===========DIV TX Ejercicio ================--> <br> 
-        
-        </div> <!--=========== DIV DEL ROW DE Ejercicio================-->
+        <div class="col-md-6">
+                    <strong style="font-size: 14px;">Número de Fármacos Totales utilizados </strong>
+                    <input type="number" class="form-control" id="Farmacos_utilizados" name="Farmacos_utilizados" style="font-size: 13px;" >
+                </div><br>
 
 
 

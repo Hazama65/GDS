@@ -92,7 +92,7 @@
             </tr>
 
             <tr>
-                <td class="estilo-celda">Circunferencia Cintura</td>
+                <td class="estilo-celda">Circunferencia Abdominal</td>
                 <td></td>
             </tr>
 
@@ -435,74 +435,18 @@
             </tr>
                    
             <tr>
-                <td class="estilo-celda">Creatinina</td>
+                <td class="estilo-celda">creatinina</td>
                 <td></td>
             </tr>
 
             <tr>
-                <td class="estilo-celda">Cistatina</td>
+                <td class="estilo-celda">cistatina</td>
                 <td></td>
             </tr>
 
-            <tr>
-                <td class="estilo-celda">Glucosa</td>
-                <td></td>
-            </tr>  
-    
-            <tr>
-                <td class="estilo-celda">BH</td>
-                <td></td>
-            </tr>
-            
-            <tr>
-                <td class="estilo-celda">HB Glucosilada</td>
-                <td></td>
-            </tr>  
-
-            <tr>
-                <td class="estilo-celda">Ácido Úrico</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Urea</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Creatinina</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Colesterol</td>
-                <td></td>
-            </tr>
-                
-            <tr>
-                <td class="estilo-celda">Triglicéridos</td>
-                <td></td>
-            </tr>
-                
-            <tr>
-                <td class="estilo-celda">LDL</td>
-                <td></td>
-            </tr>            
-            
-            <tr>
-                <td class="estilo-celda">HDL</td>
-                <td></td>
-            </tr>            
-            
-            <tr>
-                <td class="estilo-celda">HBG 24 HRS</td>
-                <td></td>
-            </tr>
-            
-            
-            
-            
-            
+         
+           
+        
             <!--====================================COMPLICACIONES============================-->
             
             <tr>
@@ -526,7 +470,18 @@
             </tr>
 
             <tr>
+                <td class="estilo-celda">Neuropatía</td>
+                <td></td>
+            </tr>
+
+            
+            <tr>
                 <td class="estilo-celda">Cardiopatía isquémica</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Amputaciones</td>
                 <td></td>
             </tr>
 
@@ -540,97 +495,9 @@
                 <td></td>
             </tr>
 
-            <tr>
-                <td class="estilo-celda">Neuropatía</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Polineuropatía</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Simétrica Distal</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Pie de Charcot</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Neuropatía Gastrointestinal</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Neuropatía Genitourinaria</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Neuropatía Cardiovascular</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Amputaciones</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Dedos</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Dedos-Mano</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Dedos-Pie</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Transmetatarsiana</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Transmetatarsiana-Lateralidad</td>
-                <td></td>
-            </tr>     
-                    
-            <tr>
-                <td class="estilo-celda">Infracondílea</td>
-                <td></td>
-            </tr>
+              <!--====================================TRATAMIENTOS============================-->
             
-            <tr>
-                <td class="estilo-celda">Infracondílea-Lateralidad</td>
-                <td></td>
-            </tr> 
-            
-            <tr>
-                <td class="estilo-celda">Supracondílea</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Supracondílea-Lateralidad</td>
-                <td></td>
-            </tr> 
-
-
-
-            
-            <!--====================================TRATAMIENTOS============================-->
-            
-            <tr>
+              <tr>
                 <th scope="col"  style="background-color: rgb(62, 104, 170,0.5);"> TRATAMIENTOS</th>
                 <th scope="col" style="background-color: rgb(62, 104, 170,0.5);"> </th>
             </tr>
@@ -762,11 +629,6 @@
             </tr>
 
             <tr>
-                <td class="estilo-celda">Inhibidores de la Absorción </td>
-                <td></td>
-            </tr>            
-
-            <tr>
                 <td class="estilo-celda">Antihipertensivos</td>
                 <td></td>
             </tr>
@@ -842,34 +704,6 @@
                 <td class="estilo-celda">Número de Fármacos Totales utilizados</td>
                 <td></td>
             </tr>   
-            <tr>
-                <th scope="col"  style="background-color: rgb(62, 104, 170,0.5);"> Medidas Generales</th>
-                <th scope="col" style="background-color: rgb(62, 104, 170,0.5);"> </th>
-            </tr>
-            <tr>
-                <td class="estilo-celda">Ejercicio</td>
-                <td></td>
-            </tr>   
-
-            <tr>
-                <td class="estilo-celda">Veces a la Semana</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Apego Veces</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Tiempo a la Semana</td>
-                <td></td>
-            </tr> 
-
-            <tr>
-                <td class="estilo-celda">Apego a la Semana</td>
-                <td></td>
-            </tr>   
 
         </tbody>
     </table>
@@ -880,3 +714,4 @@
 
 </body>
 </html>
+       
