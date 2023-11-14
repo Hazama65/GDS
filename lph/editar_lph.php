@@ -88,6 +88,7 @@
                     <select name="referencia" id="refererencia" class="form-control" style="font-size: 13px;">
                         <option value="Sin Registro"<?php if ($referencia == 'Sin Registro') echo 'selected'; ?>>Sin Registro</option>
                         <option value="Si"<?php if ($referencia == 'Si') echo 'selected'; ?>>Si</option>
+                        <option value="No"<?php if ($referencia == 'No') echo 'selected'; ?>>No</option>
                     </select>
                 </div>
 

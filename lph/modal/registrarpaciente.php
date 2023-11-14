@@ -57,14 +57,15 @@
                     <select name="referencia" id="refererencia" class="form-control" style="font-size: 13px;">
                         <option value="Sin Registro">Sin Registro</option>
                         <option value="Si">Si</option>
+                        <option value="No">No</option>
                     </select>
                 </div>
 
                 
                 <div class="col-md-4">
-                            <strong style="font-size: 14px;">Número Telefónico</strong>
-                            <input type="tel" id="telefono" name="telefono" class="control form-control" placeholder="55-1234-5678" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" minlength="10" maxlength="12">
-                        </div>
+                    <strong style="font-size: 14px;">Número Telefónico</strong>
+                    <input type="text" id="telefono" name="telefono" class="control form-control" style="font-size: 13px;" placeholder="55-1234-5678" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" minlength="10" maxlength="12">
+                </div>
 
                 <div class="col-md-4">
                     <strong style="font-size: 14px;">Escolaridad</strong>
@@ -120,14 +121,14 @@
                 </div>
 
                 <div class="col-md-4">
-                    <strong style="font-size: 13px;">Circunferencia Abdominal</strong>
+                    <strong style="font-size: 14px;">Circunferencia Abdominal</strong>
                     <input type="number" step="any" class="form-control" id="circunferencia"  name="circunferencia" style="font-size: 13px;" >
                 </div>
 
 
                 <div class="col-md-4">
                     <strong style="font-size: 14px;">Derechohabiencia</strong>
-                    <select name="derechohabiencia" id="derechohabiencia" class="form-control" style="font-size: 14px;" onchange="mostrarCampos()">
+                    <select name="derechohabiencia" id="derechohabiencia" class="form-control" style="font-size: 13px;" onchange="mostrarCampos()">
                         <option value="Sin registro">Sin registro</option>
                         <option value="Si">Sí</option>
                         <option value="No">No</option>
@@ -136,7 +137,7 @@
 
                 <div class="col-md-4" id="estudio_socioeconomico_field" style="display: none;">
                     <strong style="font-size: 12px;">Estudio Socioeconómico</strong>
-                    <select name="estudio_socioeconomico" id="estudio_socioeconomico" class="form-control" style="font-size: 14px;" onchange="mostrarNivel()">
+                    <select name="estudio_socioeconomico" id="estudio_socioeconomico" class="form-control" style="font-size: 13px;" onchange="mostrarNivel()">
                         <option value="Sin registro">Sin registro</option>
                         <option value="Si">Sí</option>
                         <option value="No">No</option>
@@ -145,7 +146,7 @@
 
                 <div class="col-md-4" id="nivel_field" style="display: none;">
                     <strong style="font-size: 14px;">Nivel</strong>
-                    <select name="nivel" id="nivel" class="form-control" style="font-size: 14px;">
+                    <select name="nivel" id="nivel" class="form-control" style="font-size: 13px;">
                         <option value="Seleccione">Seleccione</option>
                         <option value="Nx">Nx</option>
                         <option value="N1">N1</option>
