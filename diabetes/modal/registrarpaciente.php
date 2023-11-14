@@ -182,24 +182,24 @@
             <div class ="row">
                 
             <div class="col-md-4" id="PadreField">
-                    <span style="font-size: 14px;">Padre - Tipo DM</span>
-                    <select name="tipoPadre" id="tipoPadre" class="form-control" style="font-size: 14px;">
-                                <option value="Negado">Negado</option>
-                                <option value="Tipo_1">Tipo 1</option>
-                                <option value="Tipo_2">Tipo 2</option>
-                                <option value="Gestacional">Gestacional</option>
-                                <option value="MODY">MODY</option>
-                                <option value="LADA">LADA</option>
-                                <option value="Otra">Otra</option>
-                            </select>
+                        <span style="font-size: 14px;">Padre - Tipo DM</span>
+                        <select name="tipoPadre" id="tipoPadre" class="form-control" style="font-size: 14px;">
+                            <option value="Negado">Negado</option>
+                            <option value="Tipo 1">Tipo 1</option>
+                            <option value="Tipo 2">Tipo 2</option>
+                            <option value="Gestacional">Gestacional</option>
+                            <option value="MODY">MODY</option>
+                            <option value="LADA">LADA</option>
+                            <option value="Otra">Otra</option>
+                        </select>
                     </div>
         <!--===============sI SELECCIONAMOS MADRE =======================-->
                     <div class="col-md-4" id="MadreField" >
                         <span style="font-size: 14px;" >Madre - Tipo DM</span>
                             <select name="tipoMadre" id="tipoMadre" class="form-control" style="font-size: 14px;">
                                 <option value="Negado">Negado</option>
-                                <option value="Tipo_1">Tipo 1</option>
-                                <option value="Tipo_2">Tipo 2</option>
+                                <option value="Tipo 1">Tipo 1</option>
+                                <option value="Tipo 2">Tipo 2</option>
                                 <option value="Gestacional">Gestacional</option>
                                 <option value="MODY">MODY</option>
                                 <option value="LADA">LADA</option>
@@ -212,8 +212,8 @@
                         <span style="font-size: 14px;" >Abuelo Materno - Tipo DM</span>
                             <select name="tipoAbueloMaterno" id="tipoAbueloMaterno" class="form-control" style="font-size: 14px;">
                                 <option value="Negado">Negado</option>
-                                <option value="Tipo_1">Tipo 1</option>
-                                <option value="Tipo_2">Tipo 2</option>
+                                <option value="Tipo 1">Tipo 1</option>
+                                <option value="Tipo 2">Tipo 2</option>
                                 <option value="Gestacional">Gestacional</option>
                                 <option value="MODY">MODY</option>
                                 <option value="LADA">LADA</option>
@@ -225,8 +225,8 @@
                         <span style="font-size: 14px;" >Abuela Materna - Tipo DM</span>
                             <select name="tipoAbuelaMaterna" id="tipoAbuelaMaterna" class="form-control" style="font-size: 14px;">
                                 <option value="Negado">Negado</option>
-                                <option value="Tipo_1">Tipo 1</option>
-                                <option value="Tipo_2">Tipo 2</option>
+                                <option value="Tipo 1">Tipo 1</option>
+                                <option value="Tipo 2">Tipo 2</option>
                                 <option value="Gestacional">Gestacional</option>
                                 <option value="MODY">MODY</option>
                                 <option value="LADA">LADA</option>
@@ -238,8 +238,8 @@
                         <span style="font-size: 14px;" >Abuelo Paterno - Tipo DM</span>
                             <select name="tipoAbueloPaterno" id="tipoAbueloPaterno" class="form-control" style="font-size: 14px;">
                                 <option value="Negado">Negado</option>
-                                <option value="Tipo_1">Tipo 1</option>
-                                <option value="Tipo_2">Tipo 2</option>
+                                <option value="Tipo 1">Tipo 1</option>
+                                <option value="Tipo 2">Tipo 2</option>
                                 <option value="Gestacional">Gestacional</option>
                                 <option value="MODY">MODY</option>
                                 <option value="LADA">LADA</option>
@@ -252,8 +252,8 @@
                         <span style="font-size: 14px;">Abuela Paterna - Tipo DM</span>
                             <select name="tipoAbuelaPaterna" id="tipoAbuelaPaterna" class="form-control" style="font-size: 14px;">
                                 <option value="Negado">Negado</option>
-                                <option value="Tipo_1">Tipo 1</option>
-                                <option value="Tipo_2">Tipo 2</option>
+                                <option value="Tipo 1">Tipo 1</option>
+                                <option value="Tipo 2">Tipo 2</option>
                                 <option value="Gestacional">Gestacional</option>
                                 <option value="MODY">MODY</option>
                                 <option value="LADA">LADA</option>
@@ -1223,7 +1223,7 @@
            <!--===============Lateralidad-Infracondílea =======================-->
            <div class="col-md-6" id="Infracondílea_lateralidad" style="display: none">
                         <span style="font-size: 14px;">Infracondílea-Lateralidad </span>
-                        <select name="lateralidad_Infracondílea" id="lateralidad_Infracondílea" class="form-control" style="font-size: 14px;">
+                        <select name="lateralidad_Infracondilea" id="lateralidad_Infracondilea" class="form-control" style="font-size: 14px;">
                                 <option value="Seleccione">Seleccione</option>
                                 <option value="Derecho">Derecho</option>
                                 <option value="Izquierda">Izquierda</option>
@@ -1605,7 +1605,7 @@
 
                 <div class="col-md-3" id="tx_absorcion">
                         <span style="font-size: 14px">Inhibidores de la Absorción</span>
-                        <select name="Inhibidores_AbsorcionSelect" id="OmegaSInhibidores_AbsorcionSelectelect" class="form-control" style="font-size: 14px">
+                        <select name="Inhibidores_AbsorcionSelect" id="Inhibidores_AbsorcionSelect" class="form-control" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Ezetimiba">Ezetimiba</option>
                         </select>

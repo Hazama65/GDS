@@ -1,6 +1,6 @@
 <?php
 //llamado al modal de registrar paciente de diabetes
-// require('php/controllers/registros.controller.php');
+require('php/controllers/registros.controller.php');
 include("modal/registrarpaciente.php");
 ?>
 
@@ -34,9 +34,9 @@ include("modal/registrarpaciente.php");
                 <i class="bi bi-person-add"> </i> Paciente
             </button>
 
-            <button type="button" class="btn btn-success">
+            <a href="php/export.php" class="btn btn-success">
                 <i class="bi bi-file-earmark-excel"></i> Excel
-            </button>
+            </a>
 
             <a href="graficas_anemia.php">
                 <button type="button" class="btn btn-primary" target="_blank">

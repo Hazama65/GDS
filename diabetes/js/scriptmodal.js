@@ -716,7 +716,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (vecesSemanaValue >= 5 && vecesSemanaValue <= 7) {
             apegoVecesInput.value = 'Ideal';
             apegoVecesInput.style.backgroundColor = 'green';
-            apegoVecesInput.style.color = 'black';
+            apegoVecesInput.style.color = 'white';
         }
     });
 });

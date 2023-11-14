@@ -4,11 +4,11 @@
 
     $connectionDB = new Database(DB_HOST,DB_NAME,DB_USERNAME,DB_PASSWORD);
 
-    $id_paciente = null;
-    if (isset($_GET['idPaciente']) && is_numeric($_GET['idPaciente'])) {
-        $id_paciente = $_GET['idPaciente'];
+    if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+        $id_paciente=$_GET['id'];
 
-        $queryAllData = "SELECT dp.*, di.*, hip.*, ec.*, dis.*, c.*, lab.*, com.*, hg.*, ins.*, hipo.*, ah.*, ot.*,ej.*
+
+        $query= "SELECT dp.*, di.*, hip.*, ec.*, dis.*, c.*, lab.*, com.*, hg.*, ins.*, hipo.*, ah.*, ot.*,ej.*
         FROM datos_paciente dp
         LEFT JOIN antihipertensivos ah ON dp.id_paciente = ah.id_paciente
         LEFT JOIN comorbilidades c ON dp.id_paciente = c.id_paciente
@@ -25,11 +25,13 @@
         LEFT JOIN ejercicio ej ON dp.id_paciente = ej.id_paciente
         WHERE dp.id_paciente ='$id_paciente'";
 
-        $AllData = $connectionDB->getRows($queryAllData);
+        $AllData = $connectionDB->getRows($query);
+
 
         if (!empty($AllData)) {
             foreach ($AllData as $data) {
 
+                $id_paciente= $data['id_paciente'];
                 $curp = $data['curp'];
                 $nombre = $data['nombre'];
                 $fecha_nacimiento = $data['fecha_nacimiento'];
@@ -227,14 +229,7 @@
                 $t_no_semana = $data['t_no_semana'];
 
             }
-        }else {
-            echo "No se encontro la informacion";
-            exit;
         }
-    }else {
-        echo $id_paciente;
-        exit;
     }
-
 
 ?>
