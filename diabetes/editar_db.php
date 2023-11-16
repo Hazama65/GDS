@@ -110,18 +110,43 @@
 
                 <div class="col-md-4">
                     <strong style="font-size: 14px;">Estado</strong>
-                    <input type="text" class="form-control" id="estado" name="estado" value="<?php echo $estado; ?>" style="font-size: 13px;" >
+                    <select name="estado" id="estado" class="form-control" style="font-size: 13px;">
+                        <option value="<?php echo $estado1;?>"><?php echo $estado1;?></option>
+                        <?php
+                            if (!empty($AllData_Estados)) {
+                                foreach ($AllData_Estados as $row1) {
+                                    echo "<option value='" . $row1["Estado_Id"] . "'>" . $row1["NombreEstado"] . "</option>";
+                                }
+                            } else {
+                                echo "<option value=''>No hay datos disponibles</option>";
+                            }
+                        ?>
+                    </select>
                 </div>
 
                 <div class="col-md-4">
                     <strong style="font-size: 14px;">Municipio</strong>
-                    <input type="text" class="form-control" id="municipio" name="municipio" value="<?php echo $municipio; ?>" style="font-size: 13px;" >
+                    <select name="municipio" id="municipio" class="form-control" style="font-size: 13px;">
+                        <option value="<?php echo $municipio1;?>"><?php echo $municipio1;?></option>
+                    </select>
                 </div>
 
                 <div class="col-md-4">
                     <strong style="font-size: 14px;">Referencia</strong>
-                    <input type="text" class="form-control" id="referencia" name="referencia" value="<?php echo $referencia; ?>" style="font-size: 13px;" >
+                    <input list="Clues" type="text" class="form-control" id="referencia" name="referencia" value="<?php echo $referencia; ?>" style="font-size: 13px;" >
                 </div>
+
+                <datalist id="Clues">
+                    <?php
+                        if (!empty($AllData_Clues)) {
+                            foreach ($AllData_Clues as $row1) {
+                                echo "<option value='" . $row1["id_clues"] . "'>" . $row1["nombre_clues"] . "</option>";
+                            }
+                        } else {
+                            echo "<option value=''>No hay datos disponibles</option>";
+                        }
+                    ?>
+                </datalist>
 
                 <div class="col-md-4">
                     <strong style="font-size: 14px;">Talla</strong>
@@ -1933,6 +1958,32 @@
             editForm();
     </script>
 
+<script>
+    $(document).ready(function(){
+        // Cuando se selecciona un estado
+        $('#estado').change(function(){
+            var estadoId = $(this).val(); // Obtiene el valor seleccionado
+
+            // Filtra los municipios por el estado seleccionado
+            var filteredMunicipios = municipiosData.filter(function(municipio){
+                return municipio.Estado_Id == estadoId;
+            });
+
+            // Limpia el segundo select
+            $('#municipio').empty();
+
+            // Agrega las opciones recuperadas
+            if(filteredMunicipios.length > 0){
+                $.each(filteredMunicipios, function(index, municipio){
+                    $('#municipio').append('<option value="' + municipio.MunicipioID + '">' + municipio.NombreMunicipio + '</option>');
+                });
+            } else {
+                // Si no hay municipios, muestra un mensaje
+                $('#municipio').append('<option value="">No hay municipios disponibles</option>');
+            }
+        });
+    });
+</script>
 
 
     

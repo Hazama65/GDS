@@ -3,6 +3,7 @@
     include(__DIR__ . '/../dbconfig_db.php');
 
     $connectionDB = new Database(DB_HOST,DB_NAME,DB_USERNAME,DB_PASSWORD);
+    $connectionDBEM = new Database(DB_HOST_EM,DB_NAME_EM,DB_USERNAME_EM,DB_PASSWORD_EM);
 
     $id_paciente = null;
     if (isset($_GET['idPaciente']) && is_numeric($_GET['idPaciente'])) {
@@ -10,7 +11,7 @@
 
         $queryAllData = "SELECT dp.*, di.*, hip.*, ec.*, dis.*, c.*, lab.*, com.*, hg.*, ins.*, hipo.*, ah.*, ot.*,ej.*
         FROM datos_paciente dp
-        LEFT JOIN antihipertensivos ah ON dp.id_paciente = ah.id_paciente
+        LEFT JOIN antihipertensivos ah ON dp.id_paciente = ah.id_paciente   
         LEFT JOIN comorbilidades c ON dp.id_paciente = c.id_paciente
         LEFT JOIN complicaciones com ON dp.id_paciente = com.id_paciente
         LEFT JOIN enfermedad_cardiovascular ec ON dp.id_paciente = ec.id_paciente
@@ -39,6 +40,19 @@
                 $estadoCivil = $data['estadoCivil'];
                 $estado = $data['estado'];
                 $municipio = $data['municipio'];
+
+                $queryEstado = "SELECT NombreEstado FROM estados WHERE Estado_Id ='$estado'";
+                $dataEstado= $connectionDBEM->getRows($queryEstado);
+                foreach($dataEstado as $row1){
+                    $estado1 = $row1['NombreEstado'];
+                }
+
+                $queryMunicipio = "SELECT NombreMunicipio FROM municipios WHERE MunicipioID ='$municipio'";
+                $dataMunicipio= $connectionDBEM->getRows($queryMunicipio);
+                foreach($dataMunicipio as $row2){
+                    $municipio1 = $row2['NombreMunicipio'];
+                }
+
                 $referencia = $data['referencia'];
                 $talla = $data['talla'];
                 $peso = $data['peso'];

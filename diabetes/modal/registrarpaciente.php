@@ -78,18 +78,41 @@
 
                 <div class="col-md-4">
                     <strong style="font-size: 14px;">Estado</strong>
-                    <input type="text" class="form-control" id="estado" name="estado" style="font-size: 13px;" >
+                    <select name="estado" id="estado" class="form-control" style="font-size: 13px;">
+                        <option value="0">Seleccione</option>
+                        <?php
+                            if (!empty($AllData_Estados)) {
+                                foreach ($AllData_Estados as $row1) {
+                                    echo "<option value='" . $row1["Estado_Id"] . "'>" . $row1["NombreEstado"] . "</option>";
+                                }
+                            } else {
+                                echo "<option value=''>No hay datos disponibles</option>";
+                            }
+                        ?>
+                    </select>
                 </div>
 
                 <div class="col-md-4">
                     <strong style="font-size: 14px;">Municipio</strong>
-                    <input type="text" class="form-control" id="municipio" name="municipio" style="font-size: 13px;" >
+                    <select name="municipio" id="municipio" class="form-control" style="font-size: 13px;">
+                    </select>
                 </div>
 
                 <div class="col-md-4">
                     <strong style="font-size: 14px;">Referencia</strong>
-                    <input type="text" class="form-control" id="referencia" name="referencia" style="font-size: 13px;" >
+                    <input list="Clues" type="text" class="form-control" id="referencia" name="referencia" style="font-size: 13px;" >
                 </div>
+                <datalist id="Clues">
+                    <?php
+                        if (!empty($AllData_Clues)) {
+                            foreach ($AllData_Clues as $row1) {
+                                echo "<option value='" . $row1["id_clues"] . "'>" . $row1["nombre_clues"] . "</option>";
+                            }
+                        } else {
+                            echo "<option value=''>No hay datos disponibles</option>";
+                        }
+                    ?>
+                </datalist>
 
                 <div class="col-md-4">
                     <strong style="font-size: 14px;">Talla</strong>
@@ -1294,7 +1317,7 @@
 <!--===========    Metformina    ================-->
             <div class="col-md-4" id="tx_metformina">
                         <span style="font-size: 14px;" >Metformina</span>
-                        <select name="MetforminaSelect" id="MetforminaSelect" class="form-control" style="font-size: 14px">
+                        <select name="MetforminaSelect" id="MetforminaSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
@@ -1303,7 +1326,7 @@
 <!--===========     Sulfonilureas     ================-->
             <div class="col-md-4" id="tx_sulfonilureas">
                         <span style="font-size: 14px;" >Sulfonilureas</span>
-                        <select name="SulfonilureaSelect" id="SulfonilureaSelect" class="form-control" style="font-size: 14px">
+                        <select name="SulfonilureaSelect" id="SulfonilureaSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Glibenclamida">Glibenclamida</option>
                             <option value="Clorpropamida">Clorpropamida</option>
@@ -1317,7 +1340,7 @@
 <!--===========     Glinidas    ================-->
         <div class="col-md-4" id="tx_glinidas">
                         <span style="font-size: 14px">Glinidas</span>
-                        <select name="GlinidasSelect" id="GlinidasSelect" class="form-control" style="font-size: 14px">
+                        <select name="GlinidasSelect" id="GlinidasSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Nateglinida">Nateglinida</option>
                             <option value="Repaglinida">Repaglinida</option>
@@ -1327,7 +1350,7 @@
 <!--===========     I-DPP4    ================-->
         <div class="col-md-4" id="tx_IDPP4">
                         <span style="font-size: 14px">I-DPP4</span>
-                        <select name="I_DPP4Select" id="I_DPP4Select" class="form-control" style="font-size: 14px">
+                        <select name="I_DPP4Select" id="I_DPP4Select" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Sitagliptina">Sitagliptina</option>
                             <option value="Linagliptina">Linagliptina</option>
@@ -1341,7 +1364,7 @@
 <!--===========   -	ISGLT-2    ================-->
         <div class="col-md-4" id="tx_ISGLT2">
                         <span style="font-size: 14px">ISGLT-2 </span>
-                        <select name="ISGLT2Select" id="ISGLT2Select" class="form-control" style="font-size: 14px">
+                        <select name="ISGLT2Select" id="ISGLT2Select" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Dapaglifozina">Dapaglifozina</option>
                             <option value="Canaglifozina">Canaglifozina</option>
@@ -1352,7 +1375,7 @@
 <!--===========     Análogos de GLP-1     ================-->
         <div class="col-md-4" id="tx_GLP1">
                         <span style="font-size: 14px">Análogos de GLP-1</span>
-                        <select name="GLP1Select" id="GLP1Select" class="form-control" style="font-size: 14px">
+                        <select name="GLP1Select" id="GLP1Select" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Exenatida">Exenatida</option>
                             <option value="Liraglutida">Liraglutida</option>
@@ -1365,7 +1388,7 @@
 
         <div class="col-md-6" id="tx_pioglitazona">
                         <span style="font-size: 14px">Pioglitazona</span>
-                        <select name="PioglitazonaSelect" id="PioglitazonaSelect" class="form-control" style="font-size: 14px">
+                        <select name="PioglitazonaSelect" id="PioglitazonaSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
@@ -1374,7 +1397,7 @@
 <!--===========    Inhibidores de la alfaglucosidasa    ================-->    
         <div class="col-md-6" id="tx_inhibidores">
                         <span style="font-size: 14px">Inhibidores de la alfaglucosidasa </span>
-                        <select name="inhibidoresSelect" id="inhibidoresSelect" class="form-control" style="font-size: 14px">
+                        <select name="inhibidoresSelect" id="inhibidoresSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Acarbosa">Acarbosa</option>
                             <option value="Miglitol">Miglitol</option>
@@ -1403,7 +1426,7 @@
 <!--===========    NPH    ================-->
         <div class="col-md-6" id="tx_NPH" >
                         <span style="font-size: 14px">NPH</span>
-                        <select name="NPHSelect" id="NPHSelect" class="form-control" style="font-size: 14px">
+                        <select name="NPHSelect" id="NPHSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
@@ -1417,7 +1440,7 @@
 <!--===========    RAPIDA REGULAR    ================-->
             <div class="col-md-6" id="tx_rapidaregular" >
                         <span style="font-size: 14px">Rápida regular </span>
-                        <select name="RapidaRegularSelect" id="RapidaRegularSelect" class="form-control" style="font-size: 14px">
+                        <select name="RapidaRegularSelect" id="RapidaRegularSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
@@ -1431,7 +1454,7 @@
 <!--===========    GLARGINA     ================-->
             <div class="col-md-6" id="tx_glargina " >
                         <span style="font-size: 14px">Glargina</span>
-                        <select name="GlarginaSelect" id="GlarginaSelect" class="form-control" style="font-size: 14px">
+                        <select name="GlarginaSelect" id="GlarginaSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
@@ -1445,7 +1468,7 @@
 <!--===========    GLARGINA 300     ================-->
             <div class="col-md-6" id="tx_glargina300 " >
                         <span style="font-size: 14px">Glargina 300</span>
-                        <select name="Glar300Select" id="Glar300Select" class="form-control" style="font-size: 14px">
+                        <select name="Glar300Select" id="Glar300Select" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
@@ -1459,7 +1482,7 @@
 <!--===========    DETEMIR       ================-->
             <div class="col-md-6" id="tx_detemir" >
                         <span style="font-size: 14px">Detemir</span>
-                        <select name="DetemirSelect" id="DetemirSelect" class="form-control" style="font-size: 14px">
+                        <select name="DetemirSelect" id="DetemirSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
@@ -1474,7 +1497,7 @@
 <!--===========    DEGLUDEC   ================-->
             <div class="col-md-6" id="tx_degludec" >
                         <span style="font-size: 14px">Degludec</span>
-                        <select name="DegludecrSelect" id="DegludecrSelect" class="form-control" style="font-size: 14px">
+                        <select name="DegludecrSelect" id="DegludecrSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
@@ -1488,7 +1511,7 @@
 <!--===========    LISPRO   ================-->
             <div class="col-md-6" id="tx_lispro" >
                         <span style="font-size: 14px">Lispro</span>
-                        <select name="LisproSelect" id="LisproSelect" class="form-control" style="font-size: 14px">
+                        <select name="LisproSelect" id="LisproSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
@@ -1502,7 +1525,7 @@
 <!--===========   ASPART Aspart    ================-->
             <div class="col-md-6" id="tx_aspart" >
                         <span style="font-size: 14px">Aspart</span>
-                        <select name="AspartSelect" id="AspartSelect" class="form-control" style="font-size: 14px">
+                        <select name="AspartSelect" id="AspartSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
@@ -1517,7 +1540,7 @@
 <!--===========   Glulisina     ================-->
             <div class="col-md-6" id="tx_glulisina" >
                         <span style="font-size: 14px">Glulisina</span>
-                        <select name="Glulisina" id="GlulisinaSelect" class="form-control" style="font-size: 14px">
+                        <select name="Glulisina" id="GlulisinaSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
@@ -1531,7 +1554,7 @@
 <!--===========    NPH/REGULAR   ================-->
             <div class="col-md-6" id="tx_NPH_Regular" >
                         <span style="font-size: 14px">NPH/Regular</span>
-                        <select name="NPH_Regular" id="NPHRegularSelect" class="form-control" style="font-size: 14px">
+                        <select name="NPH_Regular" id="NPHRegularSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
@@ -1546,7 +1569,7 @@
 <!--===========    Lispro protamina/lispro   ================-->
             <div class="col-md-6" id="tx_protamina" >
                         <span style="font-size: 14px">Lispro protamina/Lispro</span>
-                        <select name="protamina" id="ProtaminaSelect" class="form-control" style="font-size: 14px">
+                        <select name="protamina" id="ProtaminaSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
@@ -1575,7 +1598,7 @@
 <!--===========    Hipolipemiantes    ================-->
         <div class="col-md-3" id="tx_Estatinas" >
                         <span style="font-size: 14px">Estatinas</span>
-                        <select name="EstatinasSelect" id="EstatinasSelect" class="form-control" style="font-size: 14px">
+                        <select name="EstatinasSelect" id="EstatinasSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Rosuvastatina">Rosuvastatina</option>
                             <option value="Atorvastatina">Atorvastatina</option>
@@ -1587,7 +1610,7 @@
 
                 <div class="col-md-3" id="tx_Fibratos" >
                         <span style="font-size: 14px">Fibratos</span>
-                        <select name="FibratosSelect" id="FibratosSelect" class="form-control" style="font-size: 14px">
+                        <select name="FibratosSelect" id="FibratosSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Bezafibrato">Bezafibrato</option>
                             <option value="Fenofibrato">Fenofibrato</option>
@@ -1597,7 +1620,7 @@
 
                 <div class="col-md-3" id="tx_Omega">
                         <span style="font-size: 14px">Omega 3</span>
-                        <select name="OmegaSelect" id="OmegaSelect" class="form-control" style="font-size: 14px">
+                        <select name="OmegaSelect" id="OmegaSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
@@ -1605,7 +1628,7 @@
 
                 <div class="col-md-3" id="tx_absorcion">
                         <span style="font-size: 14px">Inhibidores de la Absorción</span>
-                        <select name="Inhibidores_AbsorcionSelect" id="Inhibidores_AbsorcionSelect" class="form-control" style="font-size: 14px">
+                        <select name="Inhibidores_AbsorcionSelect" id="Inhibidores_AbsorcionSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Ezetimiba">Ezetimiba</option>
                         </select>
@@ -1638,7 +1661,7 @@
 <!--===========    Hipolipemiantes    ================-->
         <div class="col-md-6" id="tx_IECAS" >
                         <span style="font-size: 14px">IECAS</span>
-                        <select name="IECASSelect" id="IECASSelect" class="form-control" style="font-size: 14px">
+                        <select name="IECASSelect" id="IECASSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Enalapril">Enalapril</option>
                             <option value="Lisinopril">Lisinopril</option>
@@ -1651,7 +1674,7 @@
 <!--===============Si con ARA-II=======================-->
                 <div class="col-md-6" id="tx_ARAII" >
                         <span style="font-size: 14px">ARA-II</span>
-                        <select name="ARAIISelect" id="ARAIISelect" class="form-control" style="font-size: 14px">
+                        <select name="ARAIISelect" id="ARAIISelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Losartan">Losartan</option>
                             <option value="Telmisartan">Telmisartan</option>
@@ -1667,7 +1690,7 @@
 
                 <div class="col-md-6" id="tx_Inhibidores" >
                         <span style="font-size: 14px">Inhibidores de la Renina</span>
-                        <select name="InhibidoresSelect" id="InhibidoresSelect" class="form-control" style="font-size: 14px">
+                        <select name="InhibidoresSelect" id="InhibidoresSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Aliskiren">Aliskiren</option>
                         </select>
@@ -1677,7 +1700,7 @@
 <!--===============Si Calcioantagonistas=======================-->
                 <div class="col-md-6" id="tx_Calcioantagonistas" >
                         <span style="font-size: 14px">Calcioantagonistas</span>
-                        <select name="CalcioantagonistasSelect" id="CalcioantagonistasSelect" class="form-control" style="font-size: 14px">
+                        <select name="CalcioantagonistasSelect" id="CalcioantagonistasSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Nifedipino">Nifedipino</option>
                             <option value="Amlodipino">Amlodipino</option>
@@ -1691,7 +1714,7 @@
 
                 <div class="col-md-6" id="tx_Betabloqueadores" >
                         <span style="font-size: 14px">Betabloqueadores</span>
-                        <select name="BetabloqueadoresSelect" id="BetabloqueadoresSelect" class="form-control" style="font-size: 14px">
+                        <select name="BetabloqueadoresSelect" id="BetabloqueadoresSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Metoprolol">Metoprolol</option>
                             <option value="Propranolol">Propranolol</option>
@@ -1709,7 +1732,7 @@
 
                 <div class="col-md-6" id="tx_Diureticos" >
                         <span style="font-size: 14px">Diuréticos tiazidas</span>
-                        <select name="DiureticosSelect" id="DiureticosSelect" class="form-control" style="font-size: 14px">
+                        <select name="DiureticosSelect" id="DiureticosSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Hidroclorotiazida">Hidroclorotiazida</option>
                             <option value="Clortalidona">Clortalidona</option>
@@ -1721,7 +1744,7 @@
 
                 <div class="col-md-6" id="tx_Alfabloqueadores" >
                         <span style="font-size: 14px">Alfabloqueadores</span>
-                        <select name="AlfabloqueadoresSelect" id="AlfabloqueadoresSelect" class="form-control" style="font-size: 14px">
+                        <select name="AlfabloqueadoresSelect" id="AlfabloqueadoresSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Prazocina">Prazocina</option>
                             <option value="Terazocina">Terazocina</option>
@@ -1733,7 +1756,7 @@
 
                 <div class="col-md-6" id="tx_Espironolactona" >
                         <span style="font-size: 14px">Espironolactona</span>
-                        <select name="EspironolactonaSelect" id="EspironolactonaSelect" class="form-control" style="font-size: 14px">
+                        <select name="EspironolactonaSelect" id="EspironolactonaSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Si">Si</option>
                             <option value="Otros">Otros</option>
@@ -1765,7 +1788,7 @@
 <!--===========    ASA    ================-->
         <div class="col-md-6" id="tx_ASA" >
                         <span style="font-size: 14px">ASA</span>
-                        <select name="ASASelect" id="ASASelect" class="form-control" style="font-size: 14px">
+                        <select name="ASASelect" id="ASASelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
@@ -1775,7 +1798,7 @@
 <!--===========    Alopurinol    ================-->
         <div class="col-md-6" id="tx_Alopurinol" >
                         <span style="font-size: 14px">Alopurinol</span>
-                        <select name="AlopurinolSelect" id="AlopurinolSelect" class="form-control" style="font-size: 14px">
+                        <select name="AlopurinolSelect" id="AlopurinolSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Si">Si</option>
                         </select>
@@ -1784,7 +1807,7 @@
 <!--===============Si -	Neuromodulador =======================-->
                 <div class="col-md-6" id="tx_Neuromodulador" >
                         <span style="font-size: 14px">Neuromodulador</span>
-                        <select name="NeuromoduladorSelect" id="NeuromoduladorSelect" class="form-control" style="font-size: 14px">
+                        <select name="NeuromoduladorSelect" id="NeuromoduladorSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Gabapentina">Gabapentina</option>
                             <option value="Pregabalina">Pregabalina</option>
@@ -1797,7 +1820,7 @@
 
                 <div class="col-md-6" id="tx_Procineticos" >
                         <sapi_windows_cp_is_utf8 style="font-size: 14px">Procineticos</sapi_windows_cp_is_utf8>
-                        <select name="ProcineticosSelect" id="ProcineticosSelect" class="form-control" style="font-size: 14px">
+                        <select name="ProcineticosSelect" id="ProcineticosSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Metocloprmida">Metocloprmida</option>
                             <option value="Cisaprida">Cisaprida</option>
@@ -1812,10 +1835,10 @@
 
 
 <!--===========Numero de Farmacos Totales ================-->
-                <div class="col-md-6">
-                    <strong style="font-size: 14px;">Número de Fármacos Totales utilizados </strong>
-                    <input type="number" class="form-control" id="Farmacos_utilizados" name="Farmacos_utilizados" style="font-size: 13px;" >
-                </div> <br>
+            <div class="col-md-6">
+                <strong style="font-size: 14px;">Número de Fármacos Totales utilizados </strong>
+                <input type="number" class="form-control" name="Farmacos_utilizados" id="Farmacos_utilizados" style="font-size: 13px;">
+            </div> <br>
 
             <div class="form-header">
                 <h5 class="form-title"
@@ -1891,3 +1914,35 @@
 </div>
 
 <script src="js/scriptmodal.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<script src="js/conteo.js"></script>
+
+<script>
+    
+    $(document).ready(function(){
+        // Cuando se selecciona un estado
+        $('#estado').change(function(){
+            var estadoId = $(this).val(); // Obtiene el valor seleccionado
+
+            // Filtra los municipios por el estado seleccionado
+            var filteredMunicipios = municipiosData.filter(function(municipio){
+                return municipio.Estado_Id == estadoId;
+            });
+
+            // Limpia el segundo select
+            $('#municipio').empty();
+
+            // Agrega las opciones recuperadas
+            if(filteredMunicipios.length > 0){
+                $.each(filteredMunicipios, function(index, municipio){
+                    $('#municipio').append('<option value="' + municipio.MunicipioID + '">' + municipio.NombreMunicipio + '</option>');
+                });
+            } else {
+                // Si no hay municipios, muestra un mensaje
+                $('#municipio').append('<option value="">No hay municipios disponibles</option>');
+            }
+        });
+    });
+</script>

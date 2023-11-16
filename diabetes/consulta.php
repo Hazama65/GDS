@@ -61,12 +61,12 @@
 
             <tr>
                 <td class="estilo-celda">Estado</td>
-                <td><?php echo $estado ; ?></td>
+                <td><?php echo $estado1 ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Municipio</td>
-                <td><?php echo $municipio ; ?></td>
+                <td><?php echo $municipio1 ; ?></td>
             </tr>
             
             <tr>
@@ -897,7 +897,7 @@
             </tr>  
             
             <tr>
-                <td class="estilo-celda">Número de Fármacos Totales utilizados</td>
+                <td class="estilo-celda">Polifarmacia</td>
                 <td><?php echo $no_farmacos ; ?></td>
             </tr>   
             <tr>

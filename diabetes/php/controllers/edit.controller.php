@@ -3,6 +3,27 @@
     include(__DIR__ . '/../dbconfig_db.php');
 
     $connectionDB = new Database(DB_HOST,DB_NAME,DB_USERNAME,DB_PASSWORD);
+    $connectionDBEM = new Database(DB_HOST_EM,DB_NAME_EM,DB_USERNAME_EM,DB_PASSWORD_EM);
+    $connectionDBClues = new Database(DB_HOST_Clues,DB_NAME_Clues,DB_USERNAME_Clues,DB_PASSWORD_Clues);
+
+    $query_clues="SELECT * FROM clues";
+
+    $AllData_Clues =$connectionDBClues->getRows($query_clues);
+
+    
+    $estados = "SELECT * FROM estados ORDER BY NombreEstado";
+    $AllData_Estados = $connectionDBEM->getRows($estados);
+    
+    $municipiosQuery = "SELECT * FROM municipios";
+    $AllData_Municipios = $connectionDBEM->getRows($municipiosQuery);
+    
+    echo '<script>';
+    echo 'var estadosData = ' . json_encode($AllData_Estados) . ';';
+    echo 'var municipiosData = ' . json_encode($AllData_Municipios) . ';';
+    echo '</script>';
+    
+
+
 
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $id_paciente=$_GET['id'];
@@ -39,8 +60,26 @@
                 $sexo = $data['sexo'];
                 $escolaridad = $data['escolaridad'];
                 $estadoCivil = $data['estadoCivil'];
+
+
                 $estado = $data['estado'];
                 $municipio = $data['municipio'];
+
+
+
+                $queryEstado = "SELECT NombreEstado FROM estados WHERE Estado_Id ='$estado'";
+                $dataEstado= $connectionDBEM->getRows($queryEstado);
+                foreach($dataEstado as $row1){
+                    $estado1 = $row1['NombreEstado'];
+                }
+
+                $queryMunicipio = "SELECT NombreMunicipio FROM municipios WHERE MunicipioID ='$municipio'";
+                $dataMunicipio= $connectionDBEM->getRows($queryMunicipio);
+                foreach($dataMunicipio as $row2){
+                    $municipio1 = $row2['NombreMunicipio'];
+                }
+
+
                 $referencia = $data['referencia'];
                 $talla = $data['talla'];
                 $peso = $data['peso'];
