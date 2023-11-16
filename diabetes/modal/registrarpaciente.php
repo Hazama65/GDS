@@ -8,7 +8,7 @@
       </div>
       <div class="modal-body">
 
-        <form id="diabetes_form"  method="POST" >
+        <form id="diabetes_form"  method="POST" autocomplete="off" >
 
             <div style="background-color:rgb(80, 177, 210);
                         color: aliceblue;

@@ -1,4 +1,13 @@
 <?php
+    session_start();
+    header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+    header("Pragma: no-cache");
+
+    if (!isset($_SESSION['valid_user'])) {
+        // El usuario no ha iniciado sesión, redirige de vuelta a la página de inicio de sesión
+        header('Location: ../login/index.php');
+        exit;
+    }
     include('php/controllers/edit.controller.php');
 ?>
 <!DOCTYPE html>
@@ -37,7 +46,7 @@
             <br>
 
             <div class="container">
-            <form id="editar_diabetes"  method="POST" >
+            <form id="editar_diabetes"  method="POST" autocomplete="off">
 
             <div style="background-color:rgb(80, 177, 210);
                         color: aliceblue;
@@ -1984,7 +1993,17 @@
         });
     });
 </script>
-
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cerrarSesionButton = document.getElementById('cerrar-sesion-button');
+            
+            cerrarSesionButton.addEventListener('click', function () {
+                // Redirige al usuario a la página de cierre de sesión
+                window.location.href = 'php/destroysession.php';
+            });
+        });
+    </script>
 
     
 </body>

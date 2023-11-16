@@ -95,6 +95,14 @@ const validateLogin = async (formData) => {
                 '../residentes/index.php'
             )
         }
+        if (typeToken.trim() === 'diabetes') {
+            return setAlert.successAlert(
+                'La operacion se ha completado correctamente.',
+                null,
+                null,
+                '../diabetes/index.php'
+            )
+        }
 
 
 

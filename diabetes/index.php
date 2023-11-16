@@ -1,7 +1,16 @@
 <?php
-//llamado al modal de registrar paciente de diabetes
-require('php/controllers/registros.controller.php');
-include("modal/registrarpaciente.php");
+    session_start();
+    header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+    header("Pragma: no-cache");
+
+    if (!isset($_SESSION['valid_user'])) {
+        // El usuario no ha iniciado sesión, redirige de vuelta a la página de inicio de sesión
+        header('Location: ../login/index.php');
+        exit;
+    }
+    //llamado al modal de registrar paciente de diabetes
+    require('php/controllers/registros.controller.php');
+    include("modal/registrarpaciente.php");
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +30,11 @@ include("modal/registrarpaciente.php");
     <header>
         <h5 style="color:#ffffff; margin-top: 15px;">Diabetes Mellitus</h5>
         <br>
+        <div style="padding: 20px; text-align: right;">
+                <button type="button" class="btn btn-outline-light" id="cerrar-sesion-button" title="Cerrar sesión">
+                    <i class="bi bi-power"></i> 
+                </button>
+            </div>
     </header>
     <br>
 
@@ -114,6 +128,17 @@ include("modal/registrarpaciente.php");
     <script type="module">
         import { mainForm } from "./js/insert.js";
         mainForm();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cerrarSesionButton = document.getElementById('cerrar-sesion-button');
+            
+            cerrarSesionButton.addEventListener('click', function () {
+                // Redirige al usuario a la página de cierre de sesión
+                window.location.href = 'php/destroysession.php';
+            });
+        });
     </script>
 </body>
 </html>
