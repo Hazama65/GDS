@@ -44,12 +44,26 @@
 
                 <div class="col-md-4" id="id_estado">
                     <strong style="font-size: 14px;">Estado de Origen</strong>
-                    <input id="estado_Origen" name="Estado" onblur="calcularEdad();" type="text" class="control form-control" value="" style="font-size: 13px;" >
+                    <select name="Estado" id="estado_Origen" class="control form-control" style="font-size: 13px;">
+                        <?php
+                            if (!empty($AllData_Clues)) {
+                                foreach ($AllData_Clues as $row1) {
+                                    echo "<option value='" . $row1["Estado_Id"] . "'>" . $row1["NombreEstado"] . "</option>";
+                                }
+                            } else {
+                                echo "<option value=''>No hay datos disponibles</option>";
+                            }
+                        ?>
+                    </select>
                 </div>
 
-                <div class="col-md-4" id="id_municipio">
+                <div class="col-md-4" id="id_municipios">
                     <strong style="font-size: 14px;"> Alcaldía o Municipio</strong>
-                    <input type="text" class="form-control" id="id_municipio" name="municipio" value="" style="font-size: 13px;" >
+                    <!-- <input type="text" class="form-control" id="id_municipio" name="municipio" value="" style="font-size: 13px;" > -->
+                    <select class="form-control" name="municipio" id="id_municipio" style="font-size: 13px;">
+
+
+                    </select>
                 </div>
 
                 <div class="col-md-4">
@@ -1749,3 +1763,41 @@
   <div class="modal-dialog modal-lg">-->
 
 <script src=js/scriptmodal.js></script>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+
+<script>
+    $(document).ready(function(){
+        // Cuando se selecciona un estado
+        $('#estado_Origen').change(function(){
+            var estadoId = $(this).val(); // Obtiene el valor seleccionado
+
+            // Realiza una petición AJAX para obtener los municipios del estado seleccionado
+            $.ajax({
+                url: 'php/controllers/registros.controller.php', // Ruta a tu script PHP para obtener municipios
+                type: 'POST',
+                data: {estadoId: estadoId},
+                success: function(response){
+                    // Parsea la respuesta como JSON
+                    var municipios = JSON.parse(response);
+
+                    // Limpia el segundo select
+                    $('#id_municipio').empty();
+
+                    // Agrega las opciones recuperadas
+                    if(municipios.length > 0){
+                        $.each(municipios, function(key, value){
+                            $('#id_municipio').append('<option value="' + value.MunicipioID + '">' + value.NombreMunicipio + '</option>');
+                        });
+                    } else {
+                        // Si no hay municipios, muestra un mensaje
+                        $('#id_municipio').append('<option value="">No hay municipios disponibles</option>');
+                    }
+                }
+            });
+        });
+    });
+
+</script>
