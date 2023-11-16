@@ -11,28 +11,20 @@
     $data_Pacientes =$connectionDB->getRows($query_Pacientes);
 
 
+    $query_clues ="SELECT * FROM clues";
+
+    $data_clues = $connectionDB->getRows($query_clues);
+
 
     $estados = "SELECT * FROM estados ORDER BY NombreEstado";
-
     $AllData_Estados = $connectionDBEM->getRows($estados);
-
-
-    if(isset($_POST['estadoId'])){
-        $estadoId = $_POST['estadoId'];
     
-        $municipioQuery = "SELECT * FROM Municipios WHERE Estado_Id = $estadoId";
-        $AllData_municipio = $connectionDBEM->getRows($municipioQuery);
+    $municipiosQuery = "SELECT * FROM municipios";
+    $AllData_Municipios = $connectionDBEM->getRows($municipiosQuery);
     
-        // Convierte el resultado en un array asociativo
-        $municipiosArray = array();
-    
-        foreach ($AllData_municipio as $row) {
-            $municipiosArray[] = $row;
-        }
-    
-        // Devuelve los municipios en formato JSON
-        echo json_encode($municipiosArray);
-    }
-
+    echo '<script>';
+    echo 'var estadosData = ' . json_encode($AllData_Estados) . ';';
+    echo 'var municipiosData = ' . json_encode($AllData_Municipios) . ';';
+    echo '</script>';
 
 ?>

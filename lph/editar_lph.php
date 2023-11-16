@@ -75,12 +75,25 @@
 
                 <div class="col-md-3" id="id_estado">
                     <strong style="font-size: 14px;">Estado de Origen</strong>
-                    <input id="estado_Origen" name="Estado" onblur="calcularEdad();" type="text" class="control form-control" value="<?php echo $estado; ?>" style="font-size: 13px;" required>
+                    <select name="Estado" id="estado_Origen" class="form-control" style="font-size: 13px;">
+                        <option value="<?php echo $estado1; ?>"><?php echo $estado; ?></option>
+                        <?php
+                            if (!empty($AllData_Estados)) {
+                                foreach ($AllData_Estados as $row1) {
+                                    echo "<option value='" . $row1["Estado_Id"] . "'>" . $row1["NombreEstado"] . "</option>";
+                                }
+                            } else {
+                                echo "<option value=''>No hay datos disponibles</option>";
+                            }
+                        ?>
+                    </select>
                 </div>
 
                 <div class="col-md-3" id="id_municipio">
                     <strong style="font-size: 14px;"> Alcaldía o Municipio</strong>
-                    <input type="text" class="form-control" id="id_municipio" name="municipio" value="<?php echo $municipio; ?>" style="font-size: 13px;" required>
+                    <select class="form-control" name="municipio" id="municipio" style="font-size: 13px;">
+                        <option value="<?php echo $municipio1; ?>"><?php echo $municipio; ?></option>
+                    </select>
                 </div>
 
                 <div class="col-md-3">
@@ -89,6 +102,22 @@
                         <option value="Sin Registro"<?php if ($referencia == 'Sin Registro') echo 'selected'; ?>>Sin Registro</option>
                         <option value="Si"<?php if ($referencia == 'Si') echo 'selected'; ?>>Si</option>
                         <option value="No"<?php if ($referencia == 'No') echo 'selected'; ?>>No</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4" id="referenciaField">
+                    <strong style="font-size: 14px;">Referencia</strong>
+                    <select name="lugar_ref" id="lugar_ref" class="form-control" style="font-size: 13px;">
+                        <option value="<?php echo $lugar_ref; ?>"><?php echo $lugar_ref; ?></option>
+                        <?php
+                            if (!empty($data_clues)) {
+                                foreach ($data_clues as $row1) {
+                                    echo "<option value='" . $row1["clues_nombre"] . "'>" . $row1["clues_nombre"] . "</option>";
+                                }
+                            } else {
+                                echo "<option value=''>No hay datos disponibles</option>";
+                            }
+                        ?>
                     </select>
                 </div>
 
@@ -1778,6 +1807,32 @@
                     import { editForm } from "./js/update.js";
                     editForm();
             </script>
-            
+            <script>
+                
+                $(document).ready(function(){
+                    // Cuando se selecciona un estado
+                    $('#estado_Origen').change(function(){
+                        var estadoId = $(this).val(); // Obtiene el valor seleccionado
+
+                        // Filtra los municipios por el estado seleccionado
+                        var filteredMunicipios = municipiosData.filter(function(municipio){
+                            return municipio.Estado_Id == estadoId;
+                        });
+
+                        // Limpia el segundo select
+                        $('#municipio').empty();
+
+                        // Agrega las opciones recuperadas
+                        if(filteredMunicipios.length > 0){
+                            $.each(filteredMunicipios, function(index, municipio){
+                                $('#municipio').append('<option value="' + municipio.MunicipioID + '">' + municipio.NombreMunicipio + '</option>');
+                            });
+                        } else {
+                            // Si no hay municipios, muestra un mensaje
+                            $('#municipio').append('<option value="">No hay municipios disponibles</option>');
+                        }
+                    });
+                });
+            </script>
     </body>
     </html>

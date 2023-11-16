@@ -61,17 +61,22 @@
 
             <tr>
                 <td class="estilo-celda">Estado</td>
-                <td><?php echo $estado ; ?></td>
+                <td><?php echo $estado1; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Municipio</td>
-                <td><?php echo $municipio ; ?></td>
+                <td><?php echo $municipio1; ?></td>
             </tr>
             
             <tr>
                 <td class="estilo-celda">Referencia</td>
                 <td><?php echo $referencia ; ?></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Lugar de Referencia</td>
+                <td><?php echo $lugar_ref ; ?></td>
             </tr>
 
             <tr>

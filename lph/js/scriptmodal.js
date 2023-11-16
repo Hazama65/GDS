@@ -132,6 +132,27 @@ return 'Obesidad grado III';
 }
 }
 
+  // REFERENCIA
+  document.addEventListener("DOMContentLoaded", function() {
+    toggleReferenciaField();
+
+    document.getElementById("referencia").addEventListener("change", function() {
+        toggleReferenciaField();
+    });
+});
+
+function toggleReferenciaField() {
+    var referenciaValue = document.getElementById("referencia").value;
+    var referenciaField = document.getElementById("referenciaField");
+
+    // Oculta el campo de referencia si la opción seleccionada es "No" o "Sin Registro"
+    if (referenciaValue === "No" || referenciaValue === "Sin Registro") {
+        referenciaField.style.display = "none";
+    } else {
+        referenciaField.style.display = "block";
+    }
+}
+
   // ANTECEDENTES HEREDOFAMILIARES FISURAS  
 document.addEventListener("DOMContentLoaded", function() {
     var fisuraSelect = document.getElementById("fisura");

@@ -13,6 +13,7 @@
                 $Estado                 = $_POST['Estado'];
                 $municipio              = $_POST['municipio'];
                 $referencia             = $_POST['referencia'];
+                $lugar_ref              = $_POST['lugar_ref'];
                 $telefono               = $_POST['telefono'];
                 $Escolaridad            = $_POST['Escolaridad'];
                 $Estadocivil            = $_POST['Estadocivil'];
@@ -26,11 +27,11 @@
                 $nivel                  = $_POST['nivel'];
 
                 $queryPaciente = "INSERT INTO datos_paciente (curp,nombre_paciente,fecha_nacimiento,edad,sexo,estado,municipio,
-                referencia,num_telefonico,escolaridad,estado_civil,talla,peso,imc,resultado_imc,circunferencia_abdominal,
+                referencia,lugar_ref,num_telefonico,escolaridad,estado_civil,talla,peso,imc,resultado_imc,circunferencia_abdominal,
                 derecho_habiencia,socioeconomico,nivel_economico)
-                VALUES ('$curp','$nombre','$fecha','$edad','$sexo','$Estado','$municipio','$referencia','$telefono','$Escolaridad',
-                '$Estadocivil','$talla','$peso','$imc','$imcdescripcion','$circunferencia','$derechohabiencia','$estudio_socioeconomico',
-                '$nivel')";
+                VALUES ('$curp','$nombre','$fecha','$edad','$sexo','$Estado','$municipio','$referencia','$lugar_ref','$telefono',
+                '$Escolaridad','$Estadocivil','$talla','$peso','$imc','$imcdescripcion','$circunferencia','$derechohabiencia',
+                '$estudio_socioeconomico','$nivel')";
                 $dataPaciente = $connectionDB->ShotSimple($queryPaciente);
                 $ultimoId = $connectionDB->last_id;
 

@@ -44,10 +44,10 @@
 
                 <div class="col-md-4" id="id_estado">
                     <strong style="font-size: 14px;">Estado de Origen</strong>
-                    <select name="Estado" id="estado_Origen" class="control form-control" style="font-size: 13px;">
+                    <select name="Estado" id="Estado" class="control form-control" style="font-size: 13px;">
                         <?php
-                            if (!empty($AllData_Clues)) {
-                                foreach ($AllData_Clues as $row1) {
+                            if (!empty($AllData_Estados)) {
+                                foreach ($AllData_Estados as $row1) {
                                     echo "<option value='" . $row1["Estado_Id"] . "'>" . $row1["NombreEstado"] . "</option>";
                                 }
                             } else {
@@ -59,19 +59,31 @@
 
                 <div class="col-md-4" id="id_municipios">
                     <strong style="font-size: 14px;"> Alcaldía o Municipio</strong>
-                    <!-- <input type="text" class="form-control" id="id_municipio" name="municipio" value="" style="font-size: 13px;" > -->
-                    <select class="form-control" name="municipio" id="id_municipio" style="font-size: 13px;">
-
-
+                    <select class="form-control" name="municipio" id="municipio" style="font-size: 13px;">
                     </select>
                 </div>
 
                 <div class="col-md-4">
                     <strong style="font-size: 14px;">Referenciado</strong>
-                    <select name="referencia" id="refererencia" class="form-control" style="font-size: 13px;">
+                    <select name="referencia" id="referencia" class="form-control" style="font-size: 13px;">
                         <option value="Sin Registro">Sin Registro</option>
                         <option value="Si">Si</option>
                         <option value="No">No</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4" id="referenciaField">
+                    <strong style="font-size: 14px;">Referencia</strong>
+                    <select name="lugar_ref" id="lugar_ref" class="form-control" style="font-size: 13px;">
+                        <?php
+                            if (!empty($data_clues)) {
+                                foreach ($data_clues as $row1) {
+                                    echo "<option value='" . $row1["clues_nombre"] . "'>" . $row1["clues_nombre"] . "</option>";
+                                }
+                            } else {
+                                echo "<option value=''>No hay datos disponibles</option>";
+                            }
+                        ?>
                     </select>
                 </div>
 
@@ -1767,37 +1779,30 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 
-
 <script>
+    
     $(document).ready(function(){
         // Cuando se selecciona un estado
-        $('#estado_Origen').change(function(){
+        $('#Estado').change(function(){
             var estadoId = $(this).val(); // Obtiene el valor seleccionado
 
-            // Realiza una petición AJAX para obtener los municipios del estado seleccionado
-            $.ajax({
-                url: 'php/controllers/registros.controller.php', // Ruta a tu script PHP para obtener municipios
-                type: 'POST',
-                data: {estadoId: estadoId},
-                success: function(response){
-                    // Parsea la respuesta como JSON
-                    var municipios = JSON.parse(response);
-
-                    // Limpia el segundo select
-                    $('#id_municipio').empty();
-
-                    // Agrega las opciones recuperadas
-                    if(municipios.length > 0){
-                        $.each(municipios, function(key, value){
-                            $('#id_municipio').append('<option value="' + value.MunicipioID + '">' + value.NombreMunicipio + '</option>');
-                        });
-                    } else {
-                        // Si no hay municipios, muestra un mensaje
-                        $('#id_municipio').append('<option value="">No hay municipios disponibles</option>');
-                    }
-                }
+            // Filtra los municipios por el estado seleccionado
+            var filteredMunicipios = municipiosData.filter(function(municipio){
+                return municipio.Estado_Id == estadoId;
             });
+
+            // Limpia el segundo select
+            $('#municipio').empty();
+
+            // Agrega las opciones recuperadas
+            if(filteredMunicipios.length > 0){
+                $.each(filteredMunicipios, function(index, municipio){
+                    $('#municipio').append('<option value="' + municipio.MunicipioID + '">' + municipio.NombreMunicipio + '</option>');
+                });
+            } else {
+                // Si no hay municipios, muestra un mensaje
+                $('#municipio').append('<option value="">No hay municipios disponibles</option>');
+            }
         });
     });
-
 </script>

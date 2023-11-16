@@ -15,6 +15,7 @@
         $Estado                 = $_POST['Estado'];
         $municipio              = $_POST['municipio'];
         $referencia             = $_POST['referencia'];
+        $lugar_ref              = $_POST['lugar_ref'];
         $telefono               = $_POST['telefono'];
         $Escolaridad            = $_POST['Escolaridad'];
         $Estadocivil            = $_POST['Estadocivil'];
@@ -37,6 +38,7 @@
             estado = '$Estado',
             municipio = '$municipio',
             referencia = '$referencia',
+            lugar_ref = '$lugar_ref',
             num_telefonico = '$telefono',
             escolaridad = '$Escolaridad',
             estado_civil = '$Estadocivil',
