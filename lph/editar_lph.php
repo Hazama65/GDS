@@ -76,11 +76,11 @@
                 <div class="col-md-3" id="id_estado">
                     <strong style="font-size: 14px;">Estado de Origen</strong>
                     <select name="Estado" id="estado_Origen" class="form-control" style="font-size: 13px;">
-                        <option value="<?php echo $estado1; ?>"><?php echo $estado; ?></option>
                         <?php
                             if (!empty($AllData_Estados)) {
                                 foreach ($AllData_Estados as $row1) {
-                                    echo "<option value='" . $row1["Estado_Id"] . "'>" . $row1["NombreEstado"] . "</option>";
+                                    $selected = ($row1["Estado_Id"] == $estado) ? 'selected' : '';
+                                    echo "<option value='" . $row1["Estado_Id"] . "' $selected>" . $row1["NombreEstado"] . "</option>";
                                 }
                             } else {
                                 echo "<option value=''>No hay datos disponibles</option>";
@@ -92,7 +92,16 @@
                 <div class="col-md-3" id="id_municipio">
                     <strong style="font-size: 14px;"> Alcaldía o Municipio</strong>
                     <select class="form-control" name="municipio" id="municipio" style="font-size: 13px;">
-                        <option value="<?php echo $municipio1; ?>"><?php echo $municipio; ?></option>
+                        <?php
+                            if (!empty($AllData_Municipios)) {
+                                foreach ($AllData_Municipios as $row2) {
+                                    $selected = ($row2["MunicipioID"] == $municipio) ? 'selected' : '';
+                                    echo "<option value='" . $row2["MunicipioID"] . "' $selected>" . $row2["NombreMunicipio"] . "</option>";
+                                }
+                            } else {
+                                echo "<option value=''>No hay datos disponibles</option>";
+                            }
+                        ?>
                     </select>
                 </div>
 
