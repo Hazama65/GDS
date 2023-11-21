@@ -87,11 +87,6 @@ header a {
     top: -40px; /* Ajusta la posición vertical según tus necesidades */
 }
 
-.dt-buttons {
-    position: relative;
-    top: 30px; /* Ajusta la posición vertical según tus necesidades */
-}
-
 /* Estilo general para los botones */
 .dt-buttons .dt-button {
     background-color: #007BFF;
@@ -141,6 +136,7 @@ header a {
 .dt-buttons .buttons-excel {
     background-color: #28A745; /* Color para "Excel" */
     color: #fff;
+    transform: translateY(35px);
 }
 
 /* Estilo para el botón "Print" */
