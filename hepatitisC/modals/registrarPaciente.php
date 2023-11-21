@@ -10,7 +10,7 @@
       </div>
       <div class="modal-body">
         <!--En la siguiente línea de código se realiza la incersión en la BD-->
-        <form id="hepatitis_form" autocomplete="off">
+        <form id="hepatitis_form" method="POST" autocomplete="off">
         
           <div style="background-color: rgb(210, 180, 140);
                         color: aliceblue;
@@ -62,12 +62,24 @@
 
                         <div class="col-md-4">
                             <strong style="font-size: 14px;">Estado</strong>
-                            <input type="text" id="estado" name="estado" class="form-control">
+                            <select name="estado" id="estado" class="form-control">
+                                <option value="0">Seleccione</option>
+                                <?php
+                                    if (!empty($AllData_Estados)) {
+                                        foreach ($AllData_Estados as $row1) {
+                                            echo "<option value='" . $row1["Estado_Id"] . "'>" . $row1["NombreEstado"] . "</option>";
+                                        }
+                                    } else {
+                                        echo "<option value=''>No hay datos disponibles</option>";
+                                    }
+                                ?>
+                            </select>
                         </div>
 
                         <div class="col-md-4">
                             <strong style="font-size: 14px;">Municipio</strong>
-                            <input type="text" id="municipio" name="municipio" class="form-control">
+                            <select name="municipio" id="municipio" class="form-control" >
+                            </select>
                         </div>
 
                         <div class="col-md-4">
@@ -81,8 +93,21 @@
 
                         <div class="col-md-4" id="unidad_referencia_div" style="display: none;">
                             <strong style="font-size: 14px;">Unidad de Referencia</strong>
-                            <input type="text" name="unidad_referencia" class="form-control">
+                            <input list="Clues" type="text" name="unidad_referencia" id="unidad_referencia" class="form-control">
                         </div>
+
+                        <datalist id="Clues">
+                            <?php
+                            echo'hola';
+                                if (!empty($AllData_Clues)) {
+                                    foreach ($AllData_Clues as $row1) {
+                                        echo "<option value='" . $row1["id_clues"] . "'>" . $row1["nombre_clues"] . "</option>";
+                                    }
+                                } else {
+                                    echo "<option value=''>No hay datos disponibles</option>";
+                                }
+                            ?>
+                        </datalist>
 
           </div> <!--Se cierra <div class="row">-->
 
@@ -554,13 +579,43 @@
                     </div>
           
       
-        </form>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-success">Guardar</button>
-      </div>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-success">Guardar</button>
+                </div>
+            </form>
     </div>
   </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+<script>
+    
+    $(document).ready(function(){
+        // Cuando se selecciona un estado
+        $('#estado').change(function(){
+            var estadoId = $(this).val(); // Obtiene el valor seleccionado
+
+            // Filtra los municipios por el estado seleccionado
+            var filteredMunicipios = municipiosData.filter(function(municipio){
+                return municipio.Estado_Id == estadoId;
+            });
+
+            // Limpia el segundo select
+            $('#municipio').empty();
+
+            // Agrega las opciones recuperadas
+            if(filteredMunicipios.length > 0){
+                $.each(filteredMunicipios, function(index, municipio){
+                    $('#municipio').append('<option value="' + municipio.MunicipioID + '">' + municipio.NombreMunicipio + '</option>');
+                });
+            } else {
+                // Si no hay municipios, muestra un mensaje
+                $('#municipio').append('<option value="">No hay municipios disponibles</option>');
+            }
+        });
+    });
+</script>
