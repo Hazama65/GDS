@@ -27,11 +27,11 @@ include("modals/registrarpaciente.php");
         <h5 style="color: aliceblue; margin-top: 15px;">Clínica de Hepatitis C</h5>
         <br>
         <!-- Nuevo contenedor para el botón en el lado derecho -->
-  <div style="padding: 20px; text-align: right;">
-    <button type="button" class="btn btn-outline-light" title="Cerrar sesión">
-    <i class="bi bi-power"></i>
-    </button>
-  </div>
+    <div style="padding: 20px; text-align: right;">
+        <button type="button" class="btn btn-outline-light" id="cerrar-sesion-button" title="Cerrar sesión">
+            <i class="bi bi-power"></i>
+        </button>
+    </div>
     </header>
 
     <br>
@@ -46,9 +46,9 @@ include("modals/registrarpaciente.php");
                 <i class="bi bi-person-add"> </i> Paciente
             </button>
 
-            <button type="button" class="btn btn-success">
+            <a href="php/export.php" class="btn btn-success">
                 <i class="bi bi-file-earmark-excel"></i> Excel
-            </button>
+            </a>
 
             <a href="graficas_anemia.php">
                 <button type="button" class="btn btn-primary" target="_blank">
@@ -124,6 +124,17 @@ include("modals/registrarpaciente.php");
     <script type="module">
         import { mainForm } from "./js/insert.js";
         mainForm();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cerrarSesionButton = document.getElementById('cerrar-sesion-button');
+            
+            cerrarSesionButton.addEventListener('click', function () {
+                // Redirige al usuario a la página de cierre de sesión
+                window.location.href = 'php/destroysession.php';
+            });
+        });
     </script>
 
 

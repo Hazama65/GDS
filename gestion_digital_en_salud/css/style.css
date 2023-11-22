@@ -5,11 +5,8 @@ body {
     background-color: #f0f0f0;
 }
 
-header {
-    /*background-image: url('img/Digitalizacion-sanidad.jpg'); /* Ruta de tu imagen inicial
-    background-size: cover;
-    background-position: center; */
-    height: 40px; /* Ajusta la altura de la imagen inicial según tus necesidades */
+/*header {
+   
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,14 +18,60 @@ header a {
     text-decoration: none;
     color: #DDC9A3;
     font-weight: bold;
+    font-size: 25px;
+    margin-right: 20px;
+}*/
+
+header {
+    height: 80px; /* Ajustar la altura según el tamaño deseado */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: rgb(16,49,43);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agregar sombra para resaltar */
+}
+
+.logo img {
+    max-height: 60px; /* Ajustar el tamaño del logo */
+}
+
+header a {
+    text-decoration: none;
+    color: #DDC9A3;
+    font-weight: bold;
     font-size: 18px;
     margin-right: 20px;
+    transition: color 0.3s ease-in-out; /* Efecto de transición al pasar el ratón */
+}
+
+header a:hover {
+    color: #fff; /* Cambio de color al pasar el ratón */
+}
+
+
+/* Estilo para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .logo img {
+        margin-bottom: 20px; /* Espaciado entre el logo y el menú en dispositivos móviles */
+    }
+
+    header a {
+        margin-right: 0;
+        margin-bottom: 10px; /* Espaciado entre elementos del menú en dispositivos móviles */
+    }
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0px;
 }
 
 .cards {
@@ -38,20 +81,63 @@ header a {
     margin-top: 20px;
 }
 
-.card {
-    width: calc(20% - 20px); /* Ajusta el ancho de las tarjetas según tus necesidades */
+/*.card {
+    width: calc(20% - 20px); /* Ajusta el ancho de las tarjetas según tus necesidades 
+    
     background-color: rgb(221,201,163,0.15);
     border: 2px solid #235B4E;
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
    
+}*/
+
+.card {
+    width: calc(20% - 20px);
+    background: linear-gradient(135deg, #235B4E, #10312b);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(35, 91, 78);
+    
 }
 
-.card img {
-    max-width: 100%;
-    height: 50%;
+.card:hover {
+    transform: translateY(-5px);
 }
+
+/*.card img {
+    max-width: 100%;
+    height: 80%;
+}*/
+
+.card img {
+    width: 100%;
+    height: 150px; /* Establece la altura que desees para todas las imágenes */
+    object-fit: cover; /* Esto asegura que las imágenes se ajusten al tamaño establecido sin deformarse */
+    border-radius: 8px; /* Borde redondeado opcional */
+}
+
+
+.btn {
+    background-color: #fff;
+    color: #235B4E;
+    border: 2px solid #235B4E;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #235B4E;
+    color: #fff;
+}
+
 
 footer {
     background-color: #10312b;

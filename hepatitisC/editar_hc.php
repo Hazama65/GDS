@@ -99,17 +99,17 @@
                         <div class="col-md-4">
                             <strong style="font-size: 14px;">Municipio</strong>
                             <select name="municipio" id="municipio" class="form-control">
-    <?php
-        if (!empty($AllData_Municipios)) {
-            foreach ($AllData_Municipios as $row2) {
-                $selected = ($row2["MunicipioID"] == $Municipio) ? 'selected' : '';
-                echo "<option value='" . $row2["MunicipioID"] . "' $selected>" . $row2["NombreMunicipio"] . "</option>";
-            }
-        } else {
-            echo "<option value=''>No hay datos disponibles</option>";
-        }
-    ?>
-</select>
+                                <?php
+                                    if (!empty($AllData_Municipios)) {
+                                        foreach ($AllData_Municipios as $row2) {
+                                            $selected = ($row2["MunicipioID"] == $Municipio) ? 'selected' : '';
+                                            echo "<option value='" . $row2["MunicipioID"] . "' $selected>" . $row2["NombreMunicipio"] . "</option>";
+                                        }
+                                    } else {
+                                        echo "<option value=''>No hay datos disponibles</option>";
+                                    }
+                                ?>
+                            </select>
                         </div>
 
                         <div class="col-md-4">

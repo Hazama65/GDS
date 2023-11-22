@@ -10,24 +10,41 @@
 </head>
 
 <body>
-    <header>
+    <!--<header>
         <a href="index.php">Inicio</a>
         <a href="https://hraei.gob.mx/" target="_blank">HRAEI</a>
+    </header>-->
+
+
+    <header>
+        <div class="logo">
+            <img src="img/hraei11.png" alt="Logo">
+        </div>
+        <nav>
+            <a href="index.php">Inicio</a>
+            <a href="https://hraei.gob.mx/" target="_blank">HRAEI</a>
+        </nav>
     </header>
 
-<!-- Carousel-->
-    <div id="carouselExample" class="carousel slide">
+
+    <!-- Carousel-->
+        <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
+
             <div class="carousel-item active">
-            <img src="img/gds11.png" class="d-block w-100" alt="...">
+                <img src="img/GDS13.png" class="d-block w-100">
             </div>
+
             <div class="carousel-item">
-            <img src="img/gds12.png" class="d-block w-100" alt="...">
+                <img src="img/GDS12.png" class="d-block w-100">
             </div>
+
             <div class="carousel-item">
-            <img src="img/gds13.png" class="d-block w-100" alt="...">
+                <img src="img/gds11.png" class="d-block w-100">
             </div>
         </div>
+
+
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -44,17 +61,13 @@
     <div class="container" style="center">
     <div class="cards">
 
-            <div class="card">
+            <!--<div class="card">
                     <img src="img/cancer.png" alt="Imagen 1">
                     <br>
                     <a href="#" class="btn btn-success">Cáncer</a>
-            </div>
+            </div>-->
 
-            <div class="card">
-                <img src="img/patologias1.jpg" alt="Imagen 2">
-                <br>
-                <a href="#" class="btn btn-success">Patologías</a>
-            </div>
+            
 
             <div class="card">
                 <img src="img/clinicas1.jpg" alt="Imagen 3">
@@ -63,25 +76,28 @@
             </div>
 
             <div class="card">
-                <img src="img/servicios.jpeg" alt="Imagen 4">
+                <img src="img/enfermeria.jpeg" alt="Imagen 5">
                 <br>
-                <a href="#" class="btn btn-success">Servicios</a>
+                <a href="enfermeria.php" class="btn btn-success">Enfermería</a>
             </div>
 
             <div class="card">
-                <img src="img/enfermeria.jpeg" alt="Imagen 5">
+                <img src="img/servicios.jpeg" alt="Imagen 4">
                 <br>
-                <a href="#" class="btn btn-success">Enfermería</a>
+                <a href="servicios.php" class="btn btn-success">Servicios</a>
             </div>
+
+            <div class="card">
+                <img src="img/patologias1.jpg" alt="Imagen 2">
+                <br>
+                <a href="patologias.php" class="btn btn-success">Patologías</a>
+            </div>
+            
         </div>
     </div>
 
-    <footer>
-            Hospital Regional de Alta Especialidad de Ixtapaluca
-       <p style="font-size: 10px">
-            Dirección de Operaciones - Subdirección de Tecnologías de la Información 
-            <br> Gestión Digital en Salud - 2023
-       </p> 
+    <footer style="font-size:8px;">
+        Hospital Regional de Alta Especialidad de Ixtapaluca <br> Dirección de Operaciones - Gestión Digital en Salud - 2023
     </footer>
 </body>
 </html>

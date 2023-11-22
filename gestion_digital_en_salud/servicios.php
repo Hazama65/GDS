@@ -6,7 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
-    <title>Clínicas</title>
+    <title>Servicios</title>
 </head>
 <body>
 <header>
@@ -26,7 +26,7 @@
                             padding: 0 20px;
                             background-color: rgb(35,91,78,0.70);">
 
-        <strong style="margin: 0 auto; color: aliceblue; font-size:20px;">CLÍNICAS</strong>
+        <strong style="margin: 0 auto; color: aliceblue; font-size:20px;">SERVICIOS</strong>
     </div>
 
 
@@ -36,36 +36,34 @@
     <div class="container" style="center">
         <div class="cards">
             <div class="card">
-                <img src="img/anemia.jpeg" alt="Imagen 1">
+                <img src="img/ambulatoria2.jpeg" alt="Imagen 1">
                 <br>
-                <a href="https://hraeigds.site" class="btn btn-success">Anemias</a>
+                <a href="https://hraeigds.site" class="btn btn-success">Ambulatoria</a>
             </div>
             <div class="card">
-                <img src="img/hepatitisc.jpg" alt="Imagen 2">
+                <img src="img/endoscopia.jpeg" alt="Imagen 2">
                 <br>
-                <a href="https://hraeigds.site" class="btn btn-success">Hepatitis C</a>
+                <a href="https://hraeigds.site" class="btn btn-success">Endoscopia</a>
             </div>
             <div class="card">
-                <img src="img/paladarhendido.jpg" alt="Imagen 3">
+                <img src="img/hraei11.jpeg" alt="Imagen 3">
                 <br>
-                <a href="https://hraeigds.site" class="btn btn-success">LPH</a>
-            </div>
-
-            <!--
-            <div class="card">
-                <img src="img/cirugiabariatrica.jpg" alt="Imagen 4">
-                <br>
-                <a href="#" class="btn btn-success">Bariatría</a>
+                <a href="https://hraeigds.site" class="btn btn-success">Folios</a>
             </div>
             <div class="card">
-                <img src="img/creheri.png" alt="Imagen 5">
+                <img src="img/interconsulta.jpeg" alt="Imagen 4">
                 <br>
-                <a href="#" class="btn btn-success">CREHER</a>
-            </div>-->
+                <a href="#" class="btn btn-success">Interconsultas</a>
+            </div>
             <div class="card">
-                <img src="img/hemofilia1.png" alt="Imagen 5">
+                <img src="img/residentes.jpeg" alt="Imagen 5">
                 <br>
-                <a href="https://hraeigds.site/hemofilia/" class="btn btn-success">Hemofilia</a>
+                <a href="#" class="btn btn-success">Residentes</a>
+            </div>
+            <div class="card">
+                <img src="img/gineco.jpeg" alt="Imagen 5">
+                <br>
+                <a href="https://hraeigds.site/Triage_GinecoObstetrico/" class="btn btn-success">Triage Ginecoobstétrico</a>
             </div>
         </div>
     </div> <!-- es el div que cierra <div class="container" style="center">-->
