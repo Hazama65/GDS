@@ -1,13 +1,13 @@
 <?php
-    // session_start();
-    // header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-    // header("Pragma: no-cache");
+    session_start();
+    header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+    header("Pragma: no-cache");
 
-    // if (!isset($_SESSION['valid_user'])) {
-    //     // El usuario no ha iniciado sesión, redirige de vuelta a la página de inicio de sesión
-    //     header('Location: ../login/index.php');
-    //     exit;
-    // }
+    if (!isset($_SESSION['valid_user'])) {
+        // El usuario no ha iniciado sesión, redirige de vuelta a la página de inicio de sesión
+        header('Location: ../login/index.php');
+        exit;
+    }
     include('includes/consultas.php');
 ?>
 <!DOCTYPE html>
