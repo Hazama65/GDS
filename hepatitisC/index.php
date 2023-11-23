@@ -50,7 +50,7 @@ include("modals/registrarpaciente.php");
                 <i class="bi bi-file-earmark-excel"></i> Excel
             </a>
 
-            <a href="graficas_anemia.php">
+            <a href="graficas_hc.php">
                 <button type="button" class="btn btn-primary" target="_blank">
                     <i class="bi bi-bar-chart"></i> Gráficas
                 </button>
