@@ -333,7 +333,7 @@
                 <td><?php echo $no_hermanos_ldl ; ?></td>
             </tr>
           
-          <!--CONMORBILIDADES-->
+          <!--COMORBILIDADES-->
             
 
             <tr>
@@ -395,6 +395,11 @@
             <tr>
                 <td class="estilo-celda">Artritris Reumatoide</td>
                 <td><?php echo $artritis_reumatoide ; ?></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Hipertension Arterial</td>
+                <td></td>
             </tr>
 
             <tr>
@@ -505,12 +510,7 @@
                 <td class="estilo-celda">Glucosa</td>
                 <td><?php echo $glucosa ; ?></td>
             </tr>  
-    
-            <tr>
-                <td class="estilo-celda">BH</td>
-                <td><?php echo $BH ; ?></td>
-            </tr>
-            
+
             <tr>
                 <td class="estilo-celda">HB Glucosilada</td>
                 <td><?php echo $glucosilada ; ?></td>
@@ -552,7 +552,7 @@
             </tr>            
             
             <tr>
-                <td class="estilo-celda">HBG 24 HRS</td>
+                <td class="estilo-celda">ALB 24 HRS</td>
                 <td><?php echo $HBG ; ?></td>
             </tr>
             
