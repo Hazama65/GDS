@@ -1035,9 +1035,9 @@
                             <input type="number" step="any" class="form-control" id="id_HDL" name="id_HDL" >
                         </div> 
 
-<!--===============   Laboratorios- HBG 24 HRS=======================-->       
+<!--===============   Laboratorios- ALB24 HRS=======================-->       
                         <div class="col-md-2">
-                            <strong style="font-size: 14px;">HBG 24 HRS</strong>
+                            <strong style="font-size: 14px;">ALB 24 HRS</strong>
                             <input type="number" step="any" class="form-control" id="id_HBG" name="id_HBG" >
                         </div> 
                         
