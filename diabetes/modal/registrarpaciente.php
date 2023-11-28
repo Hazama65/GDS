@@ -858,6 +858,15 @@
                     </select>
                 </div>
 
+        <!--=========== Hipertension  ================-->
+                    <div class="col-md-6" id="com_hipertension">
+                    <strong style="font-size: 14px">Hipertensión Arterial</strong>
+                    <select name="HipertensioncomorSelect" id="HipertensioncomorSelect" class="form-control" style="font-size: 14px">
+                    <option value="Negado">Negado</option>
+                    <option value="Si">Si</option>
+                </select>
+                </div>
+
     <!--===========  Síndrome de Cushing    ================-->
                 <div class="col-md-6" id="com_cushing">
                     <strong style="font-size: 14px">Síndrome de Cushing </strong>
@@ -866,6 +875,8 @@
                         <option value="Si">Si</option>
                     </select>
                 </div>
+
+
                     <!--===========  Al seleeccionar  Cushing    ================-->
                     <div class="col-md-6" id="com_sindrome" style="display: none;">
                     <strong style="font-size: 14px">Tipo de Cushing </strong>
@@ -982,11 +993,7 @@
                             <input type="number" step="any" class="form-control" id="id_glucosa" name="id_glucosa" >
                         </div>
 
-<!--===============   Laboratorios- BH Biometría Hemática=======================-->       
-                        <div class="col-md-2">
-                            <strong style="font-size: 14px;">BH</strong>
-                            <input type="number" step="any" class="form-control" id="id_BH" name="id_BH" >
-                        </div>
+
 <!--===============   Laboratorios- HB Glucosilada=======================-->       
                         <div class="col-md-2">
                             <strong style="font-size: 14px;">HB Glucosilada</strong>

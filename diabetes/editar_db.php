@@ -910,6 +910,15 @@
                     </select>
                 </div>
 
+<!--=========== Artritris Reumatoide   ================-->
+                <div class="col-md-6" id="com_hipertension">
+                    <strong style="font-size: 14px">Hipertensión Arterial</strong>
+                    <select name="HipertensioncomorSelect" id="HipertensioncomorSelect" class="form-control" style="font-size: 14px">
+                    <option value="Negado">Negado</option>
+                    <option value="Si">Si</option>
+                </select>
+                </div>
+
     <!--===========  Síndrome de Cushing    ================-->
                 <div class="col-md-6" id="com_cushing">
                     <strong style="font-size: 14px">Síndrome de Cushing </strong>
@@ -1034,11 +1043,6 @@
                             <input type="number" step="any" class="form-control" id="id_glucosa" value="<?php echo $glucosa; ?>" name="id_glucosa" >
                         </div>
 
-<!--===============   Laboratorios- BH Biometría Hemática=======================-->       
-                        <div class="col-md-2">
-                            <strong style="font-size: 14px;">BH</strong>
-                            <input type="number" step="any" class="form-control" id="id_BH" value="<?php echo $BH; ?>" name="id_BH" >
-                        </div>
 <!--===============   Laboratorios- HB Glucosilada=======================-->       
                         <div class="col-md-2">
                             <strong style="font-size: 14px;">HB Glucosilada</strong>
@@ -1087,9 +1091,9 @@
                             <input type="number" step="any" class="form-control" id="id_HDL" value="<?php echo $HDL; ?>" name="id_HDL" >
                         </div> 
 
-<!--===============   Laboratorios- HBG 24 HRS=======================-->       
+<!--===============   Laboratorios- ALB 24 HRS=======================-->       
                         <div class="col-md-2">
-                            <strong style="font-size: 14px;">HBG 24 HRS</strong>
+                            <strong style="font-size: 14px;">ALB 24 HRS</strong>
                             <input type="number" step="any" class="form-control" id="id_HBG" value="<?php echo $HBG; ?>" name="id_HBG" >
                         </div> 
                         
