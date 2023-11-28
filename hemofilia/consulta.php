@@ -1,3 +1,6 @@
+<?php
+    include('php/controllers/consulta.controller.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,32 +32,32 @@
   <tbody>
     <tr>
       <th scope="row">Nombre Completo</th>
-      <td></td>
+      <td><?php echo $nombre_paciente; ?></td>
     </tr>
 
     <tr>
       <th scope="row">CURP</th>
-      <td></td>
+      <td><?php echo $curp; ?></td>
     </tr>
 
     <tr>
       <th scope="row">Fecha Nacimiento</th>
-      <td></td>
+      <td><?php echo $fecha_nacimiento; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Edad</th>
-        <td></td>
+        <td><?php echo $edad; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Sexo</th>
-        <td></td>
+        <td><?php echo $sexo; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Peso</th>
-        <td></td>
+        <td><?php echo $peso; ?></td>
     </tr>
 
     <tr>
@@ -63,82 +66,82 @@
 
     <tr>
         <th scope="row">Tipo de Hemofilia</th>
-        <td></td>
+        <td><?php echo $tipohemofilia; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Deficiencia de factor</th>
-        <td></td>
+        <td><?php echo $deficienciafactor; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Clasificación de Hemofilia (VIII)</th>
-        <td></td>
+        <td><?php echo $tipoVIII; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Clasificación de Hemofilia (IX)</th>
-        <td></td>
+        <td><?php echo $tipoIX; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Clasificación de Hemofilia (XI)</th>
-        <td></td>
+        <td><?php echo $tipoXI; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Tipo de EVW</th>
-        <td></td>
+        <td><?php echo $tipovw; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Otra Clasificación</th>
-        <td></td>
+        <td><?php echo $otrashemofilias; ?></td>
     </tr>
    
     <tr>
         <th scope="row">Clasificación por gravedad</th>
-        <td></td>
+        <td><?php echo $clasificacionGravedad; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Inhibidor</th>
-        <td></td>
+        <td><?php echo $inhibidor; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Inhibidor Baja Respuesta</th>
-        <td></td>
+        <td><?php echo $bajarespuesta; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Inhibidor Alta Respuesta</th>
-        <td></td>
+        <td><?php echo $altarespuesta; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Artropatia Hemolitica</th>
-        <td></td>
+        <td><?php echo $artropatiahemolitica; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Área Afectada</th>
-        <td></td>
+        <td><?php echo $area_afectada; ?></td>
     </tr>
 
     <tr>
         <th scope="row">No. de Sangrados Mensuales</th>
-        <td></td>
+        <td><?php echo $sangradosmensuales; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Requirió factor</th>
-        <td></td>
+        <td><?php echo $requierefactor; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="background-color: rgb(153, 9, 68, 0.5); color: aliceblue; text-align: center;">Resultados Independencia Funcional (FISH)</th>
-        <td></td>
+        <td><?php echo $resultadoFISH; ?></td>
     </tr>
 
     <tr>
@@ -147,17 +150,17 @@
 
     <tr>
         <th scope="row">Comer y Asearse</th>
-        <td></td>
+        <td><?php echo $comer_aseo; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Bañarse</th>
-        <td></td>
+        <td><?php echo $bathe; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Vestirse</th>
-        <td></td>
+        <td><?php echo $vestirse; ?></td>
     </tr>
 
 
@@ -167,12 +170,12 @@
 
     <tr>
         <th scope="row">Sentar</th>
-        <td></td>
+        <td><?php echo $sentar; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Cunclillas</th>
-        <td></td>
+        <td><?php echo $Cunclillas; ?></td>
     </tr>
 
     <tr>
@@ -181,22 +184,22 @@
 
     <tr>
         <th scope="row">Caminar</th>
-        <td></td>
+        <td><?php echo $Caminar; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Correr</th>
-        <td></td>
+        <td><?php echo $Correr; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Subir Escaleras (12-14 pasos)</th>
-        <td></td>
+        <td><?php echo $Subir; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="background-color: rgb(153, 9, 68, 0.5); color: aliceblue; text-align: center;">Resultados Salud Articular (HJHS)</th>
-        <td></td>
+        <td><?php echo $puntuacion_HJHS; ?></td>
     </tr>
 
     <tr>
@@ -206,42 +209,42 @@
 
     <tr>
         <th scope="row">Inflamación</th>
-        <td></td>
+        <td><?php echo $CI_inflamacion; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Duración</th>
-        <td></td>
+        <td><?php echo $CI_duracion; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Atrofia Muscular</th>
-        <td></td>
+        <td><?php echo $CI_atrofiamuscular; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Crepitación al Movimiento</th>
-        <td></td>
+        <td><?php echo $CI_crepitacion_movimiento; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Pérdida de la Flexión</th>
-        <td></td>
+        <td><?php echo $CI_perdida_flexion; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Pérdida de la Extensión</th>
-        <td></td>
+        <td><?php echo $CI_perdida_extension; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Dolor Articular</th>
-        <td></td>
+        <td><?php echo $CI_dolor_articular; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Fuerza</th>
-        <td></td>
+        <td><?php echo $CI_fuerza; ?></td>
     </tr>
 
     <tr>
@@ -251,42 +254,42 @@
 
     <tr>
         <th scope="row">Inflamación</th>
-        <td></td>
+        <td><?php echo $CD_inflamacion; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Duración</th>
-        <td></td>
+        <td><?php echo $CD_duracion; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Atrofia Muscular</th>
-        <td></td>
+        <td><?php echo $CD_atrofiamuscular; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Crepitación al Movimiento</th>
-        <td></td>
+        <td><?php echo $CD_crepitacion_movimiento; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Pérdida de la Flexión</th>
-        <td></td>
+        <td><?php echo $CD_perdida_flexion; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Pérdida de la Extensión</th>
-        <td></td>
+        <td><?php echo $CD_perdida_extension; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Dolor Articular</th>
-        <td></td>
+        <td><?php echo $CD_dolor_articular; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Fuerza</th>
-        <td></td>
+        <td><?php echo $CD_fuerza; ?></td>
     </tr>
 
     <tr>
@@ -296,42 +299,42 @@
 
     <tr>
         <th scope="row">Inflamación</th>
-        <td></td>
+        <td><?php echo $RI_inflamacion; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Duración</th>
-        <td></td>
+        <td><?php echo $RI_duracion; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Atrofia Muscular</th>
-        <td></td>
+        <td><?php echo $RI_atrofiamuscular; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Crepitación al Movimiento</th>
-        <td></td>
+        <td><?php echo $RI_crepitacion_movimiento; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Pérdida de la Flexión</th>
-        <td></td>
+        <td><?php echo $RI_perdida_flexion; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Pérdida de la Extensión</th>
-        <td></td>
+        <td><?php echo $RI_perdida_extension; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Dolor Articular</th>
-        <td></td>
+        <td><?php echo $RI_dolor_articular; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Fuerza</th>
-        <td></td>
+        <td><?php echo $RI_fuerza; ?></td>
     </tr>
 
     <tr>
@@ -341,42 +344,42 @@
 
     <tr>
         <th scope="row">Inflamación</th>
-        <td></td>
+        <td><?php echo $RD_inflamacion; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Duración</th>
-        <td></td>
+        <td><?php echo $RD_duracion; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Atrofia Muscular</th>
-        <td></td>
+        <td><?php echo $RD_atrofiamuscular; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Crepitación al Movimiento</th>
-        <td></td>
+        <td><?php echo $RD_crepitacion_movimiento; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Pérdida de la Flexión</th>
-        <td></td>
+        <td><?php echo $RD_perdida_flexion; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Pérdida de la Extensión</th>
-        <td></td>
+        <td><?php echo $RD_perdida_extension; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Dolor Articular</th>
-        <td></td>
+        <td><?php echo $RD_dolor_articular; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Fuerza</th>
-        <td></td>
+        <td><?php echo $RD_fuerza; ?></td>
     </tr>
 
     <tr>
@@ -386,42 +389,42 @@
 
     <tr>
         <th scope="row">Inflamación</th>
-        <td></td>
+        <td><?php echo $TI_inflamacion; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Duración</th>
-        <td></td>
+        <td><?php echo $TI_duracion; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Atrofia Muscular</th>
-        <td></td>
+        <td><?php echo $TI_atrofiamuscular; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Crepitación al Movimiento</th>
-        <td></td>
+        <td><?php echo $TI_crepitacion_movimiento; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Pérdida de la Flexión</th>
-        <td></td>
+        <td><?php echo $TI_perdida_flexion; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Pérdida de la Extensión</th>
-        <td></td>
+        <td><?php echo $TI_perdida_extension; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Dolor Articular</th>
-        <td></td>
+        <td><?php echo $TI_dolor_articular; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Fuerza</th>
-        <td></td>
+        <td><?php echo $TI_fuerza; ?></td>
     </tr>
 
     <tr>
@@ -431,52 +434,52 @@
 
     <tr>
         <th scope="row">Inflamación</th>
-        <td></td>
+        <td><?php echo $TD_inflamacion; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Duración</th>
-        <td></td>
+        <td><?php echo $TD_duracion; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Atrofia Muscular</th>
-        <td></td>
+        <td><?php echo $TD_atrofiamuscular; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Crepitación al Movimiento</th>
-        <td></td>
+        <td><?php echo $TD_crepitacion_movimiento; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Pérdida de la Flexión</th>
-        <td></td>
+        <td><?php echo $TD_perdida_flexion; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Pérdida de la Extensión</th>
-        <td></td>
+        <td><?php echo $TD_perdida_extension; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Dolor Articular</th>
-        <td></td>
+        <td><?php echo $TD_dolor_articular; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Fuerza</th>
-        <td></td>
+        <td><?php echo $TD_fuerza; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="background-color: rgb(227, 211, 195, 0.35); color: gray; text-align: center;">Suma del total de Articulaciones</th>
-        <td></td>
+        <td><?php echo $suma_articulaciones; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Marcha Global <br>(caminar, escaleras, correr, salto sobre una pierna)</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
@@ -485,92 +488,92 @@
 
     <tr>
         <th scope="row" style="background-color: rgb(153, 9, 68, 0.5); color: aliceblue; text-align: center;">6 meses</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Actividad Inflamatoria</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Escala de Derrame / Sinovitis</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Escala de Hipertrofia Sinovial</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Daño Osteocondral - Cartilago</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Daño Osteocondral - Hueso</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="background-color: rgb(153, 9, 68, 0.5); color: aliceblue; text-align: center;">12 meses</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Actividad Inflamatoria</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Escala de Derrame / Sinovitis</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Escala de Hipertrofia Sinovial</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Daño Osteocondral - Cartilago</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Daño Osteocondral - Hueso</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="background-color: rgb(153, 9, 68, 0.5); color: aliceblue; text-align: center;">24 meses</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Actividad Inflamatoria</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Escala de Derrame / Sinovitis</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Escala de Hipertrofia Sinovial</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Daño Osteocondral - Cartilago</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Daño Osteocondral - Hueso</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
     
     <tr>
@@ -579,42 +582,42 @@
 
     <tr>
         <th scope="row">Tipo de Tratamiento</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Profilaxis</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Profilaxis con Emicizumab</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Tipo Profilaxis con Emicizumab</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Dosis(mg) / Kg</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Total de mg por Dosis</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * N° de Dosis por semana</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Entrega</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
 
@@ -624,22 +627,22 @@
 
     <tr>
         <th scope="row"> * Dosis / Kg</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row"> * Total de UI por Dosis</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row"> * N° de Dosis por semana</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row"> * Total de UI por semana</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
@@ -648,22 +651,22 @@
 
     <tr>
         <th scope="row"> * Dosis / Kg</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row"> * Total de UI por Dosis</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row"> * N° de Dosis por semana</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row"> * Total de UI por semana</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
@@ -676,42 +679,42 @@
 
     <tr>
         <th scope="row">Turoctocog Alfa 250 UI</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Turoctocog Alfa 500 UI</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Turoctocog Alfa 1000 UI</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Octocog Alfa 250 UI</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Octocog Alfa 500 UI</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Simoctocog Alfa 250 UI</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Simoctocog Alfa 500 UI</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Simoctocog Alfa 1000 UI</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
@@ -720,22 +723,22 @@
 
     <tr>
         <th scope="row">Factor VIII 250 UI</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Factor VIII 500 UI</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Factor VIII + vW 500 UI</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Factor VIII + vW 1000 UI</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
@@ -744,22 +747,22 @@
 
     <tr>
         <th scope="row">Factor IX 500 UI</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Factor IX 500 UI</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Factor IX 600 UI</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Factor IX 1000 UI</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
@@ -768,7 +771,7 @@
 
     <tr>
         <th scope="row">Emicizumab</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
@@ -777,12 +780,12 @@
 
     <tr>
         <th scope="row">F VW 500 UI</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
     <tr>
         <th scope="row">F VW 1000 UI</th>
-        <td></td>
+        <td><?php echo $; ?></td>
     </tr>
 
 

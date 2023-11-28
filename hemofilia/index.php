@@ -1,5 +1,7 @@
 <?php
-include("modals/registrarpaciente.php");
+
+    require('php/controllers/registros.controller.php');
+    include("modals/registrarpaciente.php");
 ?>
 
 <!DOCTYPE html>
@@ -56,9 +58,30 @@ include("modals/registrarpaciente.php");
     <div id="patient-list-container" style="background-color: rgb(159,34,65,0.15);" ><br>
             <input type="text" id="search" placeholder="Buscar pacientes...">
             <ul id="patient-list">
-           
-                
-            </ul><br>
+                <?php
+
+                    if (!empty($data_paciente)) {
+                        // Comienza a generar la lista de pacientes
+                        echo '<ul class="patient-list" >';
+                        foreach($data_paciente as $datos) {
+                            $id_paciente = $datos["id_paciente"];
+                            $nombrePaciente = $datos["nombre_paciente"];
+                            
+                            // Genera un elemento de lista para cada paciente
+                            echo '<li class="patient-item" data-id-paciente="' . $id_paciente . '">';
+                            echo $nombrePaciente;
+                            echo '<a href="editar_hc.php?id=' . $id_paciente . '">';
+                            echo '<button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Editar</button>';
+                            echo '</a>';
+                            echo '</li>';
+                        }
+                        echo '</ul>';
+                    } else {
+                        echo "No se encontraron pacientes";
+                    }
+                ?>
+            </ul>
+            <br>
         
     </div> <!-- cierre del <div id="patient-list-container">-->
 </div> <!-- cierre del <div class="col-3">-->
@@ -67,14 +90,11 @@ include("modals/registrarpaciente.php");
 
 <!-- ======================== AQUI INICIA LA TABLA ======================== -->
 
-<div class="col-7">
-<div class="container">
-<iframe id="consulta" src="consulta.php" frameborder="0" width="100%" height="800px" style="margin-bottom: 100px;"></iframe>
-
-
-
-</div> <!--<div class="container">-->
-</div><!-- FINALIZA EL DIV class col 8-->
+    <div class="col-7">
+        <div class="container">
+            <iframe id="consulta"  src="consulta.php" frameborder="0" width="100%" height="450px" style="margin-bottom: 100px;"></iframe>
+        </div> <!--<div class="container">-->
+    </div><!-- FINALIZA EL DIV class col 7-->
 
 <!-- ======================== AQUI FINALIZA LA TABLA ======================== -->
 
@@ -95,9 +115,14 @@ Dirección de Operaciones - Gestión Digital en Salud - 2023
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+<script src="js/visualizacion.js"></script>
 <script src="js/script.js"></script>
 <script src="js/scripthemofilia.js"></script>
+
+    <script type="module">
+        import { mainForm } from "./js/insert.js";
+        mainForm();
+    </script>
     
 </body>
 </html>

@@ -18,12 +18,12 @@
 
             <div class="col-md-4" id="idnombre">
                 <strong style="font-size: 14px;">Nombre Completo</strong>
-                <input type="text" name="nombre" id="nombre" class="control form-control" placeholder="Nombre(s) Apellido(s)" style="font-size:14px;" onblur="formatoNombre();" required>
+                <input type="text" name="nombre" id="nombre" class="control form-control" placeholder="Nombre(s) Apellido(s)" style="font-size:14px;" onblur="formatoNombre();" >
             </div>
 
             <div class="col-md-4" id="idcurp">
                 <strong style="font-size: 14px;">CURP</strong>
-                <input type="text" class="form-control" id="curp" name="curp" placeholder="CURP..." style="font-size: 14px;" onblur="curp2date();" required>
+                <input type="text" class="form-control" id="curp" name="curp" placeholder="CURP..." style="font-size: 14px;" onblur="curp2date();" >
             </div>
 
             <div class="col-md-4">
@@ -43,7 +43,7 @@
 
                 <div class="col-md-4">
                         <strong style="font-size: 14px;">Peso</strong>
-                      <input type="number" step="any" class="form-control" id="peso" placeholder="Kg" name="peso" required>
+                      <input type="number" step="any" class="form-control" id="peso" placeholder="Kg" name="peso" >
                 </div>
 
             </div> <!-- div del row de datos del paciente-->
@@ -94,7 +94,7 @@
                         <option value="Sin registro">Seleccione...</option>
                         <option value="Tipo A">Tipo A</option>
                         <option value="Tipo B">Tipo B</option>
-                        <option value="Tipo 3">Tipo C</option>
+                        <option value="Tipo C">Tipo C</option>
                     </select>
                 </div>
 
@@ -104,7 +104,7 @@
                         <option value="Sin registro">Seleccione...</option>
                         <option value="Tipo A">Tipo A</option>
                         <option value="Tipo B">Tipo B</option>
-                        <option value="Tipo 3">Tipo C</option>
+                        <option value="Tipo C">Tipo C</option>
                     </select>
                 </div>
 
@@ -114,7 +114,7 @@
                         <option value="Sin registro">Seleccione...</option>
                         <option value="Tipo A">Tipo A</option>
                         <option value="Tipo B">Tipo B</option>
-                        <option value="Tipo 3">Tipo C</option>
+                        <option value="Tipo C">Tipo C</option>
                     </select>
                 </div>
 
@@ -125,7 +125,7 @@
 
                 <div class="col-md-4">
                     <strong style="font-size: 14px;">Clasificación por gravedad</strong>
-                    <select name="deficienciafactor" id="deficienciafactor" class="form-control" style="font-size: 14px;">
+                    <select name="clasificacionGravedad" id="clasificacionGravedad" class="form-control" style="font-size: 14px;">
                         <option value="Sin registro">Seleccione...</option>
                         <option value="Leve">Leve</option>
                         <option value="Moderado">Moderado</option>
@@ -191,7 +191,7 @@
                 <div class="col-md-12"><br>
                     <div class="input-group mb-3">
                         <a class="btn btn-outline-secondary" data-bs-toggle="collapse" href="#FISH" role="button" aria-expanded="false" aria-controls="collapseExample" style="font-size: 12px;">Independencia Funcional (FISH)</a>
-                        <input type="text" class="form-control" id="resultadoFISH" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                        <input type="text" class="form-control" id="resultadoFISH" name="resultadoFISH" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
 
                     </div>
                 </div>
@@ -206,16 +206,16 @@
                                     <strong style="font-size: 14px;">Comer y Asearse</strong>
                                         <div>
                                             <label style="display: inline-block; margin-right: 10px;">
-                                                <input type="radio" name="comer" value="1"> 1
+                                                <input type="radio" name="comer_aseo" value="1"> 1
                                             </label>
                                             <label style="display: inline-block; margin-right: 10px;">
-                                                <input type="radio" name="comer" value="2"> 2
+                                                <input type="radio" name="comer_aseo" value="2"> 2
                                             </label>
                                             <label style="display: inline-block; margin-right: 10px;">
-                                                <input type="radio" name="comer" value="3"> 3
+                                                <input type="radio" name="comer_aseo" value="3"> 3
                                             </label>
                                             <label style="display: inline-block; margin-right: 10px;">
-                                                <input type="radio" name="comer" value="4"> 4
+                                                <input type="radio" name="comer_aseo" value="4"> 4
                                             </label>
                                         </div>
 
@@ -224,16 +224,16 @@
                                         <strong style="font-size: 14px;">Bañarse</strong>
                                         <div>
                                             <label style="display: inline-block; margin-right: 10px;">
-                                                <input type="radio" name="banarse" value="1"> 1
+                                                <input type="radio" name="bathe" value="1"> 1
                                             </label>
                                             <label style="display: inline-block; margin-right: 10px;">
-                                                <input type="radio" name="banarse" value="2"> 2
+                                                <input type="radio" name="bathe" value="2"> 2
                                             </label>
                                             <label style="display: inline-block; margin-right: 10px;">
-                                                <input type="radio" name="banarse" value="3"> 3
+                                                <input type="radio" name="bathe" value="3"> 3
                                             </label>
                                             <label style="display: inline-block; margin-right: 10px;">
-                                                <input type="radio" name="banarse" value="4"> 4
+                                                <input type="radio" name="bathe" value="4"> 4
                                             </label>
                                         </div>
 
@@ -372,7 +372,7 @@
                <div class="col-md-12"><br>
                     <div class="input-group mb-3">
                         <a class="btn btn-outline-secondary" data-bs-toggle="collapse" href="#HJHS" role="button" aria-expanded="false" aria-controls="collapseExample" style="font-size: 12px;">Salud Articular (HJHS)</a>
-                        <input type="text" class="form-control" id="puntuacion_HJHS" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                        <input type="text" class="form-control" id="puntuacion_HJHS" name="puntuacion_HJHS" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
                     </div>
                 </div>
             
@@ -1043,7 +1043,7 @@
                     <div class="col-md-12"><br>
                         <div class="input-group mb-3">
                             <a class="btn btn-outline-secondary" data-bs-toggle="collapse" href="#HEADUS6" role="button" aria-expanded="false" aria-controls="collapseExample" style="font-size: 12px;">6 meses</a>
-                            <input type="text" class="form-control" id="USG_6meses" style="font-size: 14px;" readonly>
+                            <input type="text" class="form-control" id="USG_6meses" name="USG_6meses" style="font-size: 14px;" readonly>
 
                         </div>
                     </div>
@@ -1132,7 +1132,7 @@
                     <div class="col-md-12"><br>
                         <div class="input-group mb-3">
                             <a class="btn btn-outline-secondary" data-bs-toggle="collapse" href="#HEADUS12" role="button" aria-expanded="false" aria-controls="collapseExample" style="font-size: 12px;">12 meses</a>
-                            <input type="text" class="form-control" id="USG_12"placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                            <input type="text" class="form-control" id="USG_12" name="USG_12" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
                         </div>
                     </div>
 
@@ -1215,7 +1215,7 @@
                     <div class="col-md-12"><br>
                         <div class="input-group mb-3">
                             <a class="btn btn-outline-secondary" data-bs-toggle="collapse" href="#HEADUS24" role="button" aria-expanded="false" aria-controls="collapseExample" style="font-size: 12px;">24 meses</a>
-                            <input type="text" class="form-control" id="USG_24" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                            <input type="text" class="form-control" id="USG_24" name="USG_24" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
                         </div>
                     </div>
 
@@ -1342,17 +1342,17 @@
 
                         <div class="col-md-3" id="id_dosis_tipoProfilaxis" style="display:none;">
                             <strong style="font-size: 14px; color: rgb(135, 54, 0)">Dosis(mg) / Kg</strong>
-                            <input type="number" class="form-control" id="dosis_tipoProfilaxis" name="dosis_tipoProfilaxis" placeholder="Dosis(mg)/ Kg" style="font-size: 14px;" required>
+                            <input type="number" class="form-control" id="dosis_tipoProfilaxis" name="dosis_tipoProfilaxis" placeholder="Dosis(mg)/ Kg" style="font-size: 14px;" >
                         </div>
 
                         <div class="col-md-3" id="id_totalui" style="display:none;">
                             <strong style="font-size: 14px; color: rgb(135, 54, 0)">Total de mg por Dosis</strong>
-                            <input type="number" class="form-control" id="totalui" name="totalui" placeholder="Total de UI por Dosis" style="font-size: 14px;" required>
+                            <input type="number" class="form-control" id="totalui" name="totalui" placeholder="Total de UI por Dosis" style="font-size: 14px;" >
                         </div>
 
                         <div class="col-md-3" id="id_nodosisporsemana" style="display:none;">
                             <strong style="font-size: 14px; color: rgb(135, 54, 0)">N° de Dosis por semana</strong>
-                            <input type="number" class="form-control" id="nodosisporsemana" name="nodosisporsemana" placeholder="Total de UI por Dosis" style="font-size: 14px;" required>
+                            <input type="number" class="form-control" id="nodosisporsemana" name="nodosisporsemana" placeholder="Total de UI por Dosis" style="font-size: 14px;" >
                         </div>
 
                         <div class="col-md-3" id="id_entrega" style="display:none;">
@@ -1380,22 +1380,22 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <strong style="font-size: 14px;">Dosis / Kg</strong>
-                                    <input type="number" class="form-control" id="dosis" name="dosis" placeholder="Dosis / Kg" style="font-size: 14px;" required>
+                                    <input type="number" class="form-control" id="dosis" name="dosis" placeholder="Dosis / Kg" style="font-size: 14px;" >
                                 </div>
 
                                 <div class="col-md-3">
                                     <strong style="font-size: 14px;">Total de UI por Dosis</strong>
-                                    <input type="number" class="form-control" id="totalui" name="totalui" placeholder="Total de UI por Dosis" style="font-size: 14px;" required>
+                                    <input type="number" class="form-control" id="totalui_total" name="totalui_total" placeholder="Total de UI por Dosis" style="font-size: 14px;" >
                                 </div>
 
                                 <div class="col-md-3">
                                     <strong style="font-size: 14px;">N° de Dosis por semana</strong>
-                                    <input type="number" class="form-control" id="nodosisporsemana" name="nodosisporsemana" placeholder="Total de UI por Dosis" style="font-size: 14px;" required>
+                                    <input type="number" class="form-control" id="nodosisporsemana_2" name="nodosisporsemana_2" placeholder="Total de UI por Dosis" style="font-size: 14px;" >
                                 </div>
 
                                 <div class="col-md-3">
                                     <strong style="font-size: 14px;">Total de UI por semana</strong>
-                                    <input type="number" class="form-control" id="totaluisemana" name="totalui" placeholder="Total de UI por semana" style="font-size: 14px;" required>
+                                    <input type="number" class="form-control" id="totaluisemana" name="totaluisemana" placeholder="Total de UI por semana" style="font-size: 14px;" >
                                 </div>
                             </div>
                         </div> <!-- row de terapia de remplazo-->
@@ -1414,22 +1414,22 @@
                             <div class="row">
                                 <div class="col-md-3" id="id_agente_desvio">
                                     <strong style="font-size: 14px;">Dosis / Kg</strong>
-                                    <input type="number" class="form-control" id="disis_desvio" name="dosis_desvio" placeholder="Dosis / Kg" style="font-size: 14px;" required>
+                                    <input type="number" class="form-control" id="dosis_desvio" name="dosis_desvio" placeholder="Dosis / Kg" style="font-size: 14px;" >
                                 </div>
 
                                 <div class="col-md-3">
                                     <strong style="font-size: 14px;">Total de UI por Dosis</strong>
-                                    <input type="number" class="form-control" id="totalui_desvio" name="totalui_desvio" placeholder="Total de UI por Dosis" style="font-size: 14px;" required>
+                                    <input type="number" class="form-control" id="totalui_desvio" name="totalui_desvio" placeholder="Total de UI por Dosis" style="font-size: 14px;" >
                                 </div>
 
                                 <div class="col-md-3">
                                     <strong style="font-size: 14px;">N° de Dosis por semana</strong>
-                                    <input type="number" class="form-control" id="nodosisporsemana_desvio" name="nodosisporsemana_desvio" placeholder="Total de UI por Dosis" style="font-size: 14px;" required>
+                                    <input type="number" class="form-control" id="nodosisporsemana_desvio" name="nodosisporsemana_desvio" placeholder="Total de UI por Dosis" style="font-size: 14px;" >
                                 </div>
 
                                 <div class="col-md-3">
                                     <strong style="font-size: 14px;">Total de UI por semana</strong>
-                                    <input type="number" class="form-control" id="totalui_desvio_semana" name="totalui_desvio_semana" placeholder="Total de UI por semana" style="font-size: 14px;" required>
+                                    <input type="number" class="form-control" id="totalui_desvio_semana" name="totalui_desvio_semana" placeholder="Total de UI por semana" style="font-size: 14px;" >
                                 </div>
                             </div>
                         </div> <!-- es el row de terapia de reemplazo-->
@@ -1452,42 +1452,42 @@
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;"> Turoctocog Alfa 250 UI</strong>
-                            <input type="number" class="form-control" id="turo_250" name="turo_250" style="font-size: 14px;" required>
+                            <input type="number" class="form-control" id="turo_250" name="turo_250" style="font-size: 14px;" >
                         </div>
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;"> Turoctocog Alfa 500 UI</strong>
-                            <input type="number" class="form-control" id="turo_500" name="turo_500" style="font-size: 14px;" required>
+                            <input type="number" class="form-control" id="turo_500" name="turo_500" style="font-size: 14px;" >
                         </div>
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;"> Turoctocog Alfa 1000 UI</strong>
-                            <input type="number" class="form-control" id="turo_1000" name="turo_1000" style="font-size: 14px;" required>
+                            <input type="number" class="form-control" id="turo_1000" name="turo_1000" style="font-size: 14px;" >
                         </div>
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;"> Octocog Alfa 250 UI</strong>
-                            <input type="number" class="form-control" id="octo_250" name="octo_250" style="font-size: 14px;" required>
+                            <input type="number" class="form-control" id="octo_250" name="octo_250" style="font-size: 14px;" >
                         </div>
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;"> Octocog Alfa 500 UI</strong>
-                            <input type="number" class="form-control" id="octo_500" name="octo_500" style="font-size: 14px;" required>
+                            <input type="number" class="form-control" id="octo_500" name="octo_500" style="font-size: 14px;" >
                         </div>
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;"> Simoctocog Alfa 250 UI</strong>
-                            <input type="number" class="form-control" id="simo_250" name="simo_250" style="font-size: 14px;" required>
+                            <input type="number" class="form-control" id="simo_250" name="simo_250" style="font-size: 14px;" >
                         </div>
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;"> Simoctocog Alfa 500 UI</strong>
-                            <input type="number" class="form-control" id="simo_500" name="simo_500" style="font-size: 14px;" required>
+                            <input type="number" class="form-control" id="simo_500" name="simo_500" style="font-size: 14px;" >
                         </div>
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;"> Simoctocog Alfa 1000 UI</strong>
-                            <input type="number" class="form-control" id="simo_1000" name="simo_1000" style="font-size: 14px;" required>
+                            <input type="number" class="form-control" id="simo_1000" name="simo_1000" style="font-size: 14px;" >
                         </div>
 
                     </div> <!-- es el div del row de recombinante -->
@@ -1500,22 +1500,22 @@
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Factor VIII 250 UI</strong>
-                            <input type="number" class="form-control" id="factorVIII_250" name="factorVIII_250"  style="font-size: 14px;" required>
+                            <input type="number" class="form-control" id="factorVIII_250" name="factorVIII_250"  style="font-size: 14px;" >
                         </div>
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Factor VIII 500 UI</strong>
-                            <input type="number" class="form-control" id="factorVIII_500" name="factorVIII_500"  style="font-size: 14px;" required>
+                            <input type="number" class="form-control" id="factorVIII_500" name="factorVIII_500"  style="font-size: 14px;" >
                         </div>
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Factor VIII + vW 500 UI</strong>
-                            <input type="number" class="form-control" id="factorVIIIvW_500" name="factorVIIIvW_500"  style="font-size: 14px;" required>
+                            <input type="number" class="form-control" id="factorVIIIvW_500" name="factorVIIIvW_500"  style="font-size: 14px;" >
                         </div>
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Factor VIII + vW 1000 UI</strong>
-                            <input type="number" class="form-control" id="factorVIIIvW_1000" name="factorVIIIvW_1000" style="font-size: 14px;" required>
+                            <input type="number" class="form-control" id="factorVIIIvW_1000" name="factorVIIIvW_1000" style="font-size: 14px;" >
                         </div>
 
                     </div> <!-- div del row de Plasmático-->
@@ -1528,22 +1528,22 @@
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Factor IX 500 UI</strong>
-                            <input type="number" class="form-control" id="factorIX_500" name="factorIX_500"  style="font-size: 14px;" required>
+                            <input type="number" class="form-control" id="factorIX_500" name="factorIX_500"  style="font-size: 14px;" >
                         </div>
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Factor IX 500 UI</strong>
-                            <input type="number" class="form-control" id="factorIX_500_2" name="factorIX_500_2"  style="font-size: 14px;" required>
+                            <input type="number" class="form-control" id="factorIX_500_2" name="factorIX_500_2"  style="font-size: 14px;" >
                         </div>
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Factor IX 600 UI</strong>
-                            <input type="number" class="form-control" id="factorIX_600" name="factorIX_600"  style="font-size: 14px;" required>
+                            <input type="number" class="form-control" id="factorIX_600" name="factorIX_600"  style="font-size: 14px;" >
                         </div>
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Factor IX 1000 UI</strong>
-                            <input type="number" class="form-control" id="factorIX_1000" name="factorIX_1000" style="font-size: 14px;" required>
+                            <input type="number" class="form-control" id="factorIX_1000" name="factorIX_1000" style="font-size: 14px;" >
                         </div>
 
                     </div> <!-- div del row de FIX-->
@@ -1555,7 +1555,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <strong style="font-size: 14px;">Emicizumab</strong>
-                            <select name="entrega" id="entrega" class="form-control" style="font-size: 14px;">
+                            <select name="entrega_Emi" id="entrega_Emi" class="form-control" style="font-size: 14px;">
                                 <option value="Sin registro">Seleccione...</option>
                                 <option value="30 MG">30 MG</option>
                                 <option value="60 MG">60 MG</option>
@@ -1573,17 +1573,17 @@
 
                         <div class="col-md-6">
                             <strong style="font-size: 14px;">F VW 500 UI</strong>
-                            <input type="number" class="form-control" id="fVW_500" name="fVW_500"  style="font-size: 14px;" required>
+                            <input type="number" class="form-control" id="fVW_500" name="fVW_500"  style="font-size: 14px;" >
                         </div>
 
                         <div class="col-md-6">
                             <strong style="font-size: 14px;">F VW 1000 UI</strong>
-                            <input type="number" class="form-control" id="fvw_100" name="fvw_100"  style="font-size: 14px;" required>
+                            <input type="number" class="form-control" id="fvw_100" name="fvw_100"  style="font-size: 14px;" >
                         </div>
 
                     </div> <!-- div del row de FIX-->
 
-        </form>
+        
         
 
 
@@ -1592,7 +1592,7 @@
       </div> <!-- <div class="modal-body">-->
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-success">Guardar</button>
+        <button type="submit" class="btn btn-success">Guardar</button>
       </div> <!--<div class="modal-footer">-->
     </div> <!-- <div class="modal-content">-->
   </div> <!--<div class="modal-dialog modal-xl">-->
