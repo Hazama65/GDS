@@ -129,6 +129,7 @@
                 $gota = $data['gota'];
                 $LES = $data['LES'];
                 $artritis_reumatoide = $data['artritis_reumatoide'];
+                $hipertension =$data['hipertension'];
                 $SC = $data['SC'];
                 $tipo_SC = $data['tipo_SC'];
                 $TGO = $data['TGO'];
@@ -149,7 +150,6 @@
                 $creatinina = $data['creatinina'];
                 $creatinina_cistatina = $data['creatinina_cistatina'];
                 $glucosa = $data['glucosa'];
-                $BH = $data['BH'];
                 $glucosilada = $data['glucosilada'];
                 $acido_urico = $data['acido_urico'];
                 $urea = $data['urea'];

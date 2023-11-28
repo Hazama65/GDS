@@ -202,6 +202,7 @@
         $Gota                  = $_POST['Gota'];
         $LupusSelect           = $_POST['LupusSelect'];
         $ArtritisSelect        = $_POST['ArtritisSelect'];
+        $hipertension          = $_POST['HipertensioncomorSelect'];
         $CushingSelect         = $_POST['CushingSelect'];
         $SindromeSelect        = $_POST['SindromeSelect'];
 
@@ -217,6 +218,7 @@
             gota = '$Gota',
             LES = '$LupusSelect',
             artritis_reumatoide = '$ArtritisSelect',
+            hipertension = '$hipertension',
             SC = '$CushingSelect',
             tipo_SC = '$SindromeSelect'
         WHERE id_paciente = '$id_paciente';
@@ -242,7 +244,6 @@
         $creatinina          = $_POST['creatinina'];
         $cistatina           = $_POST['cistatina'];
         $id_glucosa          = $_POST['id_glucosa'];
-        $id_BH               = $_POST['id_BH'];
         $id_glucosilada      = $_POST['id_glucosilada'];
         $id_urico            = $_POST['id_urico'];
         $id_urea             = $_POST['id_urea'];
@@ -272,7 +273,6 @@
             creatinina = '$creatinina',
             creatinina_cistatina = '$cistatina',
             glucosa = '$id_glucosa',
-            BH = '$id_BH',
             glucosilada = '$id_glucosilada',
             acido_urico = '$id_urico',
             urea = $id_urea,

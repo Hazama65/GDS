@@ -119,23 +119,24 @@
         $dataDislipidemia = $connectionDB->ShotSimple($queryDislipidemia);
 
 
-        $HepaticaSelect        = $_POST['HepaticaSelect'];
-        $CirrosisSelect        = $_POST['CirrosisSelect'];
-        $DislipidemiaSelect    = $_POST['DislipidemiaSelect'];
-        $DistiroidismoSelect   = $_POST['DistiroidismoSelect'];
-        $CancerSelect          = $_POST['CancerSelect'];
-        $Insfuciencia_Cardiaca = $_POST['Insfuciencia_Cardiaca'];
-        $Disritmias_cardiacas  = $_POST['Disritmias_cardiacas'];
-        $OsteoporosisSelect    = $_POST['OsteoporosisSelect'];
-        $Gota                  = $_POST['Gota'];
-        $LupusSelect           = $_POST['LupusSelect'];
-        $ArtritisSelect        = $_POST['ArtritisSelect'];
-        $CushingSelect         = $_POST['CushingSelect'];
-        $SindromeSelect        = $_POST['SindromeSelect'];
+        $HepaticaSelect          = $_POST['HepaticaSelect'];
+        $CirrosisSelect          = $_POST['CirrosisSelect'];
+        $DislipidemiaSelect      = $_POST['DislipidemiaSelect'];
+        $DistiroidismoSelect     = $_POST['DistiroidismoSelect'];
+        $CancerSelect            = $_POST['CancerSelect'];
+        $Insfuciencia_Cardiaca   = $_POST['Insfuciencia_Cardiaca'];
+        $Disritmias_cardiacas    = $_POST['Disritmias_cardiacas'];
+        $OsteoporosisSelect      = $_POST['OsteoporosisSelect'];
+        $Gota                    = $_POST['Gota'];
+        $LupusSelect             = $_POST['LupusSelect'];
+        $ArtritisSelect          = $_POST['ArtritisSelect'];
+        $HipertensioncomorSelect = $_POST['HipertensioncomorSelect'];
+        $CushingSelect           = $_POST['CushingSelect'];
+        $SindromeSelect          = $_POST['SindromeSelect'];
 
         $queryComorbilidades = "INSERT INTO comorbilidades VALUES ('$HepaticaSelect','$CirrosisSelect','$DislipidemiaSelect',
         '$DistiroidismoSelect','$CancerSelect','$Insfuciencia_Cardiaca','$Disritmias_cardiacas','$OsteoporosisSelect',
-        '$Gota','$LupusSelect','$ArtritisSelect','$CushingSelect','$SindromeSelect','$ultimoId')";
+        '$Gota','$LupusSelect','$ArtritisSelect','$HipertensioncomorSelect','$CushingSelect','$SindromeSelect','$ultimoId')";
         $dataComorbilidades = $connectionDB->ShotSimple($queryComorbilidades);
 
 
@@ -157,7 +158,6 @@
         $creatinina          = $_POST['creatinina'];
         $cistatina           = $_POST['cistatina'];
         $id_glucosa          = $_POST['id_glucosa'];
-        $id_BH               = $_POST['id_BH'];
         $id_glucosilada      = $_POST['id_glucosilada'];
         $id_urico            = $_POST['id_urico'];
         $id_urea             = $_POST['id_urea'];
@@ -170,7 +170,7 @@
 
         $queryLaboratorio = "INSERT INTO laboratorio VALUES ('$id_TGO','$id_TGP','$id_FA','$id_GGT','$id_DHL',
         '$id_proteinastotales','$id_Albumina','$id_Globulinas','$id_relacion','$id_BT','$id_BD','$id_BI','$id_HB',
-        '$id_VSG','$id_OHD','$creatinina','$cistatina','$id_glucosa','$id_BH','$id_glucosilada','$id_urico','$id_urea',
+        '$id_VSG','$id_OHD','$creatinina','$cistatina','$id_glucosa','$id_glucosilada','$id_urico','$id_urea',
         '$id_creatinina','$id_colesterol','$id_trigliceridos','$id_LDL','$id_HDL','$id_HBG','$ultimoId')";
         $dataLaboratorio = $connectionDB->ShotSimple($queryLaboratorio);
 

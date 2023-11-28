@@ -914,8 +914,8 @@
                 <div class="col-md-6" id="com_hipertension">
                     <strong style="font-size: 14px">Hipertensión Arterial</strong>
                     <select name="HipertensioncomorSelect" id="HipertensioncomorSelect" class="form-control" style="font-size: 14px">
-                    <option value="Negado">Negado</option>
-                    <option value="Si">Si</option>
+                    <option value="Negado"<?php if ($hipertension == 'Negado') echo 'selected'; ?>>Negado</option>
+                    <option value="Si"<?php if ($hipertension == 'Si') echo 'selected'; ?>>Si</option>
                 </select>
                 </div>
 
