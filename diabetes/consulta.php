@@ -399,7 +399,7 @@
 
             <tr>
                 <td class="estilo-celda">Hipertension Arterial</td>
-                <td></td>
+                <td><?php echo $hipertension; ?></td>
             </tr>
 
             <tr>
