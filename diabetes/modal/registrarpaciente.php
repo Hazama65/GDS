@@ -1,13 +1,14 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header" style="background-color:rgb(80, 177, 210)">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">
-            <i class="bi bi-pass-fill"></i>Registro Pacientes</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:rgb(80, 177, 210)">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
 
+                <i class="bi bi-pass-fill"></i>Registro Pacientes</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+    
+    <div class="modal-body">
         <form id="diabetes_form"  method="POST" autocomplete="off" >
 
             <div style="background-color:rgb(80, 177, 210);
@@ -181,7 +182,7 @@
                         style="text-align: center;
                         background-color:rgb(80, 177, 210) ;
                         color: aliceblue;
-                        margin-top:5px;
+                        margin-top:15px;
                         font-size: 14px;">
                         ANTECEDENTES HEREDOFAMILIARES</h5>
                     </div>
@@ -743,7 +744,7 @@
                         style="text-align: center;
                         background-color:rgb(80, 177, 210) ;
                         color: aliceblue;
-                        margin-top:5px;
+                        margin-top:15px;
                         font-size: 14px;">
                         COMORBILIDADES</h5>
                     </div>
@@ -894,7 +895,7 @@
                         style="text-align: center;
                         background-color:rgb(80, 177, 210) ;
                         color: aliceblue;
-                        margin-top:5px;
+                        margin-top:15px;
                         font-size: 14px;">
                         LABORATORIOS</h5>
                     </div>
@@ -1055,7 +1056,7 @@
                         style="text-align: center;
                         background-color:rgb(80, 177, 210) ;
                         color: aliceblue;
-                        margin-top:5px;
+                        margin-top:15px;
                         font-size: 14px;">
                         COMPLICACIONES</h5>
                     </div>
@@ -1292,7 +1293,7 @@
                         style="text-align: center;
                         background-color:rgb(80, 177, 210);
                         color: aliceblue;
-                        margin-top:5px;
+                        margin-top:15px;
                         font-size: 14px;">
                         TRATAMIENTO</h5>
                     </div>
@@ -1591,6 +1592,7 @@
 
 </div> <!--=========== DIV DEL ROW DE INSULINAS================-->
 
+<!--===========    Hipolipemiantes    ================-->
 
 <div class="col-md-12" id="id_tx3">
                 <strong style="font-size: 14px">Hipolipemiantes</strong>
@@ -1601,8 +1603,11 @@
     </div>
         <div class="container" id="tx_Hipolipemiantes" style="display: none" >
             <div class ="row">
+
 <!--===============Si con Tratamiento Hipolipemiantes=======================-->
-<!--===========    Hipolipemiantes    ================-->
+
+
+<!--===========    Estatinas   ================-->
         <div class="col-md-3" id="tx_Estatinas" >
                         <span style="font-size: 14px">Estatinas</span>
                         <select name="EstatinasSelect" id="EstatinasSelect" class="form-control estadoSelect" style="font-size: 14px">
@@ -1615,6 +1620,7 @@
                         </select>
                 </div>
 
+<!--===========    Fibratos   ================-->
                 <div class="col-md-3" id="tx_Fibratos" >
                         <span style="font-size: 14px">Fibratos</span>
                         <select name="FibratosSelect" id="FibratosSelect" class="form-control estadoSelect" style="font-size: 14px">
@@ -1625,6 +1631,7 @@
                         </select>
                 </div>
 
+<!--===========    Omega   ================-->
                 <div class="col-md-3" id="tx_Omega">
                         <span style="font-size: 14px">Omega 3</span>
                         <select name="OmegaSelect" id="OmegaSelect" class="form-control estadoSelect" style="font-size: 14px">
@@ -1633,6 +1640,7 @@
                         </select>
                 </div>
 
+<!--===========    Inhibidores de la Absorción   ================-->
                 <div class="col-md-3" id="tx_absorcion">
                         <span style="font-size: 14px">Inhibidores de la Absorción</span>
                         <select name="Inhibidores_AbsorcionSelect" id="Inhibidores_AbsorcionSelect" class="form-control estadoSelect" style="font-size: 14px">
@@ -1790,7 +1798,7 @@
                     
             <div class ="row">
                 
-            <!--===============Si con Antihipertensivos=======================-->
+            <!--===============Si con OTROS=======================-->
 
 <!--===========    ASA    ================-->
         <div class="col-md-6" id="tx_ASA" >
@@ -1826,7 +1834,7 @@
 <!--===============Si -	Procineticos =======================-->
 
                 <div class="col-md-6" id="tx_Procineticos" >
-                        <sapi_windows_cp_is_utf8 style="font-size: 14px">Procineticos</sapi_windows_cp_is_utf8>
+                        <span style="font-size: 14px">Procineticos</span>
                         <select name="ProcineticosSelect" id="ProcineticosSelect" class="form-control estadoSelect" style="font-size: 14px">
                             <option value="Negado">Negado</option>
                             <option value="Metocloprmida">Metocloprmida</option>
@@ -1847,12 +1855,13 @@
                 <input type="number" class="form-control" name="Farmacos_utilizados" id="Farmacos_utilizados" style="font-size: 13px;">
             </div> <br>
 
+<!--===========Medidas Generales================-->
             <div class="form-header">
                 <h5 class="form-title"
                 style="text-align: center;
                 background-color:rgb(80, 177, 210,0.5);
                 color: aliceblue;
-                margin-top:5px;
+                margin-top:15px;
                 font-size: 14px;">
                 Medidas Generales</h5>
             </div>
@@ -1920,10 +1929,8 @@
   </div>
 </div>
 
-<script src="js/scriptmodal.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
 <script src="js/conteo.js"></script>
 
 <script>

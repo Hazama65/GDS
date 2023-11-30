@@ -1,249 +1,46 @@
+function calculaIMC1() {
+    const tallaInput = document.getElementById('talla_seg');
+    const pesoInput = document.getElementById('peso_seg');
+    const imcInput = document.getElementById('imc_seg');
+    const descripcionInput = document.getElementById('imcdescripcion_seg');
+    
+    const talla = parseFloat(tallaInput.value.replace(',', '.'));
+    const peso = parseFloat(pesoInput.value);
+    
+    // Verifica si los valores de talla y peso son válidos
+    if (isNaN(talla) || isNaN(peso) || talla <= 0 || peso <= 0) {
+        // Muestra un mensaje de error
+        alert('Por favor, ingrese valores válidos para la talla y el peso.');
+        return;
+    }
 
-//cambiar el CURP a mayusculas
-const curpInput = document.getElementById('curp');
+    const imc = peso / (talla * talla);
+    const descripcion = obtenerDescripcionIMC(imc);
 
-curpInput.addEventListener('blur', function() {
-this.value = this.value.toUpperCase();
-});
-
-const nombreInput = document.getElementById('nombre');
-
-nombreInput.addEventListener('blur', function() {
-this.value = this.value.toUpperCase();
-});
-function curp2date() {
-// Obtener el valor del CURP ingresado
-var curp = document.getElementById("curp").value;
-
-// Extraer los primeros 6 dígitos del CURP que representan la fecha de nacimiento
-var fechaNacimiento = curp.substr(4, 6);
-
-// Obtener los dígitos que representan el año en la fecha de nacimiento
-var yearDigits = fechaNacimiento.substr(0, 2);
-
-// Calcular el año completo de nacimiento tomando en cuenta el siglo
-var year = parseInt(yearDigits);
-if (yearDigits >= 0 && yearDigits <= 21) {
-year = 2000 + year;
-} else {
-year = 1900 + year;
+    imcInput.value = imc.toFixed(2);
+    descripcionInput.value = descripcion;
 }
-
-// Obtener el mes y el día de la fecha de nacimiento
-var month = fechaNacimiento.substr(2, 2);
-var day = fechaNacimiento.substr(4, 2);
-
-// Formatear la fecha de nacimiento completa
-var fechaCompleta = year + "-" + month + "-" + day;
-
-// Formatear la fecha de nacimiento para mostrarla en el campo correspondiente
-document.getElementById("fecha").value = fechaCompleta;
-
-// Calcular la edad de manera precisa
-var fechaActual = new Date();
-var fechaNac = new Date(year, month - 1, day); // Meses en Date son 0-indexados
-var edad = fechaActual.getFullYear() - fechaNac.getFullYear();
-
-// Ajustar la edad si la fecha de nacimiento aún no ha ocurrido este año
-if (
-fechaActual.getMonth() < fechaNac.getMonth() ||
-(fechaActual.getMonth() === fechaNac.getMonth() && fechaActual.getDate() < fechaNac.getDate())
-) {
-edad--;
-}
-document.getElementById("edad").value = edad;
-
-// Determinar el sexo y mostrarlo en el campo correspondiente
-
-var sexo = curp.charAt(10);
-if (sexo === "H") {
-document.getElementById("sexo").value = "Hombre";
-} else if (sexo === "M") {
-document.getElementById("sexo").value = "Mujer";
-}
-}
-function calculaIMC() {
-const tallaInput = document.getElementById('talla');
-const pesoInput = document.getElementById('peso');
-const imcInput = document.getElementById('imc');
-const descripcionInput = document.getElementById('imcdescripcion');
-
-const talla = parseFloat(tallaInput.value.replace(',', '.'));
-const peso = parseFloat(pesoInput.value);
-
-if (talla && peso) {
-const imc = peso / (talla * talla);
-const descripcion = obtenerDescripcionIMC(imc);
-
-imcInput.value = imc.toFixed(2);
-descripcionInput.value = descripcion;
-} else {
-imcInput.value = '';
-descripcionInput.value = '';
-}
-}
-
 function obtenerDescripcionIMC(imc) {
-if (imc < 18.5) {
-return 'Bajo peso';
-} else if (imc >= 18.5 && imc < 25) {
-return 'Peso normal';
-} else if (imc >= 25 && imc < 30) {
-return 'Sobrepeso';
-} else if (imc >= 30 && imc < 35) {
-return 'Obesidad grado I';
-} else if (imc >= 35 && imc < 40) {
-return 'Obesidad grado II';
-} else {
-return 'Obesidad grado III';
-}
-}
-
-
-                                // Funcion de SOCIECONOMICO   
-
-        function mostrarCampos() {
-        var derechohabiencia = document.getElementById("derechohabiencia").value;
-        var estudioSocioeconomicoField = document.getElementById("estudio_socioeconomico_field");
-                                
-        if (derechohabiencia === "Si") {
-            estudioSocioeconomicoField.style.display = "block";
-        } else {
-            estudioSocioeconomicoField.style.display = "none";
-            }
-        }
-                                    // Funcion de SOCIECONOMICO PARA DESPLEGAR                 
-        function mostrarNivel() {
-        var estudioSocioeconomico = document.getElementById("estudio_socioeconomico").value;
-        var nivelField = document.getElementById("nivel_field");
-
-        if (estudioSocioeconomico === "Si") {
-            nivelField.style.display = "block";
-        } else {
-            nivelField.style.display = "none";
-        }
-    }              
-
-     // Funcion PARA DESPLEGAR  DIABETES MELLITUS
-
-document.addEventListener("DOMContentLoaded", function() {
-    const diabetesSelect = document.getElementById("diabetesSelect");
-    const heredoFamiliaContainer = document.getElementById("heredo_familia");
-
-    diabetesSelect.addEventListener("change", function() {
-        if (diabetesSelect.value === "Si") {
-            heredoFamiliaContainer.style.display = "block";
-        } else {
-            heredoFamiliaContainer.style.display = "none";
-        }
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    const HASSelect = document.getElementById("hipertensionSelect");
-    const heredoFamiliaContainer = document.getElementById("HAS_familia");
-
-    HASSelect.addEventListener("change", function() {
-        if (HASSelect.value === "Si") {
-            heredoFamiliaContainer.style.display = "block";
-        } else {
-            heredoFamiliaContainer.style.display = "none";
-        }
-    });
-});
-
-     // Funcion PARA DESPLEGAR  ENFEREMDADES CARDIOVASCULARES 
-
-    function mostrarOcultarSecciones() {
-        var seleccion = document.getElementById("EVCSelect").value;
-        if (seleccion === "Si") {
-            document.getElementById("ah_ecv").style.display = "block";
-            document.getElementById("ah_ci").style.display = "block";
-        } else {
-            document.getElementById("ah_ecv").style.display = "none";
-            document.getElementById("ah_ci").style.display = "none";
-        }
-    }
- // Funcion PARA DESPLEGAR  ENFEREMDADES CARDIOVASCULARES HEREDOFAMILIARES DE ECV 
-    
-    document.addEventListener("DOMContentLoaded", function() {
-        const ECVSelect = document.getElementById("ECVSelect");
-        const heredoFamiliaContainer = document.getElementById("ECV_familia");
-    
-        ECVSelect.addEventListener("change", function() {
-            if (ECVSelect.value === "Si") {
-                heredoFamiliaContainer.style.display = "block";
-            } else {
-                heredoFamiliaContainer.style.display = "none";
-            }
-        });
-    });
- // Funcion PARA DESPLEGAR  ENFEREMDADES CARDIOVASCULARES HEREDOFAMILIARES CARDIOPATIAS ISQUEMICAS 
-    
-    document.addEventListener("DOMContentLoaded", function() {
-    const CardiopatiaSelect = document.getElementById("CardiopatiaSelect");
-    const heredoFamiliaContainer = document.getElementById("CI_familia");
-
-    CardiopatiaSelect.addEventListener("change", function() {
-        if (CardiopatiaSelect.value === "Si") {
-            heredoFamiliaContainer.style.display = "block";
-        } else {
-            heredoFamiliaContainer.style.display = "none";
-        }
-    });
-});
-
-  // Funcion PARA DESPLEGAR  DISLIPIDEMIAS
-
-  function mostrarOcultarSeccionesdislipidemias() {
-    var seleccion = document.getElementById("dislipidemiaSelect").value;
-    var trigliceridemia = document.getElementById("ah_trigliceridemia");
-    var hipercolesterolemia = document.getElementById("ah_Hipercolesterolemia");
-
-    if (seleccion === "Si") {
-        trigliceridemia.style.display = "block";
-        hipercolesterolemia.style.display = "block";
+    if (imc < 18.5) {
+    return 'Bajo peso';
+    } else if (imc >= 18.5 && imc < 25) {
+    return 'Peso normal';
+    } else if (imc >= 25 && imc < 30) {
+    return 'Sobrepeso';
+    } else if (imc >= 30 && imc < 35) {
+    return 'Obesidad grado I';
+    } else if (imc >= 35 && imc < 40) {
+    return 'Obesidad grado II';
     } else {
-        trigliceridemia.style.display = "none";
-        hipercolesterolemia.style.display = "none";
+    return 'Obesidad grado III';
     }
-}
+    }
 
-// Funcion PARA DESPLEGAR  DISLIPIDEMIAS HEREDOFAMILIARES DE HIPERTRIGLICERIDEMIA 
-    
-document.addEventListener("DOMContentLoaded", function() {
-    const trigliceridemiaSelect = document.getElementById("trigliceridemiaSelect");
-    const heredoFamiliaContainer = document.getElementById("trigliceridemia_familia");
-
-    trigliceridemiaSelect.addEventListener("change", function() {
-        if (trigliceridemiaSelect.value === "Si") {
-            heredoFamiliaContainer.style.display = "block";
-        } else {
-            heredoFamiliaContainer.style.display = "none";
-        }
-    });
-});
-
-// Funcion PARA DESPLEGAR  DISLIPIDEMIAS HEREDOFAMILIARES DE Hipercolesterolemia 
-    
-document.addEventListener("DOMContentLoaded", function() {
-    const HipercolesterolemiaSelect = document.getElementById("HipercolesterolemiaSelect");
-    const heredoFamiliaContainer = document.getElementById("Hipercolesterolemia_familia");
-
-    HipercolesterolemiaSelect.addEventListener("change", function() {
-        if (HipercolesterolemiaSelect.value === "Si") {
-            heredoFamiliaContainer.style.display = "block";
-        } else {
-            heredoFamiliaContainer.style.display = "none";
-        }
-    });
-});
-
-// COMORBILIDADES " Enfermedad hepática grasa no  "
+    // COMORBILIDADES " Enfermedad hepática grasa no  "
 
 document.addEventListener("DOMContentLoaded", function() {
-    const HepaticaSelect = document.getElementById("HepaticaSelect");
-    const heredoFamiliaContainer = document.getElementById("com_Child");
+    const HepaticaSelect = document.getElementById("HepaticaSelect_seg");
+    const heredoFamiliaContainer = document.getElementById("seg_Child");
 
     HepaticaSelect.addEventListener("change", function() {
         if (HepaticaSelect.value === "Cirrosis") {
@@ -257,8 +54,8 @@ document.addEventListener("DOMContentLoaded", function() {
 // COMORBILIDADES SINDROME DE CUSHING 
 
 document.addEventListener("DOMContentLoaded", function() {
-    const CushingSelect = document.getElementById("CushingSelect");
-    const heredoFamiliaContainer = document.getElementById("com_sindrome");
+    const CushingSelect = document.getElementById("CushingSelect_seg");
+    const heredoFamiliaContainer = document.getElementById("seg_sindrome");
 
     CushingSelect.addEventListener("change", function() {
         if (CushingSelect.value === "Si") {
@@ -272,12 +69,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // AL INTRODUCIR VALOR IGUAL O MENOR A 11 SE HABILITE EL CAMPO DE HB GLUCOSILADA
 
-document.getElementById("id_HB").addEventListener("input", function() {
+document.getElementById("id_HB_seg").addEventListener("input", function() {
     var valorBH = parseFloat(this.value);
     if (valorBH <= 11) {
-        document.getElementById("id_glucosilada").disabled = true;
+        document.getElementById("id_glucosilada_seg").disabled = true;
     } else {
-        document.getElementById("id_glucosilada").disabled = false;
+        document.getElementById("id_glucosilada_seg").disabled = false;
     }
 });
 
@@ -285,8 +82,8 @@ document.getElementById("id_HB").addEventListener("input", function() {
 
 document.addEventListener("DOMContentLoaded", function () {
     // Obtiene el elemento select y el div que se debe mostrar/ocultar
-    var selectElement = document.getElementById("neuropatiaSelect");
-    var divElement = document.getElementById("neuropatia");
+    var selectElement = document.getElementById("neuropatiaSelect_seg");
+    var divElement = document.getElementById("neuropatia_seg");
 
     // Agrega un evento de cambio al elemento select
     selectElement.addEventListener("change", function () {
@@ -302,12 +99,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// COMPLICACIONES AMPUTACIONES
+                        // COMPLICACIONES AMPUTACIONES
 
 document.addEventListener("DOMContentLoaded", function () {
     // Obtiene el elemento select y el div que se debe mostrar/ocultar
-    var selectElement = document.getElementById("AmputacionesSelect");
-    var divElement = document.getElementById("amputaciones");
+    var selectElement = document.getElementById("AmputacionesSelect_seg");
+    var divElement = document.getElementById("amputaciones_seg");
 
     // Agrega un evento de cambio al elemento select
     selectElement.addEventListener("change", function () {
@@ -326,9 +123,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     // Obtiene el elemento select y los divs que se deben mostrar/ocultar
-    var selectElement = document.getElementById("amputaciones_dedos");
-    var divMano = document.getElementById("dedos_Mano");
-    var divPies = document.getElementById("dedos_Pies");
+    var selectElement = document.getElementById("amputaciones_dedos_seg");
+    var divMano = document.getElementById("dedos_Mano_seg");
+    var divPies = document.getElementById("dedos_Pies_seg");
 
     // Agrega un evento de cambio al elemento select
     selectElement.addEventListener("change", function () {
@@ -350,8 +147,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     // Obtiene el elemento select y el div que se debe mostrar/ocultar
-    var selectElement = document.getElementById("amputaciones_transmetatarsiana");
-    var divElement = document.getElementById("Transmetatarsiana_lateralidad");
+    var selectElement = document.getElementById("amputaciones_transmetatarsiana_seg");
+    var divElement = document.getElementById("Transmetatarsiana_lateralidad_seg");
 
     // Agrega un evento de cambio al elemento select
     selectElement.addEventListener("change", function () {
@@ -370,8 +167,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     // Obtiene el elemento select y el div que se debe mostrar/ocultar
-    var selectElement = document.getElementById("amputaciones_infracondilea");
-    var divElement = document.getElementById("Infracondílea_lateralidad");
+    var selectElement = document.getElementById("amputaciones_infracondilea_seg");
+    var divElement = document.getElementById("Infracondílea_lateralidad_seg");
 
     // Agrega un evento de cambio al elemento select
     selectElement.addEventListener("change", function () {
@@ -390,8 +187,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     // Obtiene el elemento select y el div que se debe mostrar/ocultar
-    var selectElement = document.getElementById("amputaciones_Supracondilea");
-    var divElement = document.getElementById("Supracondilea_lateralidad");
+    var selectElement = document.getElementById("amputaciones_Supracondilea_seg");
+    var divElement = document.getElementById("Supracondilea_lateralidad_seg");
 
     // Agrega un evento de cambio al elemento select
     selectElement.addEventListener("change", function () {
@@ -406,16 +203,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-
-
-
 // Selccion de Tratamiento con Hipoglucemiantes 
 
 document.addEventListener("DOMContentLoaded", function () {
     // Obtiene el elemento select y el div que se debe mostrar/ocultar
-    var selectElement = document.getElementById("HipoglucemiantesSelect");
-    var divElement = document.getElementById("tx_Hipoglucemiantes");
+    var selectElement = document.getElementById("HipoglucemiantesSelect_seg");
+    var divElement = document.getElementById("tx_Hipoglucemiantes_seg");
 
     // Agrega un evento de cambio al elemento select
     selectElement.addEventListener("change", function () {
@@ -434,8 +227,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     // Obtiene el elemento select y el div que se debe mostrar/ocultar
-    var selectElement = document.getElementById("InsulinasSelect");
-    var divElement = document.getElementById("tx_Insulinas");
+    var selectElement = document.getElementById("InsulinasSelect_Seg");
+    var divElement = document.getElementById("tx_Insulinas_Seg");
 
     // Agrega un evento de cambio al elemento select
     selectElement.addEventListener("change", function () {
@@ -453,8 +246,8 @@ document.addEventListener("DOMContentLoaded", function () {
 // Para mostrar las DOsis Diarias en medicamento NPH
 
 document.addEventListener("DOMContentLoaded", function() {
-    const NPHSelect = document.getElementById("NPHSelect");
-    const heredoFamiliaContainer = document.getElementById("dosis_nph");
+    const NPHSelect = document.getElementById("NPHSelect_Seg");
+    const heredoFamiliaContainer = document.getElementById("dosis_nph_Seg");
 
     NPHSelect.addEventListener("change", function() {
         if (NPHSelect.value === "Si") {
@@ -468,8 +261,8 @@ document.addEventListener("DOMContentLoaded", function() {
 // Para mostrar las DOsis Diarias en medicamento Rapida Regular
 
 document.addEventListener("DOMContentLoaded", function() {
-    const RapidaRegularSelect = document.getElementById("RapidaRegularSelect");
-    const heredoFamiliaContainer = document.getElementById("dosis_rapidaregular");
+    const RapidaRegularSelect = document.getElementById("RapidaRegularSelect_Seg");
+    const heredoFamiliaContainer = document.getElementById("dosis_rapidaregular_Seg");
 
     RapidaRegularSelect.addEventListener("change", function() {
         if (RapidaRegularSelect.value === "Si") {
@@ -483,8 +276,8 @@ document.addEventListener("DOMContentLoaded", function() {
 // Para mostrar las DOsis Diarias en medicamento GLARGINA
 
 document.addEventListener("DOMContentLoaded", function() {
-    const GlarginaSelect = document.getElementById("GlarginaSelect");
-    const heredoFamiliaContainer = document.getElementById("dosis_Glargina");
+    const GlarginaSelect = document.getElementById("GlarginaSelect_Seg");
+    const heredoFamiliaContainer = document.getElementById("dosis_Glargina_Seg");
 
     GlarginaSelect.addEventListener("change", function() {
         if (GlarginaSelect.value === "Si") {
@@ -498,8 +291,8 @@ document.addEventListener("DOMContentLoaded", function() {
 // Para mostrar las DOsis Diarias en medicamento GLARGINA 300
 
 document.addEventListener("DOMContentLoaded", function() {
-    const Glar300Select = document.getElementById("Glar300Select");
-    const heredoFamiliaContainer = document.getElementById("dosis_Glar300");
+    const Glar300Select = document.getElementById("Glar300Select_Seg");
+    const heredoFamiliaContainer = document.getElementById("dosis_Glar300_Seg");
 
     Glar300Select.addEventListener("change", function() {
         if (Glar300Select.value === "Si") {
@@ -513,8 +306,8 @@ document.addEventListener("DOMContentLoaded", function() {
 // Para mostrar las DOsis Diarias en medicamento DETEMIR
 
 document.addEventListener("DOMContentLoaded", function() {
-    const DetemirSelect = document.getElementById("DetemirSelect");
-    const heredoFamiliaContainer = document.getElementById("dosis_Detemir");
+    const DetemirSelect = document.getElementById("DetemirSelect_Seg");
+    const heredoFamiliaContainer = document.getElementById("dosis_Detemir_Seg");
 
     DetemirSelect.addEventListener("change", function() {
         if (DetemirSelect.value === "Si") {
@@ -528,8 +321,8 @@ document.addEventListener("DOMContentLoaded", function() {
 // Para mostrar las DOsis Diarias en medicamento DEGLUDEC
 
 document.addEventListener("DOMContentLoaded", function() {
-    const DegludecrSelect = document.getElementById("DegludecrSelect");
-    const heredoFamiliaContainer = document.getElementById("dosis_Degludec");
+    const DegludecrSelect = document.getElementById("DegludecrSelect_Seg");
+    const heredoFamiliaContainer = document.getElementById("dosis_Degludec_Seg");
 
     DegludecrSelect.addEventListener("change", function() {
         if (DegludecrSelect.value === "Si") {
@@ -543,8 +336,8 @@ document.addEventListener("DOMContentLoaded", function() {
 // Para mostrar las DOsis Diarias en medicamento LISPRO
 
 document.addEventListener("DOMContentLoaded", function() {
-    const LisproSelect = document.getElementById("LisproSelect");
-    const heredoFamiliaContainer = document.getElementById("dosis_Lispro");
+    const LisproSelect = document.getElementById("LisproSelect_Seg");
+    const heredoFamiliaContainer = document.getElementById("dosis_Lispro_Seg");
 
     LisproSelect.addEventListener("change", function() {
         if (LisproSelect.value === "Si") {
@@ -559,8 +352,8 @@ document.addEventListener("DOMContentLoaded", function() {
 // Para mostrar las DOsis Diarias en medicamento LISPRO
 
 document.addEventListener("DOMContentLoaded", function() {
-    const AspartSelect = document.getElementById("AspartSelect");
-    const heredoFamiliaContainer = document.getElementById("dosis_Aspart");
+    const AspartSelect = document.getElementById("AspartSelect_Seg");
+    const heredoFamiliaContainer = document.getElementById("dosis_Aspart_Seg");
 
     AspartSelect.addEventListener("change", function() {
         if (AspartSelect.value === "Si") {
@@ -575,8 +368,8 @@ document.addEventListener("DOMContentLoaded", function() {
 // Para mostrar las DOsis Diarias en medicamento Glulisina 
 
 document.addEventListener("DOMContentLoaded", function() {
-    const GlulisinaSelect = document.getElementById("GlulisinaSelect");
-    const heredoFamiliaContainer = document.getElementById("dosis_Glulisina");
+    const GlulisinaSelect = document.getElementById("GlulisinaSelect_Seg");
+    const heredoFamiliaContainer = document.getElementById("dosis_Glulisina_Seg");
 
     GlulisinaSelect.addEventListener("change", function() {
         if (GlulisinaSelect.value === "Si") {
@@ -590,8 +383,8 @@ document.addEventListener("DOMContentLoaded", function() {
 // Para mostrar las DOsis Diarias en medicamento NPH / REGULAR
 
 document.addEventListener("DOMContentLoaded", function() {
-    const NPHRegularSelect = document.getElementById("NPHRegularSelect");
-    const heredoFamiliaContainer = document.getElementById("dosis_nphRegular");
+    const NPHRegularSelect = document.getElementById("NPHRegularSelect_Seg");
+    const heredoFamiliaContainer = document.getElementById("dosis_nphRegular_Seg");
 
     NPHRegularSelect.addEventListener("change", function() {
         if (NPHRegularSelect.value === "Si") {
@@ -605,8 +398,8 @@ document.addEventListener("DOMContentLoaded", function() {
 // Para mostrar las DOsis Diarias en medicamento Lispro protamina/Lispro
 
 document.addEventListener("DOMContentLoaded", function() {
-    const ProtaminaSelect = document.getElementById("ProtaminaSelect");
-    const heredoFamiliaContainer = document.getElementById("dosis_Protamina");
+    const ProtaminaSelect = document.getElementById("ProtaminaSelect_Seg");
+    const heredoFamiliaContainer = document.getElementById("dosis_Protamina_Seg");
 
     ProtaminaSelect.addEventListener("change", function() {
         if (ProtaminaSelect.value === "Si") {
@@ -621,8 +414,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("DOMContentLoaded", function () {
     // Obtiene el elemento select y el div que se debe mostrar/ocultar
-    var selectElement = document.getElementById("HipolipemiantesSelect");
-    var divElement = document.getElementById("tx_Hipolipemiantes");
+    var selectElement = document.getElementById("HipolipemiantesSelect_seg");
+    var divElement = document.getElementById("tx_Hipolipemiantes_seg");
 
     // Agrega un evento de cambio al elemento select
     selectElement.addEventListener("change", function () {
@@ -641,8 +434,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     // Obtiene el elemento select y el div que se debe mostrar/ocultar
-    var selectElement = document.getElementById("AntihipertensivosSelect");
-    var divElement = document.getElementById("tx_Antihipertensivos");
+    var selectElement = document.getElementById("AntihipertensivosSelect_seg");
+    var divElement = document.getElementById("tx_Antihipertensivos_seg");
 
     // Agrega un evento de cambio al elemento select
     selectElement.addEventListener("change", function () {
@@ -661,8 +454,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     // Obtiene el elemento select y el div que se debe mostrar/ocultar
-    var selectElement = document.getElementById("OtrosSelect");
-    var divElement = document.getElementById("tx_Otros");
+    var selectElement = document.getElementById("OtrosSelect_seg");
+    var divElement = document.getElementById("tx_Otros_seg");
 
     // Agrega un evento de cambio al elemento select
     selectElement.addEventListener("change", function () {
@@ -681,8 +474,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     // Obtiene el elemento select y el div que se debe mostrar/ocultar
-    var selectElement = document.getElementById("EjercicioSelect");
-    var divElement = document.getElementById("tx_ejercicio");
+    var selectElement = document.getElementById("EjercicioSelect_seg");
+    var divElement = document.getElementById("tx_ejercicio_seg");
 
     // Agrega un evento de cambio al elemento select
     selectElement.addEventListener("change", function () {
@@ -699,8 +492,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // CAMPOS DE APEGO VECES DIA SEMANA SE INTRODUZCA EL TIPO DE APEGO Y CAMBIE DE COLOR 
 document.addEventListener('DOMContentLoaded', function() {
-    const vecesSemanaInput = document.getElementById('id_vecestiempo');
-    const apegoVecesInput = document.getElementById('id_apegotiempo');
+    const vecesSemanaInput = document.getElementById('id_vecestiempo_seg');
+    const apegoVecesInput = document.getElementById('id_apegotiempo_seg');
 
     vecesSemanaInput.addEventListener('input', function() {
         const vecesSemanaValue = parseInt(vecesSemanaInput.value, 10);
@@ -723,8 +516,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // CAMPOS DE APEGO TIEMPO A LA SEMANA  SE INTRODUZCA EL TIPO DE APEGO Y CAMBIE DE COLOR 
 document.addEventListener('DOMContentLoaded', function() {
-    const tiempoSemanaInput = document.getElementById('id_tiemposemana');
-    const apegovecesInput = document.getElementById('id_apegoveces');
+    const tiempoSemanaInput = document.getElementById('id_tiemposemana_seg');
+    const apegovecesInput = document.getElementById('id_apegoveces_seg');
 
     tiempoSemanaInput.addEventListener('input', function() {
         const tiempoSemanaValue = parseInt(tiempoSemanaInput.value, 10);
@@ -740,30 +533,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-
-// CALCULADORA NEFROPATIA
-
-function calcularNefropatia() {
-    // Obtén el valor de la creatinina ingresado por el usuario
-    var creatinina = parseFloat(document.getElementById("creatinina").value);
-
-    // Calcula el rango de Nefropatía basado en el valor de creatinina
-    var rango = "";
-    if (creatinina > 90) {
-        rango = "G1 >90 Normal";
-    } else if (creatinina >= 60 && creatinina <= 89) {
-        rango = "G2 60-89 Ligeramente disminuido";
-    } else if (creatinina >= 45 && creatinina <= 59) {
-        rango = "G3a 45-59 Descenso ligero-moderado";
-    } else if (creatinina >= 30 && creatinina <= 44) {
-        rango = "G3b 30-44 Descenso moderado";
-    } else if (creatinina >= 15 && creatinina <= 29) {
-        rango = "G4 15-29 Descenso severo";
-    } else {
-        rango = "G5 MENOS 15 Falla renal";
-    }
-
-    // Muestra el resultado en el campo de texto
-    document.getElementById("id_nefro").value = rango;
-}
