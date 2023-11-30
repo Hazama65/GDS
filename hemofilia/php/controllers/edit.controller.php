@@ -1,148 +1,162 @@
 <?php
     require(__DIR__ . '/../models/database.model.php');
-    include(__DIR__ . '/../dbconfig_hc.php');
+    include(__DIR__ . '/../dbconfig_hf.php');
 
     $connectionDB = new Database(DB_HOST,DB_NAME,DB_USERNAME,DB_PASSWORD);
-    $connectionDBEM = new Database(DB_HOST_EM,DB_NAME_EM,DB_USERNAME_EM,DB_PASSWORD_EM);
-    $connectionDBClues = new Database(DB_HOST_Clues,DB_NAME_Clues,DB_USERNAME_Clues,DB_PASSWORD_Clues);
-
-    $query_clues="SELECT * FROM clues";
-
-    $AllData_Clues =$connectionDBClues->getRows($query_clues);
-
-    
-    $estados = "SELECT * FROM estados ORDER BY NombreEstado";
-    $AllData_Estados = $connectionDBEM->getRows($estados);
-    
-    $municipiosQuery = "SELECT * FROM municipios";
-    $AllData_Municipios = $connectionDBEM->getRows($municipiosQuery);
-    
-    echo '<script>';
-    echo 'var estadosData = ' . json_encode($AllData_Estados) . ';';
-    echo 'var municipiosData = ' . json_encode($AllData_Municipios) . ';';
-    echo '</script>';
-
 
 
     
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $id_paciente=$_GET['id'];
 
-        $queryAllData = "SELECT p.*,s.*,fr.*,ant.*,ate.*,l.*,uh.*,ih.*,t.*,d.* FROM pacientes p 
-        JOIN sometria s on p.id_paciente = s.id_paciente
-        JOIN factores_riesgo fr on p.id_paciente = fr.id_paciente
-        JOIN antecedentes ant ON p.id_paciente = ant.id_paciente
-        JOIN atencion_clinica ate ON p.id_paciente = ate.id_paciente
-        JOIN laboratorio l ON p.id_paciente = l.id_paciente
-        JOIN ultrasonidohepatico uh ON p.id_paciente = uh.id_paciente
-        JOIN indicehepatico ih ON p.id_paciente = ih.id_paciente
-        JOIN tratamiento t ON p.id_paciente = t.id_paciente
-        JOIN defuncion d ON p.id_paciente = d.id_paciente WHERE p.id_paciente= $id_paciente";
+        $queryAllData = "SELECT *
+        FROM datos_paciente AS dp
+        JOIN clinica AS cl ON dp.id_paciente = cl.id_paciente
+        JOIN fish AS f ON dp.id_paciente = f.id_paciente
+        JOIN hjhs AS h ON dp.id_paciente = h.id_paciente
+        JOIN usg AS u ON dp.id_paciente = u.id_paciente
+        JOIN tratamiento AS t ON dp.id_paciente = t.id_paciente
+        JOIN inhibidor AS i ON dp.id_paciente = i.id_paciente
+        JOIN tratamiento_mensual AS tm ON dp.id_paciente = tm.id_paciente where dp.id_paciente='$id_paciente';";
 
         $AllData = $connectionDB->getRows($queryAllData);
 
         if (!empty($AllData)) {
             foreach ($AllData as $data) {
-                $curp = $data["curp"];
-                $nombre = $data["nombre"];
-                $fecha_nacimiento = $data["fecha_nacimiento"];
-                $edad = $data["edad"];
-                $sexo = $data["sexo"];
-                $estado_civil = $data["estado_civil"];
-                $Estado = $data["estado"];
-                $Municipio = $data["municipio"];
-                $queryEstado = "SELECT NombreEstado FROM estados WHERE Estado_Id ='$Estado'";
-                $dataEstado= $connectionDBEM->getRows($queryEstado);
-                foreach($dataEstado as $row1){
-                    $Estado1 = $row1['NombreEstado'];
-                }
-                $queryMunicipio = "SELECT NombreMunicipio FROM municipios WHERE MunicipioID ='$Municipio'";
-                $dataMunicipio= $connectionDBEM->getRows($queryMunicipio);
-                foreach($dataMunicipio as $row2){
-                    $Municipio1 = $row2['NombreMunicipio'];
-                }
-                $referencia = $data["referencia"];
-                $unidad_referencia = $data["unidad_referencia"];
-
-
-                $talla = $data["talla"];
-                $peso = $data["peso"];
-                $imc = $data["imc"];
-                $descripcionIMC = $data["descripcionimc"];
-                $circunferencia = $data["circunferencia"];
-    
-
-                $sinRegistro = $data["sinRegistro"];
-                $relacionesSex = $data["relacionesSex"];
-                $transfusiones = $data["transfusiones"];
-                $drogasEnd = $data["drogasEnd"];
-                $piercing = $data["piercing"];
-                $presidiario = $data["presidiario"];
-                $expresidiario = $data["expresidiario"];
-                $situacionCalle = $data["situacionCalle"];
-                $vih = $data["vih"];
-                $hepatitis = $data["hepatitis"];
-                $sexoServidoras = $data["sexoServidoras"];
-                $parejasOcasionales = $data["parejasOcasionales"];
-                $pacienteToxicomanias = $data["pacienteToxicomanias"];
-                $ninguna = $data["ninguna"];
-    
-
-                $hemofilia = $data["hemofilia"];
-                $ERC = $data["ERC"];
-                $trabajadorSalud = $data["trabajadorSalud"];
-                $transplante = $data["transplante"];
-                $cirrosis = $data["cirrosis"];
-                $obesidad = $data["obesidad"];
-                $prediabetes = $data["prediabetes"];
-                $diabetesMellitus = $data["diabetesMellitus"];
-                $hipertencionArt = $data["hipertencionArt"];
-                $alcoholismo = $data["alcoholismo"];
-                $HB = $data["HB"];
-                $ninguno_Ant = $data["ninguno_Ant"];
-    
-
-                $atencion_inicial = $data["atencion_inicial"];
-                $carga_inicial  = $data["carga_inicial"];
-                $cargaDX  = $data["cargaDX"];
-                $respuestaViral  = $data["respuestaViral"];
-                $RVS  = $data["RVS"];
-                $fechaRVS  = $data["fechaRVS"];
-    
-
-                $AST = $data["AST"];
-                $BUN = $data["BUN"];
-                $CREAT = $data["CREAT"];
-                $ALT = $data["ALT"];
-                $plaquetas = $data["plaquetas"];
-                $albumina = $data["albumina"];
-                $glucosa = $data["glucosa"];
-                $HBA1C = $data["HBA1C"];
-                $trigliceridos = $data["trigliceridos"];
-                $HDL = $data["HDL"];
-    
-
-                $ultrasonido = $data["ultrasonido"];
-                $resultadoUltra = $data["resultadoUltra"];
-                $esteatosis = $data["esteatosis"];
-    
-
-                $FIB4 = $data["FIB4"];
-                $FIB4resultado = $data["FIB4resultado"];
-                $NAFLD = $data["NAFLD"];
-                $NAFLDresultado = $data["NAFLDresultado"];
-                $APRI = $data["APRI"];
-                $APRIresultado = $data["APRIresultado"];
-    
-
-                $fecha_inicio = $data["fecha_inicio"];
-                $fecha_fin = $data["fecha_fin"];
-                $tratamiento = $data["tratamiento"];
-                $ribavirina = $data["ribavirina"];
-    
-                
-                $defuncion_paciente = $data["defuncion_paciente"];
-                $causa = $data["causa"];
+                $nombre_paciente = $data['nombre_paciente'];
+                $curp = $data['curp'];
+                $fecha_nacimiento = $data['fecha_nacimiento'];
+                $edad = $data['edad'];
+                $sexo = $data['sexo'];
+                $peso = $data['peso'];
+                $tipohemofilia = $data['tipohemofilia'];
+                $deficienciafactor = $data['deficienciafactor'];
+                $tipoVIII = $data['tipoVIII'];
+                $tipoIX = $data['tipoIX'];
+                $tipoXI = $data['tipoXI'];
+                $tipovw = $data['tipovw'];
+                $otrashemofilias = $data['otrashemofilias'];
+                $clasificacionGravedad = $data['clasificacionGravedad'];
+                $inhibidor = $data['inhibidor'];
+                $bajarespuesta = $data['bajarespuesta'];
+                $altarespuesta = $data['altarespuesta'];
+                $artropatiahemolitica = $data['artropatiahemolitica'];
+                $area_afectada = $data['area_afectada'];
+                $sangradosmensuales = $data['sangradosmensuales'];
+                $requierefactor = $data['requierefactor'];
+                $resultadoFISH = $data['resultadoFISH'];
+                $comer_aseo = $data['comer_aseo'];
+                $bathe = $data['bathe'];
+                $vestirse = $data['vestirse'];
+                $sentar = $data['sentar'];
+                $Cunclillas = $data['Cunclillas'];
+                $Caminar = $data['Caminar'];
+                $Correr = $data['Correr'];
+                $Subir = $data['Subir'];
+                $puntuacion_HJHS = $data['puntuacion_HJHS'];
+                $CI_inflamacion = $data['CI_inflamacion'];
+                $CI_duracion = $data['CI_duracion'];
+                $CI_atrofiamuscular = $data['CI_atrofiamuscular'];
+                $CI_crepitacion_movimiento = $data['CI_crepitacion_movimiento'];
+                $CI_perdida_flexion = $data['CI_perdida_flexion'];
+                $CI_perdida_extension = $data['CI_perdida_extension'];
+                $CI_dolor_articular = $data['CI_dolor_articular'];
+                $CI_fuerza = $data['CI_fuerza'];
+                $CD_inflamacion = $data['CD_inflamacion'];
+                $CD_duracion = $data['CD_duracion'];
+                $CD_atrofiamuscular = $data['CD_atrofiamuscular'];
+                $CD_crepitacion_movimiento = $data['CD_crepitacion_movimiento'];
+                $CD_perdida_flexion = $data['CD_perdida_flexion'];
+                $CD_perdida_extension = $data['CD_perdida_extension'];
+                $CD_dolor_articular = $data['CD_dolor_articular'];
+                $CD_fuerza = $data['CD_fuerza'];
+                $RI_inflamacion = $data['RI_inflamacion'];
+                $RI_duracion = $data['RI_duracion'];
+                $RI_atrofiamuscular = $data['RI_atrofiamuscular'];
+                $RI_crepitacion_movimiento = $data['RI_crepitacion_movimiento'];
+                $RI_perdida_flexion = $data['RI_perdida_flexion'];
+                $RI_perdida_extension = $data['RI_perdida_extension'];
+                $RI_dolor_articular = $data['RI_dolor_articular'];
+                $RI_fuerza = $data['RI_fuerza'];
+                $RD_inflamacion = $data['RD_inflamacion'];
+                $RD_duracion = $data['RD_duracion'];
+                $RD_atrofiamuscular = $data['RD_atrofiamuscular'];
+                $RD_crepitacion_movimiento = $data['RD_crepitacion_movimiento'];
+                $RD_perdida_flexion = $data['RD_perdida_flexion'];
+                $RD_perdida_extension = $data['RD_perdida_extension'];
+                $RD_dolor_articular = $data['RD_dolor_articular'];
+                $RD_fuerza = $data['RD_fuerza'];
+                $TI_inflamacion = $data['TI_inflamacion'];
+                $TI_duracion = $data['TI_duracion'];
+                $TI_atrofiamuscular = $data['TI_atrofiamuscular'];
+                $TI_crepitacion_movimiento = $data['TI_crepitacion_movimiento'];
+                $TI_perdida_flexion = $data['TI_perdida_flexion'];
+                $TI_perdida_extension = $data['TI_perdida_extension'];
+                $TI_dolor_articular = $data['TI_dolor_articular'];
+                $TI_fuerza = $data['TI_fuerza'];
+                $TD_inflamacion = $data['TD_inflamacion'];
+                $TD_duracion = $data['TD_duracion'];
+                $TD_atrofiamuscular = $data['TD_atrofiamuscular'];
+                $TD_crepitacion_movimiento = $data['TD_crepitacion_movimiento'];
+                $TD_perdida_flexion = $data['TD_perdida_flexion'];
+                $TD_perdida_extension = $data['TD_perdida_extension'];
+                $TD_dolor_articular = $data['TD_dolor_articular'];
+                $TD_fuerza = $data['TD_fuerza'];
+                $suma_articulaciones = $data['suma_articulaciones'];
+                $marcha_global = $data['marcha_global'];
+                $USG_6meses = $data['USG_6meses'];
+                $_6_actividad_inflamatoria = $data['6_actividad_inflamatoria'];
+                $_6_derrame_sinovitis = $data['6_derrame_sinovitis'];
+                $_6_hipertrofia_sinovial = $data['6_hipertrofia_sinovial'];
+                $_6_Cartilago = $data['6_Cartilago'];
+                $_6_Hueso = $data['6_Hueso'];
+                $USG_12meses = $data['USG_12meses'];
+                $_12_actividad_inflamatoria = $data['12_actividad_inflamatoria'];
+                $_12_derrame_sinovitis = $data['12_derrame_sinovitis'];
+                $_12_hipertrofia_sinovial = $data['12_hipertrofia_sinovial'];
+                $_12_Cartilago = $data['12_Cartilago'];
+                $_12_Hueso = $data['12_Hueso'];
+                $USG_24meses = $data['USG_24meses'];
+                $_24_actividad_inflamatoria = $data['24_actividad_inflamatoria'];
+                $_24_derrame_sinovitis = $data['24_derrame_sinovitis'];
+                $_24_hipertrofia_sinovial = $data['24_hipertrofia_sinovial'];
+                $_24_Cartilago = $data['24_Cartilago'];
+                $_24_Hueso = $data['24_Hueso'];
+                $tipo_tratamiento = $data['tipo_tratamiento'];
+                $profilaxis = $data['profilaxis'];
+                $Profilaxis_Emicizumab = $data['Profilaxis_Emicizumab'];
+                $tipo_Profilaxis = $data['tipo_Profilaxis'];
+                $dosis_tipoProfilaxis = $data['dosis_tipoProfilaxis'];
+                $totalui = $data['totalui'];
+                $nodosisporsemana = $data['nodosisporsemana'];
+                $entrega = $data['entrega'];
+                $dosis = $data['dosis'];
+                $totalui_total = $data['totalui_total'];
+                $nodosisporsemana_2 = $data['nodosisporsemana_2'];
+                $totaluisemana = $data['totaluisemana'];
+                $dosis_desvio = $data['dosis_desvio'];
+                $totalui_desvio = $data['totalui_desvio'];
+                $nodosisporsemana_desvio = $data['nodosisporsemana_desvio'];
+                $totalui_desvio_semana = $data['totalui_desvio_semana'];
+                $turo_250 = $data['turo_250'];
+                $turo_500 = $data['turo_500'];
+                $turo_1000 = $data['turo_1000'];
+                $octo_250 = $data['octo_250'];
+                $octo_500 = $data['octo_500'];
+                $simo_250 = $data['simo_250'];
+                $simo_500 = $data['simo_500'];
+                $simo_1000 = $data['simo_1000'];
+                $factorVIII_250 = $data['factorVIII_250'];
+                $factorVIII_500 = $data['factorVIII_500'];
+                $factorVIIIvW_500 = $data['factorVIIIvW_500'];
+                $factorVIIIvW_1000 = $data['factorVIIIvW_1000'];
+                $factorIX_500 = $data['factorIX_500'];
+                $factorIX_500_2 = $data['factorIX_500_2'];
+                $factorIX_600 = $data['factorIX_600'];
+                $factorIX_1000 = $data['factorIX_1000'];
+                $entrega_2 = $data['entrega_2'];
+                $fVW_500 = $data['fVW_500'];
+                $fvw_100 = $data['fvw_100'];
             }
         }
     }

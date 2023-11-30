@@ -1,22 +1,20 @@
 <?php
 // Incluir el archivo de configuración de la base de datos
-include('dbconfig_hc.php');
+include('dbconfig_hf.php');
 
 // Conectar a la base de datos
 $conn = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
 // Consulta SQL
-$query = "SELECT p.*,s.*,fr.*,ant.*,ate.*,l.*,uh.*,ih.*,t.*,d.* FROM pacientes p 
-JOIN sometria s on p.id_paciente = s.id_paciente
-JOIN factores_riesgo fr on p.id_paciente = fr.id_paciente
-JOIN antecedentes ant ON p.id_paciente = ant.id_paciente
-JOIN atencion_clinica ate ON p.id_paciente = ate.id_paciente
-JOIN laboratorio l ON p.id_paciente = l.id_paciente
-JOIN ultrasonidohepatico uh ON p.id_paciente = uh.id_paciente
-JOIN indicehepatico ih ON p.id_paciente = ih.id_paciente
-JOIN tratamiento t ON p.id_paciente = t.id_paciente
-JOIN defuncion d ON p.id_paciente = d.id_paciente
-";
+$query = "SELECT *
+FROM datos_paciente AS dp
+JOIN clinica AS cl ON dp.id_paciente = cl.id_paciente
+JOIN fish AS f ON dp.id_paciente = f.id_paciente
+JOIN hjhs AS h ON dp.id_paciente = h.id_paciente
+JOIN usg AS u ON dp.id_paciente = u.id_paciente
+JOIN tratamiento AS t ON dp.id_paciente = t.id_paciente
+JOIN inhibidor AS i ON dp.id_paciente = i.id_paciente
+JOIN tratamiento_mensual AS tm ON dp.id_paciente = tm.id_paciente";
 
 // Ejecutar la consulta
 $result = mysqli_query($conn, $query);
@@ -33,79 +31,142 @@ if ($result) {
 
     // Agregar los encabezados de las columnas
     $columns = array(
+
         'Id',
-        'CURP',
         'Nombre Completo',
+        'CURP',
         'Fecha Nacimiento',
         'Edad',
         'Sexo',
-        'Estado Civil',
-        'Estado',
-        'Municipio',
-        'Referenciado',
-        'Unidad de Referencia',
-        'Talla',
         'Peso',
-        'IMC',
-        'Resultado IMC',
-        'Circunferencia',
-        'Sin Registro',
-        'Relaciones Sexuales',
-        'Transfusiones',
-        'Drogas Endovenosas',
-        'Piercing',
-        'Presidiario',
-        'Expresidiario',
-        'Situación de Calle',
-        'Pacientes con VIH',
-        'Pacientes con Hepatitis',
-        'Sexo Servidoras',
-        'Parejas Ocasionales',
-        'Pacientes con Toxicomanias',
-        'Ninguna',
-        'Hemofilia',
-        'ERC en Hemodialisis',
-        'Trabajador de la Salud',
-        'Transplante',
-        'Cirrosis',
-        'Obesidad',
-        'Prediabetes',
-        'Diabetes Mellitus',
-        'Hipertensión Arterial',
-        'Alcoholismo',
-        'Virus HB',
-        'Ninguno',
-        'Atención Inicial',
-        'Carga Viral Inicial',
-        'Carga Viral Dx',
-        'Respuesta Viral Sostenida',
-        '# RVS',
-        'Fecha RVS',
-        'AST',
-        'BUN',
-        'CREAT',
-        'ALT',
-        'Plaquetas',
-        'Albumina',
-        'Glucosa',
-        'HBA1C',
-        'Trigliceridos',
-        'HDL',
-        'Ultrasonido Hepático',
-        'Resultado Ultrasonido',
-        'Esteatosis',
-        'FIB 4',
-        'Resultado FIB 4',
-        'NAFLD',
-        'Resultado NAFLD',
-        'APRI',
-        'Resultado APRI',
-        'Fecha Inicio Tratamiento',
-        'Tratamiento',
-        'Ribavirina',
-        'Fecha Fin Tratamiento',
-        'Defunción',
-        'Causa'
+        'Tipo de Hemofilia',
+        'Deficiencia de factor',
+        'Clasificación de Hemofilia (VIII)',
+        'Clasificación de Hemofilia (IX)',
+        'Clasificación de Hemofilia (XI)',
+        'Tipo de EVW',
+        'Otra Clasificación',
+        'Clasificación por gravedad',
+        'Inhibidor',
+        'Inhibidor Baja Respuesta',
+        'Inhibidor Alta Respuesta',
+        'Artropatia Hemolitica',
+        'Área Afectada',
+        'No. de Sangrados Mensuales',
+        'Requirió factor',
+        '(FISH)',
+'Comer y Asearse',
+'Bañarse',
+'Vestirse',
+'Sentar',
+'Cunclillas',
+'Caminar',
+'Correr',
+'Subir Escaleras (12-14 pasos)',
+'(HJHS)',
+'Inflamación',
+'Duración',
+'Atrofia Muscular',
+'Crepitación al Movimiento',
+'Pérdida de la Flexión',
+'Pérdida de la Extensión',
+'Dolor Articular',
+'Fuerza',
+'Inflamación',
+'Duración',
+'Atrofia Muscular',
+'Crepitación al Movimiento',
+'Pérdida de la Flexión',
+'Pérdida de la Extensión',
+'Dolor Articular',
+'Fuerza',
+'Inflamación',
+'Duración',
+'Atrofia Muscular',
+'Crepitación al Movimiento',
+'Pérdida de la Flexión',
+'Pérdida de la Extensión',
+'Dolor Articular',
+'Fuerza',
+'Inflamación',
+'Duración',
+'Atrofia Muscular',
+'Crepitación al Movimiento',
+'Pérdida de la Flexión',
+'Pérdida de la Extensión',
+'Dolor Articular',
+'Fuerza',
+'Inflamación',
+'Duración',
+'Atrofia Muscular',
+'Crepitación al Movimiento',
+'Pérdida de la Flexión',
+'Pérdida de la Extensión',
+'Dolor Articular',
+'Fuerza',
+'Inflamación',
+'Duración',
+'Atrofia Muscular',
+'Crepitación al Movimiento',
+'Pérdida de la Flexión',
+'Pérdida de la Extensión',
+'Dolor Articular',
+'Fuerza',
+'Suma del total de Articulaciones',
+'Marcha Global',
+'6 meses',
+'Actividad Inflamatoria',
+'Escala de Derrame / Sinovitis',
+'Escala de Hipertrofia Sinovial',
+'Daño Osteocondral - Cartilago',
+'Daño Osteocondral - Hueso',
+'12 meses',
+'Actividad Inflamatoria',
+'Escala de Derrame / Sinovitis',
+'Escala de Hipertrofia Sinovial',
+'Daño Osteocondral - Cartilago',
+'Daño Osteocondral - Hueso',
+'24 meses',
+'Actividad Inflamatoria',
+'Escala de Derrame / Sinovitis',
+'Escala de Hipertrofia Sinovial',
+'Daño Osteocondral - Cartilago',
+'Daño Osteocondral - Hueso',
+'Tipo de Tratamiento',
+'Profilaxis',
+'Profilaxis con Emicizumab',
+'Tipo Profilaxis con Emicizumab',
+'Dosis(mg) / Kg',
+'Total de mg por Dosis',
+'N° de Dosis por semana',
+'Entrega',
+'Dosis / Kg',
+'Total de UI por Dosis',
+'N° de Dosis por semana',
+'Total de UI por semana',
+'Dosis / Kg',
+'Total de UI por Dosis',
+'N° de Dosis por semana',
+'Total de UI por semana',
+'Turoctocog Alfa 250 UI',
+'Turoctocog Alfa 500 UI',
+'Turoctocog Alfa 1000 UI',
+'Octocog Alfa 250 UI',
+'Octocog Alfa 500 UI',
+'Simoctocog Alfa 250 UI',
+'Simoctocog Alfa 500 UI',
+'Simoctocog Alfa 1000 UI',
+'Factor VIII 250 UI',
+'Factor VIII 500 UI',
+'Factor VIII + vW 500 UI',
+'Factor VIII + vW 1000 UI',
+'Factor IX 500 UI',
+'Factor IX 500 UI',
+'Factor IX 600 UI',
+'Factor IX 1000 UI',
+'Emicizumab',
+'F VW 500 UI',
+'F VW 1000 UI'
     );
         
     $sheet->fromArray([$columns], null, 'A1');
@@ -121,7 +182,7 @@ if ($result) {
     $writer = new PhpOffice\PhpSpreadsheet\Writer\Xlsx($spreadsheet);
 
     // Definir la ubicación del archivo Excel
-    $excel_file = 'Datos HepatitisC.xlsx';
+    $excel_file = 'Datos Hemofilia.xlsx';
 
     // Guardar el archivo Excel
     $writer->save($excel_file);

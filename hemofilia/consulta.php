@@ -479,7 +479,7 @@
 
     <tr>
         <th scope="row">Marcha Global <br>(caminar, escaleras, correr, salto sobre una pierna)</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $marcha_global; ?></td>
     </tr>
 
     <tr>
@@ -488,92 +488,92 @@
 
     <tr>
         <th scope="row" style="background-color: rgb(153, 9, 68, 0.5); color: aliceblue; text-align: center;">6 meses</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $USG_6meses; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Actividad Inflamatoria</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $_6_actividad_inflamatoria; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Escala de Derrame / Sinovitis</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $_6_derrame_sinovitis; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Escala de Hipertrofia Sinovial</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $_6_hipertrofia_sinovial; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Daño Osteocondral - Cartilago</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $_6_Cartilago; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Daño Osteocondral - Hueso</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $_6_Hueso; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="background-color: rgb(153, 9, 68, 0.5); color: aliceblue; text-align: center;">12 meses</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $USG_12meses; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Actividad Inflamatoria</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $_12_actividad_inflamatoria; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Escala de Derrame / Sinovitis</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $_12_derrame_sinovitis; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Escala de Hipertrofia Sinovial</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $_12_hipertrofia_sinovial; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Daño Osteocondral - Cartilago</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $_12_Cartilago; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Daño Osteocondral - Hueso</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $_12_Hueso; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="background-color: rgb(153, 9, 68, 0.5); color: aliceblue; text-align: center;">24 meses</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $USG_24meses; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Actividad Inflamatoria</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $_24_actividad_inflamatoria; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Escala de Derrame / Sinovitis</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $_24_derrame_sinovitis; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Escala de Hipertrofia Sinovial</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $_24_hipertrofia_sinovial; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Daño Osteocondral - Cartilago</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $_24_Cartilago; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Daño Osteocondral - Hueso</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $_24_Hueso; ?></td>
     </tr>
     
     <tr>
@@ -582,42 +582,42 @@
 
     <tr>
         <th scope="row">Tipo de Tratamiento</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $tipo_tratamiento; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Profilaxis</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $profilaxis; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Profilaxis con Emicizumab</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $Profilaxis_Emicizumab; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Tipo Profilaxis con Emicizumab</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $tipo_Profilaxis; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Dosis(mg) / Kg</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $dosis_tipoProfilaxis; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Total de mg por Dosis</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $totalui; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * N° de Dosis por semana</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $nodosisporsemana; ?></td>
     </tr>
 
     <tr>
         <th scope="row" style="font-size: 13px; color: gray;"> * Entrega</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $entrega; ?></td>
     </tr>
 
 
@@ -627,22 +627,22 @@
 
     <tr>
         <th scope="row"> * Dosis / Kg</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $dosis; ?></td>
     </tr>
 
     <tr>
         <th scope="row"> * Total de UI por Dosis</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $totalui_total; ?></td>
     </tr>
 
     <tr>
         <th scope="row"> * N° de Dosis por semana</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $nodosisporsemana_2; ?></td>
     </tr>
 
     <tr>
         <th scope="row"> * Total de UI por semana</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $totaluisemana; ?></td>
     </tr>
 
     <tr>
@@ -651,22 +651,22 @@
 
     <tr>
         <th scope="row"> * Dosis / Kg</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $dosis_desvio; ?></td>
     </tr>
 
     <tr>
         <th scope="row"> * Total de UI por Dosis</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $totalui_desvio; ?></td>
     </tr>
 
     <tr>
         <th scope="row"> * N° de Dosis por semana</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $nodosisporsemana_desvio; ?></td>
     </tr>
 
     <tr>
         <th scope="row"> * Total de UI por semana</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $totalui_desvio_semana; ?></td>
     </tr>
 
     <tr>
@@ -679,42 +679,42 @@
 
     <tr>
         <th scope="row">Turoctocog Alfa 250 UI</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $turo_250; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Turoctocog Alfa 500 UI</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $turo_500; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Turoctocog Alfa 1000 UI</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $turo_1000; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Octocog Alfa 250 UI</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $octo_250; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Octocog Alfa 500 UI</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $octo_500; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Simoctocog Alfa 250 UI</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $simo_250; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Simoctocog Alfa 500 UI</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $simo_500; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Simoctocog Alfa 1000 UI</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $simo_1000; ?></td>
     </tr>
 
     <tr>
@@ -723,22 +723,22 @@
 
     <tr>
         <th scope="row">Factor VIII 250 UI</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $factorVIII_250; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Factor VIII 500 UI</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $factorVIII_500; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Factor VIII + vW 500 UI</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $factorVIIIvW_500; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Factor VIII + vW 1000 UI</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $factorVIIIvW_1000; ?></td>
     </tr>
 
     <tr>
@@ -747,22 +747,22 @@
 
     <tr>
         <th scope="row">Factor IX 500 UI</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $factorIX_500; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Factor IX 500 UI</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $factorIX_500_2; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Factor IX 600 UI</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $factorIX_600; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Factor IX 1000 UI</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $factorIX_1000; ?></td>
     </tr>
 
     <tr>
@@ -771,7 +771,7 @@
 
     <tr>
         <th scope="row">Emicizumab</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $entrega_2; ?></td>
     </tr>
 
     <tr>
@@ -780,16 +780,16 @@
 
     <tr>
         <th scope="row">F VW 500 UI</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $fVW_500; ?></td>
     </tr>
 
     <tr>
         <th scope="row">F VW 1000 UI</th>
-        <td><?php echo $; ?></td>
+        <td><?php echo $fvw_100; ?></td>
     </tr>
 
 
-  </tbody>
+    </tbody>
 </table>
 
 </body>
