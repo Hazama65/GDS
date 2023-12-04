@@ -11,6 +11,7 @@
     //llamado al modal de registrar paciente de diabetes
     require('php/controllers/registros.controller.php');
     include("modal/registrarpaciente.php");
+    include("modal/seguimiento.php")
 ?>
 
 <!DOCTYPE html>
@@ -99,6 +100,11 @@
 
     <div class="col-7">
         <div class="container">
+            <!-- Button Seguimiento trigger modal -->
+            <button id="Seguimiento_index" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Seguimiento" style="display:none;">
+                Seguimiento
+            </button>
+
             <iframe id="consulta" src="consulta.php" frameborder="0" width="100%" height="800px" style="margin-bottom: 100px;"></iframe>
         </div> <!--<div class="container">-->
     </div><!-- FINALIZA EL DIV class col 8-->
