@@ -13,7 +13,7 @@
         $queryAllData = "SELECT *
         FROM datos_paciente AS dp
         JOIN clinica AS cl ON dp.id_paciente = cl.id_paciente
-        JOIN fish AS f ON dp.id_paciente = f.id_pacienteitar
+        JOIN fish AS f ON dp.id_paciente = f.id_paciente
         JOIN hjhs AS h ON dp.id_paciente = h.id_paciente
         JOIN usg AS u ON dp.id_paciente = u.id_paciente
         JOIN tratamiento AS t ON dp.id_paciente = t.id_paciente
@@ -133,7 +133,7 @@
                 $entrega = $data['entrega'];
                 $dosis = $data['dosis'];
                 $totalui_total = $data['totalui_total'];
-                $nodosisporsemana = $data['nodosisporsemana'];
+                $nodosisporsemana_2 = $data['nodosisporsemana_2'];
                 $totaluisemana = $data['totaluisemana'];
                 $dosis_desvio = $data['dosis_desvio'];
                 $totalui_desvio = $data['totalui_desvio'];
@@ -155,7 +155,7 @@
                 $factorIX_500_2 = $data['factorIX_500_2'];
                 $factorIX_600 = $data['factorIX_600'];
                 $factorIX_1000 = $data['factorIX_1000'];
-                $entrega = $data['entrega'];
+                $entrega_2 = $data['entrega_2'];
                 $fVW_500 = $data['fVW_500'];
                 $fvw_100 = $data['fvw_100'];
 

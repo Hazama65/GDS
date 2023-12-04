@@ -1,7 +1,7 @@
 // Función para mostrar el ID del paciente en la consola
 function mostrarIdPaciente(event) {
     const listItem = event.target.closest(".patient-item");
-    const id_paciente = listItem.getAttribute("data-id-paciente");
+    const id_paciente = listItem.getAttribute("data-id-paciente");  
     
     // Realiza una solicitud AJAX para enviar el ID del paciente al servidor
     $.ajax({

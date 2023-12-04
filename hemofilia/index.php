@@ -1,5 +1,4 @@
 <?php
-
     require('php/controllers/registros.controller.php');
     include("modals/registrarpaciente.php");
 ?>
@@ -70,7 +69,7 @@
                             // Genera un elemento de lista para cada paciente
                             echo '<li class="patient-item" data-id-paciente="' . $id_paciente . '">';
                             echo $nombrePaciente;
-                            echo '<a href="editar_hc.php?id=' . $id_paciente . '">';
+                            echo '<a href="editar_hf.php?id=' . $id_paciente . '">';
                             echo '<button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Editar</button>';
                             echo '</a>';
                             echo '</li>';
@@ -91,6 +90,9 @@
 <!-- ======================== AQUI INICIA LA TABLA ======================== -->
 
     <div class="col-7">
+        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal" style="display:none;">
+            <i class="bi bi-person-add"> </i> Paciente
+        </button>
         <div class="container">
             <iframe id="consulta"  src="consulta.php" frameborder="0" width="100%" height="450px" style="margin-bottom: 100px;"></iframe>
         </div> <!--<div class="container">-->

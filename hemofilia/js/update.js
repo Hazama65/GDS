@@ -1,9 +1,9 @@
-import { setAlerts }from './plugins/alerts_hc.plugin.js';
-import { httpClients }from './plugins/http-client_hc.plugin.js';
+import { setAlerts }from './plugins/alerts_hf.plugin.js';
+import { httpClients }from './plugins/http-client_hf.plugin.js';
 
 
 const url = 'php/controllers/update.controller.php';
-const formData = $('#edit_form');
+const formData = $('#edit_hemofilia');
 
 export const editForm = () => {
     formData.on('submit', async function(event){
