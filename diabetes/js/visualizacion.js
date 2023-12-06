@@ -21,8 +21,6 @@ function mostrarIdPaciente(event) {
             console.error("Error en la solicitud AJAX:", error);
         }
     });
-
-    $('#Seguimiento_index').show();
 }
 
 // Agrega eventos de clic a cada elemento de la lista

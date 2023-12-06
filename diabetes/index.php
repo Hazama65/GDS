@@ -11,7 +11,6 @@
     //llamado al modal de registrar paciente de diabetes
     require('php/controllers/registros.controller.php');
     include("modal/registrarpaciente.php");
-    include("modal/seguimiento.php")
 ?>
 
 <!DOCTYPE html>
@@ -69,7 +68,6 @@
                         <input type="text" id="search" placeholder="Buscar Residente...">                        
                         <ul id="patient-list">
                             <?php
-
                                 if (!empty($data_Diabetes)) {
                                     // Comienza a generar la lista de pacientes
                                     echo '<ul class="patient-list" >';
@@ -83,6 +81,9 @@
                                         echo '<a href="editar_db.php?id=' . $id_pacientes . '">';
                                         echo '<button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Editar</button>';
                                         echo '</a>';
+                                        echo '<a href="seguimiento.php?id=' . $id_pacientes . '">';
+                                        echo '<button type="button" class="btn btn-secondary" style="color:white; --bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Seguimiento</button>';
+                                        echo '</a>';
                                         echo '</li>';
                                     }
                                     echo '</ul>';
@@ -91,6 +92,7 @@
                                 }
                             ?>
                         </ul>
+
                 </div> <!-- cierre del <div id="patient-list-container">-->
             </div> <!-- cierre del <div class="col-3">-->
 
@@ -100,11 +102,6 @@
 
     <div class="col-7">
         <div class="container">
-            <!-- Button Seguimiento trigger modal -->
-            <button id="Seguimiento_index" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Seguimiento" style="display:none;">
-                Seguimiento
-            </button>
-
             <iframe id="consulta" src="consulta.php" frameborder="0" width="100%" height="800px" style="margin-bottom: 100px;"></iframe>
         </div> <!--<div class="container">-->
     </div><!-- FINALIZA EL DIV class col 8-->

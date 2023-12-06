@@ -71,12 +71,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.getElementById("id_HB_seg").addEventListener("input", function() {
     var valorBH = parseFloat(this.value);
+    var glucosiladaInput = document.getElementById("id_glucosilada_seg");
+
     if (valorBH <= 11) {
-        document.getElementById("id_glucosilada_seg").disabled = true;
+        glucosiladaInput.readOnly = true;
     } else {
-        document.getElementById("id_glucosilada_seg").disabled = false;
+        glucosiladaInput.readOnly = false;
     }
 });
+
 
 // COMPLICACIONES NEFROPATIA
 
@@ -533,3 +536,30 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+function imprimirValor() {
+    var creatininaValue = parseFloat(document.getElementById("creatinina_seg").value);
+
+        // Calcula el rango de Nefropatía basado en el valor de creatinina
+    var rango = "";
+    if (creatininaValue > 90) {
+        rango = "G1 >90 Normal";
+    } else if (creatininaValue >= 60 && creatininaValue <= 89) {
+        rango = "G2 60-89 Ligeramente disminuido";
+
+    } else if (creatininaValue >= 45 && creatininaValue <= 59) {
+        rango = "G3a 45-59 Descenso ligero-moderado";
+
+    } else if (creatininaValue >= 30 && creatininaValue <= 44) {
+        rango = "G3b 30-44 Descenso moderado";
+
+    } else if (creatininaValue >= 15 && creatininaValue <= 29) {
+        rango = "G4 15-29 Descenso severo";
+
+    } else {
+        rango = "G5 MENOS 15 Falla renal";
+
+    }
+    // Muestra el resultado en el campo de texto
+    document.getElementById("id_nefro_seg").value = rango;
+}

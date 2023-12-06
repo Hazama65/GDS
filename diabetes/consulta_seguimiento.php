@@ -847,10 +847,6 @@
             </tr>   
 
             <tr>
-                <td></td>
-            </tr>
-
-            <tr>
                 <td class="estilo-celda">Apego Veces</td>
                 <td></td>
             </tr>
