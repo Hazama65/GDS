@@ -1,26 +1,45 @@
-
-<!-- Modal -->
-<div class="modal fade" id="Ganglio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">  
-    <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header" style="color: aliceblue; background-color:rgb(247, 130, 72);">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">
-            <i class="bi bi-person-plus-fill"></i> Registrar Paciente</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div> <!-- <div class="modal-header" style="color: aliceblue; background-color:rgb(14, 162, 153);">-->
-     <form action="">
-      
-     <div class="modal-body">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Editar</title>
+</head>
+<body>
+    
+<header style="text-align: center;">         
+    <div style=" padding: 20px; text-align: left;">
+                        <a href="index.php">
+                            <button type="button" class="btn btn-outline-light" id="inicio-button" title="Inicio">
+                                <i class="bi bi-rewind-fill"></i>
+                            </button>
+                        </a>
+                </div>
+<!-- ======================== AQUI INICIA  ======================== -->
+                    <h5>Editar-Registro Ganglio Cervical</h5>
+                    <div style="padding: 20px; text-align: right;">
+                        <button type="button" class="btn btn-outline-light" id="cerrar-sesion-button" title="Cerrar sesión">
+                            <i class="bi bi-power"></i> 
+                        </button>
+                    </div>
+            </header>
+            <br>
 
-            <div style="background-color: rgb(247, 130, 72, 0.8);
+
+    <div class="container">
+                <div style="background-color: rgb(247, 130, 72, 0.8);
                         color:rgb(255, 255, 255);
                         text-align: center;
                         margin-top: 20px;">
                         <h6>Generales</h6> 
-            </div>
+                </div>
 
-            <div class="row"> <!-- DATOS GENERALES  -->
+        <div class="row"> <!-- DATOS GENERALES  -->
 
                 <div class="col-md-4">
                     <strong style="font-size:14px;">Nombre Paciente</strong>
@@ -81,7 +100,7 @@
 
 <!--===============AH: TOS CRÓNICA=======================-->
 
-                <div class="col-md-12" id="ah_TosCronica" style="display: none;">
+                <div class="col-md-12" id="ah_TosCronica" >
                     <strong style="font-size: 14px;">Tos Crónica</strong>
                     <select name="TosCronicaSelect" id="TosCronicaSelect" class="form-control" style="font-size: 14px;">
                         <option value="Negado">Negado</option>
@@ -93,7 +112,7 @@
 <!--===============FAMILIAR TOS CRÓNICA=======================-->
                 
         <!--===============sI SELECCIONAMOS PADRE =======================-->
-        <div class="container" id="heredo_familia1"  style="display: none;">
+        <div class="container" id="heredo_familia1"  >
                     
             <div class ="row">
                 
@@ -165,7 +184,7 @@
 
                             <!--===========TUBERCULOSIS  ================-->
 
-                <div class="col-md-12" id="ah_Tuberculosis" style="display: none;">
+                <div class="col-md-12" id="ah_Tuberculosis" >
                     <strong style="font-size: 14px;">Tuberculosis</strong>
                     <select name="TuberculosisSelect" id="TuberculosisSelect" class="form-control" style="font-size: 14px;">
                         <option value="Negado">Negado</option>
@@ -176,7 +195,7 @@
 <!--===============TUBERCULOSIS FAMILIA======================-->
                 
         <!--===============sI SELECCIONAMOS PADRE TUBERCULOSIS =======================-->
-        <div class="container" id="heredo_familia2"  style="display: none;">
+        <div class="container" id="heredo_familia2"  >
                     
             <div class ="row">
                 
@@ -248,7 +267,7 @@
 
                 <!--=========== VIH  ================-->
 
-        <div class="col-md-12" id="ah_VIH" style="display: none;">
+        <div class="col-md-12" id="ah_VIH" >
                     <strong style="font-size: 14px;">VIH</strong>
                     <select name="VIHSelect" id="VIHSelect" class="form-control" style="font-size: 14px;">
                         <option value="Negado">Negado</option>
@@ -259,7 +278,7 @@
 <!--===============FAMILIAR VIH=======================-->
                 
         <!--===============sI SELECCIONAMOS PADRE =======================-->
-        <div class="container" id="heredo_familia3"  style="display: none;">
+        <div class="container" id="heredo_familia3"  >
                     
             <div class ="row">
  <!--===============sI SELECCIONAMOS PADRE  VIH=======================-->               
@@ -338,95 +357,95 @@
                     </select>
                 </div>
 
-        <div class="grid-container" id="Animales_Cual"  style="display: none;">
-            <div class="grid-row">
+        <div class="container" >
+            <div class="row">
 
-                <div class="grid-item">
+                <div class="col-md-2">
                     <span style="font-size:14px;">Perros</span>
                     <input type="checkbox" name="Perros" id="Perros" value="Si" style="font-size:14px;">
                 </div>
 
-                <div class="grid-item">
+                <div class="col-md-2">
                     <span style="font-size:14px;">Gatos</span>
                     <input type="checkbox" name="Gatos" id="Gatos" value="Si" style="font-size:14px;">
                 </div>
 
-                <div class="grid-item">
+                <div class="col-md-2">
                     <span style="font-size:14px;">Conejos</span>
                     <input type="checkbox" name="Conejos" id="Conejos" value="Si" style="font-size:14px;">
                 </div>
 
-                <div class="grid-item">
+                <div class="col-md-2">
                     <span style="font-size:14px;">Pollos</span>
                     <input type="checkbox" name="Pollos" id="Pollos" value="Si" style="font-size:14px;">
                 </div>
 
-                <div class="grid-item">
+                <div class="col-md-2">
                     <span style="font-size:14px;">Chinches</span>
                     <input type="checkbox" name="Chinches" id="Chinches" value="Si" style="font-size:14px;">
                 </div>
 
-                <div class="grid-item">
+                <div class="col-md-2">
                     <span style="font-size:14px;">Ratas</span>
                     <input type="checkbox" name="Ratas" id="Ratas" value="Si" style="font-size:14px;">
                 </div>
 
-                <div class="grid-item">
+                <div class="col-md-2">
                     <span style="font-size: 14px;">Moscos</span>
                     <input type="checkbox" name="Moscos" id="Moscos" value="Si" style="font-size:14px;">
                 </div>
 
-                <div class="grid-item">
+                <div class="col-md-2">
                     <span style="font-size: 14px;">Gallinas</span>
                     <input type="checkbox" name="Gallinas" id="Gallinas" value="Si" style="font-size:14px;">
                 </div>
 
-                <div class="grid-item">
+                <div class="col-md-2">
                     <span style="font-size: 14px;">Cerdos</span>
                     <input type="checkbox" name="Cerdos" id="Cerdos"  value="Si" style="font-size:14px;">
                 </div>
 
-                <div class="grid-item">
+                <div class="col-md-2">
                     <span style="font-size:14px;">Caballos</span>
                     <input type="checkbox" name="Caballos" id="Caballos"  value="Si" style="font-size:14px;">
                 </div>
 
-                <div class="grid-item">
+                <div class="col-md-2">
                     <span style="font-size: 14px;">Becerros</span>
                     <input type="checkbox" name="Becerros" id="Becerros"  value="Si" style="font-size:14px;">
                 </div>
 
-                <div class="grid-item">
+                <div class="col-md-2">
                     <span style="font-size:14px;">Pajaros</span>
                     <input type="checkbox" name="Pajaros" id="Pajaros" value="Si" style="font-size: 14px;">
                 </div>
 
-                <div class="grid-item">
+                <div class="col-md-2">
                     <span style="font-size:14px;">Borregos</span>
                     <input type="checkbox" name="Borregos" id="Borregos" value="Si" style="font-size: 14px;">
                 </div>
 
-                <div class="grid-item">
+                <div class="col-md-2">
                     <span style="font-size:14px;">Tortugas</span>
                     <input type="checkbox" name="Tortugas" id="Tortugas" value="Si" style="font-size:14px;">
                 </div>
 
-                <div class="grid-item">
+                <div class="col-md-2">
                     <span style="font-size:14px;">Patos</span>
                     <input type="checkbox" name="Patos" id="Patos" value="Si" style="font-size:14px;">
                 </div>
 
-                <div class="grid-item">
+                <div class="col-md-2">
                     <span style="font-size:14px;">Burros</span>
                     <input type="checkbox" name="Burros" id="Burros" value="Si" style="font-size:14px;">
                 </div>
 
-                <div class="grid-item">
+                <div class="col-md-2">
                     <span style="font-size: 14px;">Moscas</span>
                     <input type="checkbox" name="Moscas" id="Moscas" value="Si" style="font-size:14px;">
                 </div>
 
-        </div> <!--=========== DIV DEL ROW DE  ANIMALES ================-->
+        </div> <br> <!--=========== DIV DEL ROW DE  ANIMALES ================-->
     </div><!--=========== DIV DEL CONTAINER ANIMALES  ================-->
             
                 <div class="col-md-6">
@@ -437,7 +456,7 @@
                     </select>
                 </div>
 
-                <div class="col-md-6" id ="lugar"  style="display: none;">
+                <div class="col-md-6" id ="lugar"  >
                     <strong style="font-size:14px;">Lugar</strong>
                     <select name="lugarSelect" id="lugarSelect" class="form-control" style="font-size:14px;">
                         <option value="0">Seleccione</option>
@@ -469,7 +488,7 @@
                     </select>
                 </div>
 
-                <div class="col-md-6" id ="tipo_alimentarios"  style="display: none;">
+                <div class="col-md-6" id ="tipo_alimentarios"  >
                     <strong style="font-size:14px;">Tipo-Alimentarios</strong>
                     <select name="tipoalimentos" id="tipoalimentos" class="form-control" style="font-size:14px;">
                         <option value="Seleccione">Seleccione</option>
@@ -489,7 +508,7 @@
                 </select>
                 </div>
 
-        <div class="container mt-4" id="Faltante" style="display: none;">
+        <div class="container mt-4" id="Faltante" >
             <table class="table table-striped">
                 <thead>
 
@@ -629,7 +648,7 @@
 
                         <td>
                             <div class="custom-control custom-checkbox" style="white-space: nowrap;">
-                                <input type="checkbox" class="custom-control-input" name="Influenza_7mes" id="Influenza_7mes">
+                                <input type="checkbox" class="custom-control-input" name="Influenza_7mes" id="Influenza_6mes">
                                 <label class="custom-control-label" for="Influenza_2da" style="font-size:14px;">Influenza 2da dosis</label>
                             </div>
                         </td>
@@ -900,7 +919,7 @@
                     </select>
                 </div>
 
-                <div class="col-md-3" id="edad_neumo" style="display: none;">
+                <div class="col-md-3" id="edad_neumo" >
                     <strong style="font-size:14px;">Edad-Neumopatía</strong>
                     <input type="number" step="any" class="form-control" id="neumo_edad" name="neumo_edad"  style="font-size: 14px;">
                 </select>
@@ -1016,7 +1035,7 @@
                     </select>
                 </div>
 
-                <div class="col-md-3" id="edad_varicela" style="display: none;">
+                <div class="col-md-3" id="edad_varicela" >
                     <strong style="font-size:14px;">Edad-Varicela</strong>
                     <input type="number" step="any" class="form-control" id="varicela_edad" name="varicela_edad"  style="font-size: 14px;">
                 </select>
@@ -1182,7 +1201,7 @@
                 </select>
                 </div> 
 
-        <div class="container text-center" id="otro_localizacion" style="display: none;" >
+        <div class="container text-center" id="otro_localizacion"  >
             <div class="row">
 
             <div class="col-md-3">
@@ -1322,16 +1341,14 @@
             </div><!--===========CONTAINER ETIOLOGIA ================-->
 
 <!--===========Tratamiento ================-->
-        <div id="tx"
-                style="display: none; 
-                background-color: rgb(255, 170, 76, 0.4); 
+        <div style="background-color: rgb(255, 170, 76, 0.4); 
                 color: rgb(255, 255, 255); 
                 text-align: center; 
                 margin-top: 15px;">
                 <h6>Tratamiento Farmacológico para TB</h6>
             </div>
 
-            <div class="container text-center" id="tx_fx" style="display: none;">
+            <div class="container text-center" >
             
             <div class="row " >
                     <div class="col-md-2">
@@ -1545,7 +1562,7 @@
                     </select>
                 </div> 
 
-                <div class="col-md-6" id="serologia_resultado" style="display: none;">
+                <div class="col-md-6" id="serologia_resultado" >
                     <strong style="font-size:14px;">Resultado-Serología</strong>
                     <select name="resultado_cultivo" id="resultado_serologia" class="form-control" style="font-size: 14px;">
                         <option value="0">Selecione</option>
@@ -1554,7 +1571,7 @@
                     </select>
                 </div> 
 
-                <div class="col-md-6" id="pcr_resultado" style="display: none;">
+                <div class="col-md-6" id="pcr_resultado" >
                     <strong style="font-size:14px;">Prueba PCR</strong>
                     <select name="prueb_pcr" id="prueb_pcr" class="form-control" style="font-size: 14px;">
                         <option value="Seleccione">Seleccione</option>
@@ -1563,7 +1580,7 @@
                     </select>
                 </div> 
 
-                <div class="col-md-6" id="resul_pcr"style="display: none;">
+                <div class="col-md-6" id="resul_pcr">
                     <strong style="font-size:14px;">Resultado-PCR</strong>
                     <select name="resultado_PCR" id="resultado_PCR" class="form-control" style="font-size: 14px;">
                         <option value="0">Selecione</option>
@@ -1597,7 +1614,7 @@
                 </select>
                 </div> 
 
-                <div class="col-md-6" id="cultivo_resultado" style="display: none;">
+                <div class="col-md-6" id="cultivo_resultado" >
                     <strong style="font-size:14px;">Resultado-Cultivo</strong>
                     <select name="resultado_cultivo" id="resultado_cultivo" class="form-control" style="font-size: 14px;">
                         <option value="0">Selecione</option>
@@ -1625,7 +1642,7 @@
                 </select>
                 </div> 
 
-                <div class="col-md-6" id="resultado_dxRFC" style="display: none;">
+                <div class="col-md-6" id="resultado_dxRFC" >
                         <strong style="font-size: 14px;">Resultado-Tomografía</strong>
                         <input type="text" step="any" class="form-control" id="resultado_tomografia" name="resultado_tomografia">
                 </div>
@@ -1648,7 +1665,7 @@
                 </select>
                 </div> 
 
-                <div class="col-md-6" id="ultrasonido_resultado" style="display: none;">
+                <div class="col-md-6" id="ultrasonido_resultado" >
                         <strong style="font-size: 14px;">Resultado-Ultrasonido</strong>
                         <input type="text" step="any" class="form-control" id="resultado_Ultrasonido" name="resultado_Ultrasonido">
                 </div>
@@ -1671,7 +1688,7 @@
                 </select>
                 </div> 
 
-                <div class="col-md-6" id="biopsia_resultado" style="display: none;">
+                <div class="col-md-6" id="biopsia_resultado" >
                         <strong style="font-size: 14px;">Resultado-Biopsia</strong>
                         <input type="text" step="any" class="form-control" id="resultado_Biopsia" name="resultado_Biopsia">
                 </div>
@@ -1694,12 +1711,12 @@
                         </select>
                     </div> 
 
-                    <div class="col-md-6" id="id_refe" style="display: none;">
+                    <div class="col-md-6" id="id_refe" >
                         <strong style="font-size: 14px;">Institución</strong>
                         <input type="text" step="any" class="form-control" id="resultado_referencia" name="resultado_referencia">
                     </div>
 
-                    <div class="col-md-4" id="causa_refe" style="display: none;">
+                    <div class="col-md-4" id="causa_refe" >
                         <strong style="font-size: 14px;">Causa</strong>
                         <input type="text" step="any" class="form-control" id="causa_ref" name="causa_ref">
                     </div>
@@ -1722,7 +1739,7 @@
                 </select>
                 </div> 
 
-                <div class="col-md-6" id="causa_alta" style="display: none;">
+                <div class="col-md-6" id="causa_alta" >
                     <strong style="font-size:14px;">Causa</strong>
                     <select name="id_causa" id="id_causa" class="form-control" style="font-size: 14px;">
                         <option value="0">Seleccione</option>
@@ -1733,22 +1750,19 @@
                 </select>
                 </div> 
             
-            </div><!--=========== DIV ROW REFERENCIA================-->
+            </div><br> 
 
-           
+            <div style="display: flex; justify-content: flex-end; align-items: center;">
+                    <button type="submit" class="btn btn-primary" style="font-size: 15px; padding: 8px 15px;">Editar</button>
+                </div><br>
 
-            
+    
+</div>
 
 
-                </form>
-        </div> <!-- <div class="modal-body">-->
 
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="submit" class="btn btn-primary">Guardar</button>
-        </div> <!-- <div class="modal-footer">-->
-            
-        </div> <!-- <div class="modal-content">-->
-    </div> <!-- cierra el div <div class="modal-dialog modal-lg">-->
-    </div> <!-- cierra el primer div <div class="modal fade" id="RegistrarPacienteInterconsulta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">-->
+
+
+
+</body>
+</html>
