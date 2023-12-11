@@ -336,97 +336,98 @@
                     <option value="Negado">Negado</option>
                     <option value="Si">Si</option>
                     </select>
+                </div> <br>
+
+        <div class="container" id="Animales_Cual"  style="display: none;">
+            <div class="row">
+                
+            <div class="col-md-2" style="text-align: center;">
+                    <span style="font-size:14px; display: block;">Perros</span>
+                    <input type="checkbox" name="Perros" id="Perros" value="Si" style="font-size:14px; margin: 5px auto; display: block;">
                 </div>
 
-        <div class="grid-container" id="Animales_Cual"  style="display: none;">
-            <div class="grid-row">
-
-                <div class="grid-item">
-                    <span style="font-size:14px;">Perros</span>
-                    <input type="checkbox" name="Perros" id="Perros" value="Si" style="font-size:14px;">
+                <div class="col-md-2" style="text-align: center;">
+                    <span style="font-size:14px; display: block;">Gatos</span>
+                    <input type="checkbox" name="Gatos" id="Gatos" value="Si" style="font-size:14px; margin: 5px auto; display: block;">
                 </div>
 
-                <div class="grid-item">
-                    <span style="font-size:14px;">Gatos</span>
-                    <input type="checkbox" name="Gatos" id="Gatos" value="Si" style="font-size:14px;">
+                <div class="col-md-2" style="text-align: center;">
+                    <span style="font-size:14px; display: block;">Conejos</span>
+                    <input type="checkbox" name="Conejos" id="Conejos" value="Si" style="font-size:14px; margin: 5px auto; display: block;">
                 </div>
 
-                <div class="grid-item">
-                    <span style="font-size:14px;">Conejos</span>
-                    <input type="checkbox" name="Conejos" id="Conejos" value="Si" style="font-size:14px;">
+                <div class="col-md-2" style="text-align: center;">
+                    <span style="font-size:14px; display: block;">Pollos</span>
+                    <input type="checkbox" name="Pollos" id="Pollos" value="Si" style="font-size:14px; margin: 5px auto; display: block;">
                 </div>
 
-                <div class="grid-item">
-                    <span style="font-size:14px;">Pollos</span>
-                    <input type="checkbox" name="Pollos" id="Pollos" value="Si" style="font-size:14px;">
+                <div class="col-md-2" style="text-align: center;">
+                    <span style="font-size:14px; display: block;">Chinches</span>
+                    <input type="checkbox" name="Chinches" id="Chinches" value="Si" style="font-size:14px; margin: 5px auto; display: block;">
                 </div>
 
-                <div class="grid-item">
-                    <span style="font-size:14px;">Chinches</span>
-                    <input type="checkbox" name="Chinches" id="Chinches" value="Si" style="font-size:14px;">
+                <div class="col-md-2" style="text-align: center;">
+                    <span style="font-size:14px; display: block;">Ratas</span>
+                    <input type="checkbox" name="Ratas" id="Ratas" value="Si" style="font-size:14px; margin: 5px auto; display: block;">
                 </div>
 
-                <div class="grid-item">
-                    <span style="font-size:14px;">Ratas</span>
-                    <input type="checkbox" name="Ratas" id="Ratas" value="Si" style="font-size:14px;">
+                <div class="col-md-2" style="text-align: center;">
+                    <span style="font-size: 14px; display: block;">Moscos</span>
+                    <input type="checkbox" name="Moscos" id="Moscos" value="Si" style="font-size:14px; margin: 5px auto; display: block;">
                 </div>
 
-                <div class="grid-item">
-                    <span style="font-size: 14px;">Moscos</span>
-                    <input type="checkbox" name="Moscos" id="Moscos" value="Si" style="font-size:14px;">
-                </div>
-
-                <div class="grid-item">
-                    <span style="font-size: 14px;">Gallinas</span>
+                <div class="col-md-2" style="text-align: center;">
+                    <span style="font-size: 14px; display: block;">Gallinas</span>
                     <input type="checkbox" name="Gallinas" id="Gallinas" value="Si" style="font-size:14px;">
                 </div>
 
-                <div class="grid-item">
-                    <span style="font-size: 14px;">Cerdos</span>
-                    <input type="checkbox" name="Cerdos" id="Cerdos"  value="Si" style="font-size:14px;">
+                <div class="col-md-2" style="text-align: center;">
+                    <span style="font-size: 14px; display: block;">Cerdos</span>
+                    <input type="checkbox" name="Cerdos" id="Cerdos"  value="Si" style="font-size:14px; margin: 5px auto; display: block;">
                 </div>
 
-                <div class="grid-item">
-                    <span style="font-size:14px;">Caballos</span>
-                    <input type="checkbox" name="Caballos" id="Caballos"  value="Si" style="font-size:14px;">
+                <div class="col-md-2" style="text-align: center;">
+                    <span style="font-size:14px; display: block;">Caballos</span>
+                    <input type="checkbox" name="Caballos" id="Caballos"  value="Si" style="font-size:14px; margin: 5px auto; display: block;">
                 </div>
 
-                <div class="grid-item">
-                    <span style="font-size: 14px;">Becerros</span>
-                    <input type="checkbox" name="Becerros" id="Becerros"  value="Si" style="font-size:14px;">
+                <div class="col-md-2" style="text-align: center;">
+                    <span style="font-size: 14px; display: block;">Becerros</span>
+                    <input type="checkbox" name="Becerros" id="Becerros"  value="Si" style="font-size:14px; margin: 5px auto; display: block;">
                 </div>
 
-                <div class="grid-item">
-                    <span style="font-size:14px;">Pajaros</span>
-                    <input type="checkbox" name="Pajaros" id="Pajaros" value="Si" style="font-size: 14px;">
+                <div class="col-md-2" style="text-align: center;">
+                    <span style="font-size:14px;  display: block;">Pajaros</span>
+                    <input type="checkbox" name="Pajaros" id="Pajaros" value="Si" style="font-size: 14px; margin: 5px auto; display: block;">
                 </div>
 
-                <div class="grid-item">
-                    <span style="font-size:14px;">Borregos</span>
-                    <input type="checkbox" name="Borregos" id="Borregos" value="Si" style="font-size: 14px;">
+                <div class="col-md-2" style="text-align: center;">
+                    <span style="font-size:14px; display: block;">Borregos</span>
+                    <input type="checkbox" name="Borregos" id="Borregos" value="Si" style="font-size: 14px; margin: 5px auto; display: block;">
                 </div>
 
-                <div class="grid-item">
-                    <span style="font-size:14px;">Tortugas</span>
-                    <input type="checkbox" name="Tortugas" id="Tortugas" value="Si" style="font-size:14px;">
+                <div class="col-md-2" style="text-align: center;">
+                    <span style="font-size:14px;  display: block;">Tortugas</span>
+                    <input type="checkbox" name="Tortugas" id="Tortugas" value="Si" style="font-size:14px; margin: 5px auto; display: block;">
                 </div>
 
-                <div class="grid-item">
-                    <span style="font-size:14px;">Patos</span>
-                    <input type="checkbox" name="Patos" id="Patos" value="Si" style="font-size:14px;">
+                <div class="col-md-2" style="text-align: center;">
+                    <span style="font-size:14px; display: block;">Patos</span>
+                    <input type="checkbox" name="Patos" id="Patos" value="Si" style="font-size:14px; margin: 5px auto; display: block;">
                 </div>
 
-                <div class="grid-item">
-                    <span style="font-size:14px;">Burros</span>
-                    <input type="checkbox" name="Burros" id="Burros" value="Si" style="font-size:14px;">
+                <div class="col-md-2" style="text-align: center;">
+                    <span style="font-size:14px; display: block; ">Burros</span>
+                    <input type="checkbox" name="Burros" id="Burros" value="Si" style="font-size:14px; margin: 5px auto; display: block;">
                 </div>
 
-                <div class="grid-item">
-                    <span style="font-size: 14px;">Moscas</span>
-                    <input type="checkbox" name="Moscas" id="Moscas" value="Si" style="font-size:14px;">
+                <div class="col-md-2" style="text-align: center;">
+                    <span style="font-size: 14px; display: block;">Moscas</span>
+                    <input type="checkbox" name="Moscas" id="Moscas" value="Si" style="font-size:14px; margin: 5px auto; display: block;">
                 </div>
 
-        </div> <!--=========== DIV DEL ROW DE  ANIMALES ================-->
+        </div> <!--=========== DIV DEL ROW DE  ANIMALES ================--><br>
+
     </div><!--=========== DIV DEL CONTAINER ANIMALES  ================-->
             
                 <div class="col-md-6">
@@ -1734,6 +1735,7 @@
                 </div> 
             
             </div><!--=========== DIV ROW REFERENCIA================-->
+
 
            
 
