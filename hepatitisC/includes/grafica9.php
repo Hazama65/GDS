@@ -82,7 +82,6 @@
   });
 
   let data = <?php echo $NAFLD; ?>;
-  console.log(data);
 
   // Set data
   xAxis.data.setAll(data);

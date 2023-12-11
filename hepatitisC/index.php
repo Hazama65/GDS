@@ -11,7 +11,7 @@
     }
     //llamado al modal de registrar paciente de anemia
     require('php/controllers/registros.controller.php');
-    include("modals/registrarpaciente.php");
+    include("modals/registrarPaciente.php");
 ?>
 
 

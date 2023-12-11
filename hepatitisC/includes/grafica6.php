@@ -82,7 +82,6 @@
   });
 
   let data = <?php echo $ultraSonido; ?>;
-  console.log(data);
 
   // Set data
   xAxis.data.setAll(data);

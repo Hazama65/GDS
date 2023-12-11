@@ -82,7 +82,6 @@
   });
 
   let data = <?php echo $cargaDX; ?>;
-  console.log(data);
 
   // Set data
   xAxis.data.setAll(data);
