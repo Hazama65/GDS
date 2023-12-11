@@ -265,6 +265,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     });
                 });
 
+
+                          // AL SELECCIONAMOS SI DIAGNOSTICO POR PCR
                 document.addEventListener("DOMContentLoaded", function () {
                     // Obtiene el elemento select y el div que se debe mostrar/ocultar
                     var selectElement = document.getElementById("prueb_pcr");
@@ -283,25 +285,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     });
                 });
 
-                                // AL SELECCIONAMOS SI DIAGNOSTICO POR PCR
-
-                document.addEventListener("DOMContentLoaded", function () {
-                    // Obtiene el elemento select y el div que se debe mostrar/ocultar
-                    var selectElement = document.getElementById("lab_dx");
-                    var divElement = document.getElementById("PT_id");
-                        
-                    // Agrega un evento de cambio al elemento select
-                    selectElement.addEventListener("change", function () {
-                        // Comprueba si se seleccionó "Si"
-                        if (selectElement.value === "Si") {
-                            // Muestra el div si se selecciona "Si"
-                            divElement.style.display = "block";
-                        } else {
-                            // Oculta el div en caso contrario
-                            divElement.style.display = "none";
-                        }
-                    });
-                });
 
             // AL SELECCIONAMOS SI DIAGNOSTICO POR CULTIVO
 
@@ -389,6 +372,32 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Obtiene el elemento select y el div que se debe mostrar/ocultar
                 var selectElement = document.getElementById("referencia");
                 var divElement = document.getElementById("id_refe");
+                var divElementref = document.getElementById("causa_refe");
+                    
+                // Agrega un evento de cambio al elemento select
+                selectElement.addEventListener("change", function () {
+                    // Comprueba si se seleccionó "Si"
+                    if (selectElement.value === "Si") {
+                        // Muestra el div si se selecciona "Si"
+                        divElement.style.display = "block";
+                        divElementref.style.display ="block";
+                    } else {
+                        // Oculta el div en caso contrario
+                        divElement.style.display = "none";
+                        divElementref.style.display ="none";
+
+                    }
+                });
+            });
+
+
+            
+            // AL SELECCIONAMOS SI DIAGNOSTICO POR ALTA
+
+            document.addEventListener("DOMContentLoaded", function () {
+                // Obtiene el elemento select y el div que se debe mostrar/ocultar
+                var selectElement = document.getElementById("id_Alta");
+                var divElement = document.getElementById("causa_alta");
                     
                 // Agrega un evento de cambio al elemento select
                 selectElement.addEventListener("change", function () {
@@ -403,25 +412,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             });
 
-        // AL SELECCIONAMOS SI DIAGNOSTICO POR ALTA
 
-        document.addEventListener("DOMContentLoaded", function () {
-            // Obtiene el elemento select y el div que se debe mostrar/ocultar
-            var selectElement = document.getElementById("id_Alta");
-            var divElement = document.getElementById("causa_alta");
-                
-            // Agrega un evento de cambio al elemento select
-            selectElement.addEventListener("change", function () {
-                // Comprueba si se seleccionó "Si"
-                if (selectElement.value === "Si") {
-                    // Muestra el div si se selecciona "Si"
-                    divElement.style.display = "block";
+
+            // CHECKBOX DE TB ABRE TRATAMIENTO 
+            var checkbox = document.getElementById('etiologia_TB');
+            var tratamientoDiv = document.getElementById('tx');
+            var tratamientoFxDiv = document.getElementById('tx_fx');
+            
+            checkbox.addEventListener('change', function() {
+                if (checkbox.checked) {
+                    // Checkbox está marcado, mostrar elementos de tratamiento
+                    tratamientoDiv.style.display = 'block';
+                    tratamientoFxDiv.style.display = 'block';
                 } else {
-                    // Oculta el div en caso contrario
-                    divElement.style.display = "none";
+                    // Checkbox no está marcado, ocultar elementos de tratamiento
+                    tratamientoDiv.style.display = 'none';
+                    tratamientoFxDiv.style.display = 'none';
                 }
             });
-        });
-
-
-

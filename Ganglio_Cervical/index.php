@@ -1,6 +1,7 @@
 <?php
 //llamado al modal de registrar paciente de LPH
 include("modal/ganglio_cervical.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -62,11 +63,18 @@ include("modal/ganglio_cervical.php");
                         <ul id="patient-list">
                             <li class="patient-item">
                                 Jesús Chico López
-                                    <a href="editar_lph.php" >
+                                    <a href="editar.php" >
                                         <button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                         Editar
                                         </button>
                                     </a>
+
+                                    <a href="seguimiento.php" >
+                                        <button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                        Seguimiento
+                                        </button>
+                                    </a>
+    
     
                             </li>
 
@@ -167,6 +175,8 @@ include("modal/ganglio_cervical.php");
 
     <div class="col-7">
         <div class="container">
+            <!-- Button Seguimiento trigger modal -->
+
             <iframe src="consulta.php" frameborder="0" width="100%" height="800px" style="margin-bottom: 100px;"></iframe>
 
         </div> <!--<div class="container">-->
@@ -191,7 +201,6 @@ include("modal/ganglio_cervical.php");
     </footer>
 
 
-    <script src="js/script.js"></script>
     <script src="js/scriptmodal.js"></script>
 </body>
 </html>
