@@ -82,7 +82,6 @@
   });
 
   let data = <?php echo $RelacionesSex; ?>;
-  console.log(data);
 
   // Set data
   xAxis.data.setAll(data);
