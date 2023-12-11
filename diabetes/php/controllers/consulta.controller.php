@@ -4,10 +4,14 @@
 
     $connectionDB = new Database(DB_HOST,DB_NAME,DB_USERNAME,DB_PASSWORD);
     $connectionDBEM = new Database(DB_HOST_EM,DB_NAME_EM,DB_USERNAME_EM,DB_PASSWORD_EM);
+    $connectionDBSEG = new Database(DB_HOST_seg, DB_NAME_seg, DB_USERNAME_seg, DB_PASSWORD_seg);
 
     $id_paciente = null;
     if (isset($_GET['idPaciente']) && is_numeric($_GET['idPaciente'])) {
         $id_paciente = $_GET['idPaciente'];
+        
+        $query_seguimiento = "SELECT * FROM datos_seguimiento WHERE id_paciente = '$id_paciente'";
+        $data_seguimiento = $connectionDBSEG->getRows($query_seguimiento);
 
         $queryAllData = "SELECT dp.*, di.*, hip.*, ec.*, dis.*, c.*, lab.*, com.*, hg.*, ins.*, hipo.*, ah.*, ot.*,ej.*
         FROM datos_paciente dp

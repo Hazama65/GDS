@@ -114,3 +114,10 @@ footer {
     color: black; /* Cambia el color del texto de las celdas con esta clase */
 }
 
+
+.seguimiento_btns{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: flex-end;
+}

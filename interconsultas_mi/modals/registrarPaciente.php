@@ -52,6 +52,7 @@
                         <option value="Mohamad Jamal Eddin">Mohamad Jamal Eddin</option>
                         <option value="Pamela Priscila Palacios Ortiz">Pamela Priscila Palacios Ortiz</option>
                         <option value="Paula Daniela Rodriguez Arciniegas">Paula Daniela Rodriguez Arciniegas</option>
+                        <option value="Paula Elizabeth Paredes Cabrera">Paula Elizabeth Paredes Cabrera</option>
                         <option value="Paulina Ortega Iturbide">Paulina Ortega Iturbide</option>
                         <option value="Sonia Lisset Mandoujano Sanchez">Sonia Lisset Mandoujano Sanchez</option>
                         <option value="Victor Espinoza Hernandez">Victor Espinoza Hernández</option>
@@ -69,10 +70,12 @@
                     <option value="Eliseo Perez Silva">Eliseo Perez Silva </option>
                     <option value="Evelyn Samantha Perez Huerta">Evelyn Samantha Pérez Huerta</option>
                     <option value="Fernando Rivera Ortega">Fernando Rivera Ortega</option>
+                    <option value="Flor Elena Rojas Terrazas">Flor Elena Rojas Terrazas</option>
                     <option value="Francisco Gallego Sanchez">Francisco Gallego Sánchez</option>
                     <option value="Gerardo Rojas Magana">Gerardo Rojas Magaña</option>
                     <option value="Guadalupe Garduno Arriaga">Guadalupe Garduño Arriaga</option>
                     <option value="Israel Gil Velazquez">Israel Gil Velazquez</option>
+                    <option value="José Antonio García Cuéllar">José Antonio García Cuéllar</option>
                     <option value="Juan Edilberto Rodriguez Pina">Juan Edilberto Rodriguez Piña </option>
                     <option value="Luis Alfonso Covarrubias">Luis Alfonso Covarrubias</option>
                     <option value="Maria Isabel Silva Cruz">María Isabel Silva Cruz</option>

@@ -83,6 +83,7 @@
                         <option value="Pamela Priscila Palacios Ortiz"<?php if ($residente == 'Pamela Priscila Palacios Ortiz') echo 'selected'; ?>>Pamela Priscila Palacios Ortiz</option>
                         <option value="Paula Daniela Rodriguez Arciniegas"<?php if ($residente == 'Paula Daniela Rodriguez Arciniegas') echo 'selected'; ?>>Paula Daniela Rodriguez Arciniegas</option>
                         <option value="Paulina Ortega Iturbide"<?php if ($residente == 'Paulina Ortega Iturbide') echo 'selected'; ?>>Paulina Ortega Iturbide</option>
+                        <option value="Paula Elizabeth Paredes Cabrera"<?php if ($residente == 'Paula Elizabeth Paredes Cabrera') echo 'selected'; ?>>Paula Elizabeth Paredes Cabrera</option>
                         <option value="Sonia Lisset Mandoujano Sanchez"<?php if ($residente == 'Sonia Lisset Mandoujano Sanchez') echo 'selected'; ?>>Sonia Lisset Mandoujano Sanchez</option>
                         <option value="Victor Espinoza Hernandez"<?php if ($residente == 'Victor Espinoza Hernandez') echo 'selected'; ?>>Victor Espinoza Hernández</option>
                         <option value="Villegas Contreras Cristian Ricardo"<?php if ($residente == 'Villegas Contreras Cristian Ricardo') echo 'selected'; ?>>Villegas Contreras Cristian Ricardo</option>
@@ -99,10 +100,12 @@
                         <option value="Eliseo Perez Silva"<?php if ($responsable == 'Eliseo Perez Silva') echo 'selected'; ?>>Eliseo Perez Silva </option>
                         <option value="Evelyn Samantha Perez Huerta"<?php if ($responsable == 'Evelyn Samantha Perez Huerta') echo 'selected'; ?>>Evelyn Samantha Pérez Huerta</option>
                         <option value="Fernando Rivera Ortega"<?php if ($responsable == 'Fernando Rivera Ortega') echo 'selected'; ?>>Fernando Rivera Ortega</option>
+                        <option value="Flor Elena Rojas Terrazas"<?php if ($responsable == 'Flor Elena Rojas Terrazas') echo 'selected'; ?>>Flor Elena Rojas Terrazas</option>
                         <option value="Francisco Gallego Sanchez"<?php if ($responsable == 'Francisco Gallego Sanchez') echo 'selected'; ?>>Francisco Gallego Sánchez</option>
                         <option value="Gerardo Rojas Magana"<?php if ($responsable == 'Gerardo Rojas Magana') echo 'selected'; ?>>Gerardo Rojas Magaña</option>
                         <option value="Guadalupe Garduno Arriaga"<?php if ($responsable == 'Guadalupe Garduno Arriaga') echo 'selected'; ?>>Guadalupe Garduño Arriaga</option>
                         <option value="Israel Gil Velazquez"<?php if ($responsable == 'Israel Gil Velazquez') echo 'selected'; ?>>Israel Gil Velazquez</option>
+                        <option value="José Antonio García Cuéllar"<?php if ($responsable == 'José Antonio García Cuéllar') echo 'selected'; ?>>José Antonio García Cuéllar</option>
                         <option value="Juan Edilberto Rodriguez Pina"<?php if ($responsable == 'Juan Edilberto Rodriguez Pina') echo 'selected'; ?>>Juan Edilberto Rodriguez Piña </option>
                         <option value="Luis Alfonso Covarrubias"<?php if ($responsable == 'Luis Alfonso Covarrubias') echo 'selected'; ?>>Luis Alfonso Covarrubias</option>
                         <option value="Maria Isabel Silva Cruz"<?php if ($responsable == 'Maria Isabel Silva Cruz') echo 'selected'; ?>>María Isabel Silva Cruz</option>

@@ -272,12 +272,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // AL INTRODUCIR VALOR IGUAL O MENOR A 11 SE HABILITE EL CAMPO DE HB GLUCOSILADA
 
+
 document.getElementById("id_HB").addEventListener("input", function() {
     var valorBH = parseFloat(this.value);
+    var glucosiladaInput = document.getElementById("id_glucosilada");
+
     if (valorBH <= 11) {
-        document.getElementById("id_glucosilada").disabled = true;
+        glucosiladaInput.readOnly = true;
     } else {
-        document.getElementById("id_glucosilada").disabled = false;
+        glucosiladaInput.readOnly = false;
     }
 });
 
