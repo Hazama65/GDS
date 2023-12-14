@@ -672,7 +672,7 @@
                                         <td>
                                             <div class="custom-control custom-checkbox" style="white-space: nowrap;">
                                                 <input type="checkbox" class="custom-control-input"
-                                                    name-="rotavirus_6mes" id="rotavirus_6mes">
+                                                    name="rotavirus_6mes" id="rotavirus_6mes">
                                                 <label class="custom-control-label" for="rotavirus_6"
                                                     style="font-size:14px;">Rotavirus</label>
                                             </div>

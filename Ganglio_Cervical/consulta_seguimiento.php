@@ -1,3 +1,6 @@
+<?php
+include('php/controllers/consulta_seguimiento.controller.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,17 +31,12 @@
 
             <tr>
                 <td class="estilo-celda">Nombre Paciente</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">CURP</td>
-                <td></td>
+                <td><?php echo $nombre_paciente ; ?></td>
             </tr>
             
             <tr>
                 <td class="estilo-celda">Fecha de Seguimiento</td>
-                <td></td>
+                <td><?php echo $fecha_seguimiento ; ?></td>
             </tr>
 
             <tr>
@@ -48,18 +46,18 @@
 
             <tr>
                 <td class="estilo-celda">Tiempo de Evolución</td>
-                <td></td>
+                <td><?php echo $tiempo_evo ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Período Evolución</td>
-                <td></td>
+                <td><?php echo $periodo_evo ; ?></td>
             </tr>
 
             
             <tr>
                 <td class="estilo-celda">Tamaño del Ganglio</td>
-                <td></td>
+                <td><?php echo $tam_ganglio ; ?></td>
             </tr>
 
             <tr>
@@ -69,74 +67,74 @@
 
             <tr>
                 <td class="estilo-celda"> Doloroso </td>
-                <td></td>
+                <td><?php echo $doloroso ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda"> No Doloroso </td>
-                <td></td>
+                <td><?php echo $no_doloroso ; ?></td>
             </tr>
 
             
             <tr>
                 <td class="estilo-celda">Indurado</td>
-                <td></td>
+                <td><?php echo $indurado ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">No Indurado</td>
-                <td></td>
+                <td><?php echo $no_indurado ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Eritematoso</td>
-                <td></td>
+                <td><?php echo $eritematoso ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Hipertermico</td>
-                <td></td>
+                <td><?php echo $hipertermico ; ?></td>
             </tr>
 
             
             <tr>
                 <td class="estilo-celda">Con Secreción</td>
-                <td></td>
+                <td><?php echo $secrecion ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Sin Secreción</td>
-                <td></td>
+                <td><?php echo $sin_secrecion ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Bien Delimitado</td>
-                <td></td>
+                <td><?php echo $delimitado ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Mal Delimitado</td>
-                <td></td>
+                <td><?php echo $mal_delimitado ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Fijo</td>
-                <td></td>
+                <td><?php echo $fijo ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Movíl</td>
-                <td></td>
+                <td><?php echo $movil ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Cambios de Coloración</td>
-                <td></td>
+                <td><?php echo $coloracion ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Sin Cambios de Coloració</td>
-                <td></td>
+                <td><?php echo $sin_coloracion ; ?></td>
             </tr>
 
             <tr>
@@ -146,48 +144,48 @@
 
             <tr>
                 <td class="estilo-celda">Otros Ganglios </td>
-                <td></td>
+                <td><?php echo $otros_ganglios ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Submandibulares</td>
-                <td></td>
+                <td><?php echo $submandibulares ; ?></td>
             </tr>
 
             
             <tr>
                 <td class="estilo-celda">Axilares</td>
-                <td></td>
+                <td><?php echo $axilares ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Inguinales</td>
-                <td></td>
+                <td><?php echo $inguinales ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Cervicales</td>
-                <td></td>
+                <td><?php echo $cervicales ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Retroauriculares</td>
-                <td></td>
+                <td><?php echo $retroauriculares ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Subclavicular</td>
-                <td></td>
+                <td><?php echo $subclavicular ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Occipital</td>
-                <td></td>
+                <td><?php echo $occipital ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Adenopatias</td>
-                <td></td>
+                <td><?php echo $adenopatias ; ?></td>
             </tr>
 
 </tbody>

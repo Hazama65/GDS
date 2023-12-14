@@ -285,8 +285,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     '$id_Alta','$id_causa','$ultimoId')";
     $dataEstudiosAlta = $connectionDB->ShotSimple($queryEstudiosAlta);
 
-
-
     echo 'success';
 
 }

@@ -45,9 +45,9 @@ include("modal/ganglio_cervical.php");
             <i class="bi bi-person-add"> </i> Paciente
         </button>
 
-        <button type="button" class="btn btn-success">
+        <a href="php/export.php" class="btn btn-success">
             <i class="bi bi-file-earmark-excel"></i> Excel
-        </button>
+        </a>
 
         <a href="graficas_anemia.php">
             <button type="button" class="btn btn-primary" target="_blank">
@@ -77,7 +77,7 @@ include("modal/ganglio_cervical.php");
                             // Genera un elemento de lista para cada paciente
                             echo '<li class="patient-item" data-id-paciente="' . $id_pacientes . '">';
                             echo $nombrePacientes;
-                            echo '<a href="editar_db.php?id=' . $id_pacientes . '">';
+                            echo '<a href="editar_gc.php?id=' . $id_pacientes . '">';
                             echo '<button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Editar</button>';
                             echo '</a>';
                             echo '<a href="seguimiento.php?id=' . $id_pacientes . '">';
@@ -101,11 +101,28 @@ include("modal/ganglio_cervical.php");
 
         <div class="col-7">
             <div class="container">
-                <!-- Button Seguimiento trigger modal -->
+                <!-- Tu código existente -->
 
-                <iframe src="consulta.php" frameborder="0" width="100%" height="800px"
+                <!-- Agrega un div para contener el select dinámico -->
+                <div id="Seguimiento_index" style="display: none;">
+                    <select name="paciente_seleccionado" class="col-6 form-select custom-select"
+                        id="paciente_seleccionado" style="background-color: #6c757d; color: white; margin-bottom:10px">
+                    </select>
+
+                </div>
+
+                <iframe id="consulta" src="" frameborder="0" width="100%" height="800px"
                     style="margin-bottom: 100px;"></iframe>
+            </div> <!-- <div class="container"> -->
+        </div> <!-- FINALIZA EL DIV class col 8 -->
 
+        <iframe id="consulta_seguimiento" src="" frameborder="0" width="100%" height="800px"
+            style="margin-bottom: 100px;"></iframe>
+
+        <div class="col-7">
+            <div class="container">
+                <iframe id="consulta" src="consulta.php" frameborder="0" width="100%" height="800px"
+                    style="margin-bottom: 100px;"></iframe>
             </div> <!--<div class="container">-->
         </div><!-- FINALIZA EL DIV class col 8-->
 
@@ -128,11 +145,14 @@ include("modal/ganglio_cervical.php");
     </footer>
 
 
-    
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/visualizacion.js"></script>
     <script src="js/scriptmodal.js"></script>
-    
+    <script src="js/visualizacion_seg.js"></script>
+
+
     <script type="module">
         import { mainForm } from "./js/insert.js";
         mainForm(); 

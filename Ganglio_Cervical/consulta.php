@@ -1,3 +1,6 @@
+<?php
+    include('php/controllers/consulta.controller.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,33 +28,28 @@
 
         <tbody style="font-size:13px;" class="table-bordered">
             <tr>
-                <td class="estilo-celda">CURP</td>
-                <td></td>
-            </tr>
-
-            <tr>
                 <td class="estilo-celda">Nombre Paciente</td>
-                <td></td>
+                <td><?php echo $nombre_paciente ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Sexo</td>
-                <td></td>
+                <td><?php echo $sexo ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Edad de Abordaje</td>
-                <td></td>
+                <td><?php echo $edad ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Residencia</td>
-                <td></td>
+                <td><?php echo $residencia ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Nivel Socioeconomico</td>
-                <td></td>
+                <td><?php echo $nivel_socioeconomico ; ?></td>
             </tr>
 
             <!--ANTECEDENTES HEREDOFAMILIARES -->
@@ -62,7 +60,7 @@
 
             <tr>
                 <td class="estilo-celda">Contacto con Personas Enfermas </td>
-                <td></td>
+                <td><?php echo $contacto_enfermos ; ?></td>
             </tr>
 
             <tr>
@@ -72,48 +70,48 @@
 
             <tr>
                 <td class="estilo-celda">Contacto con personas Tos crónica</td>
-                <td></td>
+                <td><?php echo $tos_cronica ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Padre</td>
-                <td></td>
+                <td><?php echo $tos_padre ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Madre</td>
-                <td></td>
+                <td><?php echo $tos_madre ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Abuelo Materno</td>
-                <td></td>
+                <td><?php echo $tos_abuelo_m ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Abuela Materna</td>
-                <td></td>
+                <td><?php echo $tos_abuela_m ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Abuelo Paterno</td>
-                <td></td>
+                <td><?php echo $tos_abuelo_p ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Abuela Paterna</td>
-                <td></td>
+                <td><?php echo $tos_abuela_p ; ?></td>
             </tr>
 
             
             <tr>
                 <td class="estilo-celda">Número de Hermanas</td>
-                <td></td>
+                <td><?php echo $tos_no_hermanas ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Número de Hermanos</td>
-                <td></td>
+                <td><?php echo $tos_no_hermanos ; ?></td>
             </tr>
 
             <tr>
@@ -123,48 +121,48 @@
 
             <tr>
                 <td class="estilo-celda">Contacto con personas Tuberculosis</td>
-                <td></td>
+                <td><?php echo $tuberculosis ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Padre</td>
-                <td></td>
+                <td><?php echo $tuberculosis_padre ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Madre</td>
-                <td></td>
+                <td><?php echo $tuberculosis_madre ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Abuelo Materno</td>
-                <td></td>
+                <td><?php echo $tuberculosis_abuelo_m ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Abuela Materna</td>
-                <td></td>
+                <td><?php echo $tuberculosis_abuela_m ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Abuelo Paterno</td>
-                <td></td>
+                <td><?php echo $tuberculosis_abuelo_p ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Abuela Paterna</td>
-                <td></td>
+                <td><?php echo $tuberculosis_abuela_p ; ?></td>
             </tr>
 
             
             <tr>
                 <td class="estilo-celda">Número de Hermanas</td>
-                <td></td>
+                <td><?php echo $tuberculosis_no_hermanas ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Número de Hermanos</td>
-                <td></td>
+                <td><?php echo $tuberculosis_no_hermanos ; ?></td>
             </tr>
 
             <tr>
@@ -174,48 +172,48 @@
 
             <tr>
                 <td class="estilo-celda">Contacto con personas VIH</td>
-                <td></td>
+                <td><?php echo $vih ; ?></td>
             </tr>            
             
             <tr>
                 <td class="estilo-celda">Padre</td>
-                <td></td>
+                <td><?php echo $vih_padre ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Madre</td>
-                <td></td>
+                <td><?php echo $vih_madre ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Abuelo Materno</td>
-                <td></td>
+                <td><?php echo $vih_abuelo_m ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Abuela Materna</td>
-                <td></td>
+                <td><?php echo $vih_abuela_m ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Abuelo Paterno</td>
-                <td></td>
+                <td><?php echo $vih_abuelo_p ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Abuela Paterna</td>
-                <td></td>
+                <td><?php echo $vih_abuela_p ; ?></td>
             </tr>
 
             
             <tr>
                 <td class="estilo-celda">Número de Hermanas</td>
-                <td></td>
+                <td><?php echo $vih_no_hermanas ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Número de Hermanos</td>
-                <td></td>
+                <td><?php echo $vih_no_hermanos ; ?></td>
             </tr>
 
             <tr>
@@ -225,84 +223,94 @@
 
             <tr>
                 <td class="estilo-celda">Contacto con Animales</td>
-                <td></td>
+                <td><?php echo $contacto_animales ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Perros</td>
-                <td></td>
+                <td><?php echo $perro ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Gatos</td>
-                <td></td>
+                <td><?php echo $gato ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Conejos </td>
-                <td></td>
+                <td><?php echo $conejo ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Pollos </td>
-                <td></td>
+                <td><?php echo $pollo ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Chinches </td>
-                <td></td>
+                <td><?php echo $chinche ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Ratas </td>
-                <td></td>
+                <td><?php echo $rata ; ?></td>
             </tr>
 
             
             <tr>
                 <td class="estilo-celda">Moscos</td>
-                <td></td>
+                <td><?php echo $mosco ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Gallinas</td>
-                <td></td>
+                <td><?php echo $gallinas ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Cerdos</td>
-                <td></td>
+                <td><?php echo $cerdo ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Caballos</td>
-                <td></td>
+                <td><?php echo $caballo ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Becerros </td>
-                <td></td>
+                <td><?php echo $becerro ; ?></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Pajaro</td>
+                <td><?php echo $pajaro ; ?></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Borregos</td>
+                <td><?php echo $borrego ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Tortugas </td>
-                <td></td>
+                <td><?php echo $tortuga ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Patos </td>
-                <td></td>
+                <td><?php echo $pato ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Burros</td>
-                <td></td>
+                <td><?php echo $burro ; ?></td>
             </tr>
 
             
             <tr>
                 <td class="estilo-celda">Moscas</td>
-                <td></td>
+                <td><?php echo $mosca ; ?></td>
             </tr>
 
             <tr>
@@ -312,32 +320,32 @@
 
             <tr>
                 <td class="estilo-celda">Viajes recientes</td>
-                <td></td>
+                <td><?php echo $viajes_recientes ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Lugar</td>
-                <td></td>
+                <td><?php echo $lugar ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Visitas a Cuevas </td>
-                <td></td>
+                <td><?php echo $vist_cuevas ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Alimentarios </td>
-                <td></td>
+                <td><?php echo $alimentarios ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Tipo-Alimentario </td>
-                <td></td>
+                <td><?php echo $tipo_alimentarios ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Vacunación Completa </td>
-                <td></td>
+                <td><?php echo $vacunacion ; ?></td>
             </tr>
 
 
@@ -353,12 +361,12 @@
 
             <tr>
                 <td class="estilo-celda">BCG</td>
-                <td></td>
+                <td><?php echo $BCG ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Hepatitis B</td>
-                <td></td>
+                <td><?php echo $Hepatitis_B_1 ; ?></td>
             </tr>
 
             <tr>
@@ -368,22 +376,22 @@
 
             <tr>
                 <td class="estilo-celda">Pentavalente Acelular </td>
-                <td></td>
+                <td><?php echo $Pentavalente_Acelular_1 ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Hepatitis B</td>
-                <td></td>
+                <td><?php echo $Hepatitis_B_2 ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Rotavirus</td>
-                <td></td>
+                <td><?php echo $Rotavirus_1 ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Neumococo B</td>
-                <td></td>
+                <td><?php echo $Neumococo_1 ; ?></td>
             </tr>
 
             <tr>
@@ -393,17 +401,17 @@
 
             <tr>
                 <td class="estilo-celda">Pentavalente Acelular </td>
-                <td></td>
+                <td><?php echo $Pentavalente_Acelular_2 ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Rotavirus</td>
-                <td></td>
+                <td><?php echo $Rotavirus_2 ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Neumococo B</td>
-                <td></td>
+                <td><?php echo $Neumococo_2 ; ?></td>
             </tr>
 
             <tr>
@@ -413,17 +421,17 @@
 
             <tr>
                 <td class="estilo-celda">Pentavalente Acelular </td>
-                <td></td>
+                <td><?php echo $Pentavalente_Acelular_3 ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Rotavirus</td>
-                <td></td>
+                <td><?php echo $Rotavirus_3 ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Influenza</td>
-                <td></td>
+                <td><?php echo $Influenza_1 ; ?></td>
             </tr>
 
 
@@ -434,7 +442,7 @@
 
             <tr>
                 <td class="estilo-celda">Influenza 2da dosis</td>
-                <td></td>
+                <td><?php echo $Influenza_2 ; ?></td>
             </tr>
 
             <tr>
@@ -444,12 +452,12 @@
 
             <tr>
                 <td class="estilo-celda">SRP</td>
-                <td></td>
+                <td><?php echo $SRP_1 ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Neumococo C.</td>
-                <td></td>
+                <td><?php echo $Neumococo_3 ; ?></td>
             </tr>
 
             <tr>
@@ -459,7 +467,7 @@
 
             <tr>
                 <td class="estilo-celda">Pentavalente Acelular</td>
-                <td></td>
+                <td><?php echo $Pentavalente_Acelular_4 ; ?></td>
             </tr>
 
             <tr>
@@ -469,7 +477,7 @@
 
             <tr>
                 <td class="estilo-celda">Influenza Refuerzo Anual</td>
-                <td></td>
+                <td><?php echo $Influenza_refuerzo_1 ; ?></td>
             </tr>
 
             <tr>
@@ -479,7 +487,7 @@
 
             <tr>
                 <td class="estilo-celda">Influenza Refuerzo Anual</td>
-                <td></td>
+                <td><?php echo $Influenza_refuerzo_2 ; ?></td>
             </tr>
 
             <tr>
@@ -489,12 +497,12 @@
 
             <tr>
                 <td class="estilo-celda">DPT(Refuerzo)</td>
-                <td></td>
+                <td><?php echo $DPT ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Influenza Refuerzo Anual</td>
-                <td></td>
+                <td><?php echo $Influenza_refuerzo_3 ; ?></td>
             </tr>
 
             <tr>
@@ -504,12 +512,12 @@
 
             <tr>
                 <td class="estilo-celda">Influenza Refuerzo Anual</td>
-                <td></td>
+                <td><?php echo $Influenza_refuerzo_4 ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">OVP</td>
-                <td></td>
+                <td><?php echo $OVP ; ?></td>
             </tr>
 
             <tr>
@@ -519,7 +527,7 @@
 
             <tr>
                 <td class="estilo-celda">SRP (Refuerzo)</td>
-                <td></td>
+                <td><?php echo $SRP_2 ; ?></td>
             </tr>
 
             <tr>
@@ -529,7 +537,7 @@
 
             <tr>
                 <td class="estilo-celda">VPH</td>
-                <td></td>
+                <td><?php echo $VPH ; ?></td>
             </tr>
 
             <tr>
@@ -539,89 +547,89 @@
 
             <tr>
                 <td class="estilo-celda">Reflujo</td>
-                <td></td>
+                <td><?php echo $reflujo ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Neumopatía Crónica</td>
-                <td></td>
+                <td><?php echo $neuropatica_cron ; ?></td>
             </tr>
 
             
             <tr>
                 <td class="estilo-celda">Edad-Neumopatía</td>
-                <td></td>
+                <td><?php echo $edad_neuro ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Talla Baja</td>
-                <td></td>
+                <td><?php echo $talla_baja ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Discapacidad Intelectual</td>
-                <td></td>
+                <td><?php echo $discapacidad_intelec ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Pancreatitis por AVP</td>
-                <td></td>
+                <td><?php echo $AVP ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">LPH</td>
-                <td></td>
+                <td><?php echo $LPH ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Epilepsia</td>
-                <td></td>
+                <td><?php echo $epilipsia ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Amigdalectomía</td>
-                <td></td>
+                <td><?php echo $amigdalectomia ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Apendicectomía</td>
-                <td></td>
+                <td><?php echo $apendicectomia ; ?></td>
             </tr>
 
             
             <tr>
                 <td class="estilo-celda">Rubeola</td>
-                <td></td>
+                <td><?php echo $rubeola ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Invaginación</td>
-                <td></td>
+                <td><?php echo $invaginacion ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Fractura</td>
-                <td></td>
+                <td><?php echo $fractura ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Rinitis Alérgica</td>
-                <td></td>
+                <td><?php echo $rinitis ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Pielonefritis</td>
-                <td></td>
+                <td><?php echo $pielonefritis ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Varicela</td>
-                <td></td>
+                <td><?php echo $varicela ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Edad-Varicela</td>
-                <td></td>
+                <td><?php echo $edad_varicela ; ?></td>
             </tr>
 
             <tr>
@@ -631,18 +639,18 @@
 
             <tr>
                 <td class="estilo-celda">Tiempo de Evolución</td>
-                <td></td>
+                <td><?php echo $tiempo_evo ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Período Evolución</td>
-                <td></td>
+                <td><?php echo $periodo_evo ; ?></td>
             </tr>
 
             
             <tr>
                 <td class="estilo-celda">Tamaño del Ganglio</td>
-                <td></td>
+                <td><?php echo $tamaño_ganglio ; ?></td>
             </tr>
 
             <tr>
@@ -652,74 +660,74 @@
 
             <tr>
                 <td class="estilo-celda"> Doloroso </td>
-                <td></td>
+                <td><?php echo $doloroso ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda"> No Doloroso </td>
-                <td></td>
+                <td><?php echo $no_doloroso ; ?></td>
             </tr>
 
             
             <tr>
                 <td class="estilo-celda">Indurado</td>
-                <td></td>
+                <td><?php echo $indurado ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">No Indurado</td>
-                <td></td>
+                <td><?php echo $no_indurado ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Eritematoso</td>
-                <td></td>
+                <td><?php echo $eritematoso ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Hipertermico</td>
-                <td></td>
+                <td><?php echo $hipertermico ; ?></td>
             </tr>
 
             
             <tr>
                 <td class="estilo-celda">Con Secreción</td>
-                <td></td>
+                <td><?php echo $secrecion ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Sin Secreción</td>
-                <td></td>
+                <td><?php echo $sin_secrecion ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Bien Delimitado</td>
-                <td></td>
+                <td><?php echo $bien_delimitado ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Mal Delimitado</td>
-                <td></td>
+                <td><?php echo $mal_delimitado ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Fijo</td>
-                <td></td>
+                <td><?php echo $fijo ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Movíl</td>
-                <td></td>
+                <td><?php echo $movil ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Cambios de Coloración</td>
-                <td></td>
+                <td><?php echo $cambio_coloracion ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Sin Cambios de Coloració</td>
-                <td></td>
+                <td><?php echo $sin_cambio_coloracion ; ?></td>
             </tr>
 
             <tr>
@@ -729,48 +737,48 @@
 
             <tr>
                 <td class="estilo-celda">Otros Ganglios </td>
-                <td></td>
+                <td><?php echo $otros_ganglios ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Submandibulares</td>
-                <td></td>
+                <td><?php echo $submandibulares ; ?></td>
             </tr>
 
             
             <tr>
                 <td class="estilo-celda">Axilares</td>
-                <td></td>
+                <td><?php echo $axilares ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Inguinales</td>
-                <td></td>
+                <td><?php echo $inguinales ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Cervicales</td>
-                <td></td>
+                <td><?php echo $cervicales ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Retroauriculares</td>
-                <td></td>
+                <td><?php echo $retroauriculares ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Subclavicular</td>
-                <td></td>
+                <td><?php echo $subclavicular ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Occipital</td>
-                <td></td>
+                <td><?php echo $occipital ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Adenopatias</td>
-                <td></td>
+                <td><?php echo $adenopatias ; ?></td>
             </tr>
 
             <tr>
@@ -780,73 +788,58 @@
 
             <tr>
                 <td class="estilo-celda">VEB </td>
-                <td></td>
+                <td><?php echo $VEB ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">CMV</td>
-                <td></td>
+                <td><?php echo $CMV ; ?></td>
             </tr>
 
             
             <tr>
                 <td class="estilo-celda">TB</td>
-                <td></td>
+                <td><?php echo $TB ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">B19</td>
-                <td></td>
+                <td><?php echo $B19 ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Bocio</td>
-                <td></td>
+                <td><?php echo $bocio ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Rubéola</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Subclavicular</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Occipital</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Adenopatias</td>
-                <td></td>
+                <td><?php echo $rebeola ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Bartonella</td>
-                <td></td>
+                <td><?php echo $bartonella ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Toxoplamosis</td>
-                <td></td>
+                <td><?php echo $toxoplasmosis ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Inflamatorio</td>
-                <td></td>
+                <td><?php echo $inflamatorio ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Parvovirus</td>
-                <td></td>
+                <td><?php echo $parvovirus ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Varicela</td>
-                <td></td>
+                <td><?php echo $varicela ; ?></td>
             </tr>
 
             <tr>
@@ -856,23 +849,23 @@
 
             <tr>
                 <td class="estilo-celda">Isonicida</td>
-                <td></td>
+                <td><?php echo $isonicida ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Rifampicina</td>
-                <td></td>
+                <td><?php echo $rifampicina ; ?></td>
             </tr>
 
             
             <tr>
                 <td class="estilo-celda">Pirazinamida</td>
-                <td></td>
+                <td><?php echo $pirazinamida ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Etambutol</td>
-                <td></td>
+                <td><?php echo $etambutol ; ?></td>
             </tr>
 
             <tr>
@@ -887,63 +880,63 @@
 
             <tr>
                 <td class="estilo-celda">Hemoglobina</td>
-                <td></td>
+                <td><?php echo $hemoglobina ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Hematocrito</td>
-                <td></td>
+                <td><?php echo $hematocrito ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Leucocitos</td>
-                <td></td>
+                <td><?php echo $leucocitos ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Neutrófilos</td>
-                <td></td>
+                <td><?php echo $neutrofilos ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Linfocitos</td>
-                <td></td>
+                <td><?php echo $linfocitos ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Monocitos</td>
-                <td></td>
+                <td><?php echo $monocitos ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Plaquetas</td>
-                <td></td>
+                <td><?php echo $plaquetas ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Eosinófilos</td>
-                <td></td>
+                <td><?php echo $eosinofilos ; ?></td>
             </tr>
 
             
             <tr>
                 <td class="estilo-celda">Eritrocitos</td>
-                <td></td>
+                <td><?php echo $eritrocitos ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Procalcitonina</td>
-                <td></td>
+                <td><?php echo $procalcitonina ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Volumen Corpuscular Medio</td>
-                <td></td>
+                <td><?php echo $vol_corpuscular ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Ancho de Distribución Eritrocitaria</td>
-                <td></td>
+                <td><?php echo $ancho_eritrocitaria ; ?></td>
             </tr>
 
             <tr>
@@ -953,72 +946,72 @@
 
             <tr>
                 <td class="estilo-celda">DHL</td>
-                <td></td>
+                <td><?php echo $DHL ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">AST</td>
-                <td></td>
+                <td><?php echo $AST ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">ALT</td>
-                <td></td>
+                <td><?php echo $ALT ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Globulina</td>
-                <td></td>
+                <td><?php echo $globulina ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Albúmina</td>
-                <td></td>
+                <td><?php echo $albumina ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">BD</td>
-                <td></td>
+                <td><?php echo $db ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">BI</td>
-                <td></td>
+                <td><?php echo $bi ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">TGO</td>
-                <td></td>
+                <td><?php echo $tgo ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">TGP</td>
-                <td></td>
+                <td><?php echo $tgp ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">FA</td>
-                <td></td>
+                <td><?php echo $fa ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">GGT</td>
-                <td></td>
+                <td><?php echo $ggt ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">PT</td>
-                <td></td>
+                <td><?php echo $pt ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">REL A/G</td>
-                <td></td>
+                <td><?php echo $rel ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Proteinas Totales</td>
-                <td></td>
+                <td><?php echo $proteinas_totales ; ?></td>
             </tr>
 
             <tr>
@@ -1028,22 +1021,22 @@
 
             <tr>
                 <td class="estilo-celda">Serología</td>
-                <td></td>
+                <td><?php echo $serologia ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Resultado-Serología</td>
-                <td></td>
+                <td><?php echo $resultado_sero ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Prueba PCR</td>
-                <td></td>
+                <td><?php echo $PCR ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Resultado-PCR</td>
-                <td></td>
+                <td><?php echo $resultado_PCR ; ?></td>
             </tr>
 
             <tr>
@@ -1053,12 +1046,12 @@
 
             <tr>
                 <td class="estilo-celda">Cultivo</td>
-                <td></td>
+                <td><?php echo $cultivo ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Resultado-Cultivo</td>
-                <td></td>
+                <td><?php echo $resultado_cultivo ; ?></td>
             </tr>
 
             <tr>
@@ -1068,12 +1061,12 @@
 
             <tr>
                 <td class="estilo-celda">Tomografía</td>
-                <td></td>
+                <td><?php echo $tomografia ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Resultado-Tomografía</td>
-                <td></td>
+                <td><?php echo $resultado_tomografia ; ?></td>
             </tr>
 
             <tr>
@@ -1083,12 +1076,12 @@
 
             <tr>
                 <td class="estilo-celda">Ultrasonido</td>
-                <td></td>
+                <td><?php echo $ultrasonido ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Resultado-Ultrasonido</td>
-                <td></td>
+                <td><?php echo $resultado_ultrasonido ; ?></td>
             </tr>
 
             <tr>
@@ -1098,12 +1091,12 @@
 
             <tr>
                 <td class="estilo-celda">Biopsia</td>
-                <td></td>
+                <td><?php echo $biopsia ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Resultado-Biopsia</td>
-                <td></td>
+                <td><?php echo $resultado_biopsia ; ?></td>
             </tr>
 
             <tr>
@@ -1113,17 +1106,17 @@
 
             <tr>
                 <td class="estilo-celda">Referencia</td>
-                <td></td>
+                <td><?php echo $referencia ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Institución</td>
-                <td></td>
+                <td><?php echo $institucion ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Causa</td>
-                <td></td>
+                <td><?php echo $causa_referencia ; ?></td>
             </tr>
 
             <tr>
@@ -1133,12 +1126,12 @@
 
             <tr>
                 <td class="estilo-celda">Alta</td>
-                <td></td>
+                <td><?php echo $alta ; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Causa</td>
-                <td></td>
+                <td><?php echo $causa_alta ; ?></td>
             </tr>
 
 

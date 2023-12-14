@@ -1,4 +1,6 @@
-
+<?php
+    include('php/controllers/edit.controller.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,24 +34,20 @@
             <br>
 
 <!-- ======================== DATOS GENERALES   ======================== -->
-
         <div class="container"><!-- ======Primer container===== -->
-            
+        <form id="seguimiento_gc"  method="POST" autocomplete="off">
             <div class="row"><!-- ======Primer row===== -->
-           
-            <div class="col-md-4">
+
+            <input type="hidden" id="id_paciente" name="id_paciente" value="<?php echo $id_paciente; ?>">
+
+            <div class="col-md-6">
                     <strong style="font-size:14px;">Nombre Paciente</strong>
-                    <input id="nombre_paciente" name="nombre_paciente_seg" type="text" class="control form-control"  placeholder="Nombre(s) Apellidos"   style="font-size:14px;" required>
+                    <input id="nombre_paciente" name="nombre_paciente_seg" type="text" class="control form-control"  placeholder="Nombre(s) Apellidos"   style="font-size:14px;" value="<?php echo $nombre_paciente; ?>">
                 </div>
 
-                <div class="col-md-4">
-                    <strong style="font-size:14px;">CURP</strong>
-                    <input id="CURP_paciente_seg" name="CURP_paciente_seg" type="text" class="control form-control"   style="font-size:14px;" required>
-                </div>
-
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <strong style="font-size:14px;">Fecha de Seguimiento</strong>
-                    <input id="seguimiento_seg" name="seguimiento_seg" type="date" class="control form-control"    style="font-size:14px;" required>
+                    <input id="seguimiento_seg" name="seguimiento_seg" type="date" class="control form-control"    style="font-size:14px;">
                 </div>
 
             </div><!-- ======Primer row===== -->
@@ -73,7 +71,7 @@
 
             <div class="col-md-4">
                     <strong style="font-size:14px;">Período Evolución</strong>
-                    <select name="evolucion_ganglio_seg" id="evolucion_ganglio_seg" class="form-control" style="font-size:14px;">
+                    <select name="periodo_ganglio_seg" id="periodo_ganglio_seg" class="form-control" style="font-size:14px;">
                         <option value="Seleccione">Seleccione</option>
                         <option value="Días">Días</option>
                         <option value="Semanas">Semanas</option>
@@ -84,7 +82,7 @@
 
             <div class="col-md-4" id="tamaño_ganglio_seg" >
                     <strong style="font-size:14px;">Tamaño del Ganglio</strong>
-                    <input type="number" step="any" class="form-control" id="Ganglio_tamaño_seg" name="Ganglio_tamaño_seg"  style="font-size: 14px;">
+                    <input type="number" step="any" class="form-control" id="Ganglio_tama_seg" name="Ganglio_tama_seg"  style="font-size: 14px;">
                 </select>
             </div>
 
@@ -99,7 +97,7 @@
                         <h6>Caracteristicas</h6> 
                 </div>
 
-        <div class="container text-center">
+        <div class="container-seg text-center">
             <div class="row">
 
                 <div class="col-md-2">
@@ -213,7 +211,7 @@
                 </select>
                 </div> 
 
-        <div class="container text-center" id="otro_localizacion_seg" style="display: none;" >
+        <div class="container-seg text-center" id="otro_localizacion_seg" style="display: none;" >
             <div class="row">
 
             <div class="col-md-3">
@@ -276,28 +274,13 @@
     
 </body>
 
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/scripSeg.js"></script>
+    <script type="module">
+            import { seguimientoForm } from "./js/seguimiento.js";
+            seguimientoForm();
+    </script>
+
 </html>
-
-
-<script>
-
-     // AL SELECCIONAMOS SI OTROS GANGLIOS ABRE LA LOCALIZACIÓN
-
-     document.addEventListener("DOMContentLoaded", function () {
-                    // Obtiene el elemento select y el div que se debe mostrar/ocultar
-                    var selectElement = document.getElementById("otros_ganglios_seg");
-                    var divElement = document.getElementById("otro_localizacion_seg");
-                        
-                    // Agrega un evento de cambio al elemento select
-                    selectElement.addEventListener("change", function () {
-                        // Comprueba si se seleccionó "Si"
-                        if (selectElement.value === "Si") {
-                            // Muestra el div si se selecciona "Si"
-                            divElement.style.display = "block";
-                        } else {
-                            // Oculta el div en caso contrario
-                            divElement.style.display = "none";
-                        }
-                    });
-                });
-</script>

@@ -1,6 +1,6 @@
 <?php
     require(__DIR__ . '/../models/database.model.php');
-    include(__DIR__ . '/../dbconfig_db.php');
+    include(__DIR__ . '/../dbconfig_gc.php');
 
     $connectionDBSEG = new Database(DB_HOST_seg,DB_NAME_seg,DB_USERNAME_seg,DB_PASSWORD_seg);
 
