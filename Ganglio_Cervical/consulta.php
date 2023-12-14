@@ -26,17 +26,17 @@
         <tbody style="font-size:13px;" class="table-bordered">
             <tr>
                 <td class="estilo-celda">CURP</td>
-                <td>OEPS921224MMCLXN07</td>
+                <td></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Nombre Paciente</td>
-                <td>Sandra Guadalupe Olvera Peña</td>
+                <td></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Sexo</td>
-                <td>24/12/1992</td>
+                <td></td>
             </tr>
 
             <tr>

@@ -111,3 +111,14 @@ footer {
     font-weight: bold;
     color: black; /* Cambia el color del texto de las celdas con esta clase */
 }
+
+
+.container-animales{
+    background-color: white;
+    padding: 1%;
+    margin: 1.5%;
+    border-radius: 15px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    width: 97%; /* Puedes ajustar el valor según tus necesidades */
+}
+

@@ -357,7 +357,7 @@
                     </select>
                 </div>
 
-        <div class="container" >
+        <div class="container-animales" >
             <div class="row">
 
                 <div class="col-md-2">
@@ -446,7 +446,7 @@
                 </div>
 
         </div> <br> <!--=========== DIV DEL ROW DE  ANIMALES ================-->
-    </div><!--=========== DIV DEL CONTAINER ANIMALES  ================-->
+        </div><!--=========== DIV DEL CONTAINER ANIMALES  ================-->
             
                 <div class="col-md-6">
                     <strong style="font-size:14px;">Viajes Recientes</strong>
@@ -1088,7 +1088,7 @@
                         <h6>Caracteristicas</h6> 
                 </div>
 
-        <div class="container text-center">
+        <div class="container-animales text-center">
             <div class="row">
 
                 <div class="col-md-3">
@@ -1201,7 +1201,7 @@
                 </select>
                 </div> 
 
-        <div class="container text-center" id="otro_localizacion"  >
+        <div class="container-animales text-center" id="otro_localizacion"  >
             <div class="row">
 
             <div class="col-md-3">
@@ -1261,7 +1261,7 @@
                 </div>
 
 
-            <div class="container text-center" id="etiologia">
+            <div class="container-animales text-center" id="etiologia">
 
                 <div class="row">
 
@@ -1348,7 +1348,7 @@
                 <h6>Tratamiento Farmacológico para TB</h6>
             </div>
 
-            <div class="container text-center" >
+            <div class="container-animales text-center" >
             
             <div class="row " >
                     <div class="col-md-2">
