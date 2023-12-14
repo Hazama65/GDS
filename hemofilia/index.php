@@ -124,15 +124,26 @@ Dirección de Operaciones - Gestión Digital en Salud - 2023
 </p> 
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="js/visualizacion.js"></script>
-<script src="js/script.js"></script>
-<script src="js/scripthemofilia.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/visualizacion.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/scripthemofilia.js"></script>
 
     <script type="module">
         import { mainForm } from "./js/insert.js";
         mainForm();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cerrarSesionButton = document.getElementById('cerrar-sesion-button');
+
+            cerrarSesionButton.addEventListener('click', function () {
+                // Redirige al usuario a la página de cierre de sesión
+                window.location.href = 'php/destroysession.php';
+            });
+        });
     </script>
     
 </body>
