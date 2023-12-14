@@ -111,6 +111,30 @@ const validateLogin = async (formData) => {
                 '../hepatitisC/index.php'
             )
         }
+        if (typeToken.trim() === 'lph') {
+            return setAlert.successAlert(
+                'La operacion se ha completado correctamente.',
+                null,
+                null,
+                '../lph/index.php'
+            )
+        }
+        if (typeToken.trim() === 'hemofilia') {
+            return setAlert.successAlert(
+                'La operacion se ha completado correctamente.',
+                null,
+                null,
+                '../hemofilia/index.php'
+            )
+        }
+        if (typeToken.trim() === 'ganglio_cervical') {
+            return setAlert.successAlert(
+                'La operacion se ha completado correctamente.',
+                null,
+                null,
+                '../ganglio_cervical/index.php'
+            )
+        }
 
 
 
