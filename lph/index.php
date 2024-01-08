@@ -1,5 +1,14 @@
 <?php
 //llamado al modal de registrar paciente de LPH
+session_start();
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+
+if (!isset($_SESSION['valid_user'])) {
+    // El usuario no ha iniciado sesión, redirige de vuelta a la página de inicio de sesión
+    header('Location: ../login/index.php');
+    exit;
+}
     require('php/controllers/registros.controller.php');
     include("modal/registrarpaciente.php");
 ?>
@@ -128,6 +137,17 @@
         import { mainForm } from "./js/insert.js";
         mainForm();
 
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cerrarSesionButton = document.getElementById('cerrar-sesion-button');
+
+            cerrarSesionButton.addEventListener('click', function () {
+                // Redirige al usuario a la página de cierre de sesión
+                window.location.href = 'php/destroysession.php';
+            });
+        });
     </script>
 
 </body>

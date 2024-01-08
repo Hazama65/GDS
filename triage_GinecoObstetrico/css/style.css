@@ -2,27 +2,28 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: rgb(240, 240, 240, 0.5);
 }
 
 header {
-    background: linear-gradient(45deg, #F55555, #FCCF31);    height: 50px; /* Ajusta la altura del encabezado según tus necesidades */
+    /*background-image: url('img/Digitalizacion-sanidad.jpg'); /* Ruta de tu imagen inicial
+    background-size: cover;
+    background-position: center; */
+    height: 40px; /* Ajusta la altura de la imagen inicial según tus necesidades */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    color: rgb(255, 255, 255); /* Agregué color de texto blanco para mayor visibilidad */
-
+    background-color: rgb(225, 63, 164);
+    color: aliceblue;
 }
 
-header a {  /* COLOR A LA LETRA HRAEI */
-    display: inline;
-    background: linear-gradient(to right, #FFFFFF, #FFFFFF);
-    -webkit-background-clip: text;
-    color: transparent;
-    margin-top: 15px;
+header a {
+    text-decoration: none;
+    
     font-weight: bold;
-    font-size: 24px; /* Aumenta el tamaño de la letra */
+    font-size: 18px;
+    margin-right: 20px;
 }
 
 .patient-item {
@@ -33,13 +34,19 @@ header a {  /* COLOR A LA LETRA HRAEI */
     transition: background-color 0.3s; /* Agrega transición al cambio de color */
 }
 
+.patient-item:hover {
+    background-color: lightgray; /* Cambia el color al pasar el mouse */
+}
+
 footer {
-    background: linear-gradient(45deg, #F55555, #FCCF31);    color: #ececec;
+    background-color: rgb(168, 42, 91);
+    color: rgb(152,152,153,0.7);
     text-align: center;
     padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
+    font-size: 8px;
 }
 
 
@@ -54,7 +61,7 @@ footer {
     list-style: none;
     padding: 0;
     background-color: white; /* Fondo blanco */
-    border: 1px solid rgb(62, 104, 170,0.5); /* Borde alrededor de la lista */
+    border: 1px solid #ddd; /* Borde alrededor de la lista */
     border-radius: 5px; /* Esquinas redondeadas */
     margin: 10px;
 }
@@ -75,9 +82,10 @@ footer {
     border-radius: 5px; /* Esquinas redondeadas */
     padding: 10px; /* Espacio alrededor de la tabla */
 }
-.custom-header {
+
+.modal-header {
     color: aliceblue;
-    background-color: #ffffff; /* Cambia esto al color que desees */
+    background-color: rgb(225, 63, 164); /* Cambia esto al color que desees */
     /* Otros estilos opcionales, como color de texto, espaciado, etc. */
      /* Cambia el color del texto si es necesario */
     padding: 10px; /* Añade espaciado alrededor del contenido del encabezado */
@@ -85,50 +93,10 @@ footer {
 
   /*SCROLL BUSCADOR*/
   #patient-list-container {
-    background-color: rgb(62, 104, 170,0.5);
+    background-color: rgba(211, 211, 211, 0.5);
     max-height: 800px; /* Altura máxima del div */
     overflow-y: auto; /* Agrega scroll vertical si el contenido excede la altura máxima */
-    padding: 10px; /* Espaciado opcional */
-  }
-  
-  
-
-/*TABLA
-*/
+    padding: 10px; /* Espaciado opcional */}
 
 
- /* Estilo para el encabezado de la tabla */
- .tabla-consulta th {
-    background-color: #ffffff;
-    color: aliceblue;
-    text-align: left;
-    padding: 10px;
-}
-
-
-/* Estilo para las celdas con la clase "estilo-celda" */
-.tabla-consulta td.estilo-celda {
-    font-weight: bold;
-    color: black; /* Cambia el color del texto de las celdas con esta clase */
-}
-
-
-.container-animales{
-    background-color: white;
-    padding: 1%;
-    margin: 1.5%;
-    border-radius: 15px;
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-    width: 97%; /* Puedes ajustar el valor según tus necesidades */
-}
-
-.container-seg{
-    background-color: white;
-    padding: 1%;
-    margin: 1.5%;
-    border-radius: 15px;
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-    width: 97%; /* Puedes ajustar el valor según tus necesidades */
-}
-
-
+ 

@@ -13,3 +13,5 @@ u772081794_clues/m4;#UN[MC
 u772081794_HC/Z0nt*d1X
 u772081794_hemofilia/3r*J:O1UkZ
 u772081794_diabetes_seg	/2DxF1!dT
+u772081794_gc/SAoC;V0h
+u772081794_gc_seg/CW1wBh:4s
