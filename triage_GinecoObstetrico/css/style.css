@@ -98,5 +98,9 @@ footer {
     overflow-y: auto; /* Agrega scroll vertical si el contenido excede la altura máxima */
     padding: 10px; /* Espaciado opcional */}
 
+/* Botones del modal Enviar y cerrar */
+.modal_btn{
+    margin-top: 15px; /* Hacer una separcion de los ultimos campos */
+    text-align: end; /* Mooover todos los elementos a la derecha del todo */
 
- 
+}

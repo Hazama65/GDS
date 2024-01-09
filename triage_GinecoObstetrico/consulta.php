@@ -1,3 +1,6 @@
+<?php
+    include('php/controllers/consulta.controller.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,47 +34,47 @@
 
     <tr>
       <th scope="row">Fecha</th>
-      <td></td>
+      <td><?php echo $fecha; ?></td>
     </tr>
 
     <tr>
       <th scope="row">Elabora</th>
-      <td></td>
+      <td><?php echo $elabora; ?></td>
     </tr>
 
     <tr>
       <th scope="row">Resultado Triage</th>
-      <td></td>
+      <td><?php echo $resultado_triage; ?></td>
     </tr>
 
   <tr>
-        <th colspan="2" scope="row" style="background-color: rgb(174,93,143,0.75); color: aliceblue; text-align: center;">Antecedentes Gineco-Obstétricos</th>
+        <th colspan="2" scope="row" style="background-color: rgb(174,93,143,0.75); color: aliceblue; text-align: center;">Datos Paciente</th>
     </tr>
 
 
     <tr>
       <th scope="row">CURP</th>
-      <td></td>
+      <td><?php echo $curp; ?></td>
     </tr>
 
     <tr>
       <th scope="row">Nombre Completo</th>
-      <td></td>
+      <td><?php echo $nombre_paciente; ?></td>
     </tr>
 
     <tr>
       <th scope="row">Fecha Nacimiento</th>
-      <td></td>
+      <td><?php echo $fecha_nacimiento; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Edad</th>
-        <td></td>
+        <td><?php echo $edad; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Prueba Covid</th>
-        <td></td>
+        <td><?php echo $covid; ?></td>
     </tr>
 
     
@@ -83,42 +86,42 @@
 
     <tr>
         <th scope="row">Gestas</th>
-        <td></td>
+        <td><?php echo $gesta; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Paras</th>
-        <td></td>
+        <td><?php echo $paras; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Abortos</th>
-        <td></td>
+        <td><?php echo $abortos; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Embarazos Ectópicos</th>
-        <td></td>
+        <td><?php echo $embarazos_ecto; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Hijos Vivos</th>
-        <td></td>
+        <td><?php echo $hijos_vivos; ?></td>
     </tr>
 
     <tr>
         <th scope="row">FUM</th>
-        <td></td>
+        <td><?php echo $FUM; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Fecha Probable Parto</th>
-        <td></td>
+        <td><?php echo $fecha_parto; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Sem Gestación</th>
-        <td></td>
+        <td><?php echo $sem_gestacion; ?></td>
     </tr>
 
     <tr>
@@ -127,52 +130,52 @@
 
     <tr>
         <th scope="row">Presión arterial sistólica (mmHg)</th>
-        <td></td>
+        <td><?php echo $presion_sis; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Presión arterial diastólica (mmHg)</th>
-        <td></td>
+        <td><?php echo $presion_dia; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Frecuencia Cardiaca (x')</th>
-        <td></td>
+        <td><?php echo $frecuencia_card; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Frecuencia respiratoria (x')</th>
-        <td></td>
+        <td><?php echo $frecuencia_respi; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Temperatura (°C)</th>
-        <td></td>
+        <td><?php echo $temperatura; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Frecuencia Cardiaca Fetal</th>
-        <td></td>
+        <td><?php echo $frecuencia_card_fet; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Talla</th>
-        <td></td>
+        <td><?php echo $talla; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Peso</th>
-        <td></td>
+        <td><?php echo $peso; ?></td>
     </tr>
 
     <tr>
         <th scope="row">IMC</th>
-        <td></td>
+        <td><?php echo $imc; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Resultado IMC</th>
-        <td></td>
+        <td><?php echo $resultadoIMC; ?></td>
     </tr>
 
     <tr>
@@ -181,22 +184,22 @@
 
     <tr>
         <th scope="row">Estado de Conciencia</th>
-        <td></td>
+        <td><?php echo $conciencia; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Convulsiones</th>
-        <td></td>
+        <td><?php echo $convulsiones; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Sintomas de vasoespasmo <br>(alteraciones visuales, auditivas, cerebrales, cefalea)</th>
-        <td></td>
+        <td><?php echo $vasoespasmo; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Dolor en epigastrio o en barra <br>o en cuadrante superior derecho del abdomen</th>
-        <td></td>
+        <td><?php echo $epigastrio; ?></td>
     </tr>
 
 
@@ -206,65 +209,64 @@
 
     <tr>
         <th scope="row">Movimientos Fetales</th>
-        <td></td>
+        <td><?php echo $mov_fetales; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Sangrado Vaginal</th>
-        <td></td>
+        <td><?php echo $sang_vag; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Salida de líquido amniótico</th>
-        <td></td>
+        <td><?php echo $liquido_amniotico; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Trabajo de Parto</th>
-        <td></td>
+        <td><?php echo $parto; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Presentación fetal</th>
-        <td></td>
+        <td><?php echo $pres_fetal; ?></td>
     </tr>
 
     
 
     <tr>
-        <th scope="row" style="background-color: rgb(174,93,143,0.75); color: aliceblue; text-align: center;">Tira Reactiva en Orina</th>
-        <td></td>
+        <th colspan="2" scope="row" style="background-color: rgb(174,93,143,0.75); color: aliceblue; text-align: center;">Tira Reactiva en Orina</th>
     </tr>
 
     
     <tr>
         <th scope="row">Proteínas</th>
-        <td></td>
+        <td><?php echo $proteinas; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Leucocitos</th>
-        <td></td>
+        <td><?php echo $leucocitos; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Glucosa</th>
-        <td></td>
+        <td><?php echo $glucosa; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Nitritos</th>
-        <td></td>
+        <td><?php echo $nitritos; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Cetonas</th>
-        <td></td>
+        <td><?php echo $cetonas; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Eritrocítos</th>
-        <td></td>
+        <td><?php echo $eritrocitos; ?></td>
     </tr>
 
     
@@ -272,20 +274,14 @@
     <tr>
         <th colspan="2" scope="row" style="background-color: rgb(174,93,143,0.75); color: aliceblue; text-align: center;">Transferir</th>
     </tr>
-
-    <tr>
-        <th scope="row">Resultado Triage</th>
-        <td></td>
-    </tr>
-
     <tr>
         <th scope="row">Destino</th>
-        <td></td>
+        <td><?php echo $destino; ?></td>
     </tr>
 
     <tr>
         <th scope="row">Activación Código</th>
-        <td></td>
+        <td><?php echo $codigo; ?></td>
     </tr>
 
     

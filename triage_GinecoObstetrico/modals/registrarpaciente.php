@@ -8,7 +8,7 @@
       </div>
       <div class="modal-body">
 
-        <form action="" id="gineco_form" autocomplete="off">
+        <form id="gineco_form" autocomplete="off">
 
           <div class="row">
 
@@ -19,7 +19,7 @@
 
             <div class="col-md-6" id="idelabora">
               <strong>Elabora:</strong>
-              <input type="text" class="form-control" id="elabora" name="elabora" placeholder="Ingrese nombre..." required>
+              <input type="text" class="form-control" id="elabora" name="elabora" placeholder="Ingrese nombre..." >
             </div>
 
           </div> <!-- <div class="row" de la primera sección>-->
@@ -37,7 +37,7 @@
 
             <div class="col-md-3" id="idnombre">
               <strong>Nombre Completo</strong>
-              <input id="nombre" name="nombre" onblur="calcularEdad();" type="text" class="control form-control" value="" required>
+              <input id="nombre" name="nombre" onblur="calcularEdad();" type="text" class="control form-control" value="" >
             </div>
 
             <div class="col-md-3">
@@ -147,12 +147,12 @@
                     
             <div class="col-md-3">
               <strong>Talla</strong>
-              <input type="text" class="form-control" id="talla" name="talla" placeholder="Ejemplo: 1.50" required>
+              <input type="text" class="form-control" id="talla" name="talla" placeholder="Ejemplo: 1.50" >
             </div>
 
             <div class="col-md-3">
               <strong>Peso</strong>
-              <input type="number" step="any" class="form-control" id="peso" onblur="calculaIMC();" name="peso" required>
+              <input type="number" step="any" class="form-control" id="peso" onblur="calculaIMC();" name="peso" >
             </div>
 
             <div class="col-md-3">
@@ -383,25 +383,24 @@
                 <option value="Código Dorado - Hemorragia Obstétrica">Código Dorado - Hemorragia Obstétrica</option>
                 <option value="Código Dorado - Preeclampsia / Eclampsia">Código Dorado - Preeclampsia / Eclampsia</option>
                 <option value="Código Dorado - Sepsis">Código Dorado - Sepsis</option>
-                            <option value="Código Dorado - Cáncer Gestacional">Código Dorado - Cáncer Gestacional</option>
-                            <option value="Código Dorado - SARS COV2">Código Dorado - SARS COV2</option>
-                            <option value="Código Dorado - Otro">Código Dorado - Otro</option>
-                            <option value="Código Negro">Código Negro</option>
-                        </select>
-                    </div>
+                <option value="Código Dorado - Cáncer Gestacional">Código Dorado - Cáncer Gestacional</option>
+                <option value="Código Dorado - SARS COV2">Código Dorado - SARS COV2</option>
+                <option value="Código Dorado - Otro">Código Dorado - Otro</option>
+                <option value="Código Negro">Código Negro</option>
+              </select>
+            </div>
 
-          </div> <!-- se cierra el div del row-->
+          </div> <!-- se cierra el div del row--> 
 
 
+          <div class="modal_btn">
+            <button type="button" value="Limpiar" class="btn btn-danger">Cerrar</button>
+            <button type="submit" value="Enviar" name="enviar" class="btn btn-success">Enviar</button>
+          </div>
                     
         </form><!-- se cierra el form-->
       </div><!-- se cierra el  <div class="modal-body">-->
 
-
-      <div class="modal-footer">
-        <button type="button" value="Limpiar" class="btn btn-danger">Cerrar</button>
-        <button type="submit" value="Enviar" name="enviar" class="btn btn-success">Enviar</button>
-      </div>
 
       
     </div>
