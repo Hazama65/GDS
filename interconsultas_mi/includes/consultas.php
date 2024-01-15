@@ -3,7 +3,18 @@
 
     $conn = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
-    $query_residente = "SELECT residente, COUNT(*) as conteo FROM datos_generales GROUP BY residente";
+    $fechaInicio = "2023-01-01";
+    $fechaFin = "2024-12-31";
+    
+    if (isset($_POST['fechaInicio']) && isset($_POST['fechaFin'])) {
+        $fechaInicio = date("Y-m-d", strtotime($_POST['fechaInicio']));
+        $fechaFin = date("Y-m-d", strtotime($_POST['fechaFin']));
+    }
+
+    $query_residente = "SELECT dg.residente, COUNT(*) as conteo FROM datos_generales dg 
+        JOIN procedimientos pr ON dg.id_paciente = pr.id_paciente WHERE pr.fecha_respuesta 
+        BETWEEN '$fechaInicio' AND '$fechaFin' GROUP BY dg.residente;";
+
     $result_residente = mysqli_query($conn, $query_residente);
     $data_residente = array();
     
@@ -17,7 +28,9 @@
     }
 
 
-    $query_responsable = "SELECT responsable, COUNT(*) as conteo FROM datos_generales GROUP BY responsable";
+    $query_responsable = "SELECT dg.responsable, COUNT(*) as conteo FROM datos_generales dg 
+    JOIN procedimientos pr ON dg.id_paciente = pr.id_paciente WHERE pr.fecha_respuesta 
+    BETWEEN '$fechaInicio' AND '$fechaFin' GROUP BY responsable";
     $result_responsable = mysqli_query($conn, $query_responsable);
     $data_responsable = array();
     
@@ -31,7 +44,8 @@
     }
 
 
-    $query_interConsulta = "SELECT servicio_interconsulta, COUNT(*) as conteo FROM procedimientos GROUP BY servicio_interconsulta";
+    $query_interConsulta = "SELECT servicio_interconsulta, COUNT(*) as conteo FROM procedimientos
+    WHERE fecha_respuesta BETWEEN '$fechaInicio' AND '$fechaFin' GROUP BY servicio_interconsulta";
     $result_interConsulta = mysqli_query($conn, $query_interConsulta);
     $data_interConsulta = array();
     
@@ -45,7 +59,8 @@
     }
 
 
-    $query_respondiente = "SELECT servicio_respondiente, COUNT(*) as conteo FROM procedimientos GROUP BY servicio_respondiente";
+    $query_respondiente = "SELECT servicio_respondiente, COUNT(*) as conteo FROM procedimientos 
+    WHERE fecha_respuesta BETWEEN '$fechaInicio' AND '$fechaFin' GROUP BY servicio_respondiente";
     $result_respondiente = mysqli_query($conn, $query_respondiente);
     $data_respondiente = array();
     
@@ -58,7 +73,8 @@
         }
     }
 
-    $query_diasDiferencia = "SELECT diferencia_dias, COUNT(diferencia_dias) as conteo FROM procedimientos GROUP BY diferencia_dias";
+    $query_diasDiferencia = "SELECT diferencia_dias, COUNT(diferencia_dias) as conteo FROM procedimientos 
+    WHERE fecha_respuesta BETWEEN '$fechaInicio' AND '$fechaFin' GROUP BY diferencia_dias";
     $result_diasDiferencia = mysqli_query($conn,$query_diasDiferencia);
     $data_diasDiferencia = array();
     

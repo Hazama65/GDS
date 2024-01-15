@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: rgb(240, 240, 240, 0.5);
+    background-color: #f0f0f0;
 }
 
 header {
@@ -14,20 +14,34 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    background: rgb(0,29,113);
-    background: linear-gradient(0deg, rgba(0,29,113,1) 0%, rgba(46,106,179,1) 44%, rgba(0,212,255,1) 100%);
+    background-color:rgb(205, 92, 92);
 }
+
+header a {
+    text-decoration: none;
+    color: #DDC9A3;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
 .patient-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: pointer; /* Cambia el cursor a un puntero */
-    transition: background-color 0.3s; /* Agrega transición al cambio de color */
 }
 
-.patient-item:hover {
-    background-color: lightgray; /* Cambia el color al pasar el mouse */
+footer {
+    background-color: rgb(233, 150, 122);
+    color: rgb(240, 248, 255, 0.6);
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
+
+
 
 #search {
     width: 80%;
@@ -60,16 +74,23 @@ header {
     border-radius: 5px; /* Esquinas redondeadas */
     padding: 10px; /* Espacio alrededor de la tabla */
 }
+.custom-header {
+    color: aliceblue;
+    background-color: maroon; /* Cambia esto al color que desees */
+    /* Otros estilos opcionales, como color de texto, espaciado, etc. */
+     /* Cambia el color del texto si es necesario */
+    padding: 10px; /* Añade espaciado alrededor del contenido del encabezado */
+  }
 
-
-/*SCROLL BUSCADOR*/
-#patient-list-container {
+  /*SCROLL BUSCADOR*/
+  #patient-list-container {
     background-color: rgba(211, 211, 211, 0.5);
     max-height: 800px; /* Altura máxima del div */
     overflow-y: auto; /* Agrega scroll vertical si el contenido excede la altura máxima */
     padding: 10px; /* Espaciado opcional */
   }
-
+  
+  
 
 /*TABLA
 */
@@ -77,7 +98,7 @@ header {
 
  /* Estilo para el encabezado de la tabla */
  .tabla-consulta th {
-    background-color:rgb(70, 130, 180, 0.9);
+    
     color: aliceblue;
     text-align: left;
     padding: 10px;
@@ -90,39 +111,7 @@ header {
     color: black; /* Cambia el color del texto de las celdas con esta clase */
 }
 
-.search {
-    padding-bottom: 25px;
-    background: rgb(0,29,113);
-    background: linear-gradient(0deg, rgba(0,29,113,1) 0%,rgba(0,212,255,1) 100%);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.search label {
-    margin-top: 10px;
-}
-
-.search input {
-    width: 25%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-}
-
-.search .form-control{
-    display: inline-block;
-}
-
-footer {
-    background-color: rgb(145, 172, 207, 0.85);
+.modal-header{
+    background-color: rgb(240, 128, 128);
     color: aliceblue;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    font-size: 8px;
 }

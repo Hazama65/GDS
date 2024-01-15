@@ -1,12 +1,4 @@
 <?php
-    session_start();
-    header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-    header("Pragma: no-cache");
-
-    if (!isset($_SESSION['valid_user'])) {
-        header('Location: ../login/index.php');
-        exit;
-    }
     include('includes/consultas.php');
 ?>
 <!DOCTYPE html>
@@ -26,6 +18,7 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <style>
+        
         .container {
             
             text-align: center;
@@ -34,7 +27,7 @@
 
         .graficas {
             display: inline-block;
-            width: 100%; /* el ancho de la gráfica */
+            width: 48%; /* el ancho de la gráfica */
             margin-bottom: 20px; /* Espacio entre las gráficas */
             height: 400px; /* Reduce la altura para que quepan todas las gráficas en la página */
             margin-top: 10px; /* Agrega margen superior para separar las gráficas del encabezado */
@@ -42,13 +35,32 @@
             vertical-align: top;
         }
 
+        .graficas-indice {
+            display: inline-block;
+            width: 30%; /* Ajusta el ancho según tus necesidades */
+            margin-right: 2%; /* Agrega un margen derecho para separar las gráficas */
+            height: 400px; /* Ajusta la altura según tus necesidades */
+            margin-top: 10px; /* Agrega margen superior para separar las gráficas del encabezado */
+            margin-bottom: 5%; /* Agrega margen inferior para separar las gráficas del pie de página */
+            vertical-align: top;
+        }
+
+        /* Añade un clearfix para evitar problemas de alineación después de elementos flotantes */
+        .container::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        
+
         .badge {
             display: block;
             text-align: center;
             padding: 10px;
             margin-bottom: 10px;
-            background: rgb(0,29,113);
-            background: linear-gradient(90deg, rgba(0,29,113,1) 0%,rgba(0,212,255,1) 100%);
+            background: linear-gradient(45deg, #f5acdd, #7e1d51);
             color: white;
             font-size: 20px;
             }
@@ -58,61 +70,36 @@
                 
             }
 
-            .fecha {
-            color: #ff5733; /* Color rojo (#ff5733) para las fechas */
-            }
+
+
+
     </style>
 
-    <title>Gráficas - Interconsulta</title>
+    </style>
+    <title>Gráficas - Cirugia Ambulatoria</title>
 </head>
 <body>
     <header>
-        <a href="index.php">
-            <button type="button" class="btn btn-outline-light" id="inicio-button" title="Inicio">
-                <i class="bi bi-rewind-fill"></i>
-            </button>
-        </a>
-        <h5 style="color:#DDC9A3; margin-top: 15px;">Gráficas - Interconsulta</h5>
+        <a style="color:white;" href="https://hraei.gob.mx/" target="_blank">HRAEI</a>
+        <h5 style="color:white; margin-top: 15px;">Gráficas - Triage Gineco-Obstetrico</h5>
         <br>
     </header>
     <br>
 
-    <div class="search">
-        <form method="POST" autocomplete="off">
-
-            <label for="fechaInicio">Fecha de inicio:</label>
-            <input class="form-control" type="date" id="fechaInicio" name="fechaInicio" required>
-
-            <label for="fechaFin">Fecha de fin:</label>
-            <input class="form-control" type="date" id="fechaFin" name="fechaFin" required>
-
-            <input class="form-control" type="submit" value="Filtrar">
-            <?php
-                echo "<br><br><h2>Resultados para el período " . $fechaInicio . " al " . $fechaFin . ":</h2>"; 
-            ?>
-
-        </form>
-    </div>
-
     <div class="container">
-        <div class="graficas" id="grafica1">        
-            <span class="badge">Residentes</span>
+        <div class="graficas" id="grafica1">
+            <span class="badge">Elabora</span>
         </div>
         <div class="graficas" id="grafica2">
-            <span class="badge">Responsable</span>
+            <span class="badge">Resultados del Triage</span>
         </div>
         <div class="graficas" id="grafica3">
-            <span class="badge">Servicio IC</span>
+            <span class="badge">Destinos</span>
         </div>
         <div class="graficas" id="grafica4">
-            <span class="badge">Servicio Respondiente</span>
-        </div>
-        <div class="graficas" id="grafica5">
-            <span class="badge">Tiempo de Respuesta (Dias)</span>
+            <span class="badge">Codigos</span>
         </div>
     </div>
-
-
 
     <footer>
         Hospital Regional de Alta Especialidad de Ixtapaluca
@@ -131,9 +118,7 @@
     include('includes/grafica1.php');
     include('includes/grafica2.php');
     include('includes/grafica3.php');
-    include('includes/grafica4.php');    
-    include('includes/grafica5.php');
-
+    include('includes/grafica4.php');
 
 ?>
 </html>
