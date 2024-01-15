@@ -14,7 +14,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    background-color: rgb(96, 146, 209);
+    background: rgb(0,29,113);
+    background: linear-gradient(0deg, rgba(0,29,113,1) 0%, rgba(46,106,179,1) 44%, rgba(0,212,255,1) 100%);
 }
 .patient-item {
     display: flex;
@@ -89,11 +90,33 @@ header {
     color: black; /* Cambia el color del texto de las celdas con esta clase */
 }
 
+.search {
+    padding-bottom: 25px;
+    background: rgb(0,29,113);
+    background: linear-gradient(0deg, rgba(0,29,113,1) 0%,rgba(0,212,255,1) 100%);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
 
+.search label {
+    margin-top: 10px;
+}
 
+.search input {
+    width: 25%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
 
+.search .form-control{
+    display: inline-block;
+}
 
-  footer {
+footer {
     background-color: rgb(145, 172, 207, 0.85);
     color: aliceblue;
     text-align: center;

@@ -47,7 +47,8 @@
             text-align: center;
             padding: 10px;
             margin-bottom: 10px;
-            background-color: rgb(113, 172, 247,0.5); /* Color de fondo */
+            background: rgb(0,29,113);
+            background: linear-gradient(90deg, rgba(0,29,113,1) 0%,rgba(0,212,255,1) 100%);
             color: white;
             font-size: 20px;
             }
@@ -61,6 +62,7 @@
             color: #ff5733; /* Color rojo (#ff5733) para las fechas */
             }
     </style>
+
     <title>Gráficas - Interconsulta</title>
 </head>
 <body>
@@ -74,6 +76,23 @@
         <br>
     </header>
     <br>
+
+    <div class="search">
+        <form method="POST" autocomplete="off">
+
+            <label for="fechaInicio">Fecha de inicio:</label>
+            <input class="form-control" type="date" id="fechaInicio" name="fechaInicio" required>
+
+            <label for="fechaFin">Fecha de fin:</label>
+            <input class="form-control" type="date" id="fechaFin" name="fechaFin" required>
+
+            <input class="form-control" type="submit" value="Filtrar">
+            <?php
+                echo "<br><br><h2>Resultados para el período " . $fechaInicio . " al " . $fechaFin . ":</h2>"; 
+            ?>
+
+        </form>
+    </div>
 
     <div class="container">
         <div class="graficas" id="grafica1">        
