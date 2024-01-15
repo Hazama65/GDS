@@ -1,148 +1,73 @@
 <?php
     require(__DIR__ . '/../models/database.model.php');
-    include(__DIR__ . '/../dbconfig_hc.php');
+    include(__DIR__ . '/../dbconfig_gn.php');
 
     $connectionDB = new Database(DB_HOST,DB_NAME,DB_USERNAME,DB_PASSWORD);
-    $connectionDBEM = new Database(DB_HOST_EM,DB_NAME_EM,DB_USERNAME_EM,DB_PASSWORD_EM);
-    $connectionDBClues = new Database(DB_HOST_Clues,DB_NAME_Clues,DB_USERNAME_Clues,DB_PASSWORD_Clues);
-
-    $query_clues="SELECT * FROM clues";
-
-    $AllData_Clues =$connectionDBClues->getRows($query_clues);
-
-    
-    $estados = "SELECT * FROM estados ORDER BY NombreEstado";
-    $AllData_Estados = $connectionDBEM->getRows($estados);
-    
-    $municipiosQuery = "SELECT * FROM municipios";
-    $AllData_Municipios = $connectionDBEM->getRows($municipiosQuery);
-    
-    echo '<script>';
-    echo 'var estadosData = ' . json_encode($AllData_Estados) . ';';
-    echo 'var municipiosData = ' . json_encode($AllData_Municipios) . ';';
-    echo '</script>';
 
 
 
     
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-        $id_paciente=$_GET['id'];
+        $id_GN=$_GET['id'];
 
-        $queryAllData = "SELECT p.*,s.*,fr.*,ant.*,ate.*,l.*,uh.*,ih.*,t.*,d.* FROM pacientes p 
-        JOIN sometria s on p.id_paciente = s.id_paciente
-        JOIN factores_riesgo fr on p.id_paciente = fr.id_paciente
-        JOIN antecedentes ant ON p.id_paciente = ant.id_paciente
-        JOIN atencion_clinica ate ON p.id_paciente = ate.id_paciente
-        JOIN laboratorio l ON p.id_paciente = l.id_paciente
-        JOIN ultrasonidohepatico uh ON p.id_paciente = uh.id_paciente
-        JOIN indicehepatico ih ON p.id_paciente = ih.id_paciente
-        JOIN tratamiento t ON p.id_paciente = t.id_paciente
-        JOIN defuncion d ON p.id_paciente = d.id_paciente WHERE p.id_paciente= $id_paciente";
+        $queryAllData = "SELECT dg.*,dp.*,ag.*,sv.*,si.*,sg.*,tr.*,rt.* FROM datos_generales dg
+        JOIN datos_paciente dp on dg.id_GN = dp.id_GN
+        JOIN antecedentes_go ag on dg.id_GN = ag.id_GN
+        JOIN signos_vitales sv ON dg.id_GN = sv.id_GN
+        JOIN sintomas si ON dg.id_GN = si.id_GN
+        JOIN signos sg ON dg.id_GN = sg.id_GN
+        JOIN tira_reactiva tr ON dg.id_GN = tr.id_GN
+        JOIN resultados_triaje rt ON dg.id_GN = rt.id_GN WHERE dg.id_GN= $id_GN";
 
         $AllData = $connectionDB->getRows($queryAllData);
 
         if (!empty($AllData)) {
             foreach ($AllData as $data) {
-                $curp = $data["curp"];
-                $nombre = $data["nombre"];
-                $fecha_nacimiento = $data["fecha_nacimiento"];
-                $edad = $data["edad"];
-                $sexo = $data["sexo"];
-                $estado_civil = $data["estado_civil"];
-                $Estado = $data["estado"];
-                $Municipio = $data["municipio"];
-                $queryEstado = "SELECT NombreEstado FROM estados WHERE Estado_Id ='$Estado'";
-                $dataEstado= $connectionDBEM->getRows($queryEstado);
-                foreach($dataEstado as $row1){
-                    $Estado1 = $row1['NombreEstado'];
-                }
-                $queryMunicipio = "SELECT NombreMunicipio FROM municipios WHERE MunicipioID ='$Municipio'";
-                $dataMunicipio= $connectionDBEM->getRows($queryMunicipio);
-                foreach($dataMunicipio as $row2){
-                    $Municipio1 = $row2['NombreMunicipio'];
-                }
-                $referencia = $data["referencia"];
-                $unidad_referencia = $data["unidad_referencia"];
 
-
-                $talla = $data["talla"];
-                $peso = $data["peso"];
-                $imc = $data["imc"];
-                $descripcionIMC = $data["descripcionimc"];
-                $circunferencia = $data["circunferencia"];
-    
-
-                $sinRegistro = $data["sinRegistro"];
-                $relacionesSex = $data["relacionesSex"];
-                $transfusiones = $data["transfusiones"];
-                $drogasEnd = $data["drogasEnd"];
-                $piercing = $data["piercing"];
-                $presidiario = $data["presidiario"];
-                $expresidiario = $data["expresidiario"];
-                $situacionCalle = $data["situacionCalle"];
-                $vih = $data["vih"];
-                $hepatitis = $data["hepatitis"];
-                $sexoServidoras = $data["sexoServidoras"];
-                $parejasOcasionales = $data["parejasOcasionales"];
-                $pacienteToxicomanias = $data["pacienteToxicomanias"];
-                $ninguna = $data["ninguna"];
-    
-
-                $hemofilia = $data["hemofilia"];
-                $ERC = $data["ERC"];
-                $trabajadorSalud = $data["trabajadorSalud"];
-                $transplante = $data["transplante"];
-                $cirrosis = $data["cirrosis"];
-                $obesidad = $data["obesidad"];
-                $prediabetes = $data["prediabetes"];
-                $diabetesMellitus = $data["diabetesMellitus"];
-                $hipertencionArt = $data["hipertencionArt"];
-                $alcoholismo = $data["alcoholismo"];
-                $HB = $data["HB"];
-                $ninguno_Ant = $data["ninguno_Ant"];
-    
-
-                $atencion_inicial = $data["atencion_inicial"];
-                $carga_inicial  = $data["carga_inicial"];
-                $cargaDX  = $data["cargaDX"];
-                $respuestaViral  = $data["respuestaViral"];
-                $RVS  = $data["RVS"];
-                $fechaRVS  = $data["fechaRVS"];
-    
-
-                $AST = $data["AST"];
-                $BUN = $data["BUN"];
-                $CREAT = $data["CREAT"];
-                $ALT = $data["ALT"];
-                $plaquetas = $data["plaquetas"];
-                $albumina = $data["albumina"];
-                $glucosa = $data["glucosa"];
-                $HBA1C = $data["HBA1C"];
-                $trigliceridos = $data["trigliceridos"];
-                $HDL = $data["HDL"];
-    
-
-                $ultrasonido = $data["ultrasonido"];
-                $resultadoUltra = $data["resultadoUltra"];
-                $esteatosis = $data["esteatosis"];
-    
-
-                $FIB4 = $data["FIB4"];
-                $FIB4resultado = $data["FIB4resultado"];
-                $NAFLD = $data["NAFLD"];
-                $NAFLDresultado = $data["NAFLDresultado"];
-                $APRI = $data["APRI"];
-                $APRIresultado = $data["APRIresultado"];
-    
-
-                $fecha_inicio = $data["fecha_inicio"];
-                $fecha_fin = $data["fecha_fin"];
-                $tratamiento = $data["tratamiento"];
-                $ribavirina = $data["ribavirina"];
-    
-                
-                $defuncion_paciente = $data["defuncion_paciente"];
-                $causa = $data["causa"];
+                $id_GN = $data['id_GN'];
+                $fecha = $data['fecha'];
+                $elabora = $data['elabora'];
+                $curp = $data['curp'];
+                $nombre_paciente = $data['nombre_paciente'];
+                $fecha_nacimiento = $data['fecha_nacimiento'];
+                $edad = $data['edad'];
+                $covid = $data['covid'];
+                $gesta = $data['gesta'];
+                $paras = $data['paras'];
+                $abortos = $data['abortos'];
+                $embarazos_ecto = $data['embarazos_ecto'];
+                $hijos_vivos = $data['hijos_vivos'];
+                $FUM = $data['FUM'];
+                $fecha_parto = $data['fecha_parto'];
+                $sem_gestacion = $data['sem_gestacion'];
+                $presion_sis = $data['presion_sis'];
+                $presion_dia = $data['presion_dia'];
+                $frecuencia_card = $data['frecuencia_card'];
+                $frecuencia_respi = $data['frecuencia_respi'];
+                $temperatura = $data['temperatura'];
+                $frecuencia_card_fet = $data['frecuencia_card_fet'];
+                $talla = $data['talla'];
+                $peso = $data['peso'];
+                $imc = $data['imc'];
+                $resultadoIMC = $data['resultadoIMC'];
+                $conciencia = $data['conciencia'];
+                $convulsiones = $data['convulsiones'];
+                $vasoespasmo = $data['vasoespasmo'];
+                $epigastrio = $data['epigastrio'];
+                $mov_fetales = $data['mov_fetales'];
+                $sang_vag = $data['sang_vag'];
+                $liquido_amniotico = $data['liquido_amniotico'];
+                $parto = $data['parto'];
+                $pres_fetal = $data['pres_fetal'];
+                $proteinas = $data['proteinas'];
+                $leucocitos = $data['leucocitos'];
+                $glucosa = $data['glucosa'];
+                $nitritos = $data['nitritos'];
+                $cetonas = $data['cetonas'];
+                $eritrocitos = $data['eritrocitos'];
+                $resultado_triage = $data['resultado_triage'];
+                $destino = $data['destino'];
+                $codigo = $data['codigo'];
             }
         }
     }

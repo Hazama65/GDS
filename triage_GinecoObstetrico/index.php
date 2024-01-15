@@ -43,7 +43,7 @@ include("modals/registrarpaciente.php");
                 <i class="bi bi-file-earmark-excel"></i> Excel
             </a>
 
-            <a href="graficas_ambulatoria.php">
+            <a href="graficas_gn.php">
                 <button type="button" class="btn btn-primary" target="_blank">
                     <i class="bi bi-bar-chart"></i> Gráficas
                 </button>
@@ -67,7 +67,7 @@ include("modals/registrarpaciente.php");
                                     // Genera un elemento de lista para cada paciente
                                     echo '<li class="patient-item" data-id-paciente="' . $id_paciente . '">';
                                     echo $nombrePaciente;
-                                    echo '<a href="editar_hc.php?id=' . $id_paciente . '">';
+                                    echo '<a href="editar_gn.php?id=' . $id_paciente . '">';
                                     echo '<button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Editar</button>';
                                     echo '</a>';
                                     echo '</li>';
