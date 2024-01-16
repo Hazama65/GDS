@@ -394,7 +394,7 @@
                         </div> <br>
 
                         <div class="input-group input-group-sm mb-3">
-                            <span class="input-group-text" style="background-color: mintcream;">Idenfificación y reporte de faltantes insumos y/o materiales)</span>
+                            <span class="input-group-text" style="background-color: mintcream;">Idenfificación y reporte de faltantes insumos y/o materiales</span>
                             <input type="number" class="form-control" name="IDENTIFICACIÓN_REPORTE_FALTANTES_INSUMOS_MATERIALES" id="IDENTIFICACIÓN_REPORTE_FALTANTES_INSUMOS_MATERIALES">
                         </div> <br>
 
