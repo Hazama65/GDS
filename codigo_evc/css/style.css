@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0c5;
+}
+
+header {
+    background: #009FFF;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ec2F4B, #009FFF);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    height: 50px;
+    /* Ajusta la altura del encabezado según tus necesidades */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: rgb(255, 255, 255);
+    /* Agregué color de texto blanco para mayor visibilidad */
+
+}
+
+header a {
+    /* COLOR A LA LETRA HRAEI */
+    display: inline;
+    background: linear-gradient(to right, #FFFFFF, #FFFFFF);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 24px;
+    /* Aumenta el tamaño de la letra */
+}
+
+.estilomodal  {
+    
+    background: linear-gradient(to right, #ec2f4bbb, #009dff93);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.estilomodal h1{
+    display: inline;
+    background: linear-gradient(to right, #FFFFFF, #FFFFFF);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 24px;
+
+
+}
+.patient-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    /* Cambia el cursor a un puntero */
+    transition: background-color 0.3s;
+    /* Agrega transición al cambio de color */
+}
+
+footer {
+    background: #009FFF;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ec2F4B, #009FFF);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #ececec;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+h5.bi {
+    text-align: center;
+    color: black;
+    font-size: 1.5em;
+    /* Ajusta el tamaño de la fuente según tus preferencias */
+    margin-top: 15px;
+    /* Ajusta la separación entre el ícono y el texto */
+}
+
+
+
+
+
+#search {
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+}
+
+#patient-list {
+    list-style: none;
+    padding: 0;
+    background-color: white;
+    /* Fondo blanco */
+    border: 1px solid rgba(179, 227, 20, 0.934);
+    /* Borde alrededor de la lista */
+    border-radius: 5px;
+    /* Esquinas redondeadas */
+    margin: 10px;
+}
+
+#patient-list li {
+    margin: 0;
+    /* Elimina el margen entre elementos */
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    /* Borde inferior para separar pacientes */
+}
+
+#patient-list li:last-child {
+    border-bottom: none;
+    /* Elimina el borde inferior del último paciente */
+}
+
+/* Agrega un borde alrededor del contenedor de la tabla */
+#patient-list-container {
+    border: 1px solid #ddd;
+    /* Color y grosor del borde */
+    border-radius: 5px;
+    /* Esquinas redondeadas */
+    padding: 10px;
+    /* Espacio alrededor de la tabla */
+}
+
+.custom-header {
+    color: aliceblue;
+    background-color: #ffffff;
+    /* Cambia esto al color que desees */
+    /* Otros estilos opcionales, como color de texto, espaciado, etc. */
+    /* Cambia el color del texto si es necesario */
+    padding: 10px;
+    /* Añade espaciado alrededor del contenido del encabezado */
+}
+
+/*SCROLL BUSCADOR*/
+#patient-list-container {
+    background: #009FFF;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ec2f4b69, #009dff63);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ec2f4b95, #009dff88);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    max-height: 800px;
+    /* Altura máxima del div */
+    overflow-y: auto;
+    /* Agrega scroll vertical si el contenido excede la altura máxima */
+    padding: 10px;
+    /* Espaciado opcional */
+}
+
+
+
+/*TABLA
+*/
+
+
+/* Estilo para el encabezado de la tabla */
+.tabla-consulta th {
+    background-color: #ffffff;
+    color: aliceblue;
+    text-align: left;
+    padding: 10px;
+}
+
+
+/* Estilo para las celdas con la clase "estilo-celda" */
+.tabla-consulta td.estilo-celda {
+    font-weight: bold;
+    color: black;
+    /* Cambia el color del texto de las celdas con esta clase */
+}
+
+
+.seguimiento_btns {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: flex-end;
+}
+
