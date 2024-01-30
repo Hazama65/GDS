@@ -12,6 +12,8 @@ export const mainLogin = () => {
         event.preventDefault();
         let formData = $(this).serialize();
 
+        showLoadingOverlay();
+
         validateLogin(formData);
         
     })
@@ -22,8 +24,12 @@ const validateLogin = async (formData) => {
     try{
 
         const response = JSON.parse( await httpClient.post(url, formData) );
+
+        hideLoadingOverlay();
         
         if(response === 0) return setAlert.errorAlert('Usuario o Password incorrectos');
+
+
 
         const typeToken = response[0].typetoken;
 
@@ -142,6 +148,7 @@ const validateLogin = async (formData) => {
 
     }catch(error){
 
+        hideLoadingOverlay();
             // Aquí puedes manejar el error en la petición AJAX
         console.error('An error ocurred in the system, please contact with your administrator:', error);
 
@@ -150,4 +157,12 @@ const validateLogin = async (formData) => {
     }
 }
 
+
+const showLoadingOverlay = () => {
+    document.getElementById('loading-overlay').style.display = 'flex';
+}
+
+const hideLoadingOverlay = () => {
+    document.getElementById('loading-overlay').style.display = 'none';
+}
     

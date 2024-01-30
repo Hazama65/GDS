@@ -62,7 +62,7 @@ include("modals/registrarpaciente.php");
                                         Editar
                                         </button>
                                     </a>
-                               
+                            
                             </li>
                             <li class="patient-item">
                                 02/09/2023
@@ -115,9 +115,15 @@ include("modals/registrarpaciente.php");
         </p> 
     </footer>-->
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
-    <script src="js/script.js"></script>
-    <script src="js/scriptmodal.js"></script>
+
+    <script type="module">
+        import { mainForm } from "./js/insert.js";
+        mainForm();
+    </script>
+
 </body>
 </html>
 

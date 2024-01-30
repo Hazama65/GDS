@@ -8,7 +8,7 @@
       </div>
       <div class="modal-body">
       
-      <form action="" method="POST" autocomplete="off">
+      <form id="productivdad_form" method="POST" autocomplete="off">
         
         <div style="background-color: rgb(240, 128, 128, 0.7);
                 color: aliceblue;
@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-md-3">
                 <strong>Fecha</strong>
-                <input readonly disabled type="date" id="fecha" name="fecha" class="form-control" value="<?php echo date('Y-m-d'); ?>" readonly>
+                <input readonly type="date" id="fecha" name="fecha" class="form-control" value="<?php echo date('Y-m-d'); ?>" readonly>
             </div>
 
             <div class="col-md-3">
@@ -394,18 +394,13 @@
                         </div> <br>
 
                         <div class="input-group input-group-sm mb-3">
-                            <span class="input-group-text" style="background-color: mintcream;">Idenfificación y reporte de faltantes insumos y/o materiales</span>
+                            <span class="input-group-text" style="background-color: mintcream;">Identificaion y reporte de faltantes insumos y/o materiales</span>
                             <input type="number" class="form-control" name="IDENTIFICACIÓN_REPORTE_FALTANTES_INSUMOS_MATERIALES" id="IDENTIFICACIÓN_REPORTE_FALTANTES_INSUMOS_MATERIALES">
                         </div> <br>
 
                         <div class="input-group input-group-sm mb-3">
                             <span class="input-group-text" style="background-color: mintcream;">Verificación de pre altas y altas del servicio <br>para disponibilidad de camas</span>
                             <input type="number" class="form-control" name="PREALTAS_ALTAS_SERVICIO_CAMAS" id="PREALTAS_ALTAS_SERVICIO_CAMAS">
-                        </div> <br>
-
-                        <div class="input-group input-group-sm mb-3">
-                            <span class="input-group-text" style="background-color: mintcream;">Supervisión, identificación y registro de riesgo de caidas</span>
-                            <input type="number" class="form-control" name="RIESGO_CAÍDAS" id="RIESGO_CAÍDAS">
                         </div> <br>
 
                         <div class="input-group input-group-sm mb-3">
@@ -826,20 +821,20 @@
                 
 
                 </div> <!-- div del row-->
-               
+            
 
         
 
-      </form>
-      
+
+    
 
 
 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+        </div>
     </div>
-  </div>
 </div>

@@ -51,8 +51,8 @@
                 <td></td>
             </tr>
 
-           
-          <!-- Endoscopia Trans-Operatorio -->
+        
+            <!-- Endoscopia Trans-Operatorio -->
             <tr>
                 <th scope="col" style="background-color: rgb(240, 128, 128, 0.6)">Endoscopia Trans-Operatorio</th>
                 <th scope="col" style="background-color: rgb(173, 216, 230)">Matutino</th>

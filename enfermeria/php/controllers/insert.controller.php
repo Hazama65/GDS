@@ -1,0 +1,209 @@
+<?php
+    require(__DIR__ . '/../models/database.model.php');
+    include(__DIR__ . '/../dbconfig_enf.php');
+
+    $connectionDB = new Database(DB_HOST,DB_NAME,DB_USERNAME,DB_PASSWORD);
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+        $fecha             = $_POST['fecha'];
+        $responsable_turno = $_POST['responsable_turno'];
+        $unidad            = $_POST['unidad'];
+        $turno             = $_POST['turno'];
+
+        $queryGeneral ="INSERT INTO unidades_quirurgicas (fecha,responsable_turno,unidad,turno) 
+        VALUES ('$fecha','$responsable_turno','$unidad','$turno')";
+
+        $dataGeneral = $connectionDB->ShotSimple($queryGeneral);
+        $ultimoID =$connectionDB->last_id;
+
+
+        $pacientes_recibidos_pre    = $_POST['pacientes_recibidos_pre'];
+        $pacientes_ingresados_pre   = $_POST['pacientes_ingresados_pre'];
+        $pacientes_egresados_pre    = $_POST['pacientes_egresados_pre'];
+        $pacientes_recibidos_trans  = $_POST['pacientes_recibidos_trans'];
+        $pacientes_ingresados_trans = $_POST['pacientes_ingresados_trans'];
+        $pacientes_egresados_trans  = $_POST['pacientes_egresados_trans'];
+        $pacientes_recibidos_post   = $_POST['pacientes_recibidos_post'];
+        $pacientes_ingresados_post  = $_POST['pacientes_ingresados_post'];
+        $pacientes_egresados_post   = $_POST['pacientes_egresados_post'];
+
+        $queryActivos = "INSERT INTO activos VALUES ('$pacientes_recibidos_pre','$pacientes_ingresados_pre','$pacientes_egresados_pre',
+        '$pacientes_recibidos_trans','$pacientes_ingresados_trans','$pacientes_egresados_trans','$pacientes_recibidos_post',
+        '$pacientes_ingresados_post','$pacientes_egresados_post','$ultimoID')";
+
+        $dataActivos = $connectionDB -> ShotSimple($queryActivos);
+
+
+        $enfermeras_especialistas = $_POST['enfermeras_especialistas'];
+        $enfermeras_generales     = $_POST['enfermeras_generales'];
+        $auxiliares_enfermeria    = $_POST['auxiliares_enfermeria'];
+
+        $queryPersonal = "INSERT INTO personal VALUES ('$enfermeras_especialistas','$enfermeras_generales','$auxiliares_enfermeria',
+        '$ultimoID')";
+        $dataPersonal = $connectionDB -> ShotSimple($queryPersonal);
+
+        
+        $MATER        = $_POST['MATER'];
+        $AZUL         = $_POST['AZUL'];
+        $INFARTO      = $_POST['INFARTO'];
+        $AÉREO        = $_POST['AÉREO'];
+        $EVC          = $_POST['EVC'];
+        $BLANCO       = $_POST['BLANCO'];
+        $MORADO       = $_POST['MORADO'];
+        $NARANJA      = $_POST['NARANJA'];
+        $DORADO       = $_POST['DORADO'];
+        $carros_rojos = $_POST['carros_rojos'];
+
+        $queryCarros = "INSERT INTO codigos_carros VALUES ('$MATER','$AZUL','$INFARTO','$AÉREO','$EVC','$BLANCO','$MORADO','$NARANJA',
+        '$DORADO','$carros_rojos','$ultimoID')";
+
+        $dataCarros = $connectionDB -> ShotSimple($queryCarros);
+
+
+        $Evento               = $_POST['Evento'];
+        $personal_involucrado = $_POST['personal_involucrado'];
+        $notificacion         = $_POST['notificacion'];
+
+        $queryEventos = "INSERT INTO eventos_adversos VALUES ('$Evento','$personal_involucrado','$notificacion','$ultimoID')";
+
+        $dataEventos = $connectionDB -> ShotSimple($queryEventos);
+
+
+        $ENLACE_TURNO                                        = $_POST['ENLACE_TURNO'];
+        $RECEPCION_ENTREGA                                   = $_POST['RECEPCION_ENTREGA'];
+        $DISTRIBUCIÓN_PERSONAL                               = $_POST['DISTRIBUCIÓN_PERSONAL'];
+        $INDUCCIÓN_PERSONAL_NUEVO_INGRESO                    = $_POST['INDUCCIÓN_PERSONAL_NUEVO_INGRESO'];
+        $INDUCCIÓN_PERSONA_FORMACIÓN                         = $_POST['INDUCCIÓN_PERSONA_FORMACIÓN'];
+        $EVALUACIÓN_PERSONAL_OPERATIVO                       = $_POST['EVALUACIÓN_PERSONAL_OPERATIVO'];
+        $REVISIÓN_BITACORAS                                  = $_POST['REVISIÓN_BITACORAS'];
+        $SUPERVISION_ARPBI                                   = $_POST['SUPERVISION_ARPBI'];
+        $VIGILANCIA_RED_FRIA                                 = $_POST['VIGILANCIA_RED_FRIA'];
+        $SUPERVISIÓN_HIGIENE_MANOS                           = $_POST['SUPERVISIÓN_HIGIENE_MANOS'];
+        $SUPERVISIÓN_MOMENTOS_LAVADO_MANOS                   = $_POST['SUPERVISIÓN_MOMENTOS_LAVADO_MANOS'];
+        $NOTIFICACIÓN_REGISTRO_EVENTOS_ADVERSOS              = $_POST['NOTIFICACIÓN_REGISTRO_EVENTOS_ADVERSOS'];
+        $SUPERVISIÓN_CORRECTOS_MINISTRACIÓN_MEDICAMENTOS     = $_POST['SUPERVISIÓN_CORRECTOS_MINISTRACIÓN_MEDICAMENTOS'];
+        $SUPERVISIÓN_DOCUMENTACIÓN_MINISTRACIÓN_MEDICAMENTOS = $_POST['SUPERVISIÓN_DOCUMENTACIÓN_MINISTRACIÓN_MEDICAMENTOS'];
+        $SUPERVISIÓN_DOBLE_VERIFICACIÓN                      = $_POST['SUPERVISIÓN_DOBLE_VERIFICACIÓN'];
+        $RECEPCIÓN_MEDICAMENTOS_24_HORAS                     = $_POST['RECEPCIÓN_MEDICAMENTOS_24_HORAS'];
+        $DEVOLUCIÓN_MEDICAMENTOS_PACIENTE                    = $_POST['DEVOLUCIÓN_MEDICAMENTOS_PACIENTE'];
+        $VERIFICACIÓN_UNIDADES_LIMPIAS                       = $_POST['VERIFICACIÓN_UNIDADES_LIMPIAS'];
+        $SUPERVISIÓN_ACTIVIDADES                             = $_POST['SUPERVISIÓN_ACTIVIDADES'];
+        $IDENTIFICACIÓN_REPORTE_FALTANTES_INSUMOS_MATERIALES = $_POST['IDENTIFICACIÓN_REPORTE_FALTANTES_INSUMOS_MATERIALES'];
+        $PREALTAS_ALTAS_SERVICIO_CAMAS                       = $_POST['PREALTAS_ALTAS_SERVICIO_CAMAS'];
+        $RIESGO_CAÍDAS                                       = $_POST['RIESGO_CAÍDAS'];
+        $RIESGOS_CLÍNICOS_ENFERMERÍA                         = $_POST['RIESGOS_CLÍNICOS_ENFERMERÍA'];
+
+        $queryProductividad = "INSERT INTO productividad_administrativa VALUES ('$ENLACE_TURNO','$RECEPCION_ENTREGA',
+        '$DISTRIBUCIÓN_PERSONAL','$INDUCCIÓN_PERSONAL_NUEVO_INGRESO','$INDUCCIÓN_PERSONA_FORMACIÓN','$EVALUACIÓN_PERSONAL_OPERATIVO',
+        '$REVISIÓN_BITACORAS','$SUPERVISION_ARPBI','$VIGILANCIA_RED_FRIA','$SUPERVISIÓN_HIGIENE_MANOS','$SUPERVISIÓN_MOMENTOS_LAVADO_MANOS',
+        '$NOTIFICACIÓN_REGISTRO_EVENTOS_ADVERSOS','$SUPERVISIÓN_CORRECTOS_MINISTRACIÓN_MEDICAMENTOS',
+        '$SUPERVISIÓN_DOCUMENTACIÓN_MINISTRACIÓN_MEDICAMENTOS','$SUPERVISIÓN_DOBLE_VERIFICACIÓN','$RECEPCIÓN_MEDICAMENTOS_24_HORAS',
+        '$DEVOLUCIÓN_MEDICAMENTOS_PACIENTE','$VERIFICACIÓN_UNIDADES_LIMPIAS','$SUPERVISIÓN_ACTIVIDADES',
+        '$IDENTIFICACIÓN_REPORTE_FALTANTES_INSUMOS_MATERIALES','$PREALTAS_ALTAS_SERVICIO_CAMAS','$RIESGO_CAÍDAS',
+        '$RIESGOS_CLÍNICOS_ENFERMERÍA','$ultimoID')";
+
+        $dataProductividad = $connectionDB -> ShotSimple($queryProductividad);
+
+        $PANENDOSCOPIA = $_POST['PANENDOSCOPIA'];
+        $COLONOSCOPIA  = $_POST['COLONOSCOPIA'];
+        $ECOTRANSESO   = $_POST['ECOTRANSESO'];
+        $PRO_ONCOLOGA  = $_POST['PRO_ONCOLOGA'];
+        $PRO_OTR       = $_POST['PRO_OTR'];
+
+        $queryEndo = "INSERT INTO cuidados_endoscopia VALUES ('$PANENDOSCOPIA','$COLONOSCOPIA','$ECOTRANSESO','$PRO_ONCOLOGA',
+        '$PRO_OTR','$ultimoID')";
+
+        $dataEndo = $connectionDB ->ShotSimple($queryEndo);
+
+
+        $MANIOBRAS_LEOPOLD                           = $_POST['MANIOBRAS_LEOPOLD'];
+        $FRECUENCIA_CARDIACA_FETAL                   = $_POST['FRECUENCIA_CARDIACA_FETAL'];
+        $REANIMACION_INTRAUTERINA                    = $_POST['REANIMACION_INTRAUTERINA'];
+        $ASISTENCIA_ANALGESIA_OBSTETRICA             = $_POST['ASISTENCIA_ANALGESIA_OBSTETRICA'];
+        $VIGILANCIA_PERDIDA_TRANSVAGINAL             = $_POST['VIGILANCIA_PERDIDA_TRANSVAGINAL'];
+        $VIGILANCIA_ACTIVIDAD_INTRAUTERINA           = $_POST['VIGILANCIA_ACTIVIDAD_INTRAUTERINA'];
+        $VIGILANCIA_INVOLUCION_UTERINA               = $_POST['VIGILANCIA_INVOLUCION_UTERINA'];
+        $ASISTENCIA_CURACIÓN_CATETER_UMBILICAL       = $_POST['ASISTENCIA_CURACIÓN_CATETER_UMBILICAL'];
+        $CUIDADOS_INMEDIATOS_RN                      = $_POST['CUIDADOS_INMEDIATOS_RN'];
+        $VALORACION_SUCCIÓN_DEGLUCION_RN             = $_POST['VALORACION_SUCCIÓN_DEGLUCION_RN'];
+        $PERIMETRO_ABDOMINAL_PRE_POSPRANDRIAL_RN     = $_POST['PERIMETRO_ABDOMINAL_PRE_POSPRANDRIAL_RN'];
+        $PESO_TALLA_RN                               = $_POST['PESO_TALLA_RN'];
+        $INSTALACION_CUIDADOS_SONDA_NASO_OROGASTRICA = $_POST['INSTALACION_CUIDADOS_SONDA_NASO_OROGASTRICA'];
+        $MANEJO_CUIDADO_FOTOTERAPIA                  = $_POST['MANEJO_CUIDADO_FOTOTERAPIA'];
+        $CAPACITACION_LACTANCIA_MATERNA              = $_POST['CAPACITACION_LACTANCIA_MATERNA'];
+        $INTERVENCIONES_ENFERMERÍA_DUELO_PERINATAL   = $_POST['INTERVENCIONES_ENFERMERÍA_DUELO_PERINATAL'];
+
+        $queryUTQX = "INSERT INTO cuidados_utqx VALUES ('$MANIOBRAS_LEOPOLD','$FRECUENCIA_CARDIACA_FETAL','$REANIMACION_INTRAUTERINA',
+        '$ASISTENCIA_ANALGESIA_OBSTETRICA','$VIGILANCIA_PERDIDA_TRANSVAGINAL','$VIGILANCIA_ACTIVIDAD_INTRAUTERINA',
+        '$VIGILANCIA_INVOLUCION_UTERINA','$ASISTENCIA_CURACIÓN_CATETER_UMBILICAL','$CUIDADOS_INMEDIATOS_RN',
+        '$VALORACION_SUCCIÓN_DEGLUCION_RN','$PERIMETRO_ABDOMINAL_PRE_POSPRANDRIAL_RN','$PESO_TALLA_RN',
+        '$INSTALACION_CUIDADOS_SONDA_NASO_OROGASTRICA','$MANEJO_CUIDADO_FOTOTERAPIA','$CAPACITACION_LACTANCIA_MATERNA',
+        '$INTERVENCIONES_ENFERMERÍA_DUELO_PERINATAL','$ultimoID')";
+        $dataUTQX = $connectionDB -> Shotsimple($queryUTQX);
+        
+
+
+
+
+        $IDENTIFICACIÓN_CORRECTA_PACIENTE_PRE = $_POST['IDENTIFICACIÓN_CORRECTA_PACIENTE_PRE'];
+        $ORIENTACION_PARA_INGRESO_PACIENTE_AMBULATORIO = $_POST['ORIENTACION_PARA_INGRESO_PACIENTE_AMBULATORIO'];
+        $VALORACION_PREOPERATORIA_ENFERMERIA = $_POST['VALORACION_PREOPERATORIA_ENFERMERIA'];
+        $IDENTIFICACION_ALERGIAS = $_POST['IDENTIFICACION_ALERGIAS'];
+        $PREPARACIÓN_UNIDAD = $_POST['PREPARACIÓN_UNIDAD'];
+        $INSTALACION_CUIDADO_CATETER_PERIFÉRICO = $_POST['INSTALACION_CUIDADO_CATETER_PERIFÉRICO'];
+        $TOMA_MUESTRAS_LABORATORIO_BANCO_SANGRE = $_POST['TOMA_MUESTRAS_LABORATORIO_BANCO_SANGRE'];
+        $OXIGENACION_PRE = $_POST['OXIGENACION_PRE'];
+        $MANEJO_VIGILANCIA_NPT = $_POST['MANEJO_VIGILANCIA_NPT'];
+        $PRE_MEDICACION_PROFILAXIS_ANTIBIOTICA = $_POST['PRE_MEDICACION_PROFILAXIS_ANTIBIOTICA'];
+        $PREVENCION_MEDIDAS_ANTITROMBOTICAS = $_POST['PREVENCION_MEDIDAS_ANTITROMBOTICAS'];
+        $MARCAJE_QUIRURGICO = $_POST['MARCAJE_QUIRURGICO'];
+        $INTEGRACION_EXPEDIENTE_CLINICO_QUIRURGICO = $_POST['INTEGRACION_EXPEDIENTE_CLINICO_QUIRURGICO'];
+        $VERIFICACION_DISPONIBILIDAD_HEMOCOMPONENTES = $_POST['VERIFICACION_DISPONIBILIDAD_HEMOCOMPONENTES'];
+        $IDENTIFICACION_CORRECTA_PACIENTE_TRAS = $_POST['IDENTIFICACION_CORRECTA_PACIENTE_TRAS'];
+        $VERIFICACIÓN_PROGRAMACIO_QUIRURGICA = $_POST['VERIFICACIÓN_PROGRAMACIO_QUIRURGICA'];
+        $EQUIPAMIENTO_SALA_QUIRURGICA = $_POST['EQUIPAMIENTO_SALA_QUIRURGICA'];
+        $VALORACION_TRANSOPERATORIA_ENFERMERIA = $_POST['VALORACION_TRANSOPERATORIA_ENFERMERIA'];
+        $ENTREGA_RECEPCION_PACIENTE = $_POST['ENTREGA_RECEPCION_PACIENTE'];
+        $ENTREGA_RECEPCION_EXPEDIENTE_CLINICO_QUIRURGICO = $_POST['ENTREGA_RECEPCION_EXPEDIENTE_CLINICO_QUIRURGICO'];
+        $POSICION_QUIRURGICA_CONFORT_PACIENTE = $_POST['POSICION_QUIRURGICA_CONFORT_PACIENTE'];
+        $APLICACION_CIRUGIA_SEGURA = $_POST['APLICACION_CIRUGIA_SEGURA'];
+        $FUNCIONES_ENFERMERA_INSTRUMENTISTA = $_POST['FUNCIONES_ENFERMERA_INSTRUMENTISTA'];
+        $FUNCIONES_ENFERMERA_CIRCULANTE = $_POST['FUNCIONES_ENFERMERA_CIRCULANTE'];
+        $INSTALACION_MANEJO_SONDA_VESICAL = $_POST['INSTALACION_MANEJO_SONDA_VESICAL'];
+        $ASISTENCIA_INSTALACION_CATETER_CENTRAL = $_POST['ASISTENCIA_INSTALACION_CATETER_CENTRAL'];
+        $ASISTENCIA_INSTALACION_LINEA_ARTERIAL = $_POST['ASISTENCIA_INSTALACION_LINEA_ARTERIAL'];
+        $TRANSFUSION_HEMOCOMPONENTES = $_POST['TRANSFUSION_HEMOCOMPONENTES'];
+        $MANEJO_PIEZA_PATOLOGICA = $_POST['MANEJO_PIEZA_PATOLOGICA'];
+        $CUENTA_INSTRUMENTOS_PUNZO_CORTANTES = $_POST['CUENTA_INSTRUMENTOS_PUNZO_CORTANTES'];
+        $CUENTA_GASAS_COMPRESAS = $_POST['CUENTA_GASAS_COMPRESAS'];
+        $PARTICIPACION_ENFERMERIA_PROCESO_CADENA_CUSTODIA = $_POST['PARTICIPACION_ENFERMERIA_PROCESO_CADENA_CUSTODIA'];
+        $CUIDADOS_POST_MORTEM = $_POST['CUIDADOS_POST_MORTEM'];
+        $PRECAUCIONES_BASADAS_TRASMISION = $_POST['PRECAUCIONES_BASADAS_TRASMISION'];
+        $IDENTIFICACION_CORRECTA_PACIENTE_POS = $_POST['IDENTIFICACION_CORRECTA_PACIENTE_POS'];
+        $SIGNOS_VITALES = $_POST['SIGNOS_VITALES'];
+        $PREPARACIÓN_UNIDAD = $_POST['PREPARACIÓN_UNIDAD'];
+        $OXIGENACION_POST = $_POST['OXIGENACION_POST'];
+        $CONTROL_TERMICO = $_POST['CONTROL_TERMICO'];
+        $CUIDADOS_DRENAJES_SONDAS = $_POST['CUIDADOS_DRENAJES_SONDAS'];
+        $VALORACION_ESCALAS = $_POST['VALORACION_ESCALAS'];
+        $MINISTRACION_MEDICAMENTOS = $_POST['MINISTRACION_MEDICAMENTOS'];
+        $TERAPIA_INTRAVENOSA = $_POST['TERAPIA_INTRAVENOSA'];
+        $TERAPIA_INTRAVENOSA = $_POST['TERAPIA_INTRAVENOSA'];
+        $CUIDADO_CATETERES = $_POST['CUIDADO_CATETERES'];
+        $ASPIRACION_SECRECIONES = $_POST['ASPIRACION_SECRECIONES'];
+        $CUIDADO_HERIDA_QUIRURGICA = $_POST['CUIDADO_HERIDA_QUIRURGICA'];
+        $VIGILANCIA_NEUROVASCULAR_DISTAL = $_POST['VIGILANCIA_NEUROVASCULAR_DISTAL'];
+        $MANEJO_ESTOMAS = $_POST['MANEJO_ESTOMAS'];
+        $CUIDADO_TRAQUEOSTOMIA = $_POST['CUIDADO_TRAQUEOSTOMIA'];
+        $CUIDADOS_VENTRICULOSTOMIA = $_POST['CUIDADOS_VENTRICULOSTOMIA'];
+        $PLAN_ALTA = $_POST['PLAN_ALTA'];
+        
+
+        echo 'success'; 
+    }
+
+
+
+
+?>
