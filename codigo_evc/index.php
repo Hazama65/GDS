@@ -5,22 +5,21 @@ include("modal/registrarpaciente.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 
     <title>Código EVC</title>
 </head>
+
 <body>
-<header>
+    <header>
         <h5 class="bi bi-heart-pulse-fill" style="color:#ffffff; margin-top: 15px;">CÓDIGO EVC</h5>
         <br>
         <div style="padding: 20px; text-align: right;">
@@ -60,6 +59,7 @@ include("modal/registrarpaciente.php");
                 <br>
                 <input type="text" id="search" placeholder="Buscar Residente...">
                 <ul id="patient-list">
+
                     <?php
                         if (!empty($data_Evc)) {
                             // Comienza a generar la lista de pacientes
@@ -85,6 +85,7 @@ include("modal/registrarpaciente.php");
                         }
                     ?>
                     
+
                 </ul>
 
             </div> <!-- cierre del <div id="patient-list-container">-->
@@ -100,24 +101,20 @@ include("modal/registrarpaciente.php");
 
                 <!-- Agrega un div para contener el select dinámico -->
                 <div id="Seguimiento_index" style="display: none;">
-                    <select name="paciente_seleccionado" class="col-6 form-select custom-select"
-                        id="paciente_seleccionado" style="background-color: #6c757d; color: white; margin-bottom:10px">
+                    <select name="paciente_seleccionado" class="col-6 form-select custom-select" id="paciente_seleccionado" style="background-color: #6c757d; color: white; margin-bottom:10px">
                     </select>
 
                 </div>
 
-                <iframe id="consulta" src="" frameborder="0" width="100%" height="800px"
-                    style="margin-bottom: 100px;"></iframe>
+                <iframe id="consulta" src="consulta.php" frameborder="0" width="100%" height="800px" style="margin-bottom: 100px;"></iframe>
             </div> <!-- <div class="container"> -->
         </div> <!-- FINALIZA EL DIV class col 8 -->
 
-        <iframe id="consulta_seguimiento" src="" frameborder="0" width="100%" height="800px"
-            style="margin-bottom: 100px;"></iframe>
+        <iframe id="consulta_seguimiento" src="" frameborder="0" width="100%" height="800px" style="margin-bottom: 100px;"></iframe>
 
         <div class="col-7">
             <div class="container">
-                <iframe id="consulta" src="consulta.php" frameborder="0" width="100%" height="800px"
-                    style="margin-bottom: 100px;"></iframe>
+                <iframe id="consulta" src="consulta.php" frameborder="0" width="100%" height="800px" style="margin-bottom: 100px;"></iframe>
             </div> <!--<div class="container">-->
         </div><!-- FINALIZA EL DIV class col 8-->
 
@@ -160,10 +157,10 @@ include("modal/registrarpaciente.php");
 
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             const cerrarSesionButton = document.getElementById('cerrar-sesion-button');
 
-            cerrarSesionButton.addEventListener('click', function () {
+            cerrarSesionButton.addEventListener('click', function() {
                 // Redirige al usuario a la página de cierre de sesión
                 window.location.href = 'php/destroysession.php';
             });
@@ -171,4 +168,5 @@ include("modal/registrarpaciente.php");
     </script>
 
 </body>
+
 </html>
