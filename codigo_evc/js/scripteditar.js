@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const faceSelect = document.getElementById('Face');
     const armsSelect = document.getElementById('arms');
     const speechSelect = document.getElementById('speech');
@@ -199,15 +199,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Asignar evento de cambio a cada selector
-    faceSelect.addEventListener('change', function() {
+    faceSelect.addEventListener('change', function () {
         cambiarEstiloTexto(this);
     });
 
-    armsSelect.addEventListener('change', function() {
+    armsSelect.addEventListener('change', function () {
         cambiarEstiloTexto(this);
     });
 
-    speechSelect.addEventListener('change', function() {
+    speechSelect.addEventListener('change', function () {
         cambiarEstiloTexto(this);
     });
 });

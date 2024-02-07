@@ -1,16 +1,44 @@
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header estilomodal">
-                <h1 class="bi bi-clipboard2-heart modal-title fs-4" id="exampleModalLabel">Registro Paciente EVC</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- Datos de llegada del paciente  -->
-                <div class="row">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
-                    <div class="col-md-6" id="idnombre">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Editar Registro Código EVC</title>
+</head>
+
+
+<body>
+
+    <header style="text-align: center;">
+        <div style=" padding: 20px; text-align: left;">
+            <a href="index.php">
+                <button type="button" class="btn btn-outline-light" id="inicio-button" title="Inicio">
+                    <i class="bi bi-rewind-fill"></i>
+                </button>
+            </a>
+        </div>
+
+
+        <h5>Editar Código EVC</h5>
+        <div style="padding: 20px; text-align: right;">
+            <button type="button" class="btn btn-outline-light" id="cerrar-sesion-button" title="Cerrar sesión">
+                <i class="bi bi-power"></i>
+            </button>
+        </div>
+    </header>
+    <br>
+
+    <div class="container">
+
+        <div class="row">
+
+        <div class="col-md-6" id="idnombre">
                         <strong style="font-size: 14px;">Nombre Completo</strong>
                         <input id="nombre" name="nombre" type="text" class="control form-control" value="" style="font-size: 13px;">
                     </div>
@@ -325,12 +353,12 @@
 
                     <div class="col-md-6">
                         <strong style="font-size: 14px; ">Hora de Inicio de Trombolisis</strong>
-                        <input id="tiempo_Trombolisis" name="tiempo_Trombolisis" type="time" value="" class="control form-control" style="font-size: 13px;">
+                        <input id="tiempo_Trombolisis" name="tiempo_Trombolisis" type="time" value="" class="control form-control" style="font-size: 13px;" >
                     </div>
                     
                     <div class="col-md-6">
                         <strong style="font-size: 14px;">Puerta-AGUJA</strong>
-                        <input type="text" id="puerta_aguja" name="puerta_aguja" value="" class="control form-control" style="font-size: 13pz;" readonly>
+                        <input type="text" id="puerta_aguja" name="puerta_aguja" value="" class="control form-control" style="font-size: 13pz;" readonly readonly>
                     </div>
 
                     <div class="col-md-6">
@@ -340,7 +368,7 @@
 
                     <div class="col-md-6">
                         <strong style="font-size: 14px;">Terapia Intensiva</strong>
-                        <input type="text" id="puerta_terapia" name="puerta_terapia" value="" class="control form-control" style="font-size: 13pz;" readonly>
+                        <input type="text" id="puerta_terapia" name="puerta_terapia" value="" class="control form-control" style="font-size: 13pz;" readonly> 
                     </div>
 
                     <div class="col-md-12">
@@ -517,9 +545,9 @@
                         </select>
                     </div>
 
-                    <div class="col-md-3" id="dolor_neuropatico" style="display: none">
+                    <div class="col-md-3" id="dolor_neuropatico" style="display:none">
                         <strong style="font-size: 14px;">Tipo-Neuropático</strong>
-                        <input type="text" class="control form-control" id="neuropatico" name="neuropatico" style="font-size: 13px;" readonly>
+                        <input type="text" class="control form-control" id="neuropatico" name="neuropatico" style="font-size: 13px;" >
                     </div>
 
                     <div class="col-md-3">
@@ -540,7 +568,7 @@
                         </select>
                     </div>
 
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                         <strong style="font-size: 14px;">Neuropsicología</strong>
                         <input type="text" class="control form-control" id="neuropsicologia" name="neuropsicologia" style="font-size: 13px;" readonly>
                     </div>
@@ -583,20 +611,23 @@
 
 
 
+        </div> <!-- DIV ROW LINEA 11 --> <br>
 
 
-                </div> <!-- DIV ROW LINEA 11 -->
-
-
-
-            </div><!--DIV DEL BODY  -->
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+        <div class="modal-footer">
+    
+                <button type="button" class="btn btn-success">Guardar Cambios</button>
             </div>
-        </div>
+            <br>
     </div>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+
+
+</body>
+
+<script src="js/scripteditar.js"></script>
+
+
+</html>
