@@ -1,5 +1,7 @@
 <?php
+    require('php/controllers/registros.controller.php');
 include("modal/registrarpaciente.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,6 +60,32 @@ include("modal/registrarpaciente.php");
                 <input type="text" id="search" placeholder="Buscar Residente...">
                 <ul id="patient-list">
 
+                    <?php
+                        if (!empty($data_Evc)) {
+                            // Comienza a generar la lista de pacientes
+                            echo '<ul class="patient-list" >';
+                            foreach ($data_Evc as $PacientesDB) {
+                                $id_pacientes = $PacientesDB["id_paciente"];
+                                $nombrePacientes = $PacientesDB["nombre_paciente"];
+
+                                // Genera un elemento de lista para cada paciente
+                                echo '<li class="patient-item" data-id-paciente="' . $id_pacientes . '">';
+                                echo $nombrePacientes;
+                                echo '<a href="editar_gc.php?id=' . $id_pacientes . '">';
+                                echo '<button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Editar</button>';
+                                echo '</a>';
+                                echo '<a href="seguimiento.php?id=' . $id_pacientes . '">';
+                                echo '<button type="button" class="btn btn-secondary" style="color:white; --bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Seguimiento</button>';
+                                echo '</a>';
+                                echo '</li>';
+                            }
+                            echo '</ul>';
+                        } else {
+                            echo "No se encontraron pacientes";
+                        }
+                    ?>
+                    
+
                 </ul>
 
             </div> <!-- cierre del <div id="patient-list-container">-->
@@ -99,6 +127,14 @@ include("modal/registrarpaciente.php");
         </div>
     </div>
 
+        <!-- Contenedor para la pantalla de carga -->
+    <div id="loading-overlay" style="display: none;" class="loading">
+        <svg width="128px" height="96px">
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="back"></polyline>
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="front"></polyline>
+        </svg>
+    </div>
+
 
 
 
@@ -112,6 +148,14 @@ include("modal/registrarpaciente.php");
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="js/scriptmodal.js"></script>
+
+
+    <script type="module">
+        import {mainForm} from './js/insert.js';
+        mainForm();
+    </script>
+
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const cerrarSesionButton = document.getElementById('cerrar-sesion-button');
