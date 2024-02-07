@@ -4,15 +4,17 @@
             <div class="modal-header estilomodal">
                 <h1 class="bi bi-clipboard2-heart modal-title fs-4" id="exampleModalLabel">Registro Paciente EVC</h1>
 
+
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+                <form id="evc_form"  method="POST">
                 <!-- Datos de llegada del paciente  -->
                 <div class="row">
 
                     <div class="col-md-6" id="idnombre">
                         <strong style="font-size: 14px;">Nombre Completo</strong>
-                        <input id="nombre" name="nombre" type="text" class="control form-control" value="" style="font-size: 13px;">
+                        <input id="nombre" name="nombre" type="text" class="control form-control" style="font-size: 13px;">
                     </div>
 
                     <div class="col-md-6" id="idcurp">
@@ -22,7 +24,7 @@
 
                     <div class="col-md-4">
                         <strong style="font-size: 14px; ">Fecha de Nacimiento</strong>
-                        <input id="fecha" name="fecha" type="date" value="" onblur="curp2date();" class="control form-control" style="font-size: 13px;" readonly>
+                        <input id="fecha" name="fecha" type="date" onblur="curp2date();" class="control form-control" style="font-size: 13px;" readonly>
                     </div>
 
                     <div class="col-md-4">
@@ -33,27 +35,27 @@
 
                     <div class="col-md-4">
                         <strong style="font-size: 14px;">Edad de Ingreso</strong>
-                        <input id="edad" name="edad" type="number" class="control form-control" value="" style="font-size: 13px;" readonly>
+                        <input id="edad" name="edad" type="number" class="control form-control" style="font-size: 13px;" readonly>
                     </div>
 
-                    <div class="col-md-6" style="display:none">
+                    <div class="col-md-6" >
                         <strong style="font-size: 14px; ">Fecha</strong>
-                        <input id="fecha_Actual" name="fecha_Actual" type="date" value="" class="control form-control" style="font-size: 13px;" readonly>
+                        <input id="fecha_Actual" name="fecha_Actual" type="date" class="control form-control" style="font-size: 13px;" readonly>
                     </div>
 
-                    <div class="col-md-3" style="display:none">
+                    <div class="col-md-3" >
                         <strong style="font-size: 14px; ">Horario</strong>
-                        <input id="tiempo" name="tiempo" type="time" value="" class="control form-control" style="font-size: 13px;" style="display: none;" readonly>
+                        <input id="tiempo" name="tiempo" type="time" class="control form-control" style="font-size: 13px;" style="display: none;" readonly>
                     </div>
 
                     <div class="col-md-6">
                         <strong style="font-size: 14px; ">Fecha de Sintomas</strong>
-                        <input id="fecha_inicio" name="fecha_inicio" type="date" value="" class="control form-control" style="font-size: 13px;">
+                        <input id="fecha_inicio" name="fecha_inicio" type="date" class="control form-control" style="font-size: 13px;">
                     </div>
 
                     <div class="col-md-6">
                         <strong style="font-size: 14px; ">Inicio de Sintomas</strong>
-                        <input id="inicio_sintomas" name="inicio_sintomas" type="time" value="" class="control form-control" style="font-size: 13px;">
+                        <input id="inicio_sintomas" name="inicio_sintomas" type="time" class="control form-control" style="font-size: 13px;">
                     </div>
 
                     <!-- ************************Escala F.A.S.T*********************************** -->
@@ -221,7 +223,7 @@
 
                         <div class="col-md-4">
                             <span style="font-size: 14px;">Enfermedad Cardiovascular </span>
-                            <input type="checkbox" name="Apnea" id="Apnea" value="Si" style="font-size: 14px;">
+                            <input type="checkbox" name="enfermedad_cardio" id="enfermedad_cardio" value="Si" style="font-size: 14px;">
                         </div>
 
                     </div> <!-- DIV FINAL DE ROW DEL FACTOR DE RIESGO-->
@@ -255,7 +257,7 @@
 
                         <div class="col-md-4">
                             <strong style="font-size: 14px; margin-top: 50px;">Área</strong>
-                            <select name="defuncion" id="defuncion" class="form-control" style="font-size: 14px;">
+                            <select name="area" id="area" class="form-control" style="font-size: 14px;">
                                 <option value="Seleccione">Seleccione</option>
                                 <option value="Urgencias">Urgencias</option>
                                 <option value="Hospitalización">Hospitalización</option>
@@ -355,43 +357,15 @@
                             </select>
                         </div>
 
-
                     </div> <!--  div del row de Escalas de Rehabilitacion -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 </div> <!-- DIV ROW LINEA 11 -->
-
-
 
             </div><!--DIV DEL BODY  -->
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn btn-primary">Guardar</button>
             </div>
         </div>
     </div>
