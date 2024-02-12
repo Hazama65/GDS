@@ -16,3 +16,5 @@ u772081794_diabetes_seg	/2DxF1!dT
 u772081794_gc/SAoC;V0h
 u772081794_gc_seg/CW1wBh:4s
 u772081794_ginecologia/7?klFTcnLWJ
+u772081794_evc/D6/hiTKE
+u772081794_evc_seg/S96oz#rs$8
