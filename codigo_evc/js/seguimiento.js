@@ -2,10 +2,10 @@ import { setAlerts } from "./plugins/alerts.plugin_evc.js";
 import { httpClients } from "./plugins/http-client.plugin_evc.js";
 
 
-const url = "php/controllers/insert.controller.php";
-const data = $('#evc_form');
+const url = "php/controllers/seguimiento.controller.php";
+const data = $('#seguimiento_evc');
 
-export const mainForm = () => {
+export const seguimientoForm = () => {
 
     data.on('submit', async function (event){
         event.preventDefault();
@@ -25,6 +25,7 @@ const validation = async (alldata) => {
 
     
         const response = await httpClients.post(url, alldata);
+        console.log(response);
 
         hideLoadingOverlay();
         
