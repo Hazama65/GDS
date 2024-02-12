@@ -268,7 +268,7 @@
                             </tr>
 
                             <tr>
-                                <td class="estilo-celda">Terapia Intensiva</td>
+                                <td class="estilo-celda">Hora de TAC-Control</td>
                                 <td><?php echo $hora_tac_control ; ?></td>
                             </tr>
 

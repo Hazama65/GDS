@@ -61,32 +61,32 @@ include('php/controllers/edit.controller.php');
                 <div class="col-md-4">
                     <strong style="font-size: 14px; ">Fecha de Nacimiento</strong>
                     <input id="fecha" name="fecha" type="date" onblur="curp2date();" class="control form-control"
-                        style="font-size: 13px;" readonly value="<?php echo $fecha_nacimiento; ?>">
+                        style="font-size: 13px;"  value="<?php echo $fecha_nacimiento; ?>">
                 </div>
     
                 <div class="col-md-4">
                     <strong style="font-size: 14px;">Sexo</strong>
                     <input type="text" class="control form-control" id="sexo" onclick="curp2date();" name="sexo"
-                        style="font-size: 13px;" readonly value="<?php echo $sexo; ?>">
+                        style="font-size: 13px;"  value="<?php echo $sexo; ?>">
                 </div>
     
     
                 <div class="col-md-4">
                     <strong style="font-size: 14px;">Edad de Ingreso</strong>
                     <input id="edad" name="edad" type="number" class="control form-control" style="font-size: 13px;"
-                        readonly value="<?php echo $edad; ?>">
+                         value="<?php echo $edad; ?>">
                 </div>
     
                 <div class="col-md-6" style="display:none">
                     <strong style="font-size: 14px; ">Fecha</strong>
                     <input id="fecha_Actual" name="fecha_Actual" type="date" class="control form-control"
-                        style="font-size: 13px;" readonly>
+                        style="font-size: 13px;" >
                 </div>
     
                 <div class="col-md-3" style="display:none">
                     <strong style="font-size: 14px; ">Horario</strong>
                     <input id="tiempo" name="tiempo" type="time" class="control form-control" style="font-size: 13px;"
-                        style="display: none;" readonly>
+                        style="display: none;" >
                 </div>
     
                 <div class="col-md-6">
@@ -145,7 +145,7 @@ include('php/controllers/edit.controller.php');
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">TIME</strong>
                         <input type="text" class="control form-control" id="resultado_time" name="resultado_time"
-                            style="font-size: 13px;" readonly value="<?php echo $time; ?>">
+                            style="font-size: 13px;"  value="<?php echo $time; ?>">
                     </div>
     
                 </div><!-- row  ESCALA FAST-->
@@ -343,7 +343,7 @@ include('php/controllers/edit.controller.php');
                 <div class="col-md-6">
                     <strong style="font-size: 14px;">Puerta-TRIAGE</strong>
                     <input type="text" id="puerta_triage" name="puerta_triage" class="control form-control"
-                        style="font-size: 13pz;" readonly value="<?php echo $puerta_triage; ?>">
+                        style="font-size: 13pz;"  value="<?php echo $puerta_triage; ?>">
                 </div>
     
                 <div class="col-md-6">
@@ -355,7 +355,7 @@ include('php/controllers/edit.controller.php');
                 <div class="col-md-6">
                     <strong style="font-size: 14px;">Puerta-URGENCIAS</strong>
                     <input type="text" id="puerta_urgencias" name="puerta_urgencias" class="control form-control"
-                        style="font-size: 13pz;" readonly value="<?php echo $puerta_urgencias; ?>">
+                        style="font-size: 13pz;"  value="<?php echo $puerta_urgencias; ?>">
                 </div>
     
                 <div class="col-md-6">
@@ -367,7 +367,7 @@ include('php/controllers/edit.controller.php');
                 <div class="col-md-6">
                     <strong style="font-size: 14px;">Puerta-TAC</strong>
                     <input type="text" id="puerta_tac" name="puerta_tac" class="control form-control"
-                        style="font-size: 13pz;" readonly value="<?php echo $puerta_tac; ?>">
+                        style="font-size: 13pz;"  value="<?php echo $puerta_tac; ?>">
                 </div>
     
                 <div class="col-md-6">
@@ -379,7 +379,7 @@ include('php/controllers/edit.controller.php');
                 <div class="col-md-6">
                     <strong style="font-size: 14px;">Puerta-MÉDICOS</strong>
                     <input type="text" id="puerta_medicos" name="puerta_medicos" class="control form-control"
-                        style="font-size: 13pz;" readonly value="<?php echo $puerta_medicos; ?>">
+                        style="font-size: 13pz;"  value="<?php echo $puerta_medicos; ?>">
                 </div>
     
                 <div class="col-md-6">
@@ -391,7 +391,7 @@ include('php/controllers/edit.controller.php');
                 <div class="col-md-6">
                     <strong style="font-size: 14px;">Puerta-AGUJA</strong>
                     <input type="text" id="puerta_aguja" name="puerta_aguja" class="control form-control"
-                        style="font-size: 13pz;" readonly readonly value="<?php echo $puerta_aguja; ?>">
+                        style="font-size: 13pz;"   value="<?php echo $puerta_aguja; ?>">
                 </div>
     
                 <div class="col-md-6">
@@ -403,7 +403,7 @@ include('php/controllers/edit.controller.php');
                 <div class="col-md-6">
                     <strong style="font-size: 14px;">Terapia Intensiva</strong>
                     <input type="text" id="puerta_terapia" name="puerta_terapia" class="control form-control"
-                        style="font-size: 13pz;" readonly value="<?php echo $terapia_intensiva; ?>">
+                        style="font-size: 13pz;"  value="<?php echo $terapia_intensiva; ?>">
                 </div>
     
                 <div class="col-md-6">
@@ -415,7 +415,7 @@ include('php/controllers/edit.controller.php');
                 <div class="col-md-6">
                     <strong style="font-size: 14px;">TAC-Control</strong>
                     <input type="text" id="puerta_taccontrol" name="puerta_taccontrol" class="control form-control"
-                        style="font-size: 13pz;" readonly value="<?php echo $tac_control; ?>">
+                        style="font-size: 13pz;"  value="<?php echo $tac_control; ?>">
                 </div>
     
     
@@ -629,7 +629,7 @@ include('php/controllers/edit.controller.php');
                 <div class="col-md-3">
                     <strong style="font-size: 14px;">Neuropsicología</strong>
                     <input type="text" class="control form-control" id="neuropsicologia" name="neuropsicologia"
-                        style="font-size: 13px;" readonly value="<?php echo $neuro; ?>">
+                        style="font-size: 13px;"  value="<?php echo $neuro; ?>">
                 </div>
     
                 <div class="col-md-3">
@@ -644,7 +644,7 @@ include('php/controllers/edit.controller.php');
                 <div class="col-md-3">
                     <strong style="font-size: 14px;">Equilibrio</strong>
                     <input type="text" class="control form-control" id="Equilibrio" name="Equilibrio"
-                        style="font-size: 13px;" readonly value="<?php echo $equilibrio; ?>">
+                        style="font-size: 13px;"  value="<?php echo $equilibrio; ?>">
                 </div>
     
     
