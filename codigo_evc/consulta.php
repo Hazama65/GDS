@@ -1,3 +1,6 @@
+<?php
+    include('php/controllers/consulta.controller.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,37 +35,37 @@
 
                             <tr>
                                 <td class="estilo-celda">Nombre Completo</td>
-                                <td> </td>
+                                <td><?php echo $nombre_paciente ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">CURP</td>
-                                <td></td>
+                                <td><?php echo $curp ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Fecha Nacimiento</td>
-                                <td></td>
+                                <td><?php echo $fecha_nacimiento ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Sexo</td>
-                                <td></td>
+                                <td><?php echo $sexo ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Edad de Ingreso</td>
-                                <td></td>
+                                <td><?php echo $edad ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Fecha de Sintomas</td>
-                                <td></td>
+                                <td><?php echo $fecha_sintomas ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Inicio de Sintomas</td>
-                                <td></td>
+                                <td><?php echo $inicio_sintomas ; ?></td>
                             </tr>
                             
                             
@@ -73,23 +76,23 @@
 
                             <tr>
                                 <td class="estilo-celda">FACE</td>
-                                <td></td>
+                                <td><?php echo $face ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">ARMS</td>
-                                <td></td>
+                                <td><?php echo $arms ; ?></td>
                             </tr>
 
 
                             <tr>
                                 <td class="estilo-celda">SPEECH</td>
-                                <td></td>
+                                <td><?php echo $speech ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">TIME</td>
-                                <td></td>
+                                <td><?php echo $time ; ?></td>
                             </tr>
 
                             <tr>
@@ -99,28 +102,28 @@
 
                             <tr>
                                 <td class="estilo-celda">Escala NIHSS</td>
-                                <td></td>
+                                <td><?php echo $escala ; ?></td>
                             </tr>
 
 
                             <tr>
                                 <td class="estilo-celda">Trombolisis</td>
-                                <td></td>
+                                <td><?php echo $trombolisis ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">r-TPA</td>
-                                <td></td>
+                                <td><?php echo $tpa ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Sangrado</td>
-                                <td></td>
+                                <td><?php echo $sangrado ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Nivel</td>
-                                <td></td>
+                                <td><?php echo $nivel ; ?></td>
                             </tr>
 
                             <tr>
@@ -131,42 +134,42 @@
 
                             <tr>
                                 <td class="estilo-celda">Enfermedad Vascular Cerebral</td>
-                                <td></td>
+                                <td><?php echo $evc ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Hipertensión </td>
-                                <td></td>
+                                <td><?php echo $hipertension ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Diabetes</td>
-                                <td></td>
+                                <td><?php echo $diabetes ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Tabaquismo </td>
-                                <td></td>
+                                <td><?php echo $tabaquismo ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Covid </td>
-                                <td></td>
+                                <td><?php echo $covid ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Hiperlipidemia </td>
-                                <td></td>
+                                <td><?php echo $hiperlipidemia ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Apnea  de Sueño </td>
-                                <td></td>
+                                <td><?php echo $apnea ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Enfermedad Cardiovascular</td>
-                                <td></td>
+                                <td><?php echo $enfcardio ; ?></td>
                             </tr>
 
                             <tr>
@@ -177,18 +180,18 @@
 
                             <tr>
                                 <td class="estilo-celda">Se Activa Código EVC</td>
-                                <td></td>
+                                <td><?php echo $activacion ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Defunción</td>
-                                <td></td>
+                                <td><?php echo $defuncion ; ?></td>
                             </tr>
 
 
                             <tr>
                                 <td class="estilo-celda">Área</td>
-                                <td></td>
+                                <td><?php echo $area ; ?></td>
                             </tr>
 
                             <tr>
@@ -198,70 +201,80 @@
 
                             <tr>
                                 <td class="estilo-celda">Hora de llegada Urgencias</td>
-                                <td></td>
+                                <td><?php echo $hora_llegada ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Hora de Atención TRIAGE</td>
-                                <td></td>
+                                <td><?php echo $hora_triage ; ?></td>
                             </tr>
 
                             
                             <tr>
                                 <td class="estilo-celda">Puerta-TRIAGE</td>
-                                <td></td>
+                                <td><?php echo $puerta_triage ; ?></td>
                             </tr>
                                                         
                             <tr>
                                 <td class="estilo-celda">Hora de Atención CHOQUE</td>
-                                <td></td>
+                                <td><?php echo $hora_choque ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Puerta-URGENCIAS</td>
-                                <td></td>
+                                <td><?php echo $puerta_urgencias ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Hora de Realización TAC</td>
-                                <td></td>
+                                <td><?php echo $hora_tac ; ?></td>
+                            </tr>
+
+                            <tr>
+                                <td class="estilo-celda">Puerta-TAC</td>
+                                <td><?php echo $puerta_tac ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Hora de Atención Equipo Multidisciplinario</td>
-                                <td></td>
+                                <td><?php echo $hora_em ; ?></td>
                             </tr>
 
                             
                             <tr>
                                 <td class="estilo-celda">Puerta-MÉDICOS</td>
-                                <td></td>
+                                <td><?php echo $puerta_medicos ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Hora de Inicio de Trombolisis</td>
-                                <td></td>
+                                <td><?php echo $hora_trombo ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Puerta-AGUJA</td>
-                                <td></td>
+                                <td><?php echo $puerta_aguja ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Hora de Inicio a Terapia</td>
-                                <td></td>
+                                <td><?php echo $hora_terapia ; ?></td>
                             </tr>
 
                             
                             <tr>
                                 <td class="estilo-celda">Terapia Intensiva</td>
-                                <td></td>
+                                <td><?php echo $terapia_intensiva ; ?></td>
+                            </tr>
+
+                            <tr>
+                                <td class="estilo-celda">Hora de TAC-Control</td>
+                                <td><?php echo $hora_tac_control ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">TAC-Control</td>
-                                <td></td>
+                                <td><?php echo $tac_control ; ?></td>
                             </tr>
                             
                             
@@ -273,12 +286,12 @@
 
                             <tr>
                                 <td class="estilo-celda">Val. Inicial de Rehabilitación</td>
-                                <td></td>
+                                <td><?php echo $inicial ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Val. Rehabilitación Hospitalaria</td>
-                                <td></td>
+                                <td><?php echo $hospitalaria ; ?></td>
                             </tr>
 
                             <tr>
@@ -288,27 +301,27 @@
 
                             <tr>
                                 <td class="estilo-celda">Dependencia Funcional</td>
-                                <td></td>
+                                <td><?php echo $df_nivel ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Dependencia Funcional-Nivel</td>
-                                <td></td>
+                                <td><?php echo $df ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">FIM Inicial</td>
-                                <td></td>
+                                <td><?php echo $fim ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Barthel Inicial</td>
-                                <td></td>
+                                <td><?php echo $barthel ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">RANKIN</td>
-                                <td></td>
+                                <td><?php echo $rankin ; ?></td>
                             </tr>
 
                             
@@ -319,63 +332,63 @@
 
                             <tr>
                                 <td class="estilo-celda">Deglución</td>
-                                <td></td>
+                                <td><?php echo $deglucion ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Lenguaje</td>
-                                <td></td>
+                                <td><?php echo $lenguaje ; ?></td>
                             </tr>
                             
                             <tr>
                                 <td class="estilo-celda">Motor</td>
-                                <td></td>
+                                <td><?php echo $motor ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Extremidad Superior</td>
-                                <td></td>
+                                <td><?php echo $extr_sup ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Extremidad Inferior</td>
-                                <td></td>
+                                <td><?php echo $extr_inf ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Dolor</td>
-                                <td></td>
+                                <td><?php echo $dolor ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Tipo-Neuropático</td>
-                                <td></td>
+                                <td><?php echo $tipo_neuro ; ?></td>
                             </tr>
 
 
                             <tr>
                                 <td class="estilo-celda">Cognitivo</td>
-                                <td></td>
+                                <td><?php echo $cognitivo ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Interconsulta</td>
-                                <td></td>
+                                <td><?php echo $interconsulta ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Neuropsicología</td>
-                                <td></td>
+                                <td><?php echo $neuro ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Marcha</td>
-                                <td></td>
+                                <td><?php echo $marcha ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Equilibrio</td>
-                                <td></td>
+                                <td><?php echo $equilibrio ; ?></td>
                             </tr>
 
 

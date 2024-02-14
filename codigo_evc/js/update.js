@@ -2,10 +2,10 @@ import { setAlerts } from "./plugins/alerts.plugin_evc.js";
 import { httpClients } from "./plugins/http-client.plugin_evc.js";
 
 
-const url = "php/controllers/insert.controller.php";
-const data = $('#evc_form');
+const url = "php/controllers/update.controller.php";
+const data = $('#evc_update');
 
-export const mainForm = () => {
+export const editForm = () => {
 
     data.on('submit', async function (event){
         event.preventDefault();
@@ -20,16 +20,20 @@ export const mainForm = () => {
 
 }
 
+
 const validation = async (alldata) => {
     try {
 
     
         const response = await httpClients.post(url, alldata);
 
-        hideLoadingOverlay();
         
-        if (response == 0) {return setAlerts.errorAlert('Hubo una Falla en el servidor al Guardar los datos')}
 
+
+        hideLoadingOverlay();
+
+        if (response == 0) {return setAlerts.errorAlert('Hubo una Falla en el servidor al Guardar los datos')}
+        
 
         if (response == 'success') {
             return setAlerts.successAlert(

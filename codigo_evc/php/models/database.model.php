@@ -80,7 +80,7 @@
 
         }
 
-            // Función para realizar un insert
+        // Función para realizar un insert
         function insertData($table, $data) {
             $columns = implode(", ", array_keys($data));
             $values = "'" . implode("', '", array_map(array($this, 'escapeString'), array_values($data))) . "'";
@@ -95,6 +95,29 @@
                 $error_message = mysqli_error($onConnection);
                 $this->closeConnection($onConnection);
                 return "Error en la inserción: $error_message";
+            }
+        }
+
+        // Función para realizar un update
+        function updateData($table, $data, $whereColumn, $whereValue) {
+            $updateValues = '';
+            foreach ($data as $key => $value) {
+                $updateValues .= "$key = '" . $this->escapeString($value) . "', ";
+            }
+            $updateValues = rtrim($updateValues, ', ');
+        
+            $query = "UPDATE $table SET $updateValues WHERE $whereColumn = '" . $this->escapeString($whereValue) . "'";
+        
+            $onConnection = $this->getConnections();
+            
+            if (mysqli_query($onConnection, $query)) {
+                $rowsAffected = mysqli_affected_rows($onConnection);
+                $this->closeConnection($onConnection);
+                return $rowsAffected;
+            } else {
+                $error_message = mysqli_error($onConnection);
+                $this->closeConnection($onConnection);
+                return "Error en la actualización: $error_message";
             }
         }
 

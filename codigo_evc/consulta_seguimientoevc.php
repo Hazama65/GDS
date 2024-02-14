@@ -1,3 +1,6 @@
+<?php
+include('php/controllers/consulta_seguimiento.controller.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,13 +33,17 @@
                         <tbody style="font-size:13px;" class="table-bordered">
 
                             <tr>
+                                <td class="estilo-celda">Fecha Seguimiento</td>
+                                <td><?php echo $fecha_seg ; ?></td>
+                            </tr>
+                            <tr>
                                 <td class="estilo-celda">Seguimiento</td>
-                                <td> </td>
+                                <td><?php echo $tiempo_seguimiento ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Nivel</td>
-                                <td></td>
+                                <td><?php echo $nivel_seguimiento ; ?></td>
                             </tr>
 
                             <tr>
@@ -45,13 +52,18 @@
                             </tr>
 
                             <tr>
+                                <td class="estilo-celda">FIM Inicial</td>
+                                <td><?php echo $fim_inicial ; ?></td>
+                            </tr>
+
+                            <tr>
                                 <td class="estilo-celda">Seguimiento</td>
-                                <td> </td>
+                                <td><?php echo $nivel_fim ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Nivel</td>
-                                <td></td>
+                                <td><?php echo $fim_final ; ?></td>
                             </tr>
 
                             <tr>
@@ -61,12 +73,12 @@
 
                             <tr>
                                 <td class="estilo-celda">Seguimiento</td>
-                                <td> </td>
+                                <td><?php echo $seguimineto_barthel ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Nivel</td>
-                                <td></td>
+                                <td><?php echo $nivel_barthel ; ?></td>
                             </tr>
 
                             <tr>
@@ -76,12 +88,12 @@
 
                             <tr>
                                 <td class="estilo-celda">Seguimiento</td>
-                                <td> </td>
+                                <td><?php echo $nihss_tiempo ; ?></td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Nivel</td>
-                                <td></td>
+                                <td><?php echo $escala ; ?></td>
                             </tr>
 
                             <tr>
@@ -91,12 +103,12 @@
 
                             <tr>
                                 <td class="estilo-celda">Seguimiento</td>
-                                <td> </td>
+                                <td><?php echo $rankin_tiempo ; ?> </td>
                             </tr>
 
                             <tr>
                                 <td class="estilo-celda">Nivel</td>
-                                <td></td>
+                                <td><?php echo $valor ; ?></td>
                             </tr>
 
 
