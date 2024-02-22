@@ -4,15 +4,17 @@
             <div class="modal-header estilomodal">
                 <h1 class="bi bi-clipboard2-heart modal-title fs-4" id="exampleModalLabel">Registro Paciente EVC</h1>
 
+
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+                <form id="evc_form"  method="POST">
                 <!-- Datos de llegada del paciente  -->
                 <div class="row">
 
                     <div class="col-md-6" id="idnombre">
                         <strong style="font-size: 14px;">Nombre Completo</strong>
-                        <input id="nombre" name="nombre" type="text" class="control form-control" value="" style="font-size: 13px;">
+                        <input id="nombre" name="nombre" type="text" class="control form-control" style="font-size: 13px;">
                     </div>
 
                     <div class="col-md-6" id="idcurp">
@@ -22,7 +24,7 @@
 
                     <div class="col-md-4">
                         <strong style="font-size: 14px; ">Fecha de Nacimiento</strong>
-                        <input id="fecha" name="fecha" type="date" value="" onblur="curp2date();" class="control form-control" style="font-size: 13px;" readonly>
+                        <input id="fecha" name="fecha" type="date" onblur="curp2date();" class="control form-control" style="font-size: 13px;" readonly>
                     </div>
 
                     <div class="col-md-4">
@@ -33,27 +35,27 @@
 
                     <div class="col-md-4">
                         <strong style="font-size: 14px;">Edad de Ingreso</strong>
-                        <input id="edad" name="edad" type="number" class="control form-control" value="" style="font-size: 13px;" readonly>
+                        <input id="edad" name="edad" type="number" class="control form-control" style="font-size: 13px;" readonly>
                     </div>
 
                     <div class="col-md-6" style="display:none">
                         <strong style="font-size: 14px; ">Fecha</strong>
-                        <input id="fecha_Actual" name="fecha_Actual" type="date" value="" class="control form-control" style="font-size: 13px;" readonly>
+                        <input id="fecha_Actual" name="fecha_Actual" type="date" class="control form-control" style="font-size: 13px;" readonly>
                     </div>
 
                     <div class="col-md-3" style="display:none">
                         <strong style="font-size: 14px; ">Horario</strong>
-                        <input id="tiempo" name="tiempo" type="time" value="" class="control form-control" style="font-size: 13px;" style="display: none;" readonly>
+                        <input id="tiempo" name="tiempo" type="time" class="control form-control" style="font-size: 13px;" style="display: none;" readonly>
                     </div>
 
                     <div class="col-md-6">
                         <strong style="font-size: 14px; ">Fecha de Sintomas</strong>
-                        <input id="fecha_inicio" name="fecha_inicio" type="date" value="" class="control form-control" style="font-size: 13px;">
+                        <input id="fecha_inicio" name="fecha_inicio" type="date" class="control form-control" style="font-size: 13px;">
                     </div>
 
                     <div class="col-md-6">
                         <strong style="font-size: 14px; ">Inicio de Sintomas</strong>
-                        <input id="inicio_sintomas" name="inicio_sintomas" type="time" value="" class="control form-control" style="font-size: 13px;">
+                        <input id="inicio_sintomas" name="inicio_sintomas" type="time" class="control form-control" style="font-size: 13px;">
                     </div>
 
                     <!-- ************************Escala F.A.S.T*********************************** -->
@@ -221,7 +223,7 @@
 
                         <div class="col-md-4">
                             <span style="font-size: 14px;">Enfermedad Cardiovascular </span>
-                            <input type="checkbox" name="Apnea" id="Apnea" value="Si" style="font-size: 14px;">
+                            <input type="checkbox" name="enfermedad_cardio" id="enfermedad_cardio" value="Si" style="font-size: 14px;">
                         </div>
 
                     </div> <!-- DIV FINAL DE ROW DEL FACTOR DE RIESGO-->
@@ -255,7 +257,7 @@
 
                         <div class="col-md-4">
                             <strong style="font-size: 14px; margin-top: 50px;">Área</strong>
-                            <select name="defuncion" id="defuncion" class="form-control" style="font-size: 14px;">
+                            <select name="area" id="area" class="form-control" style="font-size: 14px;">
                                 <option value="Seleccione">Seleccione</option>
                                 <option value="Urgencias">Urgencias</option>
                                 <option value="Hospitalización">Hospitalización</option>
@@ -280,72 +282,77 @@
 
                     <div class="col-md-12">
                         <strong style="font-size: 14px; ">Hora de llegada Urgencias</strong>
-                        <input id="tiempo_urgencias" name="tiempo_urgencias" type="time" value="" class="control form-control" style="font-size: 13px;">
+                        <input id="tiempo_urgencias" name="tiempo_urgencias" type="time" class="control form-control" style="font-size: 13px;">
                     </div>
 
                     <div class="col-md-6">
                         <strong style="font-size: 14px; ">Hora de Atención TRIAGE</strong>
-                        <input id="tiempo_TRIAGE" name="tiempo_TRIAGE" type="time" value="" class="control form-control" style="font-size: 13px;">
+                        <input id="tiempo_TRIAGE" name="tiempo_TRIAGE" type="time" class="control form-control" style="font-size: 13px;">
                     </div>
 
                     <div class="col-md-6">
                         <strong style="font-size: 14px;">Puerta-TRIAGE</strong>
-                        <input type="text" id="puerta_triage" name="puerta_triage" value="" class="control form-control" style="font-size: 13px;" readonly>
+                        <input type="text" id="puerta_triage" name="puerta_triage" class="control form-control" style="font-size: 13pz;" readonly>
                     </div>
 
                     <div class="col-md-6">
                         <strong style="font-size: 14px; ">Hora de Atención CHOQUE</strong>
-                        <input id="tiempo_CHOQUE" name="tiempo_CHOQUE" type="time" value="" class="control form-control" style="font-size: 13px;">
+                        <input id="tiempo_CHOQUE" name="tiempo_CHOQUE" type="time" class="control form-control" style="font-size: 13px;">
                     </div>
                     
                     <div class="col-md-6">
                         <strong style="font-size: 14px;">Puerta-URGENCIAS</strong>
-                        <input type="text" id="puerta_urgencias" name="puerta_urgencias" value="" class="control form-control" style="font-size: 13pz;" readonly>
+                        <input type="text" id="puerta_urgencias" name="puerta_urgencias" class="control form-control" style="font-size: 13pz;" readonly>
                     </div>
 
                     <div class="col-md-6">
                         <strong style="font-size: 14px; ">Hora de Realización TAC</strong>
-                        <input id="tiempo_TAC" name="tiempo_TAC" type="time" value="" class="control form-control" style="font-size: 13px;">
+                        <input id="tiempo_TAC" name="tiempo_TAC" type="time" class="control form-control" style="font-size: 13px;">
                     </div>
 
                     <div class="col-md-6">
                         <strong style="font-size: 14px;">Puerta-TAC</strong>
-                        <input type="text" id="puerta_tac" name="puerta_tac" value="" class="control form-control" style="font-size: 13pz;" readonly>
+                        <input type="text" id="puerta_tac" name="puerta_tac" class="control form-control" style="font-size: 13pz;" readonly>
                     </div>
 
                     <div class="col-md-6">
                         <strong style="font-size: 14px; ">Hora de Atención Equipo Multidisciplinario</strong>
-                        <input id="tiempo_Multidisciplinario" name="tiempo_Multidisciplinario" type="time" value="" class="control form-control" style="font-size: 13px;">
+                        <input id="tiempo_Multidisciplinario" name="tiempo_Multidisciplinario" type="time" class="control form-control" style="font-size: 13px;">
                     </div>
 
                     <div class="col-md-6">
                         <strong style="font-size: 14px;">Puerta-MÉDICOS</strong>
-                        <input type="text" id="puerta_medicos" name="puerta_medicos" value="" class="control form-control" style="font-size: 13pz;" readonly>
+                        <input type="text" id="puerta_medicos" name="puerta_medicos" class="control form-control" style="font-size: 13px;" readonly>
                     </div>
 
                     <div class="col-md-6">
                         <strong style="font-size: 14px; ">Hora de Inicio de Trombolisis</strong>
-                        <input id="tiempo_Trombolisis" name="tiempo_Trombolisis" type="time" value="" class="control form-control" style="font-size: 13px;">
+                        <input id="tiempo_Trombolisis" name="tiempo_Trombolisis" type="time" class="control form-control" style="font-size: 13px;">
                     </div>
                     
                     <div class="col-md-6">
                         <strong style="font-size: 14px;">Puerta-AGUJA</strong>
-                        <input type="text" id="puerta_aguja" name="puerta_aguja" value="" class="control form-control" style="font-size: 13pz;" readonly>
+                        <input type="text" id="puerta_aguja" name="puerta_aguja" class="control form-control" style="font-size: 13px;" readonly>
                     </div>
 
                     <div class="col-md-6">
                         <strong style="font-size: 14px; ">Hora de Ingreso a Terapia</strong>
-                        <input id="tiempo_Terapia" name="tiempo_Terapia" type="time" value="" class="control form-control" style="font-size: 13px;">
+                        <input id="tiempo_Terapia" name="tiempo_Terapia" type="time" class="control form-control" style="font-size: 13px;">
                     </div>
 
                     <div class="col-md-6">
                         <strong style="font-size: 14px;">Terapia Intensiva</strong>
-                        <input type="text" id="puerta_terapia" name="puerta_terapia" value="" class="control form-control" style="font-size: 13pz;" readonly>
+                        <input type="text" id="puerta_terapia" name="puerta_terapia" class="control form-control" style="font-size: 13px;" readonly>
                     </div>
 
-                    <div class="col-md-12">
+                    <div class="col-md-6">
+                        <strong style="font-size: 14px; ">Hora de TAC-Control</strong>
+                        <input id="tiempo_tac" name="tiempo_tac" type="time" class="control form-control" style="font-size: 13px;">
+                    </div>
+
+                    <div class="col-md-6">
                         <strong style="font-size: 14px;">TAC-Control</strong>
-                        <input type="text" id="puerta_taccontrol" name="puerta_taccontrol" value="" class="control form-control" style="font-size: 13pz;" readonly>
+                        <input type="text" id="puerta_taccontrol" name="puerta_taccontrol" class="control form-control" style="font-size: 13px;" readonly>
                     </div>
 
 
@@ -445,7 +452,6 @@
                             </select>
                         </div>
 
-
                     </div> <!--  div del row de Escalas de Rehabilitacion -->
 
                     <!-- SECUELAS -->
@@ -519,7 +525,7 @@
 
                     <div class="col-md-3" id="dolor_neuropatico" style="display: none">
                         <strong style="font-size: 14px;">Tipo-Neuropático</strong>
-                        <input type="text" class="control form-control" id="neuropatico" name="neuropatico" style="font-size: 13px;" readonly>
+                        <input type="text" class="control form-control" id="neuropatico" name="neuropatico" style="font-size: 13px;">
                     </div>
 
                     <div class="col-md-3">
@@ -542,7 +548,7 @@
 
                     <div class="col-md-3" >
                         <strong style="font-size: 14px;">Neuropsicología</strong>
-                        <input type="text" class="control form-control" id="neuropsicologia" name="neuropsicologia" style="font-size: 13px;" readonly>
+                        <input type="text" class="control form-control" id="neuropsicologia" name="neuropsicologia" style="font-size: 13px;">
                     </div>
 
                     <div class="col-md-3">
@@ -556,44 +562,16 @@
 
                     <div class="col-md-3">
                         <strong style="font-size: 14px;">Equilibrio</strong>
-                        <input type="text" class="control form-control" id="Equilibrio" name="Equilibrio" style="font-size: 13px;" readonly>
+                        <input type="text" class="control form-control" id="Equilibrio" name="Equilibrio" style="font-size: 13px;">
                     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 </div> <!-- DIV ROW LINEA 11 -->
-
-
 
             </div><!--DIV DEL BODY  -->
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn btn-primary">Guardar</button>
             </div>
         </div>
     </div>
