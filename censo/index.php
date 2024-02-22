@@ -1,7 +1,9 @@
 <?php
-include("modal/registrarpaciente.php");
+include("modal/registrocenso.php");
 ?>
 <!DOCTYPE html>
+
+
 <html lang="en">
 
 <head>
@@ -13,12 +15,12 @@ include("modal/registrarpaciente.php");
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Código EVC</title>
+    <title>CENSO DIARIO PACIENTES DE URGENCIAS</title>
 </head>
 
 <body>
     <header>
-        <h5 class="bi bi-heart-pulse-fill" style="color:#ffffff; margin-top: 15px;">CÓDIGO EVC</h5>
+        <h5 class="bi bi-clipboard2-data-fill" style="color:#ffffff; margin-top: 15px;">Censo Diario Pacientes De Urgencias </h5>
         <br>
         <div style="padding: 20px; text-align: right;">
             <button type="button" class="btn btn-outline-light" id="cerrar-sesion-button" title="Cerrar sesión">

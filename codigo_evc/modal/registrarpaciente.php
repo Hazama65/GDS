@@ -290,7 +290,7 @@
 
                     <div class="col-md-6">
                         <strong style="font-size: 14px;">Puerta-TRIAGE</strong>
-                        <input type="text" id="puerta_triage" name="puerta_triage" value="" class="control form-control" style="font-size: 13pz;" readonly>
+                        <input type="text" id="puerta_triage" name="puerta_triage" value="" class="control form-control" style="font-size: 13px;" readonly>
                     </div>
 
                     <div class="col-md-6">
