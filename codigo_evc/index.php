@@ -154,7 +154,7 @@
     <script src="js/visualizacion_seg.js"></script>
     <script src="js/scriptmodal.js"></script>
     <script src="js/puertas_script.js"></script>
-    <script type="module" src="js/visualizacion.js"></script>
+    <script src="js/visualizacion.js"></script>
 
 
     <script type="module">
