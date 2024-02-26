@@ -1,3 +1,6 @@
+<?php
+    include('php/controllers/consulta.controller.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,53 +35,53 @@
 
                     <tr>
                         <td class="estilo-celda">Fecha</td>
-                        <td></td>
+                        <td><?php echo $fecha ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Nombre Completo</td>
-                        <td> </td>
+                        <td><?php echo $nombre_paciente ; ?> </td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">CURP</td>
-                        <td></td>
+                        <td><?php echo $curp ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Fecha Nacimiento</td>
-                        <td></td>
+                        <td><?php echo $fecha_nacimiento ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Sexo</td>
-                        <td></td>
+                        <td><?php echo $sexo ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Edad</td>
-                        <td></td>
+                        <td><?php echo $edad ; ?></td>
                     </tr>
 
 
                     <tr>
                         <td class="estilo-celda">Cama</td>
-                        <td></td>
+                        <td><?php echo $cama ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Cama Nueva Asignada</td>
-                        <td></td>
+                        <td><?php echo $cama_movimiento ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Estado de Salud</td>
-                        <td></td>
+                        <td><?php echo $estado_salud ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Diagnóstico</td>
-                        <td></td>
+                        <td><?php echo $dx ; ?></td>
                     </tr>
 
                     <tr>
@@ -93,33 +96,33 @@
 
                     <tr>
                         <td class="estilo-celda">GLASGOW</td>
-                        <td></td>
+                        <td><?php echo $glasgow ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">RAMSEY</td>
-                        <td></td>
+                        <td><?php echo $ramsey ; ?></td>
                     </tr>
 
 
                     <tr>
                         <td class="estilo-celda">Actividad Motora</td>
-                        <td></td>
+                        <td><?php echo $act_mot ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Signos Vitales</td>
-                        <td></td>
+                        <td><?php echo $signos_v ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">PVC</td>
-                        <td></td>
+                        <td><?php echo $pvc ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Precauciones Basadas T.</td>
-                        <td></td>
+                        <td><?php echo $precaucion_t ; ?></td>
                     </tr>
 
 
@@ -135,12 +138,12 @@
 
                     <tr>
                         <td class="estilo-celda">Catéter Periférico C.</td>
-                        <td></td>
+                        <td><?php echo $cateter_c ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Catéter Venoso Central.</td>
-                        <td></td>
+                        <td><?php echo $cateter_v ; ?></td>
                     </tr>
 
                     <tr>
@@ -151,7 +154,7 @@
 
                     <tr>
                         <td class="estilo-celda">Dispositivo Respiratorio</td>
-                        <td></td>
+                        <td><?php echo $dispositivo_r ; ?></td>
                     </tr>
 
                     <tr>
@@ -161,22 +164,22 @@
 
                     <tr>
                         <td class="estilo-celda">Sonda Foley</td>
-                        <td></td>
+                        <td><?php echo $sonda_foley ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Sonda Nasogástrica</td>
-                        <td></td>
+                        <td><?php echo $sonda_naso ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Colostomía</td>
-                        <td></td>
+                        <td><?php echo $colostomia ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Penrose</td>
-                        <td></td>
+                        <td><?php echo $penrose ; ?></td>
                     </tr>
 
                     
@@ -187,17 +190,17 @@
 
                     <tr>
                         <td class="estilo-celda">Dieta</td>
-                        <td></td>
+                        <td><?php echo $dieta ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Terapia Intravenosa</td>
-                        <td></td>
+                        <td><?php echo $introvenosa ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Infusiones Especiales de Tx</td>
-                        <td></td>
+                        <td><?php echo $infusiones ; ?></td>
                     </tr>
 
 
