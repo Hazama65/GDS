@@ -1,5 +1,5 @@
 <?php
-    include('php/visualizacion.php');
+    include('php/controllers/consulta.controller.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -202,6 +202,18 @@
                 <td class="estilo-celda">Desequilibrio Hidroelectrolítico</td>
                 <td><?php echo $desequilibrio_hidro; ?></td>
             </tr>
+            <tr>
+                <td class="estilo-celda">Ninguno</td>
+                <td><?php echo $ninguna; ?></td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Otros</td>
+                <td><?php echo $otros; ?></td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Especificar Otros</td>
+                <td><?php echo $otros_campo; ?></td>
+            </tr>
 
             <!--====================================Atención médica============================-->
             
@@ -345,6 +357,11 @@
             <tr>
                 <td class="estilo-celda">Bradicardia</td>
                 <td><?php echo $pre_bradicardia; ?></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Urticaria</td>
+                <td><?php echo $post_Urticaria; ?></td>
             </tr>
             
             <tr>

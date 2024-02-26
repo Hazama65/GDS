@@ -1,34 +1,63 @@
-$(document).ready(function () {
-    $('#edit_form').on('submit', function (e) {
-        e.preventDefault();
+import { setAlerts } from "./plugins/alerts.plugin_ane.js";
+import { httpClients } from "./plugins/http-client.plugin_ane.js";
 
-        let formData = $(this).serialize();
 
-        $.ajax({
-            type: 'POST',
-            url: './php/update.php',
-            data: formData,
-            success: function (response) {
-                console.log('Respuesta del servidor:', response);
-                // Verifica si la respuesta es 'success' (asegúrate de que sea exactamente igual a 'success')
-                if (response === 'success') {
-                    Swal.fire("¡Concluido!", "Los datos se guardaron correctamente.", "success")
-                        .then((result) => {
-                            if (result.isConfirmed) {
-                                window.location.href = '../anemia/index.php';
-                            }
-                        });
-                } else {
-                    console.error('Error en la inserción'); // Asegúrate de que este mensaje se muestre en la consola
-                    // Muestra la alerta SweetAlert para el caso de error
-                    Swal.fire("Error", "Hubo un error al guardar los datos.", "error");
-                }
-            },
-            error: function (error) {
-                console.error('Error en la solicitud AJAX:', error); // Asegúrate de que este mensaje se muestre en la consola
-                // Muestra la alerta SweetAlert para el caso de error en la solicitud AJAX
-                Swal.fire("Error", "Hubo un error en la solicitud AJAX.", "error");
-            }
-        });
-    });
-});
+const url = "php/controllers/update.controller.php";
+const data = $('#anemia_update');
+
+export const editForm = () => {
+
+    data.on('submit', async function (event){
+        event.preventDefault();
+        let alldata = $(this).serialize();
+        // console.log(alldata);
+
+        showLoadingOverlay();
+
+        validation(alldata);
+
+    })
+
+}
+
+
+const validation = async (alldata) => {
+    try {
+
+    
+        const response = await httpClients.post(url, alldata);
+
+        console.log(response);
+
+        
+
+
+        hideLoadingOverlay();
+
+        if (response == 0) {return setAlerts.errorAlert('Hubo una Falla en el servidor al Guardar los datos')}
+        
+
+        if (response == 'success') {
+            return setAlerts.successAlert(
+                'Guardado',
+                null,
+                null,
+                'index.php',
+            );
+        }
+    } catch (error) {
+        hideLoadingOverlay();
+        console.error(error);
+        setAlerts.errorAlert('Hubo un error en la solicitud.');
+    }
+}
+
+
+
+function showLoadingOverlay() {
+    document.getElementById('loading-overlay').style.display = 'flex';
+}
+
+function hideLoadingOverlay() {
+    document.getElementById('loading-overlay').style.display = 'none';
+}
