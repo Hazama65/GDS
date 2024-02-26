@@ -11,8 +11,8 @@ if (!isset($_SESSION['valid_user'])) {
 $username = $_SESSION['valid_user'];
 
 // llamado al modal de registrar paciente de anemia
+require('php/controllers/registros.controller.php');
 include("modals/registrarpaciente.php");
-include("php/dbconfig.php");
 ?>
 
 
@@ -75,19 +75,12 @@ include("php/dbconfig.php");
                         <input type="text" id="search" placeholder="Buscar pacientes...">
                         <ul id="patient-list">
                             <?php
-
-                                $conn = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-
-                                // Consulta SQL
-                                $sql = "SELECT id_paciente, nombre_paciente FROM datos_paciente";
-                                $result = $conn->query($sql);
-
-                                if ($result->num_rows > 0) {
+                                if (!empty($data_ane)) {
                                     // Comienza a generar la lista de pacientes
                                     echo '<ul class="patient-list" >';
-                                    while ($row = $result->fetch_assoc()) {
-                                        $id_paciente = $row["id_paciente"];
-                                        $nombrePaciente = $row["nombre_paciente"];
+                                    foreach($data_ane as $datos) {
+                                        $id_paciente = $datos["id_paciente"];
+                                        $nombrePaciente = $datos["nombre_paciente"];
                                         
                                         // Genera un elemento de lista para cada paciente
                                         echo '<li class="patient-item" data-id-paciente="' . $id_paciente . '">';
@@ -99,13 +92,9 @@ include("php/dbconfig.php");
                                     }
                                     echo '</ul>';
                                 } else {
-                                    echo "No se encontraron pacientes.";
+                                    echo "No se encontraron pacientes";
                                 }
-
-                                // Cierra la conexión a la base de datos
-                                $conn->close();
                             ?>
-
                             <!-- Aquí debe ir el script para consultar los pacientes en la base de datos-->
                         </ul>
                     
@@ -129,7 +118,13 @@ include("php/dbconfig.php");
         <div class="col-1">
         </div>
 </div>
-    
+    <div id="loading-overlay" style="display: none;" class="loading">
+        <svg width="128px" height="96px">
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="back"></polyline>
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="front"></polyline>
+        </svg>
+    </div>
+
 
         
         
@@ -148,8 +143,12 @@ include("php/dbconfig.php");
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/script.js"></script>
-    <script src="js/insert.js"></script>
     <script src="js/visualizacion.js"></script>
+
+    <script type="module">
+        import { mainForm } from './js/insert.js';
+        mainForm();
+    </script>
 
 
     <script>

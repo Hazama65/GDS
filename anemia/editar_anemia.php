@@ -8,7 +8,7 @@
         header('Location: ../login/index.php');
         exit;
     }
-    include('php/edit.php');
+    include('php/controllers/edit.controller.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +28,7 @@
         <br>
     </header>
 <br>
-<form id="edit_form">
+<form id="anemia_update">
     <div class="container"  width="100%" height="800px" style="margin-bottom: 100px;">
         <div class="row">
             <div class="col col-2">
@@ -124,132 +124,141 @@
                 <div class="container">
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="TIP" name="TIP" value="TIP" <?php if ($tip == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="TIP" name="TIP" value="TIP" <?php if ($tip == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="TIP" style="font-size:14px;">TIP</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="Cáncer" name="Cáncer" value="Cancer" <?php if ($cancer == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="Cáncer" name="Cáncer" value="Cancer" <?php if ($cancer == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="Cáncer" style="font-size:14px;">Cáncer</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="Neumonia" name="Neumonia" value="Neumonia"<?php if ($neumonia == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="Neumonia" name="Neumonia" value="Neumonia"<?php if ($neumonia == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="Neumonia" style="font-size:14px;">Neumonia</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="DrogasIV" name="DrogasIV" value="Drogas IV"<?php if ($drogasIV == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="DrogasIV" name="DrogasIV" value="Drogas IV"<?php if ($drogasIV == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="DrogasIV" style="font-size:14px;">Drogas IV</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="Eclampsia" name="Eclampsia" value="Eclampsia"<?php if ($eclampsia == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="Eclampsia" name="Eclampsia" value="Eclampsia"<?php if ($eclampsia == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="Eclampsia" style="font-size:14px;">Eclampsia</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="Artropatía" name="Artropatía" value="Artropatia"<?php if ($artropatia == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="Artropatía" name="Artropatía" value="Artropatia"<?php if ($artropatia == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="Artropatía" style="font-size:14px;">Artropatía</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="LESActivo" name="LESActivo" value="LESActivo"<?php if ($les_activo == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="LESActivo" name="LESActivo" value="LESActivo"<?php if ($les_activo == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="LESActivo" style="font-size:14px;">LES activo</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="Miomatosis" name="Miomatosis" value="Miomatosis"<?php if ($miomatosis == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="Miomatosis" name="Miomatosis" value="Miomatosis"<?php if ($miomatosis == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="Miomatosis" style="font-size:14px;">Miomatosis</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="Nefropatia" name="Nefropatia" value="Nefropatia"<?php if ($nefropatia == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="Nefropatia" name="Nefropatia" value="Nefropatia"<?php if ($nefropatia == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="Nefropatia" style="font-size:14px;">Nefropatía</label>
                     </div>
 
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="Colelitiasis" name="Colelitiasis" value="Colelitiasis"<?php if ($colelitiasis == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="Colelitiasis" name="Colelitiasis" value="Colelitiasis"<?php if ($colelitiasis == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="Colelitiasis" style="font-size:14px;">Colelitiasis</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="SxdeHELLP" name="SxdeHELLP" value="SxdeHELLP"<?php if ($sx_hellp == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="SxdeHELLP" name="SxdeHELLP" value="SxdeHELLP"<?php if ($sx_hellp == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="SxdeHELLP" style="font-size:14px;">Sx de HELLP</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="SxNefrotico" name="SxNefrotico" value="SxNefrotico"<?php if ($sx_nefrotico == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="SxNefrotico" name="SxNefrotico" value="SxNefrotico"<?php if ($sx_nefrotico == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="SxNefrotico" style="font-size:14px;">Sx Nefrótico</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="Drepanocitica" name="Drepanocitica" value="Drepanocitica"<?php if ($drepanocitica == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="Drepanocitica" name="Drepanocitica" value="Drepanocitica"<?php if ($drepanocitica == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="Drepanocitica" style="font-size:14px;">Drepanocítica</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="Hipotiroidismo" name="Hipotiroidismo" value="Hipotiroidismo"<?php if ($hipotiroidismo == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="Hipotiroidismo" name="Hipotiroidismo" value="Hipotiroidismo"<?php if ($hipotiroidismo == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="Hipotiroidismo" style="font-size:14px;">Hipotiroidismo</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="Hipotiroidismo" name="Miastenia" value="Hipotiroidismo"<?php if ($miastenia_gravis == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="Hipotiroidismo" name="Miastenia" value="Hipotiroidismo"<?php if ($miastenia_gravis == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="Hipotiroidismo" style="font-size:14px;">Miastenia Gravis</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="RupturaEsplenica" name="RupturaEsplenica" value="RupturaEsplenica"<?php if ($ruptura_esplenica == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="RupturaEsplenica" name="RupturaEsplenica" value="RupturaEsplenica"<?php if ($ruptura_esplenica == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="RupturaEsplenica" style="font-size:14px;">Ruptura esplénica</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="LESRenalAguda" name="LESRenalAguda" value="LESRenalAguda"<?php if ($lesion_renal == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="LESRenalAguda" name="LESRenalAguda" value="LESRenalAguda"<?php if ($lesion_renal == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="LESRenalAguda" style="font-size:14px;">Lesión renal aguda</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="EnfermedadesGraves" name="EnfermedadesGraves" value="EnfermedadesGraves"<?php if ($enferemedades_graves == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="EnfermedadesGraves" name="EnfermedadesGraves" value="EnfermedadesGraves"<?php if ($enferemedades_graves == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="EnfermedadesGraves" style="font-size:14px;">Enfermedades Graves</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="diabetesgestacional" name="diabetesgestacional" value="DiabetesGestacional"<?php if ($diabetes_gestacional == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="diabetesgestacional" name="diabetesgestacional" value="DiabetesGestacional"<?php if ($diabetes_gestacional == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="diabetesgestacional" style="font-size:14px;">Diabetes Gestacional</label>
                     </div>
 
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="candilomatosisvalvular" name="candilomatosisvalvular" value="candilomatosisvalvular"<?php if ($condilomatosis_vulvar == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="candilomatosisvalvular" name="candilomatosisvalvular" value="candilomatosisvalvular"<?php if ($condilomatosis_vulvar == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="candilomatosisvalvular" style="font-size:14px;">Condilomatosis vulvar</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="HASGestacional" name="HASGestacional" value="HASGestacional"<?php if ($hipertension_gestacional == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="HASGestacional" name="HASGestacional" value="HASGestacional"<?php if ($hipertension_gestacional == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="HASGestacional" style="font-size:14px;">Hipertensión Gestacional</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="FallaCardiacaCardiopatia" name="FallaCardiacaCardiopatia" value="FallaCardiacaCardiopatia"<?php if ($falla_cardiaca == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="FallaCardiacaCardiopatia" name="FallaCardiacaCardiopatia" value="FallaCardiacaCardiopatia"<?php if ($falla_cardiaca == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="FallaCardiacaCardiopatia" style="font-size:14px;">Falla cardiaca/cardiopatía</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="InfeccionViasUrinarias" name="InfeccionViasUrinarias" value="InfeccionViasUrinarias"<?php if ($infeccion_vias == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="InfeccionViasUrinarias" name="InfeccionViasUrinarias" value="InfeccionViasUrinarias"<?php if ($infeccion_vias == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="InfeccionViasUrinarias" style="font-size:14px;">Infección de vías urinarias</label>
                     </div>
 
 
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="DesequilibrioHidro" name="DesequilibrioHidro" value="DesequilibrioHidroelectrolitico"<?php if ($desequilibrio_hidro == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="DesequilibrioHidro" name="DesequilibrioHidro" value="DesequilibrioHidroelectrolitico"<?php if ($desequilibrio_hidro == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="DesequilibrioHidro" style="font-size:14px;">Desequilibrio Hidroelectrolítico</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="ninguno" name ="ninguno" value="DesequilibrioHidroelectrolitico"<?php if ($ninguna == 1) echo "checked"; ?>>
+                        <input class="form-check-input" type="checkbox" id="ninguno" name ="ninguno" value="ninguno"<?php if ($ninguna == 'Si') echo "checked"; ?>>
                         <label class="form-check-label" for="DesequilibrioHidro" style="font-size:14px;">Ninguna de las anteriores</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="otros" name ="otros" value="otros"<?php if ($otros == 'Si') echo "checked"; ?>>
+                        <label class="form-check-label" for="otros" style="font-size:14px;">Otros</label>            
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input type="text" style="display:none; font-size: 10px;" class="form-control" id="input_Otros" name="input_Otros" placeholder="Especificar otro" value="<?php echo $otros_campo; ?>">
                     </div>
 
                 </div>
@@ -416,7 +425,7 @@
     <strong style="color:#902b55; font-size: 14px;">Medicamento</strong>
     <select name="medicamento" id="medicamento" class="form-control" style="font-size: 13px;">
         <option value="Sin registro"<?php if ($medicamento == 'Sin registro') echo 'selected'; ?>>Sin registro</option>
-        <option value="Clorpinamida"<?php if ($medicamento == 'Clorpinamida') echo 'selected'; ?>>Clorpinamida</option>
+        <option value="Cloropiramina"<?php if ($medicamento == 'Cloropiramina') echo 'selected'; ?>>Cloropiramina</option>
         <option value="Hidrocortisona"<?php if ($medicamento == 'Hidrocortisona') echo 'selected'; ?>>Hidrocortisona</option>
     </select>
 </div>
@@ -451,44 +460,44 @@
    
 
     <div class="form-check form-check-inline">
-        <input class="form-check-input ra-checkbox" type="checkbox" id="cefaleaRA" name="cefaleaRA" value="cefalea" <?php if ($pre_cefalea == 1) echo "checked"; ?>>
+        <input class="form-check-input ra-checkbox" type="checkbox" id="cefaleaRA" name="cefaleaRA" value="cefalea" <?php if ($pre_cefalea == 'Si') echo "checked"; ?>>
         <label class="form-check-label" for="cefalea" style="font-size: 14px;">Cefalea</label>
     </div>
 
     <div class="form-check form-check-inline">
-        <input class="form-check-input ra-checkbox" type="checkbox" id="nauseasRA" name="nauseasRA" value="nauseas"<?php if ($pre_nauseas == 1) echo "checked"; ?>>
+        <input class="form-check-input ra-checkbox" type="checkbox" id="nauseasRA" name="nauseasRA" value="nauseas"<?php if ($pre_nauseas == 'Si') echo "checked"; ?>>
         <label class="form-check-label" for="nauseas" style="font-size: 14px;">Náuseas</label>
     </div>
 
     <div class="form-check form-check-inline">
-        <input class="form-check-input ra-checkbox" type="checkbox" id="hipertensionRA" name="hipertensionRA" value="hipertension"<?php if ($pre_hipertension == 1) echo "checked"; ?>>
+        <input class="form-check-input ra-checkbox" type="checkbox" id="hipertensionRA" name="hipertensionRA" value="hipertension"<?php if ($pre_hipertension == 'Si') echo "checked"; ?>>
         <label class="form-check-label" for="hipertension" style="font-size: 14px;">Hipertensión</label>
     </div>
 
     <div class="form-check form-check-inline">
-        <input class="form-check-input ra-checkbox" type="checkbox" id="hipotensionRA" name="hipotensionRA" value="hipotension"<?php if ($pre_hipotension == 1) echo "checked"; ?>>
+        <input class="form-check-input ra-checkbox" type="checkbox" id="hipotensionRA" name="hipotensionRA" value="hipotension"<?php if ($pre_hipotension == 'Si') echo "checked"; ?>>
         <label class="form-check-label" for="hipotension" style="font-size: 14px;">Hipotensión</label>
     </div>
 
     <div class="form-check form-check-inline">
-        <input class="form-check-input ra-checkbox" type="checkbox" id="taquicardiaRA" name="taquicardiaRA" value="taquicardia"<?php if ($pre_taquicardia == 1) echo "checked"; ?>>
+        <input class="form-check-input ra-checkbox" type="checkbox" id="taquicardiaRA" name="taquicardiaRA" value="taquicardia"<?php if ($pre_taquicardia == 'Si') echo "checked"; ?>>
         <label class="form-check-label" for="taquicardia" style="font-size: 14px;">Taquicardia</label>
     </div>
 
     <div class="form-check form-check-inline">
-        <input class="form-check-input ra-checkbox" type="checkbox" id="bradicardiaRA" name="bradicardiaRA" value="bradicardia"<?php if ($pre_bradicardia == 1) echo "checked"; ?>>
+        <input class="form-check-input ra-checkbox" type="checkbox" id="bradicardiaRA" name="bradicardiaRA" value="bradicardia"<?php if ($pre_bradicardia == 'Si') echo "checked"; ?>>
         <label class="form-check-label" for="bradicardia" style="font-size: 14px;">Bradicardia</label>
     </div>
 
     
 
     <div class="form-check form-check-inline">
-        <input class="form-check-input ra-checkbox" type="checkbox" id="otroRA" name="otroRA" value="otro"<?php if ($pre_otro == 1) echo "checked"; ?>>
+        <input class="form-check-input ra-checkbox" type="checkbox" id="otroRA" name="otroRA" value="otro"<?php if ($pre_otro == 'Si') echo "checked"; ?>>
         <label class="form-check-label" for="otro" style="font-size: 14px;">Otro</label>
     </div>
-<?php if ($ninguna == 1) echo "checked"; ?>
+    
     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="ningunaRA" name="ningunaRA" value="ningunara"<?php if ($pre_ninguna == 1) echo "checked"; ?>>
+        <input class="form-check-input" type="checkbox" id="ningunaRA" name="ningunaRA" value="ningunara"<?php if ($pre_ninguna == 'Si') echo "checked"; ?>>
         <label class="form-check-label" for="ningunara" style="font-size: 14px;">Ninguna</label>
     </div>
 </div>
@@ -628,12 +637,12 @@
 <br>
     <div id="checkboxes-container" style=";">
         <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="ninguncomponente" name="ninguncomponente" value="ninguna"<?php if ($ninguna_transfusion == 1) echo "checked"; ?>>
+                <input class="form-check-input" type="checkbox" id="ninguncomponente" name="ninguncomponente" value="ninguna"<?php if ($ninguna_transfusion == 'Si') echo "checked"; ?>>
                 <label class="form-check-label" for="ninguncomponente">Ninguno</label>
             </div>
     
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="plasma" name="plasma" value="plasma" <?php if ($plasma == 1) echo "checked"; ?>>
+                <input class="form-check-input" type="checkbox" id="plasma" name="plasma" value="plasma" <?php if ($plasma == 'Si') echo "checked"; ?>>
                 <label class="form-check-label" for="plasma">Plasma</label>
             </div>
        
@@ -643,7 +652,7 @@
             </div>
         
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="plaquetas" name="plaquetas" value="plaquetas" <?php if ($plaquetas == 1) echo "checked"; ?>>
+                <input class="form-check-input" type="checkbox" id="plaquetas" name="plaquetas" value="plaquetas" <?php if ($plaquetas == 'Si') echo "checked"; ?>>
                 <label class="form-check-label" for="plaquetas">Plaquetas</label>
             </div>
 
@@ -653,7 +662,7 @@
             </div>
 
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="Crioprecipitados" name="Crioprecipitados" value="crioprecipitados" <?php if ($crioprecipitado == 1) echo "checked"; ?>>
+                <input class="form-check-input" type="checkbox" id="Crioprecipitados" name="Crioprecipitados" value="crioprecipitados" <?php if ($crioprecipitado == 'Si') echo "checked"; ?>>
                 <label class="form-check-label" for="Crioprecipitados">Crioprecipitados</label>
             </div>
 
@@ -663,7 +672,7 @@
             </div>
 
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="PaqueteGlobular" name="PaqueteGlobular" value="paqueteglobular" <?php if ($plaqueta_globular == 1) echo "checked"; ?>>
+                <input class="form-check-input" type="checkbox" id="PaqueteGlobular" name="PaqueteGlobular" value="paqueteglobular" <?php if ($plaqueta_globular == 'Si') echo "checked"; ?>>
                 <label class="form-check-label" for="PaqueteGlobular">Paquete Globular</label>
             </div>
 
@@ -844,42 +853,47 @@
 
 
     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="cefaleaRApost" name="cefaleaRApost" value="cefalea" <?php if ($post_cefalea == 1) echo "checked"; ?>>
+        <input class="form-check-input" type="checkbox" id="cefaleaRApost" name="cefaleaRApost" value="cefalea" <?php if ($post_cefalea == 'Si') echo "checked"; ?>>
         <label class="form-check-label" for="cefaleaRApost">Cefalea</label>
     </div>
 
     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="nauseasRApost" name="nauseasRApost" value="nauseas" <?php if ($post_nauseas == 1) echo "checked"; ?>>
+        <input class="form-check-input" type="checkbox" id="nauseasRApost" name="nauseasRApost" value="nauseas" <?php if ($post_nauseas == 'Si') echo "checked"; ?>>
         <label class="form-check-label" for="nauseasRApost">Náuseas</label>
     </div>
 
     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="hipertensionRApost" name="hipertensionRApost" value="hipertension" <?php if ($post_hipertension == 1) echo "checked"; ?>>
+        <input class="form-check-input" type="checkbox" id="hipertensionRApost" name="hipertensionRApost" value="hipertension" <?php if ($post_hipertension == 'Si') echo "checked"; ?>>
         <label class="form-check-label" for="hipertensionRApost">Hipertensión</label>
     </div>
 
     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="hipotensionRApost" name="hipotensionRApost" value="hipotension" <?php if ($post_hipotension == 1) echo "checked"; ?>>
+        <input class="form-check-input" type="checkbox" id="hipotensionRApost" name="hipotensionRApost" value="hipotension" <?php if ($post_hipotension == 'Si') echo "checked"; ?>>
         <label class="form-check-label" for="hipotensionRApost">Hipotensión</label>
     </div>
 
     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="taquicardiaRApost" name="taquicardiaRApost" value="taquicardia" <?php if ($post_taquicardia == 1) echo "checked"; ?>>
+        <input class="form-check-input" type="checkbox" id="taquicardiaRApost" name="taquicardiaRApost" value="taquicardia" <?php if ($post_taquicardia == 'Si') echo "checked"; ?>>
         <label class="form-check-label" for="taquicardiaRApost">Taquicardia</label>
     </div>
 
     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="bradicardiaRApost" name="bradicardiaRApost" value="bradicardia" <?php if ($post_bradicardia == 1) echo "checked"; ?>>
+        <input class="form-check-input" type="checkbox" id="bradicardiaRApost" name="bradicardiaRApost" value="bradicardia" <?php if ($post_bradicardia == 'Si') echo "checked"; ?>>
         <label class="form-check-label" for="bradicardiaRApost">Bradicardia</label>
     </div>
 
     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="otroRApost" name="otroRApost" value="otro" <?php if ($post_otro == 1) echo "checked"; ?>>
+        <input class="form-check-input" type="checkbox" id="UrticariaRApost" name="UrticariaRApost" value="Urticaria" <?php if ($post_urticaria == 'Si') echo "checked"; ?>>
+        <label class="form-check-label" for="UrticariaRApost">Urticaria</label>
+    </div>
+
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="otroRApost" name="otroRApost" value="otro" <?php if ($post_otro == 'Si') echo "checked"; ?>>
         <label class="form-check-label" for="otroRApost">Otro</label>
     </div>
 
     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="ningunaRApost" name="ningunaRApost" value="ninguna" <?php if ($post_ninguna == 1) echo "checked"; ?>>
+        <input class="form-check-input" type="checkbox" id="ningunaRApost" name="ningunaRApost" value="ninguna" <?php if ($post_ninguna == 'Si') echo "checked"; ?>>
         <label class="form-check-label" for="ningunaRApost">Ninguna</label>
     </div>
 
@@ -903,7 +917,7 @@
 
         </div>
         </div>
-       
+    
 
 
 
@@ -911,10 +925,23 @@
         </div> <!-- se cierra <div class="row">-->
     </div> <!-- se cierra div de <div class="container"  width="100%" height="800px" style="margin-bottom: 100px;">-->
 </form>
+
+    <div id="loading-overlay" style="display: none;" class="loading">
+        <svg width="128px" height="96px">
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="back"></polyline>
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="front"></polyline>
+        </svg>
+    </div>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="js/scriptmodal.js"></script>
-<script src="js/update.js"></script>
+
+<script type="module">
+    import { editForm } from "./js/update.js";
+    editForm();
+</script>
+
+
 <!-- se agrega el footer-->
     <footer>Hospital Regional de Alta Especialidad de Ixtapaluca<p style="font-size: 10px">
             Dirección de Operaciones - Subdirección de Tecnologías de la Información 
