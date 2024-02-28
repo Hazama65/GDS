@@ -34,13 +34,13 @@
                 <tbody style="font-size:13px;" class="table-bordered">
 
                     <tr>
-                        <td class="estilo-celda">Enlace</td>
-                        <td><?php echo $enlace ; ?></td>
+                        <td class="estilo-celda">Trabajador Sustituido</td>
+                        <td><?php echo $trabajador_sustituido ; ?></td>
                     </tr>
 
                     <tr>
-                        <td class="estilo-celda">Nombre Completo</td>
-                        <td><?php echo $nombre_completo ; ?></td>
+                        <td class="estilo-celda">Trabajador Sustituto</td>
+                        <td><?php echo $trabajador_sustituto ; ?></td>
                     </tr>
 
                     <tr>

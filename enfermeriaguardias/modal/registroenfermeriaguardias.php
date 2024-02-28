@@ -14,14 +14,14 @@
     
     
                         <div class="col-md-6">
-                            <strong style="font-size: 14px; ">Enlace</strong>
-                            <input id="enlace_numeroempleado" name="enlace_numeroempleado" type="number" value="" class="control form-control" style="font-size: 13px;">
+                            <strong style="font-size: 14px; ">Trabajador Sustituido</strong>
+                            <input id="enlace_numeroempleado" name="enlace_numeroempleado" type="text" class="control form-control" style="font-size: 13px;">
                         </div>
     
     
                         <div class="col-md-6" id="idnombre">
-                            <strong style="font-size: 14px;">Nombre Completo</strong>
-                            <input id="nombre" name="nombre" type="text" class="control form-control" value="" style="font-size: 13px;">
+                            <strong style="font-size: 14px;">Trabajador Sustituto</strong>
+                            <input id="nombre" name="nombre" type="text" class="control form-control" style="font-size: 13px;">
                         </div>
     
                         <div class="col-md-4">

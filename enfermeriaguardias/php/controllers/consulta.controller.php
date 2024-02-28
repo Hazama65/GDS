@@ -17,8 +17,8 @@
         if (!empty($AllData)) {
             foreach ($AllData as $data) {
 
-                $enlace = $data['enlace'];
-                $nombre_completo = $data['nombre_completo'];
+                $trabajador_sustituido = $data['trabajador_sustituido'];
+                $trabajador_sustituto = $data['trabajador_sustituto'];
                 $nivel_academia = $data['nivel_academia'];
                 $turno = $data['turno'];
                 $servicio = $data['servicio'];

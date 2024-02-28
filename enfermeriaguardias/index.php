@@ -70,7 +70,7 @@ include("modal/registroenfermeriaguardias.php");
                             echo '<ul class="patient-list" >';
                             foreach ($data_EG as $PacientesCenso) {
                                 $id_pacientes = $PacientesCenso["id_guardia"];
-                                $nombrePacientes = $PacientesCenso["nombre_completo"];
+                                $nombrePacientes = $PacientesCenso["trabajador_sustituto"];
 
                                 // Genera un elemento de lista para cada paciente
                                 echo '<li class="patient-item" data-id-paciente="' . $id_pacientes . '">';

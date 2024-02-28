@@ -10,14 +10,14 @@
         );
 
         $Data_general = array(
-            'enlace'          => $_POST['enlace_numeroempleado'],
-            'nombre_completo' => $_POST['nombre'],
-            'nivel_academia'  => $_POST['nivel_academico'],
-            'turno'           => $_POST['Turno'],
-            'servicio'        => $_POST['servicio'],
-            'fecha_tramite'   => $_POST['fecha_tramite'],
-            'fecha_suplencia' => $_POST['fecha_suplencia'],
-            'autoriza'        => $_POST['autoriza']
+            'trabajador_sustituido' => $_POST['enlace_numeroempleado'],
+            'trabajador_sustituto'  => $_POST['nombre'],
+            'nivel_academia'        => $_POST['nivel_academico'],
+            'turno'                 => $_POST['Turno'],
+            'servicio'              => $_POST['servicio'],
+            'fecha_tramite'         => $_POST['fecha_tramite'],
+            'fecha_suplencia'       => $_POST['fecha_suplencia'],
+            'autoriza'              => $_POST['autoriza']
         );
 
         foreach ($Data_general as $key => $value) {
