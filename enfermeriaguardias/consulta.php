@@ -1,3 +1,6 @@
+<?php
+    include('php/controllers/consulta.controller.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,38 +35,43 @@
 
                     <tr>
                         <td class="estilo-celda">Enlace</td>
-                        <td></td>
+                        <td><?php echo $enlace ; ?></td>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Nombre Completo</td>
+                        <td><?php echo $nombre_completo ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Nivel Académico</td>
-                        <td> </td>
+                        <td><?php echo $nivel_academia ; ?> </td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Turno</td>
-                        <td></td>
+                        <td><?php echo $turno ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Servicio</td>
-                        <td></td>
+                        <td><?php echo $servicio ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Fecha de Tramite</td>
-                        <td></td>
+                        <td><?php echo $fecha_tramite ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Fecha de Suplencia</td>
-                        <td></td>
+                        <td><?php echo $fecha_suplencia ; ?></td>
                     </tr>
 
 
                     <tr>
                         <td class="estilo-celda">Nombre de Quien Autoriza</td>
-                        <td></td>
+                        <td><?php echo $autoriza ; ?></td>
                     </tr>
 
                     

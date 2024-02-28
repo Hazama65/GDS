@@ -1,4 +1,6 @@
 <?php
+require('php/controllers/registros.controller.php');
+
 include("modal/registroenfermeriaguardias.php");
 ?>
 <!DOCTYPE html>
@@ -9,8 +11,11 @@ include("modal/registroenfermeriaguardias.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
@@ -59,6 +64,26 @@ include("modal/registroenfermeriaguardias.php");
                 <br>
                 <input type="text" id="search" placeholder="Buscar Residente...">
                 <ul id="patient-list">
+                    <?php
+                        if (!empty($data_EG)) {
+                            // Comienza a generar la lista de pacientes
+                            echo '<ul class="patient-list" >';
+                            foreach ($data_EG as $PacientesCenso) {
+                                $id_pacientes = $PacientesCenso["id_guardia"];
+                                $nombrePacientes = $PacientesCenso["nombre_completo"];
+
+                                // Genera un elemento de lista para cada paciente
+                                echo '<li class="patient-item" data-id-paciente="' . $id_pacientes . '">';
+                                echo $nombrePacientes;
+                                echo '<a href="editar_censo.php?id=' . $id_pacientes . '">';
+                                echo '</a>';
+                                echo '</li>';
+                            }
+                            echo '</ul>';
+                        } else {
+                            echo "No se encontraron pacientes";
+                        }
+                    ?>
 
                 </ul>
 
@@ -71,20 +96,11 @@ include("modal/registroenfermeriaguardias.php");
 
         <div class="col-7">
             <div class="container">
-                <!-- Tu código existente -->
+                <iframe id="consulta" src="consulta.php" frameborder="0" width="100%" height="450px"
+                    style="margin-bottom: 100px;"></iframe>
 
-                <!-- Agrega un div para contener el select dinámico -->
-                <div id="Seguimiento_index" style="display: none;">
-                    <select name="paciente_seleccionado" class="col-6 form-select custom-select" id="paciente_seleccionado" style="background-color: #6c757d; color: white; margin-bottom:10px">
-                    </select>
-
-                </div>
-
-                <iframe id="consulta" src="consulta.php" frameborder="0" width="100%" height="800px" style="margin-bottom: 100px;"></iframe>
-            </div> <!-- <div class="container"> -->
-        </div> <!-- FINALIZA EL DIV class col 8 -->
-
-        <iframe id="consulta_seguimiento" src="" frameborder="0" width="100%" height="800px" style="margin-bottom: 100px;"></iframe>
+            </div> <!--<div class="container">-->
+        </div><!-- FINALIZA EL DIV class col 8-->
 
 
 
@@ -94,6 +110,14 @@ include("modal/registroenfermeriaguardias.php");
         <div class="col-1">
         </div>
     </div>
+    <!-- Contenedor para la pantalla de carga -->
+    <div id="loading-overlay" style="display: none;" class="loading">
+        <svg width="128px" height="96px">
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="back"></polyline>
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="front"></polyline>
+        </svg>
+    </div>
+
 
 
 
@@ -107,12 +131,20 @@ include("modal/registroenfermeriaguardias.php");
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script src="js/scriptmodal.js"></script>
+    <script src="js/visualizacion.js"></script>
+
+
+    <script type="module">
+        import { mainForm } from './js/insert.js';
+        mainForm();
+    </script>
+
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const cerrarSesionButton = document.getElementById('cerrar-sesion-button');
 
-            cerrarSesionButton.addEventListener('click', function() {
+            cerrarSesionButton.addEventListener('click', function () {
                 // Redirige al usuario a la página de cierre de sesión
                 window.location.href = 'php/destroysession.php';
             });
