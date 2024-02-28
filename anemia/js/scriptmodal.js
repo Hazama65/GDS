@@ -398,3 +398,21 @@ function mostrarOcultarCamposPostPremedicacion() {
         medicamentopostDiv.style.display = "none";
     }
 }
+
+
+const otros = () => {
+    let otros = document.getElementById("otros");
+    let input_Otros = document.getElementById("input_Otros");
+
+    otros.addEventListener('click', function() {
+        // Verificar si el checkbox está marcado
+        if (otros.checked) {
+            input_Otros.style.display ="block";
+            
+        } else {
+            input_Otros.style.display="none";
+        }
+    });
+};
+
+otros();

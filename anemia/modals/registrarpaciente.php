@@ -222,8 +222,21 @@
 
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="checkbox" id="ninguno" name ="ninguno" value="ninguno">
-                        <label class="form-check-label" for="ninguno" style="font-size:14px;">Ninguna de las anteriores</label>
+                        <label class="form-check-label" for="ninguno" style="font-size:14px;">Ninguna</label>
                     </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="otros" name ="otros" value="otros">
+                        <label class="form-check-label" for="otros" style="font-size:14px;">Otros</label>            
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input type="text" style="display:none; font-size: 10px;" class="form-control" id="input_Otros" name="input_Otros" placeholder="Especificar otro">
+                    </div>
+
+
+
+
 
                 </div>
 
@@ -785,7 +798,7 @@
     <strong style="color:#902b55; font-size: 14px;">Medicamento</strong>
     <select name="medicamentopost" id="medicamentopost" class="form-control" style="font-size: 13px;">
         <option value="Sin registro">Sin registro</option>
-        <option value="Clorpinamida">Clorpinamida</option>
+        <option value="Cloropiramina">Cloropiramina</option>
         <option value="Hidrocortisona">Hidrocortisona</option>
     </select>
 </div>
@@ -844,6 +857,11 @@
     <div class="form-check form-check-inline">
         <input class="form-check-input" type="checkbox" id="bradicardiaRApost" name="bradicardiaRApost" value="bradicardia">
         <label class="form-check-label" for="bradicardiaRApost">Bradicardia</label>
+    </div>
+
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="UrticariaRApost" name="UrticariaRApost" value="otro">
+        <label class="form-check-label" for="UrticariaRApost">Urticaria</label>
     </div>
 
     <div class="form-check form-check-inline">

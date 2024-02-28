@@ -1,9 +1,10 @@
-import { setAlerts } from "./plugins/alerts.plugin_ane.js";
-import { httpClients } from "./plugins/http-client.plugin_ane.js";
+import { setAlerts } from "./plugins/alerts.plugin_censo.js";
+import { httpClients } from "./plugins/http-client.plugin_censo.js";
+import { hideLoadingOverlay, showLoadingOverlay } from "./plugins/loader.plugin.js";
 
 
 const url = "php/controllers/insert.controller.php";
-const data = $('#anemia_form');
+const data = $('#censo_form');
 
 export const mainForm = () => {
 
@@ -46,11 +47,3 @@ const validation = async (alldata) => {
     }
 }
 
-
-function showLoadingOverlay() {
-    document.getElementById('loading-overlay').style.display = 'flex';
-}
-
-function hideLoadingOverlay() {
-    document.getElementById('loading-overlay').style.display = 'none';
-}

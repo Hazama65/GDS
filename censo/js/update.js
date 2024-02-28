@@ -1,11 +1,12 @@
-import { setAlerts } from "./plugins/alerts.plugin_ane.js";
-import { httpClients } from "./plugins/http-client.plugin_ane.js";
+import { setAlerts } from "./plugins/alerts.plugin_censo.js";
+import { httpClients } from "./plugins/http-client.plugin_censo.js";
+import { hideLoadingOverlay, showLoadingOverlay } from "./plugins/loader.plugin.js";
 
 
-const url = "php/controllers/insert.controller.php";
-const data = $('#anemia_form');
+const url = "php/controllers/update.controller.php";
+const data = $('#censo_update');
 
-export const mainForm = () => {
+export const editForm = () => {
 
     data.on('submit', async function (event){
         event.preventDefault();
@@ -20,16 +21,22 @@ export const mainForm = () => {
 
 }
 
+
 const validation = async (alldata) => {
     try {
 
     
         const response = await httpClients.post(url, alldata);
 
-        hideLoadingOverlay();
-        
-        if (response == 0) {return setAlerts.errorAlert('Hubo una Falla en el servidor al Guardar los datos')}
+        console.log(response);
 
+        
+
+
+        hideLoadingOverlay();
+
+        if (response == 0) {return setAlerts.errorAlert('Hubo una Falla en el servidor al Guardar los datos')}
+        
 
         if (response == 'success') {
             return setAlerts.successAlert(
@@ -44,13 +51,4 @@ const validation = async (alldata) => {
         console.error(error);
         setAlerts.errorAlert('Hubo un error en la solicitud.');
     }
-}
-
-
-function showLoadingOverlay() {
-    document.getElementById('loading-overlay').style.display = 'flex';
-}
-
-function hideLoadingOverlay() {
-    document.getElementById('loading-overlay').style.display = 'none';
 }
