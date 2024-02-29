@@ -10,21 +10,42 @@
                 <!-- Datos de llegada del paciente  -->
                 <div class="row">
 
-
-                    <div class="col-md-4">
-                        <strong style="font-size: 14px;">Total de IAAS</strong>
-                        <input type="number" class="control form-control" id="total_iass" name="total_iass" style="font-size: 13px;">
+                    <!-- ************************TASA IAAS********************************** -->
+                    <div class="form-header">
+                        <h5 class="form-title" style="text-align: center;
+                        background-color:rgb(157, 208, 84);
+                        color: aliceblue;
+                        margin-top:15px;
+                        font-size: 14px;">
+                            Período </h5>
                     </div>
 
-                    <div class="col-md-4">
-                        <strong style="font-size: 14px;">DEIH</strong>
-                        <input type="number" class="control form-control" id="deih" name="deih" style="font-size: 13px;">
+                    <div class="col-md-6">
+                        <strong style="font-size: 14px;">Inicio de Período</strong>
+                        <input type="date" class="form-control" id="fechaInicial" name="fechaInicial" style="font-size: 13px;" required max="2024-02-29">
+                    </div>
+                    <div class="col-md-6">
+                        <strong style="font-size: 14px;">Fin de Período</strong>
+                        <input type="date" class="form-control" id="fechaFinal" name="fechaFinal" style="font-size: 13px;" title="La fecha inicial debe ser menor que la fecha final" required max="2024-02-29" oninput="validate()">
                     </div>
 
-                    <div class="col-md-4">
-                        <strong style="font-size: 14px;">Egresos</strong>
-                        <input type="number" class="control form-control" id="egresos" name="egresos" style="font-size: 13px;">
-                    </div>
+                    <!-- ************************TASA IAAS********************************** -->
+
+                        <div class="col-md-4">
+                            <strong style="font-size: 14px;">Total de IAAS</strong>
+                            <input type="number" class="control form-control" id="total_iass" name="total_iass" style="font-size: 13px;">
+                        </div>
+
+
+                        <div class="col-md-4">
+                            <strong style="font-size: 14px;">Egresos</strong>
+                            <input type="number" class="control form-control" id="egresos" name="egresos" style="font-size: 13px;">
+                        </div>
+
+                        <div class="col-md-4">
+                            <strong style="font-size: 14px;">DEIH</strong>
+                            <input type="number" class="control form-control" id="deih" name="deih" style="font-size: 13px;">
+                        </div>
 
                     <!-- ************************TASA IAAS********************************** -->
                     <div class="form-header">
@@ -33,7 +54,7 @@
                         color: aliceblue;
                         margin-top:15px;
                         font-size: 14px;">
-                            Tasas IASS</h5>
+                            TASAS IASS</h5>
                     </div>
 
 
@@ -43,7 +64,7 @@
                         <input type="number" class="control form-control" id="tasas_IAAS100" name="tasas_IAAS100" style="font-size: 13px;">
                     </div>
 
-            
+
                     <div class="col-md-6">
                         <strong style="font-size: 14px;">Tasas IAAS / 1000 DEIH </strong>
                         <input type="number" class="control form-control" id="DEIH_1000" name="DEIH_1000" style="font-size: 13px;">
@@ -78,12 +99,9 @@
                         <input type="number" class="control form-control" id="neumonia_nasocomiales" name="neumonia_nasocomiales" style="font-size: 13px;">
                     </div>
 
-                    <div class="col-md-3">
-                        <strong style="font-size: 14px;">Número de Egresos(NN)</strong>
-                        <input type="number" class="control form-control" id="num_egresos" name="num_egresos" style="font-size: 13px;">
-                    </div>
 
-                    <div class="col-md-3">
+
+                    <div class="col-md-6">
                         <strong style="font-size: 14px;">TASA Neumonía (NN)</strong>
                         <input type="number" class="control form-control" id="tasa_neumoniaNN" name="tasa_neumoniaNN" style="font-size: 13px;" readonly>
                     </div>
@@ -180,16 +198,12 @@
                             Diarreas Nasocomiales</h5>
                     </div>
                     <div class="col-md-6">
-                    <strong style="font-size: 13px;">Tasa de Diarreas C.Difficile</strong>
+                        <strong style="font-size: 13px;">Tasa de Diarreas C.Difficile</strong>
                         <input type="number" class="control form-control" id="diarrea_tasa" name="diarrea_tasa" style="font-size: 13px;">
                     </div>
 
-                    <div class="col-md-3">
-                        <strong style="font-size: 14px;">Número Egresos</strong>
-                        <input type="number" class="control form-control" id="numero_egresos_diarreas" name="numero_egresos_diarreas" style="font-size: 13px;">
-                    </div>
 
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                         <strong style="font-size: 14px;">TASA Diarreas C.Difficile </strong>
                         <input type="number" class="control form-control" id="tasa_diarrea_resul" name="tasa_diarrea_resul" style="font-size: 13px;" readonly>
                     </div>
