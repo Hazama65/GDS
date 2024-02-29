@@ -70,11 +70,12 @@ include("modal/registroenfermeriaguardias.php");
                             echo '<ul class="patient-list" >';
                             foreach ($data_EG as $PacientesCenso) {
                                 $id_pacientes = $PacientesCenso["id_guardia"];
-                                $nombrePacientes = $PacientesCenso["trabajador_sustituto"];
+                                $trabajador_sustituido = $PacientesCenso["trabajador_sustituido"];
+                                $fecha_Suplencia = $PacientesCenso["fecha_suplencia"];
 
                                 // Genera un elemento de lista para cada paciente
                                 echo '<li class="patient-item" data-id-paciente="' . $id_pacientes . '">';
-                                echo $nombrePacientes;
+                                echo $trabajador_sustituido. ' | ' . $fecha_Suplencia;;
                                 echo '<a href="editar_censo.php?id=' . $id_pacientes . '">';
                                 echo '</a>';
                                 echo '</li>';
@@ -132,6 +133,7 @@ include("modal/registroenfermeriaguardias.php");
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="js/visualizacion.js"></script>
+    <script src="js/script.js"></script>
 
 
     <script type="module">
