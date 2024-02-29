@@ -40,11 +40,56 @@
                         <td></td>
                     </tr>
 
+                    <tr>
+                        <td class="estilo-celda">DEIH</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Egresos</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="col" style="background-color: rgb(59, 168, 132)">Tasa de IASS</th>
+                        <th scope="col" style="background-color: rgb(59, 168, 132)"> </th>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Tasas IAAS / 100 Egresos</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Tasas IAAS / 1000 DEIH</td>
+                        <td></td>
+                    </tr>
+
 
 
                     <tr>
                         <th scope="col" style="background-color: rgb(59, 168, 132)">Tasa de IASS Asociadas a Dispositivos</th>
                         <th scope="col" style="background-color: rgb(59, 168, 132)"> </th>
+                    </tr>
+
+                    <tr>
+                        <th scope="col" style="background-color: rgb(157, 211, 193,0.5)">Tasa de Neumonía Nasocomiales</th>
+                        <th scope="col" style="background-color: rgb(157, 211, 193 ,0.5)"> </th>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Neumonía Nasocomiales (NN)</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Número de Egresos (NN)</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">TASA Neumonía (NN)</td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -108,6 +153,26 @@
 
                     <tr>
                         <td class="estilo-celda">TASA Infeccion C.U</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="col" style="background-color: rgb(59, 168, 132)">Diarreas Nasocomiales</th>
+                        <th scope="col" style="background-color: rgb(59, 168, 132)"> </th>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Tasa de Diarreas C.Difficile</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Número Egresos Diarreas C.Difficil</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">TASA Diarreas C.Difficile</td>
                         <td></td>
                     </tr>
 
