@@ -36,6 +36,18 @@
                 <tbody style="font-size:13px;" class="table-bordered">
 
                     <tr>
+                        <td class="estilo-celda">Inicio de Período</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Fin de Período</td>
+                        <td></td>
+                    </tr>
+
+
+
+                    <tr>
                         <td class="estilo-celda">Total de IASS</td>
                         <td></td>
                     </tr>
@@ -113,7 +125,7 @@
                         <td></td>
                     </tr>
 
-                    
+
                     <tr>
                         <th scope="col" style="background-color: rgb(157, 211, 193,0.5)">Tasa de Bacteriemia Asociada al Uso de Catéter Venoso Central</th>
                         <th scope="col" style="background-color: rgb(157, 211, 193 ,0.5)"> </th>
@@ -202,7 +214,7 @@
                         <td></td>
                     </tr>
 
-                   
+
 
 
 

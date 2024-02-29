@@ -34,6 +34,8 @@
                                 <option value="Postécnico">Postécnico</option>
                                 <option value="Licenciatura">Licenciatura</option>
                                 <option value="Posgrado">Posgrado</option>
+                                <option value="Maestría">Maestría</option>
+
                             </select>
                         </div>
     
@@ -44,15 +46,66 @@
                                 <option value="Seleccione">Seleccione</option>
                                 <option value="Matutino">Matutino</option>
                                 <option value="Vespertino">Vespertino</option>
-                                <option value="Nocturno">Nocturno</option>
-                                <option value="Jornada Acumulada">Jornada Acumulada</option>
+                                <option value="Nocturno A">Nocturno A</option>
+                                <option value="Nocturno B">Nocturno B</option>
+                                <option value="Nocturno Especíal">Nocturno Especíal</option>
+
                             </select>
                         </div>
     
+
                         <div class="col-md-4">
                             <strong style="font-size: 14px;">Servicio</strong>
-                            <input type="text" class="control form-control" id="servicio" name="servicio" style="font-size: 13px;">
+                            <select name="servicio" id="servicio" class="form-control" style="font-size: 14px;">
+                                <option value="Seleccione">Seleccione</option>
+                                <option value="Críticas">Críticas</option>
+                                <option value="Clínicas">Clínicas</option>
+                                <option value="Quirúrgicas">Quirúrgicas</option>
+                            </select>
                         </div>
+
+                        <div class="col-md-4" id="servicio_critica" style="display: none;">
+                            <strong style="font-size: 14px;">Críticas</strong>
+                            <select name="critica" id="critica" class="form-control" style="font-size: 14px;">
+                                <option value="Seleccione">Seleccione</option>
+                                <option value="Urgencias">Urgencias</option>
+                                <option value="UCIA">UCIA</option>
+                                <option value="UCIN">UCIN</option>
+                                <option value="UTIN ">UTIN </option>
+                                <option value="UCIP">UCIP</option>
+                                <option value="UTIP">UTIP</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-4" id="servicio_clinica" style="display: none;">
+                            <strong style="font-size: 14px;">Clínicas</strong>
+                            <select name="clinicas" id="clinicas" class="form-control" style="font-size: 14px;">
+                                <option value="Seleccione">Seleccione</option>
+                                <option value="Medicina Interna">Medicina Interna</option>
+                                <option value="Hematología">Hematología</option>
+                                <option value="Pediatría">Pediatría</option>
+                                <option value="Oncopediatría ">Oncopediatría </option>
+                                <option value="Hemodiálisis">Hemodiálisis</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-4" id="servicio_quirurgica" style="display: none;">
+                            <strong style="font-size: 14px;">Quirúrgicas</strong>
+                            <select name="quirurgicas" id="quirurgicas" class="form-control" style="font-size: 14px;">
+                                <option value="Seleccione">Seleccione</option>
+                                <option value="TyO">TyO</option>
+                                <option value="Neurocirugía">Neurocirugía</option>
+                                <option value="Cirugía oncológica">Cirugía oncológica</option>
+                                <option value="Cirugía Cardiotorácica">Cirugía Cardiotorácica</option>
+                                <option value="Cirugía General">Cirugía General</option>
+                                <option value="Ortopédica">Ortopédica</option>
+                                <option value="Ginecología y Obstetricia">Ginecología y Obstetricia</option>
+                                <option value="Urología">Urología</option>
+                                <option value="Trasplante">Trasplante</option>
+                            </select>
+                        </div>
+
+
     
                         <div class="col-md-4">
                             <strong style="font-size: 14px;">Fecha de Tramite</strong>
@@ -73,6 +126,8 @@
     
     
                     </div> <!-- DIV ROW LINEA 13 -->
+
+                    </div><!--DIV DEL BODY  -->
     
     
                     <div class="modal-footer">
@@ -81,7 +136,7 @@
                     </div>
                 </form>
 
-            </div><!--DIV DEL BODY  -->
+          
 
         </div>
     </div>
