@@ -76,7 +76,7 @@ function calcularTasasDeih1000() {
 
 // Obtener los elementos de entrada y salida
 var neumoniaNasocomialesInput = document.getElementById('neumonia_nasocomiales');
-var numEgresosInput = document.getElementById('num_egresos');
+var numEgresosInput = document.getElementById('egresos');
 var tasaNeumoniaNNOutput = document.getElementById('tasa_neumoniaNN');
 
 // Escuchar cambios en los campos de entrada
@@ -197,6 +197,12 @@ function calcularTasa3() {
         // Mostrar el resultado 
         tasaInfeccionCUOutput.value = tasaInfeccionCU.toFixed(2); // Redondeamos a 2 decimales
 
+        // Aplicar estilo de relleno rojo si el valor es mayor o igual a 4.83
+        if (tasaInfeccionCU >= 4.83) {
+            tasaInfeccionCUOutput.style.backgroundColor = 'red';
+        } else {
+            tasaInfeccionCUOutput.style.backgroundColor = 'green'; // Restablecer el color de fondo a su valor predeterminado
+        }
     } else {
         // Si los valores de entrada no son válidos, dejar el campo de salida vacío y el estilo de fondo predeterminado
         tasaInfeccionCUOutput.value = '';
@@ -216,6 +222,7 @@ infeccionSitioQxInput.addEventListener('input', calcularTasaISQX);
 numeroTotalISQXInput.addEventListener('input', calcularTasaISQX);
 
 // Función para calcular la tasa de ISQX
+
 function calcularTasaISQX() {
     // Obtener los valores de entrada
     var infeccionSitioQx = parseFloat(infeccionSitioQxInput.value);
@@ -234,24 +241,27 @@ function calcularTasaISQX() {
     }
 }
 
+
+// Función para calcular la TASA DE DIARREA NASOCOMIALES
+
 // Obtener los elementos de entrada y salida
 var diarreanasoInput = document.getElementById('diarrea_tasa');
-var diasCDifficileInput = document.getElementById('numero_egresos_diarreas');
+var egresosInput = document.getElementById('egresos');
 var tasadiarreaotput = document.getElementById('tasa_diarrea_resul');
 
 // Escuchar cambios en los campos de entrada
 diarreanasoInput.addEventListener('input', calcularTasaDiarrea);
-diasCDifficileInput.addEventListener('input', calcularTasaDiarrea);
+egresosInput.addEventListener('input', calcularTasaDiarrea);
 
 // Función para calcular la tasa de Diarrea Nasocomiales
 function calcularTasaDiarrea() {
     var diarreaso = parseFloat(diarreanasoInput.value);
-    var diasCDifficile = parseFloat(diasCDifficileInput.value);
+    var egresos = parseFloat(egresosInput.value);
 
     // Verificar si los valores de entrada son válidos
-    if (!isNaN(diarreaso) && !isNaN(diasCDifficile) && diasCDifficile !== 0) {
+    if (!isNaN(diarreaso) && !isNaN(egresos) && egresos !== 0) {
         // Realizar el cálculo de la tasa
-        var tasaDiarrea = (diarreaso / diasCDifficile) * 100;
+        var tasaDiarrea = (diarreaso / egresos) * 100;
 
         // Mostrar el resultado en el campo correspondiente
         tasadiarreaotput.value = tasaDiarrea.toFixed(2); // Redondeamos a 2 decimales
@@ -260,5 +270,3 @@ function calcularTasaDiarrea() {
         tasadiarreaotput.value = '';
     }
 }
-
-    

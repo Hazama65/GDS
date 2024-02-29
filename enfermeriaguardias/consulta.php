@@ -59,6 +59,22 @@
                     </tr>
 
                     <tr>
+                        <td class="estilo-celda">Críticas</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Clínicas</td>
+                        <td></td>
+                    </tr>
+
+                    
+                    <tr>
+                        <td class="estilo-celda">Quirúrgicas</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
                         <td class="estilo-celda">Fecha de Tramite</td>
                         <td><?php echo $fecha_tramite ; ?></td>
                     </tr>
