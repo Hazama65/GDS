@@ -15,6 +15,9 @@
             'nivel_academia'        => $_POST['nivel_academico'],
             'turno'                 => $_POST['Turno'],
             'servicio'              => $_POST['servicio'],
+            'criticas'              => $_POST['critica'],
+            'clinicas'              => $_POST['clinicas'],
+            'quirurgicas'           => $_POST['quirurgicas'],
             'fecha_tramite'         => $_POST['fecha_tramite'],
             'fecha_suplencia'       => $_POST['fecha_suplencia'],
             'autoriza'              => $_POST['autoriza']

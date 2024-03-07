@@ -3,7 +3,7 @@ am5.ready(function() {
 
 // Create root element
 // https://www.amcharts.com/docs/v5/getting-started/#Root_element
-var root = am5.Root.new("grafica1");
+var root = am5.Root.new("grafica2");
 
 // Set themes
 // https://www.amcharts.com/docs/v5/concepts/themes/
@@ -11,7 +11,7 @@ root.setThemes([
   am5themes_Animated.new(root)
 ]);
 
-var data = <?php echo $dataSustituidoJSON; ?>;
+var data = <?php echo $dataSustitutoJSON; ?>;
 
 // Create chart
 // https://www.amcharts.com/docs/v5/charts/xy-chart/

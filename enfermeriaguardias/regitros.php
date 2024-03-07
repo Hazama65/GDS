@@ -1,3 +1,7 @@
+<?php
+include('includes/consultas.php');
+    
+?>
 <!DOCTYPE html>
 
 
@@ -99,27 +103,23 @@
     <br>
 
     <div class="container_form">
-        <form action="" method="POST" class="row justify-content-center align-items-center">
+        <form method="POST" class="row justify-content-center align-items-center">
             <div class="col-md-4">
                 <label for="servicio" class="form-label">Servicio</label>
-                <select name="servicio" id="servicio" class="form-select">
-                    <option value="">Seleccione</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-
+                <select name="servicio" id="servicio" class="form-select" required>
+                    <option value="Críticas">Críticas</option>
+                    <option value="Clínicas">Clínicas</option>
+                    <option value="Quirúrgicas">Quirúrgicas</option>
                     <!-- Opciones del select -->
                 </select>
             </div>
             <div class="col-md-4">
                 <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" name="nombre" id="nombre" class="form-control">
+                <input type="text" name="nombre" id="nombre" class="form-control" required>
             </div>
             <div class="col-md-4">
                 <label for="fecha" class="form-label">Primera fecha</label>
-                <input type="month" name="fecha" id="fecha" class="form-control">
+                <input type="month" name="fecha" id="fecha" class="form-control" required>
             </div>
             <div class="col-md-3">
                 <button type="submit" class="btn btn-primary">Buscar</button>
@@ -128,12 +128,17 @@
     </div>
 
 
+    <div class="container">
 
+        <div class="graficas" id="grafica1">
+            <span class="badge">Conteo Total de Guardias(Solicitadas)</span>
+        </div>
 
-
-    <div class="graficas" id="grafica1">
-        <span class="badge">Conteo Total de Guardias</span>
+        <div class="graficas" id="grafica2">
+            <span class="badge">Conteo Total de Guardias(Tomadas)</span>
+        </div>
     </div>
+
 
     <footer>
         <a>Hospital Regional de Alta Especialidad de Ixtapaluca</a>
@@ -161,6 +166,8 @@
 
     <?php
         include('includes/grafica1.php');
+        include('includes/grafica2.php');
+
     ?>
 </body>
 
