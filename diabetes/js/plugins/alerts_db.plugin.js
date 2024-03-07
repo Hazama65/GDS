@@ -10,6 +10,15 @@ export const setAlerts = {
         });
     },
 
+    warningAlert: (text) =>{
+        return Swal.fire({
+            icon: 'warning',
+            title: 'Error',
+            text,
+            confirmButtonText: 'OK'
+        })
+    },
+
     successAlert: (text, title='Exito',timer = 0, href) =>{
         return Swal.fire({
             icon: 'success',

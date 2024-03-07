@@ -46,15 +46,26 @@
                 $municipio = $data['municipio'];
 
                 $queryEstado = "SELECT NombreEstado FROM estados WHERE Estado_Id ='$estado'";
-                $dataEstado= $connectionDBEM->getRows($queryEstado);
-                foreach($dataEstado as $row1){
-                    $estado1 = $row1['NombreEstado'];
+                $dataEstado = $connectionDBEM->getRows($queryEstado);
+                
+                if (empty($dataEstado)) {
+                    $estado1 = '';
+                } else {
+                    foreach ($dataEstado as $row1) {
+                        $estado1 = $row1['NombreEstado'];
+                    }
                 }
+                
 
                 $queryMunicipio = "SELECT NombreMunicipio FROM municipios WHERE MunicipioID ='$municipio'";
-                $dataMunicipio= $connectionDBEM->getRows($queryMunicipio);
-                foreach($dataMunicipio as $row2){
-                    $municipio1 = $row2['NombreMunicipio'];
+                $dataMunicipio = $connectionDBEM->getRows($queryMunicipio);
+                
+                if (empty($dataMunicipio)) {
+                    $municipio1 = '';
+                } else {
+                    foreach ($dataMunicipio as $row2) {
+                        $municipio1 = $row2['NombreMunicipio'];
+                    }
                 }
 
                 $referencia = $data['referencia'];

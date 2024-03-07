@@ -23,7 +23,7 @@
 
                         <div class="col-md-4" id="idcurp">
                             <strong style="font-size: 14px;">CURP</strong>
-                            <input type="text" class="form-control" id="curp" name="curp" placeholder="CURP" style="font-size: 13px;">
+                            <input type="text" class="form-control" id="curp" name="curp" placeholder="CURP" style="font-size: 13px;" required>
                         </div>
 
                         <div class="col-md-4" id="idnombre">
@@ -97,6 +97,7 @@
                         <div class="col-md-4">
                             <strong style="font-size: 14px;">Municipio</strong>
                             <select name="municipio" id="municipio" class="form-control" style="font-size: 13px;">
+                                <option value="0">Seleccione</option>
                             </select>
                         </div>
 
