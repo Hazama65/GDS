@@ -80,6 +80,17 @@
 
         }
 
+        // Delete function
+        function deleteRow($params) {
+            $onConnection = $this->getConnections();
+
+            // Ejecutar la consulta de eliminación
+            mysqli_query($onConnection, $params);
+
+            // Cerrar la conexión
+            $this->closeConnection($onConnection);
+        }
+
 
 
     }

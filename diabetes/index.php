@@ -70,7 +70,7 @@ include("modal/registrarpaciente.php");
         <div class="col-4" width="100%" height="800px" style="margin-bottom: 100px; ">
             <div id="patient-list-container" style="background-color:rgb(81, 176, 210,0.6)">
                 <br>
-                <input type="text" id="search" placeholder="Buscar Residente...">
+                <input type="text" id="search" placeholder="Buscar Paciente...">
                 <ul id="patient-list">
                     <?php
                     if (!empty($data_Diabetes)) {
@@ -114,8 +114,11 @@ include("modal/registrarpaciente.php");
                     <select name="paciente_seleccionado" class="col-6 form-select custom-select"
                         id="paciente_seleccionado" style="background-color: #6c757d; color: white; margin-bottom:10px">
                     </select>
-
                 </div>
+
+                <a class="btn btn-danger" style="display:none; margin-bottom: 7px;" id="borrar_paciente">
+                    <i class="bi bi-trash"></i>
+                </a>
 
                 <iframe id="consulta" src="" frameborder="0" width="100%" height="800px"
                     style="margin-bottom: 100px;"></iframe>
@@ -125,12 +128,6 @@ include("modal/registrarpaciente.php");
         <iframe id="consulta_seguimiento" src="" frameborder="0" width="100%" height="800px"
             style="margin-bottom: 100px;"></iframe>
 
-        <div class="col-7">
-            <div class="container">
-                <iframe id="consulta" src="consulta.php" frameborder="0" width="100%" height="800px"
-                    style="margin-bottom: 100px;"></iframe>
-            </div> <!--<div class="container">-->
-        </div><!-- FINALIZA EL DIV class col 8-->
 
 
 
@@ -166,12 +163,11 @@ include("modal/registrarpaciente.php");
     <script src="js/visualizacion.js"></script>
     <script src="js/visualizacion_seg.js"></script>
     <script src="js/scriptmodal.js"></script>
-
     <script type="module">
         import { mainForm } from "./js/insert.js";
         mainForm();
     </script>
-
+    <script type="module" src="js/delete.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const cerrarSesionButton = document.getElementById('cerrar-sesion-button');
