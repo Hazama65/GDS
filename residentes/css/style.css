@@ -45,7 +45,6 @@ footer {
     background: linear-gradient(45deg, #9F44D3, #E2B0FF);
     color: #fff;
     text-align: center;
-    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 12px;

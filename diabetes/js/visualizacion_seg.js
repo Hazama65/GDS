@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const listItem = event.target.closest(".patient-item");
         const id_paciente = listItem.getAttribute("data-id-paciente");
 
+        // Asigna el valor de id_paciente al elemento #borrar_paciente
+        document.getElementById('borrar_paciente').setAttribute("data-id-paciente", id_paciente);
+        
         // Realiza una solicitud AJAX para obtener datos relacionados con el paciente
         $.ajax({
             type: "GET",
@@ -40,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
+        $('#borrar_paciente').show();
         $('#Seguimiento_index').show();
     }
 

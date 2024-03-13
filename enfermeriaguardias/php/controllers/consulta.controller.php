@@ -22,6 +22,9 @@
                 $nivel_academia = $data['nivel_academia'];
                 $turno = $data['turno'];
                 $servicio = $data['servicio'];
+                $criticas = $data['criticas'];
+                $clinicas = $data['clinicas'];
+                $quirurgicas = $data['quirurgicas'];
                 $fecha_tramite = $data['fecha_tramite'];
                 $fecha_suplencia = $data['fecha_suplencia'];
                 $autoriza = $data['autoriza'];

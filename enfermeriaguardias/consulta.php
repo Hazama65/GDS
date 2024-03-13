@@ -60,17 +60,17 @@
 
                     <tr>
                         <td class="estilo-celda">Críticas</td>
-                        <td></td>
+                        <td><?php echo $criticas ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Clínicas</td>
-                        <td></td>
+                        <td><?php echo $clinicas ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Quirúrgicas</td>
-                        <td></td>
+                        <td><?php echo $quirurgicas ; ?></td>
                     </tr>
 
                     <tr>

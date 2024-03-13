@@ -49,9 +49,9 @@ include("modal/registroenfermeriaguardias.php");
             <i class="bi bi-file-earmark-excel"></i> Excel
         </a>
 
-        <a href="graficas_anemia.php">
+        <a href="regitros.php">
             <button type="button" class="btn btn-primary" target="_blank">
-                <i class="bi bi-bar-chart"></i> Gráficas
+                <i class="bi bi-book"></i> Registros
             </button>
         </a>
     </div> <!-- cierre del <div class="btn-group" role="group" aria-label="Basic outlined example">-->
@@ -70,11 +70,12 @@ include("modal/registroenfermeriaguardias.php");
                             echo '<ul class="patient-list" >';
                             foreach ($data_EG as $PacientesCenso) {
                                 $id_pacientes = $PacientesCenso["id_guardia"];
-                                $nombrePacientes = $PacientesCenso["trabajador_sustituto"];
+                                $trabajador_sustituido = $PacientesCenso["trabajador_sustituido"];
+                                $fecha_Suplencia = $PacientesCenso["fecha_suplencia"];
 
                                 // Genera un elemento de lista para cada paciente
                                 echo '<li class="patient-item" data-id-paciente="' . $id_pacientes . '">';
-                                echo $nombrePacientes;
+                                echo $trabajador_sustituido. ' | ' . $fecha_Suplencia;;
                                 echo '<a href="editar_censo.php?id=' . $id_pacientes . '">';
                                 echo '</a>';
                                 echo '</li>';
@@ -133,6 +134,7 @@ include("modal/registroenfermeriaguardias.php");
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="js/scriptmodal.js"></script>
     <script src="js/visualizacion.js"></script>
+    <script src="js/script.js"></script>
 
 
     <script type="module">

@@ -114,8 +114,11 @@ include("modal/registrarpaciente.php");
                     <select name="paciente_seleccionado" class="col-6 form-select custom-select"
                         id="paciente_seleccionado" style="background-color: #6c757d; color: white; margin-bottom:10px">
                     </select>
-
                 </div>
+
+                <a class="btn btn-danger" style="display:none; margin-bottom: 7px;" id="borrar_paciente">
+                    <i class="bi bi-trash"></i>
+                </a>
 
                 <iframe id="consulta" src="" frameborder="0" width="100%" height="800px"
                     style="margin-bottom: 100px;"></iframe>
@@ -125,12 +128,6 @@ include("modal/registrarpaciente.php");
         <iframe id="consulta_seguimiento" src="" frameborder="0" width="100%" height="800px"
             style="margin-bottom: 100px;"></iframe>
 
-        <div class="col-7">
-            <div class="container">
-                <iframe id="consulta" src="consulta.php" frameborder="0" width="100%" height="800px"
-                    style="margin-bottom: 100px;"></iframe>
-            </div> <!--<div class="container">-->
-        </div><!-- FINALIZA EL DIV class col 8-->
 
 
 
@@ -139,6 +136,15 @@ include("modal/registrarpaciente.php");
 
         <div class="col-1">
         </div>
+    </div>
+
+
+    <!-- Contenedor para la pantalla de carga -->
+    <div id="loading-overlay" style="display: none;" class="loading">
+        <svg width="128px" height="96px">
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="back"></polyline>
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="front"></polyline>
+        </svg>
     </div>
 
 
@@ -153,15 +159,15 @@ include("modal/registrarpaciente.php");
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/script.js"></script>
     <script src="js/visualizacion.js"></script>
     <script src="js/visualizacion_seg.js"></script>
     <script src="js/scriptmodal.js"></script>
-
     <script type="module">
         import { mainForm } from "./js/insert.js";
         mainForm();
     </script>
-
+    <script type="module" src="js/delete.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const cerrarSesionButton = document.getElementById('cerrar-sesion-button');
