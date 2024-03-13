@@ -82,7 +82,7 @@ include("modal/registroenfermeriaguardias.php");
                             }
                             echo '</ul>';
                         } else {
-                            echo "No se encontraron pacientes";
+                            echo "No se encontraro Trabajador";
                         }
                     ?>
 
