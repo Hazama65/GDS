@@ -59,7 +59,7 @@ function calcularTasasDeih1000() {
         // Mostrar el resultado en el campo correspondiente
         deih1000Input.value = tasasDeih1000.toFixed(2);
 
-        // Aplicar estilo de relleno rojo si el valor es igual o mayor a 2
+        // Aplicar estilo de relleno rojo si el valor es igual o mayor a 4
         if (tasasDeih1000 >= 4) {
             deih1000Input.style.backgroundColor = 'red';
         } else {
