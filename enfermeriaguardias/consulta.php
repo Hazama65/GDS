@@ -26,7 +26,7 @@
                 <thead>
 
                     <tr>
-                        <th scope="col" style="background-color:rgb(137, 97, 126) "> Datos Generales</th>
+                        <th scope="col" style="background-color:rgb(137, 97, 126) ">Trabajador Sustituido</th>
                         <th scope="col" style="background-color:rgb(137, 97, 126) "> </th>
                     </tr>
                 </thead>
@@ -35,27 +35,27 @@
 
                     <tr>
                         <td class="estilo-celda">Trabajador Sustituido</td>
-                        <td><?php echo $trabajador_sustituido ; ?></td>
+                        <td></td>
                     </tr>
 
                     <tr>
-                        <td class="estilo-celda">Trabajador Sustituto</td>
-                        <td><?php echo $trabajador_sustituto ; ?></td>
+                        <td class="estilo-celda">Número de Empleado</td>
+                        <td></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Nivel Académico</td>
-                        <td><?php echo $nivel_academia ; ?> </td>
+                        <td></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Turno</td>
-                        <td><?php echo $turno ; ?></td>
+                        <td> </td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Servicio</td>
-                        <td><?php echo $servicio ; ?></td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -68,26 +68,96 @@
                         <td></td>
                     </tr>
 
-                    
                     <tr>
                         <td class="estilo-celda">Quirúrgicas</td>
                         <td></td>
                     </tr>
 
                     <tr>
+                        <td class="estilo-celda">Ambulatorias</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Hospitalización</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="col" style="background-color:rgb(137, 97, 126) ">Trabajador Sustituto</th>
+                        <th scope="col" style="background-color:rgb(137, 97, 126) "> </th>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Trabajador Sustituto</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Número de Empleado</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Nivel Académico</td>
+                        <td></td>
+                    </tr>
+
+                    
+                    <tr>
+                        <td class="estilo-celda">Turno</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Servicio</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Críticas</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Clínicas</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Quirúrgicas</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Ambulatorias</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Hospitalización</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="col" style="background-color:rgb(137, 97, 126) ">Datos de la Suplencia</th>
+                        <th scope="col" style="background-color:rgb(137, 97, 126) "> </th>
+                    </tr>
+
+                    <tr>
                         <td class="estilo-celda">Fecha de Tramite</td>
-                        <td><?php echo $fecha_tramite ; ?></td>
+                        <td></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Fecha de Suplencia</td>
-                        <td><?php echo $fecha_suplencia ; ?></td>
+                        <td></td>
                     </tr>
 
 
                     <tr>
                         <td class="estilo-celda">Nombre de Quien Autoriza</td>
-                        <td><?php echo $autoriza ; ?></td>
+                        <td></td>
                     </tr>
 
                     

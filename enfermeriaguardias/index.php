@@ -62,7 +62,7 @@ include("modal/registroenfermeriaguardias.php");
         <div class="col-4" width="100%" height="800px" style="margin-bottom: 100px; ">
             <div id="patient-list-container" style="background-color:rgb(81, 176, 210,0.6)">
                 <br>
-                <input type="text" id="search" placeholder="Buscar Residente...">
+                <input type="text" id="search" placeholder="Buscar Trabajador...">
                 <ul id="patient-list">
                     <?php
                         if (!empty($data_EG)) {
@@ -81,7 +81,7 @@ include("modal/registroenfermeriaguardias.php");
                             }
                             echo '</ul>';
                         } else {
-                            echo "No se encontraron pacientes";
+                            echo "No se encontraro Trabajador";
                         }
                     ?>
 
