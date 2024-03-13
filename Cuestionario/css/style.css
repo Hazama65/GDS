@@ -1,13 +1,8 @@
 body{
-    background-color: gray;
+    background-color: rgb(250, 207, 207);
 }
 header {
-    background: #009FFF;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right,#DCE35B, #45B649);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right,#DCE35B, #45B649);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: linear-gradient(0deg, #7a0027 0%, #ff838a 100%);
 
     height: 50px;
     /* Ajusta la altura del encabezado según tus necesidades */
@@ -15,27 +10,115 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    color: rgb(255, 255, 255);
-    /* Agregué color de texto blanco para mayor visibilidad */
+    color: #ffff;
 
 }
-
-header {
-    /* COLOR A LA LETRA HRAEI */
-    display: inline;
-    background: linear-gradient(to right, #FFFFFF, #FFFFFF);
-    -webkit-: text;
-    color: transparent;
-    margin-top: 15px;
-    font-weight: bold;
-    font-size: 24px;
+.texto {
+    margin: 10px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px 30px;
+    padding:10px
 }
+
+.formulario{
+    margin-bottom: 50px;
+    background: white;
+    border-radius: 15px 15px 50px;
+    box-shadow: 0 7px 25px rgba(255, 147, 147, 0.9);
+}
+
 .row{
     padding: 2%;
 }
 .cuestionario{
     padding: 2%;
 }
+
+.campos_form{
+    
+    margin: 10px;
+    border-radius: 15px ; 
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+}
+.campos_form2{
+    border: 1px solid #ccc;
+    padding: 1%;
+    margin-bottom: 15px;
+    border-radius: 15px ; 
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Estilos para la tabla de registros */
+.contenedor_tabla {
+    margin: 1.5%;
+    padding: 1.5%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    font-size: 12px;
+}
+
+th {
+    background-color: #b0b0b0;
+}
+/* Estilos para filas alternas */
+table tbody tr:nth-child(odd) {
+    background-color: #DEDEDE; /* Color de fondo para filas impares */
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #C6C6C6; /* Color de fondo para filas pares */
+}
+
+.tabla {
+    width: 100%;
+}
+
+.buttons-excel {
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Borde */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Decoración de texto */
+    display: inline-block; /* Mostrar como bloque en línea */
+    font-size: 16px; /* Tamaño de la fuente */
+    margin: 4px 2px; /* Margen exterior */
+    cursor: pointer; /* Cursor */
+    border-radius: 4px; /* Radio del borde */
+}
+
+
+
+
+/* Estilos para la tabla responsiva */
+@media screen and (max-width: 767px) {
+    #myTable {
+        overflow-x: auto;
+    }
+}
+
+
+
+
 
 /* pantalla de carga */
 

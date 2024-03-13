@@ -35,7 +35,7 @@ const validation = async (alldata) => {
 
         if (response == 'success') {
             return setAlerts.successAlert(
-                'Guardado',
+                'Formulario mandado',
                 null,
                 null,
                 'index.html',

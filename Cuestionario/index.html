@@ -13,470 +13,542 @@
 <body>
 
     <header>
-        <h5>NO REPORTE</h5>
+        <h5>Formulario - 'NO REPORTE'</h5>
     </header>
+    <div style="overflow: hidden;">
+        <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
+            style="fill: #7a0027; width: 100%; height: 50px; transform: scaleX(-1);">
+            <path
+                d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+                opacity=".25" />
+            <path
+                d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+                opacity=".5" />
+            <path
+                d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+        </svg>
+    </div>
+
+    <div class="texto">
+        <h5>Proposito del Formulario:</h5>
+        <h6>Identificar la causa del NO REPORTE de eventos adversos, eventos centinelas y cuasifallas por parte del
+            personal
+            de salud de las áreas de hospitalización del HRAEI </h6>
+    </div>
 
     <div class="container-fluid">
-        <form id="cuestionario_form" method="POST">
-    
-            <div class="row">
-                <h3>Datos personales</h3>
-                <div class="col-md-1">
-                    <strong>Edad</strong>
-                    <input class="control form-control" type="number" name="Edad" id="Edad">
-                </div>
-                <div class="col-md-1">
-                    <strong>Sexo</strong>
-                    <input class="control form-control" type="text" id="Sexo" name="Sexo">
-                </div>
-                <div class="col-md-2">
-                    <strong>Servicio</strong>
-                    <input class="control form-control" type="text" id="Servicio" name="Servicio">
-                </div>
-                <div class="col-md-2">
-                    <strong>Turno</strong>
-                    <input class="control form-control" type="text" name="Turno" id="Turno">
-                </div>
-                <div class="col-md-3">
-                    <strong>Disciplina(Profesión)</strong>
-                    <input class="control form-control" type="text" name="Disciplina" id="Disciplina">
-                </div>
-                <div class="col-md-3">
-                    <strong>Tipo de contratación</strong>
-                    <input class="control form-control" type="text" name="contratacion" id="contratacion">
-                </div>
-            </div>
-    
-            <div class="cuestionario">
-    
-                <strong>Pregunta 1</strong>
-                <h6>1. ¿Conoce cómo se debe realizar un reporte de un evento adverso, evento centinela o Cuasifalla en el
-                    HRAEI?
-                </h6>
-                <fieldset>
-                    <label>
-                        <input class="form-check-input" type="radio" name="cuestion_1" value="Si" required> Si
-                    </label>
-                    <label>
-                        <input class="form-check-input" type="radio" name="cuestion_1" value="No"> No
-                    </label>
-                </fieldset>
-    
-                <div class="cuestion_1" id="cuestion_1_a">
-                    <h6>Si su respuesta es afirmativa, en donde se debe realizar el reporte del evento? Puede marcar más de
-                        una
-                        opción.</h6>
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-a" name="opciones_a_1"
-                            value="Sistema de reporte de incidentes (SINOI)">
-                        <label for="opcion-a">Sistema de reporte de incidentes (SINOI)</label><br>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-b" name="opciones_a_2" value="Saludness">
-                        <label for="opcion-b">Saludness</label><br>
-                    </div>
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-c" name="opciones_a_3" value="Formulario">
-                        <label for="opcion-c">Formulario</label><br>
-                    </div>
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-d" name="opciones_a_4"
-                            value="Informando a Supervisor o jefe de inmediato">
-                        <label for="opcion-d">Informando a Supervisor o jefe de inmediato</label><br>
-                    </div>
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-e" name="opciones_a_5" value="No se">
-                        <label for="opcion-e">No se</label><br>
-                    </div>
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-f" name="opciones_a_otros" value="Otro">
-                        <label for="opcion-f">Otro</label><br>
+        <div class="formulario">
+            <form id="cuestionario_form" method="POST">
+                <div class="campos_form">
+                    <div class="row">
+                        <h3>Datos personales</h3>
+                        <div class="col-md-1">
+                            <strong>Edad</strong>
+                            <input class="control form-control" type="number" name="Edad" id="Edad">
+                        </div>
+                        <div class="col-md-1">
+                            <strong>Sexo</strong>
+                            <input class="control form-control" type="text" id="Sexo" name="Sexo">
+                        </div>
+                        <div class="col-md-2">
+                            <strong>Servicio</strong>
+                            <input class="control form-control" type="text" id="Servicio" name="Servicio">
+                        </div>
+                        <div class="col-md-2">
+                            <strong>Turno</strong>
+                            <input class="control form-control" type="text" name="Turno" id="Turno">
+                        </div>
                         <div class="col-md-3">
-                            <label for="otro-cual">Cuál?</label>
-                            <input class="form-control" type="text" id="otro-cual" name="otro_cual" placeholder="Escribe otra opción">
+                            <strong>Disciplina(Profesión)</strong>
+                            <input class="control form-control" type="text" name="Disciplina" id="Disciplina">
+                        </div>
+                        <div class="col-md-3">
+                            <strong>Tipo de contratación</strong>
+                            <input class="control form-control" type="text" name="contratacion" id="contratacion">
                         </div>
                     </div>
-    
                 </div>
-    
-    
-                <strong>Pregunta 2</strong>
-                <h6>2. ¿Durante los 2 últimos años usted ha realizado el reporte de algún tipo de evento, evento adverso,
-                    evento
-                    centinela o Cuasifalla? </h6>
-                <fieldset>
-                    <label>
-                        <input class="form-check-input" type="radio" name="cuestion_2" value="Si" required> Si
-                    </label>
-                    <label>
-                        <input class="form-check-input" type="radio" name="cuestion_2" value="No"> No
-                    </label>
-                </fieldset>
-    
-                <div class="cuestion_2" id="cuestion_2_a">
-                    <h6>2.1 Si su respuesta es afirmativa, ¿cuantas ocasiones ha realizado el reporte de evento (evento
-                        adverso,
-                        evento centinela o Cuasifalla)? </h6>
-    
-                    <input class="form-check-input" type="radio" id="opcion-a-2" name="ocasiones" value="1-2 ocasiones">
-                    <label for="opcion-a-2">1-2 ocasiones</label><br>
-    
-                    <input class="form-check-input" type="radio" id="opcion-b-2" name="ocasiones" value="3-4 ocasiones">
-                    <label for="opcion-b-2">3-4 ocasiones</label><br>
-    
-                    <input class="form-check-input" type="radio" id="opcion-c-2" name="ocasiones" value="5-6 ocasiones">
-                    <label for="opcion-c-2">5-6 ocasiones</label><br>
-    
-                    <input class="form-check-input" type="radio" id="opcion-d-2" name="ocasiones"
-                        value="Más de 7 ocasiones">
-                    <label for="opcion-d-2">Más de 7 ocasiones</label><br>
-                </div>
-    
-    
-                <div class="cuestion_2" id="cuestion_2_b">
-    
-                    <h6>2.1 Si su respuesta es NO; ¿por qué usted no ha realizado el reporte de eventos? Puede seleccionar
-                        más de una
-                        opción</h6>
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-a-3" name="razones_a_1"
-                            value="Desconocimiento de cómo reportar (no sé cómo se hace)">
-                        <label for="opcion-a-3">Desconocimiento de cómo reportar (no sé cómo se hace)</label><br>
-                    </div>
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-b-3" name="razones_a_2"
-                            value="Persecución laboral">
-                        <label for="opcion-b-3">Persecución laboral</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-c-3" name="razones_a_3"
-                            value="Exceso de carga laboral">
-                        <label for="opcion-c-3">Exceso de carga laboral</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-d-3" name="razones_a_4"
-                            value="Repercusión negativa en hoja de vida">
-                        <label for="opcion-d-3">Repercusión negativa en hoja de vida</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-e-3" name="razones_a_5"
-                            value="Ser juzgado o señalado">
-                        <label for="opcion-e-3">Ser juzgado o señalado</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-f-3" name="razones_a_6"
-                            value="Pérdida del empleo">
-                        <label for="opcion-f-3">Pérdida del empleo</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-g-3" name="razones_a_7"
-                            value="Acciones legales">
-                        <label for="opcion-g-3">Acciones legales</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-h-3" name="razones_a_8"
-                            value="Indiferente al reporte">
-                        <label for="opcion-h-3">Indiferente al reporte</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-i-3" name="razones_a_9"
-                            value="Solicitud de exceso de datos en la plataforma">
-                        <label for="opcion-i-3">Solicitud de exceso de datos en la plataforma</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-j-3" name="razones_a_10"
-                            value="No sé quién lo recibe y lee lo reportado">
-                        <label for="opcion-j-3">No sé quién lo recibe y lee lo reportado</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-k-3" name="razones_a_11"
-                            value="Considero que lo debe realizar otra persona">
-                        <label for="opcion-k-3">Considero que lo debe realizar otra persona</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-l-3" name="razones_a_12"
-                            value="No tengo tiempo">
-                        <label for="opcion-l-3">No tengo tiempo</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-m-3" name="razones_a_13"
-                            value="No sé qué es lo que tengo que reportar">
-                        <label for="opcion-m-3">No sé qué es lo que tengo que reportar</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-n-3" name="razones_a_14"
-                            value="No quiero perjudicar a ningún compañero">
-                        <label for="opcion-n-3">No quiero perjudicar a ningún compañero</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-o-3" name="razones_a_15"
-                            value="Miedo al sindicato">
-                        <label for="opcion-o-3">Miedo al sindicato</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-p-3" name="razones_otro" value="Otro">
-                        <label for="opcion-p-3">Otro</label><br>
-                        <div class="col-md-3">
-                            <label for="otro-cual">Cuál?</label>
-                            <input class="form-control" type="text" id="razones_otro_cual" name="razones_otro_cual" placeholder="Escribe otra razón">
+
+                <div class="cuestionario">
+
+                    <div class="campos_form2">
+                        <strong>Pregunta 1</strong>
+                        <h6>1. ¿Conoce cómo se debe realizar un reporte de un evento adverso, evento centinela o
+                            Cuasifalla en
+                            el
+                            HRAEI?
+                        </h6>
+                        <fieldset>
+                            <label>
+                                <input class="form-check-input" type="radio" name="cuestion_1" value="Si" required> Si
+                            </label>
+                            <label>
+                                <input class="form-check-input" type="radio" name="cuestion_1" value="No"> No
+                            </label>
+                        </fieldset>
+
+                        <div class="cuestion_1" id="cuestion_1_a">
+                            <h6>Si su respuesta es afirmativa, en donde se debe realizar el reporte del evento? Puede
+                                marcar más
+                                de
+                                una
+                                opción.</h6>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-a" name="opciones_a_1"
+                                    value="Sistema de reporte de incidentes (SINOI)">
+                                <label for="opcion-a">Sistema de reporte de incidentes (SINOI)</label><br>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-b" name="opciones_a_2"
+                                    value="Saludness">
+                                <label for="opcion-b">Saludness</label><br>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-c" name="opciones_a_3"
+                                    value="Formulario">
+                                <label for="opcion-c">Formulario</label><br>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-d" name="opciones_a_4"
+                                    value="Informando a Supervisor o jefe de inmediato">
+                                <label for="opcion-d">Informando a Supervisor o jefe de inmediato</label><br>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-e" name="opciones_a_5"
+                                    value="No se">
+                                <label for="opcion-e">No se</label><br>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-f" name="opciones_a_otros"
+                                    value="Otro">
+                                <label for="opcion-f">Otro</label><br>
+                                <div class="col-md-3">
+                                    <label for="otro-cual">Cuál?</label>
+                                    <input class="form-control" type="text" id="otro-cual" name="otro_cual"
+                                        placeholder="Escribe otra opción">
+                                </div>
+                            </div>
+
                         </div>
                     </div>
+
+
+                    <div class="campos_form2">
+                        <strong>Pregunta 2</strong>
+                        <h6>2. ¿Durante los 2 últimos años usted ha realizado el reporte de algún tipo de evento, evento
+                            adverso,
+                            evento
+                            centinela o Cuasifalla? </h6>
+                        <fieldset>
+                            <label>
+                                <input class="form-check-input" type="radio" name="cuestion_2" value="Si" required> Si
+                            </label>
+                            <label>
+                                <input class="form-check-input" type="radio" name="cuestion_2" value="No"> No
+                            </label>
+                        </fieldset>
+
+                        <div class="cuestion_2" id="cuestion_2_a">
+                            <h6>2.1 Si su respuesta es afirmativa, ¿cuantas ocasiones ha realizado el reporte de evento
+                                (evento
+                                adverso,
+                                evento centinela o Cuasifalla)? </h6>
+
+                            <input class="form-check-input" type="radio" id="opcion-a-2" name="ocasiones"
+                                value="1-2 ocasiones">
+                            <label for="opcion-a-2">1-2 ocasiones</label><br>
+
+                            <input class="form-check-input" type="radio" id="opcion-b-2" name="ocasiones"
+                                value="3-4 ocasiones">
+                            <label for="opcion-b-2">3-4 ocasiones</label><br>
+
+                            <input class="form-check-input" type="radio" id="opcion-c-2" name="ocasiones"
+                                value="5-6 ocasiones">
+                            <label for="opcion-c-2">5-6 ocasiones</label><br>
+
+                            <input class="form-check-input" type="radio" id="opcion-d-2" name="ocasiones"
+                                value="Más de 7 ocasiones">
+                            <label for="opcion-d-2">Más de 7 ocasiones</label><br>
+                        </div>
+
+
+                        <div class="cuestion_2" id="cuestion_2_b">
+
+                            <h6>2.1 Si su respuesta es NO; ¿por qué usted no ha realizado el reporte de eventos? Puede
+                                seleccionar
+                                más de una
+                                opción</h6>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-a-3" name="razones_a_1"
+                                    value="Desconocimiento de cómo reportar (no sé cómo se hace)">
+                                <label for="opcion-a-3">Desconocimiento de cómo reportar (no sé cómo se
+                                    hace)</label><br>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-b-3" name="razones_a_2"
+                                    value="Persecución laboral">
+                                <label for="opcion-b-3">Persecución laboral</label><br>
+                            </div>
+
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-c-3" name="razones_a_3"
+                                    value="Exceso de carga laboral">
+                                <label for="opcion-c-3">Exceso de carga laboral</label><br>
+                            </div>
+
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-d-3" name="razones_a_4"
+                                    value="Repercusión negativa en hoja de vida">
+                                <label for="opcion-d-3">Repercusión negativa en hoja de vida</label><br>
+                            </div>
+
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-e-3" name="razones_a_5"
+                                    value="Ser juzgado o señalado">
+                                <label for="opcion-e-3">Ser juzgado o señalado</label><br>
+                            </div>
+
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-f-3" name="razones_a_6"
+                                    value="Pérdida del empleo">
+                                <label for="opcion-f-3">Pérdida del empleo</label><br>
+                            </div>
+
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-g-3" name="razones_a_7"
+                                    value="Acciones legales">
+                                <label for="opcion-g-3">Acciones legales</label><br>
+                            </div>
+
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-h-3" name="razones_a_8"
+                                    value="Indiferente al reporte">
+                                <label for="opcion-h-3">Indiferente al reporte</label><br>
+                            </div>
+
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-i-3" name="razones_a_9"
+                                    value="Solicitud de exceso de datos en la plataforma">
+                                <label for="opcion-i-3">Solicitud de exceso de datos en la plataforma</label><br>
+                            </div>
+
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-j-3" name="razones_a_10"
+                                    value="No sé quién lo recibe y lee lo reportado">
+                                <label for="opcion-j-3">No sé quién lo recibe y lee lo reportado</label><br>
+                            </div>
+
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-k-3" name="razones_a_11"
+                                    value="Considero que lo debe realizar otra persona">
+                                <label for="opcion-k-3">Considero que lo debe realizar otra persona</label><br>
+                            </div>
+
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-l-3" name="razones_a_12"
+                                    value="No tengo tiempo">
+                                <label for="opcion-l-3">No tengo tiempo</label><br>
+                            </div>
+
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-m-3" name="razones_a_13"
+                                    value="No sé qué es lo que tengo que reportar">
+                                <label for="opcion-m-3">No sé qué es lo que tengo que reportar</label><br>
+                            </div>
+
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-n-3" name="razones_a_14"
+                                    value="No quiero perjudicar a ningún compañero">
+                                <label for="opcion-n-3">No quiero perjudicar a ningún compañero</label><br>
+                            </div>
+
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-o-3" name="razones_a_15"
+                                    value="Miedo al sindicato">
+                                <label for="opcion-o-3">Miedo al sindicato</label><br>
+                            </div>
+
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-p-3" name="razones_otro"
+                                    value="Otro">
+                                <label for="opcion-p-3">Otro</label><br>
+                                <div class="col-md-3">
+                                    <label for="otro-cual">Cuál?</label>
+                                    <input class="form-control" type="text" id="razones_otro_cual"
+                                        name="razones_otro_cual" placeholder="Escribe otra razón">
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="campos_form2">
+                        <h6>3. ¿Cómo se enteró de la forma de como notificar eventos (evento adverso, evento centinela o
+                            Cuasifalla)?
+                        </h6>
+
+                        <input class="form-check-input" type="radio" id="opcion-a-4" name="informante"
+                            value="Por un superior/a">
+                        <label for="opcion-a-4">Por un superior/a</label><br>
+
+                        <input class="form-check-input" type="radio" id="opcion-b-4" name="informante"
+                            value="Por el personal de calidad">
+                        <label for="opcion-b-4">Por el personal de calidad</label><br>
+
+                        <input class="form-check-input" type="radio" id="opcion-c-4" name="informante"
+                            value="Por un compañero/a">
+                        <label for="opcion-c-4">Por un compañero/a</label><br>
+
+                        <input class="form-check-input" type="radio" id="opcion-d-4" name="informante"
+                            value="No estaba enterado/a">
+                        <label for="opcion-d-4">No estaba enterado/a</label><br>
+
+                        <input class="form-check-input" type="radio" id="opcion-e-4" name="informante" value="Otro">
+                        <label for="opcion-e-4">Otro</label><br>
+
+                        <div class="col-md-3">
+                            <label for="otro-cual">Cuál?</label>
+                            <input class="form-control" type="text" id="informante_otro_cual"
+                                name="informante_otro_cual" placeholder="Escribe otro informante">
+                        </div>
+                    </div>
+
+                    <div class="campos_form2">
+                        <h6>4. ¿Conoce que eventos debe reportar en las plataformas?</h6>
+                        <fieldset>
+                            <label>
+                                <input class="form-check-input" type="radio" name="cuestion_6" value="Si" required> Si
+                            </label>
+                            <label>
+                                <input class="form-check-input" type="radio" name="cuestion_6" value="No"> No
+                            </label>
+                        </fieldset>
+    
+                        <div class="cuestion_6" id="cuestion_6_a">
+                            <h6>4.1 Si su respuesta es afirmativa; señale a continuación que eventos adversos debe
+                                notificar.
+                            </h6>
+    
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-a-5" name="eventos_a_1"
+                                    value="Caídas">
+                                <label for="opcion-a-5">Caídas</label><br>
+    
+                            </div>
     
     
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-b-5" name="eventos_a_2"
+                                    value="Lesiones de piel">
+                                <label for="opcion-b-5">Lesiones de piel</label><br>
+    
+                            </div>
+    
+    
+                            <div class="form-check">
+    
+                                <input class="form-check-input" type="checkbox" id="opcion-c-5" name="eventos_a_3"
+                                    value="Errores durante el proceso de medicación (prescripción, transcripción, dispensación, preparación y administración)">
+                                <label for="opcion-c-5">Errores durante el proceso de medicación (prescripción,
+                                    transcripción,
+                                    dispensación,
+                                    preparación y administración)</label><br>
+                            </div>
+    
+    
+                            <div class="form-check">
+    
+                                <input class="form-check-input" type="checkbox" id="opcion-d-5" name="eventos_a_4"
+                                    value="Dispositivos médicos (eventos adversos relacionados con el equipo quirúrgico e instrumental médico)">
+                                <label for="opcion-d-5">Dispositivos médicos (eventos adversos relacionados con el equipo
+                                    quirúrgico
+                                    e
+                                    instrumental médico)</label><br>
+                            </div>
+    
+    
+                            <div class="form-check">
+    
+                                <input class="form-check-input" type="checkbox" id="opcion-e-5" name="eventos_a_5"
+                                    value="Errores de estudios de laboratorio">
+                                <label for="opcion-e-5">Errores de estudios de laboratorio</label><br>
+                            </div>
+    
+    
+                            <div class="form-check">
+    
+                                <input class="form-check-input" type="checkbox" id="opcion-f-5" name="eventos_a_6"
+                                    value="Errores relacionadas con nutrición y dietas">
+                                <label for="opcion-f-5">Errores relacionadas con nutrición y dietas</label><br>
+                            </div>
+    
+    
+                            <div class="form-check">
+    
+                                <input class="form-check-input" type="checkbox" id="opcion-g-5" name="eventos_a_7"
+                                    value="Errores en procedimientos invasivos y/o tratamientos">
+                                <label for="opcion-g-5">Errores en procedimientos invasivos y/o tratamientos</label><br>
+                            </div>
+    
+    
+                            <div class="form-check">
+    
+                                <input class="form-check-input" type="checkbox" id="opcion-h-5" name="eventos_a_8"
+                                    value="Infecciones">
+                                <label for="opcion-h-5">Infecciones</label><br>
+                            </div>
+    
+    
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-i-5" name="eventos_a_9"
+                                    value="Errores durante el proceso de transfusión de hemocomponentes">
+                                <label for="opcion-i-5">Errores durante el proceso de transfusión de
+                                    hemocomponentes</label><br>
+    
+                            </div>
+    
+    
+    
+                        </div>
+                        <div class="cuestion_6" id="cuestion_6_b">
+                            <h6>4.2 Si su respuesta es afirmativa, señale a continuación que eventos centinelas debe
+                                reportar
+                            </h6>
+    
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="opcion-a-6"
+                                    name="eventos_centinelas_b_1"
+                                    value="Muerte imprevista no relacionada con el curso natural de la enfermedad o el problema subyacente del paciente.">
+                                <label for="opcion-a-6">Muerte imprevista no relacionada con el curso natural de la
+                                    enfermedad o
+                                    el
+                                    problema
+                                    subyacente del paciente.</label><br>
+    
+                            </div>
+    
+    
+                            <div class="form-check">
+    
+                                <input class="form-check-input" type="checkbox" id="opcion-b-6"
+                                    name="eventos_centinelas_b_2"
+                                    value="Pérdida permanente de una función no relacionada con el curso natural de la enfermedad o el problema subyacente del paciente.">
+                                <label for="opcion-b-6">Pérdida permanente de una función no relacionada con el curso
+                                    natural de
+                                    la
+                                    enfermedad o
+                                    el problema subyacente del paciente.</label><br>
+                            </div>
+    
+    
+                            <div class="form-check">
+    
+                                <input class="form-check-input" type="checkbox" id="opcion-c-6"
+                                    name="eventos_centinelas_b_3"
+                                    value="Cirugía en el lugar incorrecto, con el procedimiento incorrecto o al paciente equivocado.">
+                                <label for="opcion-c-6">Cirugía en el lugar incorrecto, con el procedimiento incorrecto o al
+                                    paciente
+                                    equivocado.</label><br>
+                            </div>
+    
+    
+                            <div class="form-check">
+    
+                                <input class="form-check-input" type="checkbox" id="opcion-d-6"
+                                    name="eventos_centinelas_b_4"
+                                    value="Transmisión de una enfermedad o afección crónica como resultado de una transfusión de sangre, hemocomponentes o trasplante de órganos o tejidos.">
+                                <label for="opcion-d-6">Transmisión de una enfermedad o afección crónica como resultado de
+                                    una
+                                    transfusión de
+                                    sangre, hemocomponentes o trasplante de órganos o tejidos.</label><br>
+                            </div>
+    
+    
+                            <div class="form-check">
+    
+                                <input class="form-check-input" type="checkbox" id="opcion-e-6"
+                                    name="eventos_centinelas_b_5" value="Suicidio">
+                                <label for="opcion-e-6">Suicidio</label><br>
+                            </div>
+    
+    
+                            <div class="form-check">
+    
+                                <input class="form-check-input" type="checkbox" id="opcion-f-6"
+                                    name="eventos_centinelas_b_6" value="Violación">
+                                <label for="opcion-f-6">Violación</label><br>
+                            </div>
+    
+    
+                            <div class="form-check">
+    
+                                <input class="form-check-input" type="checkbox" id="opcion-g-6"
+                                    name="eventos_centinelas_b_7" value="Maltrato u homicidio de cualquier paciente.">
+                                <label for="opcion-g-6">Maltrato u homicidio de cualquier paciente.</label><br>
+                            </div>
+    
+    
+                        </div>
+                        <div class="cuestion_6" id="cuestion_6_c">
+                            <h6>4.3 Si su respuesta es afirmativa en qué casos debe reportar cuasifallas</h6>
+    
+                            <div class="form-check">
+    
+                                <input class="form-check-input" type="checkbox" id="opcion-a-9" name="incidentes_c_1"
+                                    value="Cualquier incidente que estuvo a punto de cometerse con el paciente pero que por intercepción de algún compañero no se llevó a cabo">
+                                <label for="opcion-a-9">Cualquier incidente que estuvo a punto de cometerse con el paciente
+                                    pero
+                                    que
+                                    por
+                                    intercepción de algún compañero no se llevó a cabo</label><br>
+                            </div>
+    
+    
+                            <div class="form-check">
+    
+                                <input class="form-check-input" type="checkbox" id="opcion-b-9" name="incidentes_c_2"
+                                    value="Cualquier situación de riesgo a que estuviera expuesto el paciente">
+                                <label for="opcion-b-9">Cualquier situación de riesgo a que estuviera expuesto el
+                                    paciente</label><br>
+                            </div>
+    
+    
+                        </div>
+                    </div>
+
+
+
+                    <button type="submit" class="btn btn-success">Enviar</button>
+
                 </div>
-    
-    
-                <h6>3. ¿Cómo se enteró de la forma de como notificar eventos (evento adverso, evento centinela o
-                    Cuasifalla)?
-                </h6>
-    
-                <input class="form-check-input" type="radio" id="opcion-a-4" name="informante" value="Por un superior/a">
-                <label for="opcion-a-4">Por un superior/a</label><br>
-    
-                <input class="form-check-input" type="radio" id="opcion-b-4" name="informante"
-                    value="Por el personal de calidad">
-                <label for="opcion-b-4">Por el personal de calidad</label><br>
-    
-                <input class="form-check-input" type="radio" id="opcion-c-4" name="informante" value="Por un compañero/a">
-                <label for="opcion-c-4">Por un compañero/a</label><br>
-    
-                <input class="form-check-input" type="radio" id="opcion-d-4" name="informante" value="No estaba enterado/a">
-                <label for="opcion-d-4">No estaba enterado/a</label><br>
-    
-                <input class="form-check-input" type="radio" id="opcion-e-4" name="informante" value="Otro">
-                <label for="opcion-e-4">Otro</label><br>
-    
-                <div class="col-md-3">
-                    <label for="otro-cual">Cuál?</label>
-                    <input class="form-control" type="text" id="informante_otro_cual" name="informante_otro_cual" placeholder="Escribe otro informante">
-                </div>
-    
-                <h6>4. ¿Conoce que eventos debe reportar en las plataformas?</h6>
-                <fieldset>
-                    <label>
-                        <input class="form-check-input" type="radio" name="cuestion_6" value="Si" required> Si
-                    </label>
-                    <label>
-                        <input class="form-check-input" type="radio" name="cuestion_6" value="No"> No
-                    </label>
-                </fieldset>
-    
-                <div class="cuestion_6" id="cuestion_6_a">
-                    <h6>4.1 Si su respuesta es afirmativa; señale a continuación que eventos adversos debe notificar.</h6>
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-a-5" name="eventos_a_1" value="Caídas">
-                        <label for="opcion-a-5">Caídas</label><br>
-    
-                    </div>
-    
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-b-5" name="eventos_a_2"
-                            value="Lesiones de piel">
-                        <label for="opcion-b-5">Lesiones de piel</label><br>
-    
-                    </div>
-    
-    
-                    <div class="form-check">
-    
-                        <input class="form-check-input" type="checkbox" id="opcion-c-5" name="eventos_a_3"
-                            value="Errores durante el proceso de medicación (prescripción, transcripción, dispensación, preparación y administración)">
-                        <label for="opcion-c-5">Errores durante el proceso de medicación (prescripción, transcripción,
-                            dispensación,
-                            preparación y administración)</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-    
-                        <input class="form-check-input" type="checkbox" id="opcion-d-5" name="eventos_a_4"
-                            value="Dispositivos médicos (eventos adversos relacionados con el equipo quirúrgico e instrumental médico)">
-                        <label for="opcion-d-5">Dispositivos médicos (eventos adversos relacionados con el equipo quirúrgico
-                            e
-                            instrumental médico)</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-    
-                        <input class="form-check-input" type="checkbox" id="opcion-e-5" name="eventos_a_5"
-                            value="Errores de estudios de laboratorio">
-                        <label for="opcion-e-5">Errores de estudios de laboratorio</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-    
-                        <input class="form-check-input" type="checkbox" id="opcion-f-5" name="eventos_a_6"
-                            value="Errores relacionadas con nutrición y dietas">
-                        <label for="opcion-f-5">Errores relacionadas con nutrición y dietas</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-    
-                        <input class="form-check-input" type="checkbox" id="opcion-g-5" name="eventos_a_7"
-                            value="Errores en procedimientos invasivos y/o tratamientos">
-                        <label for="opcion-g-5">Errores en procedimientos invasivos y/o tratamientos</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-    
-                        <input class="form-check-input" type="checkbox" id="opcion-h-5" name="eventos_a_8"
-                            value="Infecciones">
-                        <label for="opcion-h-5">Infecciones</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-i-5" name="eventos_a_9"
-                            value="Errores durante el proceso de transfusión de hemocomponentes">
-                        <label for="opcion-i-5">Errores durante el proceso de transfusión de hemocomponentes</label><br>
-    
-                    </div>
-    
-    
-    
-                </div>
-                <div class="cuestion_6" id="cuestion_6_b">
-                    <h6>4.2 Si su respuesta es afirmativa, señale a continuación que eventos centinelas debe reportar</h6>
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opcion-a-6" name="eventos_centinelas_b_1"
-                            value="Muerte imprevista no relacionada con el curso natural de la enfermedad o el problema subyacente del paciente.">
-                        <label for="opcion-a-6">Muerte imprevista no relacionada con el curso natural de la enfermedad o el
-                            problema
-                            subyacente del paciente.</label><br>
-    
-                    </div>
-    
-    
-                    <div class="form-check">
-    
-                        <input class="form-check-input" type="checkbox" id="opcion-b-6" name="eventos_centinelas_b_2"
-                            value="Pérdida permanente de una función no relacionada con el curso natural de la enfermedad o el problema subyacente del paciente.">
-                        <label for="opcion-b-6">Pérdida permanente de una función no relacionada con el curso natural de la
-                            enfermedad o
-                            el problema subyacente del paciente.</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-    
-                        <input class="form-check-input" type="checkbox" id="opcion-c-6" name="eventos_centinelas_b_3"
-                            value="Cirugía en el lugar incorrecto, con el procedimiento incorrecto o al paciente equivocado.">
-                        <label for="opcion-c-6">Cirugía en el lugar incorrecto, con el procedimiento incorrecto o al
-                            paciente
-                            equivocado.</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-    
-                        <input class="form-check-input" type="checkbox" id="opcion-d-6" name="eventos_centinelas_b_4"
-                            value="Transmisión de una enfermedad o afección crónica como resultado de una transfusión de sangre, hemocomponentes o trasplante de órganos o tejidos.">
-                        <label for="opcion-d-6">Transmisión de una enfermedad o afección crónica como resultado de una
-                            transfusión de
-                            sangre, hemocomponentes o trasplante de órganos o tejidos.</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-    
-                        <input class="form-check-input" type="checkbox" id="opcion-e-6" name="eventos_centinelas_b_5"
-                            value="Suicidio">
-                        <label for="opcion-e-6">Suicidio</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-    
-                        <input class="form-check-input" type="checkbox" id="opcion-f-6" name="eventos_centinelas_b_6"
-                            value="Violación">
-                        <label for="opcion-f-6">Violación</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-    
-                        <input class="form-check-input" type="checkbox" id="opcion-g-6" name="eventos_centinelas_b_7"
-                            value="Maltrato u homicidio de cualquier paciente.">
-                        <label for="opcion-g-6">Maltrato u homicidio de cualquier paciente.</label><br>
-                    </div>
-    
-    
-                </div>
-                <div class="cuestion_6" id="cuestion_6_c">
-                    <h6>4.3 Si su respuesta es afirmativa en qué casos debe reportar cuasifallas</h6>
-    
-                    <div class="form-check">
-    
-                        <input class="form-check-input" type="checkbox" id="opcion-a-9" name="incidentes_c_1"
-                            value="Cualquier incidente que estuvo a punto de cometerse con el paciente pero que por intercepción de algún compañero no se llevó a cabo">
-                        <label for="opcion-a-9">Cualquier incidente que estuvo a punto de cometerse con el paciente pero que
-                            por
-                            intercepción de algún compañero no se llevó a cabo</label><br>
-                    </div>
-    
-    
-                    <div class="form-check">
-    
-                        <input class="form-check-input" type="checkbox" id="opcion-b-9" name="incidentes_c_2"
-                            value="Cualquier situación de riesgo a que estuviera expuesto el paciente">
-                        <label for="opcion-b-9">Cualquier situación de riesgo a que estuviera expuesto el
-                            paciente</label><br>
-                    </div>
-    
-    
-                </div>
-    
-    
-                <button type="submit">Enviar</button>
-    
-            </div>
-    
-    
-        </form>
+
+
+            </form>
+        </div>
     </div>
-    
+
 
     <div id="loading-overlay" style="display: none;" class="loading">
         <svg width="128px" height="96px">
