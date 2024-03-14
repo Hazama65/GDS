@@ -17,23 +17,30 @@ const cuestion_1 = () => {
 };
 
 const handleFormInteractions = () => {
-    // Obtener el checkbox 'Nose'
-    const noseCheckbox = document.getElementById('opcion-e');
-    // Obtener todos los checkboxes excepto los radio buttons
-    const otherCheckboxes = document.querySelectorAll('.form-check-input[type="checkbox"]:not(#opcion-e)');
+    const checkboxes = [
+        document.getElementById('opcion-a'),
+        document.getElementById('opcion-b'),
+        document.getElementById('opcion-c'),
+        document.getElementById('opcion-d'),
+        document.getElementById('opcion-e'),
+        document.getElementById('opcion-f')
+    ];
 
-    // Función para deshabilitar los otros checkboxes si 'Nose' está marcado
-    const toggleCheckboxes = () => {
-        otherCheckboxes.forEach(function (checkbox) {
-            checkbox.disabled = noseCheckbox.checked;
-            if (noseCheckbox.checked) {
-                checkbox.checked = false; // Desmarcar los otros checkboxes
-            }
-        });
-    }
-
-    // Agregar un evento de cambio al checkbox 'Nose'
-    noseCheckbox.addEventListener('change', toggleCheckboxes);
+    const noSeCheckbox = document.getElementById('opcion-e');
+    
+    noSeCheckbox.addEventListener('change', function() {
+        if (this.checked) {
+            checkboxes.forEach(function(checkbox) {
+                if (checkbox !== noSeCheckbox) {
+                    checkbox.disabled = true;
+                }
+            });
+        } else {
+            checkboxes.forEach(function(checkbox) {
+                checkbox.disabled = false;
+            });
+        }
+    });
 
     // Función para mostrar u ocultar el input 'Cuál?' según el estado del checkbox 'Otro'
     const otroCheckbox = document.getElementById('opcion-f');
