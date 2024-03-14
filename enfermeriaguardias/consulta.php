@@ -35,52 +35,61 @@
 
                     <tr>
                         <td class="estilo-celda">Trabajador Sustituido</td>
-                        <td></td>
+                        <td><?php echo $nom_sustituido ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Número de Empleado</td>
-                        <td></td>
+                        <td><?php echo $num_empleado ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Nivel Académico</td>
-                        <td></td>
+                        <td><?php echo $niv_academico ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Turno</td>
-                        <td> </td>
+                        <td><?php echo $turno ; ?> </td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Servicio</td>
-                        <td></td>
+                        <td><?php echo $servicio ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Críticas</td>
-                        <td><?php echo $criticas ; ?></td>
+                        <td><?php echo $criticas ; ?><?php echo $criticas ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Clínicas</td>
-                        <td><?php echo $clinicas ; ?></td>
+                        <td><?php echo $clinicas ; ?><?php echo $clinicas ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Quirúrgicas</td>
-                        <td><?php echo $quirurgicas ; ?></td>
+                        <td><?php echo $quirurgicas ; ?><?php echo $quirurgicas ; ?></td>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Perinatales</td>
+                        <td><?php echo $perinatales ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Ambulatorias</td>
-                        <td></td>
+                        <td><?php echo $ambulatoria ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Hospitalización</td>
-                        <td></td>
+                        <td><?php echo $hospitalizacion ; ?></td>
+                    </tr>
+                    <tr>
+                        <td class="estilo-celda">Pediatría / Neonatología</td>
+                        <td><?php echo $pediatria ; ?></td>
                     </tr>
 
                     <tr>
@@ -90,53 +99,62 @@
 
                     <tr>
                         <td class="estilo-celda">Trabajador Sustituto</td>
-                        <td></td>
+                        <td><?php echo $nom_sustituto ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Número de Empleado</td>
-                        <td></td>
+                        <td><?php echo $num_empleado2 ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Nivel Académico</td>
-                        <td></td>
+                        <td><?php echo $niv_academico2 ; ?></td>
                     </tr>
 
                     
                     <tr>
                         <td class="estilo-celda">Turno</td>
-                        <td></td>
+                        <td><?php echo $turno2 ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Servicio</td>
-                        <td></td>
+                        <td><?php echo $servicio2 ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Críticas</td>
-                        <td></td>
+                        <td><?php echo $criticas2 ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Clínicas</td>
-                        <td></td>
+                        <td><?php echo $clinicas2 ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Quirúrgicas</td>
-                        <td></td>
+                        <td><?php echo $quirurgicas2 ; ?></td>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Perinatales</td>
+                        <td><?php echo $perinatales2 ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Ambulatorias</td>
-                        <td></td>
+                        <td><?php echo $ambulatoria2 ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Hospitalización</td>
-                        <td></td>
+                        <td><?php echo $hospitalizacion2 ; ?></td>
+                    </tr>
+                    <tr>
+                        <td class="estilo-celda">Pediatría / Neonatología</td>
+                        <td><?php echo $pediatria2 ; ?></td>
                     </tr>
 
                     <tr>
@@ -146,18 +164,18 @@
 
                     <tr>
                         <td class="estilo-celda">Fecha de Tramite</td>
-                        <td></td>
+                        <td><?php echo $fecha_tramite ; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Fecha de Suplencia</td>
-                        <td></td>
+                        <td><?php echo $fecha_suplencia ; ?></td>
                     </tr>
 
 
                     <tr>
                         <td class="estilo-celda">Nombre de Quien Autoriza</td>
-                        <td></td>
+                        <td><?php echo $autoriza ; ?></td>
                     </tr>
 
                     
