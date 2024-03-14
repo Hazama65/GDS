@@ -106,6 +106,19 @@ table tbody tr:nth-child(even) {
     border-radius: 4px; /* Radio del borde */
 }
 
+.btn-metricas {
+    background-color: #d07900; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Borde */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Decoración de texto */
+    display: inline-block; /* Mostrar como bloque en línea */
+    font-size: 16px; /* Tamaño de la fuente */
+    margin: 4px 2px; /* Margen exterior */
+    cursor: pointer; /* Cursor */
+    border-radius: 4px; /* Radio del borde */
+}
 
 
 

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/metricas.css">
+    <title>NO REPORTE</title>
+</head>
+
+<body>
+
+    <header>
+        <button onclick="goBack()" type="button" class="btn btn-outline-light" id="inicio-button" title="Inicio">
+            <i class="bi bi-rewind-fill"></i>
+        </button>
+        <h5>Metricas</h5>
+    </header>
+    <div class="container">
+        <div class="graficas-container">
+            <div id="chartdiv_1">
+                <span class="badge">
+                    Pregunta-1
+                    <br>
+                    <h6>1. ¿Conoce cómo se debe realizar un reporte de
+                        <br>
+                        un evento adverso, evento centinela o
+                        Cuasifalla en el HRAEI?
+                    </h6>
+                </span>
+            </div>
+            <div id="chartdiv_1_1">
+                <span class="badge">
+                    Pregunta-1.1
+                    <h6>
+                        Si su respuesta es afirmativa,
+                        <br>
+                        ¿En donde se debe realizar el reporte del evento?
+                    </h6>
+                </span>
+            </div>
+            <div id="chartdiv_2">
+                <span class="badge">
+                    Pregunta-2
+                    <h6>¿Durante los 2 últimos años usted ha realizado el reporte de algún tipo de evento,
+                        <br>
+                        evento adverso, evento centinela o Cuasifalla?
+                    </h6>
+                </span>
+            </div>
+            <div id="chartdiv_2_1_a">
+                <span class="badge">
+                    Pregunta-2.1
+                    <h6>Si su respuesta es afirmativa, ¿cuantas ocasiones ha realizado el reporte de evento
+                        <br>
+                        (evento adverso, evento centinela o Cuasifalla)?
+                    </h6>
+                </span>
+            </div>
+            <div id="chartdiv_2_1_b">
+                <span class="badge">
+                    Pregunta-2.1
+                    <h6>Si su respuesta es NO; ¿por qué usted no ha realizado el reporte de eventos?
+                    </h6>
+                </span>
+            </div>
+            <div id="chartdiv_3">
+                <span class="badge">
+                    Pregunta-3
+                    <h6>
+                        3. ¿Cómo se enteró de la forma de como notificar eventos (evento adverso, evento centinela o
+                        Cuasifalla)?
+                    </h6>
+                </span>
+            </div>
+            <div id="chartdiv_4">
+                <span class="badge">
+                    Pregunta-4
+                    <h6>
+                        4. ¿Conoce que eventos debe reportar en las plataformas?
+                    </h6>
+                </span>
+            </div>
+            <div id="chartdiv_4_1">
+                <span class="badge">
+                    Pregunta-4.1
+                    <h6>
+                        Señale a continuación que eventos adversos debe notificar
+                    </h6>
+                </span>
+            </div>
+            <div id="chartdiv_4_2">
+                <span class="badge">
+                    Pregunta-4.2
+                    <h6>
+                        Señale a continuación que eventos centinelas debe reportar
+                    </h6>
+                </span>
+            </div>
+            <div id="chartdiv_4_3">
+                <span class="badge">
+                    Pregunta-4.3
+                    <h6>
+                        En qué casos debe reportar cuasifallas
+                    </h6>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="loading-overlay" style="display: none;" class="loading">
+        <svg width="128px" height="96px">
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="back"></polyline>
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="front"></polyline>
+        </svg>
+    </div>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+
+<script src="includes/grafica1.js"></script>
+
+</html>

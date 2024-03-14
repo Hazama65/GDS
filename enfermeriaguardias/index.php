@@ -49,7 +49,7 @@ include("modal/registroenfermeriaguardias.php");
             <i class="bi bi-file-earmark-excel"></i> Excel
         </a>
 
-        <a href="regitros.php">
+        <a href="#">
             <button type="button" class="btn btn-primary" target="_blank">
                 <i class="bi bi-book"></i> Registros
             </button>
@@ -68,16 +68,14 @@ include("modal/registroenfermeriaguardias.php");
                         if (!empty($data_EG)) {
                             // Comienza a generar la lista de pacientes
                             echo '<ul class="patient-list" >';
-                            foreach ($data_EG as $PacientesCenso) {
-                                $id_pacientes = $PacientesCenso["id_guardia"];
-                                $trabajador_sustituido = $PacientesCenso["trabajador_sustituido"];
-                                $fecha_Suplencia = $PacientesCenso["fecha_suplencia"];
+                            foreach ($data_EG as $Datos_EG) {
+                                $id_suplencia = $Datos_EG["id_suplencia"];
+                                $nom_sustituido = $Datos_EG["nom_sustituido"];
+                                $fecha_suplencia = $Datos_EG["fecha_suplencia"];
 
                                 // Genera un elemento de lista para cada paciente
-                                echo '<li class="patient-item" data-id-paciente="' . $id_pacientes . '">';
-                                echo $trabajador_sustituido. ' | ' . $fecha_Suplencia;;
-                                echo '<a href="editar_censo.php?id=' . $id_pacientes . '">';
-                                echo '</a>';
+                                echo '<li class="patient-item" data-id-paciente="' . $id_suplencia . '">';
+                                echo $nom_sustituido. ' | ' . $fecha_suplencia;;
                                 echo '</li>';
                             }
                             echo '</ul>';

@@ -1,4 +1,14 @@
 <?php
+session_start();
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+
+if (!isset($_SESSION['valid_user'])) {
+    // El usuario no ha iniciado sesión, redirige de vuelta a la página de inicio de sesión
+    header('Location: ../login/index.php');
+    exit;
+}
+
 require('php/controllers/registro.controller.php');
 ?>
 <!DOCTYPE html>
@@ -9,14 +19,18 @@ require('php/controllers/registro.controller.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.2/css/dataTables.dataTables.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.2/css/dataTables.dataTables.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Registros</title>
 </head>
 
 <body>
     <header>
         <h5>Registros - 'NO REPORTE'</h5>
+        <button type="button" class="btn btn-outline-light" id="cerrar-sesion-button" title="Cerrar sesión">
+            <i class="bi bi-power"></i>
+        </button>
     </header>
     <div style="overflow: hidden;">
         <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
@@ -37,16 +51,16 @@ require('php/controllers/registro.controller.php');
                     <th>Turno</th>
                     <th>Profesión</th>
                     <th>Contrato</th>
-                    <th>Pregunta 1</th>
-                    <th>Opciones de la Pregunta 1</th>
-                    <th>Pregunta 2</th>
-                    <th>Opciones de la Pregunta 2</th>
-                    <th>Pregunta 3</th>
-                    <th>Pregunta 3 Otros</th>
-                    <th>Pregunta 4</th>
-                    <th>Opciones de la Pregunta 4.1</th>
-                    <th>Opciones de la Pregunta 4.2</th>
-                    <th>Opciones de la Pregunta 4.3</th>
+                    <th>1. ¿Conoce cómo se debe realizar un reporte de un evento adverso, evento centinela o Cuasifalla en el HRAEI?</th>
+                    <th>Si su respuesta es afirmativa</th>
+                    <th>2. ¿Durante los 2 últimos años usted ha realizado el reporte de algún tipo de evento, evento adverso, evento centinela o Cuasifalla?</th>
+                    <th>Si su respuesta es afirmativa/Negativa</th>
+                    <th>3. ¿Cómo se enteró de la forma de como notificar eventos (evento adverso, evento centinela o Cuasifalla)?</th>
+                    <th>Pregunta 3 Otras Respuestas</th>
+                    <th>4. ¿Conoce que eventos debe reportar en las plataformas?</th>
+                    <th>4.1 Si su respuesta es afirmativa; señale a continuación que eventos adversos debe notificar.</th>
+                    <th>4.2 Si su respuesta es afirmativa, señale a continuación que eventos centinelas debe reportar</th>
+                    <th>4.3 Si su respuesta es afirmativa en qué casos debe reportar cuasifallas</th>
                 </tr>
             </thead>
             <tbody>

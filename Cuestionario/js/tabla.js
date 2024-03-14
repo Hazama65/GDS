@@ -16,9 +16,26 @@ $(document).ready(function() {
                         extend: 'excelHtml5',
                         text: 'Excel',
                         filename: 'Datos del Formulario', // Nombre del archivo personalizado
+                    },
+                    {
+                        text: 'Metricas',
+                        action: function () {
+                            window.location.href = 'metricas.html';
+                        },
+                        className: 'btn-metricas'
                     }
                 ]
             }
         }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const cerrarSesionButton = document.getElementById('cerrar-sesion-button');
+
+    cerrarSesionButton.addEventListener('click', function () {
+        // Redirige al usuario a la página de cierre de sesión
+        window.location.href = 'php/destroysession.php';
     });
 });

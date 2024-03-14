@@ -77,3 +77,22 @@ document.getElementById('servicio_sustituto').addEventListener('change', functio
         document.getElementById("servicio_Pediatria_sustituto").style.display = "block";
     }
 });
+
+
+
+
+document.getElementById('enlace_numeroempleado').addEventListener('change', function () {
+    var select = this;
+    var input = document.getElementById('numeroempleado_1');
+    var selectedOption = select.options[select.selectedIndex];
+    var numeroEmpleado = selectedOption.getAttribute('data-numeroempleado');
+    input.value = numeroEmpleado;
+});
+
+document.getElementById('nombre_sustituto').addEventListener('change', function () {
+    var select = this;
+    var input = document.getElementById('enlace_numeroempleado_sustituto');
+    var selectedOption = select.options[select.selectedIndex];
+    var numeroEmpleado = selectedOption.getAttribute('data-numeroempleado');
+    input.value = numeroEmpleado;
+});
