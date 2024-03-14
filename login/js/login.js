@@ -141,6 +141,14 @@ const validateLogin = async (formData) => {
                 '../ganglio_cervical/index.php'
             )
         }
+        if (typeToken.trim() === 'cuestionario') {
+            return setAlert.successAlert(
+                'La operacion se ha completado correctamente.',
+                null,
+                null,
+                '../cuestionario/registros.php'
+            )
+        }
 
 
 

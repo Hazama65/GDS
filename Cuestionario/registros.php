@@ -8,6 +8,7 @@ if (!isset($_SESSION['valid_user'])) {
     header('Location: ../login/index.php');
     exit;
 }
+
 require('php/controllers/registro.controller.php');
 ?>
 <!DOCTYPE html>
