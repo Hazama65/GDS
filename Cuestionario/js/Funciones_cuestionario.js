@@ -16,7 +16,7 @@ const cuestion_1 = () => {
     });
 };
 
-const handleFormInteractions = () => {
+const cuestion_1_1 = () => {
     const checkboxes = [
         document.getElementById('opcion-a'),
         document.getElementById('opcion-b'),
@@ -27,22 +27,23 @@ const handleFormInteractions = () => {
     ];
 
     const noSeCheckbox = document.getElementById('opcion-e');
-    
-    noSeCheckbox.addEventListener('change', function() {
+
+    noSeCheckbox.addEventListener('change', function () {
         if (this.checked) {
-            checkboxes.forEach(function(checkbox) {
+            checkboxes.forEach(function (checkbox) {
                 if (checkbox !== noSeCheckbox) {
                     checkbox.disabled = true;
                 }
             });
         } else {
-            checkboxes.forEach(function(checkbox) {
+            checkboxes.forEach(function (checkbox) {
                 checkbox.disabled = false;
             });
         }
     });
+};
 
-    // Función para mostrar u ocultar el input 'Cuál?' según el estado del checkbox 'Otro'
+const toggleInput = () => {
     const otroCheckbox = document.getElementById('opcion-f');
     const otroInput = document.getElementById('otro-cual');
 
@@ -57,12 +58,16 @@ const handleFormInteractions = () => {
     // Agregar un evento de cambio al checkbox 'Otro'
     otroCheckbox.addEventListener('change', toggleInput);
 
-    // Llamar a las funciones cuando el documento esté listo
-    document.addEventListener('DOMContentLoaded', function() {
-        toggleCheckboxes();
-        toggleInput();
-    });
+    // Llamar a la función para asegurarse de que el input esté en el estado correcto al cargar la página
+    toggleInput();
 };
+
+// Llamar a las funciones cuando el documento esté listo
+document.addEventListener('DOMContentLoaded', function() {
+    cuestion_1_1();
+    toggleInput();
+});
+
 
 const cuestion_2 = () => {
     const radioButtons = document.getElementsByName('cuestion_2');
@@ -171,7 +176,8 @@ const handleOtroRadio = () => {
 
 
 cuestion_1();
-handleFormInteractions();
+cuestion_1_1();
+toggleInput();
 cuestion_2();
 handleOtroCheckbox();
 cuestion_6();

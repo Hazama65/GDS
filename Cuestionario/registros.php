@@ -22,7 +22,7 @@ require('php/controllers/registro.controller.php');
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.2/css/dataTables.dataTables.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Registros</title>
 </head>
 
 <body>
