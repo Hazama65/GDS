@@ -31,7 +31,10 @@
                                 <?php
                                 if (!empty($data_empleados)) {
                                     foreach ($data_empleados as $row1) {
-                                        echo "<option value='" . $row1["nombre_empleado"] . "' data-numeroempleado='" . $row1["no_empleado"] . "'>" . $row1["nombre_empleado"] . "</option>";
+                                        echo "<option value='" . $row1["nombre_empleado"] . "' 
+                                        data-numeroempleado='" . $row1["no_empleado"] . "'
+                                        data-gradoEstudios='" . $row1["ult_grado_estudio"] . "'
+                                        >" . $row1["nombre_empleado"] . "</option>";
                                     }
                                 } else {
                                     echo "<option value=''>No hay datos disponibles</option>";
@@ -48,16 +51,9 @@
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Nivel Académico</strong>
-                            <select name="nivel_academico" id="nivel_academico" class="form-control"
-                                style="font-size: 14px;">
-                                <option value="">Seleccione</option>
-                                <option value="Técnico">Técnico</option>
-                                <option value="Postécnico">Postécnico</option>
-                                <option value="Licenciatura">Licenciatura</option>
-                                <option value="Posgrado">Posgrado</option>
-                                <option value="Maestría">Maestría</option>
-
-                            </select>
+                            <input name="nivel_academico" id="nivel_academico" class="control form-control"
+                                style="font-size: 13px;" readonly>
+                            
                         </div>
 
                         <div class="col-md-3">
@@ -66,9 +62,14 @@
                                 <option value="">Seleccione</option>
                                 <option value="Matutino">Matutino</option>
                                 <option value="Vespertino">Vespertino</option>
-                                <option value="Nocturno A">Nocturno A</option>
-                                <option value="Nocturno B">Nocturno B</option>
-                                <option value="Nocturno Especíal">Nocturno Especíal</option>
+                                <option value="Nocturno - LUNES, JUEVES Y SABADO">Nocturno - LUNES, JUEVES Y SABADO</option>
+                                <option value="Nocturno - LUNES, MIERCOLES Y SABADO">Nocturno - LUNES, MIERCOLES Y SABADO</option>
+                                <option value="Nocturno - LUNES, MIERCOLES Y VIERNES">Nocturno - LUNES, MIERCOLES Y VIERNES</option>
+                                <option value="Nocturno - MARTES, JUEVES Y DOMINGO">Nocturno - MARTES, JUEVES Y DOMINGO</option>
+                                <option value="Nocturno - MARTES, JUEVES Y SABADO">Nocturno - MARTES, JUEVES Y SABADO</option>
+                                <option value="Nocturno - MARTES, VIERNES Y DOMINGO">Nocturno - MARTES, VIERNES Y DOMINGO</option>
+                                <option value="Nocturno - MIERCOLES, VIERNES Y DOMINGO">Nocturno - MIERCOLES, VIERNES Y DOMINGO</option>
+                                <option value="Jornada Acumulada Diurna">Jornada Acumulada Diurna</option>
 
                             </select>
                         </div>
@@ -215,7 +216,10 @@
                                 <?php
                                 if (!empty($data_empleados)) {
                                     foreach ($data_empleados as $row1) {
-                                        echo "<option value='" . $row1["nombre_empleado"] . "' data-numeroempleado='" . $row1["no_empleado"] . "'>" . $row1["nombre_empleado"] . "</option>";
+                                        echo "<option value='" . $row1["nombre_empleado"] . "' 
+                                        data-numeroempleado='" . $row1["no_empleado"] . "'
+                                        data-gradoEstudios='" . $row1["ult_grado_estudio"] . "'
+                                        >" . $row1["nombre_empleado"] . "</option>";
                                     }
                                 } else {
                                     echo "<option value=''>No hay datos disponibles</option>";
@@ -232,16 +236,8 @@
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Nivel Académico</strong>
-                            <select name="nivel_academico_sustituto" id="nivel_academico_sustituto" class="form-control"
-                                style="font-size: 14px;">
-                                <option value="">Seleccione</option>
-                                <option value="Técnico">Técnico</option>
-                                <option value="Postécnico">Postécnico</option>
-                                <option value="Licenciatura">Licenciatura</option>
-                                <option value="Posgrado">Posgrado</option>
-                                <option value="Maestría">Maestría</option>
-
-                            </select>
+                            <input name="nivel_academico_sustituto" id="nivel_academico_sustituto" class="control form-control"
+                                style="font-size: 14px;" readonly>
                         </div>
 
                         <div class="col-md-3">
@@ -251,10 +247,14 @@
                                 <option value="">Seleccione</option>
                                 <option value="Matutino">Matutino</option>
                                 <option value="Vespertino">Vespertino</option>
-                                <option value="Nocturno A">Nocturno A</option>
-                                <option value="Nocturno B">Nocturno B</option>
-                                <option value="Nocturno Especíal">Nocturno Especíal</option>
-
+                                <option value="Nocturno - LUNES, JUEVES Y SABADO">Nocturno - LUNES, JUEVES Y SABADO</option>
+                                <option value="Nocturno - LUNES, MIERCOLES Y SABADO">Nocturno - LUNES, MIERCOLES Y SABADO</option>
+                                <option value="Nocturno - LUNES, MIERCOLES Y VIERNES">Nocturno - LUNES, MIERCOLES Y VIERNES</option>
+                                <option value="Nocturno - MARTES, JUEVES Y DOMINGO">Nocturno - MARTES, JUEVES Y DOMINGO</option>
+                                <option value="Nocturno - MARTES, JUEVES Y SABADO">Nocturno - MARTES, JUEVES Y SABADO</option>
+                                <option value="Nocturno - MARTES, VIERNES Y DOMINGO">Nocturno - MARTES, VIERNES Y DOMINGO</option>
+                                <option value="Nocturno - MIERCOLES, VIERNES Y DOMINGO">Nocturno - MIERCOLES, VIERNES Y DOMINGO</option>
+                                <option value="Jornada Acumulada Diurna">Jornada Acumulada Diurna</option>
                             </select>
                         </div>
 

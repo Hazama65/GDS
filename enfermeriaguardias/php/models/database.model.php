@@ -37,26 +37,24 @@
         }
 
         //query to get All data
-        function getRows($params){
-
+        function getRows($params) {
             $all = array();
             $this->numberRows;
             $onConnection = $this->getConnections();
-
-            if( $resultado = mysqli_query($onConnection, $params) ){
-
+        
+            if ($resultado = mysqli_query($onConnection, $params)) {
+        
                 $this->numberRows = $resultado->num_rows;
-
-                while($fila = $resultado->fetch_array() ){
-                    $all[]=$fila;
+        
+                while ($fila = $resultado->fetch_assoc()) {
+                    $all[] = $fila;
                 }
-
+        
                 $this->closeConnection($onConnection);
                 return $all;
-
             }
-
         }
+        
 
         //Query to search an simple data
         function getSimple($params){

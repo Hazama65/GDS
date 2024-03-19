@@ -82,17 +82,23 @@ document.getElementById('servicio_sustituto').addEventListener('change', functio
 
 
 document.getElementById('enlace_numeroempleado').addEventListener('change', function () {
-    var select = this;
-    var input = document.getElementById('numeroempleado_1');
-    var selectedOption = select.options[select.selectedIndex];
-    var numeroEmpleado = selectedOption.getAttribute('data-numeroempleado');
+    let select = this;
+    let input = document.getElementById('numeroempleado_1');
+    let input2 = document.getElementById('nivel_academico');
+    let selectedOption = select.options[select.selectedIndex];
+    let numeroEmpleado = selectedOption.getAttribute('data-numeroempleado');
+    let gradoEstudios = selectedOption.getAttribute ('data-gradoEstudios');
     input.value = numeroEmpleado;
+    input2.value = gradoEstudios;
 });
 
 document.getElementById('nombre_sustituto').addEventListener('change', function () {
-    var select = this;
-    var input = document.getElementById('enlace_numeroempleado_sustituto');
-    var selectedOption = select.options[select.selectedIndex];
-    var numeroEmpleado = selectedOption.getAttribute('data-numeroempleado');
+    let select = this;
+    let input = document.getElementById('enlace_numeroempleado_sustituto');
+    let input2 = document.getElementById('nivel_academico_sustituto');
+    let selectedOption = select.options[select.selectedIndex];
+    let numeroEmpleado = selectedOption.getAttribute('data-numeroempleado');
+    let gradoEstudios = selectedOption.getAttribute ('data-gradoEstudios');
     input.value = numeroEmpleado;
+    input2.value = gradoEstudios;
 });

@@ -49,9 +49,9 @@ include("modal/registroenfermeriaguardias.php");
             <i class="bi bi-file-earmark-excel"></i> Excel
         </a>
 
-        <a href="#">
+        <a href="metricas.php">
             <button type="button" class="btn btn-primary" target="_blank">
-                <i class="bi bi-book"></i> Registros
+                <i class="bi bi-bar-chart-line"></i> Registros
             </button>
         </a>
     </div> <!-- cierre del <div class="btn-group" role="group" aria-label="Basic outlined example">-->
