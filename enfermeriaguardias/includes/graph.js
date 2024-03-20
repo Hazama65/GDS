@@ -4,6 +4,13 @@ function buscar() {
     let fecha_2 = $("#fecha_2").val();
 
 
+    if (empleado_1.trim() === '' || fecha_1.trim() === '' || fecha_2.trim() === '') {
+        alert("Por favor, Seleccione Empleado y rango de Fechas.");
+        console.log('hola');
+        return;
+    }
+
+
     // Realizar la solicitud AJAX para obtener los datos con los parámetros
     $.ajax({
         url: 'includes/consultas.php',
@@ -15,6 +22,17 @@ function buscar() {
             fecha_2: fecha_2
         },
         success: function (data) {
+
+
+            if (data.trabajador_sustituido.length === 0 ) {
+                alert("No se encontraron Guardias Solicitadas para el trabajador: " + empleado_1 + " en el periodo seleccionado.");
+                
+            }
+
+            if (data.trabajador_sustituto.length === 0 ) {
+                alert("No se encontraron Guardias Realizadas para el trabajador: " + empleado_1 + " en el periodo seleccionado.");
+                
+            }
 
             // Convertir los valores del campo 'conteo' a tipo entero
             data.trabajador_sustituido.forEach(function (entry) {
