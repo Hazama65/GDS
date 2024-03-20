@@ -1,6 +1,45 @@
+function buscar() {
+    let empleado_1 = $("#empleado_1").val();
+    let fecha_1 = $("#fecha_1").val();
+    let fecha_2 = $("#fecha_2").val();
 
 
-// Realizar la solicitud AJAX para obtener los datos
+    // Realizar la solicitud AJAX para obtener los datos con los parámetros
+    $.ajax({
+        url: 'includes/consultas.php',
+        type: 'GET',
+        dataType: 'json',
+        data: {
+            empleado_1: empleado_1,
+            fecha_1: fecha_1,
+            fecha_2: fecha_2
+        },
+        success: function (data) {
+
+            // Convertir los valores del campo 'conteo' a tipo entero
+            data.trabajador_sustituido.forEach(function (entry) {
+                entry.Conteo = parseInt(entry.Conteo);
+            });
+            data.trabajador_sustituto.forEach(function (entry) {
+                entry.Conteo = parseInt(entry.Conteo);
+            });
+    
+            setupChart1(data.trabajador_sustituido);
+    
+            setupChart2(data.trabajador_sustituto);
+    
+
+
+        },
+        error: function (xhr, status, error) {
+            console.error(error);
+        }
+    });
+
+}
+
+
+// Realizar la solicitud AJAX para obtener los datos base
 $.ajax({
     url: 'includes/consultas.php',
     type: 'GET',
@@ -15,9 +54,6 @@ $.ajax({
             entry.Conteo = parseInt(entry.Conteo);
         });
 
-
-        console.log(data);
-
         setupChart1(data.trabajador_sustituido);
 
         setupChart2(data.trabajador_sustituto);
@@ -30,51 +66,57 @@ $.ajax({
 });
 
 
-function setupChart1(data) {
-    // Create root element
-    var root = am5.Root.new("chartdiv_1");
+var root;
 
-    // Set themes
-    root.setThemes([
-        am5themes_Animated.new(root)
-    ]);
+function setupChart1(data) {
+    // Si root no está definido, crear una nueva instancia
+    if (!root) {
+        root = am5.Root.new("chartdiv_1");
+        // Configuraciones adicionales, como temas, etc.
+        root.setThemes([
+            am5themes_Animated.new(root)
+        ]);
+    } else {
+        // Limpiar el gráfico existente
+        root.container.children.clear();
+        
+    }
 
     // Create chart
     var chart = root.container.children.push(
         am5xy.XYChart.new(root, {
             panX: false,
             panY: false,
-            wheelX: "none",
-            wheelY: "none",
-            paddingBottom: 50,
-            paddingTop: 40,
             paddingLeft: 0,
-            paddingRight: 0
+            paddingRight: 30,
+            wheelX: "none",
+            wheelY: "none"
         })
     );
 
     // Create axes
-    var xRenderer = am5xy.AxisRendererX.new(root, {
-        minorGridEnabled: true,
-        minGridDistance: 60
+    var yRenderer = am5xy.AxisRendererY.new(root, {
+        minorGridEnabled: true
     });
-    xRenderer.grid.template.set("visible", false);
+    yRenderer.grid.template.set("visible", false);
 
-    var xAxis = chart.xAxes.push(
+    var yAxis = chart.yAxes.push(
         am5xy.CategoryAxis.new(root, {
-            paddingTop: 40,
             categoryField: "nom_sustituido",
-            renderer: xRenderer
+            renderer: yRenderer,
+            paddingRight: 40
         })
     );
 
-    var yRenderer = am5xy.AxisRendererY.new(root, {});
-    yRenderer.grid.template.set("strokeDasharray", [3]);
+    var xRenderer = am5xy.AxisRendererX.new(root, {
+        minGridDistance: 80,
+        minorGridEnabled: true
+    });
 
-    var yAxis = chart.yAxes.push(
+    var xAxis = chart.xAxes.push(
         am5xy.ValueAxis.new(root, {
             min: 0,
-            renderer: yRenderer
+            renderer: xRenderer
         })
     );
 
@@ -84,15 +126,15 @@ function setupChart1(data) {
             name: "Income",
             xAxis: xAxis,
             yAxis: yAxis,
-            valueYField: "Conteo",
-            categoryXField: "nom_sustituido",
+            valueXField: "Conteo",
+            categoryYField: "nom_sustituido",
             sequencedInterpolation: true,
             calculateAggregates: true,
             maskBullets: false,
             tooltip: am5.Tooltip.new(root, {
                 dy: -30,
                 pointerOrientation: "vertical",
-                labelText: "{valueY}"
+                labelText: "{valueX}"
             })
         })
     );
@@ -103,7 +145,7 @@ function setupChart1(data) {
         cornerRadiusTR: 10,
         cornerRadiusBL: 10,
         cornerRadiusTL: 10,
-        maxWidth: 50,
+        maxHeight: 50,
         fillOpacity: 0.8
     });
 
@@ -123,7 +165,7 @@ function setupChart1(data) {
             currentlyHovered = dataItem;
             var bullet = dataItem.bullets[0];
             bullet.animate({
-                key: "locationY",
+                key: "locationX",
                 to: 1,
                 duration: 600,
                 easing: am5.ease.out(am5.ease.cubic)
@@ -135,7 +177,7 @@ function setupChart1(data) {
         if (currentlyHovered) {
             var bullet = currentlyHovered.bullets[0];
             bullet.animate({
-                key: "locationY",
+                key: "locationX",
                 to: 0,
                 duration: 600,
                 easing: am5.ease.out(am5.ease.cubic)
@@ -161,11 +203,14 @@ function setupChart1(data) {
             am5.Circle.new(root, { radius: 27 })
         );
 
+        // only containers can be masked, so we add image to another container
         var imageContainer = bulletContainer.children.push(
             am5.Container.new(root, {
                 mask: maskCircle
             })
         );
+
+        // not working
         var image = imageContainer.children.push(
             am5.Picture.new(root, {
                 src: "includes/uploads/usuario.png",
@@ -175,10 +220,9 @@ function setupChart1(data) {
                 height: 60
             })
         );
-        
 
         return am5.Bullet.new(root, {
-            locationY: 0,
+            locationX: 0,
             sprite: bulletContainer
         });
     });
@@ -186,16 +230,24 @@ function setupChart1(data) {
     // Heat rule
     series.set("heatRules", [
         {
-            dataField: "valueY",
+            dataField: "valueX",
             min: am5.color(0xe5dc36),
             max: am5.color(0x5faa46),
             target: series.columns.template,
             key: "fill"
+        },
+        {
+            dataField: "valueX",
+            min: am5.color(0xe5dc36),
+            max: am5.color(0x5faa46),
+            target: circleTemplate,
+            key: "fill"
         }
     ]);
 
+    // Añadir los datos al gráfico
     series.data.setAll(data);
-    xAxis.data.setAll(data);
+    yAxis.data.setAll(data);
 
     var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
     cursor.lineX.set("visible", false);
@@ -204,80 +256,88 @@ function setupChart1(data) {
     cursor.events.on("cursormoved", function () {
         var dataItem = series.get("tooltip").dataItem;
         if (dataItem) {
-            handleHover(dataItem);
-        } else {
+            handleHover(dataItem)
+        }
+        else {
             handleOut();
         }
-    });
+    })
 
     // Make stuff animate on load
     series.appear();
     chart.appear(1000, 100);
 }
+
+var root2;
+
 
 function setupChart2(data) {
-    // Create root element
-    var root = am5.Root.new("chartdiv_2");
-
-    // Set themes
-    root.setThemes([
-        am5themes_Animated.new(root)
-    ]);
+    // Si root no está definido, crear una nueva instancia
+    if (!root2) {
+        root2 = am5.Root.new("chartdiv_2");
+        // Configuraciones adicionales, como temas, etc.
+        root2.setThemes([
+            am5themes_Animated.new(root2)
+        ]);
+    } else {
+        // Limpiar el gráfico existente
+        root2.container.children.clear();
+        
+    }
 
     // Create chart
-    var chart = root.container.children.push(
-        am5xy.XYChart.new(root, {
+    var chart = root2.container.children.push(
+        am5xy.XYChart.new(root2, {
             panX: false,
             panY: false,
-            wheelX: "none",
-            wheelY: "none",
-            paddingBottom: 50,
-            paddingTop: 40,
             paddingLeft: 0,
-            paddingRight: 0
+            paddingRight: 30,
+            wheelX: "none",
+            wheelY: "none"
         })
     );
 
     // Create axes
-    var xRenderer = am5xy.AxisRendererX.new(root, {
-        minorGridEnabled: true,
-        minGridDistance: 60
+    var yRenderer = am5xy.AxisRendererY.new(root2, {
+        minorGridEnabled: true
     });
-    xRenderer.grid.template.set("visible", false);
+    yRenderer.grid.template.set("visible", false);
 
-    var xAxis = chart.xAxes.push(
-        am5xy.CategoryAxis.new(root, {
-            paddingTop: 40,
+    var yAxis = chart.yAxes.push(
+        am5xy.CategoryAxis.new(root2, {
             categoryField: "nom_sustituto",
-            renderer: xRenderer
+            renderer: yRenderer,
+            paddingRight: 40
         })
     );
 
-    var yRenderer = am5xy.AxisRendererY.new(root, {});
-    yRenderer.grid.template.set("strokeDasharray", [3]);
+    var xRenderer = am5xy.AxisRendererX.new(root2, {
+        minGridDistance: 80,
+        minorGridEnabled: true
+    });
 
-    var yAxis = chart.yAxes.push(
-        am5xy.ValueAxis.new(root, {
+    var xAxis = chart.xAxes.push(
+        am5xy.ValueAxis.new(root2, {
             min: 0,
-            renderer: yRenderer
+            renderer: xRenderer
         })
     );
 
     // Add series
     var series = chart.series.push(
-        am5xy.ColumnSeries.new(root, {
+        am5xy.ColumnSeries.new(root2, {
             name: "Income",
             xAxis: xAxis,
             yAxis: yAxis,
-            valueYField: "Conteo",
-            categoryXField: "nom_sustituto",
+            valueXField: "Conteo",
+            categoryYField: "nom_sustituto",
             sequencedInterpolation: true,
             calculateAggregates: true,
             maskBullets: false,
-            tooltip: am5.Tooltip.new(root, {
+            tooltip: am5.Tooltip.new(root2, {
                 dy: -30,
                 pointerOrientation: "vertical",
-                labelText: "{valueY}"
+                labelText: "{valueX}"
             })
         })
     );
@@ -288,7 +348,7 @@ function setupChart2(data) {
         cornerRadiusTR: 10,
         cornerRadiusBL: 10,
         cornerRadiusTL: 10,
-        maxWidth: 50,
+        maxHeight: 50,
         fillOpacity: 0.8
     });
 
@@ -308,7 +368,7 @@ function setupChart2(data) {
             currentlyHovered = dataItem;
             var bullet = dataItem.bullets[0];
             bullet.animate({
-                key: "locationY",
+                key: "locationX",
                 to: 1,
                 duration: 600,
                 easing: am5.ease.out(am5.ease.cubic)
@@ -320,7 +380,7 @@ function setupChart2(data) {
         if (currentlyHovered) {
             var bullet = currentlyHovered.bullets[0];
             bullet.animate({
-                key: "locationY",
+                key: "locationX",
                 to: 0,
                 duration: 600,
                 easing: am5.ease.out(am5.ease.cubic)
@@ -330,11 +390,11 @@ function setupChart2(data) {
 
     var circleTemplate = am5.Template.new({});
 
-    series.bullets.push(function (root, series, dataItem) {
-        var bulletContainer = am5.Container.new(root, {});
+    series.bullets.push(function (root2, series, dataItem) {
+        var bulletContainer = am5.Container.new(root2, {});
         var circle = bulletContainer.children.push(
             am5.Circle.new(
-                root,
+                root2,
                 {
                     radius: 34
                 },
@@ -343,16 +403,19 @@ function setupChart2(data) {
         );
 
         var maskCircle = bulletContainer.children.push(
-            am5.Circle.new(root, { radius: 27 })
+            am5.Circle.new(root2, { radius: 27 })
         );
 
+        // only containers can be masked, so we add image to another container
         var imageContainer = bulletContainer.children.push(
-            am5.Container.new(root, {
+            am5.Container.new(root2, {
                 mask: maskCircle
             })
         );
+
+        // not working
         var image = imageContainer.children.push(
-            am5.Picture.new(root, {
+            am5.Picture.new(root2, {
                 src: "includes/uploads/usuario.png",
                 centerX: am5.p50,
                 centerY: am5.p50,
@@ -360,10 +423,9 @@ function setupChart2(data) {
                 height: 60
             })
         );
-        
 
-        return am5.Bullet.new(root, {
-            locationY: 0,
+        return am5.Bullet.new(root2, {
+            locationX: 0,
             sprite: bulletContainer
         });
     });
@@ -371,31 +433,41 @@ function setupChart2(data) {
     // Heat rule
     series.set("heatRules", [
         {
-            dataField: "valueY",
+            dataField: "valueX",
             min: am5.color(0xe5dc36),
             max: am5.color(0x5faa46),
             target: series.columns.template,
             key: "fill"
+        },
+        {
+            dataField: "valueX",
+            min: am5.color(0xe5dc36),
+            max: am5.color(0x5faa46),
+            target: circleTemplate,
+            key: "fill"
         }
     ]);
 
+    // Añadir los datos al gráfico
     series.data.setAll(data);
-    xAxis.data.setAll(data);
+    yAxis.data.setAll(data);
 
-    var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
+    var cursor = chart.set("cursor", am5xy.XYCursor.new(root2, {}));
     cursor.lineX.set("visible", false);
     cursor.lineY.set("visible", false);
 
     cursor.events.on("cursormoved", function () {
         var dataItem = series.get("tooltip").dataItem;
         if (dataItem) {
-            handleHover(dataItem);
-        } else {
+            handleHover(dataItem)
+        }
+        else {
             handleOut();
         }
-    });
+    })
 
     // Make stuff animate on load
     series.appear();
     chart.appear(1000, 100);
 }
+

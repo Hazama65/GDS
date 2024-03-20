@@ -42,7 +42,7 @@ include("modal/registroenfermeriaguardias.php");
 
 
         <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <i class="bi bi-person-add"> </i> Paciente
+            <i class="bi bi-person-add"> </i> Registro
         </button>
 
         <a href="php/export.php" class="btn btn-success">

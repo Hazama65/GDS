@@ -46,13 +46,13 @@
                         <div class="col-md-6">
                             <strong style="font-size: 14px; ">Número de Empleado</strong>
                             <input id="numeroempleado_1" name="numeroempleado_1" type="number"
-                                class="control form-control" style="font-size: 13px;" readonly>
+                                class="control form-control" style="font-size: 13px; background-color: #e9ecef" readonly>
                         </div>
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Nivel Académico</strong>
                             <input name="nivel_academico" id="nivel_academico" class="control form-control"
-                                style="font-size: 13px;" readonly>
+                                style="font-size: 13px; background-color: #e9ecef" readonly>
                             
                         </div>
 
@@ -231,13 +231,13 @@
                         <div class="col-md-6">
                             <strong style="font-size: 14px; ">Número de Empleado</strong>
                             <input id="enlace_numeroempleado_sustituto" name="enlace_numeroempleado_sustituto"
-                                type="number" class="control form-control" style="font-size: 13px;" readonly>
+                                type="number" class="control form-control" style="font-size: 13px; background-color: #e9ecef" readonly>
                         </div>
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Nivel Académico</strong>
                             <input name="nivel_academico_sustituto" id="nivel_academico_sustituto" class="control form-control"
-                                style="font-size: 14px;" readonly>
+                                style="font-size: 14px; background-color: #e9ecef" readonly>
                         </div>
 
                         <div class="col-md-3">
@@ -412,11 +412,24 @@
 
                         <div class="col-md-4">
                             <strong style="font-size: 14px;">Nombre de Quien Autoriza </strong>
-                            <input type="text" class="control form-control" id="autoriza" name="autoriza"
-                                style="font-size: 13px;">
+                            <select type="text" class="control form-control" id="autoriza" name="autoriza"
+                                style="font-size: 13px;" required>
+                                <option value="">Seleccione un Medico</option>
+                                <option value="BECERRIL VERGARA ALONDRA MERCEDES">BECERRIL VERGARA ALONDRA MERCEDES</option>
+                                <option value="ESPINOZA REYES MARIA DEL CARMEN">ESPINOZA REYES MARIA DEL CARMEN</option>
+                                <option value="GARCIA VELASCO MARIA DE LOS ANGELES">GARCIA VELASCO MARIA DE LOS ANGELES</option>
+                                <option value="GAYTAN MEDEL SARAI">GAYTAN MEDEL SARAI</option>
+                                <option value="GORDILLO CRUZ ARACELI">GORDILLO CRUZ ARACELI</option>
+                                <option value="HERNANDEZ GARCIA VERONICA">HERNANDEZ GARCIA VERONICA</option>
+                                <option value="HERRERA HINOJOSA MARCO ANTONIO">HERRERA HINOJOSA MARCO ANTONIO</option>
+                                <option value="HUERTA ESPINDOLA MARIO ROBERTO CECILIO">HUERTA ESPINDOLA MARIO ROBERTO CECILIO</option>
+                                <option value="JAINZ HERNANDEZ ALEJANDRA">JAINZ HERNANDEZ ALEJANDRA</option>
+                                <option value="SALADO LUCERO MARIA LETICIA">SALADO LUCERO MARIA LETICIA</option>
+                                <option value="SANABRIA PAISANO JOSE ALFREDO">SANABRIA PAISANO JOSE ALFREDO</option>
+                                <option value="SANCHEZ MORENO MARIA DEL ROCIO">SANCHEZ MORENO MARIA DEL ROCIO</option>
+                                <option value="TAMANIS LAVASTIDA PABLO">TAMANIS LAVASTIDA PABLO</option>
+                            </select>
                         </div>
-
-
 
                     </div> <!-- DIV ROW LINEA 13 -->
 

@@ -1,5 +1,5 @@
 <?php
-require('php/controllers/registros.controller.php');
+require ('php/controllers/registros.controller.php');
 
 ?>
 <!DOCTYPE html>
@@ -36,6 +36,38 @@ require('php/controllers/registros.controller.php');
         </div>
     </header>
     <br>
+
+
+    <div class="container buscador">
+        <div class="row">
+            <div class="col-md-5">
+                <select name="empleado_1" id="empleado_1" class="control form-control"
+                    >
+                    <option value="">Seleccione un Empleado</option>
+                    <?php
+                    if (!empty ($data_empleados)) {
+                        foreach ($data_empleados as $row1) {
+                            echo "<option value='" . $row1["nombre_empleado"] . "' >" . $row1["nombre_empleado"] . "</option>";
+                        }
+                    } else {
+                        echo "<option value=''>No hay datos disponibles</option>";
+                    }
+                    ?>
+                </select>
+            </div>
+    
+            <div class="col-md-2">
+                <input type="date" name="fecha_1" id="fecha_1" class="control form-control">
+            </div>
+    
+            <div class="col-md-2">
+                <input type="date" name="fecha_2" id="fecha_2" class="control form-control">
+            </div>
+            <div class="col-md-3">
+                <button onclick="buscar()" class="btn btn-primary boton">Buscar</button>
+            </div>
+        </div>
+    </div>
 
 
     <div class="container">
