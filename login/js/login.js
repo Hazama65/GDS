@@ -149,9 +149,14 @@ const validateLogin = async (formData) => {
                 '../cuestionario/registros.php'
             )
         }
-
-
-
+        if (typeToken.trim() === 'enfermeriaguardias') {
+            return setAlert.successAlert(
+                'La operacion se ha completado correctamente.',
+                null,
+                null,
+                '../enfermeriaguardias/index.php'
+            )
+        }
 
 
     }catch(error){
