@@ -24,13 +24,8 @@ function buscar() {
         success: function (data) {
 
 
-            if (data.trabajador_sustituido.length === 0 ) {
-                alert("No se encontraron Guardias Solicitadas para el trabajador: " + empleado_1 + " en el periodo seleccionado.");
-                
-            }
-
-            if (data.trabajador_sustituto.length === 0 ) {
-                alert("No se encontraron Guardias Realizadas para el trabajador: " + empleado_1 + " en el periodo seleccionado.");
+            if (data.trabajador_sustituido.length === 0  && data.trabajador_sustituto.length === 0 ) {
+                alert("No se encontraron Guardias para el trabajador: " + empleado_1 + " en el periodo seleccionado.");
                 
             }
 
