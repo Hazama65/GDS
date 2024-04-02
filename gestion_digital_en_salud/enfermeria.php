@@ -40,8 +40,24 @@
                 <br>
                 <a href="https://hraeigds.site/enfermeria/" class="btn btn-success">Productividad Quirúrgica</a>
             </div>
+
+            <div class="card">
+                <img src="img/enfermeria_guardia.jpg" alt="Imagen 1">
+                <br>
+                <a href="../login/index.php" class="btn btn-success">Guardias Enfermería</a>
+            </div>
+
+            <div class="card">
+                <img src="img/electrocardiograma1.png" alt="Imagen 1">
+                <br>
+                <a href="../login/index.php" class="btn btn-success">Censo Urgencias</a>
+            </div>
+
         </div>
+
+        
     </div> <!-- es el div que cierra <div class="container" style="center">-->
+        
 
     <footer style="font-size:8px;">
         Hospital Regional de Alta Especialidad de Ixtapaluca <br> Dirección de Operaciones - Gestión Digital en Salud - 2023
