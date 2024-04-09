@@ -45,6 +45,7 @@ include ("modal/registroenfermeriaguardias.html");
         </div>
     </header>
     <br>
+    
 
     <!-- ESTE ES EL BLOQUE DE LOS BOTONES-->
 
@@ -60,11 +61,6 @@ include ("modal/registroenfermeriaguardias.html");
             <i class="bi bi-file-earmark-excel"></i> Excel
         </a>
 
-        <a href="metricas.php">
-            <button type="button" class="btn btn-primary" target="_blank">
-                <i class="bi bi-bar-chart-line"></i> Registros
-            </button>
-        </a>
     </div> <!-- cierre del <div class="btn-group" role="group" aria-label="Basic outlined example">-->
     <br><br>
 
@@ -73,7 +69,7 @@ include ("modal/registroenfermeriaguardias.html");
         <div class="col-4" width="100%" height="800px" style="margin-bottom: 100px; ">
             <div id="patient-list-container" style="background-color:rgb(81, 176, 210,0.6)">
                 <br>
-                <input type="text" id="search" placeholder="Buscar Trabajador...">
+                <input type="text" id="search" placeholder="Buscar Paciente...">
                 <ul id="patient-list">
                     <?php
                     if (!empty($data_AT)) {
@@ -88,6 +84,9 @@ include ("modal/registroenfermeriaguardias.html");
                             echo $nombrePaciente;
                             echo '<a href="editar_AT.php?id=' . $id_paciente . '">';
                             echo '<button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Editar</button>';
+                            echo '</a>';
+                            echo '<a href="seguimiento.php?id=' . $id_paciente . '">';
+                            echo '<button type="button" class="btn btn-secondary" style="color:white; --bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Seguimiento</button>';
                             echo '</a>';
                             echo '</li>';
                         }
@@ -110,11 +109,22 @@ include ("modal/registroenfermeriaguardias.html");
 
         <div class="col-7">
             <div class="container">
-                <iframe id="consulta" src="consulta.php" frameborder="0" width="100%" height="450px"
-                    style="margin-bottom: 100px;"></iframe>
+                <!-- Tu código existente -->
 
-            </div> <!--<div class="container">-->
-        </div><!-- FINALIZA EL DIV class col 8-->
+                <!-- Agrega un div para contener el select dinámico -->
+                <div id="Seguimiento_index" style="display: none;">
+                    <select name="paciente_seleccionado" class="col-6 form-select custom-select"
+                        id="paciente_seleccionado" style="background-color: #6c757d; color: white; margin-bottom:10px">
+                    </select>
+                </div>
+
+                <iframe id="consulta" src="" frameborder="0" width="100%" height="800px"
+                    style="margin-bottom: 100px;"></iframe>
+            </div> <!-- <div class="container"> -->
+        </div> <!-- FINALIZA EL DIV class col 8 -->
+
+        <iframe id="consulta_seguimiento" src="" frameborder="0" width="100%" height="800px"
+            style="margin-bottom: 100px;"></iframe>
 
 
 
@@ -146,6 +156,7 @@ include ("modal/registroenfermeriaguardias.html");
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="js/scriptmodal.js"></script>
+    <script src="js/visualizacion_seg.js"></script>
     <script src="js/visualizacion.js"></script>
     <script src="js/script.js"></script>
 

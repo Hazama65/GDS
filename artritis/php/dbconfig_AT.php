@@ -5,6 +5,11 @@
     define('DB_USERNAME','root');
     define('DB_PASSWORD','');
 
+    define('DB_HOST_seg','localhost');
+    define('DB_NAME_seg','artritis_seguimiento');
+    define('DB_USERNAME_seg','root');
+    define('DB_PASSWORD_seg','');
+
 
 
     // hostinger

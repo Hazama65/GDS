@@ -1,5 +1,5 @@
 <?php
-include ('php/controllers/consulta.controller.php');
+include ('php/controllers/consulta_seguimiento.controller.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,13 +14,11 @@ include ('php/controllers/consulta.controller.php');
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-    <title>Consulta</title>
+    <title>Document</title>
 </head>
 
 <body>
-    <!-- Esta etiqueta indica que el contenido dentro de ella corresponde contiene los títulos de las columnas. -->
+
     <table class="table table-striped table-hover table-bordered tabla-consulta">
         <thead>
 
@@ -33,39 +31,15 @@ include ('php/controllers/consulta.controller.php');
         <tbody style="font-size:13px;" class="table-bordered">
 
             <tr>
+                <td class="estilo-celda">Fecha de Seguimiento</td>
+                <td>
+                    <?php echo $fecha_seg; ?>
+                </td>
+            </tr>
+            <tr>
                 <td class="estilo-celda">CURP</td>
                 <td>
                     <?php echo $curp; ?>
-                </td>
-            </tr>
-            <tr>
-                <td class="estilo-celda">Nombre Completo</td>
-                <td>
-                    <?php echo $nombre_paciente; ?>
-                </td>
-            </tr>
-            <tr>
-                <td class="estilo-celda">Escolaridad</td>
-                <td>
-                    <?php echo $escolaridad; ?>
-                </td>
-            </tr>
-            <tr>
-                <td class="estilo-celda">Fecha de nacimiento</td>
-                <td>
-                    <?php echo $fecha_nacimiento; ?>
-                </td>
-            </tr>
-            <tr>
-                <td class="estilo-celda">Edad</td>
-                <td>
-                    <?php echo $edad; ?>
-                </td>
-            </tr>
-            <tr>
-                <td class="estilo-celda">Sexo</td>
-                <td>
-                    <?php echo $sexo; ?>
                 </td>
             </tr>
             <tr>
@@ -84,54 +58,6 @@ include ('php/controllers/consulta.controller.php');
                 <td class="estilo-celda">IMC</td>
                 <td>
                     <?php echo $imc; ?>
-                </td>
-            </tr>
-
-            <tr>
-                <th scope="col">Antecendetes Patologicos</th>
-                <th scope="col"> </th>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Tabaquismo</td>
-                <td>
-                    <?php echo $tabaquismo; ?>
-                </td>
-            </tr>
-            <tr>
-                <td class="estilo-celda">Alcoholismo</td>
-                <td>
-                    <?php echo $alcoholismo; ?>
-                </td>
-            </tr>
-            <tr>
-                <td class="estilo-celda">Esteatosis Hepatica</td>
-                <td>
-                    <?php echo $EH; ?>
-                </td>
-            </tr>
-            <tr>
-                <td class="estilo-celda">Diabetes Mellitus</td>
-                <td>
-                    <?php echo $DM; ?>
-                </td>
-            </tr>
-            <tr>
-                <td class="estilo-celda">Hipertensión Arterial</td>
-                <td>
-                    <?php echo $HA; ?>
-                </td>
-            </tr>
-            <tr>
-                <td class="estilo-celda">Obesidad</td>
-                <td>
-                    <?php echo $obesidad; ?>
-                </td>
-            </tr>
-            <tr>
-                <td class="estilo-celda">Hiperlipidemia</td>
-                <td>
-                    <?php echo $hiperlipidemia; ?>
                 </td>
             </tr>
 

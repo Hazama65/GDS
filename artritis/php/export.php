@@ -1,42 +1,16 @@
 <?php
 // Incluir el archivo de configuración de la base de datos
-include ('dbconfig_EG.php');
+include ('dbconfig_AT.php');
 
 // Conectar a la base de datos
 $conn = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
 // Consulta SQL
-$query_pacientes = "SELECT ds.id_suplencia,
-    ds.fecha_tramite,
-    ds.fecha_suplencia,
-    ds.autoriza,
-    ts.nom_sustituido,
-    ts.num_empleado,
-    ts.niv_academico,
-    ts.turno,
-    ts.servicio,
-    ts.criticas,
-    ts.clinicas,
-    ts.quirurgicas,
-    ts.perinatales,
-    ts.ambulatoria,
-    ts.hospitalizacion,
-    ts.pediatria,
-    tss.nom_sustituto,
-    tss.num_empleado2,
-    tss.niv_academico2,
-    tss.turno2,
-    tss.servicio2,
-    tss.criticas2,
-    tss.clinicas2,
-    tss.quirurgicas2,
-    tss.perinatales2,
-    tss.ambulatoria2,
-    tss.hospitalizacion2,
-    tss.pediatria2
-FROM datos_suplencia ds
-JOIN trabajador_sustituido ts ON ds.id_sustituido = ts.id_sustituido
-JOIN trabajador_sustituto tss ON ds.id_sustituto = tss.id_sustituto";
+$query_pacientes = "SELECT * FROM datos_paciente dp
+JOIN antecedentes_patologicos ap ON dp.id_paciente = ap.id_paciente
+JOIN laboratorio l ON dp.id_paciente = l.id_paciente
+JOIN usg_clinica uc ON dp.id_paciente = uc.id_paciente
+JOIN tratamiento t ON dp.id_paciente = t.id_paciente";
 
 
 // Ejecutar la consulta
@@ -55,33 +29,65 @@ if ($result) {
     // Agregar los encabezados de las columnas
     $columns = array(
         'ID',
-        'Fecha de Tramite',
-        'Fecha de Suplencia',
-        'Nombre de Quien Autoriza',
-        'Trabajador Sustituido',
-        'Número de Empleado',
-        'Nivel Académico',
-        'Turno',
-        'Servicio',
-        'Críticas',
-        'Clínicas',
-        'Quirúrgicas',
-        'Perinatales',
-        'Ambulatorias',
-        'Hospitalización',
-        'Pediatría / Neonatología',
-        'Trabajador Sustituto',
-        'Número de Empleado',
-        'Nivel Académico',
-        'Turno',
-        'Servicio',
-        'Críticas',
-        'Clínicas',
-        'Quirúrgicas',
-        'Perinatales',
-        'Ambulatorias',
-        'Hospitalización',
-        'Pediatría / Neonatología'
+        'CURP',
+        'Nombre Completo',
+        'Escolaridad',
+        'Fecha de nacimiento',
+        'Edad',
+        'Sexo',
+        'Talla',
+        'Peso',
+        'IMC',
+        'Tabaquismo',
+        'Alcoholismo',
+        'Esteatosis Hepatica',
+        'Diabetes Mellitus',
+        'Hipertensión Arterial',
+        'Obesidad',
+        'Hiperlipidemia',
+        'Plaquetas',
+        'Factor Reumatoide Basal',
+        'Factor Reumatoide Nominal',
+        'PCR',
+        'Vitamina D Basal',
+        'Vitamina D Nominal',
+        'AC Anticpp Basal',
+        'AC Anticpp Nominal',
+        'VSG',
+        'TGO Basal',
+        'TGO Nominal',
+        'TGP Basal',
+        'TGP Nominal',
+        'Glucosa',
+        'Colesterol',
+        'Trigliceridos',
+        'Fib 4',
+        'Resultado FIB 4',
+        'USG Hepático',
+        'Hallazgo USG',
+        'Clasificación Esteatosis',
+        'Articulaciones Inflamadas SJC28',
+        'Articulaciones Dolorosas TJC28',
+        'Evaluación Global PGA',
+        'Evaluación del Evaluador EGA',
+        'Resultado CDAI',
+        'Resultado SDAI',
+        'Metrotexate',
+        'Dosis Semanal',
+        'Leflunomide',
+        'Dosis Semanal',
+        'Sulfazalasina',
+        'Dosis Semanal',
+        'Tocoferol',
+        'Dosis Semanal',
+        'Glucocorticoide',
+        'Tratamiento',
+        'Dosis Semanal',
+        'Vitamina D',
+        'Dosis Semanal',
+        'Biológico',
+        'Tratamiento',
+        'Apego a Tratamiento'
     );
 
     $sheet->fromArray([$columns], null, 'A1');
@@ -115,9 +121,9 @@ if ($result) {
             'wrapText' => true
         ]
     ];
-    
 
-    $sheet->getStyle('A1:AB1')->applyFromArray($styleArray);
+
+    $sheet->getStyle('A1:BH1')->applyFromArray($styleArray);
 
     // Agregar los datos desde la base de datos
     $row = 2;
@@ -130,7 +136,7 @@ if ($result) {
     $writer = new PhpOffice\PhpSpreadsheet\Writer\Xlsx($spreadsheet);
 
     // Definir la ubicación del archivo Excel
-    $excel_file = 'Datos EG.xlsx';
+    $excel_file = 'Datos Artritis.xlsx';
 
     // Guardar el archivo Excel
     $writer->save($excel_file);
