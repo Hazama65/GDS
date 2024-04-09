@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>NO REPORTE</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>Encuesta de Satisfacción Áreas Ambulatorias</h1>
+            <div class="header-actions">
+                <button class="login-btn"><i class="fas fa-sign-in-alt"></i> </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="cuestionario">
+        <div class="pregunta1" style="display: none;">
+            <div class="gender">
+                <h2 class="form-title"> Genero </h2>
+                <div class="gender-container">
+                    <div class="card">
+                        <img src="img/hombre.png" alt="Masculino">
+                        <div class="card-body">
+                            <strong>Masculino</strong>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/mujer.png" alt="Femenino">
+                        <div class="card-body">
+                            <strong>Femenino</strong>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/otro.png" alt="Otro">
+                        <div class="card-body">
+                            <strong>Otro</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pregunta2" style="display: none;">
+            <div class="age">
+                <h2 class="form-title"> Edad </h2>
+                <div class="age-container">
+                    <div class="card">
+                        <img src="img\niño.png" alt="Menor de 18 años">
+                        <div class="card-body">
+                            <strong>Menor de 18 años</strong>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/joven.png" alt="Entre 19 y 30 años">
+                        <div class="card-body">
+                            <strong>Entre 19 y 30 años</strong>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/adulto1.png" alt="Entre 31 y 49 años">
+                        <div class="card-body">
+                            <strong>Entre 31 y 49 años</strong>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/viejito.png" alt="Entre 50 y 65 años">
+                        <div class="card-body">
+                            <strong>Entre 50 y 65 años</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pregunta3" style="display: none;">
+            <div class="service">
+                <h2 class="form-title"> Servicio en que fue atendido </h2>
+                <div class="service-container">
+
+                    <div class="card">
+                        <img src="img/Algologia.png" alt="Algologia">
+                        <div class="card-body">
+                            <strong>Algologia</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/braquiterapia.png" alt="braquiterapia">
+                        <div class="card-body">
+                            <strong>Braquiterapia</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/cuidados_paliativos.png" alt="cuidados_paliativos">
+                        <div class="card-body">
+                            <strong>Cuidados Paliativos</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/medicina_nuclear.png" alt="medicina_nuclear">
+                        <div class="card-body">
+                            <strong>Medicina Nuclear</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/radioterapia.png" alt="radioterapia">
+                        <div class="card-body">
+                            <strong>Radioterapia</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/rehabilitación.png" alt="rehabilitación">
+                        <div class="card-body">
+                            <strong>Rehabilitación</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/quimioterapia.png" alt="quimioterapia">
+                        <div class="card-body">
+                            <strong>Quimioterapia</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/imagen.png" alt="imagen">
+                        <div class="card-body">
+                            <strong>Imagen</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/laboratorio.png" alt="Laboratorio">
+                        <div class="card-body">
+                            <strong>Laboratorio</strong>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <img src="img/anestesiologia.png" alt="Anestesiología">
+                        <div class="card-body">
+                            <strong>Anestesiología</strong>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/cardiologia1.png" alt="Cardiología">
+                        <div class="card-body">
+                            <strong>Cardiología</strong>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/Ginecologia.png" alt="Ginecologia">
+                        <div class="card-body">
+                            <strong>Ginecología</strong>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/Hematologia.png" alt="Hematologia">
+                        <div class="card-body">
+                            <strong>Hematología</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/Neurologia.png" alt="Neurologia">
+                        <div class="card-body">
+                            <strong>Neurología</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/Nutricion.png" alt="Nutricion">
+                        <div class="card-body">
+                            <strong>Nutricion</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/Oftalmologia.png" alt="Oftalmologia">
+                        <div class="card-body">
+                            <strong>Oftalmologia</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/Ortopedia.png" alt="Ortopedia">
+                        <div class="card-body">
+                            <strong>Ortopedia</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/Pediatria.png" alt="Pediatria">
+                        <div class="card-body">
+                            <strong>Pediatria</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/psicologia.png" alt="psicologia">
+                        <div class="card-body">
+                            <strong>Psicologia</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/clinica_catetr.png" alt="clinica_catetr">
+                        <div class="card-body">
+                            <strong>Clínica de Catéter</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/Clinica_heridas.png" alt="Clinica_heridas">
+                        <div class="card-body">
+                            <strong>Clínica Heridas</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/clinica_mujer.png" alt="clinica_mujer">
+                        <div class="card-body">
+                            <strong>Clínica Mujer</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/Clinica_Dolor1.png" alt="Clinica_Dolor1">
+                        <div class="card-body">
+                            <strong>Clínica del Dolor</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/ClinicaSueño.png" alt="ClinicaSueño">
+                        <div class="card-body">
+                            <strong>Clínica del Sueño</strong>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <img src="img/Trabajo_Social.png" alt="Trabajo_Social">
+                        <div class="card-body">
+                            <strong>Trabajo Social</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/Atención_Usuario.png" alt="Atención_Usuario">
+                        <div class="card-body">
+                            <strong>Atención al Usuario</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/Banco_Sangre.png" alt="Banco_Sangre">
+                        <div class="card-body">
+                            <strong>Banco de Sangre</strong>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="pregunta4" style="display: none;">
+            <div class="attention">
+                <h2 class="form-title"> ¿EL TRATO QUE RECIBIÓ DEL MÉDICO Y ENFERMERA HA SIDO AMABLE Y RESPETUOSO? </h2>
+                <div class="attention-container">
+                    <br>
+                    <div class="card">
+                        <img src="img\muysatisfecho.png" alt="Si">
+                        <div class="card-body">
+                            <strong>Sí</strong>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img\muyinsatisfecho.png" alt="No">
+                        <div class="card-body">
+                            <strong>No</strong>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <div class="pregunta5" style="display: none;">
+            <div class="attention">
+                <h2 class="form-title"> ¿El Médico y la Enfermera le explicaron fácilmente sobre su enfermedad y sus
+                    cuidados? </h2>
+                <div class="attention-container">
+                    <div class="card">
+                        <img src="img\muysatisfecho.png" alt="Satisfecho">
+                        <div class="card-body">
+                            <strong>Satisfecho</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img\Regular.png" alt="Regular">
+                        <div class="card-body">
+                            <strong>Regular</strong>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <img src="img\muyinsatisfecho.png" alt="Insatisfecho">
+                        <div class="card-body">
+                            <strong>Insatisfecho</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pregunta6" style="display: none;">
+            <div class="attention">
+                <h2 class="form-title"> ¿Recibió orientación por parte del personal,sobre los tramites que realizará?
+                </h2>
+                <div class="attention-container">
+                    <br>
+                    <div class="card">
+                        <img src="img\muysatisfecho.png" alt="Si">
+                        <div class="card-body">
+                            <strong>Si</strong>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <img src="img\muyinsatisfecho.png" alt="No">
+                        <div class="card-body">
+                            <strong>NO</strong>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <div class="pregunta7" style="display: none;">
+            <div class="attention">
+                <h2 class="form-title"> ¿Consultaste o te informaron sobre los derechos como paciente? </h2>
+                <div class="attention-container">
+                    <br>
+                    <div class="card">
+                        <img src="img\muysatisfecho.png" alt="Si">
+                        <div class="card-body">
+                            <strong>Si</strong>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img\muyinsatisfecho.png" alt="No">
+                        <div class="card-body">
+                            <strong>No</strong>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <div class="pregunta8" style="display: none;">
+            <div class="attention">
+                <h2 class="form-title"> ¿Cómo calificaría la limpieza e higiene del hospital? </h2>
+                <div class="attention-container">
+                    <div class="card">
+                        <img src="img\muysatisfecho.png" alt="Muy Satisfecho">
+                        <div class="card-body">
+                            <strong>Muy Satisfecho</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img\satisfecho.png" alt="Satisfecho">
+                        <div class="card-body">
+                            <strong>Satisfecho</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img\Regular.png" alt="Regular">
+                        <div class="card-body">
+                            <strong>Regular</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img\insatisfecho.png" alt="Insatisfecho">
+                        <div class="card-body">
+                            <strong>Insatisfecho</strong>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <img src="img\muyinsatisfecho.png" alt="Muy Insatisfecho">
+                        <div class="card-body">
+                            <strong>Muy Insatisfecho</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pregunta9" style="display: none;">
+            <div class="attention">
+                <h2 class="form-title"> Tiempo aproximado de espera para su atención </h2>
+                <div class="attention-container">
+                    <div class="card">
+                        <img src="img/15min.png" alt="0-15 minutos">
+                        <div class="card-body">
+                            <strong>0-15 min</strong>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/30min.png" alt="15-30min">
+                        <div class="card-body">
+                            <strong>16-30 min</strong>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/45min.png" alt="45min">
+                        <div class="card-body">
+                            <strong>0-45 min</strong>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/60min.png" alt="46-60min">
+                        <div class="card-body">
+                            <strong>46-60 min</strong>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/mas60min.png" alt="Más de 60 min">
+                        <div class="card-body">
+                            <strong>Más de 61 min</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pregunta10" style="display: none;">
+            <div class="attention">
+                <h2 class="form-title"> ¿Qué tan satisfecho estás con tu experiencia en el Hospital Regional de Alta
+                    Especialidad de Ixtapaluca? </h2>
+                <div class="attention-container">
+                    <div class="card">
+                        <img src="img\muysatisfecho.png" alt="Muy Satisfecho">
+                        <div class="card-body">
+                            <strong>Muy Satisfecho</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img\satisfecho.png" alt="Satisfecho">
+                        <div class="card-body">
+                            <strong>Satisfecho</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img\Regular.png" alt="Regular">
+                        <div class="card-body">
+                            <strong>Regular</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img\insatisfecho.png" alt="Insatisfecho">
+                        <div class="card-body">
+                            <strong>Insatisfecho</strong>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <img src="img\muyinsatisfecho.png" alt="Muy Insatisfecho">
+                        <div class="card-body">
+                            <strong>Muy Insatisfecho</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pregunt11" style="display: none;">
+            <div class="attention">
+                <h2 class="form-title"> ¿Recibió maltrato? </h2>
+                <div class="service-container">
+                    <div class="card">
+                        <img src="img/personalmedico.png" alt="Personal (Medico,Psicólogo, Nutriologo,Psiquiatria)">
+                        <div class="card-body">
+                            <strong>Personal (Medico,Psicólogo, Nutriologo,Psiquiatria)</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/enfermeria.png" alt="Personal de Enfermería">
+                        <div class="card-body">
+                            <strong>Personal de Enfermería</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/recepcion.png" alt="Personal_de_Recepción">
+                        <div class="card-body">
+                            <strong>Personal de Recepción</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/trabajosocial.png" alt="Personal_TrabajoSocial">
+                        <div class="card-body">
+                            <strong>Personal de Trabajo Social</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/laboratorio1.png" alt="Personal_Laboratorio">
+                        <div class="card-body">
+                            <strong>Personal de Laboratorio</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/personal_imagen1.png" alt="Personal_Imagen">
+                        <div class="card-body">
+                            <strong>Personal de Imagen</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/personalvigielancia.png" alt="Personal_Vigilancia">
+                        <div class="card-body">
+                            <strong>Personal de Vigilancia</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/personal_kisoko.png" alt="Personal_kiosco">
+                        <div class="card-body">
+                            <strong>Personal de kiosco</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/personal_limpieza.png" alt="Personal_Limpieza">
+                        <div class="card-body">
+                            <strong>Personal de Limpieza</strong>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <img src="img/personal_banco_Sangre.png" alt="Personal_BancoSangre">
+                        <div class="card-body">
+                            <strong>Personal de Banco de Sangre</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/Personal_Quimioterapia.png" alt="Personal_Quimioterapia">
+                        <div class="card-body">
+                            <strong>Personal de Quimioterapia</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/Personal_Radioterapia.png" alt="Personal_Radioterapia">
+                        <div class="card-body">
+                            <strong>Personal de Radioterapia</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/Personal_Farmacia.png" alt="Personal_Farmacia">
+                        <div class="card-body">
+                            <strong>Personal de Farmacia</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/Personal_Auxiliar.png" alt="Personal_Auxiliar">
+                        <div class="card-body">
+                            <strong>Personal de Auxiliar</strong>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/Personal_Ninguno.png" alt="Personal_Ninguno">
+                        <div class="card-body">
+                            <strong>Ninguno</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pregunt12" style="display: none;">
+            <div class="attention">
+                <h2 class="form-title"> Sugerencia o Recomendación </h2>
+                <div class="attention-container">
+                    <div class="sugerencias">
+                        <label for="comentarios">Escribe tus comentarios o sugerencias:</label><br>
+                        <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea><br>
+                        <input type="submit" value="Enviar">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>Hospital Regional de Alta Especialidad de Ixtapaluca</p>
+            <p>Gestión Digital en Salud - 2024</p>
+        </div>
+    </footer>
+
+
+    <div id="loading-overlay" style="display: none;" class="loading">
+        <svg width="128px" height="96px">
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="back"></polyline>
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="front"></polyline>
+        </svg>
+    </div>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="js/Funciones_cuestionario.js"></script>
+
+<script type="module">
+    import { mainForm } from './js/insert.js';
+    mainForm();
+</script>
+
+</html>

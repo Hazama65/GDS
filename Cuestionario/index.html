@@ -42,29 +42,84 @@
                 <div class="campos_form">
                     <div class="row">
                         <h3>Datos personales</h3>
-                        <div class="col-md-1">
+                        <div class="col-md-3">
                             <strong>Edad</strong>
-                            <input class="control form-control" type="number" name="Edad" id="Edad">
+                            <select class="control form-control" name="Edad" id="Edad" required>
+                                <option value="">Seleccione...</option>
+                                <option value="20-30">20-30</option>
+                                <option value="31-40">31-40</option>
+                                <option value="41-50">41-50</option>
+                                <option value="51-61">51-61</option>
+                                <option value="61-70">61-70</option>
+                                <option value="Más de 70 años">Más de 70 años</option>
+                            </select>
                         </div>
-                        <div class="col-md-1">
+                        <div class="col-md-3">
                             <strong>Sexo</strong>
-                            <input class="control form-control" type="text" id="Sexo" name="Sexo">
+                            <select class="control form-control" name="Sexo" id="Sexo" required>
+                                <option value="">Seleccion...</option>
+                                <option value="Femenino">Femenino</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Otro">Otro</option>
+                                <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+                            </select>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <strong>Servicio</strong>
-                            <input class="control form-control" type="text" id="Servicio" name="Servicio">
+                            <select class="control form-control" name="Servicio" id="Servicio" required>
+                                <option value="">Seleccione...</option>
+                                <option value="Hospitalización ">Hospitalización </option>
+                                <option value="Ambulatorio">Ambulatorio</option>
+                                <option value="DOIHI">DOIHI</option>
+                                <option value="Administrativo">Administrativo</option>
+                            </select>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <strong>Turno</strong>
-                            <input class="control form-control" type="text" name="Turno" id="Turno">
+                            <select class="control form-control" name="Turno" id="Turno" required>
+                                <option value="">Seleccione...</option>
+                                <option value="Matutino">Matutino</option>
+                                <option value="Vespertino">Vespertino</option>
+                                <option value="Jornada acumulada">Jornada acumulada</option>
+                                <option value="Nocturno">Nocturno</option>
+                            </select>
                         </div>
                         <div class="col-md-3">
                             <strong>Disciplina(Profesión)</strong>
-                            <input class="control form-control" type="text" name="Disciplina" id="Disciplina">
+                            <select class="control form-control" name="Disciplina" id="Disciplina" required>
+                                <option value="">Seleccione...</option>
+                                <option value="Enfermera">Enfermera</option>
+                                <option value="Medico">Medico</option>
+                                <option value="Residente">Residente</option>
+                                <option value="Pasante médico">Pasante médico</option>
+                                <option value="Pasante enfermería">Pasante enfermería</option>
+                                <option value="Técnico">Técnico</option>
+                                <option value="Estudiante enfermería">Estudiante enfermería</option>
+                                <option value="Trabajo social">Trabajo social</option>
+                                <option value="Nutriólogo">Nutriólogo</option>
+                                <option value="Químicos farmacéuticos">Químicos farmacéuticos</option>
+                                <option value="Rehabilitadores">Rehabilitadores</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3" id="Disciplina_otro">
+                            <strong>Otro</strong>
+                            <input class="control form-control" type="text" name="Disciplina_otro" id="Disciplina_otro"
+                                placeholder="¿Cual?">
                         </div>
                         <div class="col-md-3">
                             <strong>Tipo de contratación</strong>
-                            <input class="control form-control" type="text" name="contratacion" id="contratacion">
+                            <select class="control form-control" name="contratacion" id="contratacion" required>
+                                <option value="">Seleccione...</option>
+                                <option value="Base">Base</option>
+                                <option value="Eventual">Eventual</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3" id="contratacion_otro">
+                            <strong>Otro</strong>
+                            <input class="control form-control" type="text" name="contratacion_otro"
+                                id="contratacion_otro" placeholder="¿Cual?">
                         </div>
                     </div>
                 </div>
@@ -345,30 +400,30 @@
                                 <input class="form-check-input" type="radio" name="cuestion_6" value="No"> No
                             </label>
                         </fieldset>
-    
+
                         <div class="cuestion_6" id="cuestion_6_a">
                             <h6>4.1 Si su respuesta es afirmativa; señale a continuación que eventos adversos debe
                                 notificar.
                             </h6>
-    
+
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="opcion-a-5" name="eventos_a_1"
                                     value="Caídas">
                                 <label for="opcion-a-5">Caídas</label><br>
-    
+
                             </div>
-    
-    
+
+
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="opcion-b-5" name="eventos_a_2"
                                     value="Lesiones de piel">
                                 <label for="opcion-b-5">Lesiones de piel</label><br>
-    
+
                             </div>
-    
-    
+
+
                             <div class="form-check">
-    
+
                                 <input class="form-check-input" type="checkbox" id="opcion-c-5" name="eventos_a_3"
                                     value="Errores durante el proceso de medicación (prescripción, transcripción, dispensación, preparación y administración)">
                                 <label for="opcion-c-5">Errores durante el proceso de medicación (prescripción,
@@ -376,67 +431,68 @@
                                     dispensación,
                                     preparación y administración)</label><br>
                             </div>
-    
-    
+
+
                             <div class="form-check">
-    
+
                                 <input class="form-check-input" type="checkbox" id="opcion-d-5" name="eventos_a_4"
                                     value="Dispositivos médicos (eventos adversos relacionados con el equipo quirúrgico e instrumental médico)">
-                                <label for="opcion-d-5">Dispositivos médicos (eventos adversos relacionados con el equipo
+                                <label for="opcion-d-5">Dispositivos médicos (eventos adversos relacionados con el
+                                    equipo
                                     quirúrgico
                                     e
                                     instrumental médico)</label><br>
                             </div>
-    
-    
+
+
                             <div class="form-check">
-    
+
                                 <input class="form-check-input" type="checkbox" id="opcion-e-5" name="eventos_a_5"
                                     value="Errores de estudios de laboratorio">
                                 <label for="opcion-e-5">Errores de estudios de laboratorio</label><br>
                             </div>
-    
-    
+
+
                             <div class="form-check">
-    
+
                                 <input class="form-check-input" type="checkbox" id="opcion-f-5" name="eventos_a_6"
                                     value="Errores relacionadas con nutrición y dietas">
                                 <label for="opcion-f-5">Errores relacionadas con nutrición y dietas</label><br>
                             </div>
-    
-    
+
+
                             <div class="form-check">
-    
+
                                 <input class="form-check-input" type="checkbox" id="opcion-g-5" name="eventos_a_7"
                                     value="Errores en procedimientos invasivos y/o tratamientos">
                                 <label for="opcion-g-5">Errores en procedimientos invasivos y/o tratamientos</label><br>
                             </div>
-    
-    
+
+
                             <div class="form-check">
-    
+
                                 <input class="form-check-input" type="checkbox" id="opcion-h-5" name="eventos_a_8"
                                     value="Infecciones">
                                 <label for="opcion-h-5">Infecciones</label><br>
                             </div>
-    
-    
+
+
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="opcion-i-5" name="eventos_a_9"
                                     value="Errores durante el proceso de transfusión de hemocomponentes">
                                 <label for="opcion-i-5">Errores durante el proceso de transfusión de
                                     hemocomponentes</label><br>
-    
+
                             </div>
-    
-    
-    
+
+
+
                         </div>
                         <div class="cuestion_6" id="cuestion_6_b">
                             <h6>4.2 Si su respuesta es afirmativa, señale a continuación que eventos centinelas debe
                                 reportar
                             </h6>
-    
+
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="opcion-a-6"
                                     name="eventos_centinelas_b_1"
@@ -446,12 +502,12 @@
                                     el
                                     problema
                                     subyacente del paciente.</label><br>
-    
+
                             </div>
-    
-    
+
+
                             <div class="form-check">
-    
+
                                 <input class="form-check-input" type="checkbox" id="opcion-b-6"
                                     name="eventos_centinelas_b_2"
                                     value="Pérdida permanente de una función no relacionada con el curso natural de la enfermedad o el problema subyacente del paciente.">
@@ -461,80 +517,83 @@
                                     enfermedad o
                                     el problema subyacente del paciente.</label><br>
                             </div>
-    
-    
+
+
                             <div class="form-check">
-    
+
                                 <input class="form-check-input" type="checkbox" id="opcion-c-6"
                                     name="eventos_centinelas_b_3"
                                     value="Cirugía en el lugar incorrecto, con el procedimiento incorrecto o al paciente equivocado.">
-                                <label for="opcion-c-6">Cirugía en el lugar incorrecto, con el procedimiento incorrecto o al
+                                <label for="opcion-c-6">Cirugía en el lugar incorrecto, con el procedimiento incorrecto
+                                    o al
                                     paciente
                                     equivocado.</label><br>
                             </div>
-    
-    
+
+
                             <div class="form-check">
-    
+
                                 <input class="form-check-input" type="checkbox" id="opcion-d-6"
                                     name="eventos_centinelas_b_4"
                                     value="Transmisión de una enfermedad o afección crónica como resultado de una transfusión de sangre, hemocomponentes o trasplante de órganos o tejidos.">
-                                <label for="opcion-d-6">Transmisión de una enfermedad o afección crónica como resultado de
+                                <label for="opcion-d-6">Transmisión de una enfermedad o afección crónica como resultado
+                                    de
                                     una
                                     transfusión de
                                     sangre, hemocomponentes o trasplante de órganos o tejidos.</label><br>
                             </div>
-    
-    
+
+
                             <div class="form-check">
-    
+
                                 <input class="form-check-input" type="checkbox" id="opcion-e-6"
                                     name="eventos_centinelas_b_5" value="Suicidio">
                                 <label for="opcion-e-6">Suicidio</label><br>
                             </div>
-    
-    
+
+
                             <div class="form-check">
-    
+
                                 <input class="form-check-input" type="checkbox" id="opcion-f-6"
                                     name="eventos_centinelas_b_6" value="Violación">
                                 <label for="opcion-f-6">Violación</label><br>
                             </div>
-    
-    
+
+
                             <div class="form-check">
-    
+
                                 <input class="form-check-input" type="checkbox" id="opcion-g-6"
                                     name="eventos_centinelas_b_7" value="Maltrato u homicidio de cualquier paciente.">
                                 <label for="opcion-g-6">Maltrato u homicidio de cualquier paciente.</label><br>
                             </div>
-    
-    
+
+
                         </div>
                         <div class="cuestion_6" id="cuestion_6_c">
                             <h6>4.3 Si su respuesta es afirmativa en qué casos debe reportar cuasifallas</h6>
-    
+
                             <div class="form-check">
-    
+
                                 <input class="form-check-input" type="checkbox" id="opcion-a-9" name="incidentes_c_1"
                                     value="Cualquier incidente que estuvo a punto de cometerse con el paciente pero que por intercepción de algún compañero no se llevó a cabo">
-                                <label for="opcion-a-9">Cualquier incidente que estuvo a punto de cometerse con el paciente
+                                <label for="opcion-a-9">Cualquier incidente que estuvo a punto de cometerse con el
+                                    paciente
                                     pero
                                     que
                                     por
                                     intercepción de algún compañero no se llevó a cabo</label><br>
                             </div>
-    
-    
+
+
                             <div class="form-check">
-    
+
                                 <input class="form-check-input" type="checkbox" id="opcion-b-9" name="incidentes_c_2"
                                     value="Cualquier situación de riesgo a que estuviera expuesto el paciente">
                                 <label for="opcion-b-9">Cualquier situación de riesgo a que estuviera expuesto el
                                     paciente</label><br>
                             </div>
-    
-    
+
+
                         </div>
                     </div>
 

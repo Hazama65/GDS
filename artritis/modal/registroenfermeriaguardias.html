@@ -1,0 +1,425 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header estilomodal">
+                <h1 class="bi bi-journal-medical modal-title fs-4" id="exampleModalLabel">Registro Guardias</h1>
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <form id="AT_form" method="POST">
+
+
+                    <!-- Datos de llegada del paciente  -->
+                    <div class="row">
+
+                        <div class="form-header">
+                            <h5 class="form-title">Datos Paciente</h5>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <strong>CURP</strong>
+                                <input class="form-control" type="text" name="curp" id="curp" maxlength="18"
+                                    minlength="18" onblur="curp2date()">
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Nombre Completo</strong>
+                                <input class="form-control" type="text" name="nombre_completo" id="nombre_completo">
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Escolaridad</strong>
+                                <select class="form-control" name="escolaridad" id="escolaridad">
+                                    <option value="0">Seleccione...</option>
+                                    <option value="Primaria">Primaria</option>
+                                    <option value="Secundaria">Secundaria</option>
+                                    <option value="Preparatoria/Bachillerato">Preparatoria/Bachillerato</option>
+                                    <option value="Licenciatura/Ingenieria">Licenciatura/Ingenieria</option>
+                                    <option value="Maestria">Maestria</option>
+                                    <option value="Doctorado">Doctorado</option>
+                                    <option value="Sin estudios">Sin estudios</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Fecha de nacimiento</strong>
+                                <input class="form-control" type="date" name="birth_date" id="birth_date">
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Edad</strong>
+                                <input class="form-control" type="text" name="edad" id="edad">
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Sexo</strong>
+                                <input class="form-control" type="text" name="sex" id="sex">
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Talla</strong>
+                                <input class="form-control" type="text" name="talla" id="talla">
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Peso</strong>
+                                <input class="form-control" type="number" name="peso" id="peso" onblur="calculaIMC();">
+                            </div>
+                            <div class="col-md-4">
+                                <strong>IMC</strong>
+                                <input class="form-control" type="text" name="imc" id="imc" readonly>
+                            </div>
+                        </div> <!-- div row-->
+
+                        <div class="form-header">
+                            <h5 class="form-title">Antecendetes Patologicos</h5>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-3">
+                                <span>Tabaquismo</span>
+                                <label class="container">
+                                    <input type="checkbox" name="tabaquismo" id="tabaquismo">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
+                            <div class="col-md-3">
+                                <span>Alcoholismo</span>
+                                <label class="container">
+                                    <input type="checkbox" name="alcoholismo" id="alcoholismo">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <span>Esteatosis Hepatica</span>
+                                <label class="container">
+                                    <input type="checkbox" name="EH" id="EH">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <span>Diabetes Mellitus</span>
+                                <label class="container">
+                                    <input type="checkbox" name="DM" id="DM">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <span>Hipertensión Arterial</span>
+                                <label class="container">
+                                    <input type="checkbox" name="HA" id="HA">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <span>Obesidad</span>
+                                <label class="container">
+                                    <input type="checkbox" name="obesidad" id="obesidad">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <span>Hiperlipidemia</span>
+                                <label class="container">
+                                    <input type="checkbox" name="hiperlipidemia" id="hiperlipidemia">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
+
+                        </div>
+
+                        <div class="form-header">
+                            <h5 class="form-title">Laboratorios</h5>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <strong>Plaquetas</strong>
+                                <input class="form-control" type="number" name="plaquetas" id="plaquetas">
+                            </div>
+                            <div class="col-md-3">
+                                <strong>Factor Reumatoide Basal</strong>
+                                <input class="form-control" type="number" name="FRB" id="FRB">
+                            </div>
+                            <div class="col-md-3">
+                                <strong>Factor Reumatoide Nominal</strong>
+                                <select class="form-control" name="FRN" id="FRN">
+                                    <option value="0">Seleccione...</option>
+                                    <option value="Positivo">Positivo</option>
+                                    <option value="Negativo">Negativo</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <strong>PCR</strong>
+                                <input class="form-control" type="number" name="PCR" id="PCR">
+                            </div>
+                            <div class="col-md-3">
+                                <strong>Vitamina D Basal</strong>
+                                <input class="form-control" type="number" name="VDB" id="VDB">
+                            </div>
+                            <div class="col-md-3">
+                                <strong>Vitamina D Nominal</strong>
+                                <select class="form-control" name="VDN" id="VDN">
+                                    <option value="0">Seleccione...</option>
+                                    <option value="Normal">Normal</option>
+                                    <option value="Deficiente">Deficiente</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <strong>AC Anticpp Basal</strong>
+                                <input class="form-control" type="number" name="AAB" id=AAB"">
+                            </div>
+                            <div class="col-md-3">
+                                <strong>AC Anticpp Nominal</strong>
+                                <select class="form-control" name="AAN" id="AAN">
+                                    <option value="0">Seleccione...</option>
+                                    <option value="Positivo">Positivo</option>
+                                    <option value="Negativo">Negativo</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <strong>VSG</strong>
+                                <input class="form-control" type="number" name="VSG" id="VSG">
+                            </div>
+                            <div class="col-md-3">
+                                <strong>TGO Basal</strong>
+                                <input class="form-control" type="number" name="TGOB" id="TGOB">
+                            </div>
+                            <div class="col-md-3">
+                                <strong>TGO Nominal</strong>
+                                <select class="form-control" name="TGON" id="TGON">
+                                    <option value="0">Seleccione...</option>
+                                    <option value="Normal">Normal</option>
+                                    <option value="Anormal">Anormal</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <strong>TGP Basal</strong>
+                                <input class="form-control" type="number" name="TGPB" id="TGPB">
+                            </div>
+                            <div class="col-md-3">
+                                <strong>TGP Nominal</strong>
+                                <select class="form-control" name="TGPN" id="TGPN">
+                                    <option value="0">Seleccione...</option>
+                                    <option value="Normal">Normal</option>
+                                    <option value="Anormal">Anormal</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <strong>Glucosa</strong>
+                                <input class="form-control" type="number" name="glucosa" id="glucosa">
+                            </div>
+                            <div class="col-md-3">
+                                <strong>Colesterol</strong>
+                                <input class="form-control" type="number" name="colesterol" id="colesterol">
+                            </div>
+                            <div class="col-md-3">
+                                <strong>Trigliceridos</strong>
+                                <input class="form-control" type="number" name="trigliceridos" id="trigliceridos">
+                            </div>
+                            <div class="col-md-3">
+                                <strong><a href="https://www.hepatitisc.uw.edu/page/clinical-calculators/fib-4">Fib
+                                        4</a></strong>
+                                <input class="form-control" type="number" name="FIB4" id="FIB4"
+                                    onblur="calculateFIB4Result()">
+                            </div>
+                            <div class="col-md-3">
+                                <strong>Resultado FIB 4</strong>
+                                <input class="form-control" type="text" name="resultado_fib" id="resultado_fib"
+                                    readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-header">
+                            <h5 class="form-title">USG HEPÁTICO</h5>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <strong>USG Hepático</strong>
+                                <select class="form-control" name="USG_hep" id="USG_hep">
+                                    <option value="0">Seleccione...</option>
+                                    <option value="Si">Si</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12">
+                                <strong>Hallazgo USG</strong>
+                                <select class="form-control" name="USG_haz" id="USG_haz">
+                                    <option value="0">Seleccione...</option>
+                                    <option value="Normal">Normal</option>
+                                    <option value="Cirrosis hepatica">Cirrosis hepatica</option>
+                                    <option value="Esteatosis">Esteatosis</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12">
+                                <strong>Clasificación Esteatosis</strong>
+                                <select class="form-control" name="CE" id="CE">
+                                    <option value="0">Seleccione...</option>
+                                    <option value="Leve">Leve</option>
+                                    <option value="Moderada">Moderada</option>
+                                    <option value="Severa">Severa</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-header">
+                            <h5 class="form-title">Clinica</h5>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <strong>Articulaciones Inflamadas SJC28</strong>
+                                <input class="form-control" type="number" name="sjc28" id="sjc28">
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Articulaciones Dolorosas TJC28</strong>
+                                <input class="form-control" type="number" name="tjc28" id="tjc28">
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Evaluación Global PGA</strong>
+                                <input class="form-control" type="number" name="pga" id="pga">
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Evaluación del Evaluador EGA</strong>
+                                <input class="form-control" type="number" name="ega" id="ega" onblur="suma_CDAI(),suma_SDAI()">
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Resultado CDAI</strong>
+                                <input class="form-control" type="number" name="CDAI" id="CDAI">
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Resultado SDAI</strong>
+                                <input class="form-control" type="number" name="SDAI" id="SDAI">
+                            </div>
+                        </div>
+
+                        <div class="form-header">
+                            <h5 class="form-title">Tratamiento</h5>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2">
+                                <span>Metrotexate</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Metrotexate" id="Metrotexate">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-4" >
+                                <strong>Dosis Semanal</strong>
+                                <input class="form-control" type="number" name="ds_metro" id="ds_metro">
+                            </div>
+                            <div class="col-md-2">
+                                <span>Leflunomide</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Leflunomide" id="Leflunomide">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-4" >
+                                <strong>Dosis Semanal</strong>
+                                <input class="form-control" type="number" name="ds_leflu" id="ds_leflu">
+                            </div>
+                            <div class="col-md-2">
+                                <span>Sulfazalasina</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Sulfazalasina" id="Sulfazalasina">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Dosis Semanal</strong>
+                                <input class="form-control" type="number" name="ds_sulfa" id="ds_sulfa">
+                            </div>
+                            <div class="col-md-2">
+                                <span>Tocoferol</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Tocoferol" id="Tocoferol">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Dosis Semanal</strong>
+                                <input class="form-control" type="number" name="ds_toco" id="ds_toco">
+                            </div>
+
+                            <div class="col-md-2">
+                                <span>Glucocorticoide</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Glucocorticoide" id="Glucocorticoide">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-5">
+                                <strong>Tratamiento</strong>
+                                <select class="form-control" name="tx_gluco" id="tx_gluco">
+                                    <option value="0">Seleccione...</option>
+                                    <option value="Deflazacort">Deflazacort</option>
+                                    <option value="Prednisona">Prednisona</option>
+                                </select>
+                            </div>
+                            <div class="col-md-5">
+                                <strong>Dosis Semanal</strong>
+                                <input class="form-control" type="number" name="ds_gluco" id="ds_gluco">
+                            </div>
+
+                            <div class="col-md-2">
+                                <span>Vitamina D</span>
+                                <label class="container">
+                                    <input type="checkbox" name="vit_d" id="vit_d">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Dosis Semanal</strong>
+                                <input class="form-control" type="number" name="ds_vit" id="ds_vit">
+                            </div>
+                            <div class="col-md-2">
+                                <span>Biológico</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Biologico" id="Biologico">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Tratamiento</strong>
+                                <select class="form-control" name="tx_bio" id="tx_bio">
+                                    <option value="0">Seleccione...</option>
+                                    <option value="Rituximab">Rituximab</option>
+                                    <option value="Abatacept">Abatacept</option>
+                                    <option value="Adalimumab">Adalimumab</option>
+                                    <option value="Tocilizumab">Tocilizumab</option>
+                                    <option value="Pertuzumab">Pertuzumab</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12">
+                                <strong>Apego a Tratamiento</strong>
+                                <select class="form-control" name="AT" id="AT">
+                                    <option value="0">Seleccione...</option>
+                                    <option value="Parcial">Parcial</option>
+                                    <option value="Total">Total</option>
+                                    <option value="Sin Apego">Sin Apego</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+
+                    </div> <!-- DIV ROW LINEA 13 -->
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div><!--DIV DEL BODY  -->
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
