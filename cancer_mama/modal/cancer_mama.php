@@ -19,7 +19,42 @@
 
                 <div class="row">
 
-                    <div class="col-md-4" id="idnombre">
+                    <div class="col-md-12">
+                        <strong style="font-size: 13px;">Nombre</strong>
+                        <input id="nombre_px" name="nombre_px" type="text" class="control form-control" value="" style="font-size: 13px;">
+                    </div>
+
+                    <div class="col-md-4">
+                        <strong style="font-size: 13px;">CURP</strong>
+                        <input id="curp" name="curp" type="text" class="control form-control" value="" style="font-size: 13px;">
+                    </div>
+
+                    <div class="col-md-4">
+                        <strong style="font-size: 13px;">Género</strong>
+                        <input id="genero" name="genero" type="text" class="control form-control" value="" style="font-size: 13px;">
+                    </div>
+
+                    <div class="col-md-4">
+                        <strong style="font-size: 13px; ">Fecha de Nacimiento</strong>
+                        <input id="fecha_nacimiento" name="fecha_nacimiento" type="date" class="control form-control" style="font-size: 13px;">
+                    </div>
+
+                    <div class="col-md-4">
+                            <strong style="font-size: 14px;">Estado Civil</strong>
+                            <select name="Estadocivil" id="Estadocivil" class="form-control" style="font-size: 13px;">
+                                <option value="Sin Registro">Seleccione</option>
+                                <option value="Soltera">Soltero</option>
+                                <option value="Casada">Casado</option>
+                                <option value="Viuda">Viudo</option>
+                                <option value="Divorciada">Divorciado</option>
+                                <option value="Concubinato">Concubinato</option>
+                                <option value="Separada">Separado</option>
+                            </select>
+                            </select>
+                        </div>
+
+                    
+                    <div class="col-md-4">
                         <strong style="font-size: 13px;">Raza</strong>
                         <input id="Raza" name="Raza" type="text" class="control form-control" value="" style="font-size: 13px;">
                     </div>
@@ -35,10 +70,6 @@
                         </select>
                     </div>
 
-                    <div class="col-md-4">
-                        <strong style="font-size: 13px; ">Fecha de Nacimiento</strong>
-                        <input id="fecha" name="fecha" type="date" class="control form-control" style="font-size: 13px;">
-                    </div>
 
                     <div class="form-header">
                         <h5 class="form-title" style="text-align: center;
@@ -188,11 +219,11 @@
                             <option value="Sin Antecedentes">Sin Antecedentes</option>
                         </select>
                     </div>
-                    
+
 
                     <div class="col-md-12" id="Cancer_prostata" style="display:none;">
                         <strong style="font-size: 13px;">Cáncer Próstata</strong>
-                        <select name="Heredo_CancerProstata" id="Heredo_CancerProstata" class="form-control" style="font-size: 13px;" >
+                        <select name="Heredo_CancerProstata" id="Heredo_CancerProstata" class="form-control" style="font-size: 13px;">
                             <option value="Seleccione">Seleccione</option>
                             <option value="Si">Si</option>
                             <option value="No">No</option>
@@ -251,7 +282,7 @@
 
                     <div class="col-md-12" id="CancerOvario" style="display:none;">
                         <strong style="font-size: 13px;">Cáncer Ovario</strong>
-                        <select name="Heredo_CancerOvario" id="Heredo_CancerOvario" class="form-control" style="font-size: 13px;"  >
+                        <select name="Heredo_CancerOvario" id="Heredo_CancerOvario" class="form-control" style="font-size: 13px;">
                             <option value="Seleccione">Seleccione</option>
                             <option value="Si">Si</option>
                             <option value="No">No</option>
@@ -309,7 +340,7 @@
 
                     <div class="col-md-12" id="AH_Cancer_Mama" style="display:none;">
                         <strong style="font-size: 13px;">Cáncer Mama</strong>
-                        <select name="Heredo_CancerMama" id="Heredo_CancerMama" class="form-control" style="font-size: 13px;"  >
+                        <select name="Heredo_CancerMama" id="Heredo_CancerMama" class="form-control" style="font-size: 13px;">
                             <option value="Seleccione">Seleccione</option>
                             <option value="Si">Si</option>
                             <option value="No">No</option>
@@ -640,21 +671,23 @@
                         </select>
                     </div>
 
-                    <div class="col-md-6" id="Latera_maste">
-                        <strong style="font-size: 13px;">Lateralidad Mastectomía Extrainstitucional</strong>
-                        <select name="Lateralidad_mastectomia" id="Lateralidad_mastectomia" class="form-control" style="font-size: 13px;">
-                            <option value="Sin Registro">Sin Registro</option>
-                            <option value="Mama Derecha">Mama Derecha</option>
-                            <option value="Mama Izquierda">Mama Izquierda</option>
-                            <option value="Ambas Mamas">Ambas Mamas</option>
-                        </select>
-                    </div>
+                    <div class="row" id="late_fecha_maste">
 
-                    <div class="col-md-6" id="fecha_latera_maste">
-                        <strong style="font-size: 13px;">Fecha</strong>
-                        <input type="date" class="control form-control" id="Fecha_Mastectomia" name="Fecha_Mastectomia" style="font-size: 13px;">
-                    </div>
+                        <div class="col-md-6" id="Latera_maste">
+                            <strong style="font-size: 13px;">Lateralidad Mastectomía Extrainstitucional</strong>
+                            <select name="Lateralidad_mastectomia" id="Lateralidad_mastectomia" class="form-control" style="font-size: 13px;">
+                                <option value="Sin Registro">Sin Registro</option>
+                                <option value="Mama Derecha">Mama Derecha</option>
+                                <option value="Mama Izquierda">Mama Izquierda</option>
+                                <option value="Ambas Mamas">Ambas Mamas</option>
+                            </select>
+                        </div>
 
+                        <div class="col-md-6" id="fecha_latera_maste">
+                            <strong style="font-size: 13px;">Fecha</strong>
+                            <input type="date" class="control form-control" id="Fecha_Mastectomia" name="Fecha_Mastectomia" style="font-size: 13px;">
+                        </div>
+                    </div>
 
                     <!--Atención Clínica  -->
 
