@@ -12,7 +12,7 @@
 
 require ('php/controllers/registros.controller.php');
 
-include ("modal/registroenfermeriaguardias.html");
+include ("modal/registrarpaciente.html");
 ?>
 <!DOCTYPE html>
 
