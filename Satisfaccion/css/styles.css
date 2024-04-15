@@ -1,0 +1,115 @@
+
+/* Estilos específicos para tabletas */
+@media (max-width: 768px) {
+
+    .gender-option {
+        width: 100px;
+        height: 100px;
+    }
+
+
+    /* Ajustes de estilos para tabletas */
+    .header-container {
+        max-width: 90%; /* Reducir el ancho máximo del header en tabletas */
+    }
+
+    .card-container {
+        height: auto; /* Ajustar la altura de la tarjeta automáticamente en tabletas */
+    }
+
+    .card {
+        padding: 15px; /* Reducir el espacio interior de la tarjeta en tabletas */
+    }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color:rgb(252, 251, 251);
+}
+
+/*Estos son los estilos del botón iniciar encuesta*/
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Altura del contenedor del botón, puedes ajustarla según tus necesidades */
+}
+
+.button-link {
+    background-color: rgb(159, 34, 65);
+    color: #fff;
+    padding: 30px 35px; /* Aumentar el padding vertical para hacer el botón más alto */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: rgb(139, 24, 55); /* Cambiar color al pasar el mouse por encima */
+}
+
+
+/* Aquí inician los estilos de las cards*/
+/* Estilos para las tarjetas */
+
+.gender-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Centra verticalmente las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten automáticamente en una fila */
+    margin-top: 20px;
+}
+
+.age-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Centra verticalmente las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten automáticamente en una fila */
+    margin-top: 20px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Centra verticalmente las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten automáticamente en una fila */
+    margin-top: 30px;
+}
+
+.card {
+    width: 200px; /* Ancho de las tarjetas */
+    height: 200px; /* Altura de las tarjetas */
+    border-radius: 50px; /* Bordes redondeados */
+    overflow: hidden;
+    cursor: pointer;
+    margin: 20px; /* Margen alrededor de las tarjetas */
+    position: relative;
+    transition: transform 0.3s ease; /* Transición para el efecto de zoom in */
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajuste de la imagen al tamaño de la tarjeta */
+}
+
+.card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: white;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.5); /* Sombra roja al pasar el mouse */
+    transform: scale(1.1); /* Zoom in extra en la imagen al pasar el mouse */
+}

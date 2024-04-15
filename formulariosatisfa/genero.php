@@ -34,54 +34,59 @@
                         background-color:rgb(162, 34, 68,0.8);
                         color: aliceblue;
                         margin-top:30;
-                        font-size: 30px;">
-            Género</h5>
+                        font-size: 30px;
+                        ">
+            Género </h5>
+        <div style="position: absolute; bottom: 7; right: 0; padding: 15px;">
+            <a href="edad.php">
+                <button type="button" class="btn btn-outline-light" id="inicio-button" title="Edad" style="font-size: 30px; background-color: rgb(134, 72, 90); color: white;">
+                    <i class="bi bi-arrow-right-circle-fill"></i>
+                </button>
+            </a>
+        </div>
+
     </div>
 
 
     <div class="cards-list">
 
-        <div class="card 1">
-            <div class="card_image">
-                <img src="img/hombre.png" />
+        <div class="card card-1" onclick="document.getElementById('masculino').checked = true;">
+            <div class="card_image" style="color: black; font-size: 20px;"> <img src="img/hombre.png" />Masculino </div>
+            <div class="card_title">
+                <input type="radio" id="masculino" name="genero" value="masculino" style="display: none;"><br><br>
+                <label  for="masculino"></label>
             </div>
-            <a href="edad.php">
-                <div class="card_title">
-                    <p style="color: black;">Masculino</p>
-            </a>
         </div>
 
-    </div><br>
+       
 
-    <div class="card 2">
-        <div class="card_image">
-            <img src="img/mujer.png" />
-        </div>
-        <a href="edad.php">
-            <div class="card_title ">
-                <p style="color: black;">Femenino</p>
+        <div class="card card-2" onclick="document.getElementById('femenino').checked = true;">
+            <div class="card_image"> <img src="img/mujer.png" /> </div>
+            <div class="card_title">
+                <label style="color: black; font-size: 20px;" for="femenino">Femenino</label><br>
+                <input type="radio" id="femenino" name="genero" value="femenino">
             </div>
-        </a>
-    </div>
 
 
-    <div class="card 3">
-        <div class="card_image">
-            <img src="img/otro.png" />
         </div>
-        <a href="edad.php">
-            <div class="card_title ">
-                <p style="color: black;">Otro</p>
-        </a>
+
+        <div class="card card-3" onclick="document.getElementById('otro').checked = true;">
+            <div class="card_image"> <img src="img/otro.png" /> </div>
+            <div class="card_title">
+                <label style="color: black; font-size: 20px;" for="otro">Otro</label><br>
+                <input type="radio" id="otro" name="genero" value="otro">
+
+            </div>
+
+
+        </div>
     </div>
-    </div>
 
 
 
 
-    </div>
 
-    </div>
+
 
     <footer style="font-size:8px;">
         Hospital Regional de Alta Especialidad de Ixtapaluca <br> Dirección de Operaciones - Gestión Digital en Salud - 2023
