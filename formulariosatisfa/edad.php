@@ -20,13 +20,7 @@
 
     <header>
         <div class="container">
-            <div style=" padding: 20px; text-align: left;">
-                <a href="genero.php">
-                    <button type="button" class="btn btn-outline-light" id="inicio-button" title="Inicio">
-                        <i class="bi bi-rewind-fill"></i>
-                    </button>
-                </a>
-            </div>
+
             <div class="logo">
                 <img src="img/hraei11.png" alt="Logo" style="max-width: 50px; height: auto;">
             </div>
@@ -37,64 +31,77 @@
 
     <div class="form-header">
 
+    <div style="position: absolute; bottom: 7; right: 0; padding: 15px;">
+            <a href="servicio.php">
+                <button type="button" class="btn btn-outline-light" id="inicio-button" title="Edad" style="font-size: 30px; background-color: rgb(134, 72, 90); color: white;">
+                    <i class="bi bi-arrow-right-circle-fill"></i>
+                </button>
+            </a>
+        </div>
+
         <h5 class="form-title" style="text-align: center;
                         background-color:rgb(162, 34, 68,0.8);
                         color: aliceblue;
                         margin-top:30;
                         font-size: 30px;">
             Edad</h5>
+
+
+       
     </div>
-    <div class="container">
 
-
+    <div class="row">
         <div class="cards-list">
-
-            <div class="cards-list">
-                <div class="card-container">
-                    <div class="card card1" onclick="document.getElementById('menor18años').checked = true;">
-                        <div class="card_image"> <img src="img/adolescentes1.png" /> </div>
-                        <div class="card_title ">
-                            <label style="color: black; font-size: 20px;" for="menor18años">Menor de 18 años</label><br>
-                            <input type="radio" id="menor18años" name="menor18años" value="menor18años">
-                        </div>
-                    </div>
-                
-
-                <div class="card 2">
-                    <div class="card_image">
-                        <img src="img/ninos1.png" />
-                    </div>
-                    <div class="card_title ">
-                        <p style="color: black; font-size: 20px;">Entre 19 y 30 años</p>
-                    </div>
+            <div class="card card-1 circular-card" onclick="document.getElementById('menor18años').checked = true;">
+                <div class="card_image"> <img src="img/niños.png" /> </div>
+                <div class="card_title">
+                    <input type="radio" id="menor18años" name="edad" value="menor18años"><br><br>
+                    <label style="color: black; font-size: 20px;" for="menor18años">Menor de 18 años</label><br>
                 </div>
-
-                <div class="card 3">
-                    <div class="card_image">
-                        <img src="img/adolescentes.png" />
-                    </div>
-                    <div class="card_title ">
-                        <p style="color: black; font-size: 20px;">Entre 31 y 49 años</p>
-                    </div>
-                </div>
-
-                <div class="card 4">
-                    <div class="card_image">
-                        <img src="img/adulto.png" />
-                    </div>
-                    <div class="card_title ">
-                        <p style="color: black; font-size: 20px;">Entre 50 y 65 años</p>
-                    </div>
-                </div>
-
-                </div>
-
             </div>
 
+            <div class="card card-2 circular-card" onclick="document.getElementById('adolecentes19a30años').checked = true;">
+                <div class="card_image"> <img src="img/adolescente.png" /> </div>
+                <div class="card_title">
+                    <input type="radio" id="adolecentes19a30años" name="edad" value="adolecentes19a30años">
+                    <br><br>
+                    <label style="color: black; font-size: 20px;" for="adolecentes19a30años">Entre 19 y 30 años</label><br>
+                </div>
+            </div>
+
+            <div class="card card-3 circular-card" onclick="document.getElementById('adolecentes31a49años').checked = true;">
+                <div class="card_image"> <img src="img/adulto.png" /> </div>
+                <div class="card_title">
+                <input type="radio" id="adolecentes31a49años" name="edad" value="adolecentes31a49años">
+                <br><br>
+                    <label style="color: black; font-size: 20px;" for="adolecentes31a49años">Entre 31 y 49 años</label><br>
+                </div>
+            </div>
+
+            <div class="card card-3 circular-card" onclick="document.getElementById('adulto50a65años').checked = true;">
+                <div class="card_image"> <img src="img/abuelito.png" /> </div>
+                <div class="card_title">
+                <input type="radio" id="adulto50a65años" name="edad" value="adulto50a65años">
+                <br><br>
+                    <label style="color: black; font-size: 20px;" for="adulto50a65años">Entre 50 y 65 años</label><br>
+                </div>
+            </div>
+
+            
         </div>
 
-
+        <div style="padding: 20px; text-align: left;">
+            <a href="genero.php">
+                <button type="button" class="btn btn-outline-light" id="inicio-button" title="Inicio" style="font-size: 24px; background-color: blue; color: white;">
+                    <i class="bi bi-rewind-fill"></i>
+                </button>
+            </a>
+        </div>
     </div>
+
+
+
+
     <footer style="font-size:8px;">
         Hospital Regional de Alta Especialidad de Ixtapaluca <br> Dirección de Operaciones - Gestión Digital en Salud - 2023
     </footer>

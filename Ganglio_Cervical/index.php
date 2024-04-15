@@ -149,7 +149,7 @@ include("modal/ganglio_cervical.php");
     <footer>
         Hospital Regional de Alta Especialidad de Ixtapaluca
         <br>
-        Dirección de Operaciones - Gestión Digital en Salud - 2023
+        Dirección de Operaciones - Gestión Digital en Salud - 2024
 
     </footer>
 
