@@ -50,7 +50,9 @@ require('php/controllers/registro.controller.php');
                     <th>Servicio</th>
                     <th>Turno</th>
                     <th>Profesión</th>
+                    <th>Profesión Otro</th>
                     <th>Contrato</th>
+                    <th>Contrato Otro</th>
                     <th>1. ¿Conoce cómo se debe realizar un reporte de un evento adverso, evento centinela o Cuasifalla en el HRAEI?</th>
                     <th>Si su respuesta es afirmativa</th>
                     <th>2. ¿Durante los 2 últimos años usted ha realizado el reporte de algún tipo de evento, evento adverso, evento centinela o Cuasifalla?</th>
@@ -86,7 +88,13 @@ require('php/controllers/registro.controller.php');
                             <?= $dato['profesion'] ?>
                         </td>
                         <td>
+                            <?= $dato['profesion_otro'] ?>
+                        </td>
+                        <td>
                             <?= $dato['contrato'] ?>
+                        </td>
+                        <td>
+                            <?= $dato['contrato_otro'] ?>
                         </td>
                         <td>
                             <?= $dato['pregunta_1'] ?>

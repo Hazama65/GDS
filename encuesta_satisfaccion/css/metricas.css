@@ -1,0 +1,58 @@
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+header {
+    background-image: linear-gradient(0deg, #f33779 0%, #ff8787 95%);
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: #ffff;
+}
+
+#chartdiv_1,
+#chartdiv_1_1,
+#chartdiv_2,
+#chartdiv_2_1_a,
+#chartdiv_2_1_b,
+#chartdiv_3,
+#chartdiv_4,
+#chartdiv_4_1,
+#chartdiv_4_2,
+#chartdiv_4_3 {
+    width: 50%;
+    height: 400px;
+    margin-bottom: 95px;
+}
+
+.container {
+    text-align: center;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+}
+
+.graficas-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.badge {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-image: linear-gradient(0deg, #ff726b 0%, #f2d5d5 100%);
+    color: white;
+    font-size: 20px;
+}
+
+.badge h6 {
+    margin-top: 10px;
+    font-size: 12px;
+}

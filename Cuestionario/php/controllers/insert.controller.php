@@ -18,12 +18,14 @@
         );
 
         $Data_datos_cuestionario = array(
-            'edad'       => $_POST['Edad'],
-            'sexo'       => $_POST['Sexo'],
-            'servicio'   => $_POST['Servicio'],
-            'turno'      => $_POST['Turno'],
-            'profesion'  => $_POST['Disciplina'],
-            'contrato'   => $_POST['contratacion']
+            'edad'             => $_POST['Edad'],
+            'sexo'             => $_POST['Sexo'],
+            'servicio'         => $_POST['Servicio'],
+            'turno'            => $_POST['Turno'],
+            'profesion'        => $_POST['Disciplina'],
+            'profesion_otro'   => $_POST['Disciplina_otro'],
+            'contrato'         => $_POST['contratacion'],
+            'contrato_otro'    => $_POST['contratacion_otro']
         );
 
         foreach ($Data_datos_cuestionario as $key => $value) {

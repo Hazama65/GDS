@@ -31,7 +31,10 @@
                                 <?php
                                 if (!empty($data_empleados)) {
                                     foreach ($data_empleados as $row1) {
-                                        echo "<option value='" . $row1["nombre_empleado"] . "' data-numeroempleado='" . $row1["no_empleado"] . "'>" . $row1["nombre_empleado"] . "</option>";
+                                        echo "<option value='" . $row1["nombre_empleado"] . "' 
+                                        data-numeroempleado='" . $row1["no_empleado"] . "'
+                                        data-gradoEstudios='" . $row1["ult_grado_estudio"] . "'
+                                        >" . $row1["nombre_empleado"] . "</option>";
                                     }
                                 } else {
                                     echo "<option value=''>No hay datos disponibles</option>";
@@ -43,21 +46,14 @@
                         <div class="col-md-6">
                             <strong style="font-size: 14px; ">Número de Empleado</strong>
                             <input id="numeroempleado_1" name="numeroempleado_1" type="number"
-                                class="control form-control" style="font-size: 13px;" readonly>
+                                class="control form-control" style="font-size: 13px; background-color: #e9ecef" readonly>
                         </div>
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Nivel Académico</strong>
-                            <select name="nivel_academico" id="nivel_academico" class="form-control"
-                                style="font-size: 14px;">
-                                <option value="">Seleccione</option>
-                                <option value="Técnico">Técnico</option>
-                                <option value="Postécnico">Postécnico</option>
-                                <option value="Licenciatura">Licenciatura</option>
-                                <option value="Posgrado">Posgrado</option>
-                                <option value="Maestría">Maestría</option>
-
-                            </select>
+                            <input name="nivel_academico" id="nivel_academico" class="control form-control"
+                                style="font-size: 13px; background-color: #e9ecef" readonly>
+                            
                         </div>
 
                         <div class="col-md-3">
@@ -66,9 +62,14 @@
                                 <option value="">Seleccione</option>
                                 <option value="Matutino">Matutino</option>
                                 <option value="Vespertino">Vespertino</option>
-                                <option value="Nocturno A">Nocturno A</option>
-                                <option value="Nocturno B">Nocturno B</option>
-                                <option value="Nocturno Especíal">Nocturno Especíal</option>
+                                <option value="Nocturno - LUNES, JUEVES Y SABADO">Nocturno - LUNES, JUEVES Y SABADO</option>
+                                <option value="Nocturno - LUNES, MIERCOLES Y SABADO">Nocturno - LUNES, MIERCOLES Y SABADO</option>
+                                <option value="Nocturno - LUNES, MIERCOLES Y VIERNES">Nocturno - LUNES, MIERCOLES Y VIERNES</option>
+                                <option value="Nocturno - MARTES, JUEVES Y DOMINGO">Nocturno - MARTES, JUEVES Y DOMINGO</option>
+                                <option value="Nocturno - MARTES, JUEVES Y SABADO">Nocturno - MARTES, JUEVES Y SABADO</option>
+                                <option value="Nocturno - MARTES, VIERNES Y DOMINGO">Nocturno - MARTES, VIERNES Y DOMINGO</option>
+                                <option value="Nocturno - MIERCOLES, VIERNES Y DOMINGO">Nocturno - MIERCOLES, VIERNES Y DOMINGO</option>
+                                <option value="Jornada Acumulada Diurna">Jornada Acumulada Diurna</option>
 
                             </select>
                         </div>
@@ -215,7 +216,10 @@
                                 <?php
                                 if (!empty($data_empleados)) {
                                     foreach ($data_empleados as $row1) {
-                                        echo "<option value='" . $row1["nombre_empleado"] . "' data-numeroempleado='" . $row1["no_empleado"] . "'>" . $row1["nombre_empleado"] . "</option>";
+                                        echo "<option value='" . $row1["nombre_empleado"] . "' 
+                                        data-numeroempleado='" . $row1["no_empleado"] . "'
+                                        data-gradoEstudios='" . $row1["ult_grado_estudio"] . "'
+                                        >" . $row1["nombre_empleado"] . "</option>";
                                     }
                                 } else {
                                     echo "<option value=''>No hay datos disponibles</option>";
@@ -227,21 +231,13 @@
                         <div class="col-md-6">
                             <strong style="font-size: 14px; ">Número de Empleado</strong>
                             <input id="enlace_numeroempleado_sustituto" name="enlace_numeroempleado_sustituto"
-                                type="number" class="control form-control" style="font-size: 13px;" readonly>
+                                type="number" class="control form-control" style="font-size: 13px; background-color: #e9ecef" readonly>
                         </div>
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Nivel Académico</strong>
-                            <select name="nivel_academico_sustituto" id="nivel_academico_sustituto" class="form-control"
-                                style="font-size: 14px;">
-                                <option value="">Seleccione</option>
-                                <option value="Técnico">Técnico</option>
-                                <option value="Postécnico">Postécnico</option>
-                                <option value="Licenciatura">Licenciatura</option>
-                                <option value="Posgrado">Posgrado</option>
-                                <option value="Maestría">Maestría</option>
-
-                            </select>
+                            <input name="nivel_academico_sustituto" id="nivel_academico_sustituto" class="control form-control"
+                                style="font-size: 14px; background-color: #e9ecef" readonly>
                         </div>
 
                         <div class="col-md-3">
@@ -251,10 +247,14 @@
                                 <option value="">Seleccione</option>
                                 <option value="Matutino">Matutino</option>
                                 <option value="Vespertino">Vespertino</option>
-                                <option value="Nocturno A">Nocturno A</option>
-                                <option value="Nocturno B">Nocturno B</option>
-                                <option value="Nocturno Especíal">Nocturno Especíal</option>
-
+                                <option value="Nocturno - LUNES, JUEVES Y SABADO">Nocturno - LUNES, JUEVES Y SABADO</option>
+                                <option value="Nocturno - LUNES, MIERCOLES Y SABADO">Nocturno - LUNES, MIERCOLES Y SABADO</option>
+                                <option value="Nocturno - LUNES, MIERCOLES Y VIERNES">Nocturno - LUNES, MIERCOLES Y VIERNES</option>
+                                <option value="Nocturno - MARTES, JUEVES Y DOMINGO">Nocturno - MARTES, JUEVES Y DOMINGO</option>
+                                <option value="Nocturno - MARTES, JUEVES Y SABADO">Nocturno - MARTES, JUEVES Y SABADO</option>
+                                <option value="Nocturno - MARTES, VIERNES Y DOMINGO">Nocturno - MARTES, VIERNES Y DOMINGO</option>
+                                <option value="Nocturno - MIERCOLES, VIERNES Y DOMINGO">Nocturno - MIERCOLES, VIERNES Y DOMINGO</option>
+                                <option value="Jornada Acumulada Diurna">Jornada Acumulada Diurna</option>
                             </select>
                         </div>
 
@@ -412,11 +412,24 @@
 
                         <div class="col-md-4">
                             <strong style="font-size: 14px;">Nombre de Quien Autoriza </strong>
-                            <input type="text" class="control form-control" id="autoriza" name="autoriza"
-                                style="font-size: 13px;">
+                            <select type="text" class="control form-control" id="autoriza" name="autoriza"
+                                style="font-size: 13px;" required>
+                                <option value="">Seleccione un Medico</option>
+                                <option value="BECERRIL VERGARA ALONDRA MERCEDES">BECERRIL VERGARA ALONDRA MERCEDES</option>
+                                <option value="ESPINOZA REYES MARIA DEL CARMEN">ESPINOZA REYES MARIA DEL CARMEN</option>
+                                <option value="GARCIA VELASCO MARIA DE LOS ANGELES">GARCIA VELASCO MARIA DE LOS ANGELES</option>
+                                <option value="GAYTAN MEDEL SARAI">GAYTAN MEDEL SARAI</option>
+                                <option value="GORDILLO CRUZ ARACELI">GORDILLO CRUZ ARACELI</option>
+                                <option value="HERNANDEZ GARCIA VERONICA">HERNANDEZ GARCIA VERONICA</option>
+                                <option value="HERRERA HINOJOSA MARCO ANTONIO">HERRERA HINOJOSA MARCO ANTONIO</option>
+                                <option value="HUERTA ESPINDOLA MARIO ROBERTO CECILIO">HUERTA ESPINDOLA MARIO ROBERTO CECILIO</option>
+                                <option value="JAINZ HERNANDEZ ALEJANDRA">JAINZ HERNANDEZ ALEJANDRA</option>
+                                <option value="SALADO LUCERO MARIA LETICIA">SALADO LUCERO MARIA LETICIA</option>
+                                <option value="SANABRIA PAISANO JOSE ALFREDO">SANABRIA PAISANO JOSE ALFREDO</option>
+                                <option value="SANCHEZ MORENO MARIA DEL ROCIO">SANCHEZ MORENO MARIA DEL ROCIO</option>
+                                <option value="TAMANIS LAVASTIDA PABLO">TAMANIS LAVASTIDA PABLO</option>
+                            </select>
                         </div>
-
-
 
                     </div> <!-- DIV ROW LINEA 13 -->
 

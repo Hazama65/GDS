@@ -1,3 +1,29 @@
+const datos_generales = () => {
+    const disiplina = document.getElementById('Disciplina');
+    const disiplina_otro = document.getElementById('Disciplina_otro');
+    const contratacion = document.getElementById('contratacion');
+    const contratacion_otro = document.getElementById('contratacion_otro');
+
+    disiplina_otro.style.display = "none";
+    contratacion_otro.style.display = "none";
+
+    disiplina.addEventListener('change', function () {
+        if (disiplina.value === "Otro") {
+            disiplina_otro.style.display = "block";
+        }else{
+            disiplina_otro.style.display = "none";
+        }
+    })
+
+    contratacion.addEventListener('change', function () {
+        if (contratacion.value === "Otro") {
+            contratacion_otro.style.display = "block";
+        }else{
+            contratacion_otro.style.display = "none";
+        }
+    })
+
+};
 const cuestion_1 = () => {
     const radioButtons = document.getElementsByName('cuestion_1');
     const cuestion_1_a = document.getElementById('cuestion_1_a');
@@ -63,7 +89,7 @@ const toggleInput = () => {
 };
 
 // Llamar a las funciones cuando el documento esté listo
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     cuestion_1_1();
     toggleInput();
 });
@@ -174,7 +200,7 @@ const handleOtroRadio = () => {
     toggleInput();
 };
 
-
+datos_generales();
 cuestion_1();
 cuestion_1_1();
 toggleInput();

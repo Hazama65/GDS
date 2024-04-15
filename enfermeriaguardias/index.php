@@ -1,4 +1,15 @@
 <?php
+
+session_start();
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+
+if (!isset($_SESSION['valid_user'])) {
+    // El usuario no ha iniciado sesión, redirige de vuelta a la página de inicio de sesión
+    header('Location: ../login/index.php');
+    exit;
+}
+
 require('php/controllers/registros.controller.php');
 
 include("modal/registroenfermeriaguardias.php");
@@ -42,16 +53,16 @@ include("modal/registroenfermeriaguardias.php");
 
 
         <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <i class="bi bi-person-add"> </i> Paciente
+            <i class="bi bi-person-add"> </i> Registro
         </button>
 
         <a href="php/export.php" class="btn btn-success">
             <i class="bi bi-file-earmark-excel"></i> Excel
         </a>
 
-        <a href="#">
+        <a href="metricas.php">
             <button type="button" class="btn btn-primary" target="_blank">
-                <i class="bi bi-book"></i> Registros
+                <i class="bi bi-bar-chart-line"></i> Registros
             </button>
         </a>
     </div> <!-- cierre del <div class="btn-group" role="group" aria-label="Basic outlined example">-->

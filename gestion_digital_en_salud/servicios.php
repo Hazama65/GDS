@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Servicios</title>
 </head>
+
 <body>
-<header>
+    <header>
         <div class="logo">
             <img src="img/hraei11.png" alt="Logo">
         </div>
@@ -38,38 +43,56 @@
             <div class="card">
                 <img src="img/ambulatoria2.jpeg" alt="Imagen 1">
                 <br>
-                <a href="https://hraeigds.site" class="btn btn-success">Ambulatoria</a>
+                <a href="../login/index.php" class="btn btn-success">Ambulatoria</a>
             </div>
             <div class="card">
                 <img src="img/endoscopia.jpeg" alt="Imagen 2">
                 <br>
-                <a href="https://hraeigds.site" class="btn btn-success">Endoscopia</a>
+                <a href="../login/index.php" class="btn btn-success">Endoscopia</a>
             </div>
             <div class="card">
                 <img src="img/hraei11.jpeg" alt="Imagen 3">
                 <br>
-                <a href="https://hraeigds.site" class="btn btn-success">Folios</a>
+                <a href="../login/index.php" class="btn btn-success">Folios</a>
             </div>
             <div class="card">
                 <img src="img/interconsulta.jpeg" alt="Imagen 4">
                 <br>
-                <a href="#" class="btn btn-success">Interconsultas</a>
+                <a href="../login/index.php" class="btn btn-success">Interconsultas</a>
             </div>
             <div class="card">
                 <img src="img/residentes.jpeg" alt="Imagen 5">
                 <br>
-                <a href="#" class="btn btn-success">Residentes</a>
+                <a href="../login/index.php" class="btn btn-success">Residentes</a>
             </div>
             <div class="card">
                 <img src="img/gineco.jpeg" alt="Imagen 5">
                 <br>
-                <a href="https://hraeigds.site/Triage_GinecoObstetrico/" class="btn btn-success">Triage Ginecoobstétrico</a>
+                <a href="https://hraeigds.site/Triage_GinecoObstetrico/" class="btn btn-success">Triage
+                    Ginecoobstétrico</a>
+            </div>
+            <div class="card">
+                <img src="img/iaas.jpeg" alt="Imagen 6">
+                <br>
+                <a href="../login/index.php" class="btn btn-success">IAAS</a>
+            </div>
+            <div class="card">
+                <img src="img/tasa_iaas.jpeg" alt="Imagen 7">
+                <br>
+                <a href="../login/index.php" class="btn btn-success">Tasa de IAAS</a>
+            </div>
+            <div class="card">
+                <img src="img/investigador.jpg" alt="Imagen 8">
+                <br>
+                <a href="../login/index.php" class="btn btn-success">Protocolos de investigacion</a>
             </div>
         </div>
     </div> <!-- es el div que cierra <div class="container" style="center">-->
 
     <footer style="font-size:8px;">
-        Hospital Regional de Alta Especialidad de Ixtapaluca <br> Dirección de Operaciones - Gestión Digital en Salud - 2023
+        Hospital Regional de Alta Especialidad de Ixtapaluca <br> Dirección de Operaciones - Gestión Digital en Salud -
+        2023
     </footer>
 </body>
+
 </html>

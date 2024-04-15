@@ -12,4 +12,5 @@
     define('DB_NAME','u772081794_EG');
     define('DB_USERNAME','u772081794_EG');
     define('DB_PASSWORD','[V5okZ2FJU=');
+    
 ?>

@@ -38,17 +38,17 @@
             <div class="card">
                 <img src="img/anemia.jpeg" alt="Imagen 1">
                 <br>
-                <a href="https://hraeigds.site" class="btn btn-success">Anemias</a>
+                <a href="../login/index.php" class="btn btn-success">Anemias</a>
             </div>
             <div class="card">
                 <img src="img/hepatitisc.jpg" alt="Imagen 2">
                 <br>
-                <a href="https://hraeigds.site" class="btn btn-success">Hepatitis C</a>
+                <a href="../login/index.php" class="btn btn-success">Hepatitis C</a>
             </div>
             <div class="card">
                 <img src="img/paladarhendido.jpg" alt="Imagen 3">
                 <br>
-                <a href="https://hraeigds.site" class="btn btn-success">LPH</a>
+                <a href="../login/index.php" class="btn btn-success">LPH</a>
             </div>
 
             <!--
@@ -65,7 +65,7 @@
             <div class="card">
                 <img src="img/hemofilia1.png" alt="Imagen 5">
                 <br>
-                <a href="https://hraeigds.site/hemofilia/" class="btn btn-success">Hemofilia</a>
+                <a href="../login/index.php" class="btn btn-success">Hemofilia</a>
             </div>
         </div>
     </div> <!-- es el div que cierra <div class="container" style="center">-->

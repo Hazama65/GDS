@@ -1,6 +1,6 @@
 <?php
 // Incluir el archivo de configuración de la base de datos
-include('dbconfig_EG.php');
+include ('dbconfig_EG.php');
 
 // Conectar a la base de datos
 $conn = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
@@ -85,6 +85,39 @@ if ($result) {
     );
 
     $sheet->fromArray([$columns], null, 'A1');
+
+    // Ajustar el tamaño de las columnas automáticamente
+    foreach ($sheet->getColumnIterator() as $column) {
+        $sheet->getColumnDimension($column->getColumnIndex())->setAutoSize(true);
+    }
+
+    // Establecer estilos para los encabezados
+    $styleArray = [
+        'font' => [
+            'bold' => true,
+            'color' => ['rgb' => 'ffffff'],
+            'size' => 10,
+            'name' => 'Avenir Next LT Pro'
+        ],
+        'fill' => [
+            'fillType' => \PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID,
+            'startColor' => ['rgb' => '20485f']
+        ],
+        'borders' => [
+            'allBorders' => [
+                'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN,
+                'color' => ['rgb' => '000000'],
+            ],
+        ],
+        'alignment' => [
+            'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER,
+            'vertical' => \PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER,
+            'wrapText' => true
+        ]
+    ];
+    
+
+    $sheet->getStyle('A1:AB1')->applyFromArray($styleArray);
 
     // Agregar los datos desde la base de datos
     $row = 2;
