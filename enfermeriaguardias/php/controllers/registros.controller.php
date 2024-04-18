@@ -8,10 +8,8 @@
     JOIN trabajador_sustituido ts ON ds.id_sustituido = ts.id_sustituido
     JOIN trabajador_sustituto tss ON ds.id_sustituto = tss.id_sustituto";
 
-    $query_personal = "SELECT * FROM empleados ORDER BY empleados.nombre_empleado asc;";
 
     $data_EG =$connectionDB->getRows($query_pacientes);
 
-    $data_empleados = $connectionDB ->getRows($query_personal);
 
 ?>

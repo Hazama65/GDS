@@ -1,0 +1,196 @@
+body{
+    background-color: #f3f5f5;
+}
+
+/* Estilo adicional para el header */
+.custom-header {
+    background: #009FFF;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right,#08a8b3, #054b88,#355C7D);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,#08a8b3, #054b88,#355C7D);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    height: 50px;
+    /* Ajusta la altura del encabezado según tus necesidades */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: rgb(255, 255, 255);
+    /* Agregué color de texto blanco para mayor visibilidad */
+    font-size: 24px;;
+}
+
+/* Estilo para el texto del header */
+.header-text {
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+}
+
+/*buscador*/
+.col-3 {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Esto crea una sombra */
+    background-color: #cadfea;
+}
+
+#search {
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+}
+
+#patient-list {
+    list-style: none;
+    padding: 0;
+    background-color: white;
+    /* Fondo blanco */
+    border: 1px solid rgba(21, 0, 255, 0.934);
+    /* Borde alrededor de la lista */
+    border-radius: 5px;
+    /* Esquinas redondeadas */
+    margin: 10px;
+    font-size: 14px;
+}
+
+#patient-list li {
+    margin: 0;
+    /* Elimina el margen entre elementos */
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    /* Borde inferior para separar pacientes */
+}
+
+#patient-list li:last-child {
+    border-bottom: none;
+    /* Elimina el borde inferior del último paciente */
+}
+
+/* Agrega un borde alrededor del contenedor de la tabla */
+#patient-list-container {
+    border: 1px solid #ddd;
+    /* Color y grosor del borde */
+    border-radius: 5px;
+    /* Esquinas redondeadas */
+    padding: 10px;
+    /* Espacio alrededor de la tabla */
+}
+
+.custom-header {
+    color: aliceblue;
+    background-color: #ffffff;
+    /* Cambia esto al color que desees */
+    /* Otros estilos opcionales, como color de texto, espaciado, etc. */
+    /* Cambia el color del texto si es necesario */
+    padding: 10px;
+    /* Añade espaciado alrededor del contenido del encabezado */
+}
+
+/*SCROLL BUSCADOR*/
+#patient-list-container {
+
+    max-height: 800px;
+    /* Altura máxima del div */
+    overflow-y: auto;
+    /* Agrega scroll vertical si el contenido excede la altura máxima */
+    padding: 10px;
+    /* Espaciado opcional */
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.header-modal {
+    background: rgb(9, 121, 137);
+    color: #fff; /* Cambia el color del texto si es necesario */
+    padding: 15px; /* Ajusta el relleno según sea necesario */
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.table-container {
+    margin-right: 10px; /* Espacio a la derecha */
+    border-right: 1px solid #ccc; /* Borde a la derecha */
+}
+
+
+/* Estilos para el footer */
+.custom-footer {
+    background: #dfe8ed;
+    height: 50px;
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en una columna */
+    justify-content: center; /* Alinea horizontalmente los elementos del footer */
+    align-items: center; /* Alinea verticalmente los elementos del footer */
+    padding: 0 20px;
+    color: rgba(134, 134, 134, 0.794);
+    font-size: 12px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilos para los elementos span dentro del footer */
+.custom-footer span {
+    line-height: 0.3; /* Ajusta el interlineado */
+}
+
+.modal-footer{
+    margin-top: 15px;
+}
+
+
+
+/* pantalla de carga */
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(151, 150, 150, 0.97);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.loading svg polyline {
+    fill: none;
+    stroke-width: 6;
+    /* Aumentar el grosor de la línea */
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.loading svg polyline#back {
+    fill: none;
+    stroke: #ff4d5033;
+}
+
+.loading svg polyline#front {
+    fill: none;
+    stroke: #fb3437;
+    stroke-dasharray: 96, 288;
+    /* Ajustar la longitud del dasharray y el dashoffset */
+    stroke-dashoffset: 384;
+    animation: dash_682 1.4s linear infinite;
+}
+
+@keyframes dash_682 {
+    72.5% {
+        opacity: 0;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
