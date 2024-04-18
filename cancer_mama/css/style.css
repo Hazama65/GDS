@@ -8,9 +8,9 @@ body {
 header {
     background: #800080;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right,#FBD3E9, #BB377D);
+    background: -webkit-linear-gradient(to right,#f07aa2, #BB377D);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right,#FBD3E9, #BB377D);
+    background: linear-gradient(to right,#f07aa2, #BB377D);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     height: 60px;
@@ -19,7 +19,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     /* Agregué color de texto blanco para mayor visibilidad */
     
 
@@ -39,7 +39,7 @@ header a {
 
 .estilomodal  {
     
-background: linear-gradient(to right,#FBD3E9, #BB377D);
+background: linear-gradient(to right,#f07aa2, #BB377D);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -67,9 +67,9 @@ background: linear-gradient(to right,#FBD3E9, #BB377D);
 footer {
     background: #009FFF;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FBD3E9, #BB377D);
+    background: -webkit-linear-gradient(to right, #f07aa2, #BB377D);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right,#FBD3E9, #BB377D);
+    background: linear-gradient(to right,#f07aa2, #BB377D);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #ececec;
     text-align: center;
@@ -81,8 +81,8 @@ footer {
 
 h5.bi {
     text-align: center;
-    color: black;
-    font-size: 1.5em;
+    color: rgb(255, 254, 254);
+    font-size: 2.0em;
     /* Ajusta el tamaño de la fuente según tus preferencias */
     margin-top: 15px;
     /* Ajusta la separación entre el ícono y el texto */
@@ -147,9 +147,9 @@ h5.bi {
 #patient-list-container {
     background: #009FFF;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FBD3E9, #BB377D);
+    background: -webkit-linear-gradient(to right, #f07aa2, #BB377D);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FBD3E9, #BB377D);
+    background: linear-gradient(to right, #f07aa2, #BB377D);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     max-height: 800px;
     /* Altura máxima del div */
@@ -233,3 +233,4 @@ h5.bi {
         stroke-dashoffset: 0;
     }
 }
+

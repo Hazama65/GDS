@@ -371,7 +371,7 @@
 
                                 <div class="col-md-2" style="text-align: center;">
                                     <span style="font-size:14px; display: block;">Perros</span>
-                                    <input type="checkbox" name="Perros" id="Perros" value="Ninguno"
+                                    <input type="checkbox" name="Perros" id="Perros" value="Si"
                                         style="font-size:14px; margin: 5px auto; ">
                                 </div>
 
