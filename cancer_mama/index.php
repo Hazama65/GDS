@@ -19,7 +19,7 @@ include("modal/cancer_mama.php");
 <body>
 
     <header>
-        <h5 class="bi bi-clipboard2-data-fill" style="color:black; margin-top: 15px;">Cancer de Mama</h5>
+        <h5 class="bi bi-clipboard2-data-fill" style="color:rgb(243, 243, 243); margin-top: 15px;">Cancer de Mama</h5>
         <br>
         <div style="padding: 20px; text-align: right;">
             <button type="button" class="btn btn-outline-light" id="cerrar-sesion-button" title="Cerrar sesión">
@@ -104,9 +104,7 @@ include("modal/cancer_mama.php");
 
 
     <script type="module">
-        import {
-            mainForm
-        } from "./js/insert.js";
+        import {mainForm} from "./js/insert.js";
         mainForm();
     </script>
 
