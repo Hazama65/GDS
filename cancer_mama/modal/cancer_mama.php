@@ -221,7 +221,7 @@
                     </div>
 
 
-                    <div class="col-md-12" id="Cancer_prostata" style="display:none;">
+                    <div class="col-md-12" id="Cancer_prostata">
                         <strong style="font-size: 13px;">Cáncer Próstata</strong>
                         <select name="Heredo_CancerProstata" id="Heredo_CancerProstata" class="form-control" style="font-size: 13px;">
                             <option value="Seleccione">Seleccione</option>
@@ -230,9 +230,8 @@
                             <option value="Sin Antecedentes">Sin Antecedentes</option>
                         </select>
                     </div>
-                    <!-- style="display:none;" -->
 
-                    <div class="container" id="CancerProstata" style="display:none;">
+                    <div class="container" id="CancerProstata">
 
                         <label for="Abuelo_materno_cancer" style="font-size: 13px;"><strong>Antecedentes de Cáncer de Próstata:</strong></label><br>
 
@@ -280,7 +279,7 @@
 
                     <!-- Cancer OVARIO -->
 
-                    <div class="col-md-12" id="CancerOvario" style="display:none;">
+                    <div class="col-md-12" id="CancerOvario">
                         <strong style="font-size: 13px;">Cáncer Ovario</strong>
                         <select name="Heredo_CancerOvario" id="Heredo_CancerOvario" class="form-control" style="font-size: 13px;">
                             <option value="Seleccione">Seleccione</option>
@@ -290,7 +289,7 @@
                         </select>
                     </div>
 
-                    <div class="container" id="Cancer_Ovario" style="display:none;">
+                    <div class="container" id="Cancer_Ovario">
                         <label for="Antecedentes_ovario" style="font-size: 13px;"><strong>Antecedentes de Cáncer Ovario :</strong></label><br>
 
                         <div class="form-check form-check-inline">
@@ -338,7 +337,7 @@
 
                     <!-- ANTECEDENTES CANCER MAMA  -->
 
-                    <div class="col-md-12" id="AH_Cancer_Mama" style="display:none;">
+                    <div class="col-md-12" id="AH_Cancer_Mama">
                         <strong style="font-size: 13px;">Cáncer Mama</strong>
                         <select name="Heredo_CancerMama" id="Heredo_CancerMama" class="form-control" style="font-size: 13px;">
                             <option value="Seleccione">Seleccione</option>
@@ -348,7 +347,7 @@
                         </select>
                     </div>
 
-                    <div class="container" id="Cancer_Mama1" style="display:none;">
+                    <div class="container" id="Cancer_Mama1">
                         <label for="Antecedentes_mama" style="font-size: 13px;"><strong>Antecedentes de Cáncer Mama :</strong></label><br>
 
                         <div class="form-check form-check-inline">
@@ -357,7 +356,7 @@
                         </div>
 
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input ra-checkbox" type="checkbox" id="Abuela_paterna_cancerMama" name="Abuela_PaternaAntecedentes_Ovario" value="Abuela_paterna_cancer">
+                            <input class="form-check-input ra-checkbox" type="checkbox" id="Abuela_paterna_cancerMama" name="Abuela_PaternaAntecedentes_Mama" value="Abuela_paterna_cancer">
                             <label class="form-check-label" for="Abueloapaterna_cancerMama" style="font-size: 13px;">Abuela Paterna</label>
                         </div>
 
@@ -520,7 +519,7 @@
 
                     <div class="col-md-12">
                         <strong style="font-size: 13px;">Comentario:</strong>
-                        <textarea class="form-control" style="font-size: 13px;"></textarea>
+                        <textarea id="comentarios"  name="comentarios" class="form-control" style="font-size: 13px;"></textarea>
                     </div>
 
                     <!--ANTECEDENTES EMBARAZO  -->
@@ -685,7 +684,7 @@
 
                         <div class="col-md-6" id="fecha_latera_maste">
                             <strong style="font-size: 13px;">Fecha</strong>
-                            <input type="date" class="control form-control" id="Fecha_Mastectomia" name="Fecha_Mastectomia" style="font-size: 13px;">
+                            <input type="date" class="control form-control" id="fecha_ATC" name="fecha_ATC" style="font-size: 13px;">
                         </div>
                     </div>
 
@@ -1481,7 +1480,7 @@
                         </div>
 
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input ra-checkbox" type="checkbox" id="AT_2doQTP" name="AT_2doQTP value=" AT_TH1QT">
+                            <input class="form-check-input ra-checkbox" type="checkbox" id="AT_2doQTP" name="AT_2doQTP" value=" AT_TH1QT">
                             <label class="form-check-label" for="2doQTP_AT1QT" style="font-size: 13px;">AT</label>
                         </div>
 
