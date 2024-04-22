@@ -46,11 +46,6 @@ include ("modal/cancer_mama.php");
             <i class="bi bi-file-earmark-excel"></i> Excel
         </a>
 
-        <a href="graficas_anemia.php">
-            <button type="button" class="btn btn-primary" target="_blank">
-                <i class="bi bi-bar-chart"></i> Gráficas
-            </button>
-        </a>
     </div> <!-- cierre del <div class="btn-group" role="group" aria-label="Basic outlined example">-->
     <br><br>
 
