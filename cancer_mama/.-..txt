@@ -15,6 +15,7 @@ Glucemia
 peso
 talla
 circunferencia
+id_paciente
 
 BRCA_1
 BRCA_2
@@ -24,11 +25,12 @@ Hipertension
 Tabaquismo
 Antecedentecancer_mama
 Antecedentes_ninguna
+id_paciente
 
 
 Heredo_Cancer
 Heredo_CancerProstata
-Antecedentes_Prostata
+Abuelo_materno_cancer
 Abuelo_paterno_cancer
 Hermano_Prostata
 Padre_cancer_Prostata
@@ -54,6 +56,7 @@ PrimaMaterna_Antecedentes_Mama
 Prima_paternaAntecedentes_Mama
 Tia_MaternaAntecedentes_Mama
 Tia_PaternaAntecedentes_Mama
+id_paciente
 
 
 Menarca
@@ -64,6 +67,7 @@ fecha_probableParto
 Terapia_remplazoHormonal
 Lactancia
 Tiempo
+id_paciente
 
 
 Gestas_Embarazo
@@ -72,6 +76,7 @@ Abortos
 Cesareas
 Ectopicos
 comentarios
+id_paciente
 
 
 Fecha_primeraAtencion
@@ -87,6 +92,7 @@ Compromiso_linfatico
 Mastectomia_extrain
 Lateralidad_mastectomia
 fecha_ATC
+id_paciente
 
 
 Histopatologia
@@ -96,6 +102,7 @@ fecha_dxHistopatologico
 Histopatologia_Nottinghan
 Histopatologia_Escala_SBR
 Histopatologia_Escala_MID
+id_paciente
 
 
 Inmunohistoquimica
@@ -108,6 +115,7 @@ Triple_Negativo
 PDL
 Oncogen_her2
 FISH
+id_paciente
 
 
 Molecular
@@ -116,6 +124,7 @@ Luminal_A
 Luminal_B
 Enriquecido_HER
 Basal
+id_paciente
 
 
 Quirurgicos
@@ -125,11 +134,13 @@ tipo_ganglionar
 fecha_ganglionar
 fecha_Mastectomia
 tipo_Mastectomia
-tipo_MastReconstruccion_Mastectomiaectomia
+tipo_MastReconstruccion_Mastectomia
+id_paciente
 
 
 Quimioterapia
 Antraciclinas
+id_paciente
 
 
 Tipo_QT
@@ -166,6 +177,8 @@ TH_Esquema
 THP_Esquema
 Trastuzumab_Esquema
 Trastuzumab_SinRegistro
+id_paciente
+
 5fu
 AC
 AC_T_1QT
@@ -197,12 +210,14 @@ TH_1QT
 THP_1QT
 Trastuzumab_1QT
 SinRegistro_1QT
-FechaInicio_QTPaliativo
+id_paciente
+
+FechaInicio_QTPaliativoz
 FechaTermino_QTPaliativo
 5fu_2doQTP
 AC_2doQTP
 AC_T_2doQTP
-AC_2doQTP
+AC_T_2doQTPV
 AT_2doQTP
 Atezolizumab_2doQTP
 Bevacizumab_2doQTP
@@ -232,23 +247,21 @@ Trastuzumab_2doQTP
 SinRegistro_2doQTP
 FechaInicio_QT2Paliativo
 FechaTermino_QTP2aliativo
+id_paciente
 
 
 Hormoterapia
 Hormonoterapia_QT
 Momento_Hormonoterapia
-
-
 HER_2
 Esquema_HER
-
 triple_negativo
 EsquemaTriple_negativo
-
 Hormosensible
 Inhibidores_Ciclinas
-
 Tipo_Tratamiento
+id_paciente
+
 
 Completo_Quimio
 CausaQT_Incompleta
@@ -256,11 +269,14 @@ fecha_quimio
 fecha_fallecio
 Fallecio_causa
 otra_causa
+id_paciente
+
 
 Radioterapia
 Tipo_radioterapia
 fecha_radioterapia
 numero_radio
-
+Defuncion
 fecha_Defuncion
 causa_defuncion
+id_paciente

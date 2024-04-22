@@ -3,10 +3,10 @@ import { httpClients } from "./plugins/http-client.plugin_CM.js";
 import { hideLoadingOverlay, showLoadingOverlay } from "./plugins/loader.plugin_CM.js";
 
 
-const url = "php/controllers/seguimiento.controller.php";
-const data = $('#seguimiento_CM');
+const url = "php/controllers/insert.controller.php";
+const data = $('#CM_form');
 
-export const seguimientoForm = () => {
+export const mainForm = () => {
 
     data.on('submit', async function (event){
         event.preventDefault();

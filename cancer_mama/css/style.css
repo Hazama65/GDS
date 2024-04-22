@@ -78,6 +78,10 @@ footer {
     bottom: 0;
     width: 100%;
 }
+.footer{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
 
 h5.bi {
     text-align: center;

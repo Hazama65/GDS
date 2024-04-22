@@ -3,12 +3,13 @@ import { httpClients } from "./plugins/http-client.plugin_CM.js";
 import { hideLoadingOverlay, showLoadingOverlay } from "./plugins/loader.plugin_CM.js";
 
 
-const url = "php/controllers/seguimiento.controller.php";
-const data = $('#seguimiento_CM');
 
-export const seguimientoForm = () => {
+const url = 'php/controllers/update.controller.php';
+const formData = $('#editar_CM');
 
-    data.on('submit', async function (event){
+export const editForm = () => {
+
+    formData.on('submit', async function (event){
         event.preventDefault();
         let alldata = $(this).serialize();
         // console.log(alldata);
@@ -48,4 +49,3 @@ const validation = async (alldata) => {
         setAlerts.errorAlert('Hubo un error en la solicitud.');
     }
 }
-
