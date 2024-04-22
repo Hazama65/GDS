@@ -166,6 +166,14 @@ const validateLogin = async (formData) => {
                 '../enfermeriaguardias/index.php'
             )
         }
+        if (typeToken.trim() === 'enfermeriaguardias_p') {
+            return setAlert.successAlert(
+                'La operacion se ha completado correctamente.',
+                null,
+                null,
+                '../enfermeriaguardias/index_personal.php'
+            )
+        }
         if (typeToken.trim() === 'tasa_iaas') {
             return setAlert.successAlert(
                 'La operacion se ha completado correctamente.',
