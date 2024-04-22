@@ -93,9 +93,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 array($fecha_tramite, 83, 79.5, 10),
                 array($fecha_suplencia, 109, 79.5, 10),
 
-                array($enlace_numeroempleado, 23, 101.5, 6),
-                array($nombre_suplencia, 91, 101.5, 6),
-                array($autoriza, 150, 101.5, 6),
+                array($enlace_numeroempleado, 15, 101.5, 6),
+                array($nombre_suplencia, 77, 101.5, 6),
+                array($autoriza, 139, 101.5, 6),
                 array($observaciones, 40, 106.5, 8),
 
 
@@ -124,9 +124,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 array($fecha_tramite, 83, 212.5, 10),
                 array($fecha_suplencia, 109, 212.5, 10),
 
-                array($enlace_numeroempleado, 23, 236.5, 6),
-                array($nombre_suplencia, 91, 236.5, 6),
-                array($autoriza, 150, 236.5, 6),
+                array($enlace_numeroempleado, 15, 236.5, 6),
+                array($nombre_suplencia, 77, 236.5, 6),
+                array($autoriza, 139, 236.5, 6),
                 array($observaciones, 40, 242, 8),
     
             );

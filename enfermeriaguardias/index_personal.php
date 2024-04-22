@@ -64,17 +64,6 @@ include ("modals/registrarsuplencia.php");
         <div class="btn-group" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
                 data-bs-target="#RegistrarSuplencia">Registrar Suplencia</button>
-
-            <a href="metricas.php">
-                <button type="button" class="btn btn-outline-primary">
-                    Métricas
-                </button>
-            </a>
-
-            <a href="php/export.php" class="btn btn-outline-primary">
-                <i class="bi bi-file-earmark-excel"></i> Excel
-            </a>
-
         </div>
     </div>
     <br>
@@ -97,7 +86,7 @@ include ("modals/registrarsuplencia.php");
                             $fecha_suplencia = $Datos_EG["fecha_suplencia"];
 
                             echo '<li class="patient-item" data-id-paciente="' . $id_suplencia . '">';
-                            echo $num_empleado . ' - ' . $nom_sustituido . ' | ' . $fecha_suplencia;
+                            echo $num_empleado . ' - ' .$nom_sustituido . ' | ' . $fecha_suplencia;
                             echo '</li>';
                         }
                         echo '</ul>';
@@ -160,8 +149,9 @@ include ("modals/registrarsuplencia.php");
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const cerrarSesionButton = document.getElementById('cerrar-sesion-button');
-
+            
             cerrarSesionButton.addEventListener('click', function () {
+                console.log('hola');
                 // Redirige al usuario a la página de cierre de sesión
                 window.location.href = 'php/destroysession.php';
             });
