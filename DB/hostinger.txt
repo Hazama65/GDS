@@ -27,3 +27,5 @@ u772081794_lupus/!9~JFrpU
 u772081794_lupus_seg/w|LGsAG;B7
 u772081794_cancer_m/H^p7@3Ixn
 u772081794_cancer_m_seg/d0a;+vU~F
+u772081794_cancer_bucal/+B3nI#PIRg
+u772081794_cancer_bucal_s/NNHG+L=y3^
