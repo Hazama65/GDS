@@ -1,0 +1,630 @@
+
+curp
+nombre_completo
+escolaridad
+birth_date
+edad
+sex
+talla
+peso
+imc
+estado
+municipio
+ref
+uni_ref
+exp_solar
+num_comidas
+higinee_bucal
+alcoholismo
+tabaquismo
+cocaina
+marihuana
+med_control
+solventes
+at_ninguno
+hz_alcohol
+tiempo_tabaco
+num_cigarros
+autolesiones
+bruxismo
+IL
+onicofagia
+queilofagia
+RO
+SL
+SD
+hab_ninguno
+VIH
+VPH
+epste_bar
+vr_ninguno
+colon_rec
+endometrio
+gastrico
+higado
+leucemia
+hodgkin
+mama
+melanoma
+ovario
+pancreas
+prostata
+pulmon
+rinon
+testiculo
+tiroides
+vejiga
+cancer_ninguno
+afec_dent
+les_orales
+ubicacion
+enf_perio
+org_dent_frac
+prot_f_desa
+prot_f_fract
+prot_r_desa
+prot_r_fract
+msd
+msi
+mid
+mii
+elo
+tipo_tejido
+melatonica
+nodulo
+pigmentada
+tumor
+ulcera
+verruga
+vesicula
+coloracion
+ubic_derecha
+ubic_Izquierda
+derec_ninguno
+derec_CM
+derec_ES
+derec_labio
+derec_lengua
+derec_EI
+derec_MP
+derec_MB
+derec_PB
+derec_PD
+derec_piso
+derec_premaxilar
+derec_PA
+derec_RM
+derec_TR
+derec_labios
+derec_lenguas
+derec_PBL
+derec_PDR
+derec_ESP
+derec_EIF
+derec_EROD
+derec_MSD
+derec_MID
+izqui_ninguno
+izqui_CM
+izqui_ES
+izqui_labio
+izqui_lengua
+izqui_EI
+izqui_MP
+izqui_MB
+izqui_PB
+izqui_PD
+izqui_piso
+izqui_premaxilar
+izqui_PA
+izqui_RM
+izqui_TR
+izqui_labios
+izqui_lenguas
+izqui_PBL
+izqui_PDR
+izqui_ESP
+izqui_EIF
+izqui_EROD
+izqui_MSD
+izqui_MID
+fecha_primera_at
+etapa_clinica
+size_tumoral
+compro_linfa
+metastatis
+at_sinReg
+at_hepatica
+at_pulmonar
+at_cerebrales
+at_oseas
+at_cervicouterino
+at_mediastino
+at_suprarrenal
+at_tiroidea
+at_ganglionar
+estado_clinico
+ECOG
+dx_histo
+fecha_repo
+tipo_histo
+maligno_histo
+inmuno_pdl
+inmuno_pdl_val
+tx_quimio
+tx_5Fluororacilo
+tx_Beuacizumab
+tx_Capecitabina
+tx_Carboplatino
+tx_Cetuximab
+tx_Ciclofosfamida
+tx_Cisplatino
+tx_Docetaxel
+tx_Etoposido
+tx_Herceptin
+tx_Paclitaxel
+tx_Pertuzumab
+tx_Trastuzumab
+tx_quiru
+tx_quiru_tipo
+lugar_DRMC
+tipo_DRMC
+nivel_cervical
+tx_maxilo_infra
+tx_recontruccion
+recons_ninguno
+recons_CM
+recons_IO
+recons_MO
+recons_RC
+recons_AI
+tx_radio
+fecha_radio
+momento_radio
+dosis_radio
+fracciones_dosis
+no_fracciones
+fracciones_tecnica
+rt_caries
+rt_disgeusia
+rt_dolor
+rt_fractura
+rt_infeccion
+rt_hemorragias
+rt_mucositis
+rt_osteonecrosis
+rt_parestesia
+rt_propios
+rt_radiodermitis
+rt_RA
+rt_trismus
+rt_xerostomia
+rt_ninguno
+OARS_CO
+OARS_cocleas
+OARS_cristalinos
+OARS_esofago
+OARS_labios
+OARS_laringe
+OARS_mandibula
+OARS_medula
+OARS_NO
+OARS_ojos
+OARS_PFP
+OARS_parotidas
+OARS_sublinguales
+OARS_tallo
+OARS_tiroides
+Dosis_Máx_CO
+Dosis_Prom_CO
+Dosis_Máx_Cocleas
+Dosis_Prom_Cocleas
+Dosis_Máx_Cristalinos
+Dosis_Prom_Cristalinos
+Dosis_Máx_Esofago
+Dosis_Prom_Esofago
+Dosis_Máx_Labios
+Dosis_Prom_Labios
+Dosis_Máx_Laringe
+Dosis_Prom_Laringe
+Dosis_Máx_Mandibula
+Dosis_Prom_Mandibula
+Dosis_Máx_Medula
+Dosis_Prom_Medula
+Dosis_Máx_NO
+Dosis_Prom_NO
+Dosis_Máx_Ojos
+Dosis_Prom_Ojos
+Dosis_Máx_PFP
+Dosis_Prom_PFP
+Dosis_Máx_Parotidas
+Dosis_Prom_Parotidas
+Dosis_Máx_Sublinguales
+Dosis_Prom_Sublinguales
+Dosis_Máx_Tallo
+Dosis_Prom_Tallo
+Dosis_Máx_Tiroides
+Dosis_Prom_Tiroides
+caso_exitoso
+resp_tx
+defuncion
+fecha_defuncion
+causa_defuncion
+
+
+
+CURP
+Nombre Completo
+Escolaridad
+Fecha de nacimiento
+Edad
+Sexo
+Talla
+Peso
+IMC
+Estado
+Municipio
+Referencia
+Unidad de Referencia
+Exposición Solar
+Comidas al Día
+Higiene Bucal
+Alcoholismo
+Tabaquismo
+Cocaina
+Marihuana
+Medicamentos Controlados
+Solventes
+Ninguno
+Frecuencia del Alcoholismo
+Años con Tabaquismo
+Cigarros al día
+Autolesiones
+Bruxismo
+Interposicion Lingual
+Onicofagia
+Queilofagia
+Respiracion Oral
+Succion Labial
+Succion Digital
+Ninguno
+VIH
+VPH
+I. Epstein Barr
+Ninguno
+Colon y Recto
+Endometrio
+Gástrico
+Hígado
+Leucemia
+Linfoma No Hodgkin
+Mama
+Melanoma
+Ovario
+Páncreas
+Próstata
+Pulmón
+Riñón
+Testículo
+Tiroides
+Vejiga
+Ninguno
+Afectacion Dental
+Lesiones Orales
+Ubicacion
+Enfermedad Periodontal
+Organo Dental Fracturado
+Protesis Fija Desajustada
+Protesis Fija Fracturada
+Protesis Removible Desajustada
+Protesis Removible Fracturada
+Maxilar Superior Derecho
+Maxilar Superior Izquierdo
+Maxilar Inferior Derecho
+Maxilar Inferior Izquierdo
+Existe Lesion Oral
+Tipo de Tejido
+Melatónica
+Nódulo
+Pigmentada
+Tumor
+Ulcera
+Verruga
+Vesicula
+Coloración
+Derecha
+Izquierda
+Ninguno
+Cuerpo Mandibular
+Encia Superior
+Labios
+Lengua
+Encia Inferior
+Maxilar Posterior
+Mucosa Bucal
+Paladar Blando
+Paladar Duro
+Piso
+Premaxilar
+Proceso Alveolar
+Rama Mandibular
+Trigono Retromolar
+Labios
+Lengua
+Paladar Blando
+Paladar Duro
+Encia superior
+Encia inferior
+Está relacionado con un órgano dental
+Maxilar Superior Derecho
+Maxilar Inferior Derecho
+Ninguno
+Cuerpo Mandibular
+Encia Superior
+Labios
+Lengua
+Encia Inferior
+Maxilar Posterior
+Mucosa Bucal
+Paladar Blando
+Paladar Duro
+Piso
+Premaxilar
+Proceso Alveolar
+Rama Mandibular
+Trigono Retromolar
+Labios
+Lengua
+Paladar Blando
+Paladar Duro
+Encia superior
+Encia inferior
+Está relacionado con un órgano dental
+Maxilar Superior Izquierdo
+Maxilar Inferior Izquierdo
+Fecha primer atención
+Etapa clinica
+Tamaño Tumoral
+Compromiso Linfático Nodal
+Metástasis
+Sin registro
+Hepatica
+Pulmonar
+Cerebrales
+Óseas
+Cervicouterino
+Mediastino
+Suprarrenal
+Tiroidea
+Ganglionar
+Estadío Clinico
+Calidad de vida ECOG
+Dx Histopatologico
+Fecha de Reporte
+Tipo
+Maligno
+Se realizó PDL
+PDL
+Quimioterapia
+5Fluororacilo
+Beuacizumab
+Capecitabina
+Carboplatino
+Cetuximab
+Ciclofosfamida
+Cisplatino
+Docetaxel
+Etoposido
+Herceptin
+Paclitaxel
+Pertuzumab
+Trastuzumab
+Quirúrgico
+Tipo de Cirugía
+Lugar DRMC
+Tipo DRMC
+Nivel Cervical
+Maxilectomia de Infraestructura
+Reconstrucción
+Ninguno
+Colgajo Microvascular
+Injerto Oseo Autologo o Cadaverico
+Material de Osteosintesis
+Rotacion de Colgajo
+Toma y Aplicacion de Injerto
+Radioterapia
+Fecha
+Momento RT
+Dosis
+Fracciones
+No. Fracciones
+Técnica
+Caries
+Disgeusia
+Dolor
+Fractura
+Infeccion
+Hemorragias
+Mucositis
+Osteonecrosis
+Parestesia
+Propios De La Anestesia Local
+Radiodermitis
+Reaccion Alergica
+Trismus
+Xerostomia
+Ninguno
+Cavidad Oral
+Cocleas
+Cristalinos
+Esofago
+Labios
+Laringe
+Mandibula
+Medula
+Nervio Óptico
+Ojos
+Pared Faringea Posterior
+Parotidas
+Sublinguales
+Tallo
+Tiroides
+Dosis Máx Cavidad Oral
+Dosis Prom Cavidad Oral
+Dosis Máx Cocleas
+Dosis Prom Cocleas
+Dosis Máx Cristalinos
+Dosis Prom Cristalinos
+Dosis Máx Esofago
+Dosis Prom Esofago
+Dosis Máx Labios
+Dosis Prom Labios
+Dosis Máx Laringe
+Dosis Prom Laringe
+Dosis Máx Mandibula
+Dosis Prom Mandibula
+Dosis Máx Medula
+Dosis Prom Medula
+Dosis Máx Nervio Óptico
+Dosis Prom Nervio Óptico
+Dosis Máx Ojos
+Dosis Prom Ojos
+Dosis Máx Pared Faringea Posterior
+Dosis Prom Pared Faringea Posterior
+Dosis Máx Parotidas
+Dosis Prom Parotidas
+Dosis Máx Sublinguales
+Dosis Prom Sublinguales
+Dosis Máx Tallo
+Dosis Prom Tallo
+Dosis Máx Tiroides
+Dosis Prom Tiroides
+Caso Exitoso
+Respuesta al Tratamiento
+Defunción
+Fecha Defunción
+Causa
+
+
+ <?php if ($id_paciente == 'Si') echo "checked"; ?>
+ value="<?php echo $id_paciente; ?>"
+<?php if ($id_paciente== '0')echo 'selected'; ?>
+
+
+
+id_paciente
+fecha_seg
+progre_enf
+fecha_progre
+recu_enfer
+fecha_recu
+reintervencion
+fecha_reintervencion
+lat_reintervencion
+nuevo_qt
+tx_5Fluororacilo
+tx_Beuacizumab
+tx_Capecitabina
+tx_Carboplatino
+tx_Cetuximab
+tx_Ciclofosfamida
+tx_Cisplatino
+tx_Docetaxel
+tx_Etoposido
+tx_Herceptin
+tx_Paclitaxel
+tx_Pertuzumab
+tx_Trastuzumab
+momento_qt
+nueva_radio
+fecha_radio
+momento_radio
+dosis_radio
+fracciones_radio
+no_fracciones
+tecnica_fracciones
+rt_caries
+rt_disgeusia
+rt_dolor
+rt_fractura
+rt_infeccion
+rt_hemorragias
+rt_mucositis
+rt_osteonecrosis
+rt_parestesia
+rt_propios
+rt_radiodermitis
+rt_RA
+rt_trismus
+rt_xerostomia
+rt_ninguno
+cuidado_palia
+tipo_palia
+proto_clinico
+proto_inv
+
+
+
+
+Fecha de Seguimiento
+Progresión Enfermedad
+Fecha Dx Progresión
+Recurrencia Enfermedad
+Fecha de recurrencia
+Amerita Reintervención
+Fecha de Reintervención
+Lateralidad Reintervención
+Amerita Nueva QT
+5Fluororacilo
+Beuacizumab
+Capecitabina
+Carboplatino
+Cetuximab
+Ciclofosfamida
+Cisplatino
+Docetaxel
+Etoposido
+Herceptin
+Paclitaxel
+Pertuzumab
+Trastuzumab
+Momento QT
+Amerita Nueva Radioterapia
+Fecha Nueva RT
+Momento RT
+Dosis
+Fracciones
+No. Fracciones
+Técnica
+Caries
+Disgeusia
+Dolor
+Fractura
+Infeccion
+Hemorragias
+Mucositis
+Osteonecrosis
+Parestesia
+Propios De La Anestesia Local
+Radiodermitis
+Reaccion Alergica
+Trismus
+Xerostomia
+Ninguno        
+Cuidados Paliativos
+Tipo de Cuidado Paliativo
+Protocolo Clínico
+Protocolo de Investigación
+
+
+
+
+
+
+
+
+
+
+
+
+                    
