@@ -182,6 +182,14 @@ const validateLogin = async (formData) => {
                 '../tasa_iaas/index.php'
             )
         }
+        if (typeToken.trim() === 'satisfaccion') {
+            return setAlert.successAlert(
+                'La operacion se ha completado correctamente.',
+                null,
+                null,
+                '../encuesta_satisfaccion/registros.php'
+            )
+        }
 
 
     }catch(error){
