@@ -46,6 +46,12 @@
                 <a href="../login/index.php" class="btn btn-success">Hemodinamia</a>
             </div>
             
+            <div class="card">
+                <img src="img/evc.png" alt="Imagen 2">
+                <br>
+                <a href="../codigo_evc" class="btn btn-success">EVC</a>
+            </div>
+            
             
         </div>
     </div> <!-- es el div que cierra <div class="container" style="center">-->

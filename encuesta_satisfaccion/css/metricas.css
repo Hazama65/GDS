@@ -3,7 +3,7 @@ body {
 }
 
 header {
-    background-image: linear-gradient(0deg, #f33779 0%, #ff8787 95%);
+    background-color: rgb(35, 91, 78);
     height: 50px;
     display: flex;
     justify-content: space-between;
@@ -13,15 +13,16 @@ header {
 }
 
 #chartdiv_1,
-#chartdiv_1_1,
 #chartdiv_2,
-#chartdiv_2_1_a,
-#chartdiv_2_1_b,
 #chartdiv_3,
 #chartdiv_4,
-#chartdiv_4_1,
-#chartdiv_4_2,
-#chartdiv_4_3 {
+#chartdiv_5,
+#chartdiv_6,
+#chartdiv_7,
+#chartdiv_8,
+#chartdiv_9,
+#chartdiv_10,
+#chartdiv_11 {
     width: 50%;
     height: 400px;
     margin-bottom: 95px;
@@ -47,7 +48,7 @@ header {
     text-align: center;
     padding: 10px;
     margin-bottom: 10px;
-    background-image: linear-gradient(0deg, #ff726b 0%, #f2d5d5 100%);
+    background-color: rgb(35, 91, 78);
     color: white;
     font-size: 20px;
 }

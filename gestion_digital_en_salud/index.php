@@ -69,6 +69,13 @@
 
             
 
+            
+            <div class="card">
+                <img src="img/calidad1.jpeg" alt="Imagen 3">
+                <br>
+                <a href="calidad.php" class="btn btn-success">Calidad</a>
+            </div>
+            
             <div class="card">
                 <img src="img/clinicas1.jpg" alt="Imagen 3">
                 <br>

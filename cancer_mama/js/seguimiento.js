@@ -1,35 +1,51 @@
-// PROGRESION ENFERMEDAD 
+import { setAlerts } from "./plugins/alerts.plugin_CM.js";
+import { httpClients } from "./plugins/http-client.plugin_CM.js";
+import { hideLoadingOverlay, showLoadingOverlay } from "./plugins/loader.plugin_CM.js";
 
-document.addEventListener("DOMContentLoaded", function () {
 
-    var selectProgresionEnfermedad = document.getElementById("ProgresionEnfermedad");
-    var divFechaProgresion = document.getElementById("Fecha_progresion");
+const url = "php/controllers/seguimiento.controller.php";
+const data = $('#seguimiento_CM');
 
-    selectProgresionEnfermedad.addEventListener("change", function () {
+export const seguimientoForm = () => {
 
-        if (selectProgresionEnfermedad.value === "Si") {
-            divFechaProgresion.style.display = "block";
+    data.on('submit', async function (event){
+        event.preventDefault();
+        let alldata = $(this).serialize();
+        // console.log(alldata);
 
-        } else {
-            divFechaProgresion.style.display = "none";
-        }
+        showLoadingOverlay();
+
+        validation(alldata);
+    
+    
     })
-})
 
-// PROGRESION ENFERMEDAD 
+}
 
-document.addEventListener("DOMContentLoaded", function () {
+const validation = async (alldata) => {
+    try {
 
-    var selectRecurrencia = document.getElementById("Recurrencia");
-    var divFechaRecurrencia = document.getElementById("Fecha_Recurrencia");
+    
+        const response = await httpClients.post(url, alldata);
+        console.log(response);
 
-    selectRecurrencia.addEventListener("change", function () {
+        hideLoadingOverlay();
+        
+        if (response == 0) {return setAlerts.errorAlert('Hubo una Falla en el servidor al Guardar los datos')}
 
-        if (selectRecurrencia.value === "Si") {
-            divFechaRecurrencia.style.display = "block";
 
-        } else {
-            divFechaRecurrencia.style.display = "none";
+        if (response == 'success') {
+            return setAlerts.successAlert(
+                'Guardado',
+                null,
+                null,
+                'index.php',
+            );
         }
-    })
-})
+    } catch (error) {
+        hideLoadingOverlay();
+        console.error(error);
+        setAlerts.errorAlert('Hubo un error en la solicitud.');
+    }
+}
+

@@ -6,7 +6,6 @@ function buscar() {
 
     if (empleado_1.trim() === '' || fecha_1.trim() === '' || fecha_2.trim() === '') {
         alert("Por favor, Seleccione Empleado y rango de Fechas.");
-        console.log('hola');
         return;
     }
 
@@ -24,9 +23,9 @@ function buscar() {
         success: function (data) {
 
 
-            if (data.trabajador_sustituido.length === 0  && data.trabajador_sustituto.length === 0 ) {
+            if (data.trabajador_sustituido.length === 0 && data.trabajador_sustituto.length === 0) {
                 alert("No se encontraron Guardias para el trabajador: " + empleado_1 + " en el periodo seleccionado.");
-                
+
             }
 
             // Convertir los valores del campo 'conteo' a tipo entero
@@ -36,11 +35,11 @@ function buscar() {
             data.trabajador_sustituto.forEach(function (entry) {
                 entry.Conteo = parseInt(entry.Conteo);
             });
-    
+
             setupChart1(data.trabajador_sustituido);
-    
+
             setupChart2(data.trabajador_sustituto);
-    
+
 
 
         },
@@ -92,7 +91,7 @@ function setupChart1(data) {
     } else {
         // Limpiar el gráfico existente
         root.container.children.clear();
-        
+
     }
 
     // Create chart
@@ -295,7 +294,7 @@ function setupChart2(data) {
     } else {
         // Limpiar el gráfico existente
         root2.container.children.clear();
-        
+
     }
 
     // Create chart
