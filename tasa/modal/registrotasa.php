@@ -31,21 +31,21 @@
 
                     <!-- ************************TASA IAAS********************************** -->
 
-                        <div class="col-md-4">
-                            <strong style="font-size: 14px;">Total de IAAS</strong>
-                            <input type="number" class="control form-control" id="total_iass" name="total_iass" style="font-size: 13px;">
-                        </div>
+                    <div class="col-md-4">
+                        <strong style="font-size: 14px;">Total de IAAS</strong>
+                        <input type="number" class="control form-control" id="total_iass" name="total_iass" style="font-size: 13px;">
+                    </div>
 
 
-                        <div class="col-md-4">
-                            <strong style="font-size: 14px;">Egresos</strong>
-                            <input type="number" class="control form-control" id="egresos" name="egresos" style="font-size: 13px;">
-                        </div>
+                    <div class="col-md-4">
+                        <strong style="font-size: 14px;">Egresos</strong>
+                        <input type="number" class="control form-control" id="egresos" name="egresos" style="font-size: 13px;">
+                    </div>
 
-                        <div class="col-md-4">
-                            <strong style="font-size: 14px;">DEIH</strong>
-                            <input type="number" class="control form-control" id="deih" name="deih" style="font-size: 13px;">
-                        </div>
+                    <div class="col-md-4">
+                        <strong style="font-size: 14px;">DEIH</strong>
+                        <input type="number" class="control form-control" id="deih" name="deih" style="font-size: 13px;">
+                    </div>
 
                     <!-- ************************TASA IAAS********************************** -->
                     <div class="form-header">
