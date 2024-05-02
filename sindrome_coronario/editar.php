@@ -227,29 +227,29 @@
 
                     <div class="col-md-3" style="text-align: center;">
                         <span style="font-size:13px; display: block;">IAM previo</span>
-                        <input type="checkbox" class="form-check-input ra-checkbox" name="Previo_factor" id="Previo_factor" value="IAM_previo" style="font-size:14px; margin: 5px auto; display: block;">
+                        <input type="checkbox" class="form-check-input ra-checkbox" name="Previo_factor" id="Previo_factor" value="IAM previo" style="font-size:14px; margin: 5px auto; display: block;">
                     </div>
 
 
                     <div class="col-md-3" style="text-align: center;">
                         <span style="font-size:13px; display: block;">Ectasia coronaria</span>
-                        <input type="checkbox" class="form-check-input ra-checkbox" name="ectasia_factor" id="ectasia_factor" value="Ectasia_coronaria" style="font-size:14px; margin: 5px auto; display: block;">
+                        <input type="checkbox" class="form-check-input ra-checkbox" name="ectasia_factor" id="ectasia_factor" value="Ectasia coronaria" style="font-size:14px; margin: 5px auto; display: block;">
                     </div>
 
                     <div class="col-md-3" style="text-align: center;">
                         <span style="font-size:13px; display: block;">Cardiomiopatia de takotsubo</span>
-                        <input type="checkbox" class="form-check-input ra-checkbox" name="Cardiomio" id="Cardiomio" value="Cardiomiopatia_takotsubo" style="font-size:14px; margin: 5px auto; display: block;">
+                        <input type="checkbox" class="form-check-input ra-checkbox" name="Cardiomio" id="Cardiomio" value="Cardiomiopatia takotsubo" style="font-size:14px; margin: 5px auto; display: block;">
                     </div>
 
 
                     <div class="col-md-3" style="text-align: center;">
                         <span style="font-size:13px; display: block;">Enfermedad multivaso</span>
-                        <input type="checkbox" class="form-check-input ra-checkbox" name="multivaso_factor" id="multivaso_factor" value="Enfermedad_multivaso" style="font-size:14px; margin: 5px auto; display: block;">
+                        <input type="checkbox" class="form-check-input ra-checkbox" name="multivaso_factor" id="multivaso_factor" value="Enfermedad multivaso" style="font-size:14px; margin: 5px auto; display: block;">
                     </div>
 
                     <div class="col-md-4" style="text-align: center;">
                         <span style="font-size:13px; display: block;">Revascularización cardiaca previa</span>
-                        <input type="checkbox" class="form-check-input ra-checkbox" name="Resvascularizacion_factor" id="Resvascularizacion_factor" value="Revascularizacion_cardiaca_previa" style="font-size:14px; margin: 5px auto; display: block;">
+                        <input type="checkbox" class="form-check-input ra-checkbox" name="Resvascularizacion_factor" id="Resvascularizacion_factor" value="Revascularización cardiaca previa" style="font-size:14px; margin: 5px auto; display: block;">
                     </div>
                 </div>
             </div>

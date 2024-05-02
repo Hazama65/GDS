@@ -66,7 +66,7 @@
 
                 <div class="col-md-2" style="text-align: center;">
                     <span style="font-size:13px; display: block;">Ácido Acetil Salicílico</span>
-                    <input type="checkbox" class="form-check-input ra-checkbox" name="Tratamiento_antiagregantes" id="Acido_salicilico" value="Acido_salicilico Izquierda" style="font-size:14px; margin: 5px auto; display: block;">
+                    <input type="checkbox" class="form-check-input ra-checkbox" name="Tratamiento_antiagregantes" id="Acido_salicilico" value="Acido salicilico Izquierda" style="font-size:14px; margin: 5px auto; display: block;">
                 </div>
 
                 <div class="col-md-2" style="text-align: center;">

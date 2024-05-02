@@ -55,7 +55,7 @@ include("modal/registroSxCoronario.php");
         <div class="col-4" width="100%" height="800px" style="margin-bottom: 100px; ">
             <div id="patient-list-container" style="background-color:rgb(81, 176, 210,0.6)">
                 <br>
-                <input type="text" id="search" placeholder="Buscar TASA...">
+                <input type="text" id="search" placeholder="Buscar Paciente...">
                 <ul id="patient-list">
 
                 </ul>
