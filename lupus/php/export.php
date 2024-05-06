@@ -42,7 +42,7 @@ if ($result) {
         'IMC',
         'Ninguno',
         'Alcoholismo',
-        'Esteatosis Hepatica',
+        'Artritis Reumatoide',
         'Diabetes Mellitus',
         'Hipertensión Arterial',
         'Obesidad',
