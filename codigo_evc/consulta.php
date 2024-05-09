@@ -25,10 +25,10 @@
                     <table class="table table-striped table-hover table-bordered tabla-consulta">
                         <thead>
 
-                            <tr>
-                                <th scope="col" style="background-color:rgb(155, 165, 209)"> Datos Generales</th>
-                                <th scope="col" style="background-color:rgb(155, 165, 209)"> </th>
-                            </tr>
+                        <tr>
+                            <th colspan="2" style="background-color:rgb(114, 27, 47, 0.5)"> Datos Generales</th>
+                        </tr>
+
                         </thead>
 
                         <tbody style="font-size:13px;" class="table-bordered">
@@ -70,8 +70,9 @@
                             
                             
                             <tr>
-                                <th scope="col" style="background-color: rgb(155, 165, 209)">Escala F.A.S.T</th>
-                                <th scope="col" style="background-color: rgb(155, 165, 209)"> </th>
+                                <tr>
+                                    <th colspan="2" style="background-color:rgb(114, 27, 47, 0.5)"> Escala F.A.S.T.</th>
+                                </tr>
                             </tr>
 
                             <tr>
@@ -96,8 +97,10 @@
                             </tr>
 
                             <tr>
-                                <th scope="col" style="background-color: rgb(155, 165, 209)">Escala N.I.H.S.S Inicial</th>
-                                <th scope="col" style="background-color: rgb(155, 165, 209)"> </th>
+                               
+                                <tr>
+                                    <th colspan="2" style="background-color:rgb(114, 27, 47, 0.5)"> Escala N.I.H.S.S Inicial</th>
+                                </tr>
                             </tr>
 
                             <tr>
@@ -127,8 +130,10 @@
                             </tr>
 
                             <tr>
-                                <th scope="col" style="background-color: rgb(155, 165, 209)">Factor de Riesgo</th>
-                                <th scope="col" style="background-color: rgb(155, 165, 209)"> </th>
+                                
+                                <tr>
+                                    <th colspan="2" style="background-color:rgb(114, 27, 47, 0.5)"> Factor de Riesgo</th>
+                                </tr>
                             </tr>
 
 
@@ -173,8 +178,10 @@
                             </tr>
 
                             <tr>
-                                <th scope="col" style="background-color: rgb(155, 165, 209)">Código de EVC</th>
-                                <th scope="col" style="background-color: rgb(155, 165, 209)"> </th>
+                                
+                                <tr>
+                                    <th colspan="2" style="background-color:rgb(114, 27, 47, 0.5)"> Código de EVC</th>
+                                </tr>
                             </tr>
 
 
@@ -188,15 +195,55 @@
                                 <td><?php echo $defuncion ; ?></td>
                             </tr>
 
-
                             <tr>
-                                <td class="estilo-celda">Área</td>
-                                <td><?php echo $area ; ?></td>
+                                <td class="estilo-celda">Personal Médico Adscrito Urgencias</td>
+                                <td><?php echo $pmau ; ?></td>
                             </tr>
 
                             <tr>
-                                <th scope="col" style="background-color: rgb(155, 165, 209)">Puertas</th>
-                                <th scope="col" style="background-color: rgb(155, 165, 209)"> </th>
+                                <td class="estilo-celda">Personal de Admisión Hospitalaria</td>
+                                <td><?php echo $pah ; ?></td>
+                            </tr>
+
+                            <tr>
+                                <td class="estilo-celda">Personal de Enfermería</td>
+                                <td><?php echo $peia ; ?></td>
+                            </tr>
+
+                            <tr>
+                                <td class="estilo-celda">Personal de Imagenología</td>
+                                <td><?php echo $pim ; ?></td>
+                            </tr>
+
+                            <tr>
+                                <td class="estilo-celda">Personal de Laboratorio</td>
+                                <td><?php echo $plio ; ?></td>
+                            </tr>
+
+                            <tr>
+                                <td class="estilo-celda">Personal de CISFA</td>
+                                <td><?php echo $pcisfa ; ?></td>
+                            </tr>
+
+                            <tr>
+                                <td class="estilo-celda">Trabajo Social</td>
+                                <td><?php echo $ts ; ?></td>
+                            </tr>
+
+                            <tr>
+                                <td class="estilo-celda">Camillero</td>
+                                <td><?php echo $camillero ; ?></td>
+                            </tr>
+
+                            <tr>
+                                <td class="estilo-celda">Médico neurólogo</td>
+                                <td><?php echo $med_neuro ; ?></td>
+                            </tr>
+
+                            <tr>
+                                <tr>
+                                    <th colspan="2" style="background-color:rgb(114, 27, 47, 0.5)"> Puertas</th>
+                                </tr>
                             </tr>
 
                             <tr>
@@ -279,8 +326,10 @@
                             
                             
                             <tr>
-                                <th scope="col" style="background-color: rgb(155, 165, 209)">Escalas de Rehabilitación</th>
-                                <th scope="col" style="background-color: rgb(155, 165, 209)"> </th>
+
+                                <tr>
+                                    <th colspan="2" style="background-color:rgb(213, 204, 224)"> Escalas de Rehabilitación</th>
+                                </tr>
                             </tr>
 
 
@@ -295,8 +344,9 @@
                             </tr>
 
                             <tr>
-                                <th scope="col" style="background-color: rgb(213, 204, 224)">Escalas de Rehabilitación</th>
-                                <th scope="col" style="background-color: rgb(213, 204, 224)"> </th>
+                                <tr>
+                                    <th colspan="2" style="background-color:rgb(213, 204, 224)"> Escalas de Rehabilitación</th>
+                                </tr>
                             </tr>
 
                             <tr>
@@ -326,8 +376,9 @@
 
                             
                             <tr>
-                                <th scope="col" style="background-color: rgb(213, 204, 224)">Escalas de Rehabilitación</th>
-                                <th scope="col" style="background-color: rgb(213, 204, 224)"> </th>
+                                <tr>
+                                    <th colspan="2" style="background-color:rgb(213, 204, 224)"> Escalas de Rehabilitación</th>
+                                </tr>
                             </tr>
 
                             <tr>

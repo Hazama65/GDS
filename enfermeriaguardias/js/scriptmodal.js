@@ -77,3 +77,4 @@ document.getElementById('servicio_sustituto').addEventListener('change', functio
         document.getElementById("servicio_Pediatria_sustituto").style.display = "block";
     }
 });
+

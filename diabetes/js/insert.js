@@ -1,5 +1,6 @@
 import { setAlerts } from "./plugins/alerts_db.plugin.js";
 import { httpClients } from "./plugins/http-client_db.plugin.js";
+import { hideLoadingOverlay, showLoadingOverlay } from "./plugins/loader.plugin.js";
 
 const url = 'php/controllers/insert.controller.php';
 
@@ -10,6 +11,10 @@ export const mainForm = () => {
         event.preventDefault();
         let alldata = $(this).serialize();
         // console.log(alldata);
+
+        showLoadingOverlay();
+
+
         validationData(alldata);
     })
 }
@@ -17,9 +22,12 @@ export const mainForm = () => {
 const validationData = async (alldata) =>{
     try {
         const response = (await httpClients.post(url,alldata));
-        console.log(response);
+
+        hideLoadingOverlay();
+
 
         if (response == 0) {return setAlerts.errorAlert('Hubo una Falla en el servidor al Guardar los datos')}
+        if (response == 2) {return setAlerts.warningAlert('Este CURP ya se encuentra Registrado')}
 
         if (response == 'success') {
             return setAlerts.successAlert(

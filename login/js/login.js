@@ -24,6 +24,7 @@ const validateLogin = async (formData) => {
     try{
 
         const response = JSON.parse( await httpClient.post(url, formData) );
+        console.log(response);
 
         hideLoadingOverlay();
         
@@ -141,9 +142,54 @@ const validateLogin = async (formData) => {
                 '../ganglio_cervical/index.php'
             )
         }
-
-
-
+        if (typeToken.trim() === 'cuestionario') {
+            return setAlert.successAlert(
+                'La operacion se ha completado correctamente.',
+                null,
+                null,
+                '../cuestionario/registros.php'
+            )
+        }
+        if (typeToken.trim() === 'iaas') {
+            return setAlert.successAlert(
+                'La operacion se ha completado correctamente.',
+                null,
+                null,
+                '../iaas/index.php'
+            )
+        }
+        if (typeToken.trim() === 'enfermeriaguardias') {
+            return setAlert.successAlert(
+                'La operacion se ha completado correctamente.',
+                null,
+                null,
+                '../enfermeriaguardias/index.php'
+            )
+        }
+        if (typeToken.trim() === 'enfermeriaguardias_p') {
+            return setAlert.successAlert(
+                'La operacion se ha completado correctamente.',
+                null,
+                null,
+                '../enfermeriaguardias/index_personal.php'
+            )
+        }
+        if (typeToken.trim() === 'tasa_iaas') {
+            return setAlert.successAlert(
+                'La operacion se ha completado correctamente.',
+                null,
+                null,
+                '../tasa_iaas/index.php'
+            )
+        }
+        if (typeToken.trim() === 'satisfaccion') {
+            return setAlert.successAlert(
+                'La operacion se ha completado correctamente.',
+                null,
+                null,
+                '../encuesta_satisfaccion/registros.php'
+            )
+        }
 
 
     }catch(error){

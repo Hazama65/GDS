@@ -294,29 +294,23 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-        // Obtener los elementos del DOM
-        const tiempoUrgenciasInput = document.getElementById('tiempo_urgencias');
-        const tiempoTriageInput = document.getElementById('tiempo_TRIAGE');
-        const puertaTriageInput = document.getElementById('puerta_triage');
+document.addEventListener("DOMContentLoaded", function () {
+    // Obtiene el elemento select y el div que se debe mostrar/ocultar
+    var selectElement = document.getElementById("se_activa");
+    var divElement = document.getElementById("equipo_multi");
 
-        // Función para calcular la diferencia de tiempo y actualizar el campo Puerta-TRIAGE
-        function calcularDiferencia() {
-            const tiempoUrgencias = new Date('2000-01-01T' + tiempoUrgenciasInput.value);
-            const tiempoTriage = new Date('2000-01-01T' + tiempoTriageInput.value);
-            const diferenciaEnMinutos = (tiempoTriage - tiempoUrgencias) / (1000 * 60);
+    divElement.style.display = "none";
 
-            puertaTriageInput.value = diferenciaEnMinutos + ' minutos';
-
-            // Cambiar el color de fondo del campo de texto dependiendo de la diferencia de tiempo
-            if (diferenciaEnMinutos < 10) {
-                puertaTriageInput.style.backgroundColor = '#8eff8e'; // Verde
-                puertaTriageInput.value = 'MENOS DE 10 MINUTOS';
-            } else {
-                puertaTriageInput.style.backgroundColor = '#ff8e8e'; // Rojo
-                puertaTriageInput.value = 'MÁS DE 10 MINUTOS';
-            }
+    // Agrega un evento de cambio al elemento select
+    selectElement.addEventListener("change", function () {
+        // Comprueba si se seleccionó "Neuropatico"
+        if (selectElement.value === "Si") {
+            // Muestra el div si se selecciona "Si"
+            divElement.style.display = "block";
+        } else {
+            // Oculta el div en caso contrario
+            divElement.style.display = "none";
         }
+    });
+});
 
-        // Agregar evento de cambio a los campos de entrada de tiempo
-        tiempoUrgenciasInput.addEventListener('change', calcularDiferencia);
-        tiempoTriageInput.addEventListener('change', calcularDiferencia);

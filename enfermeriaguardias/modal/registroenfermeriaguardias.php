@@ -25,36 +25,51 @@
 
                         <div class="col-md-6">
                             <strong style="font-size: 14px; ">Trabajador Sustituido</strong>
-                            <input id="enlace_numeroempleado" name="enlace_numeroempleado" type="text" class="control form-control" style="font-size: 13px;">
+                            <select name="enlace_numeroempleado" id="enlace_numeroempleado" class="control form-control"
+                                style="font-size: 13px;" required>
+                                <option value="">Seleccione un Empleado</option>
+                                <?php
+                                if (!empty($data_empleados)) {
+                                    foreach ($data_empleados as $row1) {
+                                        echo "<option value='" . $row1["nombre_empleado"] . "' 
+                                        data-numeroempleado='" . $row1["no_empleado"] . "'
+                                        data-gradoEstudios='" . $row1["ult_grado_estudio"] . "'
+                                        >" . $row1["nombre_empleado"] . "</option>";
+                                    }
+                                } else {
+                                    echo "<option value=''>No hay datos disponibles</option>";
+                                }
+                                ?>
+                            </select>
                         </div>
 
                         <div class="col-md-6">
                             <strong style="font-size: 14px; ">Número de Empleado</strong>
-                            <input id="enlace_numeroempleado" name="enlace_numeroempleado" type="number" class="control form-control" style="font-size: 13px;">
+                            <input id="numeroempleado_1" name="numeroempleado_1" type="number"
+                                class="control form-control" style="font-size: 13px; background-color: #e9ecef" readonly>
                         </div>
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Nivel Académico</strong>
-                            <select name="nivel_academico" id="nivel_academico" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
-                                <option value="Técnico">Técnico</option>
-                                <option value="Postécnico">Postécnico</option>
-                                <option value="Licenciatura">Licenciatura</option>
-                                <option value="Posgrado">Posgrado</option>
-                                <option value="Maestría">Maestría</option>
-
-                            </select>
+                            <input name="nivel_academico" id="nivel_academico" class="control form-control"
+                                style="font-size: 13px; background-color: #e9ecef" readonly>
+                            
                         </div>
 
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Turno</strong>
                             <select name="Turno" id="Turno" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
+                                <option value="">Seleccione</option>
                                 <option value="Matutino">Matutino</option>
                                 <option value="Vespertino">Vespertino</option>
-                                <option value="Nocturno A">Nocturno A</option>
-                                <option value="Nocturno B">Nocturno B</option>
-                                <option value="Nocturno Especíal">Nocturno Especíal</option>
+                                <option value="Nocturno - LUNES, JUEVES Y SABADO">Nocturno - LUNES, JUEVES Y SABADO</option>
+                                <option value="Nocturno - LUNES, MIERCOLES Y SABADO">Nocturno - LUNES, MIERCOLES Y SABADO</option>
+                                <option value="Nocturno - LUNES, MIERCOLES Y VIERNES">Nocturno - LUNES, MIERCOLES Y VIERNES</option>
+                                <option value="Nocturno - MARTES, JUEVES Y DOMINGO">Nocturno - MARTES, JUEVES Y DOMINGO</option>
+                                <option value="Nocturno - MARTES, JUEVES Y SABADO">Nocturno - MARTES, JUEVES Y SABADO</option>
+                                <option value="Nocturno - MARTES, VIERNES Y DOMINGO">Nocturno - MARTES, VIERNES Y DOMINGO</option>
+                                <option value="Nocturno - MIERCOLES, VIERNES Y DOMINGO">Nocturno - MIERCOLES, VIERNES Y DOMINGO</option>
+                                <option value="Jornada Acumulada Diurna">Jornada Acumulada Diurna</option>
 
                             </select>
                         </div>
@@ -62,9 +77,9 @@
                         <div class="col-md-3">
                             <strong style="font-size: 14px;">Servicio</strong>
                             <select name="servicio" id="servicio" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
+                                <option value="">Seleccione</option>
                                 <option value="Críticas">Críticas</option>
-                                <option value="Clínicas">Clínicas</option>
+                                <!-- <option value="Clínicas">Clínicas</option> -->
                                 <option value="Quirúrgicas">Quirúrgicas</option>
                                 <option value="Perinatales">Perinatales</option>
                                 <option value="Ambulatorias">Ambulatorias</option>
@@ -76,7 +91,7 @@
                         <div class="col-md-3" id="servicio_critica" style="display: none;">
                             <strong style="font-size: 14px;">Críticas</strong>
                             <select name="critica" id="critica" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
+                                <option value="">Seleccione</option>
                                 <option value="Urgencias">Urgencias</option>
                                 <!-- <option value="UCIA">UCIA</option>
                                 <option value="UCIN">UCIN</option>
@@ -94,20 +109,20 @@
                         <div class="col-md-3" id="servicio_clinica" style="display: none;">
                             <strong style="font-size: 14px;">Clínicas</strong>
                             <select name="clinicas" id="clinicas" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
+                                <option value="">Seleccione</option>
                                 <option value="Medicina Interna">Medicina Interna</option>
                                 <option value="Hematología">Hematología</option>
                                 <option value="Pediatría">Pediatría</option>
                                 <option value="Oncopediatría ">Oncopediatría </option>
                                 <option value="Hemodiálisis">Hemodiálisis</option>
-                                
+
                             </select>
                         </div>
 
                         <div class="col-md-3" id="servicio_quirurgica" style="display: none;">
                             <strong style="font-size: 14px;">Quirúrgicas</strong>
                             <select name="quirurgicas" id="quirurgicas" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
+                                <option value="">Seleccione</option>
                                 <!-- <option value="TyO">TyO</option>
                                 <option value="Neurocirugía">Neurocirugía</option>
                                 <option value="Cirugía oncológica">Cirugía oncológica</option>
@@ -130,7 +145,7 @@
                         <div class="col-md-3" id="servicio_perinatales" style="display: none;">
                             <strong style="font-size: 14px;">Perinatales</strong>
                             <select name="perinatales" id="perinatales" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
+                                <option value="">Seleccione</option>
                                 <option value="UTQ">UTQ</option>
                                 <option value="Gineco">Gineco</option>
                                 <option value="Triage Urgencias">Triage Urgencias</option>
@@ -140,7 +155,7 @@
                         <div class="col-md-3" id="servicio_ambulatoria" style="display: none;">
                             <strong style="font-size: 14px;">Ambulatorias</strong>
                             <select name="Ambulatorias" id="Ambulatorias" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
+                                <option value="">Seleccione</option>
                                 <option value="Consulta Externa">Consulta Externa</option>
                                 <option value="Unidad Funcional">Unidad Funcional</option>
                                 <option value="Rehabilitación">Rehabilitación</option>
@@ -156,8 +171,9 @@
 
                         <div class="col-md-3" id="servicio_hospitalizacion" style="display: none;">
                             <strong style="font-size: 14px;">Hospitarias</strong>
-                            <select name="hospitalizacion" id="hospitalizacion" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
+                            <select name="hospitalizacion" id="hospitalizacion" class="form-control"
+                                style="font-size: 14px;">
+                                <option value="">Seleccione</option>
                                 <option value="4°">4°</option>
                                 <option value="3°">3°</option>
                                 <option value="2°">2°</option>
@@ -171,7 +187,7 @@
                         <div class="col-md-3" id="servicio_Pediatria" style="display: none;">
                             <strong style="font-size: 14px;">Pediatría / Neonatología</strong>
                             <select name="pediatria" id="pediatria" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
+                                <option value="">Seleccione</option>
                                 <option value="Urgencias Pediatría">Urgencias Pediatría</option>
                                 <option value="Ginecología">Ginecología</option>
                                 <option value="UCIN">UCIN</option>
@@ -194,47 +210,62 @@
 
                         <div class="col-md-6" id="idnombre">
                             <strong style="font-size: 14px;">Trabajador Sustituto</strong>
-                            <input id="nombre_sustituto" name="nombre_sustituto" type="text" class="control form-control" style="font-size: 13px;">
+                            <select name="nombre_sustituto" id="nombre_sustituto" class="control form-control"
+                                style="font-size: 13px;" required>
+                                <option value="">Seleccione un Empleado</option>
+                                <?php
+                                if (!empty($data_empleados)) {
+                                    foreach ($data_empleados as $row1) {
+                                        echo "<option value='" . $row1["nombre_empleado"] . "' 
+                                        data-numeroempleado='" . $row1["no_empleado"] . "'
+                                        data-gradoEstudios='" . $row1["ult_grado_estudio"] . "'
+                                        >" . $row1["nombre_empleado"] . "</option>";
+                                    }
+                                } else {
+                                    echo "<option value=''>No hay datos disponibles</option>";
+                                }
+                                ?>
+                            </select>
                         </div>
 
                         <div class="col-md-6">
                             <strong style="font-size: 14px; ">Número de Empleado</strong>
-                            <input id="enlace_numeroempleado_sustituto" name="enlace_numeroempleado_sustituto" type="number" class="control form-control" style="font-size: 13px;">
+                            <input id="enlace_numeroempleado_sustituto" name="enlace_numeroempleado_sustituto"
+                                type="number" class="control form-control" style="font-size: 13px; background-color: #e9ecef" readonly>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <strong style="font-size: 14px;">Nivel Académico</strong>
-                            <select name="nivel_academico_sustituto" id="nivel_academico_sustituto" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
-                                <option value="Técnico">Técnico</option>
-                                <option value="Postécnico">Postécnico</option>
-                                <option value="Licenciatura">Licenciatura</option>
-                                <option value="Posgrado">Posgrado</option>
-                                <option value="Maestría">Maestría</option>
-
-                            </select>
+                            <input name="nivel_academico_sustituto" id="nivel_academico_sustituto" class="control form-control"
+                                style="font-size: 14px; background-color: #e9ecef" readonly>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <strong style="font-size: 14px;">Turno</strong>
-                            <select name="Turno_sustituto" id="Turno_sustituto" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
+                            <select name="Turno_sustituto" id="Turno_sustituto" class="form-control"
+                                style="font-size: 14px;">
+                                <option value="">Seleccione</option>
                                 <option value="Matutino">Matutino</option>
                                 <option value="Vespertino">Vespertino</option>
-                                <option value="Nocturno A">Nocturno A</option>
-                                <option value="Nocturno B">Nocturno B</option>
-                                <option value="Nocturno Especíal">Nocturno Especíal</option>
-
+                                <option value="Nocturno - LUNES, JUEVES Y SABADO">Nocturno - LUNES, JUEVES Y SABADO</option>
+                                <option value="Nocturno - LUNES, MIERCOLES Y SABADO">Nocturno - LUNES, MIERCOLES Y SABADO</option>
+                                <option value="Nocturno - LUNES, MIERCOLES Y VIERNES">Nocturno - LUNES, MIERCOLES Y VIERNES</option>
+                                <option value="Nocturno - MARTES, JUEVES Y DOMINGO">Nocturno - MARTES, JUEVES Y DOMINGO</option>
+                                <option value="Nocturno - MARTES, JUEVES Y SABADO">Nocturno - MARTES, JUEVES Y SABADO</option>
+                                <option value="Nocturno - MARTES, VIERNES Y DOMINGO">Nocturno - MARTES, VIERNES Y DOMINGO</option>
+                                <option value="Nocturno - MIERCOLES, VIERNES Y DOMINGO">Nocturno - MIERCOLES, VIERNES Y DOMINGO</option>
+                                <option value="Jornada Acumulada Diurna">Jornada Acumulada Diurna</option>
                             </select>
                         </div>
 
 
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <strong style="font-size: 14px;">Servicio</strong>
-                            <select name="servicio_sustituto" id="servicio_sustituto" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
+                            <select name="servicio_sustituto" id="servicio_sustituto" class="form-control"
+                                style="font-size: 14px;">
+                                <option value="">Seleccione</option>
                                 <option value="Críticas">Críticas</option>
-                                <option value="Clínicas">Clínicas</option>
+                                <!-- <option value="Clínicas">Clínicas</option> -->
                                 <option value="Quirúrgicas">Quirúrgicas</option>
                                 <option value="Perinatales">Perinatales</option>
                                 <option value="Ambulatorias">Ambulatorias</option>
@@ -245,8 +276,9 @@
 
                         <div class="col-md-3" id="servicio_critica_sustituto" style="display: none;">
                             <strong style="font-size: 14px;">Críticas</strong>
-                            <select name="critica_sustituto" id="critica_sustituto" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
+                            <select name="critica_sustituto" id="critica_sustituto" class="form-control"
+                                style="font-size: 14px;">
+                                <option value="">Seleccione</option>
                                 <option value="Urgencias">Urgencias</option>
                                 <!-- <option value="UCIA">UCIA</option>
                                 <option value="UCIN">UCIN</option>
@@ -262,8 +294,9 @@
 
                         <div class="col-md-3" id="servicio_clinica_sustituto" style="display: none;">
                             <strong style="font-size: 14px;">Clínicas</strong>
-                            <select name="clinicas_sustituto" id="clinicas_sustituto" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
+                            <select name="clinicas_sustituto" id="clinicas_sustituto" class="form-control"
+                                style="font-size: 14px;">
+                                <option value="">Seleccione</option>
                                 <option value="Medicina Interna">Medicina Interna</option>
                                 <option value="Hematología">Hematología</option>
                                 <option value="Pediatría">Pediatría</option>
@@ -275,8 +308,9 @@
 
                         <div class="col-md-3" id="servicio_quirurgica_sustituto" style="display: none;">
                             <strong style="font-size: 14px;">Quirúrgicas</strong>
-                            <select name="quirurgicas_sustituto" id="quirurgicas_sustituto" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
+                            <select name="quirurgicas_sustituto" id="quirurgicas_sustituto" class="form-control"
+                                style="font-size: 14px;">
+                                <option value="">Seleccione</option>
                                 <!-- <option value="Cirugía oncológica">Cirugía oncológica</option>
                                 <option value="TyO">TyO</option> 
                                 <option value="Neurocirugía">Neurocirugía</option>
@@ -294,22 +328,24 @@
                                 <option value="Ceye">Ceye</option>
                             </select>
 
-                            <div class="col-md-3" id="servicio_perinatales_sustituto" style="display: none;">
-                                <strong style="font-size: 14px;">Perinatales</strong>
-                                <select name="perinatales_sustituto" id="perinatales_sustituto" class="form-control" style="font-size: 14px;">
-                                    <option value="Seleccione">Seleccione</option>
-                                    <option value="UTQ">UTQ</option>
-                                    <option value="Gineco">Gineco</option>
-                                    <option value="Triage Urgencias">Triage Urgencias</option>
+                        </div>
+                        <div class="col-md-3" id="servicio_perinatales_sustituto" style="display: none;">
+                            <strong style="font-size: 14px;">Perinatales</strong>
+                            <select name="perinatales_sustituto" id="perinatales_sustituto" class="form-control"
+                                style="font-size: 14px;">
+                                <option value="">Seleccione</option>
+                                <option value="UTQ">UTQ</option>
+                                <option value="Gineco">Gineco</option>
+                                <option value="Triage Urgencias">Triage Urgencias</option>
 
-                                </select>
-                            </div>
+                            </select>
                         </div>
 
                         <div class="col-md-3" id="servicio_ambulatoria_sustituto" style="display: none;">
                             <strong style="font-size: 14px;">Ambulatorias</strong>
-                            <select name="Ambulatorias_sustituto" id="Ambulatorias_sustituto" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
+                            <select name="Ambulatorias_sustituto" id="Ambulatorias_sustituto" class="form-control"
+                                style="font-size: 14px;">
+                                <option value="">Seleccione</option>
                                 <option value="Consulta Externa">Consulta Externa</option>
                                 <option value="Unidad Funcional">Unidad Funcional</option>
                                 <option value="Rehabilitación">Rehabilitación</option>
@@ -325,8 +361,9 @@
 
                         <div class="col-md-3" id="servicio_hospitalizacion_sustituto" style="display: none;">
                             <strong style="font-size: 14px;">Hospitalarias</strong>
-                            <select name="hospitalizacion_sustituto" id="hospitalizacion_sustituto" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
+                            <select name="hospitalizacion_sustituto" id="hospitalizacion_sustituto" class="form-control"
+                                style="font-size: 14px;">
+                                <option value="">Seleccione</option>
                                 <option value="4°">4°</option>
                                 <option value="3°">3°</option>
                                 <option value="2°">2°</option>
@@ -339,8 +376,9 @@
 
                         <div class="col-md-3" id="servicio_Pediatria_sustituto" style="display: none;">
                             <strong style="font-size: 14px;">Pediatría / Neonatología</strong>
-                            <select name="pediatria_sustituto" id="pediatria_sustituto" class="form-control" style="font-size: 14px;">
-                                <option value="Seleccione">Seleccione</option>
+                            <select name="pediatria_sustituto" id="pediatria_sustituto" class="form-control"
+                                style="font-size: 14px;">
+                                <option value="">Seleccione</option>
                                 <option value="Urgencias Pediatría">Urgencias Pediatría</option>
                                 <option value="Ginecología">Ginecología</option>
                                 <option value="UCIN">UCIN</option>
@@ -362,20 +400,36 @@
 
                         <div class="col-md-4">
                             <strong style="font-size: 14px;">Fecha de Tramite</strong>
-                            <input type="date" class="control form-control" id="fecha_tramite" name="fecha_tramite" style="font-size: 13px;">
+                            <input type="date" class="control form-control" id="fecha_tramite" name="fecha_tramite"
+                                style="font-size: 13px;">
                         </div>
 
                         <div class="col-md-4">
                             <strong style="font-size: 14px;">Fecha de Suplencia</strong>
-                            <input type="date" class="control form-control" id="fecha_suplencia" name="fecha_suplencia" style="font-size: 13px;">
+                            <input type="date" class="control form-control" id="fecha_suplencia" name="fecha_suplencia"
+                                style="font-size: 13px;">
                         </div>
 
                         <div class="col-md-4">
                             <strong style="font-size: 14px;">Nombre de Quien Autoriza </strong>
-                            <input type="text" class="control form-control" id="autoriza" name="autoriza" style="font-size: 13px;">
+                            <select type="text" class="control form-control" id="autoriza" name="autoriza"
+                                style="font-size: 13px;" required>
+                                <option value="">Seleccione un Medico</option>
+                                <option value="BECERRIL VERGARA ALONDRA MERCEDES">BECERRIL VERGARA ALONDRA MERCEDES</option>
+                                <option value="ESPINOZA REYES MARIA DEL CARMEN">ESPINOZA REYES MARIA DEL CARMEN</option>
+                                <option value="GARCIA VELASCO MARIA DE LOS ANGELES">GARCIA VELASCO MARIA DE LOS ANGELES</option>
+                                <option value="GAYTAN MEDEL SARAI">GAYTAN MEDEL SARAI</option>
+                                <option value="GORDILLO CRUZ ARACELI">GORDILLO CRUZ ARACELI</option>
+                                <option value="HERNANDEZ GARCIA VERONICA">HERNANDEZ GARCIA VERONICA</option>
+                                <option value="HERRERA HINOJOSA MARCO ANTONIO">HERRERA HINOJOSA MARCO ANTONIO</option>
+                                <option value="HUERTA ESPINDOLA MARIO ROBERTO CECILIO">HUERTA ESPINDOLA MARIO ROBERTO CECILIO</option>
+                                <option value="JAINZ HERNANDEZ ALEJANDRA">JAINZ HERNANDEZ ALEJANDRA</option>
+                                <option value="SALADO LUCERO MARIA LETICIA">SALADO LUCERO MARIA LETICIA</option>
+                                <option value="SANABRIA PAISANO JOSE ALFREDO">SANABRIA PAISANO JOSE ALFREDO</option>
+                                <option value="SANCHEZ MORENO MARIA DEL ROCIO">SANCHEZ MORENO MARIA DEL ROCIO</option>
+                                <option value="TAMANIS LAVASTIDA PABLO">TAMANIS LAVASTIDA PABLO</option>
+                            </select>
                         </div>
-
-
 
                     </div> <!-- DIV ROW LINEA 13 -->
 

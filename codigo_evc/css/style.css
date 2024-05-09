@@ -3,14 +3,15 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0c5;
+    height: auto;
 }
 
 header {
     background: #009FFF;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);
+    background: -webkit-linear-gradient(to right, #48030e, #721b2f);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ec2F4B, #009FFF);
+    background: linear-gradient(to right, #48030e, #721b2f);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     height: 50px;
@@ -66,9 +67,9 @@ header a {
 footer {
     background: #009FFF;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);
+    background: -webkit-linear-gradient(to right,#48030e, #721b2f);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ec2F4B, #009FFF);
+    background: linear-gradient(to right, #48030e, #721b2f);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #ececec;
     text-align: center;
@@ -76,6 +77,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    font-size: 8px;
 }
 
 h5.bi {
@@ -95,6 +97,7 @@ h5.bi {
     width: 80%;
     padding: 10px;
     margin: 10px;
+    font-size: 11px;
 }
 
 #patient-list {
@@ -102,11 +105,12 @@ h5.bi {
     padding: 0;
     background-color: white;
     /* Fondo blanco */
-    border: 1px solid rgba(179, 227, 20, 0.934);
+    border: #48030e;
     /* Borde alrededor de la lista */
     border-radius: 5px;
     /* Esquinas redondeadas */
     margin: 10px;
+    font-size: 11px;
 }
 
 #patient-list li {
@@ -116,13 +120,16 @@ h5.bi {
     border-bottom: 1px solid #ddd;
     /* Borde inferior para separar pacientes */
 }
+#patient-list li:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Cambia el valor según tu preferencia */
+    background-color: rgba(155, 19, 19, 0.1); /* Cambia el color de fondo al pasar el mouse */
+}
 
 #patient-list li:last-child {
     border-bottom: none;
     /* Elimina el borde inferior del último paciente */
 }
 
-/* Agrega un borde alrededor del contenedor de la tabla */
 #patient-list-container {
     border: 1px solid #ddd;
     /* Color y grosor del borde */
@@ -130,6 +137,8 @@ h5.bi {
     /* Esquinas redondeadas */
     padding: 10px;
     /* Espacio alrededor de la tabla */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    /* Sombra con desplazamiento horizontal de 0px, desplazamiento vertical de 0px, difuminado de 10px, sin propagación de la sombra y color negro con opacidad 0.3 */
 }
 
 .custom-header {
@@ -146,9 +155,9 @@ h5.bi {
 #patient-list-container {
     background: #009FFF;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ec2f4b69, #009dff63);
+    background: -webkit-linear-gradient(to right, #c2b7b8ef, #ebe7e7eb);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ec2f4b95, #009dff88);
+    background: linear-gradient(to right, #c2b7b8ef, #ebe7e7eb);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     max-height: 800px;
     /* Altura máxima del div */

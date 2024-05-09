@@ -1,0 +1,59 @@
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+header {
+    background-color: rgb(35, 91, 78);
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: #ffff;
+}
+
+#chartdiv_1,
+#chartdiv_2,
+#chartdiv_3,
+#chartdiv_4,
+#chartdiv_5,
+#chartdiv_6,
+#chartdiv_7,
+#chartdiv_8,
+#chartdiv_9,
+#chartdiv_10,
+#chartdiv_11 {
+    width: 50%;
+    height: 400px;
+    margin-bottom: 95px;
+}
+
+.container {
+    text-align: center;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+}
+
+.graficas-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.badge {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(35, 91, 78);
+    color: white;
+    font-size: 20px;
+}
+
+.badge h6 {
+    margin-top: 10px;
+    font-size: 12px;
+}

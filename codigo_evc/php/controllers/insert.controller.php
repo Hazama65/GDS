@@ -79,6 +79,15 @@
             'activacion'   => $_POST['se_activa'],
             'defuncion'    => $_POST['defuncion'],
             'area'         => $_POST['area'],
+            'pmau'         => isset($_POST['pmau']) ? 'Si' : 'No',
+            'pah'          => isset($_POST['pah']) ? 'Si' : 'No',
+            'peia'         => isset($_POST['peia']) ? 'Si' : 'No',
+            'pim'          => isset($_POST['pim']) ? 'Si' : 'No',
+            'plio'         => isset($_POST['plio']) ? 'Si' : 'No',
+            'pcisfa'       => isset($_POST['pcisfa']) ? 'Si' : 'No',
+            'ts'           => isset($_POST['ts']) ? 'Si' : 'No',
+            'camillero'    => isset($_POST['camillero']) ? 'Si' : 'No',
+            'med_neuro'    => isset($_POST['med_neuro']) ? 'Si' : 'No',
             'id_paciente'  => $Result_Paciente
         );
         foreach ($Data_evc as $key => $value) {

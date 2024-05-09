@@ -1,3 +1,3 @@
 <?php
-    header('Location: login/index.php');
+    header('Location: gestion_digital_en_salud/index.php');
 ?>

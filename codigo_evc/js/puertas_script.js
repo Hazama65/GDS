@@ -14,11 +14,11 @@ const urgencias_traige = () => {
     let diferenciaFormato = `${String(diferenciaHoras).padStart(2, '0')}:${String(diferenciaMinutos).padStart(2, '0')}:${String(diferenciaSegundos).padStart(2, '0')}`;
 
     if (diferenciaFormato > '00:10:00') {
-        document.getElementById("puerta_triage").value = 'No';
-        document.getElementById("puerta_triage").style.backgroundColor = 'Red'; // Cambiar el color de fondo a verde
+        document.getElementById("puerta_triage").value = 'MÁS DE 10 MINUTOS';
+        document.getElementById("puerta_triage").style.backgroundColor = '#ff8e8e'; // Cambiar el color de fondo a verde
     } else {
-        document.getElementById("puerta_triage").value = 'Si';
-        document.getElementById("puerta_triage").style.backgroundColor = 'green'; // Cambiar el color de fondo a verde
+        document.getElementById("puerta_triage").value = 'MENOS DE 10 MINUTOS';
+        document.getElementById("puerta_triage").style.backgroundColor = '#8eff8e'; // Cambiar el color de fondo a verde
 
     }
 }
@@ -44,11 +44,11 @@ const traige_choque = () => {
     let diferenciaFormato = `${String(diferenciaHoras).padStart(2, '0')}:${String(diferenciaMinutos).padStart(2, '0')}:${String(diferenciaSegundos).padStart(2, '0')}`;
 
     if (diferenciaFormato > '00:15:00') {
-        document.getElementById("puerta_urgencias").value = 'No';
-        document.getElementById("puerta_urgencias").style.backgroundColor = 'Red'; // Cambiar el color de fondo a verde
+        document.getElementById("puerta_urgencias").value = 'MÁS DE 15 MINUTOS';
+        document.getElementById("puerta_urgencias").style.backgroundColor = '#ff8e8e'; // Cambiar el color de fondo a verde
     } else {
-        document.getElementById("puerta_urgencias").value = 'Si';
-        document.getElementById("puerta_urgencias").style.backgroundColor = 'green'; // Cambiar el color de fondo a verde
+        document.getElementById("puerta_urgencias").value = 'MENOS DE 15 MINUTOS';
+        document.getElementById("puerta_urgencias").style.backgroundColor = '#8eff8e'; // Cambiar el color de fondo a verde
 
     }
 }
@@ -74,11 +74,11 @@ const choque_tac = () => {
     let diferenciaFormato = `${String(diferenciaHoras).padStart(2, '0')}:${String(diferenciaMinutos).padStart(2, '0')}:${String(diferenciaSegundos).padStart(2, '0')}`;
 
     if (diferenciaFormato > '00:25:00') {
-        document.getElementById("puerta_tac").value = 'No';
-        document.getElementById("puerta_tac").style.backgroundColor = 'Red'; // Cambiar el color de fondo a verde
+        document.getElementById("puerta_tac").value = 'MÁS DE 25 MINUTOS';
+        document.getElementById("puerta_tac").style.backgroundColor = '#ff8e8e'; // Cambiar el color de fondo a verde
     } else {
-        document.getElementById("puerta_tac").value = 'Si';
-        document.getElementById("puerta_tac").style.backgroundColor = 'green'; // Cambiar el color de fondo a verde
+        document.getElementById("puerta_tac").value = 'MENOS DE 25 MINUTOS';
+        document.getElementById("puerta_tac").style.backgroundColor = '#8eff8e'; // Cambiar el color de fondo a verde
 
     }
 }
@@ -104,11 +104,11 @@ const tac_medicos = () => {
     let diferenciaFormato = `${String(diferenciaHoras).padStart(2, '0')}:${String(diferenciaMinutos).padStart(2, '0')}:${String(diferenciaSegundos).padStart(2, '0')}`;
 
     if (diferenciaFormato > '00:50:00') {
-        document.getElementById("puerta_medicos").value = 'No';
-        document.getElementById("puerta_medicos").style.backgroundColor = 'Red'; // Cambiar el color de fondo a verde
+        document.getElementById("puerta_medicos").value = 'MÁS DE 50 MINUTOS';
+        document.getElementById("puerta_medicos").style.backgroundColor = '#ff8e8e'; // Cambiar el color de fondo a verde
     } else {
-        document.getElementById("puerta_medicos").value = 'Si';
-        document.getElementById("puerta_medicos").style.backgroundColor = 'green'; // Cambiar el color de fondo a verde
+        document.getElementById("puerta_medicos").value = 'MENOS DE 50 MINUTOS';
+        document.getElementById("puerta_medicos").style.backgroundColor = '#8eff8e'; // Cambiar el color de fondo a verde
 
     }
 }
@@ -134,11 +134,11 @@ const medicos_trombo = () => {
     let diferenciaFormato = `${String(diferenciaHoras).padStart(2, '0')}:${String(diferenciaMinutos).padStart(2, '0')}:${String(diferenciaSegundos).padStart(2, '0')}`;
 
     if (diferenciaFormato > '00:50:00') {
-        document.getElementById("puerta_aguja").value = 'No';
-        document.getElementById("puerta_aguja").style.backgroundColor = 'Red'; // Cambiar el color de fondo a verde
+        document.getElementById("puerta_aguja").value = 'MÁS DE 50 MINUTOS';
+        document.getElementById("puerta_aguja").style.backgroundColor = '#ff8e8e'; // Cambiar el color de fondo a verde
     } else {
-        document.getElementById("puerta_aguja").value = 'Si';
-        document.getElementById("puerta_aguja").style.backgroundColor = 'green'; // Cambiar el color de fondo a verde
+        document.getElementById("puerta_aguja").value = 'MENOS DE 50 MINUTOS';
+        document.getElementById("puerta_aguja").style.backgroundColor = '#8eff8e'; // Cambiar el color de fondo a verde
 
     }
 }
@@ -164,11 +164,11 @@ const trombo_terapia = () => {
     let diferenciaFormato = `${String(diferenciaHoras).padStart(2, '0')}:${String(diferenciaMinutos).padStart(2, '0')}:${String(diferenciaSegundos).padStart(2, '0')}`;
 
     if (diferenciaFormato > '02:00:00') {
-        document.getElementById("puerta_terapia").value = 'No';
-        document.getElementById("puerta_terapia").style.backgroundColor = 'Red'; // Cambiar el color de fondo a verde
+        document.getElementById("puerta_terapia").value = 'MÁS DE 2 HORAS';
+        document.getElementById("puerta_terapia").style.backgroundColor = '#ff8e8e'; // Cambiar el color de fondo a verde
     } else {
-        document.getElementById("puerta_terapia").value = 'Si';
-        document.getElementById("puerta_terapia").style.backgroundColor = 'green'; // Cambiar el color de fondo a verde
+        document.getElementById("puerta_terapia").value = 'MENOS DE 2 HORAS';
+        document.getElementById("puerta_terapia").style.backgroundColor = '#8eff8e'; // Cambiar el color de fondo a verde
 
     }
 }
@@ -194,11 +194,11 @@ const terapia_tac = () => {
     let diferenciaFormato = `${String(diferenciaHoras).padStart(2, '0')}:${String(diferenciaMinutos).padStart(2, '0')}:${String(diferenciaSegundos).padStart(2, '0')}`;
 
     if (diferenciaFormato > '24:00:00') {
-        document.getElementById("puerta_taccontrol").value = 'No';
-        document.getElementById("puerta_taccontrol").style.backgroundColor = 'Red'; // Cambiar el color de fondo a verde
+        document.getElementById("puerta_taccontrol").value = 'MÁS DE 24 HORAS';
+        document.getElementById("puerta_taccontrol").style.backgroundColor = '#ff8e8e'; // Cambiar el color de fondo a verde
     } else {
-        document.getElementById("puerta_taccontrol").value = 'Si';
-        document.getElementById("puerta_taccontrol").style.backgroundColor = 'green'; // Cambiar el color de fondo a verde
+        document.getElementById("puerta_taccontrol").value = 'MENOS DE 24 HORAS';
+        document.getElementById("puerta_taccontrol").style.backgroundColor = '#8eff8e'; // Cambiar el color de fondo a verde
 
     }
 }

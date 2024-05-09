@@ -74,7 +74,7 @@
     </style>
 
     </style>
-    <title>Gráficas - Cirugia Ambulatoria</title>
+    <title>Gráficas - Residentes</title>
 </head>
 <body>
     <header>
@@ -91,8 +91,8 @@
         <input type="date" id="fechaFin" name="fechaFin" required>
 
         <label for="residente">Residentes:</label>
-        <select name="residente" id="residente">
-            <option value=" "></option>
+        <select name="residente" id="residente" required>
+            <option value="">Selecciona un residente</option>
             <option value="ANGELICA JOHANA PEREZ HERNANDEZ">ANGELICA JOHANA PEREZ HERNANDEZ</option>
             <option value="ARIAS HUERTA JENNIFERD">ARIAS HUERTA JENNIFERD</option>
             <option value="ARTURO ISRAEL JACINTO TOVAR">ARTURO ISRAEL JACINTO TOVAR</option>
@@ -136,9 +136,9 @@
         <div class="graficas" id="grafica2">
             <span class="badge">Conteo Residentes</span>
         </div>
-        <div class="graficas" id="grafica3">
+        <!-- <div class="graficas" id="grafica3">
             <span class="badge">Datos de: <?php echo $residente; ?></span>
-        </div>
+        </div> -->
         <div class="graficas-container">
             <div class="graficas" id="grafica4">
                 <span class="badge">Intento Punción Lumbar</span>

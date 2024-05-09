@@ -1,0 +1,179 @@
+body{
+    background-color: rgb(250, 207, 207);
+}
+header {
+    background-image: linear-gradient(0deg, #7a0027 0%, #ff838a 100%);
+
+    height: 50px;
+    /* Ajusta la altura del encabezado según tus necesidades */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: #ffff;
+
+}
+.texto {
+    margin: 10px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px 30px;
+    padding:10px
+}
+
+.formulario{
+    margin-bottom: 50px;
+    background: white;
+    border-radius: 15px 15px 50px;
+    box-shadow: 0 7px 25px rgba(255, 147, 147, 0.9);
+}
+
+.row{
+    padding: 2%;
+}
+.cuestionario{
+    padding: 2%;
+}
+
+.campos_form{
+    
+    margin: 10px;
+    border-radius: 15px ; 
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+}
+.campos_form2{
+    border: 1px solid #ccc;
+    padding: 1%;
+    margin-bottom: 15px;
+    border-radius: 15px ; 
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Estilos para la tabla de registros */
+.contenedor_tabla {
+    margin: 1.5%;
+    padding: 1.5%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    font-size: 12px;
+}
+
+th {
+    background-color: #b0b0b0;
+}
+/* Estilos para filas alternas */
+table tbody tr:nth-child(odd) {
+    background-color: #DEDEDE; /* Color de fondo para filas impares */
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #C6C6C6; /* Color de fondo para filas pares */
+}
+
+.tabla {
+    width: 100%;
+}
+
+.buttons-excel {
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Borde */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Decoración de texto */
+    display: inline-block; /* Mostrar como bloque en línea */
+    font-size: 16px; /* Tamaño de la fuente */
+    margin: 4px 2px; /* Margen exterior */
+    cursor: pointer; /* Cursor */
+    border-radius: 4px; /* Radio del borde */
+}
+
+.btn-metricas {
+    background-color: #d07900; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Borde */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Decoración de texto */
+    display: inline-block; /* Mostrar como bloque en línea */
+    font-size: 16px; /* Tamaño de la fuente */
+    margin: 4px 2px; /* Margen exterior */
+    cursor: pointer; /* Cursor */
+    border-radius: 4px; /* Radio del borde */
+}
+
+
+
+/* Estilos para la tabla responsiva */
+@media screen and (max-width: 767px) {
+    #myTable {
+        overflow-x: auto;
+    }
+}
+
+
+
+
+
+/* pantalla de carga */
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(151, 150, 150, 0.97);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.loading svg polyline {
+    fill: none;
+    stroke-width: 6; /* Aumentar el grosor de la línea */
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.loading svg polyline#back {
+    fill: none;
+    stroke: #ff4d5033;
+}
+
+.loading svg polyline#front {
+    fill: none;
+    stroke: #fb3437;
+    stroke-dasharray: 96, 288; /* Ajustar la longitud del dasharray y el dashoffset */
+    stroke-dashoffset: 384;
+    animation: dash_682 1.4s linear infinite;
+}
+
+@keyframes dash_682 {
+    72.5% {
+        opacity: 0;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}

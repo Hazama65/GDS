@@ -38,12 +38,18 @@
             <div class="card">
                 <img src="img/dm.jpeg" alt="Imagen 1">
                 <br>
-                <a href="https://hraeigds.site" class="btn btn-success">Diabetes</a>
+                <a href="../login/index.php" class="btn btn-success">Diabetes</a>
             </div>
             <div class="card">
                 <img src="img/hemodinamia.jpeg" alt="Imagen 2">
                 <br>
-                <a href="https://hraeigds.site" class="btn btn-success">Hemodinamia</a>
+                <a href="../login/index.php" class="btn btn-success">Hemodinamia</a>
+            </div>
+            
+            <div class="card">
+                <img src="img/evc.png" alt="Imagen 2">
+                <br>
+                <a href="../codigo_evc" class="btn btn-success">EVC</a>
             </div>
             
             

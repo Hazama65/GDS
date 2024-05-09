@@ -1,0 +1,232 @@
+17
+nombre
+curp
+fecha
+edad
+sexo
+Estadocivil
+Poblacion_indigena
+Raza
+Escolaridad
+unidad_referencia
+estado
+Alcaldia_municipio
+Presion_Arterial
+FC
+fr
+peso
+talla
+circunferencia
+
+14
+Ninguno_factor
+Hiperlipidemia_factor
+Diabetes_factor
+Hipertensión_facator
+Alcoholismo_factor
+Tabaquismo_factor
+Enfermedad_renal
+Hiperuricemia_factor
+Obesidad_factor
+Previo_factor
+ectasia_factor
+Cardiomio
+multivaso_factor
+Resvascularizacion_factor
+
+16
+Padre_antecedente
+Madre_antecedente
+Abuelo_Materno_antecedente
+Abuelo_Paterno_antecedente
+Abuela_Materna_antecedente
+Abuela_Paterna_antecedente
+Hermano_antecedente
+Hermana_antecedente
+Prima_Materna_antecedente
+Prima_Paterna_antecedente
+Primo_Paterno_antecedente
+Primo_Materno_antecedente
+Tia_Materna_antecedente
+Tia_Paterna_antecedente
+Tia_Materno_antecedente
+Tia_Paterno_antecedente
+
+24
+Inicio_sintomas
+Caracteristica_dolor
+Inicio_triage
+Termino_triage
+Dolor_Retroesternal
+Opresivo
+Irradiación_brazo_izquierdo
+Más_de_10_minutos
+Náuseas
+Diaforesis_1
+Síncope_1
+Dolor_Epigastrio
+Punzante
+Pleurítico
+Disnea
+Palpitación
+Diaforesis_2
+Síncope_2
+int_dolor
+Electrocardiograma
+local_electro
+ConSin_elevancion
+mace
+Kill_kimbal
+
+13
+ck
+ck_mb
+Troponinas
+Glucosa
+Urea
+Creatinina
+Colesterol
+Trigliceridos
+Acido_Urico
+hb_glucosilada
+Proteinas
+LDL
+HDL
+
+9
+Fibrinolisis
+Inicio_txfibronilis
+finaliza_txfibronilis
+Tipo_Fibrinolisis
+procedimiento_exitoso_1
+Inicio_Angio
+Tipo_Procedimiento
+sitio_puncion
+Lesiones_coronarias
+
+31
+Coronaria_Derecha
+Coronaria_Izquierda
+Descendente_Anterior
+Descendente_Posterior
+Tronco_Coronario_Izquierdo
+Bifurcacion
+Circunfleja
+Dominancia_Derecha
+Codominancia
+Dominancia_Izquierda
+Ramo_Posterolateral
+Ramo_Septales
+Ramo_Marginales
+duque
+Medina
+clasificacion_acc
+TIMI
+Procedimiento_TIMI
+Calificacion_TIMI
+Tomografia_coherencia
+Trombosis_intra
+Aspiracion_trombo
+Protesis_metalico
+protesis_num
+revascularizacion
+Procedimiento_exitoso_2
+AIRBUS
+Resu_AIRBUS
+Prote_Endovascular
+1_generacion
+2da_generacion
+
+10
+Litotricia
+Schockwave
+Schockwave_compli
+Marcapasos
+Soporte_ventricular
+Complicaciones
+disfu_ventri
+compli_mecanicas
+compli_Pericarditis
+compli_Electricas
+
+15
+Gamma
+gamma_cardi
+Localizacion_gamma
+Segmento_gamma
+Resonancia_inicial
+resultado_resonancia
+ergometria
+Etapa_1
+Etapa_2
+Etapa_3
+Etapa_4
+Etapa_5
+Etapa_6
+Etapa_7
+Suspension_estudio
+
+7
+Distolico_inicial
+Sistolico_inicial
+eyeccion_ventriizqui
+movilidad_inicial
+Segmento
+Causa_defun
+Defuncion_fecha
+
+
+
+value="<?php echo $id_paciente; ?>"
+<?php if ($id_paciente == 'Si') echo "checked"; ?>
+<?php if ($id_paciente== '0')echo 'selected'; ?>
+
+
+
+
+                    <div class="container" id="Cara_tipicas" style="display:none;">
+
+                    <div class="container" id="Cara_Atipicas" style="display:none;">
+
+                    <div class="col-md-4" id="Killi_kimball" style="display:none;">
+
+                    <div class="container" id="inicio_fin_txfibronilis" style="display:none;">
+
+                    <div class="container" id="Si_lesionCoronaria" style="display:none;">
+
+                    <div class="col-md-3" id="timi_pro1" style="display:none;">
+
+                    <div class="col-md-3" id="timi_pro2" style="display:none;">
+
+                    <div class="col-md-3" id="Resultado_airbus" style="display:none;">
+
+                    <div class="col-md-3" id="con_medicacion"  style="display:none;"> 
+
+                    <div class="col-md-3" id="con_medicacion_2" style="display:none;">
+
+                    <div class="col-md-4"  id="Complicaciones_Schockwave" style="display:none;">
+
+                    <div class="col-md-6" id="sopor_ventri" style="display:none;">
+
+                    <div class="col-md-6" id="Disfuncion_ventri" style="display:none;">
+
+                    <div class="col-md-6" id="Mecanicas" style="display:none;">
+
+                    <div class="col-md-6" id="Pericardicas" style="display:none;">
+
+                    <div class="col-md-6" id="Electricas" style="display:none;">
+
+                    <div class="col-md-6" id="resultado_gamma" style="display:none;">
+
+                    <div class="col-md-6" id="positivo_1" style="display:none;">
+
+                    <div class="col-md-6"  id="positivo_2" style="display:none;">
+
+                    <div class="col-md-6" id="resonancia_resu" style="display:none;">
+
+                    <div class="col-md-6" id="resonancia_ergometria" style="display:none;">
+
+                    <div class="col-md-6" id="fecha_defuncion" style="display:none;">
+
+
+

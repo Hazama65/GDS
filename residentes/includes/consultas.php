@@ -1,92 +1,177 @@
 <?php
     include(__DIR__ . "/../php/dbconfig_residentes.php");
-
+    
     $conn = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-
+    
     $fechaInicio = "2023-01-01";
     $fechaFin = "2024-12-31";
+    $residente = '';
     
     if (isset($_POST['fechaInicio']) && isset($_POST['fechaFin'])) {
         $fechaInicio = date("Y-m-d", strtotime($_POST['fechaInicio']));
         $fechaFin = date("Y-m-d", strtotime($_POST['fechaFin']));
     }
 
-    // consulta para la obtencion del numero de veces usados de una sala 
-    $queryProcedimientos = "SELECT 
-    SUM(puncionLumbar) AS 'Punción Lumbar',
-    SUM(intubacion) AS 'Intubación',
-    SUM(cvc) AS 'CVC',
-    SUM(parasentesis) AS 'Paracentesis',
-    SUM(biopsia_piel) AS 'Biopsia de Piel',
-    SUM(biopsia_celular) AS 'Biopsia Celular',
-    SUM(biopsia_tiroides) AS 'Biopsia de Tiroides',
-    SUM(toracosentesis) AS 'Toracocentesis',
-    SUM(artrocentesis) AS 'Artrocentesis',
-    SUM(mo) AS 'Aspiración de MO'
+    
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+        $residente = $_POST['residente'];
+
+
+        $queryProcedimientos = "SELECT 
+        SUM(puncionLumbar) AS 'Punción Lumbar',
+        SUM(intubacion) AS 'Intubación',
+        SUM(cvc) AS 'CVC',
+        SUM(parasentesis) AS 'Paracentesis',
+        SUM(biopsia_piel) AS 'Biopsia de Piel',
+        SUM(biopsia_celular) AS 'Biopsia Celular',
+        SUM(biopsia_tiroides) AS 'Biopsia de Tiroides',
+        SUM(toracosentesis) AS 'Toracocentesis',
+        SUM(artrocentesis) AS 'Artrocentesis',
+        SUM(mo) AS 'Aspiración de MO'
         FROM procedimientos
-        WHERE id_productividad IN (SELECT id_productividad FROM datos_productividad 
-        WHERE fecha BETWEEN '$fechaInicio' AND '$fechaFin');";
-    $result_Procedimientos= mysqli_query($conn,$queryProcedimientos);
-
-    $dataProcedimientos = array();
-
-    if ($result_Procedimientos) {
-        $row = mysqli_fetch_assoc($result_Procedimientos);
+        WHERE id_productividad IN (
+            SELECT id_productividad 
+            FROM datos_productividad 
+            WHERE residentes = '$residente'
+            AND fecha BETWEEN '$fechaInicio' AND '$fechaFin'
+        );";
+        $result_Procedimientos= mysqli_query($conn,$queryProcedimientos);
     
-        // Nombres de los campos en la consulta
-        $campos = array(
-            "Punción Lumbar",
-            "Intubación",
-            "CVC",
-            "Paracentesis",
-            "Biopsia de Piel",
-            "Biopsia Celular",
-            "Biopsia de Tiroides",
-            "Toracocentesis",
-            "Artrocentesis",
-            "Aspiración de MO"
-        );
+        $dataProcedimientos = array();
     
-        // Recorre los campos y agrega los datos al arreglo
-        foreach ($campos as $campo) {
-            // Convierte el valor a entero
-            $Valores = intval($row[$campo]);
-    
-            $dataProcedimientos[] = array(
-                "country" => $campo,
-                "value" => $Valores
+        if ($result_Procedimientos) {
+            $row = mysqli_fetch_assoc($result_Procedimientos);
+        
+            // Nombres de los campos en la consulta
+            $campos = array(
+                "Punción Lumbar",
+                "Intubación",
+                "CVC",
+                "Paracentesis",
+                "Biopsia de Piel",
+                "Biopsia Celular",
+                "Biopsia de Tiroides",
+                "Toracocentesis",
+                "Artrocentesis",
+                "Aspiración de MO"
             );
+        
+            // Recorre los campos y agrega los datos al arreglo
+            foreach ($campos as $campo) {
+                // Convierte el valor a entero
+                $Valores = intval($row[$campo]);
+        
+                $dataProcedimientos[] = array(
+                    "country" => $campo,
+                    "value" => $Valores
+                );
+            }
         }
-    }
-    $dataProcedimientos_json = json_encode($dataProcedimientos);
-
-
-
-    $queryconteoResidente = "SELECT
-    dp.residentes,SUM(puncionLumbar + intubacion + cvc + parasentesis + biopsia_piel + biopsia_celular + 
-    biopsia_tiroides + toracosentesis + artrocentesis + mo) AS suma_total
-    FROM procedimientos pr
-    INNER JOIN datos_productividad dp ON pr.id_productividad = dp.id_productividad
-    WHERE dp.fecha BETWEEN '$fechaInicio' AND '$fechaFin'
-    GROUP BY dp.residentes;";
-
-    $result_conteoResidente = mysqli_query($conn, $queryconteoResidente);
-
-    $dataConteoResidentes = array();
-
-    if ($result_conteoResidente->num_rows > 0) {
-        while ($row = $result_conteoResidente->fetch_assoc()) {
-            $dataConteoResidentes[] = array(
-                "country" => $row["residentes"],
-                "value" => intval($row["suma_total"])
+        $dataProcedimientos_json = json_encode($dataProcedimientos);
+    
+    
+    
+        $queryconteoResidente = "SELECT
+        dp.residentes,SUM(puncionLumbar + intubacion + cvc + parasentesis + biopsia_piel + biopsia_celular + 
+        biopsia_tiroides + toracosentesis + artrocentesis + mo) AS suma_total
+        FROM procedimientos pr
+        INNER JOIN datos_productividad dp ON pr.id_productividad = dp.id_productividad
+        WHERE residentes = '$residente'
+        AND fecha BETWEEN '$fechaInicio' AND '$fechaFin'
+        GROUP BY dp.residentes;";
+    
+        $result_conteoResidente = mysqli_query($conn, $queryconteoResidente);
+    
+        $dataConteoResidentes = array();
+    
+        if ($result_conteoResidente->num_rows > 0) {
+            while ($row = $result_conteoResidente->fetch_assoc()) {
+                $dataConteoResidentes[] = array(
+                    "country" => $row["residentes"],
+                    "value" => intval($row["suma_total"])
+                );
+            }
+        }
+        $dataConteoResidentes_json = json_encode($dataConteoResidentes);
+        
+    }else {
+        
+        // consulta para la obtencion del numero de veces usados de una sala 
+        $queryProcedimientos = "SELECT 
+        SUM(puncionLumbar) AS 'Punción Lumbar',
+        SUM(intubacion) AS 'Intubación',
+        SUM(cvc) AS 'CVC',
+        SUM(parasentesis) AS 'Paracentesis',
+        SUM(biopsia_piel) AS 'Biopsia de Piel',
+        SUM(biopsia_celular) AS 'Biopsia Celular',
+        SUM(biopsia_tiroides) AS 'Biopsia de Tiroides',
+        SUM(toracosentesis) AS 'Toracocentesis',
+        SUM(artrocentesis) AS 'Artrocentesis',
+        SUM(mo) AS 'Aspiración de MO'
+            FROM procedimientos
+            WHERE id_productividad IN (SELECT id_productividad FROM datos_productividad 
+            WHERE fecha BETWEEN '$fechaInicio' AND '$fechaFin');";
+        $result_Procedimientos= mysqli_query($conn,$queryProcedimientos);
+    
+        $dataProcedimientos = array();
+    
+        if ($result_Procedimientos) {
+            $row = mysqli_fetch_assoc($result_Procedimientos);
+        
+            // Nombres de los campos en la consulta
+            $campos = array(
+                "Punción Lumbar",
+                "Intubación",
+                "CVC",
+                "Paracentesis",
+                "Biopsia de Piel",
+                "Biopsia Celular",
+                "Biopsia de Tiroides",
+                "Toracocentesis",
+                "Artrocentesis",
+                "Aspiración de MO"
             );
+        
+            // Recorre los campos y agrega los datos al arreglo
+            foreach ($campos as $campo) {
+                // Convierte el valor a entero
+                $Valores = intval($row[$campo]);
+        
+                $dataProcedimientos[] = array(
+                    "country" => $campo,
+                    "value" => $Valores
+                );
+            }
         }
+        $dataProcedimientos_json = json_encode($dataProcedimientos);
+    
+    
+    
+        $queryconteoResidente = "SELECT
+        dp.residentes,SUM(puncionLumbar + intubacion + cvc + parasentesis + biopsia_piel + biopsia_celular + 
+        biopsia_tiroides + toracosentesis + artrocentesis + mo) AS suma_total
+        FROM procedimientos pr
+        INNER JOIN datos_productividad dp ON pr.id_productividad = dp.id_productividad
+        WHERE dp.fecha BETWEEN '$fechaInicio' AND '$fechaFin'
+        GROUP BY dp.residentes;";
+    
+        $result_conteoResidente = mysqli_query($conn, $queryconteoResidente);
+    
+        $dataConteoResidentes = array();
+    
+        if ($result_conteoResidente->num_rows > 0) {
+            while ($row = $result_conteoResidente->fetch_assoc()) {
+                $dataConteoResidentes[] = array(
+                    "country" => $row["residentes"],
+                    "value" => intval($row["suma_total"])
+                );
+            }
+        }
+        $dataConteoResidentes_json = json_encode($dataConteoResidentes);
     }
-    $dataConteoResidentes_json = json_encode($dataConteoResidentes);
 
 
-
-    $residente = '';
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Verificar si se ha enviado el formulario
