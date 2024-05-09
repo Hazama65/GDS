@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header estilomodal">
-                <h1 class="bi bi-clipboard2-heart modal-title fs-4" id="exampleModalLabel">Registro Paciente EVC</h1>
+                <h1 class="bi bi-clipboard2-heart modal-title fs-4" id="exampleModalLabel">Registro Paciente Stroke</h1>
 
 
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -14,7 +14,7 @@
 
                     <div class="col-md-6" id="idnombre">
                         <strong style="font-size: 14px;">Nombre Completo</strong>
-                        <input id="nombre" name="nombre" type="text" class="control form-control" style="font-size: 13px;">
+                        <input id="nombre" name="nombre" type="text" class="control form-control" style="font-size: 13px;" required>
                     </div>
 
                     <div class="col-md-6" id="idcurp">
@@ -119,7 +119,7 @@
 
 
                     <div class="col-md-12" id="escala_nihss">
-                        <i><a style="font-size: 14px; margin-top: 50px;" href="https://www.rccc.eu/ppc/indicadores/Neuro/NIHSS.html" target="_blank">Escala NIHSS</a></i>
+                        <i><a style="font-size: 14px; margin-top: 50px;" href="https://hraeigds.site/escalas/" target="_blank">Escala NIHSS</a></i>
                         <select name="nihss" id="nihss" class="form-control" style="font-size: 14px;" onchange="mostrarParametrosNihss()">
                             <option value="Seleccione">Seleccione</option>
                             <option value="1-4 Leve">1- 4 Leve</option>
@@ -264,6 +264,58 @@
 
                             </select>
                         </div>
+                        <br>
+
+                        <div class="col-md-12" id="equipo_multi">
+                            <div class="form-header">
+                                <h5 class="form-title" style="text-align: center;
+                                background-color:rgb(171, 153, 193,0.5);
+                                color:rgb(255, 255, 255);
+                                margin-top:15px;
+                                font-size: 14px;">
+                                    Equipo Multidisciplinario</h5>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span style="font-size:12px;">Personal Médico Adscrito Urgencias</span>
+                                    <input type="checkbox" name="pmau" id="pmau" style="font-size:14px;">
+                                </div>
+                                <div class="col-md-4">
+                                    <span style="font-size:12px;">Personal de Admisión Hospitalaria</span>
+                                    <input type="checkbox" name="pah" id="pah" style="font-size:14px;">
+                                </div>
+                                <div class="col-md-4">
+                                    <span style="font-size:12px;">Personal de Enfermería</span>
+                                    <input type="checkbox" name="peia" id="peia" style="font-size:14px;">
+                                </div>
+                                <div class="col-md-4">
+                                    <span style="font-size:12px;">Personal de Imagenología</span>
+                                    <input type="checkbox" name="pim" id="pim" style="font-size:14px;">
+                                </div>
+                                <div class="col-md-4">
+                                    <span style="font-size:12px;">Personal de Laboratorio</span>
+                                    <input type="checkbox" name="plio" id="plio" style="font-size:14px;">
+                                </div>
+                                <div class="col-md-4">
+                                    <span style="font-size:12px;">Personal de CISFA</span>
+                                    <input type="checkbox" name="pcisfa" id="pcisfa" style="font-size:14px;">
+                                </div>
+                                <div class="col-md-4">
+                                    <span style="font-size:12px;">Trabajo Social</span>
+                                    <input type="checkbox" name="ts" id="ts" style="font-size:14px;">
+                                </div>
+                                <div class="col-md-4">
+                                    <span style="font-size:12px;">Camillero</span>
+                                    <input type="checkbox" name="camillero" id="camillero" style="font-size:14px;">
+                                </div>
+                                <div class="col-md-4">
+                                    <span style="font-size:12px;">Médico neurólogo</span>
+                                    <input type="checkbox" name="med_neuro" id="med_neuro" style="font-size:14px;">
+                                </div>
+
+
+                            </div>
+                        </div>
 
                     </div><!-- CÓDIGO DE EVC -->
 
@@ -292,7 +344,7 @@
 
                     <div class="col-md-6">
                         <strong style="font-size: 14px;">Puerta-TRIAGE</strong>
-                        <input type="text" id="puerta_triage" name="puerta_triage" class="control form-control" style="font-size: 13pz;" readonly>
+                        <input type="text" id="puerta_triage" name="puerta_triage" class="control form-control" style="font-size: 13px;" readonly>
                     </div>
 
                     <div class="col-md-6">
@@ -302,7 +354,7 @@
                     
                     <div class="col-md-6">
                         <strong style="font-size: 14px;">Puerta-URGENCIAS</strong>
-                        <input type="text" id="puerta_urgencias" name="puerta_urgencias" class="control form-control" style="font-size: 13pz;" readonly>
+                        <input type="text" id="puerta_urgencias" name="puerta_urgencias" class="control form-control" style="font-size: 13px;" readonly>
                     </div>
 
                     <div class="col-md-6">
@@ -312,7 +364,7 @@
 
                     <div class="col-md-6">
                         <strong style="font-size: 14px;">Puerta-TAC</strong>
-                        <input type="text" id="puerta_tac" name="puerta_tac" class="control form-control" style="font-size: 13pz;" readonly>
+                        <input type="text" id="puerta_tac" name="puerta_tac" class="control form-control" style="font-size: 13px;" readonly>
                     </div>
 
                     <div class="col-md-6">

@@ -312,6 +312,58 @@ include('php/controllers/edit.controller.php');
     
                         </select>
                     </div>
+
+                    <br>
+                    <div class="col-md-12" id="equipo_multi">
+                        <div class="form-header">
+                            <h5 class="form-title" style="text-align: center;
+                                background-color:rgb(171, 153, 193,0.5);
+                                color:rgb(255, 255, 255);
+                                margin-top:15px;
+                                font-size: 14px;">
+                                Equipo Multidisciplinario</h5>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <span style="font-size:12px;">Personal Médico Adscrito Urgencias</span>
+                                <input type="checkbox" name="pmau" id="pmau" style="font-size:14px;" <?php if ($pmau == 'Si') echo "checked"; ?>>
+                            </div>
+                            <div class="col-md-4">
+                                <span style="font-size:12px;">Personal de Admisión Hospitalaria</span>
+                                <input type="checkbox" name="pah" id="pah" style="font-size:14px;" <?php if ($pah == 'Si') echo "checked"; ?>>
+                            </div>
+                            <div class="col-md-4">
+                                <span style="font-size:12px;">Personal de Enfermería</span>
+                                <input type="checkbox" name="peia" id="peia" style="font-size:14px;" <?php if ($peia == 'Si') echo "checked"; ?>>
+                            </div>
+                            <div class="col-md-4">
+                                <span style="font-size:12px;">Personal de Imagenología</span>
+                                <input type="checkbox" name="pim" id="pim" style="font-size:14px;" <?php if ($pim == 'Si') echo "checked"; ?>>
+                            </div>
+                            <div class="col-md-4">
+                                <span style="font-size:12px;">Personal de Laboratorio</span>
+                                <input type="checkbox" name="plio" id="plio" style="font-size:14px;" <?php if ($plio == 'Si') echo "checked"; ?>>
+                            </div>
+                            <div class="col-md-4">
+                                <span style="font-size:12px;">Personal de CISFA</span>
+                                <input type="checkbox" name="pcisfa" id="pcisfa" style="font-size:14px;" <?php if ($pcisfa == 'Si') echo "checked"; ?>>
+                            </div>
+                            <div class="col-md-4">
+                                <span style="font-size:12px;">Trabajo Social</span>
+                                <input type="checkbox" name="ts" id="ts" style="font-size:14px;" <?php if ($ts == 'Si') echo "checked"; ?>>
+                            </div>
+                            <div class="col-md-4">
+                                <span style="font-size:12px;">Camillero</span>
+                                <input type="checkbox" name="camillero" id="camillero" style="font-size:14px;" <?php if ($camillero == 'Si') echo "checked"; ?>>
+                            </div>
+                            <div class="col-md-4">
+                                <span style="font-size:12px;">Médico neurólogo</span>
+                                <input type="checkbox" name="med_neuro" id="med_neuro" style="font-size:14px;" <?php if ($med_neuro == 'Si') echo "checked"; ?>>
+                            </div>
+
+
+                        </div>
+                    </div>
     
                 </div><!-- CÓDIGO DE EVC -->
     

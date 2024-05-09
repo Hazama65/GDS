@@ -80,6 +80,19 @@
             </div>
 
         </div>
+
+        <div class="cards">
+            
+            <div class="card">
+                <img src="img/cancer_mama.png" alt="Imagen 1">
+                <br>
+                <a href="../login/index.php" class="btn btn-success">Cáncer de Mama</a>
+            </div>
+
+
+
+
+        </div>
     </div> <!-- es el div que cierra <div class="container" style="center">-->
 
     <footer style="font-size:8px;">
