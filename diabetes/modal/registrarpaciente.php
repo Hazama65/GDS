@@ -28,7 +28,7 @@
 
                         <div class="col-md-4" id="idnombre">
                             <strong style="font-size: 14px;">Nombre Completo</strong>
-                            <input id="nombre" name="nombre" onblur="calcularEdad();" type="text" class="control form-control" value="" style="font-size: 13px;">
+                            <input id="nombre" name="nombre"  type="text" class="control form-control" value="" style="font-size: 13px;">
                         </div>
 
                         <div class="col-md-4">
