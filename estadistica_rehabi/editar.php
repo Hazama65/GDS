@@ -47,7 +47,15 @@
 
             <div class="col-md-6">
                 <strong style="font-size: 13px;">Nombre Terapeuta</strong>
-                <input id="nombre_terapeuta" name="nombre_terapeuta" type="text" class="control form-control" value="" style="font-size: 13px;">
+                <select name="nombre_terapeuta" id="nombre_terapeuta" class="form-select" style="font-size: 13px;">
+                    <option value="Seleccione">Seleccione</option>
+                    <option value="L.T.C.H Monjaras Bernal Isis Giovana">L.T.C.H Monjaras Bernal Isis Giovana</option>
+                    <option value="L.T.C.H Monjaras Bernal Isis Giovana">L.T.C.H Monjaras Bernal Isis Giovana</option>
+                    <option value="L.T.F Aurea Guadalupe Hernández Salazar.">L.T.F Aurea Guadalupe Hernández Salazar.</option>
+                    <option value="L.T.F Brenda Roxana Monjaras Bernal">L.T.F Brenda Roxana Monjaras Bernal</option>
+                    <option value="L.T.F Monserrat Ocampo García">L.T.F Monserrat Ocampo García</option>
+                    <option value="L.T.O Ana Violeta De La Paz Gonzalez">L.T.O Ana Violeta De La Paz Gonzalez</option>
+                </select>
             </div>
 
             <div class="col-md-6">
@@ -126,7 +134,6 @@
             </div>
 
 
-            <!-- ************************Antecedentes Patologícos********************************* -->
             <div class="form-header">
                 <h6 class="form-title" style="text-align: center;
                             background-color: rgb(106, 158, 218) ;
