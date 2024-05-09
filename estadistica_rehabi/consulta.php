@@ -81,6 +81,11 @@
             </tr>
 
             <tr>
+                <td class="estilo-celda">Número de Sesiones</td>
+                <td></td>
+            </tr>
+
+            <tr>
                 <th scope="col" style="background-color: rgb(106, 158, 218);">Terapias y Procedimientos</th>
                 <th scope="col" style="background-color: rgb(106, 158, 218);"> </th>
             </tr>

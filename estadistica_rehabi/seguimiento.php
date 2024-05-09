@@ -45,8 +45,17 @@
 
             <div class="col-md-6">
                 <strong style="font-size: 13px;">Nombre Terapeuta</strong>
-                <input id="nombre_terapeuta_seg" name="nombre_terapeuta_seg" type="text" class="control form-control" value="" style="font-size: 13px;">
+                <select name="nombre_terapeuta_seg" id="nombre_terapeuta_seg" class="form-select" style="font-size: 13px;">
+                    <option value="Seleccione">Seleccione</option>
+                    <option value="L.T.C.H Monjaras Bernal Isis Giovana">L.T.C.H Monjaras Bernal Isis Giovana</option>
+                    <option value="L.T.C.H Monjaras Bernal Isis Giovana">L.T.C.H Monjaras Bernal Isis Giovana</option>
+                    <option value="L.T.F Aurea Guadalupe Hernández Salazar.">L.T.F Aurea Guadalupe Hernández Salazar.</option>
+                    <option value="L.T.F Brenda Roxana Monjaras Bernal">L.T.F Brenda Roxana Monjaras Bernal</option>
+                    <option value="L.T.F Monserrat Ocampo García">L.T.F Monserrat Ocampo García</option>
+                    <option value="L.T.O Ana Violeta De La Paz Gonzalez">L.T.O Ana Violeta De La Paz Gonzalez</option>
+                </select>
             </div>
+
 
             <div class="col-md-6">
                 <strong style="font-size: 13px;">Turno</strong>
@@ -58,7 +67,7 @@
                 </select>
             </div>
 
-            <div class="col-md-6"style="display:none;">
+            <div class="col-md-6" style="display:none;">
                 <strong style="font-size: 13px;">Fecha de registro</strong>
                 <input id="fecha_registro_seg" name="fecha_registro_seg" type="date" class="control form-control" value="" style="font-size: 13px;" readonly>
             </div>
@@ -69,60 +78,22 @@
                             color: aliceblue;
                             margin-top:10px;
                             font-size: 14px;">
-                    Datos del Paciente</h5>
+                    Datos del Seguimiento</h5>
             </div>
+
 
             <div class="col-md-6">
-                <strong style="font-size: 13px;">Nombre del Paciente</strong>
-                <input id="nombre_paciente_seg" name="nombre_paciente_seg" type="text" class="control form-control" value="" style="font-size: 13px;">
-            </div>
-
-
-
-            <div class="col-md-3">
-                <strong style="font-size: 13px;">CURP</strong>
-                <input id="curp_seg" name="curp_seg" type="text" class="control form-control" value="" style="font-size: 13px;">
-            </div>
-
-            <div class="col-md-3">
-                <strong style="font-size: 14px; ">Fecha de Nacimiento</strong>
-                <input id="fecha_seg" name="fecha_seg" type="date" value="" onblur="curp2date();" class="control form-control" style="font-size: 13px;" readonly>
-            </div>
-            <div class="col-md-3">
-                <strong style="font-size: 14px;">Edad</strong>
-                <input id="edad_seg" name="edad_seg" type="text" class="control form-control" value="" style="font-size: 13px;" readonly>
-            </div>
-
-            <div class="col-md-3">
-                <strong style="font-size: 14px;">Sexo</strong>
-                <input type="text" class="control form-control" id="sexo_seg" onclick="curp2date();" name="sexo_seg" style="font-size: 13px;" readonly>
-            </div>
-
-            <div class="col-md-3">
-                <strong style="font-size: 13px;">Tipo de Paciente</strong>
-                <select name="tipo_paciente_seg" id="tipo_paciente_seg" class="form-select" style="font-size: 13px;">
-                    <option value="Seleccione">Seleccione</option>
-                    <option value="Pediatrico">Pediatrico</option>
-                    <option value="Adulto">Adulto</option>
-                </select>
-            </div>
-
-            <div class="col-md-3">
-                <strong style="font-size: 13px;">Tipo de Consulta</strong>
-                <select name="tipo_consulta_seg" id="tipo_consulta_seg" class="form-select" style="font-size: 13px;">
-                    <option value="Seleccione">Seleccione</option>
-                    <option value="Primera Vez">Primera Vez</option>
-                    <option value="Subsecuente">Subsecuente</option>
-                </select>
-            </div>
-
-
-
-            <div class="col-md-3" id="num_sesiones_seg" style="display:none;">
                 <strong style="font-size: 13px;">Número de Sesiones</strong>
                 <input id="sesiones_num_seg" name="sesiones_num_seg" type="number" class="control form-control" value="" style="font-size: 13px;">
             </div>
-            <!-- ************************Antecedentes Patologícos********************************* -->
+
+            <div class="col-md-6">
+                <strong style="font-size: 13px;">Fecha de Seguimiento</strong>
+                <input id="fecha_seg" name="fecha_seg" type="date" class="control form-control" value="" style="font-size: 13px;" readonly>
+            </div>
+
+
+
             <div class="form-header">
                 <h6 class="form-title" style="text-align: center;
                             background-color: rgb(106, 158, 218) ;
@@ -290,10 +261,12 @@
         </div><br>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js\seguimiento.js"></script>
+
+
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-<script src="js/seguimiento.js"></script>
 
 
 </html>

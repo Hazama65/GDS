@@ -41,42 +41,18 @@
 
 
             <tr>
-                <th scope="col" style="background-color: rgb(106, 158, 218);"> Datos del Paciente</th>
+                <th scope="col" style="background-color: rgb(106, 158, 218);"> Datos del Seguimiento</th>
                 <th scope="col" style="background-color: rgb(106, 158, 218);"> </th>
             </tr>
 
             <tr>
-                <td class="estilo-celda">Nombre del Paciente</td>
+                <td class="estilo-celda">Número de Sesiones</td>
                 <td></td>
             </tr>
 
-            <tr>
-                <td class="estilo-celda">CURP</td>
-                <td></td>
-            </tr>
 
             <tr>
-                <td class="estilo-celda">Fecha de Nacimiento</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Edad</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Sexo</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Tipo de Paciente</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Tipo de Consulta</td>
+                <td class="estilo-celda">Fecha de Seguimiento</td>
                 <td></td>
             </tr>
 
