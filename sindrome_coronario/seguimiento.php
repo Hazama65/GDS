@@ -228,11 +228,52 @@ include ('php/controllers/edit.controller.php');
                     </select>
                 </div>
 
+<<<<<<< HEAD
+
+                <div class="col-md-2" style="text-align: center;">
+                    <span style="font-size:13px; display: block;">Ácido Acetil Salicílico</span>
+                    <input type="checkbox" class="form-check-input ra-checkbox" name="Tratamiento_antiagregantes" id="Acido_salicilico" value="Acido salicilico Izquierda" style="font-size:14px; margin: 5px auto; display: block;">
+                </div>
+
+                <div class="col-md-2" style="text-align: center;">
+                    <span style="font-size:13px; display: block;">Clopidogrel </span>
+                    <input type="checkbox" class="form-check-input ra-checkbox" name="Tratamiento_antiagregantes" id="Clopidogrel" value="Clopidogrel Anterior" style="font-size:14px; margin: 5px auto; display: block;">
+                </div>
+
+                <div class="col-md-2" style="text-align: center;">
+                    <span style="font-size:13px; display: block;">Eptifibatida</span>
+                    <input type="checkbox" class="form-check-input ra-checkbox" name="Tratamiento_antiagregantes" id="Eptifibatida" value="Eptifibatida" style="font-size:14px; margin: 5px auto; display: block;">
+                </div>
+
+                <div class="col-md-2" style="text-align: center;">
+                    <span style="font-size:13px; display: block;">Prasugrel</span>
+                    <input type="checkbox" class="form-check-input ra-checkbox" name="Tratamiento_antiagregantes" id="Prasugrel" value="Prasugrel" style="font-size:14px; margin: 5px auto; display: block;">
+                </div>
+
+                <div class="col-md-2" style="text-align: center;">
+                    <span style="font-size:13px; display: block;">Ticagrelor</span>
+                    <input type="checkbox" class="form-check-input ra-checkbox" name="Tratamiento_antiagregantes" id="Ticagrelor" value="Ticagrelor" style="font-size:14px; margin: 5px auto; display: block;">
+                </div>
+
+
+            </div><br> <br>
+
+
+            <div class="col-md-3">
+                <strong style="font-size: 13px;">Anticuagulantes</strong>
+                <select name="Anticuagulantes" id="Anticuagulantes" class="form-select" style="font-size: 13px;">
+                    <option value="Seleccione">Seleccione</option>
+                    <option value="RivaroxabanY">RivaroxabanY</option>
+                    <option value="Apixaban">Apixaban</option>
+                    <option value="Ninguno">Ninguno</option>
+                </select>
+=======
                 <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 15px;">
                     <button type="submit" class="btn btn-primary" style="font-size: 15px; padding: 8px 15px;">Editar</button>
                 </div><br><br>
                     
     
+>>>>>>> main
             </div>
         </form>
     </div>

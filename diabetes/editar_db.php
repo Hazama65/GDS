@@ -151,7 +151,7 @@ include('php/controllers/edit.controller.php');
                     </select>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4"> 
                     <strong style="font-size: 14px;">Referencia</strong>
                     <input list="Clues" type="text" class="form-control" id="referencia" name="referencia" value="<?php echo $referencia; ?>" style="font-size: 13px;">
                 </div>
