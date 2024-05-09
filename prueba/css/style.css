@@ -7,21 +7,13 @@ body {
 }
 
 header {
-    background: #009FFF;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #48030e, #721b2f);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #48030e, #721b2f);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: linear-gradient(to right, #731c5d, #ab208c);
     height: 50px;
-    /* Ajusta la altura del encabezado según tus necesidades */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     color: rgb(255, 255, 255);
-    /* Agregué color de texto blanco para mayor visibilidad */
 
 }
 
@@ -37,10 +29,8 @@ header a {
     /* Aumenta el tamaño de la letra */
 }
 
-.estilomodal  {
-    
+.estilomodal  { 
     background: linear-gradient(to right, #ec2f4bbb, #009dff93);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .estilomodal h1{
@@ -65,12 +55,7 @@ header a {
 }
 
 footer {
-    background: #009FFF;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right,#48030e, #721b2f);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #48030e, #721b2f);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #731c5d, #ab208c);
     color: #ececec;
     text-align: center;
     padding: 8px 0;

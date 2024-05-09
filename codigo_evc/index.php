@@ -14,12 +14,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Código EVC</title>
+    <title>Clinica Stroke</title>
 </head>
 
 <body>
     <header>
-        <h5 class="bi bi-heart-pulse-fill" style="color:#ffffff; margin-top: 15px;">CÓDIGO EVC</h5>
+        <h5 class="bi bi-heart-pulse-fill" style="color:#ffffff; margin-top: 15px;"> Clinica Stroke</h5>
         <br>
         <div style="padding: 20px; text-align: right;">
             <button type="button" class="btn btn-outline-light" id="cerrar-sesion-button" title="Cerrar sesión">
@@ -34,26 +34,32 @@
 
     <div style="padding: 20px;" class="btn-group" role="group" aria-label="Basic outlined example">
 
-
         <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <i class="bi bi-person-add"> </i> Paciente
+            <span style="font-size: 12px;"><i class="bi bi-person-add"></i> Paciente</span> 
         </button>
 
         <a href="php/export.php" class="btn btn-success">
-            <i class="bi bi-file-earmark-excel"></i> Excel
+            <span style="font-size: 12px;"><i class="bi bi-file-earmark-excel"></i> Excel</span> 
         </a>
 
-        <a href="graficas_anemia.php">
-            <button type="button" class="btn btn-primary" target="_blank">
-                <i class="bi bi-bar-chart"></i> Gráficas
-            </button>
+        <a href="graficas_anemia.php" class="btn btn-primary" target="_blank">
+            <span style="font-size: 12px;"><i class="bi bi-bar-chart"></i> Gráficas</span> 
         </a>
-    </div> <!-- cierre del <div class="btn-group" role="group" aria-label="Basic outlined example">-->
+
+        <a href="https://hraeigds.site/escalas/" class="btn btn-info" target="_blank">
+            <span style="font-size: 12px;">Escalas</span>
+        </a>
+    </div>
+
+
+        <br>
+        
+            
     <br><br>
 
     <!-- ======================== AQUI INICIA EL BUSCADOR ======================== -->
     <div class="row">
-        <div class="col-4" width="100%" height="800px" style="margin-bottom: 100px; ">
+        <div class="col-3" width="100%" style="margin-bottom: 0; ">
             <div id="patient-list-container" style="background-color:rgb(81, 176, 210,0.6)">
                 <br>
                 <input type="text" id="search" placeholder="Buscar Paciente...">
@@ -71,10 +77,10 @@
                                 echo '<li class="patient-item" data-id-paciente="' . $id_pacientes . '">';
                                 echo $nombrePacientes;
                                 echo '<a href="editar_evc.php?id=' . $id_pacientes . '">';
-                                echo '<button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Editar</button>';
+                                echo '<button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .60rem;"> Editar </button>';
                                 echo '</a>';
                                 echo '<a href="seguimiento.php?id=' . $id_pacientes . '">';
-                                echo '<button type="button" class="btn btn-secondary" style="color:white; --bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Seguimiento</button>';
+                                echo '<button type="button" class="btn btn-secondary" style="color:white; --bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .60rem;"> Seguimiento </button>';
                                 echo '</a>';
                                 echo '</li>';
                             }
@@ -94,7 +100,7 @@
 
         <!-- ======================== AQUI INICIA LA TABLA ======================== -->
 
-        <div class="col-7">
+        <div class="col-8">
             <div class="container">
                 <!-- Tu código existente -->
 
@@ -106,17 +112,22 @@
 
                 </div>
 
-                <iframe id="consulta" src="" frameborder="0" width="100%" height="800px"
-                    style="margin-bottom: 100px;"></iframe>
+                <div class="container" style="margin-top: 20px; margin-bottom: 20px;">
+                    <iframe id="consulta" src="" frameborder="0" width="100%" height="500px;" style="margin-bottom: 0;"></iframe>
+                </div>
+
+                    
+
+                    
             </div> <!-- <div class="container"> -->
         </div> <!-- FINALIZA EL DIV class col 8 -->
 
-        <iframe id="consulta_seguimientoevc" src="" frameborder="0" width="100%" height="800px"
+        <iframe id="consulta_seguimientoevc" src="" frameborder="0" width="100%" height="auto"
             style="margin-bottom: 100px;"></iframe>
 
         <div class="col-7">
             <div class="container">
-                <iframe id="consulta" src="consulta.php" frameborder="0" width="100%" height="800px"
+                <iframe id="consulta" src="consulta.php" frameborder="0" width="100%" height="auto"
                     style="margin-bottom: 100px;"></iframe>
             </div> <!--<div class="container">-->
         </div><!-- FINALIZA EL DIV class col 8-->
@@ -143,10 +154,9 @@
 
 
     <footer>
-        <a>Hospital Regional de Alta Especialidad de Ixtapaluca</a>
-        <p style="font-size: 10px">
+        Hospital Regional de Alta Especialidad de Ixtapaluca <br>
             Gestión Digital en Salud - 2024
-        </p>
+        
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

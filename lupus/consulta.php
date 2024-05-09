@@ -83,7 +83,7 @@ include ('php/controllers/consulta.controller.php');
                 <td><?php echo $alcoholismo; ?> </td>
             </tr>
             <tr>
-                <td class="estilo-celda">Esteatosis Hepatica</td>
+                <td class="estilo-celda">Artritis Reumatoide</td>
                 <td><?php echo $AR; ?> </td>
             </tr>
             <tr>

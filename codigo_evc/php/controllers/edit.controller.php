@@ -54,6 +54,15 @@
                 $activacion = $data['activacion'];
                 $defuncion = $data['defuncion'];
                 $area = $data['area'];
+                $pmau = $data['pmau'];
+                $pah = $data['pah'];
+                $peia = $data['peia'];
+                $pim = $data['pim'];
+                $plio = $data['plio'];
+                $pcisfa = $data['pcisfa'];
+                $ts = $data['ts'];
+                $camillero = $data['camillero'];
+                $med_neuro = $data['med_neuro'];
                 $hora_llegada = $data['hora_llegada'];
                 $hora_triage = $data['hora_triage'];
                 $puerta_triage = $data['puerta_triage'];
