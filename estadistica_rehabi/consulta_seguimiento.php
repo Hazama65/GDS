@@ -1,3 +1,6 @@
+<?php
+include ('php/controllers/consulta_seguimiento.controller.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,19 +29,13 @@
             <!--====================================Datos del Terapueta============================-->
             <tr>
                 <td class="estilo-celda">Nombre Terapeuta</td>
-                <td></td>
+                <td><?php echo $nombre_terapeuta_seg; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Turno</td>
-                <td></td>
+                <td><?php echo $Turno_terapeutai_seg; ?></td>
             </tr>
-
-            <tr>
-                <td class="estilo-celda">Fecha de registro</td>
-                <td></td>
-            </tr>
-
 
             <tr>
                 <th scope="col" style="background-color: rgb(106, 158, 218);"> Datos del Seguimiento</th>
@@ -47,13 +44,13 @@
 
             <tr>
                 <td class="estilo-celda">Número de Sesiones</td>
-                <td></td>
+                <td><?php echo $sesiones_num_seg; ?></td>
             </tr>
 
 
             <tr>
                 <td class="estilo-celda">Fecha de Seguimiento</td>
-                <td></td>
+                <td><?php echo $fecha_seg; ?></td>
             </tr>
 
             <tr>
@@ -63,7 +60,7 @@
 
             <tr>
                 <td class="estilo-celda">Tipo de Terapias</td>
-                <td></td>
+                <td><?php echo $tipo_terapias; ?></td>
             </tr>
 
             <tr>
@@ -73,112 +70,112 @@
 
             <tr>
                 <td class="estilo-celda">Terapia fisica</td>
-                <td></td>
+                <td><?php echo $terapia_fisica; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Terapia ocupacional</td>
-                <td></td>
+                <td><?php echo $terapia_ocupacional; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Terapia de lenguaje</td>
-                <td></td>
+                <td><?php echo $terapia_lenguaje; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Aplicación de férula</td>
-                <td></td>
+                <td><?php echo $aplicacion_ferula; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Aplicación de vendaje enyesado</td>
-                <td></td>
+                <td><?php echo $Aplicacion_vendaje_enyesado; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Baño de parafina</td>
-                <td></td>
+                <td><?php echo $Baño_parafina; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">CHC/CF</td>
-                <td></td>
+                <td><?php echo $CHC_CF; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Corrientes interfereciales</td>
-                <td></td>
+                <td><?php echo $Corrientes_interfereciales; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Electroestimulación</td>
-                <td></td>
+                <td><?php echo $Electroestimulacion; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Ejercicio Asistido</td>
-                <td></td>
+                <td><?php echo $Ejercicio_Asistido; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Ejercicio de Fisioterapia</td>
-                <td></td>
+                <td><?php echo $Ejercicio_Fisioterapia; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Hidroterapia/Tanque Terapéutico</td>
-                <td></td>
+                <td><?php echo $Hidroterapia_TanqueTerapéutico; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Hidroterapia/Tina de Habbard</td>
-                <td></td>
+                <td><?php echo $Hidroterapia_Tina_Habbard; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Hidroterapia/Tina de Remolinos</td>
-                <td></td>
+                <td><?php echo $Hidroterapia_Tina_Remolinos; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">TENS</td>
-                <td></td>
+                <td><?php echo $TENS; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Terapia combinada USG y Corriente Eléctrica</td>
-                <td></td>
+                <td><?php echo $TerapiacombinadaUSG_CorrienteEléctrica; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Ultrasonido Terapéutico</td>
-                <td></td>
+                <td><?php echo $Ultrasonido_Terapeutico; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Tracción Cervical y Lumbar</td>
-                <td></td>
+                <td><?php echo $TraccionCervical_Lumbar; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Rehabilitacion Cardíaca</td>
-                <td></td>
+                <td><?php echo $Rehabi_cardiaca; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Ejercicio respiratorio (R. Pulmonar)</td>
-                <td></td>
+                <td><?php echo $Ejercicios_respiratorio; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Terapia Laser</td>
-                <td></td>
+                <td><?php echo $Terapia_Laser; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Toxina Botulinica</td>
-                <td></td>
+                <td><?php echo $Toxina_Botulinica; ?></td>
             </tr>
 
 

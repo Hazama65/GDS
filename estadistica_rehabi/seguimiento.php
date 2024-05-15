@@ -1,3 +1,6 @@
+<?php
+include ('php/controllers/edit.controller.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,237 +36,249 @@
     </header><br>
 
     <div class="container">
-        <div class="row">
-
-            <div style="background-color: rgb(106, 158, 218);
-                        color:rgb(255, 255, 255);
-                        text-align: center;
-                        margin-top: 20px;">
-                <h6>Datos del Terapeuta</h6>
-            </div>
+        <form id="seguimiento_ER" method="POST">
+            <div class="row">
+                <input type="hidden" id="id_paciente" name="id_paciente" value="<?php echo $id_paciente; ?>">
 
 
-            <div class="col-md-6">
-                <strong style="font-size: 13px;">Nombre Terapeuta</strong>
-                <select name="nombre_terapeuta_seg" id="nombre_terapeuta_seg" class="form-select" style="font-size: 13px;">
-                    <option value="Seleccione">Seleccione</option>
-                    <option value="L.T.C.H Monjaras Bernal Isis Giovana">L.T.C.H Monjaras Bernal Isis Giovana</option>
-                    <option value="L.T.C.H Monjaras Bernal Isis Giovana">L.T.C.H Monjaras Bernal Isis Giovana</option>
-                    <option value="L.T.F Aurea Guadalupe Hernández Salazar.">L.T.F Aurea Guadalupe Hernández Salazar.</option>
-                    <option value="L.T.F Brenda Roxana Monjaras Bernal">L.T.F Brenda Roxana Monjaras Bernal</option>
-                    <option value="L.T.F Monserrat Ocampo García">L.T.F Monserrat Ocampo García</option>
-                    <option value="L.T.O Ana Violeta De La Paz Gonzalez">L.T.O Ana Violeta De La Paz Gonzalez</option>
-                </select>
-            </div>
+                <div style="background-color: rgb(106, 158, 218);
+                            color:rgb(255, 255, 255);
+                            text-align: center;
+                            margin-top: 20px;">
+                    <h6>Datos del Terapeuta</h6>
+                </div>
 
 
-            <div class="col-md-6">
-                <strong style="font-size: 13px;">Turno</strong>
-                <select name="Turno_terapeutai_seg" id="Turno_terapeutai_seg" class="form-select" style="font-size: 13px;">
-                    <option value="Seleccione">Seleccione</option>
-                    <option value="Jornada">Jornada</option>
-                    <option value="Matutino">Matutino</option>
-                    <option value="Vespertino">Vespertino</option>
-                </select>
-            </div>
-
-            <div class="col-md-6" style="display:none;">
-                <strong style="font-size: 13px;">Fecha de registro</strong>
-                <input id="fecha_registro_seg" name="fecha_registro_seg" type="date" class="control form-control" value="" style="font-size: 13px;" readonly>
-            </div>
-
-            <div class="form-header">
-                <h5 class="form-title" style="text-align: center;
-                            background-color:rgb(106, 158, 218);
-                            color: aliceblue;
-                            margin-top:10px;
-                            font-size: 14px;">
-                    Datos del Seguimiento</h5>
-            </div>
+                <div class="col-md-6">
+                    <strong style="font-size: 13px;">Nombre Terapeuta</strong>
+                    <select name="nombre_terapeuta_seg" id="nombre_terapeuta_seg" class="form-select" style="font-size: 13px;">
+                        <option value="Seleccione">Seleccione</option>
+                        <option value="L.T.C.H Monjaras Bernal Isis Giovana">L.T.C.H Monjaras Bernal Isis Giovana</option>
+                        <option value="L.T.C.H Monjaras Bernal Isis Giovana">L.T.C.H Monjaras Bernal Isis Giovana</option>
+                        <option value="L.T.F Aurea Guadalupe Hernández Salazar.">L.T.F Aurea Guadalupe Hernández Salazar.</option>
+                        <option value="L.T.F Brenda Roxana Monjaras Bernal">L.T.F Brenda Roxana Monjaras Bernal</option>
+                        <option value="L.T.F Monserrat Ocampo García">L.T.F Monserrat Ocampo García</option>
+                        <option value="L.T.O Ana Violeta De La Paz Gonzalez">L.T.O Ana Violeta De La Paz Gonzalez</option>
+                    </select>
+                </div>
 
 
-            <div class="col-md-6">
-                <strong style="font-size: 13px;">Número de Sesiones</strong>
-                <input id="sesiones_num_seg" name="sesiones_num_seg" type="number" class="control form-control" value="" style="font-size: 13px;">
-            </div>
+                <div class="col-md-6">
+                    <strong style="font-size: 13px;">Turno</strong>
+                    <select name="Turno_terapeutai_seg" id="Turno_terapeutai_seg" class="form-select" style="font-size: 13px;">
+                        <option value="Seleccione">Seleccione</option>
+                        <option value="Jornada">Jornada</option>
+                        <option value="Matutino">Matutino</option>
+                        <option value="Vespertino">Vespertino</option>
+                    </select>
+                </div>
 
-            <div class="col-md-6">
-                <strong style="font-size: 13px;">Fecha de Seguimiento</strong>
-                <input id="fecha_seg" name="fecha_seg" type="date" class="control form-control" value="" style="font-size: 13px;" readonly>
-            </div>
+                <div class="form-header">
+                    <h5 class="form-title" style="text-align: center;
+                                background-color:rgb(106, 158, 218);
+                                color: aliceblue;
+                                margin-top:10px;
+                                font-size: 14px;">
+                        Datos del Seguimiento</h5>
+                </div>
+
+
+                <div class="col-md-6">
+                    <strong style="font-size: 13px;">Número de Sesiones</strong>
+                    <input id="sesiones_num_seg" name="sesiones_num_seg" type="number" class="control form-control" value="" style="font-size: 13px;">
+                </div>
+
+                <div class="col-md-6">
+                    <strong style="font-size: 13px;">Fecha de Seguimiento</strong>
+                    <input id="fecha_seg" name="fecha_seg" type="date" class="control form-control" value="" style="font-size: 13px;" readonly>
+                </div>
 
 
 
-            <div class="form-header">
-                <h6 class="form-title" style="text-align: center;
-                            background-color: rgb(106, 158, 218) ;
-                            color: aliceblue;
-                            margin-top:15px;
-                            font-size: 14px;">
-                    Terapias y Procedimientos</h6>
-            </div>
-
-            <div class="col-md-6">
-                <strong style="font-size: 13px;">Tipo de Terapias</strong>
-                <select name="tipo_terapias_seg" id="tipo_terapias_seg" class="form-select" style="font-size: 13px;">
-                    <option value="Seleccione">Seleccione</option>
-                    <option value="Terapias ambulatorias">Terapias ambulatorias</option>
-                    <option value="Terapias en Hospitalización ">Terapias en Hospitalización </option>
-                </select>
-            </div>
-
-
-
-            <!-- Procedimientos -->
-
-            <div class="container" id="Procedimientos_seg">
                 <div class="form-header">
                     <h6 class="form-title" style="text-align: center;
-                            background-color: rgb(106, 158, 218,0.5) ;
-                            color: aliceblue;
-                            margin-top:15px;
-                            font-size: 14px;"> Procedimientos</h6>
+                                background-color: rgb(106, 158, 218) ;
+                                color: aliceblue;
+                                margin-top:15px;
+                                font-size: 14px;">
+                        Terapias y Procedimientos</h6>
                 </div>
 
-                <div class="row">
-
-                    <div class="col-md-3" style="text-align: center;">
-                        <span style="font-size:13px; display: block;">Terapia fisica</span>
-                        <input type="checkbox" name="terapia_fisica_seg" id="terapia_fisica_seg" value="Terapia fisica" style="font-size:14px; margin: 5px auto; display: block;">
-                    </div>
-
-                    <div class="col-md-3" style="text-align: center;">
-                        <span style="font-size:13px; display: block;">Terapia ocupacional</span>
-                        <input type="checkbox" name="terapia_ocupacional_seg" id="terapia_ocupacional_seg" value="Terapia ocupacional" style="font-size:14px; margin: 5px auto; display: block;">
-                    </div>
-
-                    <div class="col-md-3" style="text-align: center;">
-                        <span style="font-size:13px; display: block;">Terapia de lenguaje</span>
-                        <input type="checkbox" name="terapia_lenguaje_seg" id="terapia_lenguaje_seg" value="Terapia de lenguaje" style="font-size:14px; margin: 5px auto; display: block;">
-                    </div>
-
-                    <div class="col-md-3" style="text-align: center;">
-                        <span style="font-size:13px; display: block;">Aplicación de férula</span>
-                        <input type="checkbox" name="aplicacion_ferula_seg" id="aplicacion_ferula_seg" value="Aplicación de férula" style="font-size:14px; margin: 5px auto; display: block;">
-                    </div><br> <br>
-
-                    <div class="col-md-3" style="text-align: center;">
-                        <span style="font-size:13px; display: block;">Aplicación de vendaje enyesado</span>
-                        <input type="checkbox" name="Aplicacion_vendaje_enyesado_seg" id="Aplicacion_vendaje_enyesado_seg" value="Aplicación de vendaje enyesado" style="font-size:14px; margin: 5px auto; display: block;">
-                    </div>
-
-
-                    <div class="col-md-3" style="text-align: center;">
-                        <span style="font-size:13px; display: block;">Baño de parafina</span>
-                        <input type="checkbox" name="Baño_parafina_seg" id="Baño_parafina_seg" value="Baño de parafina" style="font-size:14px; margin: 5px auto; display: block;">
-                    </div>
-
-                    <div class="col-md-3" style="text-align: center;">
-                        <span style="font-size:13px; display: block;">CHC/CF</span>
-                        <input type="checkbox" name="CHC_CF_seg" id="CHC_CF_seg" value="CHC/CF" style="font-size:14px; margin: 5px auto; display: block;">
-                    </div>
-
-
-                    <div class="col-md-3" style="text-align: center;">
-                        <span style="font-size:13px; display: block;">Corrientes interfereciales</span>
-                        <input type="checkbox" name="Corrientes_interfereciales_seg" id="Corrientes_interfereciales_seg" value="Corrientes interfereciales" style="font-size:14px; margin: 5px auto; display: block;">
-                    </div>
-                    <br> <br>
-                    <div class="col-md-3" style="text-align: center;">
-                        <span style="font-size:13px; display: block;">Electroestimulación</span>
-                        <input type="checkbox" name="Electroestimulacion_seg" id="Electroestimulacion_seg" value="Electroestimulación" style="font-size:14px; margin: 5px auto; display: block;">
-
-                    </div>
-
-                    <div class="col-md-3" style="text-align: center;">
-                        <span style="font-size:13px; display: block;">Ejercicio Asistido</span>
-                        <input type="checkbox" name="Ejercicio_Asistido_seg" id="Ejercicio_Asistido_seg" value="Ejercicio Asistido" style="font-size:14px; margin: 5px auto; display: block;">
-
-                    </div>
-
-                    <div class="col-md-3" style="text-align: center;">
-                        <span style="font-size:13px; display: block;">Ejercicio de Fisioterapia</span>
-                        <input type="checkbox" name="Ejercicio_Fisioterapia_seg" id="Ejercicio_Fisioterapia_seg" value="Ejercicio de Fisioterapia" style="font-size:14px; margin: 5px auto; display: block;">
-
-                    </div>
-
-                    <div class="col-md-3" style="text-align: center;">
-                        <span style="font-size:13px; display: block;">Hidroterapia/Tanque Terapéutico</span>
-                        <input type="checkbox" name="Hidroterapia_TanqueTerapéutico_seg" id="Hidroterapia_TanqueTerapéutico_seg" value="Hidroterapia/Tanque Terapéutico" style="font-size:14px; margin: 5px auto; display: block;">
-                    </div>
-
-                    <br> <br>
-                    <div class="col-md-3" style="text-align: center;">
-                        <span style="font-size:13px; display: block;">Hidroterapia/Tina de Habbard</span>
-                        <input type="checkbox" name="Hidroterapia_Tina_Habbard_seg" id="Hidroterapia_Tina_Habbard_seg" value="Hidroterapia/Tina de Habbard" style="font-size:14px; margin: 5px auto; display: block;">
-                    </div>
-
-                    <div class="col-md-3" style="text-align: center;">
-                        <span style="font-size:13px; display: block;">Hidroterapia/Tina de Remolinos</span>
-                        <input type="checkbox" name="Hidroterapia_Tina_Remolinos_seg" id="Hidroterapia_Tina_Remolinos_seg" value="Hidroterapia/Tina de Remolinos" style="font-size:14px; margin: 5px auto; display: block;">
-                    </div>
-
-                    <div class="col-md-3" style="text-align: center;">
-                        <span style="font-size:13px; display: block;">TENS</span>
-                        <input type="checkbox" name="TENS" id="TENS_seg" value="TENS_seg" style="font-size:14px; margin: 5px auto; display: block;">
-                    </div>
-
-                    <div class="col-md-3" style="text-align: center;">
-                        <span style="font-size:13px; display: block;">Terapia combinada USG y Corriente Eléctrica</span>
-                        <input type="checkbox" name="TerapiacombinadaUSG_CorrienteEléctrica_seg" id="TerapiacombinadaUSG_CorrienteEléctrica_seg" value="Terapia combinada USG y Corriente Eléctrica" style="font-size:14px; margin: 5px auto; display: block;">
-                    </div>
-
-                    <br><br>
-                    <div class="col-md-3" style="text-align: center;">
-                        <span style="font-size:13px; display: block;">Ultrasonido Terapéutico</span>
-                        <input type="checkbox" name="Ultrasonido_Terapeutico_seg" id="Ultrasonido_Terapeutico_seg" value="Ultrasonido Terapéutico" style="font-size:14px; margin: 5px auto; display: block;">
-                    </div>
-
-                    <div class="col-md-3" style="text-align: center;">
-                        <span style="font-size:13px; display: block;">Tracción Cervical y Lumbar</span>
-                        <input type="checkbox" name="TraccionCervical_Lumbar_seg" id="TraccionCervical_Lumbar_seg" value="Tracción Cervical y Lumbar" style="font-size:14px; margin: 5px auto; display: block;">
-                    </div>
-
-                    <div class="col-md-3" style="text-align: center;">
-                        <span style="font-size:13px; display: block;">Rehabilitacion Cardíaca</span>
-                        <input type="checkbox" name="Rehabi_cardiaca_seg" id="Rehabi_cardiaca_seg" value="Rehabilitacion Cardíaca" style="font-size:14px; margin: 5px auto; display: block;">
-                    </div>
-
-                    <div class="col-md-3" style="text-align: center;">
-                        <span style="font-size:13px; display: block;">Ejercicio respiratorio (R. Pulmonar)</span>
-                        <input type="checkbox" name="Ejercicios_respiratorio_seg" id="Ejercicios_respiratorio_seg" value="Ejercicio respiratorio (R. Pulmonar)" style="font-size:14px; margin: 5px auto; display: block;">
-                    </div> <br> <br>
-
-                    <div class="col-md-3" style="text-align: center;">
-                        <span style="font-size:13px; display: block;">Terapia Laser</span>
-                        <input type="checkbox" name="Terapia_Laser_seg" id="Terapia_Laser_seg" value="Terapia Laser" style="font-size:14px; margin: 5px auto; display: block;">
-                    </div>
-
-                    <div class="col-md-3" style="text-align: center;">
-                        <span style="font-size:13px; display: block;">Toxina Botulinica</span>
-                        <input type="checkbox" name="Toxina_Botulinica_seg" id="Toxina_Botulinica_seg" value="Toxina Botulinica" style="font-size:14px; margin: 5px auto; display: block;">
-                    </div>
-
+                <div class="col-md-6">
+                    <strong style="font-size: 13px;">Tipo de Terapias</strong>
+                    <select name="tipo_terapias" id="tipo_terapias" class="form-select" style="font-size: 13px;">
+                        <option value="Seleccione">Seleccione</option>
+                        <option value="Terapias ambulatorias">Terapias ambulatorias</option>
+                        <option value="Terapias en Hospitalización">Terapias en Hospitalización</option>
+                    </select>
                 </div>
 
 
 
+                <!-- Procedimientos -->
+
+                <div class="container" id="Procedimientos_seg">
+                    <div class="form-header">
+                        <h6 class="form-title" style="text-align: center;
+                                background-color: rgb(106, 158, 218,0.5) ;
+                                color: aliceblue;
+                                margin-top:15px;
+                                font-size: 14px;"> Procedimientos</h6>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-3" style="text-align: center;">
+                            <span style="font-size:13px; display: block;">Terapia fisica</span>
+                            <input type="checkbox" name="terapia_fisica" id="terapia_fisica" value="Terapia fisica" style="font-size:14px; margin: 5px auto; display: block;">
+                        </div>
+
+                        <div class="col-md-3" style="text-align: center;">
+                            <span style="font-size:13px; display: block;">Terapia ocupacional</span>
+                            <input type="checkbox" name="terapia_ocupacional" id="terapia_ocupacional" value="Terapia ocupacional" style="font-size:14px; margin: 5px auto; display: block;">
+                        </div>
+
+                        <div class="col-md-3" style="text-align: center;">
+                            <span style="font-size:13px; display: block;">Terapia de lenguaje</span>
+                            <input type="checkbox" name="terapia_lenguaje" id="terapia_lenguaje" value="Terapia de lenguaje" style="font-size:14px; margin: 5px auto; display: block;">
+                        </div>
+
+                        <div class="col-md-3" style="text-align: center;">
+                            <span style="font-size:13px; display: block;">Aplicación de férula</span>
+                            <input type="checkbox" name="aplicacion_ferula" id="aplicacion_ferula" value="Aplicación de férula" style="font-size:14px; margin: 5px auto; display: block;">
+                        </div><br> <br>
+
+                        <div class="col-md-3" style="text-align: center;">
+                            <span style="font-size:13px; display: block;">Aplicación de vendaje enyesado</span>
+                            <input type="checkbox" name="Aplicacion_vendaje_enyesado" id="Aplicacion_vendaje_enyesado" value="Aplicación de vendaje enyesado" style="font-size:14px; margin: 5px auto; display: block;">
+                        </div>
+
+
+                        <div class="col-md-3" style="text-align: center;">
+                            <span style="font-size:13px; display: block;">Baño de parafina</span>
+                            <input type="checkbox" name="Baño_parafina" id="Baño_parafina" value="Baño de parafina" style="font-size:14px; margin: 5px auto; display: block;">
+                        </div>
+
+                        <div class="col-md-3" style="text-align: center;">
+                            <span style="font-size:13px; display: block;">CHC/CF</span>
+                            <input type="checkbox" name="CHC_CF" id="CHC_CF" value="CHC/CF" style="font-size:14px; margin: 5px auto; display: block;">
+                        </div>
+
+
+                        <div class="col-md-3" style="text-align: center;">
+                            <span style="font-size:13px; display: block;">Corrientes interfereciales</span>
+                            <input type="checkbox" name="Corrientes_interfereciales" id="Corrientes_interfereciales" value="Corrientes interfereciales" style="font-size:14px; margin: 5px auto; display: block;">
+                        </div>
+                        <br> <br>
+                        <div class="col-md-3" style="text-align: center;">
+                            <span style="font-size:13px; display: block;">Electroestimulación</span>
+                            <input type="checkbox" name="Electroestimulacion" id="Electroestimulacion" value="Electroestimulación" style="font-size:14px; margin: 5px auto; display: block;">
+
+                        </div>
+
+                        <div class="col-md-3" style="text-align: center;">
+                            <span style="font-size:13px; display: block;">Ejercicio Asistido</span>
+                            <input type="checkbox" name="Ejercicio_Asistido" id="Ejercicio_Asistido" value="Ejercicio Asistido" style="font-size:14px; margin: 5px auto; display: block;">
+
+                        </div>
+
+                        <div class="col-md-3" style="text-align: center;">
+                            <span style="font-size:13px; display: block;">Ejercicio de Fisioterapia</span>
+                            <input type="checkbox" name="Ejercicio_Fisioterapia" id="Ejercicio_Fisioterapia" value="Ejercicio de Fisioterapia" style="font-size:14px; margin: 5px auto; display: block;">
+
+                        </div>
+
+                        <div class="col-md-3" style="text-align: center;">
+                            <span style="font-size:13px; display: block;">Hidroterapia/Tanque Terapéutico</span>
+                            <input type="checkbox" name="Hidroterapia_TanqueTerapéutico" id="Hidroterapia_TanqueTerapéutico" value="Hidroterapia/Tanque Terapéutico" style="font-size:14px; margin: 5px auto; display: block;">
+                        </div>
+
+                        <br> <br>
+                        <div class="col-md-3" style="text-align: center;">
+                            <span style="font-size:13px; display: block;">Hidroterapia/Tina de Habbard</span>
+                            <input type="checkbox" name="Hidroterapia_Tina_Habbard" id="Hidroterapia_Tina_Habbard" value="Hidroterapia/Tina de Habbard" style="font-size:14px; margin: 5px auto; display: block;">
+                        </div>
+
+                        <div class="col-md-3" style="text-align: center;">
+                            <span style="font-size:13px; display: block;">Hidroterapia/Tina de Remolinos</span>
+                            <input type="checkbox" name="Hidroterapia_Tina_Remolinos" id="Hidroterapia_Tina_Remolinos" value="Hidroterapia/Tina de Remolinos" style="font-size:14px; margin: 5px auto; display: block;">
+                        </div>
+
+                        <div class="col-md-3" style="text-align: center;">
+                            <span style="font-size:13px; display: block;">TENS</span>
+                            <input type="checkbox" name="TENS" id="TENS" value="TENS" style="font-size:14px; margin: 5px auto; display: block;">
+                        </div>
+
+                        <div class="col-md-3" style="text-align: center;">
+                            <span style="font-size:13px; display: block;">Terapia combinada USG y Corriente Eléctrica</span>
+                            <input type="checkbox" name="TerapiacombinadaUSG_CorrienteEléctrica" id="TerapiacombinadaUSG_CorrienteEléctrica" value="Terapia combinada USG y Corriente Eléctrica" style="font-size:14px; margin: 5px auto; display: block;">
+                        </div>
+
+                        <br><br>
+                        <div class="col-md-3" style="text-align: center;">
+                            <span style="font-size:13px; display: block;">Ultrasonido Terapéutico</span>
+                            <input type="checkbox" name="Ultrasonido_Terapeutico" id="Ultrasonido_Terapeutico" value="Ultrasonido Terapéutico" style="font-size:14px; margin: 5px auto; display: block;">
+                        </div>
+
+                        <div class="col-md-3" style="text-align: center;">
+                            <span style="font-size:13px; display: block;">Tracción Cervical y Lumbar</span>
+                            <input type="checkbox" name="TraccionCervical_Lumbar" id="TraccionCervical_Lumbar" value="Tracción Cervical y Lumbar" style="font-size:14px; margin: 5px auto; display: block;">
+                        </div>
+
+                        <div class="col-md-3" style="text-align: center;">
+                            <span style="font-size:13px; display: block;">Rehabilitacion Cardíaca</span>
+                            <input type="checkbox" name="Rehabi_cardiaca" id="Rehabi_cardiaca" value="Rehabilitacion Cardíaca" style="font-size:14px; margin: 5px auto; display: block;">
+                        </div>
+
+                        <div class="col-md-3" style="text-align: center;">
+                            <span style="font-size:13px; display: block;">Ejercicio respiratorio (R. Pulmonar)</span>
+                            <input type="checkbox" name="Ejercicios_respiratorio" id="Ejercicios_respiratorio" value="Ejercicio respiratorio (R. Pulmonar)" style="font-size:14px; margin: 5px auto; display: block;">
+                        </div> <br> <br>
+
+                        <div class="col-md-3" style="text-align: center;">
+                            <span style="font-size:13px; display: block;">Terapia Laser</span>
+                            <input type="checkbox" name="Terapia_Laser" id="Terapia_Laser" value="Terapia Laser" style="font-size:14px; margin: 5px auto; display: block;">
+                        </div>
+
+                        <div class="col-md-3" style="text-align: center;">
+                            <span style="font-size:13px; display: block;">Toxina Botulinica</span>
+                            <input type="checkbox" name="Toxina_Botulinica" id="Toxina_Botulinica" value="Toxina Botulinica" style="font-size:14px; margin: 5px auto; display: block;">
+                        </div>
+
+                    </div>
 
 
 
 
 
-            </div>
 
-            <div style="display: flex; justify-content: flex-end; align-items: center;">
-                <button type="submit" class="btn btn-primary" style="font-size: 15px; padding: 8px 15px;">Guardar Seguimiento</button>
-            </div><br><br>
-        </div><br>
+
+
+                </div>
+
+                <div style="display: flex; justify-content: flex-end; align-items: center;">
+                    <button type="submit" class="btn btn-primary" style="font-size: 15px; padding: 8px 15px;">Guardar Seguimiento</button>
+                </div><br><br>
+            </div><br>
+        </form>
+    </div>
+
+        <!-- Contenedor para la pantalla de carga -->
+    <div id="loading-overlay" style="display: none;" class="loading">
+        <svg width="128px" height="96px">
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="back"></polyline>
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="front"></polyline>
+        </svg>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script src="js\seguimiento.js"></script>
+    <script src="js\scripseguimiento.js"></script>
+
+    <script type="module">
+        import { seguimientoForm } from "./js/seguimiento.js";
+        seguimientoForm();
+    </script>
 
 
 </body>

@@ -190,6 +190,30 @@ const validateLogin = async (formData) => {
                 '../encuesta_satisfaccion/registros.php'
             )
         }
+        if (typeToken.trim() === 'lupus') {
+            return setAlert.successAlert(
+                'La operacion se ha completado correctamente.',
+                null,
+                null,
+                '../lupus/index.php'
+            )
+        }
+        if (typeToken.trim() === 'ar') {
+            return setAlert.successAlert(
+                'La operacion se ha completado correctamente.',
+                null,
+                null,
+                '../artritis/index.php'
+            )
+        }
+        if (typeToken.trim() === 'sca') {
+            return setAlert.successAlert(
+                'La operacion se ha completado correctamente.',
+                null,
+                null,
+                '../sindrome_coronario/index.php'
+            )
+        }
 
 
     }catch(error){

@@ -13,7 +13,9 @@ include ('php/controllers/edit.controller.php');
     <link rel="stylesheet" href="css/style.css">
 
 
-    <title>Seguimiento Sindrome Coronario</title>
+
+    <title>Seguimiento Síndrome Coronario Agudo</title>
+
 </head>
 
 <body>
@@ -566,8 +568,6 @@ include ('php/controllers/edit.controller.php');
                             <strong style="font-size: 13px">Fecha de Defunción</strong>
                             <input type="datetime-local" class="control form-control" id="Seg_Defuncion_fecha" name="Seg_Defuncion_fecha" style="font-size: 13px;">
                         </div>
-
-
 
 
 
