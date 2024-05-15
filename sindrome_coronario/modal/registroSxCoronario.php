@@ -1572,12 +1572,12 @@
                         </div>
     
                         <div class="col-md-4">
-                            <strong style="font-size: 13px">Distolico Inicial</strong>
+                            <strong style="font-size: 13px">Diastólico Inicial</strong>
                             <input type="text" class="control form-control" id="Distolico_inicial" name="Distolico_inicial" sytle="font-size: 13px;">
                         </div>
     
                         <div class="col-md-4">
-                            <strong style="font-size: 13px">Sistolico Inicial</strong>
+                            <strong style="font-size: 13px">Sistólico Inicial</strong>
                             <input type="text" class="control form-control" id="Sistolico_inicial" name="Sistolico_inicial" sytle="font-size: 13px;">
                         </div>
     

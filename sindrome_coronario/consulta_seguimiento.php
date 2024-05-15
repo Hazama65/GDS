@@ -1,5 +1,5 @@
 <?php
-    include ('php/controllers/consulta_seguimiento.controller.php');
+include('php/controllers/consulta_seguimiento.controller.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +38,7 @@
 
 
             <tr>
-                <th scope="col" style="background-color: rgb(231, 52, 78);">Tratamiento </th>
+                <th scope="col" style="background-color:  rgb(231, 52, 78);">Tratamiento </th>
                 <th scope="col" style="background-color: rgb(231, 52, 78);"> </th>
             </tr>
 
@@ -69,7 +69,7 @@
             </tr>
 
             <tr>
-                <td class="estilo-celda">Anticuagulantes</td>
+                <td class="estilo-celda">Anticoagulantes</td>
                 <td><?php echo $Anticuagulantes; ?> </td>
             </tr>
 
@@ -118,8 +118,203 @@
                 <td><?php echo $Anticuerpos_Monoclonales; ?> </td>
             </tr>
 
-            
+            <tr>
+                <th scope="col" style="background-color: rgb(231, 52, 78);">Paraclínicos </th>
+                <th scope="col" style="background-color: rgb(231, 52, 78);"> </th>
+            </tr>
 
+            <tr>
+                <td class="estilo-celda">CK</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">CK-MB</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Troponinas</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Glucosa</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Urea</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Creatinina</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Colesterol</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Trigliceridos</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Ácido Úrico</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">HB Glucosilada</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Proteínas</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">LDL</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">HDL</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <th scope="col" style="background-color: rgb(231, 52, 78);">Viabilidad y Perfusión Miocardia </th>
+                <th scope="col" style="background-color: rgb(231, 52, 78);"> </th>
+
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Gammagrama Cardiaco Inicial</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Resultado Gammagrama Cardiaco</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Localización Gammagrama</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Resonancia Magnetica Inicial</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Resultado Resonancia Magnetica</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Ergometría Inicial</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Etapa 1</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Etapa 2</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Etapa 3</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Etapa 4</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Etapa 5</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Etapa 6</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Etapa 7</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Suspensión de Estudio</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <th scope="col" style="background-color: rgb(231, 52, 78);">Ecocardiograma</th>
+                <th scope="col" style="background-color: rgb(231, 52, 78);"> </th>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Diastólico Inicial</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Sistolico Inicial</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Frac. Eyección Ventrículo Izq Inicial</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Movilidad Inicial</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Segmento</td>
+                <td></td>
+            </tr>
+
+            <tr>
+            <th scope="col" style="background-color: rgb(231, 52, 78);">Defunción</th>
+                <th scope="col" style="background-color: rgb(231, 52, 78);"> </th>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Defunción</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Causa de Defunción</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Fecha de Defunción</td>
+                <td></td>
+            </tr>
+
+    
 
         </tbody>
     </table>
