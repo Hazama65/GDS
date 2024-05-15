@@ -149,7 +149,7 @@ include ('php/controllers/consulta.controller.php');
             </tr>
 
             <tr>
-                <td class="estilo-celda">Prima Paterna</td>
+                <td class="estilo-celda">Tabaquismo</td>
                 <td><?php echo $Tabaquismo_factor; ?> </td>
             </tr>
 

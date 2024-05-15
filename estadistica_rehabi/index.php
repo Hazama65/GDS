@@ -1,6 +1,6 @@
 <?php
-
-include("modal/registrarpaciente.php");
+require ('php/controllers/registros.controller.php');
+include ("modal/registrarpaciente.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,8 +8,11 @@ include("modal/registrarpaciente.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -19,7 +22,8 @@ include("modal/registrarpaciente.php");
 <body>
 
     <header>
-        <h5 class="bi bi-clipboard2-data-fill" style="color:rgb(243, 243, 243); margin-top: 15px;">Estadística de Rehabilitación</h5>
+        <h5 class="bi bi-clipboard2-data-fill" style="color:rgb(243, 243, 243); margin-top: 15px;">Estadística de
+            Rehabilitación</h5>
         <br>
         <div style="padding: 20px; text-align: right;">
             <button type="button" class="btn btn-outline-light" id="cerrar-sesion-button" title="Cerrar sesión">
@@ -43,7 +47,7 @@ include("modal/registrarpaciente.php");
             <i class="bi bi-file-earmark-excel"></i> Excel
         </a>
 
-        <a href="graficas_anemia.php">
+        <a href="metricas.php">
             <button type="button" class="btn btn-primary" target="_blank">
                 <i class="bi bi-bar-chart"></i> Gráficas
             </button>
@@ -60,7 +64,31 @@ include("modal/registrarpaciente.php");
                 <br>
                 <input type="text" id="search" placeholder="Buscar ...">
                 <ul id="patient-list">
+                    <?php
+                    if (!empty($data_ER)) {
+                        // Comienza a generar la lista de pacientes
+                        echo '<ul class="patient-list" >';
+                        foreach ($data_ER as $datos) {
+                            $id_paciente = $datos["id_paciente"];
+                            $nombrePaciente = $datos["nombre_paciente"];
 
+                            // Genera un elemento de lista para cada paciente
+                            echo '<li class="patient-item" data-id-paciente="' . $id_paciente . '">';
+                            echo $nombrePaciente;
+                            echo '<a href="editar_ER.php?id=' . $id_paciente . '">';
+                            echo '<button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Editar</button>';
+                            echo '</a>';
+                            echo '<a href="seguimiento.php?id=' . $id_paciente . '">';
+                            echo '<button type="button" class="btn btn-secondary" style="color:white; --bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Seguimiento</button>';
+                            echo '</a>';
+                            echo '</li>';
+                        }
+                        echo '</ul>';
+                    } else {
+                        echo "No se encontraron pacientes";
+                    }
+                    ?>
+                    <!-- Aquí debe ir el script para consultar los pacientes en la base de datos-->
                 </ul>
 
             </div> <!-- cierre del <div id="patient-list-container">-->
@@ -76,22 +104,18 @@ include("modal/registrarpaciente.php");
 
                 <!-- Agrega un div para contener el select dinámico -->
                 <div id="Seguimiento_index" style="display: none;">
-                    <select name="paciente_seleccionado" class="col-6 form-select custom-select" id="paciente_seleccionado" style="background-color: #6c757d; color: white; margin-bottom:10px">
+                    <select name="paciente_seleccionado" class="col-6 form-select custom-select"
+                        id="paciente_seleccionado" style="background-color: #6c757d; color: white; margin-bottom:10px">
                     </select>
-
                 </div>
 
-                <iframe id="consulta" src="" frameborder="0" width="100%" height="800px" style="margin-bottom: 100px;"></iframe>
+                <iframe id="consulta" src="" frameborder="0" width="100%" height="800px"
+                    style="margin-bottom: 100px;"></iframe>
             </div> <!-- <div class="container"> -->
         </div> <!-- FINALIZA EL DIV class col 8 -->
 
-        <iframe id="consulta_seguimiento" src="" frameborder="0" width="100%" height="800px" style="margin-bottom: 100px;"></iframe>
-
-        <div class="col-7">
-            <div class="container">
-                <iframe id="consulta" src="consulta.php" frameborder="0" width="100%" height="800px" style="margin-bottom: 100px;"></iframe>
-            </div> <!--<div class="container">-->
-        </div><!-- FINALIZA EL DIV class col 8-->
+        <iframe id="consulta_seguimiento" src="" frameborder="0" width="100%" height="800px"
+            style="margin-bottom: 100px;"></iframe>
 
         <!-- ======================== AQUI FINALIZA LA TABLA ======================== -->
 
@@ -102,7 +126,13 @@ include("modal/registrarpaciente.php");
 
 
 
-
+    <!-- Contenedor para la pantalla de carga -->
+    <div id="loading-overlay" style="display: none;" class="loading">
+        <svg width="128px" height="96px">
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="back"></polyline>
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="front"></polyline>
+        </svg>
+    </div>
 
     <footer>
         Hospital Regional de Alta Especialidad de Ixtapaluca
@@ -119,7 +149,10 @@ include("modal/registrarpaciente.php");
     <script src="js/scriptmodal.js"></script>
     <script src="js/visualizacion_seg.js"></script>
 
-
+    <script type="module">
+        import { mainForm } from './js/insert.js';
+        mainForm();
+    </script>
 
 
 

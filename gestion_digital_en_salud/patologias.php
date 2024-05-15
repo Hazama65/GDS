@@ -40,6 +40,7 @@
                 <br>
                 <a href="../login/index.php" class="btn btn-success">Diabetes</a>
             </div>
+
             <div class="card">
                 <img src="img/hemodinamia.jpeg" alt="Imagen 2">
                 <br>
@@ -51,7 +52,27 @@
                 <br>
                 <a href="../codigo_evc" class="btn btn-success">EVC</a>
             </div>
+
+            <div class="card">
+                <img src="img/default.png" alt="Imagen 2">
+                <br>
+                <a href="../login/index.php" class="btn btn-success">Lupus</a>
+            </div>
             
+            <div class="card">
+                <img src="img/artritis.jpg" alt="Imagen 2">
+                <br>
+                <a href="../codigo_evc" class="btn btn-success">Artritis Reumatoide</a>
+            </div>
+
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <img src="img/default.png" alt="Imagen 2">
+                <br>
+                <a href="../login/index.php" class="btn btn-success">SCA</a>
+            </div>
             
         </div>
     </div> <!-- es el div que cierra <div class="container" style="center">-->

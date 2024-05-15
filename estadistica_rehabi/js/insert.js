@@ -3,10 +3,10 @@ import { httpClients } from "./plugins/http-client.plugin_AT.js";
 import { hideLoadingOverlay, showLoadingOverlay } from "./plugins/loader.plugin_AT.js";
 
 
-const url = "php/controllers/seguimiento.controller.php";
-const data = $('#seguimiento_ER');
+const url = "php/controllers/insert.controller.php";
+const data = $('#ER_form');
 
-export const seguimientoForm = () => {
+export const mainForm = () => {
 
     data.on('submit', async function (event){
         event.preventDefault();
@@ -27,7 +27,7 @@ const validation = async (alldata) => {
 
     
         const response = await httpClients.post(url, alldata);
-        console.log(response);
+        // console.log(response);
 
         hideLoadingOverlay();
         

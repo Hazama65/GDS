@@ -19,15 +19,20 @@ require ('php/controllers/registros.controller.php');
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/metricas.css">
 
+    <style>
+        #chartdiv {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
 
 
-
-    <title>Lupus</title>
+    <title>Estadistica</title>
 </head>
 
 <body>
     <header>
-        <h5 class="bi bi-prescription2" style="color:#ffffff; margin-top: 15px;">Lupus</h5>
+        <h5 class="bi bi-prescription2" style="color:#ffffff; margin-top: 15px;">Estadistica</h5>
         <br>
         <div style="padding: 20px; text-align: right;">
             <button type="button" class="btn btn-outline-light" id="cerrar-sesion-button" title="Cerrar sesión">
@@ -41,25 +46,14 @@ require ('php/controllers/registros.controller.php');
     <div class="container buscador">
         <div class="row">
             <div class="col-md-5">
-                <select name="empleado_1" id="empleado_1" class="control form-control"
-                    >
-                    <option value="">Seleccione un Empleado</option>
-                    <?php
-                    if (!empty ($data_empleados)) {
-                        foreach ($data_empleados as $row1) {
-                            echo "<option value='" . $row1["nombre_empleado"] . "' >" . $row1["nombre_empleado"] . "</option>";
-                        }
-                    } else {
-                        echo "<option value=''>No hay datos disponibles</option>";
-                    }
-                    ?>
+                <select name="empleado_1" id="empleado_1" class="control form-control">
                 </select>
             </div>
-    
+
             <div class="col-md-2">
                 <input type="date" name="fecha_1" id="fecha_1" class="control form-control">
             </div>
-    
+
             <div class="col-md-2">
                 <input type="date" name="fecha_2" id="fecha_2" class="control form-control">
             </div>
@@ -71,6 +65,11 @@ require ('php/controllers/registros.controller.php');
 
 
     <div class="container">
+
+        <div id="chartdiv"></div>
+    </div>
+
+    <!-- <div class="container">
 
         <div class="graficas" id="chartdiv_1">
             <span class="badge">Conteo Total de Guardias(Solicitadas)</span>
@@ -84,15 +83,15 @@ require ('php/controllers/registros.controller.php');
             <span class="badge">Conteo Total de Guardias(Realizadas)</span>
         </div>
 
-    </div>
+    </div> -->
 
 
-    <footer>
+    <!-- <footer>
         <a>Hospital Regional de Alta Especialidad de Ixtapaluca</a>
         <p style="font-size: 10px">
             Gestión Digital en Salud - 2024
         </p>
-    </footer>
+    </footer> -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
