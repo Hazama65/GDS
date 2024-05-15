@@ -1487,7 +1487,7 @@
                 </div>
 
                 <div class="col-md-4">
-                    <strong style="font-size: 13px">Distolico Inicial</strong>
+                    <strong style="font-size: 13px">Diastólico Inicial</strong>
                     <input type="text" class="control form-control" id="Distolico_inicial" name="Distolico_inicial" value="<?php echo $Distolico_inicial; ?>""
                         sytle="font-size: 13px;">
                 </div>

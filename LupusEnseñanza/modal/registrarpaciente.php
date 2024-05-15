@@ -1,32 +1,34 @@
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="CancerMama" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header estilomodal">
-                <h1 class="modal-title fs-4" id="exampleModalLabel">Registro Paciente</h1>
-
+                <h1 class="bi bi-clipboard2-pulse modal-title fs-4" id="exampleModalLabel">Lupus</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+
             <div class="modal-body">
 
-                <form id="Lupus_form" method="POST">
+                <!-- Datos de llegada del paciente  -->
 
-                    <!-- Datos de llegada del paciente  -->
-                    <div class="row">
+                <div class="row">
 
-                        <div class="form-header">
+                <div class="form-header">
                             <h5 class="form-title">Datos Paciente</h5>
                         </div>
 
                         <div class="row">
+
                             <div class="col-md-4">
                                 <strong>CURP</strong>
                                 <input class="form-control" type="text" name="curp" id="curp" maxlength="18"
                                     minlength="18" onblur="curp2date()">
                             </div>
+
                             <div class="col-md-4">
                                 <strong>Nombre Completo</strong>
                                 <input class="form-control" type="text" name="nombre_completo" id="nombre_completo">
                             </div>
+
                             <div class="col-md-4">
                                 <strong>Escolaridad</strong>
                                 <select class="form-control" name="escolaridad" id="escolaridad">
@@ -40,30 +42,50 @@
                                     <option value="Sin estudios">Sin estudios</option>
                                 </select>
                             </div>
+
                             <div class="col-md-4">
                                 <strong>Fecha de nacimiento</strong>
                                 <input class="form-control" type="date" name="birth_date" id="birth_date">
                             </div>
+
                             <div class="col-md-4">
                                 <strong>Edad</strong>
                                 <input class="form-control" type="text" name="edad" id="edad">
                             </div>
+
                             <div class="col-md-4">
                                 <strong>Sexo</strong>
                                 <input class="form-control" type="text" name="sex" id="sex">
                             </div>
-                            <div class="col-md-4">
+                            
+                            <div class="col-md-2">
                                 <strong>Talla</strong>
                                 <input class="form-control" type="text" name="talla" id="talla">
                             </div>
-                            <div class="col-md-4">
+
+                            <div class="col-md-2">
                                 <strong>Peso</strong>
                                 <input class="form-control" type="number" name="peso" id="peso" onblur="calculaIMC();">
                             </div>
-                            <div class="col-md-4">
+
+                            <div class="col-md-2">
                                 <strong>IMC</strong>
                                 <input class="form-control" type="text" name="imc" id="imc" readonly>
                             </div>
+
+                            
+                            <div class="col-md-3">
+                                <strong>Fecha de Diagnostico</strong>
+                                <input class="form-control" type="date" name="diagnostico_date" id="diagnostico_date">
+                            </div>
+
+                            
+                            <div class="col-md-3">
+                                <strong>Etnia</strong>
+                                <input class="form-control" type="text" name="Etnia" id="Etnia" readonly>
+                            </div>
+
+
                         </div> <!-- div row-->
 
                         <div class="form-header">
@@ -758,16 +780,29 @@
                         </div>
 
 
-                    </div> <!-- DIV ROW LINEA 13 -->
 
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="submit" class="btn btn-primary">Guardar</button>
-                    </div>
-                </form>
+
+
+
+
+            
+
+
+
+
+                </div> <!-- DIV ROW LINEA 11 -->
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button> <br>
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                </div>
+
             </div><!--DIV DEL BODY  -->
 
 
         </div>
     </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

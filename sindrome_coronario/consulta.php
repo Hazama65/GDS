@@ -846,7 +846,7 @@ include ('php/controllers/consulta.controller.php');
             </tr>
 
             <tr>
-                <td class="estilo-celda">Distolico Inicial</td>
+                <td class="estilo-celda">Diastólico Inicial</td>
                 <td><?php echo $Distolico_inicial; ?> </td>
             </tr>
 

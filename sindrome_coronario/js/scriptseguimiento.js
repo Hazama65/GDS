@@ -146,4 +146,3 @@ const visualizacion_tratamiento = () => {
     });
 }
 
-visualizacion_tratamiento();
