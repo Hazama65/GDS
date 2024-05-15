@@ -1,0 +1,40 @@
+nombre_terapeuta
+Turno_terapeuta
+fecha_registro
+nombre_paciente
+curp
+fecha
+edad
+sexo
+tipo_paciente
+tipo_consulta
+sesiones_num
+tipo_terapias
+terapia_fisica
+terapia_ocupacional
+terapia_lenguaje
+aplicacion_ferula
+Aplicacion_vendaje_enyesado
+Baño_parafina
+CHC_CF
+Corrientes_interfereciales
+Electroestimulacion
+Ejercicio_Asistido
+Ejercicio_Fisioterapia
+Hidroterapia_TanqueTerapéutico
+Hidroterapia_Tina_Habbard
+Hidroterapia_Tina_Remolinos
+TENS
+TerapiacombinadaUSG_CorrienteEléctrica
+Ultrasonido_Terapeutico
+TraccionCervical_Lumbar
+Rehabi_cardiaca
+Ejercicios_respiratorio
+Terapia_Laser
+Toxina_Botulinica
+
+
+
+value="<?php echo $id_paciente; ?>"
+<?php if ($id_paciente == 'Si') echo "checked"; ?>
+<?php if ($id_paciente== '0')echo 'selected'; ?>
