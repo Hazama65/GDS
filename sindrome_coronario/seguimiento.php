@@ -13,7 +13,7 @@ include ('php/controllers/edit.controller.php');
     <link rel="stylesheet" href="css/style.css">
 
 
-    <title>Seguimiento Cancer de Mama</title>
+    <title>Seguimiento Síndrome Coronario Agudo</title>
 </head>
 
 <body>
@@ -228,7 +228,6 @@ include ('php/controllers/edit.controller.php');
                     </select>
                 </div>
 
-<<<<<<< HEAD
 
                 <div class="col-md-2" style="text-align: center;">
                     <span style="font-size:13px; display: block;">Ácido Acetil Salicílico</span>
@@ -256,7 +255,7 @@ include ('php/controllers/edit.controller.php');
                 </div>
 
 
-            </div><br> <br>
+            </div>
 
 
             <div class="col-md-3">
@@ -267,13 +266,11 @@ include ('php/controllers/edit.controller.php');
                     <option value="Apixaban">Apixaban</option>
                     <option value="Ninguno">Ninguno</option>
                 </select>
-=======
                 <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 15px;">
                     <button type="submit" class="btn btn-primary" style="font-size: 15px; padding: 8px 15px;">Editar</button>
                 </div><br><br>
                     
     
->>>>>>> main
             </div>
         </form>
     </div>
