@@ -22,12 +22,12 @@ require ('php/controllers/registros.controller.php');
 
 
 
-    <title>Guardias</title>
+    <title>Lupus</title>
 </head>
 
 <body>
     <header>
-        <h5 class="bi bi-prescription2" style="color:#ffffff; margin-top: 15px;">Guardias</h5>
+        <h5 class="bi bi-prescription2" style="color:#ffffff; margin-top: 15px;">Lupus</h5>
         <br>
         <div style="padding: 20px; text-align: right;">
             <button type="button" class="btn btn-outline-light" id="cerrar-sesion-button" title="Cerrar sesión">
