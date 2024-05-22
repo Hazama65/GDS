@@ -36,25 +36,25 @@
     <div class="container" style="center">
         <div class="cards">
             <div class="card">
-                <img src="img/dm.jpeg" alt="Imagen 1">
+                <img src="img/dm.jpg" alt="Imagen 1">
                 <br>
                 <a href="../login/index.php" class="btn btn-success">Diabetes</a>
             </div>
 
             <div class="card">
-                <img src="img/hemodinamia.jpeg" alt="Imagen 2">
+                <img src="img/hemodinamia.jpg" alt="Imagen 2">
                 <br>
                 <a href="../login/index.php" class="btn btn-success">Hemodinamia</a>
             </div>
             
             <div class="card">
-                <img src="img/evc.png" alt="Imagen 2">
+                <img src="img/evc.jpg" alt="Imagen 2">
                 <br>
                 <a href="../codigo_evc" class="btn btn-success">EVC</a>
             </div>
 
             <div class="card">
-                <img src="img/default.png" alt="Imagen 2">
+                <img src="img/lupus.jpg" alt="Imagen 2">
                 <br>
                 <a href="../login/index.php" class="btn btn-success">Lupus</a>
             </div>
@@ -69,7 +69,7 @@
 
         <div class="cards">
             <div class="card">
-                <img src="img/default.png" alt="Imagen 2">
+                <img src="img/sca.jpg" alt="Imagen 2">
                 <br>
                 <a href="../login/index.php" class="btn btn-success">SCA</a>
             </div>

@@ -23,7 +23,8 @@
 
             <tr>
                 <th scope="col" style="background-color:rgb(62, 104, 170,0.5);"> DATOS GENERALES </th>
-                <th scope="col" style="background-color: rgb(62, 104, 170,0.5);"> </th>
+                <th scope="col" style="background-color: rgb(62, 104, 170,0.5);"></th>
+
             </tr>
         </thead>
 
@@ -1287,7 +1288,6 @@
 
         </tbody>
     </table>
-
 
 
 

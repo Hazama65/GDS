@@ -71,31 +71,31 @@
 
             
             <div class="card">
-                <img src="img/calidad1.jpeg" alt="Imagen 3">
+                <img src="img/calidad.jpg" alt="Imagen 3">
                 <br>
                 <a href="calidad.php" class="btn btn-success">Calidad</a>
             </div>
             
             <div class="card">
-                <img src="img/clinicas1.jpg" alt="Imagen 3">
+                <img src="img/clinicas.jpg" alt="Imagen 3">
                 <br>
                 <a href="clinicas.php" class="btn btn-success">Clínicas</a>
             </div>
 
             <div class="card">
-                <img src="img/enfermeria.jpeg" alt="Imagen 5">
+                <img src="img/enfermeria.jpg" alt="Imagen 5">
                 <br>
                 <a href="enfermeria.php" class="btn btn-success">Enfermería</a>
             </div>
 
             <div class="card">
-                <img src="img/servicios.jpeg" alt="Imagen 4">
+                <img src="img/ser_med.jpg" alt="Imagen 4">
                 <br>
                 <a href="servicios.php" class="btn btn-success">Servicios</a>
             </div>
 
             <div class="card">
-                <img src="img/patologias1.jpg" alt="Imagen 2">
+                <img src="img/patologia.jpg" alt="Imagen 2">
                 <br>
                 <a href="patologias.php" class="btn btn-success">Patologías</a>
             </div>
