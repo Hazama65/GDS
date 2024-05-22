@@ -51,7 +51,7 @@
                 <a href="../login/index.php" class="btn btn-success">Hepatitis C</a>
             </div>
             <div class="card">
-                <img src="img/paladarhendido.jpg" alt="Imagen 3">
+                <img src="img/lph.jpg" alt="Imagen 3">
                 <br>
                 <a href="../login/index.php" class="btn btn-success">LPH</a>
             </div>

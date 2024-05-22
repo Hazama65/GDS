@@ -57,7 +57,7 @@ if ($result) {
         'Diabetes',
         'Hipertensión',
         'Alcoholismo',
-        'Prima Paterna',
+        'Tabaquismo',
         'Enfermedad renal cronica',
         'Hiperuricemia',
         'Obesidad',

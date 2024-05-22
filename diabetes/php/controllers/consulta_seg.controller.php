@@ -19,8 +19,8 @@ if (isset($_GET['idPaciente'])) {
     foreach ($data_seguimiento as $fila) {
         // Ajusta 'valor' y 'texto' según los campos específicos en tu tabla datos_seguimiento
         $opcion = [
-            'valor' => $fila['id_paciente'],
-            'texto' => $fila['fecha_seguimiento']
+            'texto' => $fila['fecha_seguimiento'],
+            'id_seg' => $fila['id_seguimiento']
         ];
 
         // Agrega la opción al array

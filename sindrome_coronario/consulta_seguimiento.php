@@ -125,67 +125,67 @@ include('php/controllers/consulta_seguimiento.controller.php');
 
             <tr>
                 <td class="estilo-celda">CK</td>
-                <td></td>
+                <td><?php echo $Seguimiento_ck; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">CK-MB</td>
-                <td></td>
+                <td><?php echo $Seguimiento_ck_mb; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Troponinas</td>
-                <td></td>
+                <td><?php echo $Seguimiento_Troponinas; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Glucosa</td>
-                <td></td>
+                <td><?php echo $Seguimiento_Glucosa; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Urea</td>
-                <td></td>
+                <td><?php echo $Seguimiento_Urea; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Creatinina</td>
-                <td></td>
+                <td><?php echo $Seguimiento_Creatinina; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Colesterol</td>
-                <td></td>
+                <td><?php echo $Seguimiento_Colesterol; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Trigliceridos</td>
-                <td></td>
+                <td><?php echo $Seguimiento_Trigliceridos; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Ácido Úrico</td>
-                <td></td>
+                <td><?php echo $Seguimiento_Acido_Urico; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">HB Glucosilada</td>
-                <td></td>
+                <td><?php echo $Seguimiento_hb_glucosilada; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Proteínas</td>
-                <td></td>
+                <td><?php echo $Seguimiento_Proteinas; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">LDL</td>
-                <td></td>
+                <td><?php echo $Seguimiento_LDL; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">HDL</td>
-                <td></td>
+                <td><?php echo $Seguimiento_HDL; ?></td>
             </tr>
 
             <tr>
@@ -196,72 +196,77 @@ include('php/controllers/consulta_seguimiento.controller.php');
 
             <tr>
                 <td class="estilo-celda">Gammagrama Cardiaco Inicial</td>
-                <td></td>
+                <td><?php echo $Seg_Gamma; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Resultado Gammagrama Cardiaco</td>
-                <td></td>
+                <td><?php echo $Seg_gamma_cardi; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Localización Gammagrama</td>
-                <td></td>
+                <td><?php echo $Seg_Localizacion_gamma; ?></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Segmento</td>
+                <td><?php echo $Seg_Segmento_gamma; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Resonancia Magnetica Inicial</td>
-                <td></td>
+                <td><?php echo $Seg_Resonancia_inicial; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Resultado Resonancia Magnetica</td>
-                <td></td>
+                <td><?php echo $Seg_resultado_resonancia; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Ergometría Inicial</td>
-                <td></td>
+                <td><?php echo $Seg_ergometria; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Etapa 1</td>
-                <td></td>
+                <td><?php echo $Seg_Etapa_1; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Etapa 2</td>
-                <td></td>
+                <td><?php echo $Seg_Etapa_2; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Etapa 3</td>
-                <td></td>
+                <td><?php echo $Seg_Etapa_3; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Etapa 4</td>
-                <td></td>
+                <td><?php echo $Seg_Etapa_4; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Etapa 5</td>
-                <td></td>
+                <td><?php echo $Seg_Etapa_5; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Etapa 6</td>
-                <td></td>
+                <td><?php echo $Seg_Etapa_6; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Etapa 7</td>
-                <td></td>
+                <td><?php echo $Seg_Etapa_7; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Suspensión de Estudio</td>
-                <td></td>
+                <td><?php echo $Seg_Suspension_estudio; ?></td>
             </tr>
 
             <tr>
@@ -271,27 +276,27 @@ include('php/controllers/consulta_seguimiento.controller.php');
 
             <tr>
                 <td class="estilo-celda">Diastólico Inicial</td>
-                <td></td>
+                <td><?php echo $Seg_Distolico_inicial; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Sistolico Inicial</td>
-                <td></td>
+                <td><?php echo $Seg_Sistolico_inicial; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Frac. Eyección Ventrículo Izq Inicial</td>
-                <td></td>
+                <td><?php echo $Seg_eyeccion_ventriizqui; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Movilidad Inicial</td>
-                <td></td>
+                <td><?php echo $Seg_movilidad_inicial; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Segmento</td>
-                <td></td>
+                <td><?php echo $Seg_Segmento; ?></td>
             </tr>
 
             <tr>
@@ -301,17 +306,17 @@ include('php/controllers/consulta_seguimiento.controller.php');
 
             <tr>
                 <td class="estilo-celda">Defunción</td>
-                <td></td>
+                <td><?php echo $Seg_defun; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Causa de Defunción</td>
-                <td></td>
+                <td><?php echo $Seg_Causa_defun; ?></td>
             </tr>
 
             <tr>
                 <td class="estilo-celda">Fecha de Defunción</td>
-                <td></td>
+                <td><?php echo $Seg_Defuncion_fecha; ?></td>
             </tr>
 
     

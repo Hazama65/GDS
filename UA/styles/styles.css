@@ -1,0 +1,128 @@
+body {
+  background-color: rgb(249, 252, 255);
+}
+
+header {
+  background: linear-gradient(to right, rgb(14, 140, 129), rgb(103, 172, 166));
+  /* Degradado de colores */
+  color: aliceblue;
+  /* Color del texto azul hospitalario */
+  padding: 20px;
+  /* Espaciado interno */
+  text-align: left;
+  /* Alineación del texto a la izquierda */
+  width: 100%;
+  /* Ancho del header */
+  margin: 0 auto;
+  /* Centrar el header en la página */
+  font-family: 'Montserrat', sans-serif;
+  /* Estilo de letra Montserrat */
+  display: flex;
+  /* Usar flexbox para alinear los elementos */
+  justify-content: space-between;
+  /* Alinear los elementos al inicio y al final */
+  align-items: center;
+  /* Centrar verticalmente los elementos */
+}
+
+
+
+.welcome-message {
+  margin-right: auto;
+  /* Empujar el mensaje de bienvenida hacia la derecha */
+}
+
+/* Estilo personalizado para el botón */
+.custom-btn {
+  margin-left: 10px;
+  /* Ajusta el margen izquierdo según tu preferencia */
+}
+
+/* Estilo personalizado para separar el botón del header */
+.btn-container {
+  margin-left: auto;
+  /* Ajusta el margen izquierdo según tu preferencia */
+  margin-top: 20px;
+  /* Ajusta el margen superior según tu preferencia */
+}
+
+/* Estilos adicionales */
+.container-box {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+
+#patient-list {
+  list-style: none;
+  padding: 0;
+  background-color: white;
+  /* Fondo blanco */
+  border: 1px solid rgb(62, 104, 170, 0.5);
+  /* Borde alrededor de la lista */
+  border-radius: 5px;
+  /* Esquinas redondeadas */
+  margin: 10px;
+}
+
+#patient-list li {
+  margin: 0;
+  /* Elimina el margen entre elementos */
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  /* Borde inferior para separar pacientes */
+}
+
+#patient-list li:last-child {
+  border-bottom: none;
+  /* Elimina el borde inferior del último paciente */
+}
+
+/* pantalla de carga */
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgba(151, 150, 150, 0.97);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.loading svg polyline {
+  fill: none;
+  stroke-width: 6;
+  /* Aumentar el grosor de la línea */
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.loading svg polyline#back {
+  fill: none;
+  stroke: #ff4d5033;
+}
+
+.loading svg polyline#front {
+  fill: none;
+  stroke: #fb3437;
+  stroke-dasharray: 96, 288;
+  /* Ajustar la longitud del dasharray y el dashoffset */
+  stroke-dashoffset: 384;
+  animation: dash_682 1.4s linear infinite;
+}
+
+@keyframes dash_682 {
+  72.5% {
+    opacity: 0;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}

@@ -41,43 +41,43 @@
     <div class="container" style="center">
         <div class="cards">
             <div class="card">
-                <img src="img/ambulatoria2.jpeg" alt="Imagen 1">
+                <img src="img/ambulatoria.jpg" alt="Imagen 1">
                 <br>
                 <a href="../login/index.php" class="btn btn-success">Ambulatoria</a>
             </div>
             <div class="card">
-                <img src="img/endoscopia.jpeg" alt="Imagen 2">
+                <img src="img/endoscopia.jpg" alt="Imagen 2">
                 <br>
                 <a href="../login/index.php" class="btn btn-success">Endoscopia</a>
             </div>
             <div class="card">
-                <img src="img/hraei11.jpeg" alt="Imagen 3">
+                <img src="img/folios.jpg" alt="Imagen 3">
                 <br>
                 <a href="../login/index.php" class="btn btn-success">Folios</a>
             </div>
             <div class="card">
-                <img src="img/interconsulta.jpeg" alt="Imagen 4">
+                <img src="img/interconsulta.jpg" alt="Imagen 4">
                 <br>
                 <a href="../login/index.php" class="btn btn-success">Interconsultas</a>
             </div>
             <div class="card">
-                <img src="img/residentes.jpeg" alt="Imagen 5">
+                <img src="img/residentes.jpg" alt="Imagen 5">
                 <br>
                 <a href="../login/index.php" class="btn btn-success">Residentes</a>
             </div>
             <div class="card">
-                <img src="img/gineco.jpeg" alt="Imagen 5">
+                <img src="img/triage.jpg" alt="Imagen 5">
                 <br>
                 <a href="https://hraeigds.site/Triage_GinecoObstetrico/" class="btn btn-success">Triage
                     Ginecoobstétrico</a>
             </div>
             <div class="card">
-                <img src="img/iaas.jpeg" alt="Imagen 6">
+                <img src="img/iaas.jpg" alt="Imagen 6">
                 <br>
                 <a href="../login/index.php" class="btn btn-success">IAAS</a>
             </div>
             <div class="card">
-                <img src="img/tasa_iaas.jpeg" alt="Imagen 7">
+                <img src="img/tasa_iaas.jpg" alt="Imagen 7">
                 <br>
                 <a href="../login/index.php" class="btn btn-success">Tasa de IAAS</a>
             </div>

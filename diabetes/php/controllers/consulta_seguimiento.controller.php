@@ -6,7 +6,7 @@ $connectionDBSEG = new Database(DB_HOST_seg, DB_NAME_seg, DB_USERNAME_seg, DB_PA
 
 $id_paciente = null;
 if (isset($_GET['valorSeleccionado']) && isset($_GET['textoSeleccionado'])) {
-    $id_paciente = $_GET['valorSeleccionado'];
+    $id_seguimiento = $_GET['valorSeleccionado'];
     $fecha_seguimiento = $_GET['textoSeleccionado'];
 
     $query_seguimiento = "SELECT *
@@ -20,7 +20,7 @@ if (isset($_GET['valorSeleccionado']) && isset($_GET['textoSeleccionado'])) {
     LEFT JOIN seguimiento_insulina SI ON DS.id_seguimiento = SI.id_seguimiento
     LEFT JOIN seguimiento_laboratorio SLab ON DS.id_seguimiento = SLab.id_seguimiento
     LEFT JOIN seguimiento_otros SO ON DS.id_seguimiento = SO.id_seguimiento
-    WHERE id_paciente = '$id_paciente' AND fecha_seguimiento = '$fecha_seguimiento'";
+    WHERE DS.id_seguimiento = '$id_seguimiento' AND fecha_seguimiento = '$fecha_seguimiento'";
     $data_seguimiento = $connectionDBSEG->getRows($query_seguimiento);
 
 
