@@ -45,19 +45,44 @@ require ('php/controllers/registros.controller.php');
 
     <div class="container buscador">
         <div class="row">
-            <div class="col-md-5">
-                <select name="empleado_1" id="empleado_1" class="control form-control">
+            <div class="col-md-3">
+                <span>Terapeuta</span>
+                <select name="empleado" id="empleado" class="control form-control">
+                    <option value="">Seleccione</option>
+                    <option value="L.T.C.H Monjaras Bernal Isis Giovana">L.T.C.H Monjaras Bernal Isis Giovana</option>
+                    <option value="L.T.F  Estephanie García Martinez">L.T.F Estephanie García Martinez</option>
+                    <option value="L.T.F Aurea Guadalupe Hernández Salazar.">L.T.F Aurea Guadalupe Hernández Salazar.</option>
+                    <option value="L.T.F Brenda Roxana Monjaras Bernal">L.T.F Brenda Roxana Monjaras Bernal</option>
+                    <option value="L.T.F Monserrat Ocampo García">L.T.F Monserrat Ocampo García</option>
+                    <option value="L.T.O Ana Violeta De La Paz Gonzalez">L.T.O Ana Violeta De La Paz Gonzalez</option>
                 </select>
             </div>
 
+            <div class="col-md-1">
+                <span style="font-size:13px; display: block;">Terapia tipos fisica</span>
+                <input style="width: 30px; height: 30px;" type="checkbox" name="terapia_fisica" id="terapia_fisica">
+            </div>
+
+            <div class="col-md-1">
+                <span style="font-size:13px; display: block;">Terapia ocupacional</span>
+                <input style="width: 30px; height: 30px;" type="checkbox" name="terapia_ocupacional" id="terapia_ocupacional">
+            </div>
+
+            <div class="col-md-1">
+                <span style="font-size:13px; display: block;">Terapia de lenguaje</span>
+                <input style="width: 30px; height: 30px;" type="checkbox" name="terapia_lenguaje" id="terapia_lenguaje">
+            </div>
+
             <div class="col-md-2">
+                <span>Fecha Inicial</span>
                 <input type="date" name="fecha_1" id="fecha_1" class="control form-control">
             </div>
 
             <div class="col-md-2">
+                <span>Fecha Final</span>
                 <input type="date" name="fecha_2" id="fecha_2" class="control form-control">
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <button onclick="buscar()" class="btn btn-primary boton">Buscar</button>
             </div>
         </div>
@@ -66,7 +91,7 @@ require ('php/controllers/registros.controller.php');
 
     <div class="container">
 
-        <div id="chartdiv"></div>
+        <div id="chartdiv_1"></div>
     </div>
 
     <!-- <div class="container">
@@ -86,12 +111,12 @@ require ('php/controllers/registros.controller.php');
     </div> -->
 
 
-    <!-- <footer>
+    <footer>
         <a>Hospital Regional de Alta Especialidad de Ixtapaluca</a>
         <p style="font-size: 10px">
             Gestión Digital en Salud - 2024
         </p>
-    </footer> -->
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>

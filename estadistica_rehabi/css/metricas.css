@@ -1,28 +1,21 @@
-#chartdiv_1,
-#chartdiv_1_1,
-#chartdiv_2,
-#chartdiv_2_1_a,
-#chartdiv_2_1_b,
-#chartdiv_3,
-#chartdiv_4,
-#chartdiv_4_1,
-#chartdiv_4_2,
-#chartdiv_4_3 {
+#chartdiv_1
+{
     width: 100%;
     height: 400px;
     margin-bottom: 125px;
 }
 .buscador{
     padding: 20px;
-    background-image: linear-gradient(to right,#08a8b3, #054b88,#355C7D);
+    background-color: #00464b;
     border-radius: 5px;
 }
 .boton{
+    margin-top: 23px;
     width: 160px;
 }
 .container {
     text-align: center;
-    margin: 40px auto;
+    margin: 9px auto;
 }
 
 .graficas-container {
@@ -46,4 +39,8 @@
 .badge h6 {
     margin-top: 10px;
     font-size: 12px;
+}
+
+span{
+    color: #ffffff;
 }

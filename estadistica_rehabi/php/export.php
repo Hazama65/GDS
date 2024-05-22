@@ -1,16 +1,13 @@
 <?php
 // Incluir el archivo de configuración de la base de datos
-include ('dbconfig_AT.php');
+include ('dbconfig_ER.php');
 
 // Conectar a la base de datos
 $conn = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
 // Consulta SQL
 $query_pacientes = "SELECT * FROM datos_paciente dp
-JOIN antecedentes_patologicos ap ON dp.id_paciente = ap.id_paciente
-JOIN laboratorio l ON dp.id_paciente = l.id_paciente
-JOIN usg_clinica uc ON dp.id_paciente = uc.id_paciente
-JOIN tratamiento t ON dp.id_paciente = t.id_paciente";
+JOIN procedimientos pro ON dp.id_paciente = pro.id_paciente";
 
 
 // Ejecutar la consulta
@@ -29,65 +26,40 @@ if ($result) {
     // Agregar los encabezados de las columnas
     $columns = array(
         'ID',
+        'Nombre Terapeuta',
+        'Turno',
+        'Fecha de registro',
+        'Nombre del Paciente',
         'CURP',
-        'Nombre Completo',
-        'Escolaridad',
-        'Fecha de nacimiento',
+        'Fecha de Nacimiento',
         'Edad',
         'Sexo',
-        'Talla',
-        'Peso',
-        'IMC',
-        'Tabaquismo',
-        'Alcoholismo',
-        'Esteatosis Hepatica',
-        'Diabetes Mellitus',
-        'Hipertensión Arterial',
-        'Obesidad',
-        'Hiperlipidemia',
-        'Plaquetas',
-        'Factor Reumatoide Basal',
-        'Factor Reumatoide Nominal',
-        'PCR',
-        'Vitamina D Basal',
-        'Vitamina D Nominal',
-        'AC Anticpp Basal',
-        'AC Anticpp Nominal',
-        'VSG',
-        'TGO Basal',
-        'TGO Nominal',
-        'TGP Basal',
-        'TGP Nominal',
-        'Glucosa',
-        'Colesterol',
-        'Trigliceridos',
-        'Fib 4',
-        'Resultado FIB 4',
-        'USG Hepático',
-        'Hallazgo USG',
-        'Clasificación Esteatosis',
-        'Articulaciones Inflamadas SJC28',
-        'Articulaciones Dolorosas TJC28',
-        'Evaluación Global PGA',
-        'Evaluación del Evaluador EGA',
-        'Resultado CDAI',
-        'Resultado SDAI',
-        'Metrotexate',
-        'Dosis Semanal',
-        'Leflunomide',
-        'Dosis Semanal',
-        'Sulfazalasina',
-        'Dosis Semanal',
-        'Tocoferol',
-        'Dosis Semanal',
-        'Glucocorticoide',
-        'Tratamiento',
-        'Dosis Semanal',
-        'Vitamina D',
-        'Dosis Semanal',
-        'Biológico',
-        'Tratamiento',
-        'Apego a Tratamiento'
+        'Tipo de Paciente',
+        'Tipo de Consulta',
+        'Número de Sesiones',
+        'Tipo de Terapias',
+        'Terapia fisica',
+        'Terapia ocupacional',
+        'Terapia de lenguaje',
+        'Aplicación de férula',
+        'Aplicación de vendaje enyesado',
+        'Baño de parafina',
+        'CHC/CF',
+        'Corrientes interfereciales',
+        'Electroestimulación',
+        'Ejercicio Asistido',
+        'Ejercicio de Fisioterapia',
+        'Hidroterapia/Tanque Terapéutico',
+        'Hidroterapia/Tina de Habbard',
+        'Hidroterapia/Tina de Remolinos',
+        'TENS',
+        'Terapia combinada USG y Corriente Eléctrica',
+        'Ultrasonido Terapéutico',
+        'Tracción Cervical y Lumbar',
+        'Rehabilitacion Cardíaca',
+        'Ejercicio respiratorio (R. Pulmonar)',
+        'Terapia Laser',
+        'Toxina Botulinica'
     );
 
     $sheet->fromArray([$columns], null, 'A1');
@@ -123,7 +95,7 @@ if ($result) {
     ];
 
 
-    $sheet->getStyle('A1:BH1')->applyFromArray($styleArray);
+    $sheet->getStyle('A1:AI1')->applyFromArray($styleArray);
 
     // Agregar los datos desde la base de datos
     $row = 2;
@@ -136,7 +108,7 @@ if ($result) {
     $writer = new PhpOffice\PhpSpreadsheet\Writer\Xlsx($spreadsheet);
 
     // Definir la ubicación del archivo Excel
-    $excel_file = 'Datos Artritis.xlsx';
+    $excel_file = 'Datos Rehabilitacion.xlsx';
 
     // Guardar el archivo Excel
     $writer->save($excel_file);
