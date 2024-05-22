@@ -1,0 +1,56 @@
+<!-- Modal -->
+<div class="modal fade" id="Rankin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header rankin-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Rankin</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+            <strong>Seleccione una opción:</strong> <br> <br>
+            <form id="formulario" style="font-size: 13px;">
+              <label>
+                <input type="radio" name="opcion" value="0"> No presentan síntomas
+              </label><br>
+              <hr style="border-color: #5caf80;"> <!-- Línea verde -->
+              <label>
+                <input type="radio" name="opcion" value="1"> Discapacidad no significativa a pesar de los síntomas, capaz de llevar a cabo todas las tareas y actividades habituales
+              </label><br>
+              <hr style="border-color: #5caf80;"> <!-- Línea verde -->
+              <label>
+                <input type="radio" name="opcion" value="2"> Discapacidad ligera, Incapaz para realizar algunas actividades previas, pero pueden valerse por sí mismos, sin necesidad de ayuda. El paciente presenta limitaciones en sus actividades habituales y laborales previas, pero es independiente para las ABVD.
+              </label><br>
+              <hr style="border-color: #5caf80;"> <!-- Línea verde -->
+              <label>
+                <input type="radio" name="opcion" value="3"> Discapacidad moderada, que requieren un poco de ayuda, pero capaz de caminar sin ayuda. El paciente necesita asistencia para algunas de las actividades instrumentales, pero no para las ABVD.
+              </label><br>
+              <hr style="border-color: #5caf80;"> <!-- Línea verde -->
+              <label>
+                <input type="radio" name="opcion" value="4"> Discapacidad moderadamente grave, no puede caminar ni atender satisfactoriamente sus necesidades corporales sin ayuda. El paciente necesita asistencia para las ABVD, pero no necesita cuidados de forma continua. No hay necesidad de supervisión continuada
+              </label><br>
+              <hr style="border-color: #5caf80;"> <!-- Línea verde -->
+              <label>
+                <input type="radio" name="opcion" value="5"> Discapacidad severa: confinamiento en la cama, incontinencia y requerimiento de cuidados y atenciones constantes.  El paciente es totalmente dependiente, requiriendo de asistencia continuada.
+              </label><br>
+              <hr style="border-color: #5caf80;"> <!-- Línea verde -->
+              <label>
+                <input type="radio" name="opcion" value="6"> Muerte
+              </label><br>
+              <hr style="border-color: #5caf80;"> <!-- Línea verde -->
+            </form>
+          
+            <div id="resultado">
+              <strong>Resultado:</strong> <span id="valorSeleccionado"></span>
+            </div>
+          
+          
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>

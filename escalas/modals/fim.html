@@ -1,0 +1,780 @@
+<!-- Modal -->
+<div class="modal fade" id="fim" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header modal-title-fim">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Escala FIM</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+            <div class="form-header">
+                <h4 class="form-title" style="text-align: left;
+                border-radius: 10px;
+                background-color: rgb(106, 161, 156,0.8);
+                color: aliceblue;
+                margin-top:10px;
+                font-size: 16px;
+                text-align: center;">MOTOR</h4>
+            </div>
+
+            <!--AUTOCUIDADO-->
+            <div class="form-header">
+                <h4 class="form-title" style="text-align: left;
+                border-radius: 10px;
+                background-color: rgb(123, 125, 173,0.6);
+                color: aliceblue;
+                margin-top:10px;
+                font-size: 14px;
+                text-align: center;">Autocuidado</h4>
+            </div>
+
+            <!--ALIMENTACIÓN-->
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="fim-pregunta">Alimentación:</label>
+                </div>
+
+                <div class="col-md-6">
+                    <select class="form-select fim-select" id="fim_alimentacion" data-section="autocuidado" onchange="changeColor(this)">
+                        <option value="0">Seleccione...</option>
+                        <optgroup label="Sin ayuda">
+                            <option value="7">Independencia Completa</option>
+                            <option value="6">Independencia modificada</option>
+                        </optgroup>
+                        <optgroup label="Dependencia modificada">
+                            <option value="5">Supervisión</option>
+                            <option value="4">Asistencia mínima (Mayor 75% de independencia)</option>
+                            <option value="3">Asistencia moderada (Mayor del 50% de independencia)</option>
+                        </optgroup>
+                        <optgroup label="Dependencia completa">
+                            <option value="2">Asistencia máxima (Mayor del 25% de independencia)</option>
+                            <option value="1">Asistencia total (Menor del 25% de independencia)</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="col-md-2">
+                    <div id="puntaje_alimentacion">
+                        <p class="fim-puntaje">FIM: <span id="puntaje_nivel_fim_alimentacion">0</span></p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!--Arreglo Personal-->
+            <div class="row">
+
+                <div class="col-md-4">
+                    <label class="fim-pregunta">Arreglo Personal:</label>
+                </div>
+                
+                <div class="col-md-6">
+                    <select class="form-select fim-select" id="fim_arreglo" data-section="autocuidado" onchange="changeColor(this)">
+                        <option value="0">Seleccione...</option>
+                        <optgroup label="Sin ayuda">
+                            <option value="7">Independencia Completa</option>
+                            <option value="6">Independencia modificada</option>
+                        <optgroup label="Dependencia modificada">
+                            <option value="5">Supervisión</option>
+                            <option value="4">Asistencia mínima (Mayor 75% de independencia)</option>
+                            <option value="3">Asistencia moderada (Mayor del 50% de independencia)</option>
+                        </optgroup>
+                        <optgroup label="Dependencia completa">
+                            <option value="2">Asistencia máxima (Mayor del 25% de independencia)</option>
+                            <option value="1">Asistencia total (Menor del 25% de independencia)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <!-- Mostrar puntaje obtenido -->
+                <div class="col-md-2">
+                    <div id="puntaje_arreglo">
+                        <p class="fim-puntaje">FIM: <span id="puntaje_nivel_fim_arreglo">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--BAÑO-->
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="fim-pregunta">Baño:</label>
+                </div>
+                
+                <div class="col-md-6">
+                    <select class="form-select fim-select" id="fim_bano" data-section="autocuidado" onchange="changeColor(this)">
+                        <option value="0">Seleccione...</option>
+                        <optgroup label="Sin ayuda">
+                        <option value="7">Independencia Completa</option>
+                        <option value="6">Independencia modificada</option>
+                        <optgroup label="Dependencia modificada">
+                            <option value="5">Supervisión</option>
+                            <option value="4">Asistencia mínima (Mayor 75% de independencia)</option>
+                            <option value="3">Asistencia moderada (Mayor del 50% de independencia)</option>
+                        </optgroup>
+                        <optgroup label="Dependencia completa">
+                            <option value="2">Asistencia máxima (Mayor del 25% de independencia)</option>
+                            <option value="1">Asistencia total (Menor del 25% de independencia)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <!-- Mostrar puntaje obtenido -->
+                <div class="col-md-2">
+                    <div id="puntaje_bano">
+                        <p class="fim-puntaje">FIM: <span id="puntaje_nivel_fim_bano">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Vestido hemicuerpo superior-->
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="fim-pregunta">Vestido hemicuerpo superior:</label>
+                </div>
+                
+                <div class="col-md-6">
+                    <select class="form-select fim-select" id="fim_superior" data-section="autocuidado" onchange="changeColor(this)">
+                        <option value="0">Seleccione...</option>
+                        <optgroup label="Sin ayuda">
+                        <option value="7">Independencia Completa</option>
+                        <option value="6">Independencia modificada</option>
+                        <optgroup label="Dependencia modificada">
+                            <option value="5">Supervisión</option>
+                            <option value="4">Asistencia mínima (Mayor 75% de independencia)</option>
+                            <option value="3">Asistencia moderada (Mayor del 50% de independencia)</option>
+                        </optgroup>
+                        <optgroup label="Dependencia completa">
+                            <option value="2">Asistencia máxima (Mayor del 25% de independencia)</option>
+                            <option value="1">Asistencia total (Menor del 25% de independencia)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <!-- Mostrar puntaje obtenido -->
+                <div class="col-md-2">
+                    <div id="puntaje_superior">
+                        <p class="fim-puntaje">FIM: <span id="puntaje_nivel_fim_superior">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Vestido hemicuerpo inferior-->
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="fim-pregunta">Vestido hemicuerpo inferior:</label>
+                </div>
+                
+                
+                <div class="col-md-6">
+                    <select class="form-select fim-select" id="fim_inferior" data-section="autocuidado" onchange="changeColor(this)">
+                        <option value="0">Seleccione...</option>
+                        <optgroup label="Sin ayuda">
+                        <option value="7">Independencia Completa</option>
+                        <option value="6">Independencia modificada</option>
+                        <optgroup label="Dependencia modificada">
+                            <option value="5">Supervisión</option>
+                            <option value="4">Asistencia mínima (Mayor 75% de independencia)</option>
+                            <option value="3">Asistencia moderada (Mayor del 50% de independencia)</option>
+                        </optgroup>
+                        <optgroup label="Dependencia completa">
+                            <option value="2">Asistencia máxima (Mayor del 25% de independencia)</option>
+                            <option value="1">Asistencia total (Menor del 25% de independencia)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <!-- Mostrar puntaje obtenido -->
+                <div class="col-md-2">
+                    <div id="puntaje_inferior">
+                        <p class="fim-puntaje">FIM: <span id="puntaje_nivel_fim_inferior">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--ASEO PERSONAL-->
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="fim-pregunta">Aseo personal:</label>
+                </div>
+                
+                <div class="col-md-6">
+                    <select class="form-select fim-select" id="fim_aseo" data-section="autocuidado" onchange="changeColor(this)">
+                        <option value="0">Seleccione...</option>
+                        <optgroup label="Sin ayuda">
+                        <option value="7">Independencia Completa</option>
+                        <option value="6">Independencia modificada</option>
+                        <optgroup label="Dependencia modificada">
+                            <option value="5">Supervisión</option>
+                            <option value="4">Asistencia mínima (Mayor 75% de independencia)</option>
+                            <option value="3">Asistencia moderada (Mayor del 50% de independencia)</option>
+                        </optgroup>
+                        <optgroup label="Dependencia completa">
+                            <option value="2">Asistencia máxima (Mayor del 25% de independencia)</option>
+                            <option value="1">Asistencia total (Menor del 25% de independencia)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <!-- Mostrar puntaje obtenido -->
+                <div class="col-md-2">
+                    <div id="puntaje_aseofim">
+                        <p class="fim-puntaje">FIM: <span id="puntaje_nivel_fim_aseo">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recuadro para mostrar el Total Autocuidado -->
+            <div style="background-color:#F4F1F0; border-radius: 20px; border: 1px solid #ccc; padding: 10px; margin-top: 20px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);">
+                <strong style="margin-right: 10px; font-size: 12px;">Total Autocuidado:</strong>
+                <h7 id="texto_autocuidado"style="margin: 0; font-size: 12px;"> </h7>
+                
+            </div>
+            
+
+            <!----**************************************************************-->
+
+            <!--Control de Esfínteres-->
+            <div class="form-header">
+                <h4 class="form-title" style="text-align: left;
+                border-radius: 10px;
+                background-color: rgb(123, 125, 173,0.6);
+                color: aliceblue;
+                margin-top:10px;
+                font-size: 14px;
+                text-align: center;">Control de Esfínteres</h4>
+            </div>
+
+            <!--ALIMENTACIÓN-->
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="fim-pregunta">Control de la vejiga:</label>
+                </div>
+                
+                <div class="col-md-6">
+                    <select class="form-select fim-select" id="fim_vejiga" data-section="controlesfinteres" onchange="changeColor(this)">
+                        <option value="0">Seleccione...</option>
+                        <optgroup label="Sin ayuda">
+                        <option value="7">Independencia Completa</option>
+                        <option value="6">Independencia modificada</option>
+                        <optgroup label="Dependencia modificada">
+                            <option value="5">Supervisión</option>
+                            <option value="4">Asistencia mínima (Mayor 75% de independencia)</option>
+                            <option value="3">Asistencia moderada (Mayor del 50% de independencia)</option>
+                        </optgroup>
+                        <optgroup label="Dependencia completa">
+                            <option value="2">Asistencia máxima (Mayor del 25% de independencia)</option>
+                            <option value="1">Asistencia total (Menor del 25% de independencia)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <!-- Mostrar puntaje obtenido -->
+                <div class="col-md-2">
+                    <div id="puntaje_vejiga">
+                        <p class="fim-puntaje">FIM: <span id="puntaje_nivel_fim_vejiga">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Arreglo Personal-->
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="fim-pregunta">Control del intestino:</label>
+                </div>
+                
+                <div class="col-md-6">
+                    <select class="form-select fim-select" id="fim_intestino" data-section="controlesfinteres" onchange="changeColor(this)">
+                        <option value="0">Seleccione...</option>
+                        <optgroup label="Sin ayuda">
+                        <option value="7">Independencia Completa</option>
+                        <option value="6">Independencia modificada</option>
+                        <optgroup label="Dependencia modificada">
+                            <option value="5">Supervisión</option>
+                            <option value="4">Asistencia mínima (Mayor 75% de independencia)</option>
+                            <option value="3">Asistencia moderada (Mayor del 50% de independencia)</option>
+                        </optgroup>
+                        <optgroup label="Dependencia completa">
+                            <option value="2">Asistencia máxima (Mayor del 25% de independencia)</option>
+                            <option value="1">Asistencia total (Menor del 25% de independencia)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <!-- Mostrar puntaje obtenido -->
+                <div class="col-md-2">
+                    <div id="puntaje_intestino">
+                        <p class="fim-puntaje">FIM: <span id="puntaje_nivel_fim_intestino">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recuadro para mostrar el Total Control de Esfínteres -->
+            <div style="background-color:#F4F1F0; border-radius: 20px; border: 1px solid #ccc; padding: 10px; margin-top: 20px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);">
+                <strong style="margin-right: 10px; font-size: 12px;">Total Control de Esfínteres:</strong>
+                <h7 id="texto_control_esfinteres"style="margin: 0; font-size: 12px;"> </h7>
+                
+            </div>
+
+
+
+
+             <!--Control de Esfínteres-->
+             <div class="form-header">
+                <h4 class="form-title" style="text-align: left;
+                border-radius: 10px;
+                background-color: rgb(123, 125, 173,0.6);
+                color: aliceblue;
+                margin-top:10px;
+                font-size: 14px;
+                text-align: center;">Movilidad</h4>
+            </div>
+
+            <!--ALIMENTACIÓN-->
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="fim-pregunta">Traslado cama-silla/silla-ruedas:</label>
+                </div>
+                
+                <div class="col-md-6">
+                    <select class="form-select fim-select" id="fim_camasilla" data-section="movilidad" onchange="changeColor(this)">
+                        <option value="0">Seleccione...</option>
+                        <optgroup label="Sin ayuda">
+                        <option value="7">Independencia Completa</option>
+                        <option value="6">Independencia modificada</option>
+                        <optgroup label="Dependencia modificada">
+                            <option value="5">Supervisión</option>
+                            <option value="4">Asistencia mínima (Mayor 75% de independencia)</option>
+                            <option value="3">Asistencia moderada (Mayor del 50% de independencia)</option>
+                        </optgroup>
+                        <optgroup label="Dependencia completa">
+                            <option value="2">Asistencia máxima (Mayor del 25% de independencia)</option>
+                            <option value="1">Asistencia total (Menor del 25% de independencia)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <!-- Mostrar puntaje obtenido -->
+                <div class="col-md-2">
+                    <div id="puntaje_camasilla">
+                        <p class="fim-puntaje">FIM: <span id="puntaje_nivel_fim_camasilla">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Arreglo Personal-->
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="fim-pregunta">Traslado en baño:</label>
+                </div>
+                
+                <div class="col-md-6">
+                    <select class="form-select fim-select" id="fim_trasladobano" data-section="movilidad" onchange="changeColor(this)">
+                        <option value="0">Seleccione...</option>
+                        <optgroup label="Sin ayuda">
+                        <option value="7">Independencia Completa</option>
+                        <option value="6">Independencia modificada</option>
+                        <optgroup label="Dependencia modificada">
+                            <option value="5">Supervisión</option>
+                            <option value="4">Asistencia mínima (Mayor 75% de independencia)</option>
+                            <option value="3">Asistencia moderada (Mayor del 50% de independencia)</option>
+                        </optgroup>
+                        <optgroup label="Dependencia completa">
+                            <option value="2">Asistencia máxima (Mayor del 25% de independencia)</option>
+                            <option value="1">Asistencia total (Menor del 25% de independencia)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <!-- Mostrar puntaje obtenido -->
+                <div class="col-md-2">
+                    <div id="puntaje_trasladobano">
+                        <p class="fim-puntaje">FIM: <span id="puntaje_nivel_fim_trasladobano">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Arreglo Personal-->
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="fim-pregunta">Traslado en bañera o ducha:</label>
+                </div>
+                
+                <div class="col-md-6">
+                    <select class="form-select fim-select" id="fim_trasladoducha" data-section="movilidad" onchange="changeColor(this)">
+                        <option value="0">Seleccione...</option>
+                        <optgroup label="Sin ayuda">
+                        <option value="7">Independencia Completa</option>
+                        <option value="6">Independencia modificada</option>
+                        <optgroup label="Dependencia modificada">
+                            <option value="5">Supervisión</option>
+                            <option value="4">Asistencia mínima (Mayor 75% de independencia)</option>
+                            <option value="3">Asistencia moderada (Mayor del 50% de independencia)</option>
+                        </optgroup>
+                        <optgroup label="Dependencia completa">
+                            <option value="2">Asistencia máxima (Mayor del 25% de independencia)</option>
+                            <option value="1">Asistencia total (Menor del 25% de independencia)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <!-- Mostrar puntaje obtenido -->
+                <div class="col-md-2">
+                    <div id="puntaje_trasladoducha">
+                        <p class="fim-puntaje">FIM: <span id="puntaje_nivel_fim_trasladoducha">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Recuadro para mostrar el Total MOVILIDAD-->
+            <div style="background-color:#F4F1F0; border-radius: 20px; border: 1px solid #ccc; padding: 10px; margin-top: 20px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);">
+                <strong style="margin-right: 10px; font-size: 12px;">Total Movilidad:</strong>
+                <h7 id="texto_movilidad"style="margin: 0; font-size: 12px;"> </h7>
+                
+            </div>
+
+
+
+
+
+
+
+
+            <!--Deambulación -->
+            <div class="form-header">
+                <h4 class="form-title" style="text-align: left;
+                border-radius: 10px;
+                background-color: rgb(123, 125, 173,0.6);
+                color: aliceblue;
+                margin-top:10px;
+                font-size: 14px;
+                text-align: center;">Deambulación</h4>
+            </div>
+
+            <!--ALIMENTACIÓN-->
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="fim-pregunta">Caminar/Desplazarse en silla ruedas:</label>
+                </div>
+                
+                <div class="col-md-6">
+                    <select class="form-select fim-select" id="fim_caminar" data-section="deambulacion" onchange="changeColor(this)">
+                        <option value="0">Seleccione...</option>
+                        <optgroup label="Sin ayuda">
+                        <option value="7">Independencia Completa</option>
+                        <option value="6">Independencia modificada</option>
+                        <optgroup label="Dependencia modificada">
+                            <option value="5">Supervisión</option>
+                            <option value="4">Asistencia mínima (Mayor 75% de independencia)</option>
+                            <option value="3">Asistencia moderada (Mayor del 50% de independencia)</option>
+                        </optgroup>
+                        <optgroup label="Dependencia completa">
+                            <option value="2">Asistencia máxima (Mayor del 25% de independencia)</option>
+                            <option value="1">Asistencia total (Menor del 25% de independencia)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <!-- Mostrar puntaje obtenido -->
+                <div class="col-md-2">
+                    <div id="puntaje_caminar">
+                        <p class="fim-puntaje">FIM: <span id="puntaje_nivel_fim_caminar">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Arreglo Personal-->
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="fim-pregunta">Subir y bajar escaleras:</label>
+                </div>
+                
+                <div class="col-md-6">
+                    <select class="form-select fim-select" id="fim_subirybajar" data-section="deambulacion" onchange="changeColor(this)">
+                        <option value="0">Seleccione...</option>
+                        <optgroup label="Sin ayuda">
+                        <option value="7">Independencia Completa</option>
+                        <option value="6">Independencia modificada</option>
+                        <optgroup label="Dependencia modificada">
+                            <option value="5">Supervisión</option>
+                            <option value="4">Asistencia mínima (Mayor 75% de independencia)</option>
+                            <option value="3">Asistencia moderada (Mayor del 50% de independencia)</option>
+                        </optgroup>
+                        <optgroup label="Dependencia completa">
+                            <option value="2">Asistencia máxima (Mayor del 25% de independencia)</option>
+                            <option value="1">Asistencia total (Menor del 25% de independencia)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <!-- Mostrar puntaje obtenido -->
+                <div class="col-md-2">
+                    <div id="puntaje_subirybajar">
+                        <p class="fim-puntaje">FIM: <span id="puntaje_nivel_fim_subirybajar">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Recuadro para mostrar el Total MOVILIDAD-->
+            <div style="background-color:#F4F1F0; border-radius: 20px; border: 1px solid #ccc; padding: 10px; margin-top: 20px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);">
+                <strong style="margin-right: 10px; font-size: 12px;">Total Deambulación:</strong>
+                <h7 id="texto_deambulacion"style="margin: 0; font-size: 12px;"> </h7>
+                
+            </div>
+
+
+
+
+
+
+
+
+            <div class="form-header">
+                <h4 class="form-title" style="text-align: left;
+                border-radius: 10px;
+                background-color: rgb(106, 161, 156,0.8);
+                color: aliceblue;
+                margin-top:40px;
+                font-size: 16px;
+                text-align: center;">COGNITIVO</h4>
+            </div>
+
+            <!--Comunicación-->
+            <div class="form-header">
+                <h4 class="form-title" style="text-align: left;
+                border-radius: 10px;
+                background-color: rgb(123, 125, 173,0.6);
+                color: aliceblue;
+                margin-top:10px;
+                font-size: 14px;
+                text-align: center;">Comunicación</h4>
+            </div>
+
+            <!--Comprensión-->
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="fim-pregunta">Comprensión:</label>
+                </div>
+                <div class="col-md-6">
+                    <select class="form-select fim-select" id="fim_comprension" data-section="comunicacion" onchange="changeColor(this)">
+                        <option value="0">Seleccione...</option>
+                        <optgroup label="Sin ayuda">
+                            <option value="7">Independencia Completa</option>
+                            <option value="6">Independencia modificada</option>
+                        </optgroup>
+                        <optgroup label="Dependencia modificada">
+                            <option value="5">Supervisión</option>
+                            <option value="4">Asistencia mínima (Mayor 75% de independencia)</option>
+                            <option value="3">Asistencia moderada (Mayor del 50% de independencia)</option>
+                        </optgroup>
+                        <optgroup label="Dependencia completa">
+                            <option value="2">Asistencia máxima (Mayor del 25% de independencia)</option>
+                            <option value="1">Asistencia total (Menor del 25% de independencia)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <div id="puntaje_comprension">
+                        <p class="fim-puntaje">FIM: <span id="puntaje_nivel_fim_comprension">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Expresión-->
+            <div class="row">
+
+                <div class="col-md-4">
+                    <label class="fim-pregunta">Expresión:</label>
+                </div>
+                
+                <div class="col-md-6">
+                    <select class="form-select fim-select" id="fim_expresion" data-section="comunicacion" onchange="changeColor(this)">
+                        <option value="0">Seleccione...</option>
+                        <optgroup label="Sin ayuda">
+                        <option value="7">Independencia Completa</option>
+                        <option value="6">Independencia modificada</option>
+                        <optgroup label="Dependencia modificada">
+                            <option value="5">Supervisión</option>
+                            <option value="4">Asistencia mínima (Mayor 75% de independencia)</option>
+                            <option value="3">Asistencia moderada (Mayor del 50% de independencia)</option>
+                        </optgroup>
+                        <optgroup label="Dependencia completa">
+                            <option value="2">Asistencia máxima (Mayor del 25% de independencia)</option>
+                            <option value="1">Asistencia total (Menor del 25% de independencia)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <!-- Mostrar puntaje obtenido -->
+                <div class="col-md-2">
+                    <div id="puntaje_expresion">
+                        <p class="fim-puntaje">FIM: <span id="puntaje_nivel_fim_expresion">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div style="background-color:#F4F1F0; border-radius: 20px; border: 1px solid #ccc; padding: 10px; margin-top: 20px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);">
+                <strong style="margin-right: 10px; font-size: 12px;">Total Comunicación:</strong>
+                <h7 id="texto_comunicacion"style="margin: 0; font-size: 12px;"> </h7>
+                
+            </div>
+
+
+            <!--Conocimiento Social-->
+            <div class="form-header">
+                <h4 class="form-title" style="text-align: left;
+                border-radius: 10px;
+                background-color: rgb(123, 125, 173,0.6);
+                color: aliceblue;
+                margin-top:10px;
+                font-size: 14px;
+                text-align: center;">Conocimiento Social</h4>
+            </div>
+
+            <!--Interacción Social-->
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="fim-pregunta">Interacción Social:</label>
+                </div>
+                <div class="col-md-6">
+                    <select class="form-select fim-select" id="fim_interaccion" data-section="conocimientosocial" onchange="changeColor(this)">
+                        <option value="0">Seleccione...</option>
+                        <optgroup label="Sin ayuda">
+                            <option value="7">Independencia Completa</option>
+                            <option value="6">Independencia modificada</option>
+                        </optgroup>
+                        <optgroup label="Dependencia modificada">
+                            <option value="5">Supervisión</option>
+                            <option value="4">Asistencia mínima (Mayor 75% de independencia)</option>
+                            <option value="3">Asistencia moderada (Mayor del 50% de independencia)</option>
+                        </optgroup>
+                        <optgroup label="Dependencia completa">
+                            <option value="2">Asistencia máxima (Mayor del 25% de independencia)</option>
+                            <option value="1">Asistencia total (Menor del 25% de independencia)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <div id="puntaje_interaccion">
+                        <p class="fim-puntaje">FIM: <span id="puntaje_nivel_fim_interaccion">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Solución de Problemas-->
+            <div class="row">
+
+                <div class="col-md-4">
+                    <label class="fim-pregunta">Solución de Problemas:</label>
+                </div>
+                
+                <div class="col-md-6">
+                    <select class="form-select fim-select" id="fim_solucion" data-section="conocimientosocial" onchange="changeColor(this)">
+                        <option value="0">Seleccione...</option>
+                        <optgroup label="Sin ayuda">
+                        <option value="7">Independencia Completa</option>
+                        <option value="6">Independencia modificada</option>
+                        <optgroup label="Dependencia modificada">
+                            <option value="5">Supervisión</option>
+                            <option value="4">Asistencia mínima (Mayor 75% de independencia)</option>
+                            <option value="3">Asistencia moderada (Mayor del 50% de independencia)</option>
+                        </optgroup>
+                        <optgroup label="Dependencia completa">
+                            <option value="2">Asistencia máxima (Mayor del 25% de independencia)</option>
+                            <option value="1">Asistencia total (Menor del 25% de independencia)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <!-- Mostrar puntaje obtenido -->
+                <div class="col-md-2">
+                    <div id="puntaje_solucion">
+                        <p class="fim-puntaje">FIM: <span id="puntaje_nivel_fim_solucion">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+
+             <!--Memoria-->
+             <div class="row">
+
+                <div class="col-md-4">
+                    <label class="fim-pregunta">Memoria:</label>
+                </div>
+                
+                <div class="col-md-6">
+                    <select class="form-select fim-select" id="fim_memoria" data-section="conocimientosocial" onchange="changeColor(this)">
+                        <option value="0">Seleccione...</option>
+                        <optgroup label="Sin ayuda">
+                        <option value="7">Independencia Completa</option>
+                        <option value="6">Independencia modificada</option>
+                        <optgroup label="Dependencia modificada">
+                            <option value="5">Supervisión</option>
+                            <option value="4">Asistencia mínima (Mayor 75% de independencia)</option>
+                            <option value="3">Asistencia moderada (Mayor del 50% de independencia)</option>
+                        </optgroup>
+                        <optgroup label="Dependencia completa">
+                            <option value="2">Asistencia máxima (Mayor del 25% de independencia)</option>
+                            <option value="1">Asistencia total (Menor del 25% de independencia)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <!-- Mostrar puntaje obtenido -->
+                <div class="col-md-2">
+                    <div id="puntaje_memoria">
+                        <p class="fim-puntaje">FIM: <span id="puntaje_nivel_fim_memoria">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background-color:#F4F1F0; border-radius: 20px; border: 1px solid #ccccccb5; padding: 10px; margin-top: 20px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);">
+                <strong style="margin-right: 10px; font-size: 12px;">Total Conocimiento Social:</strong>
+                <h7 id="texto_conocimientosocial"style="margin: 0; font-size: 12px;"> </h7>
+                
+            </div>
+            
+            <div class="form-header">
+                <h4 class="form-title" style="text-align: left;
+                border-radius: 10px;
+                background-color: rgb(106, 161, 156,0.8);
+                color: aliceblue;
+                margin-top:40px;
+                font-size: 16px;
+                text-align: center;">RESULTADOS OBTENIDOS</h4>
+            </div>
+
+            <div id="puntajes_totalesFIMM">
+                <strong style="font-size: 14px;">Motor Puntaje Total: </strong>
+                <strong id="puntaje_total_valorFIMM" style="font-size: 14px;">0</strong>
+                <span id="puntaje_total_textoFIMM" style="font-size: 14px;"> </span>
+            </div>
+
+        
+            <div id="puntajes_totalesFIMC">
+                <strong style="font-size: 14px;">Cognitivo Puntaje Total: </strong>
+                <strong id="puntaje_total_valorFIMC" style="font-size: 14px;">0</strong>
+                <span id="puntaje_total_textoFIMC" style="font-size: 14px;"> </span>
+            </div> 
+
+
+            <div id="contenedor_totales" style="border-radius: 20px; border: 1px solid #ccc; padding: 10px; margin-top: 20px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);">
+                <strong>
+                    <div id="resultado_suma_totales"></div>
+                    <div id="texto_dependencia"></div>
+                </strong>
+            </div>
+
+            <!-- Nuevo campo para mostrar el total general -->
+           
+               
+                
+                
+            
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>

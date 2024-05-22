@@ -40,9 +40,9 @@ include ("modal/registrarpaciente.php");
         <div style="padding: 20px;" class="btn-group" role="group" aria-label="Basic outlined example">
 
 
-            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#CancerMama">
-                <i class="bi bi-person-add"> </i> Paciente
-            </button>
+        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#CancerMama">
+            <i class="bi bi-person-add"> </i> Paciente
+        </button>
 
             <a href="php/export.php" class="btn btn-success">
                 <i class="bi bi-file-earmark-excel"></i> Excel
