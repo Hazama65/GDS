@@ -8,17 +8,34 @@ document.addEventListener('DOMContentLoaded', function () {
     // Función para eliminar un paciente
     const deletePaciente = async () => {
         // Mostrar el diálogo de confirmación
-        const result = await setAlerts.confirmDelete();
 
+        const idPaciente = document.getElementById('borrar_paciente').getAttribute("data-id-paciente");
+        const idSeg = document.getElementById('borrar_paciente').getAttribute("data-id-seg");
+
+
+        let result; // Declarar la variable result antes del bloque if
+
+        if (idSeg == 0) {
+            result = await setAlerts.confirmDelete();
+        } else {
+            result = await setAlerts.confirmDeletev2();
+        }
+        
         // Verificar si el usuario confirmó la eliminación
-        if (result.isConfirmed) {
-            // Obtener el ID del paciente
-            const idPaciente = document.getElementById('borrar_paciente').getAttribute("data-id-paciente");
-            const params = { idPaciente: idPaciente };
+        if (result.isConfirmed) {       
 
+
+            const params = { 
+                idPaciente: idPaciente,
+                idSeg: idSeg
+            };
+
+            console.log(params);
 
             try {
                 const response = await httpClients.get(url, params);
+
+                console.log(response);
 
                 if(response == 1) {
                     // Mostrar mensaje de éxito
