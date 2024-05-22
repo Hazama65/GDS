@@ -580,7 +580,7 @@ include ('php/controllers/edit.controller.php');
 
 
                 <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 15px;">
-                    <button type="submit" class="btn btn-primary" style="font-size: 15px; padding: 8px 15px;">Editar</button>
+                    <button type="submit" class="btn btn-primary" style="font-size: 15px; padding: 8px 15px;">Guardar</button>
                 </div><br><br>
                     
     
