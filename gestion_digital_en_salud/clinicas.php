@@ -68,7 +68,7 @@
                 <a href="#" class="btn btn-success">CREHER</a>
             </div>-->
             <div class="card">
-                <img src="img/hemofilia1.png" alt="Imagen 5">
+                <img src="img/hemofilia.jpg" alt="Imagen 5">
                 <br>
                 <a href="../login/index.php" class="btn btn-success">Hemofilia</a>
             </div>
