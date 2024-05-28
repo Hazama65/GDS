@@ -1,0 +1,52 @@
+#chartdiv_1,#chartdiv_2,#chartdiv_3,#chartdiv_4,#chartdiv_5
+{
+    width: 50%;
+    height: 400px;
+    margin-bottom: 95px;
+}
+.buscador{
+    padding: 20px;
+    background-color: #00464b;
+    border-radius: 5px;
+}
+.boton{
+    margin-top: 23px;
+    width: 160px;
+}
+.container {
+    text-align: center;
+    margin: 9px auto;
+}
+
+.graficas-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.graficas {
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+
+.badge {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-image: linear-gradient(to right,#08a8b3, #054b88,#355C7D);
+    color: white;
+    font-size: 20px;
+}
+
+.badge h6 {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+span{
+    color: #ffffff;
+}

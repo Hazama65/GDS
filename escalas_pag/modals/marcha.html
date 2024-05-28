@@ -1,0 +1,49 @@
+<!-- Modal -->
+<div class="modal fade" id="marcha" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header marcha-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Marcha FAC</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           
+            <strong>Seleccione una opción:</strong> <br><br>
+                <form id="formulario-deambulacion" style="font-size: 13px;">
+                    <label>
+                    <input type="radio" name="opcion-deambulacion" value="0"> Incapacidad absoluta para caminar, incluso con ayuda externa.
+                    </label><br>
+                    <hr style="border-color: #FF69B4;"> <!-- Línea rosa -->
+                    <label>
+                    <input type="radio" name="opcion-deambulacion" value="1"> Caminar dependiente, requiere la ayuda permanente de otras personas. Apoyado por 1 o 2 personas o caminar solo en sesion de terapia en el hogar o en el hospital en barras paralelas.Es el único nivel funcional que no es independiente.
+                    </label><br>
+                    <hr style="border-color: #FF69B4;"> <!-- Línea rosa -->
+                    <label>
+                    <input type="radio" name="opcion-deambulacion" value="2"> Marcha con un ligero contacto físico con una persona. El paciente camina solo en interiores sobre superficies horizontales y planas, dentro de un área conocida (casa).
+                    </label><br>
+                    <hr style="border-color: #FF69B4;"> <!-- Línea rosa -->
+                    <label>
+                    <input type="radio" name="opcion-deambulacion" value="3"> Marcha sólo, pero necesita supervisión de una persona. El paciente camina en superficies irregulares dentro y fuera de casa. Son capaces de subir un paso ocasional o escalera. Camina en la calle, pero dentro de una distancia limitada.
+                    </label><br>
+                    <hr style="border-color: #FF69B4;"> <!-- Línea rosa -->
+                    <label>
+                    <input type="radio" name="opcion-deambulacion" value="4"> El paciente camina en todo tipo de superficies irregulares. Pueden subir y bajar escalones, rampas. No se consideran caminantes normales por que tienen anomalia estetica como cojera evidente.
+                    </label><br>
+                    <hr style="border-color: #FF69B4;"> <!-- Línea rosa -->
+                    <label>
+                    <input type="radio" name="opcion-deambulacion" value="5"> Caminar es completamente normal, tanto en casa como fuera y con una distancia ilimitada. No hay anomalía estética o cojera.
+                    </label><br>
+                </form>
+
+                <div id="resultado-deambulacion">
+                    <strong>Valor seleccionado:</strong> <span id="valorSeleccionadoDeambulacion"></span>
+                </div>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
