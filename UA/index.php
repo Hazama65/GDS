@@ -34,42 +34,44 @@ include 'modals/nuevopaciente.php';
 <body>
 
   <header>
-    <div class="welcome-message">
-      Bienvenido(a), <?php echo $username ?>
+      <!-- Fila superior -->
+    <div class="header-row top-row">UNIDAD DE APOYO - ASIGNACIÓN DE TURNOS
     </div>
-    <button type="button" class="btn btn-outline-light" id="cerrar-sesion-button" title="Cerrar sesión">
-      <i class="bi bi-power"></i>
-    </button>
-  </header>
 
+    <!-- Fila inferior -->
+    <div class="header-row bottom-row">
+      <div class="welcome-message">
+       <i> Bienvenido(a), <?php echo $username ?> <i>
+      </div>
+      <button type="button" class="btn btn-outline-light" id="cerrar-sesion-button" title="Cerrar sesión">
+        <i class="bi bi-power"></i>
+      </button>
+    </div>
+  </header>
+<br>
   <main>
 
-    <div class="container-fluid">
 
-      <!-- este boton solo lo puede ver enfermería-->
-      <!-- Contenedor para la segunda columna -->
-      <div class="row">
-        <div class="col">
-          <!-- Segunda columna -->
-          <div style="height: 50px;">
-            <!-- Contenido de la segunda columna aquí -->
-            <div class="btn-container">
-              <!-- Button trigger modal -->
-              <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                data-bs-target="#exampleModal">
-                <i class="bi bi-person-fill-add"></i> Llega Paciente
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+           
 
       <!-- Contenedor para las dos partes verticales -->
 
       <div class="container">
-        <div class="row">
+
+            <div class="btn-container">
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                <i class="bi bi-person-fill-add"></i> Llega Paciente
+              </button>
+            </div>
+
+
+
+
+        <div class="row align-items-start">
           <!-- Primera parte vertical -->
-          <div class="col-md-3">
+          <div class="col-md-4">
             <!-- Contenido de la primera parte vertical aquí -->
             <div class="container-box">
               <h5>Pacientes</h5>
@@ -100,17 +102,14 @@ include 'modals/nuevopaciente.php';
           </div>
 
           <!-- Segunda parte vertical -->
-          <div class="col-md-9">
-            <div class="container">
-
-
-              <div id="tabla-seguimiento" style="height: 545px; overflow-y: auto; margin-bottom: 20px;"></div>
-
+          <div class="col-md-8">
+            <div class="container container-seguimiento">
+              <div id="tabla-seguimiento" style="height: 560px; overflow-y: auto; margin-bottom: 20px;"></div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+
 
 
   </main>
@@ -125,6 +124,7 @@ include 'modals/nuevopaciente.php';
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="js/script.js"></script>
 <script src="js/visualizacion.js"></script>
 <script type="module" src="js/delete.js"></script>
 <script type="module">

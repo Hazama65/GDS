@@ -57,7 +57,7 @@
             </tr>
 
             <tr>
-              <td colspan="4" style="text-align: center; background-color:rgb(162, 217, 206,0.2);">Datos Generales</td>
+              <td colspan="4" style="text-align: center; background-color:#dddcdd;">Datos Generales</td>
             </tr>
 
             <tr>
@@ -67,22 +67,23 @@
 
             <tr>
               <td colspan="1">Médico</td>
-              <td colspan="1"><?php echo $horallegada ?></td>
+              <td colspan="1"><?php echo $medico ?></td>
+              
             </tr>
 
             <tr>
               <td colspan="1">Hora de llegada</td>
-              <td colspan="1"><?php echo $medico ?></td>
+              <td colspan="1"><?php echo $horallegada ?></td>
             </tr>
 
             <tr>
-              <td colspan="4" style="text-align: center; background-color:rgb(162, 217, 206,0.2);">Somatometría
+              <td colspan="4" style="text-align: center; background-color:#dddcdd;">Somatometría
               </td>
             </tr>
 
             <tr>
-              <td colspan="1">Temperatura:</td>
-              <td colspan="1"><?php echo $Temperatura ?></td>
+                <td colspan="1">Temperatura:</td>
+                <td colspan="1"><?php echo $Temperatura . " °C"; ?></td>
             </tr>
 
             <tr>
@@ -98,7 +99,7 @@
 
             <tr>
               <td colspan="1">Saturación:</td>
-              <td colspan="1"><?php echo $Pulso ?></td>
+              <td colspan="1"><?php echo $Pulso . " %"?></td>
 
             </tr>
 
@@ -111,7 +112,7 @@
             <tr>
 
               <td colspan="1">Peso:</td>
-              <td colspan="1"><?php echo $Peso ?></td>
+              <td colspan="1"><?php echo $Peso . " Kg"?></td>
             </tr>
 
 
