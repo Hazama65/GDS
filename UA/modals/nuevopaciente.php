@@ -2,7 +2,7 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header" style="background-color:rgb(103, 172, 166); color: aliceblue;">
+      <div class="modal-header" style="background-color:7a0d56; color: aliceblue;">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Registro de Paciente</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
@@ -10,11 +10,12 @@
         <form id="patientForm" method="POST">
 
           <div class="row">
+
             <div class="col-md-12">
               <strong>Nombre Paciente</strong>
-              <input id="nombre" name="nombre" type="text" class="control form-control" value=""
-                style="font-size: 13px;" required>
+              <input id="nombre" name="nombre" type="text" class="control form-control" value="" style="font-size: 13px;" required>
             </div>
+
 
             <div class="col-md-12">
               <strong>Hora de llegada:</strong>
@@ -42,7 +43,7 @@
 
           </div>
 
-          <div style="background-color: rgb(103, 172, 166,0.85);
+          <div style="background-color: #ab568f;
                         color: aliceblue;
                         text-align: center;
                         margin-top: 20px;">
@@ -51,11 +52,13 @@
 
 
           <div class="row">
+            
             <div class="col-md-12">
               <strong>Temperatura:</strong>
-              <input id="Temperatura" name="Temperatura" type="number" class="control form-control" value=""
-                style="font-size: 13px;" step="0.1" required>
+              <input id="Temperatura" name="Temperatura" type="text" class="control form-control" value=""
+                style="font-size: 13px;" required>
             </div>
+
 
 
             <div class="col-md-12">
@@ -77,9 +80,9 @@
             </div>
 
             <div class="col-md-12">
-              <strong>Talla</strong>
-              <input id="Talla" name="Talla" type="number" class="control form-control" value=""
-                style="font-size: 13px;" step="0.01" required>
+              <strong>Talla:</strong>
+              <input id="Talla" name="Talla" type="text" class="control form-control" value=""
+                style="font-size: 13px;" required>
             </div>
 
             <div class="col-md-12">

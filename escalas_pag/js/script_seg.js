@@ -1,69 +1,3 @@
-
-//cambiar el CURP a mayusculas
-const curpInput = document.getElementById('curp');
-
-curpInput.addEventListener('blur', function() {
-this.value = this.value.toUpperCase();
-});
-
-const nombreInput = document.getElementById('nombre_paciente');
-
-nombreInput.addEventListener('blur', function() {
-this.value = this.value.toUpperCase();
-});
-function curp2date() {
-// Obtener el valor del CURP ingresado
-var curp = document.getElementById("curp").value;
-
-// Extraer los primeros 6 dígitos del CURP que representan la fecha de nacimiento
-var fechaNacimiento = curp.substr(4, 6);
-
-// Obtener los dígitos que representan el año en la fecha de nacimiento
-var yearDigits = fechaNacimiento.substr(0, 2);
-
-// Calcular el año completo de nacimiento tomando en cuenta el siglo
-var year = parseInt(yearDigits);
-if (yearDigits >= 0 && yearDigits <= 21) {
-year = 2000 + year;
-} else {
-year = 1900 + year;
-}
-
-// Obtener el mes y el día de la fecha de nacimiento
-var month = fechaNacimiento.substr(2, 2);
-var day = fechaNacimiento.substr(4, 2);
-
-// Formatear la fecha de nacimiento completa
-var fechaCompleta = year + "-" + month + "-" + day;
-
-// Formatear la fecha de nacimiento para mostrarla en el campo correspondiente
-document.getElementById("fecha").value = fechaCompleta;
-
-// Calcular la edad de manera precisa
-var fechaActual = new Date();
-var fechaNac = new Date(year, month - 1, day); // Meses en Date son 0-indexados
-var edad = fechaActual.getFullYear() - fechaNac.getFullYear();
-
-// Ajustar la edad si la fecha de nacimiento aún no ha ocurrido este año
-if (
-fechaActual.getMonth() < fechaNac.getMonth() ||
-(fechaActual.getMonth() === fechaNac.getMonth() && fechaActual.getDate() < fechaNac.getDate())
-) {
-edad--;
-}
-document.getElementById("edad").value = edad;
-
-// Determinar el sexo y mostrarlo en el campo correspondiente
-
-var sexo = curp.charAt(10);
-if (sexo === "H") {
-document.getElementById("sexo").value = "Hombre";
-} else if (sexo === "M") {
-document.getElementById("sexo").value = "Mujer";
-}
-}
-
-
 document.addEventListener("DOMContentLoaded", function () {
     // Obtener la fecha actual
     var fechaActual = new Date();
@@ -79,14 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
         fechaRegistroInput.value = fechaFormateada;
     }
 
-    // Obtener el valor del puntaje total
-    var puntajeTotalValor = document.getElementById("puntaje_total_valor").textContent;
-
-    // Obtener el campo NIHSS_escalas
-    var nihssEscalasInput = document.getElementById("NIHSS_escalas");
-
-    // Establecer el valor del puntaje total en el campo NIHSS_escalas
-    nihssEscalasInput.value = puntajeTotalValor;
 });
 
 
@@ -312,6 +238,10 @@ function sumarRespuestas() {
     // Actualizar el valor mostrado en la sección "Puntaje Total"
     document.getElementById("puntaje_total_valor").innerText = total;
     document.getElementById("puntaje_total_texto").innerText = resultadoTexto;
+
+    document.getElementById("NIHSS").value = total;
+    document.getElementById("NIHSS_escala").value = resultadoTexto;
+
 }
 
 
@@ -471,6 +401,9 @@ function sumarRespuestasB() {
     // Actualizar el valor mostrado en la sección "Puntaje Total"
     document.getElementById("puntaje_total_valorB").innerText = total;
     document.getElementById("puntaje_total_textoB").innerText = resultadoTexto;
+
+    document.getElementById("BARTHEL").value = total;
+    document.getElementById("BARTHEL_escala").value = resultadoTexto;
 }
 
 
@@ -869,6 +802,9 @@ function sumarYMostrarTotales() {
         // Mostrar un mensaje de error si no se pueden obtener los valores
         document.getElementById('resultado_suma_totales').innerHTML = "No se pueden calcular los totales.";
     }
+
+    document.getElementById("FIM").value = totalGeneral;
+    document.getElementById("FIM_escala").value = textoDependencia;
 }
 
 // Función para obtener el texto de dependencia según el total
@@ -888,7 +824,7 @@ function obtenerTextoDependencia(total) {
 //RANKIN
 
 // JavaScript para manejar la selección y mostrar el valor seleccionado
-const opciones = document.querySelectorAll('input[type="radio"]');
+const opciones = document.querySelectorAll('input[name="opcion"]');
 const resultado = document.getElementById('valorSeleccionado');
 
 opciones.forEach(opcion => {
@@ -897,27 +833,51 @@ opciones.forEach(opcion => {
     switch(opcion.value) {
       case '0':
         resultado.textContent += 'No presentan síntomas';
+        document.getElementById("RANKIN").value = 0;
+        document.getElementById("RANKIN_escala").value = 'No presentan síntomas';
+
         break;
       case '1':
         resultado.textContent += 'Discapacidad no significativa';
+        document.getElementById("RANKIN").value = 1;
+        document.getElementById("RANKIN_escala").value = 'Discapacidad no significativa';
+
         break;
       case '2':
         resultado.textContent += 'Discapacidad ligera';
+        document.getElementById("RANKIN").value = 2;
+        document.getElementById("RANKIN_escala").value = 'Discapacidad ligera';
+
         break;
       case '3':
         resultado.textContent += 'Discapacidad moderada';
+        document.getElementById("RANKIN").value = 3;
+        document.getElementById("RANKIN_escala").value = 'Discapacidad moderada';
+
         break;
       case '4':
         resultado.textContent += 'Discapacidad moderadamente grave';
+        document.getElementById("RANKIN").value = 4;
+        document.getElementById("RANKIN_escala").value = 'Discapacidad moderadamente grave';
+
         break;
       case '5':
         resultado.textContent += 'Discapacidad severa: confinamiento en la cama';
+        document.getElementById("RANKIN").value = 5;
+        document.getElementById("RANKIN_escala").value = 'Discapacidad severa: confinamiento en la cama';
+
         break;
       case '6':
         resultado.textContent += 'Muerte';
+        document.getElementById("RANKIN").value = 6;
+        document.getElementById("RANKIN_escala").value = 'Muerte';
+
         break;
       default:
         resultado.textContent = '';
+        document.getElementById("RANKIN").value = '';
+        document.getElementById("RANKIN_escala").value = '';
+
         break;
     }
   });
@@ -934,24 +894,38 @@ opcionesDeambulacion.forEach(opcionDeambulacion => {
     switch(opcionDeambulacion.value) {
       case '0':
         resultadoDeambulacion.textContent += 'Sin deambulación';
+        document.getElementById("MARCHA").value = '0';
+        document.getElementById("MARCHA_escala").value = 'Sin deambulación';
         break;
       case '1':
         resultadoDeambulacion.textContent += 'Deambulación funcional';
+        document.getElementById("MARCHA").value = '1';
+        document.getElementById("MARCHA_escala").value = 'Deambulación funcional';
         break;
       case '2':
         resultadoDeambulacion.textContent += 'Deambulación Hogar';
+        document.getElementById("MARCHA").value = '2';
+        document.getElementById("MARCHA_escala").value = 'Deambulación Hogar';
         break;
       case '3':
         resultadoDeambulacion.textContent += 'Deambulación cerca de casa';
+        document.getElementById("MARCHA").value = '3';
+        document.getElementById("MARCHA_escala").value = 'Deambulación cerca de casa';
         break;
       case '4':
         resultadoDeambulacion.textContent += 'Independiente en la comunidad';
+        document.getElementById("MARCHA").value = '4';
+        document.getElementById("MARCHA_escala").value = 'Independiente en la comunidad';
         break;
       case '5':
         resultadoDeambulacion.textContent += 'Normal';
+        document.getElementById("MARCHA").value = '5';
+        document.getElementById("MARCHA_escala").value = 'Normal';
         break;
       default:
         resultadoDeambulacion.textContent = '';
+        document.getElementById("MARCHA").value = '';
+        document.getElementById("MARCHA_escala").value = '';
         break;
     }
   });
@@ -1007,6 +981,9 @@ opcionesDeambulacion.forEach(opcionDeambulacion => {
         document.getElementById('total_superior').value = total_superior;
         document.getElementById('total_inferior').value = total_inferior;
         document.getElementById('total_motricity').value = total_motricity;
+
+        document.getElementById("MOTRICITY").value = total_motricity;
+
     }
 
     // Agregar listeners de cambio para cada selector

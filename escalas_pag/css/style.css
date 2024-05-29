@@ -1,180 +1,16 @@
-.custom-container {
-    padding: 20px;
-    background-color: #f8f9fa; /* Fondo claro */
-    border: 2px solid #dee2e6; /* Borde claro */
-    border-radius: 8px; /* Bordes redondeados */
-    margin-bottom: 20px; /* Espacio inferior */
-}
-.custom-title {
-    text-align: center;
-    margin-bottom: 15px;
-}
-.custom-row {
-    height: 200px; /* Altura fija */
-}
-
-
-/* Estilo adicional para el header */
-.custom-header {
-    background: #530256;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right,#87729b, #69277b,#64054b);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right,#87729b, #69277b,#64054b);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height: 50px;
-    /* Ajusta la altura del encabezado según tus necesidades */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    color: rgb(255, 255, 255);
-    /* Agregué color de texto blanco para mayor visibilidad */
-    font-size: 24px;;
-}
-
-/* Estilo para el texto del header */
-.header-text {
-    margin: 0; /* Elimina el margen predeterminado */
-    padding: 0; /* Elimina el relleno predeterminado */
-}
-
-
-.card-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.card.circular {
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    text-align: center;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Agregar sombra */
-    transition: all 0.3s ease; /* Agregar transición */
-}
-
-.card.circular:hover {
-    cursor: pointer;
-    transform: scale(1.25); /* Hacer que el círculo se agrande al pasar el mouse */
-}
-
-
-/* Estilos para el footer */
-.custom-footer {
-    background: #530256;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #87729b, #69277b, #87729b);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #87729b, #69277b, #87729b);
-    height: 50px;
-    display: flex;
-    flex-direction: column; /* Alinea los elementos en una columna */
-    justify-content: center; /* Alinea horizontalmente los elementos del footer */
-    align-items: center; /* Alinea verticalmente los elementos del footer */
-    padding: 0 20px;
-    color: rgba(134, 134, 134, 0.794);
-    font-size: 8px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Estilos para los elementos span dentro del footer */
-.custom-footer span {
-    line-height: 0.3; /* Ajusta el interlineado */
-}
-
-
-
-/* Estilo para el fondo de color del título del modal */
-.modal-title-bg {
-    background-color: #941574; /* Cambia esto al color que desees */
-    color: white; /* Cambia el color del texto si es necesario */
-    padding: 10px; /* Ajusta el relleno según sea necesario */
-    margin: 0; /* Ajusta el margen según sea necesario */
-}
-
-.modal-title-bt {
-    background-color: #C88E86;
-    color:white;
-    padding:10px;
-    margin:0;
-}
-
-
-.modal-title-fim {
-    background-color: #7B7DAD;
-    color:white;
-    padding:10px;
-    margin:0;
-}
-
-.fim-puntaje {
-    margin-top: 12px;
-    color: rgb(121, 118, 173);
-    font-size: 14px;
-    text-align: left;
-}
-
-.fim-pregunta{
-    margin-top: 12px;
-    font-size: 14px;
-}
-
-.fim-select {
-    margin-top: 12px;
-    font-size: 14px;
-}
-
-
-
-/* Estilos para los colores de los select */
-.verde {
-    background-color: rgb(176, 222, 176, 0.5);
-}
-.amarillo {
-    background-color: rgb(245, 249, 159, 0.5 );
-}
-.rojo {
-    background-color: rgb(228, 166, 166, 0.5);
-}
-
-
-
-/* Estilos RANKIN */
-.rankin-header{
-    background-color: #89B2A2;
-    color: aliceblue;
-}
-
-
-
-
-/* estilos Motricity index */
-
-.mi-header{
-    background-color: rgb(189, 170, 121, 0.8);
-    color: aliceblue;
-}
-
-
-.marcha-header{
-    background-color: #C28CA6;
-    color: aliceblue
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0c5;
 }
 
 header {
     background: #800080;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right,#606c88, #3f4c6b);
+    background: -webkit-linear-gradient(to right,#314755, #26a0da);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right,#606c88, #3f4c6b);
+    background: linear-gradient(to right,#314755, #26a0da);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     height: 60px;
@@ -203,7 +39,7 @@ header a {
 
 .estilomodal  {
     
-background: linear-gradient(to right,#606c88, #3f4c6b);
+background: linear-gradient(to right,#314755, #26a0da);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -216,6 +52,16 @@ background: linear-gradient(to right,#606c88, #3f4c6b);
     font-weight: bold;
     font-size: 24px;
 
+
+}
+.patient-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    /* Cambia el cursor a un puntero */
+    transition: background-color 0.3s;
+    /* Agrega transición al cambio de color */
 }
 
 footer {
@@ -241,6 +87,10 @@ h5.bi {
     margin-top: 15px;
     /* Ajusta la separación entre el ícono y el texto */
 }
+
+
+
+
 
 #search {
     width: 80%;
@@ -383,3 +233,4 @@ h5.bi {
         stroke-dashoffset: 0;
     }
 }
+

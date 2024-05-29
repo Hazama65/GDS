@@ -2,28 +2,49 @@ body {
   background-color: rgb(249, 252, 255);
 }
 
-header {
-  background: linear-gradient(to right, rgb(14, 140, 129), rgb(103, 172, 166));
-  /* Degradado de colores */
+/* Estilos para la fila superior del encabezado */
+.top-row {
+  background: linear-gradient(to right, #510839, #7a0d56); /* Degradado de colores */
   color: aliceblue;
-  /* Color del texto azul hospitalario */
-  padding: 20px;
-  /* Espaciado interno */
-  text-align: left;
-  /* Alineación del texto a la izquierda */
-  width: 100%;
-  /* Ancho del header */
-  margin: 0 auto;
-  /* Centrar el header en la página */
-  font-family: 'Montserrat', sans-serif;
-  /* Estilo de letra Montserrat */
   display: flex;
-  /* Usar flexbox para alinear los elementos */
-  justify-content: space-between;
-  /* Alinear los elementos al inicio y al final */
+  justify-content: left;
   align-items: center;
-  /* Centrar verticalmente los elementos */
+  height: 50px; /* Altura de la fila superior */
+  padding-left: 20px; /* Espaciado a la izquierda */
+  font-size:large;
 }
+
+/* Estilos para el texto "UNIDAD DE APOYO" */
+.top-row h1 {
+  margin: 0; /* Eliminar el margen para evitar espacios adicionales */
+  color: aliceblue; /* Color del texto */
+}
+
+
+/* Estilos para la fila inferior del encabezado */
+.bottom-row {
+  background: linear-gradient(to right, #9f3e7f, #870e5f); /* Degradado de colores */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px; /* Espaciado superior para separar las filas */
+}
+
+/* Estilos para el mensaje de bienvenida */
+.welcome-message {
+  margin-right: 10px; /* Espaciado a la derecha */
+  color: aliceblue; /* Color del texto */
+  padding-left: 20px; /* Espaciado a la izquierda */
+}
+
+/* Estilos para el botón de cerrar sesión */
+#cerrar-sesion-button {
+  margin-right: 10px; /* Espaciado a la izquierda */
+  margin-bottom: 10px;
+}
+
+
+
 
 
 
@@ -32,39 +53,67 @@ header {
   /* Empujar el mensaje de bienvenida hacia la derecha */
 }
 
-/* Estilo personalizado para el botón */
-.custom-btn {
-  margin-left: 10px;
-  /* Ajusta el margen izquierdo según tu preferencia */
+
+
+
+/* Estilos para el contenedor de la segunda parte vertical */
+.container-seguimiento {
+  border: 1px solid #ccc; /* Borde sólido de 1 píxel con color gris */
+  border-radius: 5px; /* Radio de borde de 5 píxeles para redondear las esquinas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+  padding: 10px; /* Espaciado interno */
 }
+
+/* Estilos para el contenido dentro del contenedor */
+#tabla-seguimiento {
+  height: 560px; /* Altura del contenido */
+  overflow-y: auto; /* Desplazamiento vertical automático */
+  margin-bottom: 20px; /* Margen inferior */
+}
+
+
+
 
 /* Estilo personalizado para separar el botón del header */
 .btn-container {
-  margin-left: auto;
+  margin-left:a auto;
   /* Ajusta el margen izquierdo según tu preferencia */
-  margin-top: 20px;
+  margin-top: 10px;
   /* Ajusta el margen superior según tu preferencia */
 }
 
-/* Estilos adicionales */
+/* Estilos adicionales para el contenedor */
 .container-box {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 10px;
+  border: 1px solid #ccc; /* Agregamos un borde sólido de 1 píxel con color gris */
+  border-radius: 5px; /* Aplicamos un radio de borde de 5 píxeles para redondear las esquinas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agregamos una sombra para dar profundidad al contenedor */
+  padding: 10px; /* Agregamos un relleno interno de 10 píxeles */
+  margin-right: 10px; /* Ajustamos el margen derecho para separarlo del botón */
+  margin-top: 10px; /* Ajustamos el margen superior para alinearlo con el botón */
 }
 
+
+
+.container{
+  margin-left: 10px;
+}
 
 #patient-list {
   list-style: none;
   padding: 0;
   background-color: white;
   /* Fondo blanco */
-  border: 1px solid rgb(62, 104, 170, 0.5);
+  border: 1px solid #f3e7ef;
   /* Borde alrededor de la lista */
   border-radius: 5px;
   /* Esquinas redondeadas */
   margin: 10px;
+}
+
+/* Cambio de color al pasar el mouse sobre un registro */
+.patient-item:hover {
+  background-color: #f0f0f0; /* Cambia este color según tus preferencias */
+  cursor: pointer;
 }
 
 #patient-list li {

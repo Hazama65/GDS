@@ -1,10 +1,11 @@
 <?php
-include("modals/nihss.php");
-include("modals/barthel.php");
-include("modals/fim.html");
-include("modals/mi.html");
-include("modals/rankin.html");
-include("modals/marcha.html");
+include ('php/controllers/edit.controller.php');
+include ("modals/nihss.php");
+include ("modals/barthel.php");
+include ("modals/fim.html");
+include ("modals/mi.html");
+include ("modals/rankin.html");
+include ("modals/marcha.html");
 ?>
 
 <!DOCTYPE html>
@@ -18,9 +19,12 @@ include("modals/marcha.html");
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- Bootstrap 5.3.3 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Bootstrap 5.3.3 JS (con Popper.js) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Incluye la biblioteca jsPDF versión 1.5.3 -->
@@ -55,58 +59,97 @@ include("modals/marcha.html");
             <div class="container">
                 <div class="row">
 
-               
+
                     <!-- Primer contenedor a la izquierda -->
-                    <div class="col-md-5">
-                        <div class="custom-container">
+                    <div class="col-md-5" style="margin-bottom: 50px;">
+                        <div class="custom-container" style="height: 675px">
                             <div class="row custom-row align-items-center justify-content-center">
-                                <form class="d-flex flex-wrap">
+                                <form id="seguimiento_escalas" method="POST">
+                                    <div class="row">
+                                        <input type="hidden" id="id_paciente" name="id_paciente" value="<?php echo $id_paciente; ?>">
 
-                                <div class=" col-md-12 form-group">
-                                        <strong style="font-size: 14px;" for="nombre">Fecha de Seguimiento</strong>
-                                        <input type="date" class="form-control" id="Fecha_Seguimiento" >
+
+                                        <div class=" col-md-12 form-group">
+                                            <strong style="font-size: 14px;" for="nombre">Fecha de Seguimiento</strong>
+                                            <input type="date" class="form-control" id="Fecha_Seguimiento"
+                                                name="Fecha_Seguimiento">
+                                        </div>
+
+
+                                        <div class=" col-md-6 form-group">
+                                            <label for="nombre">NIHSS</label>
+                                            <input type="number" class="form-control" id="NIHSS" name="NIHSS" readonly>
+                                        </div>
+
+                                        <div class=" col-md-6 form-group">
+                                            <label for="nombre">NIHSS Valor</label>
+                                            <input type="text" class="form-control" id="NIHSS_escala"
+                                                name="NIHSS_escala" readonly>
+                                        </div>
+
+                                        <div class="col-md-6 form-group">
+                                            <label for="BARTHEL">BARTHEL</label>
+                                            <input type="number" class="form-control" id="BARTHEL" name="BARTHEL"
+                                                readonly>
+                                        </div>
+
+                                        <div class="col-md-6 form-group">
+                                            <label for="BARTHEL">BARTHEL Valor</label>
+                                            <input type="text" class="form-control" id="BARTHEL_escala"
+                                                name="BARTHEL_escala" readonly>
+                                        </div>
+
+                                        <div class="col-md-6 form-group">
+                                            <label for="FIM">FIM</label>
+                                            <input type="number" class="form-control" id="FIM" name="FIM" readonly>
+                                        </div>
+
+                                        <div class="col-md-6 form-group">
+                                            <label for="FIM">FIM Valor</label>
+                                            <input type="text" class="form-control" id="FIM_escala" name="FIM_escala"
+                                                readonly>
+                                        </div>
+
+                                        <div class=" col-md-6 form-group">
+                                            <label for="RANKIN">RANKIN</label>
+                                            <input type="number" class="form-control" id="RANKIN" name="RANKIN"
+                                                readonly>
+                                        </div>
+
+                                        <div class=" col-md-6 form-group">
+                                            <label for="RANKIN">RANKIN Valor</label>
+                                            <input type="text" class="form-control" id="RANKIN_escala"
+                                                name="RANKIN_escala" readonly>
+                                        </div>
+
+                                        <div class=" col-md-12 form-group">
+                                            <label for="MOTRICITY">MOTRICITY INDEX</label>
+                                            <input type="number" class="form-control" id="MOTRICITY" name="MOTRICITY"
+                                                readonly>
+                                        </div>
+
+                                        <div class="col-md-6 form-group">
+                                            <label for="MARCHA">MARCHA FAC</label>
+                                            <input type="number" class="form-control" id="MARCHA" name="MARCHA"
+                                                readonly>
+                                        </div>
+
+                                        <div class="col-md-6 form-group">
+                                            <label for="MARCHA">MARCHA FAC Valor</label>
+                                            <input type="text" class="form-control" id="MARCHA_escala"
+                                                name="MARCHA_escala" readonly>
+                                        </div>
+
+
+                                        <button type="submit" class="btn btn-primary">Guardar Seguimiento</button>
                                     </div>
-
-
-                                    <div class=" col-md-4 form-group">
-                                        <strong style="font-size: 14px;" for="nombre">NIHSS</strong>
-                                        <input type="number" class="form-control" id="NIHSS_Seguimiento" readonly>
-                                    </div>
-
-                                    <div class="col-md-4 form-group">
-                                        <strong style="font-size: 14px;" for="BARTHEL">BARTHEL</strong>
-                                        <input type="number" class="form-control" id="BARTHEL_Seguimiento" readonly>
-                                    </div>
-
-                                    <div class="col-md-4 form-group">
-                                        <strong style="font-size: 14px;" for="FIM">FIM</strong>
-                                        <input type="number" class="form-control" id="FIM_Seguimiento" readonly>
-                                    </div>
-
-                                    <div class=" col-md-4 form-group">
-                                        <strong style="font-size: 14px;" for="RANKIN">RANKIN</strong>
-                                        <input type="number" class="form-control" id="RANKIN_Seguimiento" readonly>
-                                    </div>
-
-                                    <div class=" col-md-4 form-group">
-                                        <strong style="font-size: 14px;" for="MOTRICITY">MOTRICITY INDEX</strong>
-                                        <input type="number" class="form-control" id="MOTRICITY_Seguimiento" readonly>
-                                    </div>
-
-                                    <div class="col-md-4 form-group">
-                                        <strong style="font-size: 14px;" for="MARCHA">MARCHA FAC</strong>
-                                        <input type="number" class="form-control" id="MARCHA_Seguimiento" readonly>
-                                    </div>
-
-                                  
                                 </form>
-                                <button type="submit" class="btn btn-primary">Guardar Seguimiento</button>
                             </div>
-                           
+
                         </div>
 
                         <!-- Campos del formulario debajo del primer contenedor -->
-                       
+
                     </div>
 
                     <!-- Espacio entre los dos contenedores -->
@@ -200,6 +243,13 @@ include("modals/marcha.html");
     </div>
     </main>
 
+    <div id="loading-overlay" style="display: none;" class="loading">
+        <svg width="128px" height="96px">
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="back"></polyline>
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="front"></polyline>
+        </svg>
+    </div>
+
 
 
     <!-- Footer -->
@@ -208,10 +258,18 @@ include("modals/marcha.html");
         <span>GESTIÓN DIGITAL EN SALUD</span>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script_seg.js"></script>
+
+    <script type="module">
+        import { seguimientoForm } from "./js/seguimiento.js";
+        seguimientoForm();
+    </script>
+
 </body>
 
 </html>
