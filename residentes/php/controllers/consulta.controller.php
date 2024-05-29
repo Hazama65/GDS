@@ -29,6 +29,8 @@
 
                 $fecha = $data['fecha'];
                 $residentes = $data['residentes'];
+                $nombre_responsable = $data['nombre_responsable'];
+                $nombre_paciente    = $data['nombre_paciente'];
 
                 $pl_intento1 = $data['pl_intento1'];
                 $pl_comp1 = $data['pl_comp1'];

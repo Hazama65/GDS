@@ -15,7 +15,7 @@
 <body>
 
     <table class="table table-striped table-hover table-bordered tabla-consulta">
-       <thead>   <!-- Esta etiqueta indica que el contenido dentro de ella corresponde contiene los títulos de las columnas. -->
+        <thead>   <!-- Esta etiqueta indica que el contenido dentro de ella corresponde contiene los títulos de las columnas. -->
             
             <tr>
                 <th scope="col"> Datos Residentes</th>
@@ -30,8 +30,19 @@
             </tr>
 
             <tr>
-                <td class="estilo-celda">Nombre Completo</td>
+                <td class="estilo-celda">Nombre Residente</td>
                 <td><?php echo $residentes; ?></td>
+            </tr>
+            
+            <tr>
+                <td class="estilo-celda">Nombre responsable</td>
+                <td><?php echo $nombre_responsable; ?></td>
+            </tr>
+
+            
+            <tr>
+                <td class="estilo-celda">Nombre Paciente</td>
+                <td><?php echo $nombre_paciente; ?></td>
             </tr>
 
 
@@ -806,12 +817,6 @@
                 <td class="estilo-celda">Otra Complicación</td>
                 <td><?php echo $mo_otros3; ?></td>
             </tr>
-
-
-        
-            
-
-            
 
         </tbody>
     </table>

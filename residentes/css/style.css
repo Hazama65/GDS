@@ -94,7 +94,7 @@ footer {
   /*SCROLL BUSCADOR*/
   #patient-list-container {
     background-color: rgba(164, 76, 207, 0.5);
-    max-height: 800px; /* Altura máxima del div */
+    max-height: 465px; /* Altura máxima del div */
     overflow-y: auto; /* Agrega scroll vertical si el contenido excede la altura máxima */
     padding: 10px; /* Espaciado opcional */
   }
@@ -118,5 +118,51 @@ footer {
 .tabla-consulta td.estilo-celda {
     font-weight: bold;
     color: black; /* Cambia el color del texto de las celdas con esta clase */
+}
+
+
+/* pantalla de carga */
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(151, 150, 150, 0.97);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.loading svg polyline {
+    fill: none;
+    stroke-width: 6; /* Aumentar el grosor de la línea */
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.loading svg polyline#back {
+    fill: none;
+    stroke: #ff4d5033;
+}
+
+.loading svg polyline#front {
+    fill: none;
+    stroke: #fb3437;
+    stroke-dasharray: 96, 288; /* Ajustar la longitud del dasharray y el dashoffset */
+    stroke-dashoffset: 384;
+    animation: dash_682 1.4s linear infinite;
+}
+
+@keyframes dash_682 {
+    72.5% {
+        opacity: 0;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 

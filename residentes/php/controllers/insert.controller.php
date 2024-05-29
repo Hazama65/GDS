@@ -8,238 +8,281 @@
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-        $fecha             = $_POST['fecha'];
-        $nombre_residentes = $_POST['nombre_residentes'];
-        $queryGeneral = "INSERT INTO datos_productividad (fecha,residentes)
-        VALUES ('$fecha','$nombre_residentes')";
-        $dataGeneral = $connectionDB->ShotSimple($queryGeneral);
-        $ultimoId = $connectionDB->last_id;
+        $Tables = array(
+            $table_datos_datos_productividad = 'datos_productividad',
+            $table_datos_procedimientos = 'procedimientos',
+            $table_datos_puncion_lumbar = 'puncion_lumbar',
+            $table_datos_intubacion = 'intubacion',
+            $table_datos_cvc = 'cvc',
+            $table_datos_paracentesis = 'paracentesis',
+            $table_datos_biopsia_piel = 'biopsia_piel',
+            $table_datos_biopsia_celular = 'biopsia_celular',
+            $table_datos_biopsia_tiroides = 'biopsia_tiroides',
+            $table_datos_toracocentesis = 'toracocentesis',
+            $table_datos_artrocentesis = 'artrocentesis',
+            $table_datos_aspiracion_mo = 'aspiracion_mo'
+        );
+
+        $data_datos_productividad  = array(
+            'fecha'              => $_POST['fecha'],
+            'residentes'         => $_POST['nombre_residentes'],
+            'nombre_responsable' => $_POST['nombre_responsable'],
+            'nombre_paciente'    => $_POST['nombre_paciente']
+        );
+
+        foreach ($data_datos_productividad  as $key => $value) {
+            $data_datos_productividad [$key] = $connectionDB->escapeString($value);
+        }
+        $Result_data = $connectionDB->insertData($Tables[0], $data_datos_productividad );
+
+        $data_procedimientos  = array(
+        'puncionLumbar'    => $_POST['conteo_pl'],
+        'intubacion'       => $_POST['conteo_intubacion'],
+        'cvc'              => $_POST['conteo_cvc'],
+        'parasentesis'     => $_POST['conteo_parecentesis'],
+        'biopsia_piel'     => $_POST['conteo_biopsiapiel'],
+        'biopsia_celular'  => $_POST['conteo_biopsiaSUBC'],
+        'biopsia_tiroides' => $_POST['conteo_biopsiatiroides'],
+        'toracosentesis'   => $_POST['conteo_toracocentesis'],
+        'artrocentesis'    => $_POST['conteo_artrocentesis'],
+        'mo'               => $_POST['conteo_mo'],
+        'id_productividad' => $Result_data
+        );
+
+        foreach ($data_procedimientos  as $key => $value) {
+            $data_procedimientos [$key] = $connectionDB->escapeString($value);
+        }
+        $connectionDB->insertData($Tables[1], $data_procedimientos );
+
+        $data_puncion_lumbar  = array(
+        'pl_intento1'       => $_POST['intento_1'],
+        'pl_comp1'          => $_POST['complicacion_1'],
+        'pl_TpoComp1'       => $_POST['tipocomplicacion_1'],
+        'pl_otros1'         => $_POST['pl_otros_1'],
+        'pl_intento2'       => $_POST['intento_2'],
+        'pl_comp2'          => $_POST['complicacion_2'],
+        'pl_TpoComp2'       => $_POST['tipocomplicacion_2'],
+        'pl_otros2'         => $_POST['pl_otros_2'],
+        'pl_intento3'       => $_POST['intento_3'],
+        'pl_comp3'          => $_POST['complicacion_3'],
+        'pl_TpoComp3'       => $_POST['tipocomplicacion_3'],
+        'pl_otros3'         => $_POST['pl_otros_3'],
+        'id_productividad'  => $Result_data
+        );
+
+        foreach ($data_puncion_lumbar  as $key => $value) {
+            $data_puncion_lumbar [$key] = $connectionDB->escapeString($value);
+        }
+        $connectionDB->insertData($Tables[2], $data_puncion_lumbar );
+
+        $data_intubacion  = array(
+            'ib_intento1'       => $_POST['intento_intubacion1'],
+            'ib_comp1'          => $_POST['complicacion_intubacion_1'],
+            'ib_TpoComp1'       => $_POST['tipocomplicacion_intubacion1'],
+            'ib_otros1'         => $_POST['intub_otros_1'],
+            'ib_intento2'       => $_POST['intento_intubacion2'],
+            'ib_comp2'          => $_POST['complicacion_intubacion_2'],
+            'ib_TpoComp2'       => $_POST['tipocomplicacion_intubacion2'],
+            'ib_otros2'         => $_POST['intub_otros_2'],
+            'ib_intento3'       => $_POST['intento_intubacion3'],
+            'ib_comp3'          => $_POST['complicacion_intubacion_3'],
+            'ib_TpoComp3'       => $_POST['tipocomplicacion_intubacion3'],
+            'ib_otros3'         => $_POST['intub_otros_3'],
+            'id_productividad'  => $Result_data
+        );
+
+        foreach ($data_intubacion  as $key => $value) {
+            $data_intubacion [$key] = $connectionDB->escapeString($value);
+        }
+        $connectionDB->insertData($Tables[3], $data_intubacion );
 
 
+        $data_cvc  = array(
+            'cv_TpoCVC1'        => $_POST['tipocvc'],
+            'cv_Anatomia1'      => $_POST['sitio_anatomico_1'],
+            'cv_intento1'       => $_POST['intento_cvc_1'],
+            'cv_comp1'          => $_POST['complicacion_cvc1'],
+            'cv_TpoComp1'       => $_POST['tipocomplicacion_cvc1'],
+            'cv_otros1'         => $_POST['cvc_otros_1'],
+            'cv_TpoCVC2'        => $_POST['tipocvc2'],
+            'cv_Anatomia2'      => $_POST['sitio_anatomico_2'],
+            'cv_intento2'       => $_POST['intento_cvc_2'],
+            'cv_comp2'          => $_POST['complicacion_cvc2'],
+            'cv_TpoComp2'       => $_POST['tipocomplicacion_cvc2'],
+            'cv_otros2'         => $_POST['cvc_otros_2'],
+            'cv_TpoCVC3'        => $_POST['tipocvc3'],
+            'cv_Anatomia3'      => $_POST['sitio_anatomico_3'],
+            'cv_intento3'       => $_POST['intento_cvc_3'],
+            'cv_comp3'          => $_POST['complicacion_cvc3'],
+            'cv_TpoComp3'       => $_POST['tipocomplicacion_cvc3'],
+            'cv_otros3'         => $_POST['cvc_otros_3'],
+            'id_productividad'  => $Result_data
+        );
 
-        $conteo_pl              = $_POST['conteo_pl'];
-        $conteo_intubacion      = $_POST['conteo_intubacion'];
-        $conteo_cvc             = $_POST['conteo_cvc'];
-        $conteo_parecentesis    = $_POST['conteo_parecentesis'];
-        $conteo_biopsiapiel     = $_POST['conteo_biopsiapiel'];
-        $conteo_biopsiaSUBC     = $_POST['conteo_biopsiaSUBC'];
-        $conteo_biopsiatiroides = $_POST['conteo_biopsiatiroides'];
-        $conteo_toracocentesis  = $_POST['conteo_toracocentesis'];
-        $conteo_artrocentesis   = $_POST['conteo_artrocentesis'];
-        $conteo_mo              = $_POST['conteo_mo'];
+        foreach ($data_cvc  as $key => $value) {
+            $data_cvc [$key] = $connectionDB->escapeString($value);
+        }
+        $connectionDB->insertData($Tables[4], $data_cvc );
 
-        $queryProcedimientos = "INSERT INTO procedimientos VALUES ('$conteo_pl','$conteo_intubacion','$conteo_cvc',
-        '$conteo_parecentesis','$conteo_biopsiapiel','$conteo_biopsiaSUBC','$conteo_biopsiatiroides',
-        '$conteo_toracocentesis','$conteo_artrocentesis','$conteo_mo','$ultimoId')";
-        $dataProcedimientos = $connectionDB->ShotSimple($queryProcedimientos);
+        $data_paracentesis  = array(
+            'pt_intento1'       => $_POST['intento_paracentesis_1'],
+            'pt_comp1'          => $_POST['complicacion_paracentesis_1'],
+            'pt_TpoComp1'       => $_POST['tipocomplicacion_paracentesis_1'],
+            'pt_otros1'         => $_POST['paracen_otros_1'],
+            'pt_intento2'       => $_POST['intento_paracentesis_2'],
+            'pt_comp2'          => $_POST['complicacion_paracentesis_2'],
+            'pt_TpoComp2'       => $_POST['tipocomplicacion_paracentesis_2'],
+            'pt_otros2'         => $_POST['paracen_otros_2'],
+            'pt_intento3'       => $_POST['intento_paracentesis_3'],
+            'pt_comp3'          => $_POST['complicacion_paracentesis_3'],
+            'pt_TpoComp3'       => $_POST['tipocomplicacion_paracentesis_3'],
+            'pt_otros3'         => $_POST['paracen_otros_3'],
+            'id_productividad'  => $Result_data
 
-        $intento_1          = $_POST['intento_1'];
-        $complicacion_1     = $_POST['complicacion_1'];
-        $tipocomplicacion_1 = $_POST['tipocomplicacion_1'];
-        $pl_otros_1         = $_POST['pl_otros_1'];
-        $intento_2          = $_POST['intento_2'];
-        $complicacion_2     = $_POST['complicacion_2'];
-        $tipocomplicacion_2 = $_POST['tipocomplicacion_2'];
-        $pl_otros_2         = $_POST['pl_otros_2'];
-        $intento_3          = $_POST['intento_3'];
-        $complicacion_3     = $_POST['complicacion_3'];
-        $tipocomplicacion_3 = $_POST['tipocomplicacion_3'];
-        $pl_otros_3         = $_POST['pl_otros_3'];
-        $queryPuncionLumbar = "INSERT INTO puncion_lumbar 
-        VALUES ('$intento_1','$complicacion_1','$tipocomplicacion_1','$pl_otros_1','$intento_2','$complicacion_2',
-        '$tipocomplicacion_2','$pl_otros_2','$intento_3','$complicacion_3','$tipocomplicacion_3','$pl_otros_3','$ultimoId')";
-        $dataPuncionLumbar  = $connectionDB->ShotSimple($queryPuncionLumbar);
+        );
 
+        foreach ($data_paracentesis  as $key => $value) {
+            $data_paracentesis [$key] = $connectionDB->escapeString($value);
+        }
+        $connectionDB->insertData($Tables[5], $data_paracentesis );
 
-        $intento_intubacion1          = $_POST['intento_intubacion1'];
-        $complicacion_intubacion_1    = $_POST['complicacion_intubacion_1'];
-        $tipocomplicacion_intubacion1 = $_POST['tipocomplicacion_intubacion1'];
-        $intub_otros_1                = $_POST['intub_otros_1'];
-        $intento_intubacion2          = $_POST['intento_intubacion2'];
-        $complicacion_intubacion_2    = $_POST['complicacion_intubacion_2'];
-        $tipocomplicacion_intubacion2 = $_POST['tipocomplicacion_intubacion2'];
-        $intub_otros_2                = $_POST['intub_otros_2'];
-        $intento_intubacion3          = $_POST['intento_intubacion3'];
-        $complicacion_intubacion_3    = $_POST['complicacion_intubacion_3'];
-        $tipocomplicacion_intubacion3 = $_POST['tipocomplicacion_intubacion3'];
-        $intub_otros_3                = $_POST['intub_otros_3'];
+        $data_biopsia_piel  = array(
+            'bp_intento1'       => $_POST['intento_biopsiapiel_1'],
+            'bp_comp1'          => $_POST['complicacion_biopsiapiel_1'],
+            'bp_TpoComp1'       => $_POST['tp_biopsiapiel_1'],
+            'bp_otros1'         => $_POST['biopiel_otros_1'],
+            'bp_intento2'       => $_POST['intento_biopsiapiel_2'],
+            'bp_comp2'          => $_POST['complicacion_biopsiapiel_2'],
+            'bp_TpoComp2'       => $_POST['tp_biopsiapiel_2'],
+            'bp_otros2'         => $_POST['biopiel_otros_2'],
+            'bp_intento3'       => $_POST['intento_biopsiapiel_3'],
+            'bp_comp3'          => $_POST['complicacion_biopsiapiel_3'],
+            'bp_TpoComp3'       => $_POST['tp_biopsiapiel_3'],
+            'bp_otros3'         => $_POST['biopiel_otros_3'],
+            'id_productividad'  => $Result_data
+        );
 
-        $queryIntubacion = "INSERT INTO intubacion VALUES ('$intento_intubacion1','$complicacion_intubacion_1',
-        '$tipocomplicacion_intubacion1','$intub_otros_1','$intento_intubacion2','$complicacion_intubacion_2',
-        '$tipocomplicacion_intubacion2','$intub_otros_2','$intento_intubacion3','$complicacion_intubacion_3',
-        '$tipocomplicacion_intubacion3','$intub_otros_3','$ultimoId')";
+        foreach ($data_biopsia_piel  as $key => $value) {
+            $data_biopsia_piel [$key] = $connectionDB->escapeString($value);
+        }
+        $connectionDB->insertData($Tables[6], $data_biopsia_piel );
 
-        $dataIntubacion = $connectionDB->ShotSimple($queryIntubacion);
+        $data_biopsia_celular  = array(
 
+            'bc_intento1'       => $_POST['SUBC_1'],
+            'bc_comp1'          => $_POST['complicacion_SUBC_1'],
+            'bc_TpoComp1'       => $_POST['tp_SUBC_1'],
+            'bc_otros1'         => $_POST['subc_otros_1'],
+            'bc_intento2'       => $_POST['SUBC_2'],
+            'bc_comp2'          => $_POST['complicacion_SUBC_2'],
+            'bc_TpoComp2'       => $_POST['tp_SUBC_2'],
+            'bc_otros2'         => $_POST['subc_otros_2'],
+            'bc_intento3'       => $_POST['SUBC_3'],
+            'bc_comp3'          => $_POST['complicacion_SUBC_3'],
+            'bc_TpoComp3'       => $_POST['tp_SUBC_3'],
+            'bc_otros3'         => $_POST['subc_otros_3'],
+            'id_productividad'  => $Result_data
 
-        $tipocvc               = $_POST['tipocvc'];
-        $sitio_anatomico_1     = $_POST['sitio_anatomico_1'];
-        $intento_cvc_1         = $_POST['intento_cvc_1'];
-        $complicacion_cvc1     = $_POST['complicacion_cvc1'];
-        $tipocomplicacion_cvc1 = $_POST['tipocomplicacion_cvc1'];
-        $cvc_otros_1           = $_POST['cvc_otros_1'];
-        $tipocvc2              = $_POST['tipocvc2'];
-        $sitio_anatomico_2     = $_POST['sitio_anatomico_2'];
-        $intento_cvc_2         = $_POST['intento_cvc_2'];
-        $complicacion_cvc2     = $_POST['complicacion_cvc2'];
-        $tipocomplicacion_cvc2 = $_POST['tipocomplicacion_cvc2'];
-        $cvc_otros_2           = $_POST['cvc_otros_2'];
-        $tipocvc3              = $_POST['tipocvc3'];
-        $sitio_anatomico_3     = $_POST['sitio_anatomico_3'];
-        $intento_cvc_3         = $_POST['intento_cvc_3'];
-        $complicacion_cvc3     = $_POST['complicacion_cvc3'];
-        $tipocomplicacion_cvc3 = $_POST['tipocomplicacion_cvc3'];
-        $cvc_otros_3           = $_POST['cvc_otros_3'];
+        );
 
-        $queryCvc = "INSERT INTO cvc VALUES ('$tipocvc','$sitio_anatomico_1','$intento_cvc_1','$complicacion_cvc1','$tipocomplicacion_cvc1',
-        '$cvc_otros_1','$tipocvc2','$sitio_anatomico_2','$intento_cvc_2','$complicacion_cvc2','$tipocomplicacion_cvc2','$cvc_otros_2',
-        '$tipocvc3','$sitio_anatomico_3','$intento_cvc_3','$complicacion_cvc3','$tipocomplicacion_cvc3','$cvc_otros_3','$ultimoId')";
+        foreach ($data_biopsia_celular  as $key => $value) {
+            $data_biopsia_celular [$key] = $connectionDB->escapeString($value);
+        }
+        $connectionDB->insertData($Tables[7], $data_biopsia_celular );
 
-        $dataCvc= $connectionDB->ShotSimple($queryCvc);
+        $data_biopsia_tiroides  = array(
+            'bt_intento1'       => $_POST['BT_1'],
+            'bt_comp1'          => $_POST['complicacion_BT_1'],
+            'bt_TpoComp1'       => $_POST['tp_BT1'],
+            'bt_otros1'         => $_POST['bt_otros_1'],
+            'bt_intento2'       => $_POST['BT_2'],
+            'bt_comp2'          => $_POST['complicacion_BT_2'],
+            'bt_TpoComp2'       => $_POST['tp__BT2'],
+            'bt_otros2'         => $_POST['bt_otros_2'],
+            'bt_intento3'       => $_POST['BT_3'],
+            'bt_comp3'          => $_POST['complicacion_BT_3'],
+            'bt_TpoComp3'       => $_POST['tp__BT3'],
+            'bt_otros3'         => $_POST['bt_otros_3'],
+            'id_productividad'  => $Result_data
+        );
 
-        $intento_paracentesis_1          = $_POST['intento_paracentesis_1'];
-        $complicacion_paracentesis_1     = $_POST['complicacion_paracentesis_1'];
-        $tipocomplicacion_paracentesis_1 = $_POST['tipocomplicacion_paracentesis_1'];
-        $paracen_otros_1                 = $_POST['paracen_otros_1'];
-        $intento_paracentesis_2          = $_POST['intento_paracentesis_2'];
-        $complicacion_paracentesis_2     = $_POST['complicacion_paracentesis_2'];
-        $tipocomplicacion_paracentesis_2 = $_POST['tipocomplicacion_paracentesis_2'];
-        $paracen_otros_2                 = $_POST['paracen_otros_2'];
-        $intento_paracentesis_3          = $_POST['intento_paracentesis_3'];
-        $complicacion_paracentesis_3     = $_POST['complicacion_paracentesis_3'];
-        $tipocomplicacion_paracentesis_3 = $_POST['tipocomplicacion_paracentesis_3'];
-        $paracen_otros_3                 = $_POST['paracen_otros_3'];
+        foreach ($data_biopsia_tiroides  as $key => $value) {
+            $data_biopsia_tiroides [$key] = $connectionDB->escapeString($value);
+        }
+        $connectionDB->insertData($Tables[8], $data_biopsia_tiroides );
 
-        $queryParacentesis = "INSERT INTO paracentesis VALUES ('$intento_paracentesis_1','$complicacion_paracentesis_1',
-        '$tipocomplicacion_paracentesis_1','$paracen_otros_1','$intento_paracentesis_2','$complicacion_paracentesis_2',
-        '$tipocomplicacion_paracentesis_2','$paracen_otros_2','$intento_paracentesis_3','$complicacion_paracentesis_3',
-        '$tipocomplicacion_paracentesis_3','$paracen_otros_3','$ultimoId')";
+        $data_toracocentesis  = array(
 
-        $dataParacentesis = $connectionDB->ShotSimple($queryParacentesis);
+            'tora_intento1'     => $_POST['Toracocentesi_1'],
+            'tora_comp1'        => $_POST['complicacion_tora_1'],
+            'tora_TpoComp1'     => $_POST['tp_tora1'],
+            'tora_otros1'       => $_POST['tora_otros_1'],
+            'tora_intento2'     => $_POST['Toracocentesi_2'],
+            'tora_comp2'        => $_POST['complicacion_tora_2'],
+            'tora_TpoComp2'     => $_POST['tp_tora2'],
+            'tora_otros2'       => $_POST['tora_otros_2'],
+            'tora_intento3'     => $_POST['Toracocentesi_3'],
+            'tora_comp3'        => $_POST['complicacion_tora_3'],
+            'tora_TpoComp3'     => $_POST['tp_tora3'],
+            'tora_otros3'       => $_POST['tora_otros_3'],
+            'id_productividad'  => $Result_data
 
+        );
 
-        $intento_biopsiapiel_1      = $_POST['intento_biopsiapiel_1'];
-        $complicacion_biopsiapiel_1 = $_POST['complicacion_biopsiapiel_1'];
-        $tp_biopsiapiel_1           = $_POST['tp_biopsiapiel_1'];
-        $biopiel_otros_1            = $_POST['biopiel_otros_1'];
-        $intento_biopsiapiel_2      = $_POST['intento_biopsiapiel_2'];
-        $complicacion_biopsiapiel_2 = $_POST['complicacion_biopsiapiel_2'];
-        $tp_biopsiapiel_2           = $_POST['tp_biopsiapiel_2'];
-        $biopiel_otros_2            = $_POST['biopiel_otros_2'];
-        $intento_biopsiapiel_3      = $_POST['intento_biopsiapiel_3'];
-        $complicacion_biopsiapiel_3 = $_POST['complicacion_biopsiapiel_3'];
-        $tp_biopsiapiel_3           = $_POST['tp_biopsiapiel_3'];
-        $biopiel_otros_3            = $_POST['biopiel_otros_3'];
+        foreach ($data_toracocentesis  as $key => $value) {
+            $data_toracocentesis [$key] = $connectionDB->escapeString($value);
+        }
+        $connectionDB->insertData($Tables[9], $data_toracocentesis );
 
-        $queryBiopsiaPiel  = "INSERT INTO biopsia_piel VALUES('$intento_biopsiapiel_1','$complicacion_biopsiapiel_1',
-        '$tp_biopsiapiel_1','$biopiel_otros_1','$intento_biopsiapiel_2','$complicacion_biopsiapiel_2',
-        '$tp_biopsiapiel_2','$biopiel_otros_2','$intento_biopsiapiel_3','$complicacion_biopsiapiel_3',
-        '$tp_biopsiapiel_3','$biopiel_otros_3','$ultimoId')";
+        $data_artrocentesis  = array(
 
-        $dataBiopsiaPiel = $connectionDB->ShotSimple($queryBiopsiaPiel);
+            'at_intento1'       => $_POST['Artro_1'],
+            'at_comp1'          => $_POST['complicacion_Artro_1'],
+            'at_TpoComp1'       => $_POST['tp_Artro_1'],
+            'at_otros1'         => $_POST['artro_otros_1'],
+            'at_intento2'       => $_POST['Artro_2'],
+            'at_comp2'          => $_POST['complicacion_Artro_2'],
+            'at_TpoComp2'       => $_POST['tp_Artro_2'],
+            'at_otros2'         => $_POST['artro_otros_2'],
+            'at_intento3'       => $_POST['Artro_3'],
+            'at_comp3'          => $_POST['complicacion_Artro_3'],
+            'at_TpoComp3'       => $_POST['tp_Artro_3'],
+            'at_otros3'         => $_POST['artro_otros_3'],
+            'id_productividad'  => $Result_data
 
+        );
 
-        $SUBC_1              = $_POST['SUBC_1'];
-        $complicacion_SUBC_1 = $_POST['complicacion_SUBC_1'];
-        $tp_SUBC_1           = $_POST['tp_SUBC_1'];
-        $subc_otros_1        = $_POST['subc_otros_1'];
-        $SUBC_2              = $_POST['SUBC_2'];
-        $complicacion_SUBC_2 = $_POST['complicacion_SUBC_2'];
-        $tp_SUBC_2           = $_POST['tp_SUBC_2'];
-        $subc_otros_2        = $_POST['subc_otros_2'];
-        $SUBC_3              = $_POST['SUBC_3'];
-        $complicacion_SUBC_3 = $_POST['complicacion_SUBC_3'];
-        $tp_SUBC_3           = $_POST['tp_SUBC_3'];
-        $subc_otros_3        = $_POST['subc_otros_3'];
+        foreach ($data_artrocentesis  as $key => $value) {
+            $data_artrocentesis [$key] = $connectionDB->escapeString($value);
+        }
+        $connectionDB->insertData($Tables[10], $data_artrocentesis );
 
-        $querySUBC ="INSERT INTO biopsia_celular VALUES ('$SUBC_1','$complicacion_SUBC_1','$tp_SUBC_1','$subc_otros_1',
-        '$SUBC_2','$complicacion_SUBC_2','$tp_SUBC_2','$subc_otros_2','$SUBC_3','$complicacion_SUBC_3','$tp_SUBC_3',
-        '$subc_otros_3','$ultimoId')";
+        $data_aspiracion_mo  = array(
+            'mo_intento1'       => $_POST['MO_1'],
+            'mo_comp1'          => $_POST['complicacion_MO_1'],
+            'mo_TpoComp1'       => $_POST['tc_MO1'],
+            'mo_otros1'         => $_POST['mo_otros_1'],
+            'mo_intento2'       => $_POST['MO_2'],
+            'mo_comp2'          => $_POST['complicacion_MO_2'],
+            'mo_TpoComp2'       => $_POST['tc_MO_2'],
+            'mo_otros2'         => $_POST['mo_otros_2'],
+            'mo_intento3'       => $_POST['MO_3'],
+            'mo_comp3'          => $_POST['complicacion_MO_3'],
+            'mo_TpoComp3'       => $_POST['tc_MO_3'],
+            'mo_otros3'         => $_POST['mo_otros_3'],
+            'id_productividad'  => $Result_data
 
-        $dataSUBC = $connectionDB->ShotSimple($querySUBC);
+        );
 
-
-        $BT_1              = $_POST['BT_1'];
-        $complicacion_BT_1 = $_POST['complicacion_BT_1'];
-        $tp_BT1            = $_POST['tp_BT1'];
-        $bt_otros_1        = $_POST['bt_otros_1'];
-        $BT_2              = $_POST['BT_2'];
-        $complicacion_BT_2 = $_POST['complicacion_BT_2'];
-        $tp__BT2           = $_POST['tp__BT2'];
-        $bt_otros_2        = $_POST['bt_otros_2'];
-        $BT_3              = $_POST['BT_3'];
-        $complicacion_BT_3 = $_POST['complicacion_BT_3'];
-        $tp__BT3           = $_POST['tp__BT3'];
-        $bt_otros_3        = $_POST['bt_otros_3'];
-
-        $queryBT = "INSERT INTO biopsia_tiroides VALUES ('$BT_1','$complicacion_BT_1','$tp_BT1','$bt_otros_1','$BT_2',
-        '$complicacion_BT_2','$tp__BT2','$bt_otros_2','$BT_3','$complicacion_BT_3','$tp__BT3','$bt_otros_3','$ultimoId')";
-
-        $dataBT = $connectionDB->ShotSimple($queryBT);
-
-
-        $Toracocentesi_1     = $_POST['Toracocentesi_1'];
-        $complicacion_tora_1 = $_POST['complicacion_tora_1'];
-        $tp_tora1            = $_POST['tp_tora1'];
-        $tora_otros_1        = $_POST['tora_otros_1'];
-        $Toracocentesi_2     = $_POST['Toracocentesi_2'];
-        $complicacion_tora_2 = $_POST['complicacion_tora_2'];
-        $tp_tora2            = $_POST['tp_tora2'];
-        $tora_otros_2        = $_POST['tora_otros_2'];
-        $Toracocentesi_3     = $_POST['Toracocentesi_3'];
-        $complicacion_tora_3 = $_POST['complicacion_tora_3'];
-        $tp_tora3            = $_POST['tp_tora3'];
-        $tora_otros_3        = $_POST['tora_otros_3'];
-
-        $queryTora = "INSERT INTO toracocentesis VALUES ('$Toracocentesi_1','$complicacion_tora_1','$tp_tora1','$tora_otros_1',
-        '$Toracocentesi_2','$complicacion_tora_2','$tp_tora2','$tora_otros_2','$Toracocentesi_3','$complicacion_tora_3',
-        '$tp_tora3','$tora_otros_3','$ultimoId')";
-
-        $dataTora= $connectionDB->ShotSimple($queryTora);
-
-
-        $Artro_1              = $_POST['Artro_1'];
-        $complicacion_Artro_1 = $_POST['complicacion_Artro_1'];
-        $tp_Artro_1           = $_POST['tp_Artro_1'];
-        $artro_otros_1        = $_POST['artro_otros_1'];
-        $Artro_2              = $_POST['Artro_2'];
-        $complicacion_Artro_2 = $_POST['complicacion_Artro_2'];
-        $tp_Artro_2           = $_POST['tp_Artro_2'];
-        $artro_otros_2        = $_POST['artro_otros_2'];
-        $Artro_3              = $_POST['Artro_3'];
-        $complicacion_Artro_3 = $_POST['complicacion_Artro_3'];
-        $tp_Artro_3           = $_POST['tp_Artro_3'];
-        $artro_otros_3        = $_POST['artro_otros_3'];
-
-        $queryArtro = "INSERT INTO artrocentesis VALUES ('$Artro_1','$complicacion_Artro_1','$tp_Artro_1','$artro_otros_1',
-        '$Artro_2','$complicacion_Artro_2','$tp_Artro_2','$artro_otros_2','$Artro_3','$complicacion_Artro_3','$tp_Artro_3',
-        '$artro_otros_3','$ultimoId')";
-
-        $dataArtro = $connectionDB->ShotSimple($queryArtro);
-
-
-        $MO_1              = $_POST['MO_1'];
-        $complicacion_MO_1 = $_POST['complicacion_MO_1'];
-        $tc_MO1            = $_POST['tc_MO1'];
-        $mo_otros_1        = $_POST['mo_otros_1'];
-        $MO_2              = $_POST['MO_2'];
-        $complicacion_MO_2 = $_POST['complicacion_MO_2'];
-        $tc_MO_2           = $_POST['tc_MO_2'];
-        $mo_otros_2        = $_POST['mo_otros_2'];
-        $MO_3              = $_POST['MO_3'];
-        $complicacion_MO_3 = $_POST['complicacion_MO_3'];
-        $tc_MO_3           = $_POST['tc_MO_3'];
-        $mo_otros_3        = $_POST['mo_otros_3'];
-
-        $queryMO = "INSERT INTO aspiracion_mo VALUES ('$MO_1','$complicacion_MO_1','$tc_MO1','$mo_otros_1','$MO_2',
-        '$complicacion_MO_2','$tc_MO_2','$mo_otros_2','$MO_3','$complicacion_MO_3','$tc_MO_3','$mo_otros_3','$ultimoId')";
-
-        $dataMO = $connectionDB->ShotSimple($queryMO);
+        foreach ($data_aspiracion_mo  as $key => $value) {
+            $data_aspiracion_mo [$key] = $connectionDB->escapeString($value);
+        }
+        $connectionDB->insertData($Tables[11], $data_aspiracion_mo );
 
 
         echo 'success';
     }else {
-        echo 'hola';
+        echo 'Error';
     }
 
     

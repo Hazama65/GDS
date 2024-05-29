@@ -28,9 +28,11 @@
         if (!empty($AllData)) {
             foreach ($AllData as $data) {
 
-                $id_productividad = $data['id_productividad'];
-                $fecha            = $data['fecha'];
-                $residentes       = $data['residentes'];
+                $id_productividad   = $data['id_productividad'];
+                $fecha              = $data['fecha'];
+                $residentes         = $data['residentes'];
+                $nombre_responsable = $data['nombre_responsable'];
+                $nombre_paciente    = $data['nombre_paciente'];
 
                 $puncionLumbar    = $data['puncionLumbar'];
                 $pl_intento1      = $data['pl_intento1'];
