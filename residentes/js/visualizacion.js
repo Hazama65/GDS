@@ -1,30 +1,32 @@
-// Función para mostrar el ID del paciente en la consola
-function mostrarIdPaciente(event) {
+// Función para mostrar la tabla del paciente seleccionado
+function mostrarTablaSeguimiento(event) {
     const listItem = event.target.closest(".patient-item");
     const id_residente = listItem.getAttribute("data-id-paciente");
+
+    document.getElementById('borrar_paciente').setAttribute("data-id-paciente", id_residente);
+
     
-    // Realiza una solicitud AJAX para enviar el ID del paciente al servidor
+    // Realiza una solicitud AJAX para obtener el HTML de la tabla de seguimiento
     $.ajax({
-        type: "GET", // Puedes usar POST o GET según tus necesidades
-        url: "consulta.php", // URL de tu script PHP
-        data: { idResidente: id_residente }, // Envía el ID como un parámetro llamado "idPaciente"
+        type: "GET",
+        url: "consulta.php",
+        data: { idResidente: id_residente },
         success: function(response) {
-
-            let iframeDocument = $('#consulta')[0].contentDocument || $('#consulta')[0].contentWindow.document;
-
-            iframeDocument.open();
-            iframeDocument.write(response);
-            iframeDocument.close();
-
+            // Actualiza el contenido del div con el HTML recibido
+            document.getElementById("tabla-seguimiento").innerHTML = response;
         },
         error: function(xhr, status, error) {
             console.error("Error en la solicitud AJAX:", error);
         }
     });
+
+    $('#borrar_paciente').show();
+
+
 }
 
 // Agrega eventos de clic a cada elemento de la lista
 const patientItems = document.querySelectorAll(".patient-item");
 patientItems.forEach(function(item) {
-    item.addEventListener("click", mostrarIdPaciente);
+    item.addEventListener("click", mostrarTablaSeguimiento);
 });

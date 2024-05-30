@@ -5,7 +5,7 @@
 
     $connectionDB = new Database(DB_HOST, DB_NAME, DB_USERNAME, DB_PASSWORD);
 
-    $query_Residentes="SELECT * FROM datos_productividad";
+    $query_Residentes="SELECT * FROM datos_productividad ORDER BY fecha DESC";
 
     $data_Residentes =$connectionDB->getRows($query_Residentes);
 
