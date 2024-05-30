@@ -34,21 +34,28 @@
                     <strong style="font-size:14px;">Nombre Residente</strong>
                     <select name="nombre_residente" id="nombre_residente" class="form-control" style="font-size:14px;">
                         <option value="0">Seleccione...</option>
+                        <option value="Alejandra Sanchez Gil">Alejandra Sanchez Gil</option>
                         <option value="Ana Libertad Salazar Trapala">Ana Libertad Salazar Trapala</option>
                         <option value="Angelica Johana Perez Hernandez">Angelica Johana Perez Hernandez</option>
                         <option value="Angelica Leal Camarrillo">Angelica Leal Camarrillo</option>
                         <option value="Arturo Israel Jacinto Tovar">Arturo Israel Jacinto Tovar</option>
                         <option value="Brenda Mendoza Vega">Brenda Mendoza Vega</option>
                         <option value="Christian Mejia Herrera">Christian Mejia Herrera</option>
+                        <option value="Emyli Marin Guzman">Emyli Marin Guzman</option>
                         <option value="Ezequiel Betancourt Uriostegui">Ezequiel Betancourt Uriostegui</option>
                         <option value="Gerardo Saavedra Jimenez">Gerardo Saavedra Jimenez </option>
                         <option value="Hugo A. Silguero Rivera">Hugo A. Silguero Rivera</option>
                         <option value="Jacobo U. Mercado Estrada">Jacobo U. Mercado Estrada</option>
+                        <option value="Jair Fernando Baños Bracho">Jair Fernando Baños Bracho</option>
                         <option value="Jennifer Arias Huerta">Jennifer Arias Huerta</option>
+                        <option value="Jesus De La Cruz Salgado">Jesus De La Cruz Salgado</option>
                         <option value="Jose Gomez Pardo">Jose Gomez Pardo</option>
                         <option value="Jose Roberto Marino Sanchez">Jose Roberto Marino Sanchez</option>
+                        <option value="Julian Grande Miguel">Julian Grande Miguel</option>
+                        <option value="Karen Guevara Serrano">Karen Guevara Serrano</option>
                         <option value="Leidy Vanessa Siachoque Gomez">Leidy Vanessa Siachoque Gomez</option>
                         <option value="Maria A. Rodriguez Mendoza">Maria A. Rodriguez Mendoza</option>
+                        <option value="Misael Mora Dionisio">Misael Mora Dionisio</option>
                         <option value="Mohamad Jamal Eddin">Mohamad Jamal Eddin</option>
                         <option value="Pamela Priscila Palacios Ortiz">Pamela Priscila Palacios Ortiz</option>
                         <option value="Paula Daniela Rodriguez Arciniegas">Paula Daniela Rodriguez Arciniegas</option>
@@ -107,12 +114,16 @@
                     <strong style="font-size:14px;">Servicio IC</strong>
                     <select name="servicio_ic" id="servicio_ic" class="form-control" style="font-size:14px;">
                     <option value="0">Seleccione...</option>
+                    <option value="Anestesiología">Anestesiología</option>
                     <option value="Cardiologia">Cardiología</option>
                     <option value="Cirugia">Cirugía</option>
+                    <option value="Coloproctología">Coloproctología</option>
                     <option value="Ginecologia Y Obstetricia">Ginecología Y Obstetricia</option>
+                    <option value="Hematología">Hematología</option>
                     <option value="Maxilofacial">Maxilofacial</option>
                     <option value="Neurocirugia">Neurocirugía </option>
                     <option value="Oftalmologia">Oftalmología</option>
+                    <option value="Oncocirugia">Oncocirugia</option>
                     <option value="Oncologia">Oncología</option>
                     <option value="Otorrinolaringologia">Otorrinolaringología</option>
                     <option value="Terapia Intensiva">Terapia Intensiva</option>

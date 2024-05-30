@@ -64,21 +64,28 @@
                     <strong style="font-size:14px;">Nombre Residente</strong>
                     <select name="nombre_residente" id="nombre_residente" class="form-control" style="font-size:14px;">
                         <option value="0"<?php if ($residente == '0') echo 'selected'; ?>>Seleccione...</option>
+                        <option value="Alejandra Sanchez Gil"<?php if ($residente == 'Alejandra Sanchez Gil') echo 'selected'; ?>>Alejandra Sanchez Gil</option>
                         <option value="Ana Libertad Salazar Trapala"<?php if ($residente == 'Ana Libertad Salazar Trapala') echo 'selected'; ?>>Ana Libertad Salazar Trapala</option>
                         <option value="Angelica Johana Perez Hernandez"<?php if ($residente == 'Angelica Johana Perez Hernandez') echo 'selected'; ?>>Angelica Johana Perez Hernandez</option>
                         <option value="Angelica Leal Camarrillo"<?php if ($residente == 'Angelica Leal Camarrillo') echo 'selected'; ?>>Angelica Leal Camarrillo</option>
                         <option value="Arturo Israel Jacinto Tovar"<?php if ($residente == 'Arturo Israel Jacinto Tovar') echo 'selected'; ?>>Arturo Israel Jacinto Tovar</option>
                         <option value="Brenda Mendoza Vega"<?php if ($residente == 'Brenda Mendoza Vega') echo 'selected'; ?>>Brenda Mendoza Vega</option>
                         <option value="Christian Mejia Herrera"<?php if ($residente == 'Christian Mejia Herrera') echo 'selected'; ?>>Christian Mejia Herrera</option>
+                        <option value="Emyli Marin Guzman"<?php if ($residente == 'Emyli Marin Guzman') echo 'selected'; ?>>Emyli Marin Guzman</option>
                         <option value="Ezequiel Betancourt Uriostegui"<?php if ($residente == 'Ezequiel Betancourt Uriostegui') echo 'selected'; ?>>Ezequiel Betancourt Uriostegui</option>
                         <option value="Gerardo Saavedra Jimenez"<?php if ($residente == 'Gerardo Saavedra Jimenez') echo 'selected'; ?>>Gerardo Saavedra Jimenez </option>
                         <option value="Hugo A. Silguero Rivera"<?php if ($residente == 'Hugo A. Silguero Rivera') echo 'selected'; ?>>Hugo A. Silguero Rivera</option>
                         <option value="Jacobo U. Mercado Estrada"<?php if ($residente == 'Jacobo U. Mercado Estrada') echo 'selected'; ?>>Jacobo U. Mercado Estrada</option>
+                        <option value="Jair Fernando Baños Bracho"<?php if ($residente == 'Jair Fernando Baños Bracho') echo 'selected'; ?>>Jair Fernando Baños Bracho</option>
                         <option value="Jennifer Arias Huerta"<?php if ($residente == 'Jennifer Arias Huerta') echo 'selected'; ?>>Jennifer Arias Huerta</option>
+                        <option value="Jesus De La Cruz Salgado"<?php if ($residente == 'Jesus De La Cruz Salgado') echo 'selected'; ?>>Jesus De La Cruz Salgado</option>
                         <option value="Jose Gomez Pardo"<?php if ($residente == 'Jose Gomez Pardo') echo 'selected'; ?>>Jose Gomez Pardo</option>
                         <option value="Jose Roberto Marino Sanchez"<?php if ($residente == 'Jose Roberto Marino Sanchez') echo 'selected'; ?>>Jose Roberto Marino Sanchez</option>
+                        <option value="Julian Grande Miguel"<?php if ($residente == 'Julian Grande Miguel') echo 'selected'; ?>>Julian Grande Miguel</option>
+                        <option value="Karen Guevara Serrano"<?php if ($residente == 'Karen Guevara Serrano') echo 'selected'; ?>>Karen Guevara Serrano</option>
                         <option value="Leidy Vanessa Siachoque Gomez"<?php if ($residente == 'Leidy Vanessa Siachoque Gomez') echo 'selected'; ?>>Leidy Vanessa Siachoque Gomez</option>
                         <option value="Maria A. Rodriguez Mendoza"<?php if ($residente == 'Maria A. Rodriguez Mendoza') echo 'selected'; ?>>Maria A. Rodriguez Mendoza</option>
+                        <option value="Misael Mora Dionisio"<?php if ($residente == 'Misael Mora Dionisio') echo 'selected'; ?>>Misael Mora Dionisio</option>
                         <option value="Mohamad Jamal Eddin"<?php if ($residente == 'Mohamad Jamal Eddin') echo 'selected'; ?>>Mohamad Jamal Eddin</option>
                         <option value="Pamela Priscila Palacios Ortiz"<?php if ($residente == 'Pamela Priscila Palacios Ortiz') echo 'selected'; ?>>Pamela Priscila Palacios Ortiz</option>
                         <option value="Paula Daniela Rodriguez Arciniegas"<?php if ($residente == 'Paula Daniela Rodriguez Arciniegas') echo 'selected'; ?>>Paula Daniela Rodriguez Arciniegas</option>
@@ -137,12 +144,16 @@
                     <strong style="font-size:14px;">Servicio IC</strong>
                     <select name="servicio_ic" id="servicio_ic" class="form-control" style="font-size:14px;">
                         <option value="0"<?php if ($servicio_inter == '0') echo 'selected'; ?>>Seleccione...</option>
+                        <option value="Anestesiología"<?php if ($servicio_inter == 'Anestesiología') echo 'selected'; ?>>Anestesiología</option>
                         <option value="Cardiologia"<?php if ($servicio_inter == 'Cardiologia') echo 'selected'; ?>>Cardiología</option>
                         <option value="Cirugia"<?php if ($servicio_inter == 'Cirugia') echo 'selected'; ?>>Cirugía</option>
+                        <option value="Coloproctología"<?php if ($servicio_inter == 'Coloproctología') echo 'selected'; ?>>Coloproctología</option>
                         <option value="Ginecologia Y Obstetricia"<?php if ($servicio_inter == 'Ginecologia Y Obstetricia') echo 'selected'; ?>>Ginecología Y Obstetricia</option>
+                        <option value="Hematología"<?php if ($servicio_inter == 'Hematología') echo 'selected'; ?>>Hematología</option>
                         <option value="Maxilofacial"<?php if ($servicio_inter == 'Maxilofacial') echo 'selected'; ?>>Maxilofacial</option>
                         <option value="Neurocirugia"<?php if ($servicio_inter == 'Neurocirugia') echo 'selected'; ?>>Neurocirugía </option>
                         <option value="Oftalmologia"<?php if ($servicio_inter == 'Oftalmologia') echo 'selected'; ?>>Oftalmología</option>
+                        <option value="Oncocirugia"<?php if ($servicio_inter == 'Oncocirugia') echo 'selected'; ?>>Oncocirugia</option>
                         <option value="Oncologia"<?php if ($servicio_inter == 'Oncologia') echo 'selected'; ?>>Oncología</option>
                         <option value="Otorrinolaringologia"<?php if ($servicio_inter == 'Otorrinolaringologia') echo 'selected'; ?>>Otorrinolaringología</option>
                         <option value="Terapia Intensiva"<?php if ($servicio_inter == 'Terapia Intensiva') echo 'selected'; ?>>Terapia Intensiva</option>
