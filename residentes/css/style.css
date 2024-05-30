@@ -94,7 +94,7 @@ footer {
   /*SCROLL BUSCADOR*/
   #patient-list-container {
     background-color: rgba(164, 76, 207, 0.5);
-    max-height: 465px; /* Altura máxima del div */
+    height: 60vh; /* Altura máxima del div */
     overflow-y: auto; /* Agrega scroll vertical si el contenido excede la altura máxima */
     padding: 10px; /* Espaciado opcional */
   }

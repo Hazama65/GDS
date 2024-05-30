@@ -6,13 +6,15 @@ const url = 'php/controllers/delete.controller.php';
 document.addEventListener('DOMContentLoaded', function () {
     // Función para eliminar un paciente
     const deletePaciente = async () => {
-        // Obtener el ID del paciente
-        const idResidente = document.getElementById('borrar_paciente').getAttribute("data-id-paciente");
-        const params = new URLSearchParams({ idResidente }).toString();
-        const fullUrl = `${url}?${params}`;
 
-        console.log(idResidente, fullUrl);
+        const result = await setAlerts.confirmDelete();
 
+
+        if (result.isConfirmed) {
+            const idResidente = document.getElementById('borrar_paciente').getAttribute("data-id-paciente");
+            const params = new URLSearchParams({ idResidente }).toString();
+            const fullUrl = `${url}?${params}`;
+        
         try {
             const response = await httpClients.get(fullUrl);
             console.log(response);
@@ -32,6 +34,10 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('Error de red o del servidor:', error);
             setAlerts.errorAlert('Error al Eliminar Paciente2: error de red o del servidor');
         }
+    }else if (result.dismiss === Swal.DismissReason.cancel) {
+        // El usuario ha cancelado la operación
+        setAlerts.warningAlert('Operación cancelada.');
+    }
     };
 
     // Asigna la función al evento click del botón de borrar paciente

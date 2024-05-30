@@ -90,7 +90,7 @@ include ("modal/productividad_residentes.php");
 
                                 // Genera un elemento de lista para cada paciente
                                 echo '<li class="patient-item" data-id-paciente="' . $id_residente . '">';
-                                echo $nombreResidente . ' / ' . $fecha ;
+                                echo $nombreResidente . ' / ' . $fecha;
                                 echo '<a href="editar_residentes.php?id=' . $id_residente . '">';
                                 echo '<button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Editar</button>';
                                 echo '</a>';
@@ -114,11 +114,12 @@ include ("modal/productividad_residentes.php");
             <div class="col-md-8">
                 <div class="container">
                     <div class="btn-group d-flex justify-content-end" role="group" aria-label="Basic example">
-                        <button id="borrar_paciente" style="display:none; margin-bottom: 10px;"" type="submit" class="btn btn-outline-danger">
-                            Borrar Paciente
+                        <button id="borrar_paciente" style="display:none; margin-bottom: 10px;"" type=" submit"
+                            class="btn btn-outline-danger">
+                            Borrar Registro
                         </button>
                     </div>
-                    <div id="tabla-seguimiento" style="height: 450px; overflow-y: auto; margin-bottom: 20px;"></div>
+                    <div id="tabla-seguimiento" style="height: 60vh; overflow-y: auto; margin-bottom: 20px;"></div>
                 </div>
             </div>
 
