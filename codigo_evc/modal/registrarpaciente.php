@@ -120,6 +120,7 @@
 
                     <div class="col-md-12" id="escala_nihss">
                         <i><a style="font-size: 14px; margin-top: 50px;" href="https://hraeigds.site/escalas/" target="_blank">Escala NIHSS</a></i>
+                        <i><a style="font-size: 14px; margin-top: 50px;" href="#" target="_blank">Instructivos</a></i>
                         <select name="nihss" id="nihss" class="form-control" style="font-size: 14px;" onchange="mostrarParametrosNihss()">
                             <option value="Seleccione">Seleccione</option>
                             <option value="1-4 Leve">1- 4 Leve</option>
@@ -164,8 +165,14 @@
                                     <option value="Cerebro">Cerebro</option>
                                     <option value="Encías">Encías</option>
                                     <option value="Genitourinario">Genitourinario</option>
+                                    <option value="Gastrico">Gastrico</option>
                                     <option value="Otro">Otro</option>
                                 </select>
+                            </div>
+
+                            <div class="col-md-12" id="fecha_sangrado_1" style="display: none;">
+                                <strong style="font-size: 14px; margin-top: 50px;">Fecha de Sangrado</strong>
+                                <input type="date" class="control form-control" id="fecha_sangrado" name="fecha_sangrado" style="font-size: 13px;">
                             </div>
 
                         </div>
