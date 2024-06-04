@@ -120,6 +120,11 @@ h5.bi {
     border-bottom: 1px solid #ddd;
     /* Borde inferior para separar pacientes */
 }
+
+#patient-list ul {
+    padding: 0px;
+}
+
 #patient-list li:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Cambia el valor según tu preferencia */
     background-color: rgba(155, 19, 19, 0.1); /* Cambia el color de fondo al pasar el mouse */
@@ -139,6 +144,12 @@ h5.bi {
     /* Espacio alrededor de la tabla */
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
     /* Sombra con desplazamiento horizontal de 0px, desplazamiento vertical de 0px, difuminado de 10px, sin propagación de la sombra y color negro con opacidad 0.3 */
+}
+.patient-action-select {
+    border-radius: 5px;
+    font-size: 12px;
+    width: auto;
+    /* Ajusta el ancho según tus necesidades */
 }
 
 .custom-header {

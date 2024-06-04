@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Seguimiento Código EVC</title>
+    <title>Seguimiento Código EVC (Rehabilitacion)</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
         </div>
 
 
-        <h5>Seguimiento Código EVC</h5>
+        <h5>Seguimiento Código EVC (Rehabilitacion)</h5>
         <div style="padding: 20px; text-align: right;">
             <button type="button" class="btn btn-outline-light" id="cerrar-sesion-button" title="Cerrar sesión">
                 <i class="bi bi-power"></i>
@@ -198,6 +198,64 @@
                         <option value="3 Incapacidad Moderada  Requiere alguna ayuda pero capaz de caminar sin ayuda.">3 Incapacidad Moderada Requiere alguna ayuda pero capaz de caminar sin ayuda.</option>
                         <option value="4 Incapacidad Moderadamente Severa. Incapaz de caminar sin ayuda e incapaz de realizar sus necesidades corporales sin ayuda">4 Incapacidad Moderadamente Severa. Incapaz de caminar sin ayuda e incapaz de realizar sus necesidades corporales sin ayuda</option>
                         <option value="5 Incapacidad Severa  Confinado a cama,incontinente y requiere cuidado constante.">5 Incapacidad Severa Confinado a cama,incontinente y requiere cuidado constante.</option>
+                    </select>
+                </div>
+
+                <div class="form-header">
+                    <h5 class="form-title" style="text-align: center;
+                            background-color:rgb(139, 93, 149,0.6);;
+                            color: aliceblue;
+                            margin-top:15px;
+                            font-size: 14px;">
+                        Motricity Index</h5>
+                </div>
+
+                <div class="col-md-6">
+                    <strong style="font-size: 14px; margin-top: 50px;">Seguimiento</strong>
+                    <select name="motricity_seg" id="Motricity_seg" class="form-control" style="font-size: 14px;">
+                        <option value="Seleccione">Seleccione</option>
+                        <option value="Mes">Mes</option>
+                        <option value="Tres Meses">Tres Meses</option>
+                        <option value="Seis Meses">Seis Meses</option>
+                        <option value="Un año">Un año</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <strong style="font-size: 14px;">Motricity Index </strong>
+                    <input type="number" step="any" class="form-control" id="motri" name="motri" style="font-size: 13px;">
+                </div>
+
+                <div class="form-header">
+                    <h5 class="form-title" style="text-align: center;
+                            background-color:rgb(237, 105, 127);
+                            color: aliceblue;
+                            margin-top:15px;
+                            font-size: 14px;">
+                        Marcha FAC</h5>
+                </div>
+
+                <div class="col-md-6">
+                    <strong style="font-size: 14px; margin-top: 50px;">Seguimiento</strong>
+                    <select name="marcha_seg" id="marcha_seg" class="form-control" style="font-size: 14px;">
+                        <option value="Seleccione">Seleccione</option>
+                        <option value="Mes">Mes</option>
+                        <option value="Tres Meses">Tres Meses</option>
+                        <option value="Seis Meses">Seis Meses</option>
+                        <option value="Un año">Un año</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <strong style="font-size: 14px; margin-top: 50px;">Marcha FAC</strong>
+                    <select name="marcha" id="marcha" class="form-control" style="font-size: 14px;">
+                        <option value="Seleccione">Seleccione</option>
+                        <option value="0 Sin deambulación">0 Sin deambulación</option>
+                        <option value="1 Deambulación funcional">1 Deambulación funcional</option>
+                        <option value="2 Deambulación Hogar">2 Deambulación Hogar</option>
+                        <option value="3 Deambulación cerca de casa">3 Deambulación cerca de casa</option>
+                        <option value="4 Independiente en la comunidad">4 Independiente en la comunidad</option>
+                        <option value="5 Normal">5 Normal</option>
                     </select>
                 </div>
     

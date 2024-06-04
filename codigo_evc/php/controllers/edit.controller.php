@@ -43,6 +43,7 @@
                 $tpa = $data['tpa'];
                 $sangrado = $data['sangrado'];
                 $nivel = $data['nivel'];
+                $fecha_sangrado = $data['fecha_sangrado'];
                 $evc = $data['evc'];
                 $hipertension = $data['hipertension'];
                 $diabetes = $data['diabetes'];
@@ -85,6 +86,9 @@
                 $fim = $data['fim'];
                 $barthel = $data['barthel'];
                 $rankin = $data['rankin'];
+                $motri = $data['motri'];
+                $marcha = $data['marcha'];
+                $agatha = $data['agatha'];
                 $deglucion = $data['deglucion'];
                 $lenguaje = $data['lenguaje'];
                 $motor = $data['motor'];

@@ -24,7 +24,7 @@ include("modal/registropaciente.php");
 
     <!-- Estilos CSS personalizados -->
     <link rel="stylesheet" href="css/styles.css">
-
+    <title>Notificación De Eventos</title>
 </head>
 
 <body>
@@ -62,6 +62,9 @@ include("modal/registropaciente.php");
                 <input type="text" id="search" placeholder="Buscar ...">
                 <ul id="patient-list">
 
+                <li class="patient-item" data-id-paciente="10">CHICO LOPEZ JESUS
+                    <a href="editar.php"><button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .60rem;"> Editar </button></a>
+                </li>
                 </ul>
 
             </div> <!-- cierre del <div id="patient-list-container">-->

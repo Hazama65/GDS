@@ -214,7 +214,12 @@ include('php/controllers/edit.controller.php');
                                 <option value="Otro"<?php if ($nivel == 'Otro') echo 'selected'; ?>>Otro</option>
                             </select>
                         </div>
-    
+                        <div class="col-md-12" id="fecha_sangrado_1" style="display: none;">
+                            <strong style="font-size: 14px; margin-top: 50px;">Fecha de Sangrado</strong>
+                            <input type="date" class="control form-control" id="fecha_sangrado"
+                                name="fecha_sangrado" style="font-size: 13px;" value="<?php echo $fecha_sangrado; ?>">
+                        </div>
+
                     </div>
                 </div>
     
@@ -547,7 +552,7 @@ include('php/controllers/edit.controller.php');
     
                     <div class="col-md-6">
                         <strong style="font-size: 14px; margin-top: 50px;">Barthel Inicial</strong>
-                        <select name="rankin" id="rankin" class="form-control" style="font-size: 14px;">
+                        <select name="bart" id="bart" class="form-control" style="font-size: 14px;">
                             <option value="Seleccione"<?php if ($barthel == 'Seleccione') echo 'selected'; ?>>Seleccione</option>
                             <option value="Menos de 20 dependencia Total"<?php if ($barthel == 'Menos de 20 dependencia Total') echo 'selected'; ?>>Menos de 20 dependencia Total </option>
                             <option value="20-35 Dependencia Severa"<?php if ($barthel == '20-35 Dependencia Severa') echo 'selected'; ?>>20-35 Dependencia Severa</option>
@@ -559,7 +564,7 @@ include('php/controllers/edit.controller.php');
     
                     <div class="col-md-6">
                         <strong style="font-size: 14px; margin-top: 50px;">RANKIN</strong>
-                        <select name="dependendcia_funcional" id="dependendcia_funcional" class="form-control"
+                        <select name="rank" id="rank" class="form-control"
                             style="font-size: 14px;">
                             <option value="Seleccione"<?php if ($rankin == 'Seleccione') echo 'selected'; ?>>Seleccione</option>
                             <option value="0 Sin Sintomas A pesar de sintomas  realiza actividades cotidianas."<?php if ($rankin == '0 Sin Sintomas A pesar de sintomas  realiza actividades cotidianas.') echo 'selected'; ?>>0 Sin
@@ -578,6 +583,30 @@ include('php/controllers/edit.controller.php');
                                 value="5 Incapacidad Severa  Confinado a cama,incontinente y requiere cuidado constante."<?php if ($rankin == '5 Incapacidad Severa  Confinado a cama,incontinente y requiere cuidado constante.') echo 'selected'; ?>>5
                                 Incapacidad Severa Confinado a cama,incontinente y requiere cuidado constante.</option>
                         </select>
+                    </div>
+                    <div class="col-md-12">
+                        <strong style="font-size: 14px;">Motricity Index </strong>
+                        <input type="number" step="any" class="form-control" id="motri" name="motri"
+                            style="font-size: 13px;" value="<?php echo $motri; ?>">
+                    </div>
+
+                    <div class="col-md-6">
+                        <strong style="font-size: 14px; margin-top: 50px;">Marcha FAC</strong>
+                        <select name="marcha" id="marcha" class="form-control" style="font-size: 14px;">
+                            <option value="Seleccione"<?php if ($marcha == 'Seleccione') echo 'selected'; ?>>Seleccione</option>
+                            <option value="0 Sin deambulación"<?php if ($marcha == '0 Sin deambulación') echo 'selected'; ?>>0 Sin deambulación</option>
+                            <option value="1 Deambulación funcional"<?php if ($marcha == '1 Deambulación funcional') echo 'selected'; ?>>1 Deambulación funcional</option>
+                            <option value="2 Deambulación Hogar"<?php if ($marcha == '2 Deambulación Hogar') echo 'selected'; ?>>2 Deambulación Hogar</option>
+                            <option value="3 Deambulación cerca de casa"<?php if ($marcha == '3 Deambulación cerca de casa') echo 'selected'; ?>>3 Deambulación cerca de casa</option>
+                            <option value="4 Independiente en la comunidad"<?php if ($marcha == '4 Independiente en la comunidad') echo 'selected'; ?>>4 Independiente en la comunidad</option>
+                            <option value="5 Normal"<?php if ($marcha == '5 Normal') echo 'selected'; ?>>5 Normal</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <strong style="font-size: 14px;">Agatha</strong>
+                        <input type="text" step="any" class="form-control" id="agatha" name="agatha"
+                            style="font-size: 13px;" value="<?php echo $agatha; ?>">
                     </div>
     
     
