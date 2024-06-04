@@ -10,7 +10,9 @@
             $table_fim             = 'fim_seguimiento',
             $table_barthel         = 'barthel',
             $table_nihss           = 'nihss_seguimiento',
-            $table_rankin          = 'rankin_seguimiento'
+            $table_rankin          = 'rankin_seguimiento',
+            $table_motri           = 'motri_seguimiento',
+            $table_marcha          = 'marcha_seguimiento'
         );
 
         $Data_seguimiento = array(
@@ -67,6 +69,26 @@
             $Data_rankin[$key] = $connectionDB->escapeString($value);
         }
         $Result_rankin = $connectionDB->insertData($Tables[4],$Data_rankin);
+
+        $Data_motri = array(
+            'motricity_seg'   => $_POST['motricity_seg'],
+            'motri'           => $_POST['motri'],
+            'id_seguimiento'  => $Result_seguimiento
+        );
+        foreach ($Data_motri as $key => $value) {
+            $Data_motri[$key] = $connectionDB->escapeString($value);
+        }
+        $Result_motri = $connectionDB->insertData($Tables[5],$Data_motri);
+
+        $Data_marcha = array(
+            'marcha_seg'      => $_POST['marcha_seg'],
+            'marcha'          => $_POST['marcha'],
+            'id_seguimiento'  => $Result_seguimiento
+        );
+        foreach ($Data_marcha as $key => $value) {
+            $Data_marcha[$key] = $connectionDB->escapeString($value);
+        }
+        $Result_marcha = $connectionDB->insertData($Tables[6],$Data_marcha);
         
         echo 'success';
     }

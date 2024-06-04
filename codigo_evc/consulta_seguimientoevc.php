@@ -111,6 +111,36 @@ include('php/controllers/consulta_seguimiento.controller.php');
                                 <td><?php echo $valor ; ?></td>
                             </tr>
 
+                            <tr>
+                                <th scope="col" style="background-color: rgb(180, 153, 186)">Motricity Index</th>
+                                <th scope="col" style="background-color: rgb(180, 153, 186)"> </th>
+                            </tr>
+
+                            <tr>
+                                <td class="estilo-celda">Seguimiento</td>
+                                <td><?php echo $motricity_seg ; ?> </td>
+                            </tr>
+
+                            <tr>
+                                <td class="estilo-celda">Nivel</td>
+                                <td><?php echo $motri ; ?></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="col" style="background-color: rgb(237, 105, 127)">Marcha FAC</th>
+                                <th scope="col" style="background-color: rgb(237, 105, 127)"> </th>
+                            </tr>
+
+                            <tr>
+                                <td class="estilo-celda">Seguimiento</td>
+                                <td><?php echo $marcha_seg ; ?> </td>
+                            </tr>
+
+                            <tr>
+                                <td class="estilo-celda">Nivel</td>
+                                <td><?php echo $marcha ; ?></td>
+                            </tr>
+
 
 
 

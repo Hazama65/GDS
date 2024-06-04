@@ -14,7 +14,9 @@ if (isset($_GET['valorSeleccionado']) && isset($_GET['textoSeleccionado'])) {
     LEFT JOIN barthel b ON DS.id_seguimiento = b.id_seguimiento
     LEFT JOIN nihss_seguimiento nihss ON DS.id_seguimiento = nihss.id_seguimiento
     LEFT JOIN rankin_seguimiento rankin ON DS.id_seguimiento = rankin.id_seguimiento
-    WHERE id_paciente = '$id_paciente' AND fecha_seg = '$fecha_seguimiento'";
+    LEFT JOIN motri_seguimiento motri ON DS.id_seguimiento = motri.id_seguimiento
+    LEFT JOIN marcha_seguimiento marcha ON DS.id_seguimiento = marcha.id_seguimiento
+    WHERE DS.id_paciente = '$id_paciente' AND DS.fecha_seg = '$fecha_seguimiento'";
 
     $data_seguimiento = $connectionDB->getRows($query_seguimiento);
 
@@ -34,7 +36,10 @@ if (isset($_GET['valorSeleccionado']) && isset($_GET['textoSeleccionado'])) {
             $escala = $data['escala'];
             $rankin_tiempo = $data['rankin_tiempo'];
             $valor = $data['valor'];
-
+            $motricity_seg = $data['motricity_seg'];
+            $motri = $data['motri'];
+            $marcha_seg = $data['marcha_seg'];
+            $marcha = $data['marcha'];
         }
     }else {
         echo "No se encontro la informacion";

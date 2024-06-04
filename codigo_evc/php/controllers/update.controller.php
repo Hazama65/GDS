@@ -46,11 +46,13 @@
 
 
         $update_Nihss = array(
-            'escala'       => $_POST['nihss'],
-            'trombolisis'  => $_POST['trombolisis1'],
-            'tpa'          => $_POST['vr_TPA_1'],
-            'sangrado'     => $_POST['sangrado'],
-            'nivel'        => $_POST['nivel']
+            'escala'         => $_POST['nihss'],
+            'trombolisis'    => $_POST['trombolisis1'],
+            'tpa'            => $_POST['vr_TPA_1'],
+            'sangrado'       => $_POST['sangrado'],
+            'nivel'          => $_POST['nivel'],
+            'fecha_sangrado' => $_POST['fecha_sangrado']
+
         );
 
         $connectionDB->updateData($Tables[2],$update_Nihss,$updateColum,$updateId);
@@ -121,8 +123,11 @@
             'df_nivel'     => $_POST['dependendcia_tipo'],
             'df'           => $_POST['dependendcia_funcional'],
             'fim'          => $_POST['fim_inicial'],
-            'barthel'      => $_POST['rankin'],
-            'rankin'       => $_POST['dependendcia_funcional']
+            'barthel'      => $_POST['bart'],
+            'rankin'       => $_POST['rank'],
+            'motri'        => $_POST['motri'],
+            'marcha'       => $_POST['marcha'],
+            'agatha'       => $_POST['agatha']
         );
 
         $connectionDB->updateData($Tables[7],$update_Escalas,$updateColum,$updateId);

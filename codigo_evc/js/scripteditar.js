@@ -175,6 +175,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Obtiene el elemento select y el div que se debe mostrar/ocultar
+    let fecha_s = document.getElementById("fecha_sangrado_1");
+    let sangrado = document.getElementById("sangrado");
+
+
+
+    // Agrega un evento de cambio al elemento select
+    sangrado.addEventListener("change", function () {
+        // Comprueba si se seleccionó "Si"
+        if (sangrado.value === "Si") {
+            // Muestra el div si se selecciona "Si"
+            fecha_s.style.display = "block";
+
+        } else {
+            // Oculta el div en caso contrario
+            fecha_s.style.display = "none";
+        }
+    });
+});
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const faceSelect = document.getElementById('Face');
