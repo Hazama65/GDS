@@ -175,7 +175,7 @@ background: linear-gradient(to right, #e81c4c, #71cdcc);
     display: inline;
     background: linear-gradient(to right, #FFFFFF, #FFFFFF);
     -webkit-background-clip: text;
-    color: transparent;
+    color: transparent;  
     margin-top: 15px;
     font-weight: bold;
     font-size: 24px;
