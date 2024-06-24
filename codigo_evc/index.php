@@ -17,7 +17,7 @@ include ("modal/registrarpaciente.php");
 
 <body>
     <header>
-        <h5 class="bi bi-heart-pulse-fill" style="color:#ffffff; margin-top: 15px;"> Clinica Stroke</h5>
+        <h5 class="bi bi-heart-pulse-fill" style="color:#ffffff; margin-top: 15px;"> Código EVC</h5>
         <br>
         <div style="padding: 20px; text-align: right;">
             <button type="button" class="btn btn-outline-light" id="cerrar-sesion-button" title="Cerrar sesión">
