@@ -87,11 +87,6 @@ require ('php/controllers/ver_personal.controller.php');
 
             </tr>
             <tr>
-              <td>Jornada Laboral</td>
-              <th><?php echo $jornada ?></th>
-
-            </tr>
-            <tr>
               <td>Servicio</td>
               <th><?php echo $servicio ?></th>
 

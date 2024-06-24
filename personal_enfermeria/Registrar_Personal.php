@@ -113,8 +113,8 @@ require ('php/controllers/datos.controller.php');
                   </select>
                 </div>
 
-                <div class="col-md-4">
-                  <strong>Turno</strong>
+                <div class="col-md-8">
+                  <strong>Turno - Jornada laboral</strong>
                   <select class="form-control" name="Turno" id="Turno" required>
                     <option value="">Seleccione</option>
                     <?php
@@ -127,11 +127,6 @@ require ('php/controllers/datos.controller.php');
                     }
                     ?>
                   </select>
-                </div>
-
-                <div class="col-md-4">
-                  <strong>Jornada laboral</strong>
-                  <input type="text" class="form-control" id="Jornada" name="Jornada" required>
                 </div>
 
                 <div class="col-md-4">

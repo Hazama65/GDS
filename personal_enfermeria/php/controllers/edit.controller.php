@@ -42,7 +42,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             $onomastico = $data['onomastico'];
             $ayo_curso = $data['ayo_curso'];
             $turno = $data['turno'];
-            $jornada = $data['jornada'];
             $servicio = $data['servicio'];
             $grado_tecnico = $data['grado_tecnico'];
             $cedula_tecnico = $data['cedula_tecnico'];

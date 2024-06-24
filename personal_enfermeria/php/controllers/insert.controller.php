@@ -58,7 +58,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             'onomastico'            => $_POST['onomastico'],
             'ayo_curso'             => $_POST['ayo_curso'],
             'Turno'                 => $_POST['Turno'],
-            'Jornada'               => $_POST['Jornada'],
             'Servicio'              => $_POST['Servicio'],
             'foto'                  => $ruta_final,
             'informacion_academica' => $Result_informacion_academica

@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 
     $query = "SELECT dp.id_enfermero,dp.apellidoPaterno,dp.apellidoMaterno,dp.nombre,dp.noempleado,dp.tipocontrato,dp.codigo,
-    p.puesto,dp.fechaIngreso,dp.onomastico,dp.ayo_curso,t.turno,dp.jornada,s.servicio,dp.foto,ia.*
+    p.puesto,dp.fechaIngreso,dp.onomastico,dp.ayo_curso,t.turno,s.servicio,dp.foto,ia.*
         FROM datos_personal dp
         JOIN puesto p ON dp.puesto = p.id_puesto
         JOIN servicio s ON dp.servicio = s.id_servicio
@@ -36,7 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             $onomastico = $data['onomastico'];
             $ayo_curso = $data['ayo_curso'];
             $turno = $data['turno'];
-            $jornada = $data['jornada'];
             $servicio = $data['servicio'];
             $foto = $data['foto'];
             $grado_tecnico = $data['grado_tecnico'];
