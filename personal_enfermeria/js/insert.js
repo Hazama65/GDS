@@ -11,45 +11,48 @@ export const mainForm = () => {
         event.preventDefault();
         let formData = new FormData(this);
 
-        // Obtener el archivo
-        let file = formData.get('foto');
-        if (file) {
-            // Verificar tipo de archivo
-            const validFileTypes = ['image/jpeg', 'image/png', 'image/jpg'];
-            if (!validFileTypes.includes(file.type)) {
-                return setAlerts.errorAlert('El archivo debe ser una imagen (jpg, jpeg, png).');
-            }
-
-            // Verificar tamaño del archivo
-            if (file.size > maxFileSize) {
-                return setAlerts.errorAlert('El archivo debe ser menor a 5 MB.');
-            }
-
-            // Obtener los valores de nombre y apellidos del formulario
-            let apellidoPaterno = formData.get('apellidoPaterno');
-            let apellidoMaterno = formData.get('apellidoMaterno');
-            let nombre = formData.get('nombre');
-
-            // Obtener el nombre original del archivo
-            let fileName = file.name;
-
-            // Obtener la extensión del archivo
-            let fileExtension = fileName.split('.').pop();
-
-            // Construir un nuevo nombre de archivo usando los valores del formulario
-            let newFileName = `${apellidoPaterno}_${apellidoMaterno}_${nombre}.${fileExtension}`;
-
-            // Cambiar el nombre del archivo en el FormData
-            formData.set('foto', file, newFileName);
-        }
-
-        // Mostrar los datos de FormData en la consola
         for (let [key, value] of formData.entries()) {
             console.log(key, value);
         }
+        // // Obtener el archivo
+        // let file = formData.get('foto');
+        // if (file) {
+        //     // Verificar tipo de archivo
+        //     const validFileTypes = ['image/jpeg', 'image/png', 'image/jpg'];
+        //     if (!validFileTypes.includes(file.type)) {
+        //         return setAlerts.errorAlert('El archivo debe ser una imagen (jpg, jpeg, png).');
+        //     }
 
-        showLoadingOverlay();
-        validation(formData);
+        //     // Verificar tamaño del archivo
+        //     if (file.size > maxFileSize) {
+        //         return setAlerts.errorAlert('El archivo debe ser menor a 5 MB.');
+        //     }
+
+        //     // Obtener los valores de nombre y apellidos del formulario
+        //     let apellidoPaterno = formData.get('apellidoPaterno');
+        //     let apellidoMaterno = formData.get('apellidoMaterno');
+        //     let nombre = formData.get('nombre');
+
+        //     // Obtener el nombre original del archivo
+        //     let fileName = file.name;
+
+        //     // Obtener la extensión del archivo
+        //     let fileExtension = fileName.split('.').pop();
+
+        //     // Construir un nuevo nombre de archivo usando los valores del formulario
+        //     let newFileName = `${apellidoPaterno}_${apellidoMaterno}_${nombre}.${fileExtension}`;
+
+        //     // Cambiar el nombre del archivo en el FormData
+        //     formData.set('foto', file, newFileName);
+        // }
+
+        // // Mostrar los datos de FormData en la consola
+        // for (let [key, value] of formData.entries()) {
+        //     console.log(key, value);
+        // }
+
+        // showLoadingOverlay();
+        // validation(formData);
     });
 }
 

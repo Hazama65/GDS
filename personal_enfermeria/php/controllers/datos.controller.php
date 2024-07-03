@@ -12,8 +12,5 @@ $data_puesto = $connectionDB->getRows($query_puesto);
 $query_servicio = "SELECT * FROM servicio";
 $data_servicio = $connectionDB->getRows($query_servicio);
 
-$query_turno = "SELECT * FROM turno";
-$data_turno = $connectionDB->getRows($query_turno);
-
 
 ?>

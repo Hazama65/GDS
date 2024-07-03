@@ -196,3 +196,11 @@ body {
     stroke-dashoffset: 0;
   }
 }
+
+
+.tabla-datos {
+  width: 100%;
+  border-collapse: collapse; /* Colapsar los bordes de la tabla */
+  margin-top: 20px; /* Margen superior de 20px */
+  margin-bottom: 20px; /* Margen inferior de 20px */
+}

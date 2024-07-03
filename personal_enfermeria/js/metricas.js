@@ -15,7 +15,7 @@ $.ajax({
         // Llamar a la función para crear la gráfica de barras con los datos preparados
         crearGraficaBarras(chartData);
 
-        
+
         // Asignar valores directamente a las celdas de la tabla
         $('#recuento-jornada').text(data.conteo_turnos.jornada[0][0] || "0");
         $('#recuento-matutino').text(data.conteo_turnos.matutino[0][0] || "0");
@@ -149,4 +149,23 @@ function crearGraficaBarras(data) {
     // Make stuff animate on load
     series.appear(1000);
     chart.appear(1000, 100);
+}
+
+const exportToExcel = (tableId) => {
+    // Obtener la tabla DOM
+    let tabla = document.getElementById(tableId);
+
+    // Crear un nuevo libro de Excel
+    let workbook = XLSX.utils.book_new();
+
+    // Convertir la tabla a una hoja de Excel
+    let ws = XLSX.utils.table_to_sheet(tabla);
+
+    // Agregar la hoja al libro
+    XLSX.utils.book_append_sheet(workbook, ws, "Datos");
+
+    // Generar el archivo Excel y guardarlo
+    let date = new Date();
+    let filename = "Resumen Personal por Servicio y Turno" + date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + ".xlsx";
+    XLSX.writeFile(workbook, filename);
 }

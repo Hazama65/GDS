@@ -12,6 +12,7 @@ require ('php/controllers/datos.controller.php');
   <link href="css/styles.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+
 </head>
 
 <body>
@@ -38,19 +39,77 @@ require ('php/controllers/datos.controller.php');
               <div class="row">
 
                 <div class="col-md-4">
+                  <strong>CURP</strong>
+                  <input type="text" class="form-control" id="curp" name="curp" required>
+                </div>
+                <div class="col-md-4">
                   <strong>Apellido Paterno</strong>
                   <input type="text" class="form-control" id="apellidoPaterno" name="apellidoPaterno" required>
                 </div>
-
                 <div class="col-md-4">
                   <strong>Apellido Materno</strong>
                   <input type="text" class="form-control" id="apellidoMaterno" name="apellidoMaterno" required>
                 </div>
-
                 <div class="col-md-4">
                   <strong>Nombre(s)</strong>
                   <input type="text" class="form-control" id="nombre" name="nombre" required>
                 </div>
+                <div class="col-md-4">
+                  <strong>Género</strong>
+                  <input type="text" class="form-control" id="genero" name="genero" readonly>
+                </div>
+                <div class="col-md-4">
+                  <strong>Onomástico</strong>
+                  <input type="date" class="form-control" id="onomastico" name="onomastico" readonly>
+                </div>
+                <div class="col-md-4">
+                  <strong>Edad</strong>
+                  <input type="text" class="form-control" id="edad" name="edad" readonly>
+                </div>
+                <div class="col-md-4">
+                  <strong>RFC </strong>
+                  <input type="text" class="form-control" id="RFC" name="RFC" required>
+                </div>
+
+              </div> <br>
+
+              <div class="row">
+
+                <div class="col-md-4">
+                  <strong>Contacto Emergencia</strong>
+                  <select id="contacto_emergencia" name="contacto_emergencia" class="control form-control" required>
+                    <option value="Sin seleccion">Seleccione...</option>
+                    <option value="Padre / Madre">Padre / Madre</option>
+                    <option value="Hermano (a)">Hermano (a)</option>
+                    <option value="Esposo (a)">Esposo (a)</option>
+                    <option value="Hijo (a)">Hijo (a)</option>
+                    <option value="Otro">Otro</option>
+                  </select>
+                </div>
+
+                <div class="col-md-4">
+                  <strong>Nombre Contacto Emergencia</strong>
+                  <input type="text" class="form-control" id="contacto" name="contacto" required>
+                </div>
+
+
+
+                <div class="col-md-4">
+                  <strong>No. Contacto Emergencia</strong>
+                  <input type="number" class="form-control" id="no_contacto_emergencia" name="no_contacto_emergencia"
+                    placeholder="5558585767" required>
+                </div>
+
+
+
+              </div><br>
+
+
+              <div class="title">
+                <h6 class="bi bi-person-vcard"> Información Contrato</h6>
+              </div> <br>
+
+              <div class="row">
 
                 <div class="col-md-4">
                   <strong>No. Empleado</strong>
@@ -59,8 +118,7 @@ require ('php/controllers/datos.controller.php');
 
                 <div class="col-md-4">
                   <strong>Tipo de Contrato:</strong>
-                  <select id="tipocontrato" name="tipocontrato" class="control form-control" style="font-size: 13px;"
-                    required>
+                  <select id="tipocontrato" name="tipocontrato" class="control form-control" required>
                     <option value="Sin seleccion">Seleccione...</option>
                     <option value="Base">Base</option>
                     <option value="Confianza">Confianza</option>
@@ -95,10 +153,6 @@ require ('php/controllers/datos.controller.php');
                   <input type="date" class="form-control" id="fechaIngreso" name="fechaIngreso" required>
                 </div>
 
-                <div class="col-md-4">
-                  <strong>Onomástico</strong>
-                  <input type="date" class="form-control" id="onomastico" name="onomastico" required>
-                </div>
 
                 <div class="col-md-4">
                   <strong>Año En Curso</strong>
@@ -112,21 +166,52 @@ require ('php/controllers/datos.controller.php');
                     <option value="2026-2">2026-2</option>
                   </select>
                 </div>
+                
+                <div class="col-md-4">
+                  <strong>Turno</strong>
+                  <select class="form-control" name="turno" id="turno" required>
+                    <option value="">Seleccione</option>
+                    <option value="Matutino">Matutino</option>
+                    <option value="Vespertino">Vespertino</option>
+                    <option value="Nocturno">Nocturno</option>
+                    <option value="Jornada">Jornada Especial</option>
+                  </select>
+                </div>
+
 
                 <div class="col-md-8">
-                  <strong>Turno - Jornada laboral</strong>
-                  <select class="form-control" name="Turno" id="Turno" required>
-                    <option value="">Seleccione</option>
-                    <?php
-                    if (!empty($data_turno)) {
-                      foreach ($data_turno as $row1) {
-                        echo "<option value='" . $row1["id_turno"] . "'>" . $row1["turno"] . "</option>";
-                      }
-                    } else {
-                      echo "<option value=''>No hay datos disponibles</option>";
-                    }
-                    ?>
-                  </select>
+                  <strong>Días laborales</strong>
+                  <div class="checkbox-container">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="lunes" name="lunes" value="Lunes">
+                      <label class="form-check-label" for="lunes">Lunes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="martes" name="martes" value="Martes">
+                      <label class="form-check-label" for="martes">Martes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="miercoles" name="miercoles" value="Miércoles">
+                      <label class="form-check-label" for="miercoles">Miércoles</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="jueves" name="jueves" value="Jueves">
+                      <label class="form-check-label" for="jueves">Jueves</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="viernes" name="viernes" value="Viernes">
+                      <label class="form-check-label" for="viernes">Viernes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="sabado" name="sabado" value="Sábado">
+                      <label class="form-check-label" for="sabado">Sábado</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="domingo" name="domingo" value="Domingo">
+                      <label class="form-check-label" for="domingo">Domingo</label>
+                    </div>
+
+                  </div>
                 </div>
 
                 <div class="col-md-4">
@@ -158,8 +243,8 @@ require ('php/controllers/datos.controller.php');
                     style="max-width: 70%; max-height: 200px;">
                 </div>
 
-              </div><br>
 
+              </div> <br>
 
               <div class="title">
                 <h6 class="bi bi-mortarboard-fill"> Información Académica</h6>
@@ -217,14 +302,79 @@ require ('php/controllers/datos.controller.php');
                   <input type="number" class="form-control" id="cedula_maestria" name="cedula_maestria">
                 </div>
 
+                <div class="col-md-8">
+                  <strong>Doctorado</strong>
+                  <input type="text" class="form-control" id="grado_doctorado" name="grado_doctorado">
+                </div>
+
+                <div class="col-md-4">
+                  <strong>Cédula</strong>
+                  <input type="number" class="form-control" id="cedula_doctorado" name="cedula_doctorado">
+                </div>
+
+                <div class="col-md-3">
+                  <strong>Colegiación</strong>
+                  <select class="form-control" name="colegiacion" id="colegiacion" required
+                    onchange="habilitarCampos('colegiacion')">
+                    <option value="">Seleccione</option>
+                    <option value="Si">Sí</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+
+                <div class="col-md-3">
+                  <strong>Fecha Expedición</strong>
+                  <input type="date" class="form-control" id="fechaExpedicion_colegiacion"
+                    name="fechaExpedicion_colegiacion" required disabled>
+                </div>
+
+                <div class="col-md-3">
+                  <strong>Vigencia Colegiación</strong>
+                  <input type="date" class="form-control" id="fechaVigencia_colegiacion"
+                    name="fechaVigencia_colegiacion" readonly disabled>
+                </div>
+
+                <div class="col-md-3">
+                  <strong>Estatus Colegiación</strong>
+                  <input type="text" class="form-control" id="estatus_colegiacion" name="estatus_colegiacion" readonly>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-3">
+                  <strong>Certificación</strong>
+                  <select class="form-control" name="certificacion" id="certificacion" required
+                    onchange="habilitarCampos('certificacion')">
+                    <option value="">Seleccione</option>
+                    <option value="Si">Sí</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+
+                <div class="col-md-3">
+                  <strong>Fecha Certificación</strong>
+                  <input type="date" class="form-control" id="fechaExpedicion_certificacion"
+                    name="fechaExpedicion_certificacion" required disabled>
+                </div>
+
+                <div class="col-md-3">
+                  <strong>Vigencia Certificación</strong>
+                  <input type="date" class="form-control" id="fechaVigencia_certificacion"
+                    name="fechaVigencia_certificacion" readonly disabled>
+                </div>
+
+                <div class="col-md-3">
+                  <strong>Estatus Certificación</strong>
+                  <input type="text" class="form-control" id="estatus_certificacion" name="estatus_certificacion"
+                    readonly>
+                </div>
+
                 <div class="col-md-12">
                   <strong>Observaciones</strong>
                   <input type="text" class="form-control" id="observaciones" name="observaciones">
                 </div>
 
               </div>
-
-
 
               <br>
               <div class="text-right"> <!-- Agregamos la clase text-right para alinear el contenido a la derecha -->
@@ -249,6 +399,8 @@ require ('php/controllers/datos.controller.php');
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/curp.js"></script>
+
 
 
   <script type="module">
