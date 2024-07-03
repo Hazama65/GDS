@@ -15,7 +15,7 @@ include ('php/controllers/edit.controller.php');
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Seguimiento Código EVC (Neurologia)</title>
+    <title>Seguimiento Clínica EVC (Neurologia)</title>
 </head>
 
 <body>

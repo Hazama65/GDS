@@ -8,16 +8,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Clínica Stroke</title>
+    <title>Clínica EVC</title>
 </head>
 
 <body>
     <header>
         <h5 class="bi bi-heart-pulse-fill" style="color:#ffffff; margin-top: 15px;"> Clínica EVC</h5>
     </header>
-    <br>    
+    <br>
     <div class="container">
-        <img src="img/nish.jpg" alt="">
+        <div class="row">
+            <img src="img/escalaGOSE.jpg" alt="">
+        </div>
     </div>
 
 </body>
