@@ -37,13 +37,13 @@ header a {
     /* Aumenta el tamaño de la letra */
 }
 
-.estilomodal  {
-    
+.estilomodal {
+
     background: linear-gradient(to right, #ec2f4bbb, #009dff93);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.estilomodal h1{
+.estilomodal h1 {
     display: inline;
     background: linear-gradient(to right, #FFFFFF, #FFFFFF);
     -webkit-background-clip: text;
@@ -54,6 +54,7 @@ header a {
 
 
 }
+
 .patient-item {
     display: flex;
     justify-content: space-between;
@@ -67,7 +68,7 @@ header a {
 footer {
     background: #009FFF;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right,#48030e, #721b2f);
+    background: -webkit-linear-gradient(to right, #48030e, #721b2f);
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #48030e, #721b2f);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -126,8 +127,10 @@ h5.bi {
 }
 
 #patient-list li:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Cambia el valor según tu preferencia */
-    background-color: rgba(155, 19, 19, 0.1); /* Cambia el color de fondo al pasar el mouse */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Cambia el valor según tu preferencia */
+    background-color: rgba(155, 19, 19, 0.1);
+    /* Cambia el color de fondo al pasar el mouse */
 }
 
 #patient-list li:last-child {
@@ -145,6 +148,7 @@ h5.bi {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
     /* Sombra con desplazamiento horizontal de 0px, desplazamiento vertical de 0px, difuminado de 10px, sin propagación de la sombra y color negro con opacidad 0.3 */
 }
+
 .patient-action-select {
     border-radius: 5px;
     font-size: 12px;
@@ -226,7 +230,8 @@ h5.bi {
 
 .loading svg polyline {
     fill: none;
-    stroke-width: 6; /* Aumentar el grosor de la línea */
+    stroke-width: 6;
+    /* Aumentar el grosor de la línea */
     stroke-linecap: round;
     stroke-linejoin: round;
 }
@@ -239,7 +244,8 @@ h5.bi {
 .loading svg polyline#front {
     fill: none;
     stroke: #fb3437;
-    stroke-dasharray: 96, 288; /* Ajustar la longitud del dasharray y el dashoffset */
+    stroke-dasharray: 96, 288;
+    /* Ajustar la longitud del dasharray y el dashoffset */
     stroke-dashoffset: 384;
     animation: dash_682 1.4s linear infinite;
 }
@@ -252,4 +258,139 @@ h5.bi {
     to {
         stroke-dashoffset: 0;
     }
+}
+
+.responsive-img {
+    max-width: 50%;
+    /* Ajusta el tamaño según tu necesidad */
+    height: auto;
+}
+
+form {
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+.content {
+	width: 95%;
+	padding: 1em;
+	box-sizing: border-box;
+	float: left;
+}
+
+fieldset {
+    padding: 1em;
+    border-color: #d4d4d4;
+    border-style: solid;
+    border-width: 1px;
+    background: #fff;
+    border-radius: 10px; /* Cambia este valor según tu preferencia */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajusta estos valores según tu preferencia */
+}
+
+
+
+/* Estilos para checkboxes */
+input[type="checkbox"] + label {
+    color: rgb(98, 96, 96);
+    font-weight: bold;
+    line-height: 3em;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label {
+    color: rgb(31, 31, 32);
+}
+
+input[type="checkbox"] + label:before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    float: left;
+    margin: 0.5em 0.5em 0 0;
+    border: 2px solid #43464b;
+    background: #fff;
+}
+
+input[type="checkbox"]:checked + label:before {
+    border-color: #0fbf12;
+}
+
+input[type="checkbox"]:checked + label:after {
+    content: "";
+    width: 12px;
+    height: 6px;
+    border: 4px solid #0fbf12;
+    float: left;
+    margin-left: -1.95em;
+    border-right: 0;
+    border-top: 0;
+    margin-top: 1em;
+    border-radius: 100%;
+    transform: rotate(-55deg);
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + label:before,
+input[type="radio"]:checked + label:before {
+    border-color: #0fbf12;
+}
+
+input[type="checkbox"]:checked:disabled + label,
+input[type="radio"]:checked:disabled + label {
+    background: #ccc;
+    color: #fff !important;
+}
+
+input[type="checkbox"]:checked:disabled + label:before,
+input[type="radio"]:checked:disabled + label:before {
+    border-color: #bdbdbd;
+}
+
+
+/* Estilos para radio buttons */
+input[type="radio"] + label {
+    color: rgb(86, 82, 82);
+    font-weight: bold;
+    line-height: 3em;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+    color: rgb(17, 17, 17);
+}
+
+input[type="radio"] + label:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 0.5em 0.5em 0 0;
+    border: 2px solid #ccc;
+    background: #fff;
+    border-radius: 100%;
+}
+
+
+input[type="radio"]:checked + label:before {
+    border-color: #0fbf12;
+    background: #0fbf12;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + label:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 6px solid #0fbf12;
+    float: left;
+    margin-left: -1.8em;
+    margin-top: 0.8em;
+    border-radius: 100%;
 }

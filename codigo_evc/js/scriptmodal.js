@@ -169,7 +169,8 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             // Oculta el div en caso contrario
             divElement.style.display = "none";
-            divSangrado.style.display = "none";        }
+            divSangrado.style.display = "none";
+        }
     });
 });
 
@@ -195,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const faceSelect = document.getElementById('Face');
     const armsSelect = document.getElementById('arms');
     const speechSelect = document.getElementById('speech');
@@ -218,15 +219,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Asignar evento de cambio a cada selector
-    faceSelect.addEventListener('change', function() {
+    faceSelect.addEventListener('change', function () {
         cambiarEstiloTexto(this);
     });
 
-    armsSelect.addEventListener('change', function() {
+    armsSelect.addEventListener('change', function () {
         cambiarEstiloTexto(this);
     });
 
-    speechSelect.addEventListener('change', function() {
+    speechSelect.addEventListener('change', function () {
         cambiarEstiloTexto(this);
     });
 });
@@ -333,3 +334,173 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    let selectFace = document.getElementById("Face");
+
+    selectFace.addEventListener("change", function () {
+        if (selectFace.value === "Normal") {
+            selectFace.style.backgroundColor = "rgb(176, 247, 184)";
+        } else if (selectFace.value === "Alterado") {
+            selectFace.style.backgroundColor = "rgb(255, 101, 101)";
+        } else {
+            selectFace.style.backgroundColor = "";
+        }
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    let selectFace = document.getElementById("arms");
+
+    selectFace.addEventListener("change", function () {
+        if (selectFace.value === "Normal") {
+            selectFace.style.backgroundColor = "rgb(176, 247, 184)";
+        } else if (selectFace.value === "Alterado") {
+            selectFace.style.backgroundColor = "rgb(255, 101, 101)";
+        } else {
+            selectFace.style.backgroundColor = "";
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    let selectFace = document.getElementById("speech");
+
+    selectFace.addEventListener("change", function () {
+        if (selectFace.value === "Normal") {
+            selectFace.style.backgroundColor = "rgb(176, 247, 184)";
+        } else if (selectFace.value === "Alterado") {
+            selectFace.style.backgroundColor = "rgb(255, 101, 101)";
+        } else {
+            selectFace.style.backgroundColor = "";
+        }
+    });
+});
+
+
+// Calcular Escala HAS-BLED
+
+function calcularPuntuacion() {
+    let checkboxes = document.querySelectorAll('#Alcoholismo_HAS, #Hipertension_HAS, #funcionrenal_HAS, #funcionhepatica_HAS, #ACVPREV_HAS, #Hemorragiaimportante_HAS, #EdadSup_HAS, #INR_HAS, #medicacionaines_HAS');
+    let puntuacion = 0;
+
+    checkboxes.forEach(function (checkbox) {
+        if (checkbox.checked) {
+            puntuacion += parseInt(checkbox.value);
+        }
+    });
+
+    document.getElementById('puntuacion_has').value = puntuacion;
+
+    // Determinar la interpretación basada en la puntuación
+    if (puntuacion === 1) {
+        document.getElementById('interpretacion_has').value = 'Riesgo Bajo (Probabilidad de sangrado en un año entre el 1.02 y el 1.5 %)';
+    } else if (puntuacion === 2) {
+        document.getElementById('interpretacion_has').value = 'Riesgo Intermedio (Probabilidad de sangrado en un año entre 1.88 y 3.2 %)';
+    } else if (puntuacion >= 3 && puntuacion <= 9) {
+        document.getElementById('interpretacion_has').value = 'Riesgo Alto (Probabilidad de sangrado en un año entre el 4.9 y el 19.6 %)';
+    } else {
+        document.getElementById('interpretacion_has').value = ''; // Manejar otros casos si es necesario
+    }
+}
+
+// Event listener para los checkboxes específicos
+document.addEventListener('DOMContentLoaded', function () {
+    let checkboxes = document.querySelectorAll('#Alcoholismo_HAS, #Hipertension_HAS, #funcionrenal_HAS, #funcionhepatica_HAS, #ACVPREV_HAS, #Hemorragiaimportante_HAS, #EdadSup_HAS, #INR_HAS, #medicacionaines_HAS');
+
+    checkboxes.forEach(function (checkbox) {
+        checkbox.addEventListener('change', function () {
+            calcularPuntuacion();
+        });
+    });
+});
+
+// Event listener para los checkboxes específicos
+document.addEventListener('DOMContentLoaded', function () {
+    let checkboxes = document.querySelectorAll('#Alcoholismo_HAS, #Hipertension_HAS, #funcionrenal_HAS, #funcionhepatica_HAS, #ACVPREV_HAS, #Hemorragiaimportante_HAS, #EdadSup_HAS, #INR_HAS, #medicacionaines_HAS');
+
+    checkboxes.forEach(function (checkbox) {
+        checkbox.addEventListener('change', function () {
+            calcularPuntuacionHAS();
+        });
+    });
+});
+
+
+// Calcular CHADS2-VAS Score
+
+function calcularPuntuacionCHADS2VASc() {
+    let puntuacion = 0;
+
+    // Sumar puntos de los radios
+    let radiosEdad = document.querySelectorAll('input[name="edad"]:checked');
+    if (radiosEdad.length > 0) {
+        puntuacion += parseInt(radiosEdad[0].value);
+    }
+
+    let radiosSexo = document.querySelectorAll('input[name="sexo"]:checked');
+    if (radiosSexo.length > 0) {
+        puntuacion += parseInt(radiosSexo[0].value);
+    }
+
+    // Sumar puntos de los checkboxes
+    let checkboxes = document.querySelectorAll('#Historia_insuf, #Diabetes_VC, #ACV_AIT, #HISTO_EVC, #HIPER_ACTUAL');
+    checkboxes.forEach(function (checkbox) {
+        if (checkbox.checked) {
+            puntuacion += parseInt(checkbox.value);
+        }
+    });
+
+    document.getElementById('puntuacion_VASc').value = puntuacion;
+
+    // Determinar la interpretación y el riesgo AVC basado en la puntuación
+    let interpretacion = '';
+    let riesgoAVC = '';
+
+    if (puntuacion <= 1) {
+        interpretacion = 'Riesgo bajo. Puede no requerir anticoagulación';
+        riesgoAVC = 'Menor de 1.3%';
+    } else if (puntuacion == 2) {
+        interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
+        riesgoAVC = '2.2%';
+    } else if (puntuacion == 3) {
+        interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
+        riesgoAVC = '3.2%';
+    } else if (puntuacion == 4) {
+        interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
+        riesgoAVC = '4.0%';
+    } else if (puntuacion == 5) {
+        interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
+        riesgoAVC = '6.7%';
+    } else if (puntuacion == 6) {
+        interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
+        riesgoAVC = '9.8%';
+    } else if (puntuacion == 7) {
+        interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
+        riesgoAVC = '9.6%';
+    } else if (puntuacion == 8) {
+        interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
+        riesgoAVC = '10.8%';
+    } else if (puntuacion == 9) {
+        interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
+        riesgoAVC = '15.2%';
+    } else {
+        interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
+        riesgoAVC = ''; // Manejar otros casos si es necesario
+    }
+
+    document.getElementById('interpretacion_VASc').value = interpretacion;
+    document.getElementById('riesgo_VASc').value = riesgoAVC;
+}
+
+// Event listener para los radios y checkboxes
+document.addEventListener('DOMContentLoaded', function () {
+    let radiosYCheckboxes = document.querySelectorAll('input[type="radio"], input[type="checkbox"]');
+
+    radiosYCheckboxes.forEach(function (element) {
+        element.addEventListener('change', function () {
+            calcularPuntuacionCHADS2VASc();
+        });
+    });
+});

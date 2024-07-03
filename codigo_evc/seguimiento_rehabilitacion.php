@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Seguimiento Código EVC (Rehabilitacion)</title>
+    <title>Seguimiento Clínica EVC (Rehabilitacion)</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
         </div>
 
 
-        <h5>Seguimiento Código EVC (Rehabilitacion)</h5>
+        <h5>Seguimiento Clínica EVC (Rehabilitacion)</h5>
         <div style="padding: 20px; text-align: right;">
             <button type="button" class="btn btn-outline-light" id="cerrar-sesion-button" title="Cerrar sesión">
                 <i class="bi bi-power"></i>
