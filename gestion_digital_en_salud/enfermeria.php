@@ -52,6 +52,11 @@
                 <br>
                 <a href="../login/index.php" class="btn btn-success">Censo Urgencias</a>
             </div>
+            <div class="card">
+                <img src="img/personal_enf.jpg" alt="Imagen 1">
+                <br>
+                <a href="../personal_enfermeria/index.php" class="btn btn-success">Plantilla de Enfermería</a>
+            </div>
 
         </div>
 

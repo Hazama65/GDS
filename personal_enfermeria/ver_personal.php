@@ -29,30 +29,32 @@ require ('php/controllers/ver_personal.controller.php');
           <div class="nombre-enfermero">
             <h4><?php echo $apellidoPaterno . ' ' . $apellidoMaterno . ' ' . $nombre ?></h4>
             <table class="tabla-datos">
-              <tr>
-                <th>No. Empleado</th>
-                <th><?php echo $noempleado ?></th>
-              </tr>
-              <tr>
-                <td>Tipo de Contrato</td>
-                <th><?php echo $tipocontrato ?></th>
 
-              </tr>
               <tr>
-                <td>Servicio</td>
-                <th><?php echo $servicio ?></th>
-
+                <td>CURP</td>
+                <th></th>
               </tr>
+
               <tr>
-                <td>Fecha de Ingreso</td>
-                <th><?php echo $fechaIngreso ?></th>
-
+                <td>Género</td>
+                <th></th>
               </tr>
+
               <tr>
                 <td>Onomástico</td>
-                <th><?php echo $onomastico ?></th>
-
+                <th></th>
               </tr>
+
+              <tr>
+                <td>Edad</td>
+                <th></th>
+              </tr>
+
+              <tr>
+                <td>RFC</td>
+                <th></th>
+              </tr>
+
             </table>
 
           </div>
@@ -62,6 +64,53 @@ require ('php/controllers/ver_personal.controller.php');
   </div>
 
 
+
+
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="datos-container d-flex align-items-center">
+
+          <table class="tabla-datos">
+          <tr>
+              <th>CONTACTO EMERGENCIA</th>
+            </tr>
+
+              <tr>
+                <td>Contacto Emergencia</td>
+                <th></th>
+              </tr>
+
+              <tr>
+                <td>Nombre Contacto</td>
+                <th></th>
+
+              </tr>
+              <tr>
+                <td>Teléfono Emergencia</td>
+                <th></th>
+
+             
+          </table>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  
+
+
+
+
+
   <div class="container mt-5">
     <div class="row">
       <div class="col-sm-12">
@@ -69,8 +118,22 @@ require ('php/controllers/ver_personal.controller.php');
 
           <table class="tabla-datos">
             <tr>
-              <th>INFORMACIÓN PLAZA</th>
+              <th>INFORMACIÓN CONTRATO</th>
             </tr>
+
+            <tr>
+              <td>No. Empleado</td>
+              <th></th>
+
+            </tr>
+
+            <tr>
+              <td>Tipo de Contrato</td>
+              <th></th>
+
+            </tr>
+
+           
             <tr>
               <td>Código</td>
               <th><?php echo $codigo ?></th>
@@ -81,11 +144,20 @@ require ('php/controllers/ver_personal.controller.php');
               <th><?php echo $puesto ?></th>
 
             </tr>
+
             <tr>
               <td>Turno actual</td>
               <th><?php echo $turno ?></th>
 
             </tr>
+
+            <tr>
+              <td>Días Laborales</td>
+              <th></th>
+
+            </tr>
+
+
             <tr>
               <td>Servicio</td>
               <th><?php echo $servicio ?></th>
@@ -139,6 +211,38 @@ require ('php/controllers/ver_personal.controller.php');
               <th> - </th>
               <th><?php echo $cedula_maestria ?></th>
             </tr>
+
+            <tr>
+              <td>Doctorado</td>
+              <th></th>
+              <th> - </th>
+              <th></th>
+            </tr>
+
+
+            <tr>
+              <td>Colegiación</td>
+              <th></th>
+              <th> Expedición: </th>
+              <th></th>
+              <th> Vigencia: </th>
+              <th> </th>
+              <th> Estatus: </th>
+              <th></th>
+            </tr>
+
+            <tr>
+              <td>Cerificación</td>
+              <th></th>
+              <th> Expedición: </th>
+              <th></th>
+              <th> Vigencia: </th>
+              <th> </th>
+              <th> Estatus: </th>
+              <th></th>
+            </tr>
+
+
           </table>
 
 
@@ -146,6 +250,180 @@ require ('php/controllers/ver_personal.controller.php');
       </div>
     </div>
   </div>
+
+
+
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="datos-container d-flex align-items-center">
+        
+        <table class="tabla-datos">
+          <thead>
+            <tr>
+              <th scope="col">CURSO</th>
+              <th scope="col">Fecha Expedición</th>
+              <th scope="col">Fecha Vigencia</th>
+              <th scope="col">Estatus</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row">BLS</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td scope="row">ACLS</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td scope="row">ReNeo</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td scope="row">PALS</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td scope="row">ALSO</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td scope="row">POE</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td scope="row">CBSPD</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td scope="row">Certificación</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td scope="row">Certificación PICC</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="datos-container d-flex align-items-center">
+        
+        <table class="tabla-datos">
+          <thead>
+            <tr>
+              <th scope="col">Curso</th>
+              <th scope="col">Elaboro</th>
+              <th scope="col">Fecha Expedición</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row">Interculturalidad</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td scope="row">Capacitación Virtual de Higiene de Manos</td>
+              <td></td>
+              <td></td>
+              
+            </tr>
+            <tr>
+              <td scope="row">Capacitación Virtual Manejo de Residuos Hospitalarios</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td scope="row">Acciones Esenciales de Seguridad del Paciente</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td scope="row">Curso Virtual Sobre los Fundamentos del Cuidado Paliativo</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td scope="row">Curso Básico de Combate de Incendios</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td scope="row">Introducción al Modelo Único de Evaluación de la Calidad</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td scope="row">Trato Digno en los Servicios de Salud</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td scope="row">Reanimación Cardiopulmonar en Adulto para Profesionales de la Salud</td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td scope="row">Salud Mental en Profesionales de la Salud</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td scope="row">Capacitación de Códigos y Protocolos Hospitalarios de Emergencias y Desastres</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td scope="row">Medidas Basadas en la Transmisión de Agentes Infecciosos y Procesos de Limpieza</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
 
 
 

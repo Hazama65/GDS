@@ -78,13 +78,16 @@
             <div class="titulo-personal">
               <h6 class="bi bi-person-fill-add"> Resumen Personal por Servicio y Turno</h6>
             </div> <br>
-            <div style="overflow-x: auto;">
+            <div style="overflow-x: auto;" id="tabla-turnos-areas">
               <table class="table">
                 <thead id="tabla-cabeceras">
                 </thead>
                 <tbody id="tabla-datos">
                 </tbody>
               </table>
+            </div>
+            <div class="text-center mt-3">
+              <button class="btn btn-success" onclick="exportToExcel('tabla-turnos-areas')">Exportar a Excel</button>
             </div>
           </div>
         </div>
@@ -99,7 +102,10 @@
   <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
   <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
   <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
   <script src="js/metricas.js"></script>
+
 
 
 
