@@ -1,14 +1,14 @@
 
 $(document).ready(function () {
     // Detectar cambios en el campo CURP
-    $('#CURP').on('input', function () {
+    $('#curp').on('input', function () {
         var curp = $(this).val().toUpperCase(); // Convertir a mayúsculas
         $(this).val(curp); // Asignar el valor en mayúsculas de nuevo al campo
     });
 });
 
 $(document).ready(function () {
-    $('#CURP').on('input', function () {
+    $('#curp').on('input', function () {
         var curp = $(this).val().toUpperCase(); // Convertir a mayúsculas
 
         // Validamos que la longitud del CURP sea correcta (18 caracteres)

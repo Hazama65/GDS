@@ -1,35 +1,35 @@
 
 
-document.getElementById("limpiarFormularioBtn").addEventListener("click", function() {
-    document.getElementById("patientForm").reset();
-  });
+document.getElementById("limpiarFormularioBtn").addEventListener("click", function () {
+  document.getElementById("patientForm").reset();
+});
 
 
-  // script.js
+// script.js
 
 // Función para capitalizar la primera letra de cada palabra en un texto
 function capitalizeFirstLetter(text) {
-    return text.toLowerCase().replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+  return text.toLowerCase().replace(/(?:^|\s)\S/g, function (a) { return a.toUpperCase(); });
 }
 
 // Manejar el evento input en el campo "Nombre(s)"
-document.getElementById("contacto").addEventListener("input", function() {
-    this.value = capitalizeFirstLetter(this.value);
+document.getElementById("contacto").addEventListener("input", function () {
+  this.value = capitalizeFirstLetter(this.value);
 });
 
 // Manejar el evento input en el campo "Apellido Paterno"
-document.getElementById("apellidoPaterno").addEventListener("input", function() {
-    this.value = capitalizeFirstLetter(this.value);
+document.getElementById("apellidoPaterno").addEventListener("input", function () {
+  this.value = capitalizeFirstLetter(this.value);
 });
 
 // Manejar el evento input en el campo "Apellido Materno"
-document.getElementById("apellidoMaterno").addEventListener("input", function() {
-    this.value = capitalizeFirstLetter(this.value);
+document.getElementById("apellidoMaterno").addEventListener("input", function () {
+  this.value = capitalizeFirstLetter(this.value);
 });
 
 // Manejar el evento input en el campo "Nombre(s)"
-document.getElementById("nombre").addEventListener("input", function() {
-    this.value = capitalizeFirstLetter(this.value);
+document.getElementById("nombre").addEventListener("input", function () {
+  this.value = capitalizeFirstLetter(this.value);
 });
 
 
@@ -41,15 +41,13 @@ function habilitarCampos(selectorId) {
   var divFechaVigencia = document.getElementById('divFechaVigencia_' + selectorId);
   var divEstatus = document.getElementById('divEstatus_' + selectorId);
 
+
   if (valorSeleccionado === 'Si') {
     divFechaExpedicion.style.display = 'block';
-    document.getElementById('fechaExpedicion_' + selectorId).disabled = false; // Habilitar el campo de Fecha Expedición
     divFechaVigencia.style.display = 'block';
-    calcularFechaVigencia(selectorId); // Calcular la fecha de vigencia
     divEstatus.style.display = 'block';
   } else {
     divFechaExpedicion.style.display = 'none';
-    document.getElementById('fechaExpedicion_' + selectorId).disabled = true; // Deshabilitar el campo de Fecha Expedición
     divFechaVigencia.style.display = 'none';
     divEstatus.style.display = 'none';
   }
@@ -58,44 +56,92 @@ function habilitarCampos(selectorId) {
 
 // Función para calcular y mostrar la fecha de vigencia en formato dd/mm/yyyy
 function calcularFechaVigencia(selectorId) {
-  var fechaExpedicion = document.getElementById('fechaExpedicion_' + selectorId).value;
-  
-  // Verificar si se ingresó una fecha válida de expedición
-  if (fechaExpedicion) {
-    // Dividir la fecha en sus partes: dd, mm, yyyy
-    var partesFecha = fechaExpedicion.split('/');
-    var dd = partesFecha[0];
-    var mm = partesFecha[1];
-    var yyyy = partesFecha[2];
+  let fechaExpedicion = document.getElementById('fechaExpedicion_' + selectorId).value;
 
-    // Crear una fecha válida en JavaScript con el formato dd/mm/yyyy
-    var fechaExpedicionDate = new Date(yyyy, mm - 1, dd); // Meses en JavaScript se indexan desde 0
+  let fecha1 = new Date(fechaExpedicion);
+  let fecha2 = new Date();
 
-    // Sumar un año a la fecha de expedición
-    fechaExpedicionDate.setFullYear(fechaExpedicionDate.getFullYear() + 1);
+  if (selectorId == 'colegiacion') {
 
-    // Obtener las partes de la fecha de vigencia
-    var ddVigencia = ('0' + fechaExpedicionDate.getDate()).slice(-2);
-    var mmVigencia = ('0' + (fechaExpedicionDate.getMonth() + 1)).slice(-2);
-    var yyyyVigencia = fechaExpedicionDate.getFullYear();
+    let yearVigencia = fecha1.getFullYear()
+    let Vigencia = new Date(fecha1.setFullYear(yearVigencia + 1))
 
-    // Formatear la fecha de vigencia en dd/mm/yyyy
-    var fechaVigenciaFormatted = ddVigencia + '/' + mmVigencia + '/' + yyyyVigencia;
+    let year = Vigencia.getFullYear();
+    let month = (Vigencia.getMonth() + 1).toString().padStart(2, '0');
+    let day = Vigencia.getDate().toString().padStart(2, '0');
 
-    // Asignar la fecha formateada al campo de fecha de vigencia
-    document.getElementById('fechaVigencia_' + selectorId).value = fechaVigenciaFormatted;
-  } else {
-    // Si no se ingresó fecha de expedición, limpiar campo de Fecha de Vigencia
-    document.getElementById('fechaVigencia_' + selectorId).value = '';
+    let fechaVigencia = `${year}-${month}-${day}`;
+
+    document.getElementById('fechaVigencia_' + selectorId).value = fechaVigencia;
+
+    if (fecha2 <= Vigencia) {
+      document.getElementById('estatus_' + selectorId).value = 'Vigente';
+    } else {
+      document.getElementById('estatus_' + selectorId).value = 'No Vigente';
+    }
+
+  } else if (selectorId == 'certificacion' || selectorId == 'CBSPD' || selectorId == 'Certificación') {
+
+    let yearVigencia = fecha1.getFullYear()
+    let Vigencia = new Date(fecha1.setFullYear(yearVigencia + 5))
+
+    let year = Vigencia.getFullYear();
+    let month = (Vigencia.getMonth() + 1).toString().padStart(2, '0');
+    let day = Vigencia.getDate().toString().padStart(2, '0');
+
+    let fechaVigencia = `${year}-${month}-${day}`;
+
+    document.getElementById('fechaVigencia_' + selectorId).value = fechaVigencia;
+
+    if (fecha2 <= Vigencia) {
+      document.getElementById('estatus_' + selectorId).value = 'Vigente';
+    } else {
+      document.getElementById('estatus_' + selectorId).value = 'No Vigente';
+    }
+  } else if (selectorId == 'BLS' || selectorId == 'ACLS' || selectorId == 'ReNeo' || selectorId == 'PALS' || selectorId == 'ALSO' || selectorId == 'POE') {
+    let yearVigencia = fecha1.getFullYear()
+    let Vigencia = new Date(fecha1.setFullYear(yearVigencia + 2))
+
+    let year = Vigencia.getFullYear();
+    let month = (Vigencia.getMonth() + 1).toString().padStart(2, '0');
+    let day = Vigencia.getDate().toString().padStart(2, '0');
+
+    let fechaVigencia = `${year}-${month}-${day}`;
+
+    document.getElementById('fechaVigencia_' + selectorId).value = fechaVigencia;
+
+    if (fecha2 <= Vigencia) {
+      document.getElementById('estatus_' + selectorId).value = 'Vigente';
+    } else {
+      document.getElementById('estatus_' + selectorId).value = 'No Vigente';
+    }
+  } else if (selectorId == 'CertificaciónPICC') {
+    let yearVigencia = fecha1.getFullYear()
+    let Vigencia = new Date(fecha1.setFullYear(yearVigencia + 3))
+
+    let year = Vigencia.getFullYear();
+    let month = (Vigencia.getMonth() + 1).toString().padStart(2, '0');
+    let day = Vigencia.getDate().toString().padStart(2, '0');
+
+    let fechaVigencia = `${year}-${month}-${day}`;
+
+    document.getElementById('fechaVigencia_' + selectorId).value = fechaVigencia;
+
+    if (fecha2 <= Vigencia) {
+      document.getElementById('estatus_' + selectorId).value = 'Vigente';
+    } else {
+      document.getElementById('estatus_' + selectorId).value = 'No Vigente';
+    }
   }
+
 }
 
 
 
 
-  // AQUÍ EMPIEZAN LAS FUNCIONES PARA MOSTRAR U OCULTAR LOS CAMPOS DE CURSOS, DEPENDIENDO DE SI SE HAN HECHO O NO.
- // Función para mostrar/ocultar campos según la selección del selector
- function toggleFields(selectorId) {
+// AQUÍ EMPIEZAN LAS FUNCIONES PARA MOSTRAR U OCULTAR LOS CAMPOS DE CURSOS, DEPENDIENDO DE SI SE HAN HECHO O NO.
+// Función para mostrar/ocultar campos según la selección del selector
+function toggleFields(selectorId) {
   var selectValue = document.getElementById(selectorId).value;
   var divFechaExp = document.getElementById('divFechaExpedicion_' + selectorId);
   var divFechaVig = document.getElementById('divFechaVigencia_' + selectorId);
@@ -115,13 +161,6 @@ function calcularFechaVigencia(selectorId) {
     // document.getElementById('fechaVigencia_' + selectorId).disabled = true;
   }
 }
- 
-
-
-
-
-
-
 
 
 // Función para mostrar/ocultar Fecha de Expedición según la selección del selector
@@ -138,52 +177,37 @@ function toggleFechaExpedicion(selectorId) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Manejar el evento change en el campo de entrada de la foto
-document.getElementById("foto").addEventListener("change", function() {
-    var reader = new FileReader();
-    reader.onload = function(e) {
-        var img = new Image();
-        img.src = e.target.result;
-        img.onload = function() {
-            var canvas = document.createElement("canvas");
-            var ctx = canvas.getContext("2d");
-            var MAX_WIDTH = 300;
-            var MAX_HEIGHT = 300;
-            var width = img.width;
-            var height = img.height;
-            if (width > height) {
-                if (width > MAX_WIDTH) {
-                    height *= MAX_WIDTH / width;
-                    width = MAX_WIDTH;
-                }
-            } else {
-                if (height > MAX_HEIGHT) {
-                    width *= MAX_HEIGHT / height;
-                    height = MAX_HEIGHT;
-                }
-            }
-            canvas.width = width;
-            canvas.height = height;
-            ctx.drawImage(img, 0, 0, width, height);
-            document.getElementById("imagenPrevisualizacion").src = canvas.toDataURL("image/jpeg");
+document.getElementById("foto").addEventListener("change", function () {
+  var reader = new FileReader();
+  reader.onload = function (e) {
+    var img = new Image();
+    img.src = e.target.result;
+    img.onload = function () {
+      var canvas = document.createElement("canvas");
+      var ctx = canvas.getContext("2d");
+      var MAX_WIDTH = 300;
+      var MAX_HEIGHT = 300;
+      var width = img.width;
+      var height = img.height;
+      if (width > height) {
+        if (width > MAX_WIDTH) {
+          height *= MAX_WIDTH / width;
+          width = MAX_WIDTH;
         }
+      } else {
+        if (height > MAX_HEIGHT) {
+          width *= MAX_HEIGHT / height;
+          height = MAX_HEIGHT;
+        }
+      }
+      canvas.width = width;
+      canvas.height = height;
+      ctx.drawImage(img, 0, 0, width, height);
+      document.getElementById("imagenPrevisualizacion").src = canvas.toDataURL("image/jpeg");
     }
-    reader.readAsDataURL(this.files[0]);
+  }
+  reader.readAsDataURL(this.files[0]);
 });
 
 

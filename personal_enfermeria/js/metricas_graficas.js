@@ -1,60 +1,31 @@
 $.ajax({
-    url: 'php/controllers/metricas.controller.php',
+    url: 'php/controllers/metricas_graficas.controller.php',
     type: 'GET',
     dataType: 'json',
     success: function (data) {
 
-        // Preparar datos para la gráfica
-        var chartData = [
-            { turno: "JORNADA ESPECIAL", value: parseInt(data.conteo_turnos.jornada[0]["0"]) },
-            { turno: "MATUTINO", value: parseInt(data.conteo_turnos.matutino[0]["0"]) },
-            { turno: "VESPERTINO", value: parseInt(data.conteo_turnos.vespertino[0]["0"]) },
-            { turno: "NOCTURNO", value: parseInt(data.conteo_turnos.nocturno[0]["0"]) }
-        ];
+        let informacionAcademica = data.informacion_academica[0];
+        let genero = data.genero;
 
+        let data1 =[
+            {titulo: 'Técnico', value: parseInt(informacionAcademica.total_grado_tecnico)},
+            {titulo: 'Post-Técnico', value: parseInt(informacionAcademica.total_grado_posttecnico)},
+            {titulo: 'Licenciatura', value: parseInt(informacionAcademica.total_grado_licenciatura)},
+            {titulo: 'Especialidad', value: parseInt(informacionAcademica.total_grado_especialidad)},
+            {titulo: 'Maestría', value: parseInt(informacionAcademica.total_grado_maestria)},
+            {titulo: 'Doctorado', value: parseInt(informacionAcademica.total_grado_doctorado)}
+        ]
         // Llamar a la función para crear la gráfica de barras con los datos preparados
-        crearGraficaBarras(chartData);
+        crearGraficaBarras("chartdiv", data1);
+        
+        let data2 =[
+            {titulo: 'H', value: parseInt(genero[0][1])},
+            {titulo: 'M', value: parseInt(genero[1][1])}
+        ]
+
+        crearGraficaBarras("chartdiv1", data2);
 
 
-        // Asignar valores directamente a las celdas de la tabla
-        $('#recuento-jornada').text(data.conteo_turnos.jornada[0][0] || "0");
-        $('#recuento-matutino').text(data.conteo_turnos.matutino[0][0] || "0");
-        $('#recuento-vespertino').text(data.conteo_turnos.nocturno[0][0] || "0");
-        $('#recuento-nocturno').text(data.conteo_turnos.vespertino[0][0] || "0");
-
-        // Obtener el elemento thead y tbody
-        let thead = $('#tabla-cabeceras');
-        let tbody = $('#tabla-datos');
-
-        // Limpiar cualquier contenido previo
-        thead.empty();
-        tbody.empty();
-
-        // Crear la fila de encabezados de turno
-        let encabezadoTurno = '<tr><th scope="col"> </th>';
-        data.turno.forEach(function (turno) {
-            encabezadoTurno += `<th scope="col">${turno.turno}</th>`;
-        });
-        encabezadoTurno += '</tr>';
-        thead.append(encabezadoTurno);
-
-        // Crear las filas de datos de servicios
-        data.servicio.forEach(function (servicio) {
-            let filaServicio = `<tr><th scope="row">${servicio.servicio}</th>`;
-            data.turno.forEach(function (turno) {
-                // Buscar el conteo de personal para este turno/servicio
-                let conteo = 0;
-                data.personal.forEach(function (personal) {
-                    if (personal.servicio === servicio.servicio && personal.turno === turno.turno) {
-                        conteo++;
-                    }
-                });
-                // Agregar el conteo como dato en la celda correspondiente
-                filaServicio += `<td>${conteo}</td>`;
-            });
-            filaServicio += '</tr>';
-            tbody.append(filaServicio);
-        });
     },
     error: function (xhr, status, error) {
         console.error("Error al obtener los datos:", status, error);
@@ -63,9 +34,9 @@ $.ajax({
 
 
 // Función para crear la gráfica de barras
-function crearGraficaBarras(data) {
+function crearGraficaBarras(chartId, data) {
     // Create root element
-    var root = am5.Root.new("chartdiv");
+    var root = am5.Root.new(chartId);
 
     // Set themes
     root.setThemes([
@@ -106,7 +77,7 @@ function crearGraficaBarras(data) {
 
     var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
         maxDeviation: 0.3,
-        categoryField: "turno",
+        categoryField: "titulo",
         renderer: xRenderer,
         tooltip: am5.Tooltip.new(root, {})
     }));
@@ -127,7 +98,7 @@ function crearGraficaBarras(data) {
         yAxis: yAxis,
         valueYField: "value",
         sequencedInterpolation: true,
-        categoryXField: "turno",
+        categoryXField: "titulo",
         tooltip: am5.Tooltip.new(root, {
             labelText: "{valueY}"
         })
@@ -151,7 +122,8 @@ function crearGraficaBarras(data) {
     chart.appear(1000, 100);
 }
 
-const exportToExcel = (tableId) => {
+
+const exportToExcel = (tableId,Texto) => {
     // Obtener la tabla DOM
     let tabla = document.getElementById(tableId);
 
@@ -166,6 +138,6 @@ const exportToExcel = (tableId) => {
 
     // Generar el archivo Excel y guardarlo
     let date = new Date();
-    let filename = "Resumen Personal por Servicio y Turno" + date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + ".xlsx";
+    let filename = `Resumen Personal por ${Texto} ` + date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + ".xlsx";
     XLSX.writeFile(workbook, filename);
 }

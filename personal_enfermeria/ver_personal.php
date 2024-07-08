@@ -32,140 +32,97 @@ require ('php/controllers/ver_personal.controller.php');
 
               <tr>
                 <td>CURP</td>
-                <th></th>
+                <th><?php echo $curp ?></th>
               </tr>
 
               <tr>
                 <td>Género</td>
-                <th></th>
+                <th><?php echo $genero ?></th>
               </tr>
 
               <tr>
                 <td>Onomástico</td>
-                <th></th>
+                <th><?php echo $onomastico ?></th>
               </tr>
 
               <tr>
                 <td>Edad</td>
-                <th></th>
+                <th><?php echo $edad ?></th>
               </tr>
 
               <tr>
                 <td>RFC</td>
-                <th></th>
+                <th><?php echo $RFC ?></th>
               </tr>
-
             </table>
-
           </div>
         </div>
       </div>
     </div>
   </div>
 
-
-
-
-
   <div class="container mt-5">
     <div class="row">
       <div class="col-sm-12">
         <div class="datos-container d-flex align-items-center">
-
           <table class="tabla-datos">
-          <tr>
+            <tr>
               <th>CONTACTO EMERGENCIA</th>
             </tr>
-
-              <tr>
-                <td>Contacto Emergencia</td>
-                <th></th>
-              </tr>
-
-              <tr>
-                <td>Nombre Contacto</td>
-                <th></th>
-
-              </tr>
-              <tr>
-                <td>Teléfono Emergencia</td>
-                <th></th>
-
-             
+            <tr>
+              <td>Contacto Emergencia</td>
+              <th><?php echo $contacto_emergencia ?></th>
+            </tr>
+            <tr>
+              <td>Nombre Contacto</td>
+              <th><?php echo $contacto ?></th>
+            </tr>
+            <tr>
+              <td>Teléfono Emergencia</td>
+              <th><?php echo $no_contacto_emergencia ?></th>
           </table>
-
-
         </div>
       </div>
     </div>
   </div>
 
-
-
-
-
-
-  
-
-
-
-
-
   <div class="container mt-5">
     <div class="row">
       <div class="col-sm-12">
         <div class="datos-container d-flex align-items-center">
-
           <table class="tabla-datos">
             <tr>
               <th>INFORMACIÓN CONTRATO</th>
             </tr>
-
             <tr>
               <td>No. Empleado</td>
-              <th></th>
-
+              <th><?php echo $noempleado ?></th>
             </tr>
-
             <tr>
               <td>Tipo de Contrato</td>
-              <th></th>
-
+              <th><?php echo $tipocontrato ?></th>
             </tr>
-
-           
             <tr>
               <td>Código</td>
               <th><?php echo $codigo ?></th>
-
             </tr>
             <tr>
               <td>Puesto</td>
               <th><?php echo $puesto ?></th>
-
             </tr>
-
             <tr>
               <td>Turno actual</td>
               <th><?php echo $turno ?></th>
-
             </tr>
-
             <tr>
               <td>Días Laborales</td>
-              <th></th>
-
+              <th><?php echo $diasLaborales ?></th>
             </tr>
-
-
             <tr>
               <td>Servicio</td>
               <th><?php echo $servicio ?></th>
-
             </tr>
           </table>
-
-
         </div>
       </div>
     </div>
@@ -176,7 +133,6 @@ require ('php/controllers/ver_personal.controller.php');
     <div class="row">
       <div class="col-sm-12">
         <div class="datos-container d-flex align-items-center">
-
           <table class="tabla-datos">
             <tr>
               <th>INFORMACIÓN ACADÉMICA</th>
@@ -214,35 +170,108 @@ require ('php/controllers/ver_personal.controller.php');
 
             <tr>
               <td>Doctorado</td>
-              <th></th>
+              <th><?php echo $grado_doctorado ?></th>
               <th> - </th>
-              <th></th>
+              <th><?php echo $cedula_doctorado ?></th>
             </tr>
 
 
             <tr>
               <td>Colegiación</td>
-              <th></th>
+              <th><?php echo $colegiacion ?></th>
               <th> Expedición: </th>
-              <th></th>
+              <th><?php echo $fechaExpedicion_colegiacion ?></th>
               <th> Vigencia: </th>
-              <th> </th>
+              <th><?php echo $fechaVigencia_colegiacion ?></th>
               <th> Estatus: </th>
-              <th></th>
+              <th><?php echo $estatus_colegiacion ?></th>
             </tr>
 
             <tr>
               <td>Cerificación</td>
-              <th></th>
+              <th><?php echo $certificacion ?></th>
               <th> Expedición: </th>
-              <th></th>
+              <th><?php echo $fechaExpedicion_certificacion ?></th>
               <th> Vigencia: </th>
-              <th> </th>
+              <th><?php echo $fechaVigencia_certificacion ?></th>
               <th> Estatus: </th>
-              <th></th>
+              <th><?php echo $estatus_certificacion ?></th>
             </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 
-
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="datos-container d-flex align-items-center">
+          <table class="tabla-datos">
+            <thead>
+              <tr>
+                <th scope="col">CURSO</th>
+                <th scope="col">Fecha Expedición</th>
+                <th scope="col">Fecha Vigencia</th>
+                <th scope="col">Estatus</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row">BLS</td>
+                <td><?php echo $fechaExpedicion_BLS ?></td>
+                <td><?php echo $fechaVigencia_BLS ?></td>
+                <td><?php echo $estatus_BLS ?></td>
+              </tr>
+              <tr>
+                <td scope="row">ACLS</td>
+                <td><?php echo $fechaExpedicion_ACLS ?></td>
+                <td><?php echo $fechaVigencia_ACLS ?></td>
+                <td><?php echo $estatus_ACLS ?></td>
+              </tr>
+              <tr>
+                <td scope="row">ReNeo</td>
+                <td><?php echo $fechaExpedicion_ReNeo ?></td>
+                <td><?php echo $fechaVigencia_ReNeo ?></td>
+                <td><?php echo $estatus_ReNeo ?></td>
+              </tr>
+              <tr>
+                <td scope="row">PALS</td>
+                <td><?php echo $fechaExpedicion_PALS ?></td>
+                <td><?php echo $fechaVigencia_PALS ?></td>
+                <td><?php echo $estatus_PALS ?></td>
+              </tr>
+              <tr>
+                <td scope="row">ALSO</td>
+                <td><?php echo $fechaExpedicion_ALSO ?></td>
+                <td><?php echo $fechaVigencia_ALSO ?></td>
+                <td><?php echo $estatus_ALSO ?></td>
+              </tr>
+              <tr>
+                <td scope="row">POE</td>
+                <td><?php echo $fechaExpedicion_POE ?></td>
+                <td><?php echo $fechaVigencia_POE ?></td>
+                <td><?php echo $estatus_POE ?></td>
+              </tr>
+              <tr>
+                <td scope="row">CBSPD</td>
+                <td><?php echo $fechaExpedicion_CBSPD ?></td>
+                <td><?php echo $fechaVigencia_CBSPD ?></td>
+                <td><?php echo $estatus_CBSPD ?></td>
+              </tr>
+              <tr>
+                <td scope="row">Certificación</td>
+                <td><?php echo $fechaExpedicion_Certificación ?></td>
+                <td><?php echo $fechaVigencia_Certificación ?></td>
+                <td><?php echo $estatus_Certificación ?></td>
+              </tr>
+              <tr>
+                <td scope="row">Certificación PICC</td>
+                <td><?php echo $fechaExpedicion_CertificaciónPICC ?></td>
+                <td><?php echo $fechaVigencia_CertificaciónPICC ?></td>
+                <td><?php echo $estatus_CertificaciónPICC ?></td>
+              </tr>
+            </tbody>
           </table>
 
 
@@ -254,167 +283,86 @@ require ('php/controllers/ver_personal.controller.php');
 
 
 
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="datos-container d-flex align-items-center">
-        
-        <table class="tabla-datos">
-          <thead>
-            <tr>
-              <th scope="col">CURSO</th>
-              <th scope="col">Fecha Expedición</th>
-              <th scope="col">Fecha Vigencia</th>
-              <th scope="col">Estatus</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td scope="row">BLS</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td scope="row">ACLS</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td scope="row">ReNeo</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td scope="row">PALS</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td scope="row">ALSO</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td scope="row">POE</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td scope="row">CBSPD</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td scope="row">Certificación</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td scope="row">Certificación PICC</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
 
 
   <div class="container mt-5">
     <div class="row">
       <div class="col-sm-12">
         <div class="datos-container d-flex align-items-center">
-        
-        <table class="tabla-datos">
-          <thead>
-            <tr>
-              <th scope="col">Curso</th>
-              <th scope="col">Elaboro</th>
-              <th scope="col">Fecha Expedición</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td scope="row">Interculturalidad</td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td scope="row">Capacitación Virtual de Higiene de Manos</td>
-              <td></td>
-              <td></td>
-              
-            </tr>
-            <tr>
-              <td scope="row">Capacitación Virtual Manejo de Residuos Hospitalarios</td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td scope="row">Acciones Esenciales de Seguridad del Paciente</td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td scope="row">Curso Virtual Sobre los Fundamentos del Cuidado Paliativo</td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td scope="row">Curso Básico de Combate de Incendios</td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td scope="row">Introducción al Modelo Único de Evaluación de la Calidad</td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td scope="row">Trato Digno en los Servicios de Salud</td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td scope="row">Reanimación Cardiopulmonar en Adulto para Profesionales de la Salud</td>
-              <td></td>
-              <td></td>
-            </tr>
 
-            <tr>
-              <td scope="row">Salud Mental en Profesionales de la Salud</td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td scope="row">Capacitación de Códigos y Protocolos Hospitalarios de Emergencias y Desastres</td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td scope="row">Medidas Basadas en la Transmisión de Agentes Infecciosos y Procesos de Limpieza</td>
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
+          <table class="tabla-datos">
+            <thead>
+              <tr>
+                <th scope="col">Curso</th>
+                <th scope="col">Elaboro</th>
+                <th scope="col">Fecha Expedición</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row">Interculturalidad</td>
+                <td><?php echo $interculturalidad ?></td>
+                <td><?php echo $fechaExpedicion_interculturalidad ?></td>
+              </tr>
+              <tr>
+                <td scope="row">Capacitación Virtual de Higiene de Manos</td>
+                <td><?php echo $higienemanos ?></td>
+                <td><?php echo $fechaExpedicion_higienemanos ?></td>
+
+              </tr>
+              <tr>
+                <td scope="row">Capacitación Virtual Manejo de Residuos Hospitalarios</td>
+                <td><?php echo $residuoshospitalarios ?></td>
+                <td><?php echo $fechaExpedicion_residuoshospitalarios ?></td>
+              </tr>
+              <tr>
+                <td scope="row">Acciones Esenciales de Seguridad del Paciente</td>
+                <td><?php echo $seguridadpaciente ?></td>
+                <td><?php echo $fechaExpedicion_seguridadpaciente ?></td>
+              </tr>
+              <tr>
+                <td scope="row">Curso Virtual Sobre los Fundamentos del Cuidado Paliativo</td>
+                <td><?php echo $cuidadopaliativo ?></td>
+                <td><?php echo $fechaExpedicion_cuidadopaliativo ?></td>
+              </tr>
+              <tr>
+                <td scope="row">Curso Básico de Combate de Incendios</td>
+                <td><?php echo $combateincendios ?></td>
+                <td><?php echo $fechaExpedicion_combateincendios ?></td>
+              </tr>
+              <tr>
+                <td scope="row">Introducción al Modelo Único de Evaluación de la Calidad</td>
+                <td><?php echo $evaluacioncalidad ?></td>
+                <td><?php echo $fechaExpedicion_evaluacioncalidad ?></td>
+              </tr>
+              <tr>
+                <td scope="row">Trato Digno en los Servicios de Salud</td>
+                <td><?php echo $tratodigno ?></td>
+                <td><?php echo $fechaExpedicion_tratodigno ?></td>
+              </tr>
+              <tr>
+                <td scope="row">Reanimación Cardiopulmonar en Adulto para Profesionales de la Salud</td>
+                <td><?php echo $reanimacion ?></td>
+                <td><?php echo $fechaExpedicion_reanimacion ?></td>
+              </tr>
+
+              <tr>
+                <td scope="row">Salud Mental en Profesionales de la Salud</td>
+                <td><?php echo $saludmental ?></td>
+                <td><?php echo $fechaExpedicion_saludmental ?></td>
+              </tr>
+              <tr>
+                <td scope="row">Capacitación de Códigos y Protocolos Hospitalarios de Emergencias y Desastres</td>
+                <td><?php echo $emergenciasydesastres ?></td>
+                <td><?php echo $fechaExpedicion_emergenciasydesastres ?></td>
+              </tr>
+              <tr>
+                <td scope="row">Medidas Basadas en la Transmisión de Agentes Infecciosos y Procesos de Limpieza</td>
+                <td><?php echo $procesoslimpieza ?></td>
+                <td><?php echo $fechaExpedicion_procesoslimpieza ?></td>
+              </tr>
+            </tbody>
+          </table>
 
 
         </div>

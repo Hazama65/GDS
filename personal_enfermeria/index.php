@@ -16,6 +16,11 @@
 
   <div class="container mt-5">
     <h2 class="text-center mb-4">Personal Enfermería</h2>
+    <div class="control mb-3">
+      <a href="php/export.php" class="btn btn-success">
+        <i class="bi bi-file-earmark-excel"></i> Exportar a Excel
+      </a>
+    </div>
     <input type="text" id="buscador" class="form-control mb-3" placeholder="Buscar...">
     <div class="table-responsive">
       <table class="table table-bordered table-hover">
