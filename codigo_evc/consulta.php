@@ -91,11 +91,7 @@ include('php/controllers/consulta.controller.php');
                         <td><?php echo $speech; ?></td>
                     </tr>
 
-                    <tr>
-                        <td class="estilo-celda">Tiempo</td>
-                        <td><?php echo $time; ?></td>
-                    </tr>
-
+                
                     <tr>
 
                     <tr>
@@ -130,6 +126,8 @@ include('php/controllers/consulta.controller.php');
                     </tr>
 
                     <tr>
+                        <td class="estilo-celda">Fecha de Sangrado</td>
+                        <td></td>
 
                     <tr>
                         <th colspan="2" style="background-color:rgb(114, 27, 47, 0.5)"> Factor de Riesgo</th>
@@ -196,50 +194,61 @@ include('php/controllers/consulta.controller.php');
                     </tr>
 
                     <tr>
-                        <td class="estilo-celda">Personal Médico Adscrito Urgencias</td>
-                        <td><?php echo $pmau; ?></td>
+                        <td class="estilo-celda">Área</td>
+                        <td></td>
                     </tr>
 
                     <tr>
-                        <td class="estilo-celda">Personal de Admisión Hospitalaria</td>
-                        <td><?php echo $pah; ?></td>
+                    <tr>
+                        <th colspan="2" style="background-color:rgb(213, 204, 224)"> Equipo Multidisciplinario</th>
                     </tr>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Personal Médico Adscrito Urgencias</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="estilo-celda">Personal de Admisión Hospitalaria</td>
+                        <td></td>
 
                     <tr>
                         <td class="estilo-celda">Personal de Enfermería</td>
-                        <td><?php echo $peia; ?></td>
+                        <td></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Personal de Imagenología</td>
-                        <td><?php echo $pim; ?></td>
+                        <td></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Personal de Laboratorio</td>
-                        <td><?php echo $plio; ?></td>
+                        <td></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Personal de CISFA</td>
-                        <td><?php echo $pcisfa; ?></td>
+                        <td></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Trabajo Social</td>
-                        <td><?php echo $ts; ?></td>
+                        <td></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Camillero</td>
-                        <td><?php echo $camillero; ?></td>
+                        <td></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Médico neurólogo</td>
-                        <td><?php echo $med_neuro; ?></td>
+                        <td></td>
                     </tr>
 
+                   
                     <tr>
                     <tr>
                         <th colspan="2" style="background-color:rgb(114, 27, 47, 0.5)"> Puertas</th>
@@ -328,7 +337,7 @@ include('php/controllers/consulta.controller.php');
                     <tr>
 
                     <tr>
-                        <th colspan="2" style="background-color:rgb(213, 204, 224)"> Escalas de Rehabilitación</th>
+                        <th colspan="2" style="background-color:rgb(213, 204, 224)"> Valoración de Rehabilitación</th>
                     </tr>
                     </tr>
 
@@ -345,7 +354,7 @@ include('php/controllers/consulta.controller.php');
 
                     <tr>
                     <tr>
-                        <th colspan="2" style="background-color:rgb(213, 204, 224)"> Escalas de Rehabilitación</th>
+                        <th colspan="2" style="background-color:rgb(213, 204, 224)"> Escalas</th>
                     </tr>
                     </tr>
 
@@ -373,6 +382,17 @@ include('php/controllers/consulta.controller.php');
                         <td class="estilo-celda">RANKIN</td>
                         <td><?php echo $rankin; ?></td>
                     </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Motricity Index</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Marcha FAC</td>
+                        <td></td>
+                    </tr>
+                   
 
 
                     <tr>
@@ -447,7 +467,12 @@ include('php/controllers/consulta.controller.php');
                     </tr>
 
                     <tr>
-                        <td class="estilo-celda">Escala Gose</td>
+                        <td class="estilo-celda">Escala NIHSS Salida</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td class="estilo-celda">Escala GOSE</td>
                         <td></td>
                     </tr>
 

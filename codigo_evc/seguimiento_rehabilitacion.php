@@ -42,23 +42,24 @@
     
                 <div class="form-header">
                     <h5 class="form-title" style="text-align: center;
+                            border-radius: 8px;
                             background-color:rgb(237, 105, 127) ;
                             color: aliceblue;
                             margin-top:15px;
-                            font-size: 14px;">
+                            font-size: 12px;">
                         Dependencia Funcional</h5>
                 </div>
     
                 <input type="hidden" id="id_paciente" name="id_paciente" value="<?php echo $id_paciente; ?>">
 
                 <div class="col-md-4"> 
-                        <strong style="font-size: 14px;">Fecha de Seguimiento</strong>
+                        <strong style="font-size: 12px;">Fecha de Seguimiento</strong>
                         <input type="date" class="form-control" id="fecha_seg" name="fecha_seg"  style="font-size: 13px;">
                 </div>
     
                 <div class="col-md-4">
-                    <strong style="font-size: 14px; margin-top: 50px;">Seguimiento</strong>
-                    <select name="dependendcia_funcional_seg" id="dependendcia_funcional_seg" class="form-control" style="font-size: 14px;">
+                    <strong style="font-size: 12px; margin-top: 50px;">Seguimiento</strong>
+                    <select name="dependendcia_funcional_seg" id="dependendcia_funcional_seg" class="form-control" style="font-size: 12px;">
                         <option value="Seleccione">Seleccione</option>
                         <option value="Mes">Mes</option>
                         <option value="Tres Meses">Tres Meses</option>
@@ -68,8 +69,8 @@
                 </div>
     
                 <div class="col-md-4">
-                    <strong style="font-size: 14px; margin-top: 50px;">Nivel</strong>
-                    <select name="dependendcia_nivel_seg" id="dependendcia_nivel_seg" class="form-control" style="font-size: 14px;">
+                    <strong style="font-size: 12px; margin-top: 50px;">Nivel</strong>
+                    <select name="dependendcia_nivel_seg" id="dependendcia_nivel_seg" class="form-control" style="font-size: 12px;">
                         <option value="Seleccione">Seleccione</option>
                         <option value="Leve">Leve</option>
                         <option value="Moderado">Moderado</option>
@@ -79,21 +80,22 @@
     
                 <div class="form-header">
                     <h5 class="form-title" style="text-align: center;
+                            border-radius: 8px;
                             background-color:rgb(127, 184, 235);
                             color:aliceblue;
                             margin-top:15px;
-                            font-size: 14px;">
+                            font-size: 12px;">
                         FIM</h5>
                 </div>
     
                 <div class="col-md-4">
-                    <strong style="font-size: 14px;">FIM Inicial </strong>
+                    <strong style="font-size: 12px;">FIM Inicial </strong>
                     <input type="number" step="any" class="form-control" id="fim_inicial_seg" name="fim_inicial_seg" style="font-size: 13px;">
                 </div>
     
                 <div class="col-md-4">
-                    <strong style="font-size: 14px; margin-top: 50px;">Nivel</strong>
-                    <select name="FIM_nivel_seg" id="FIM_nivel_seg" class="form-control" style="font-size: 14px;">
+                    <strong style="font-size: 12px; margin-top: 50px;">Nivel</strong>
+                    <select name="FIM_nivel_seg" id="FIM_nivel_seg" class="form-control" style="font-size: 12px;">
                         <option value="Seleccione">Seleccione</option>
                         <option value="Leve">Leve</option>
                         <option value="Moderado">Moderado</option>
@@ -102,22 +104,23 @@
                 </div>
     
                 <div class="col-md-4">
-                    <strong style="font-size: 14px;">FIM</strong>
+                    <strong style="font-size: 12px;">FIM</strong>
                     <input type="number" step="any" class="form-control" id="fim_seg" name="fim_seg" style="font-size: 13px;">
                 </div>
     
                 <div class="form-header">
                     <h5 class="form-title" style="text-align: center;
+                            border-radius: 8px;
                             background-color:rgb(139, 93, 149,0.6);;
                             color: aliceblue;
                             margin-top:15px;
-                            font-size: 14px;">
+                            font-size: 12px;">
                         Barthel</h5>
                 </div>
     
                 <div class="col-md-6">
-                    <strong style="font-size: 14px; margin-top: 50px;">Seguimiento</strong>
-                    <select name="barhtel_seg" id="barhtel_seg" class="form-control" style="font-size: 14px;">
+                    <strong style="font-size: 12px; margin-top: 50px;">Seguimiento</strong>
+                    <select name="barhtel_seg" id="barhtel_seg" class="form-control" style="font-size: 12px;">
                         <option value="Seleccione">Seleccione</option>
                         <option value="Mes">Mes</option>
                         <option value="Tres Meses">Tres Meses</option>
@@ -127,8 +130,8 @@
                 </div>
     
                 <div class="col-md-6">
-                    <strong style="font-size: 14px; margin-top: 50px;">Nivel</strong>
-                    <select name="barthel_nivel_seg" id="barthel_nivel_seg" class="form-control" style="font-size: 14px;">
+                    <strong style="font-size: 12px; margin-top: 50px;">Nivel</strong>
+                    <select name="barthel_nivel_seg" id="barthel_nivel_seg" class="form-control" style="font-size: 12px;">
                         <option value="Seleccione">Seleccione</option>
                         <option value="Leve">Leve</option>
                         <option value="Moderado">Moderado</option>
@@ -139,16 +142,17 @@
     
                 <div class="form-header">
                     <h5 class="form-title" style="text-align: center;
+                            border-radius: 8px;
                             background-color:rgb(237, 105, 127);
                             color: aliceblue;
                             margin-top:15px;
-                            font-size: 14px;">
+                            font-size: 12px;">
                         NIHHS</h5>
                 </div>
     
                 <div class="col-md-6">
-                    <strong style="font-size: 14px; margin-top: 50px;">Seguimiento</strong>
-                    <select name="nihss_seg" id="nihss_seg" class="form-control" style="font-size: 14px;">
+                    <strong style="font-size: 12px; margin-top: 50px;">Seguimiento</strong>
+                    <select name="nihss_seg" id="nihss_seg" class="form-control" style="font-size: 12px;">
                         <option value="Seleccione">Seleccione</option>
                         <option value="Mes">Mes</option>
                         <option value="Tres Meses">Tres Meses</option>
@@ -158,8 +162,8 @@
                 </div>
     
                 <div class="col-md-6" id="escala_nihss_seg">
-                    <strong style="font-size: 14px; margin-top: 50px;">Escala NIHSS</strong>
-                    <select name="escala_nihss_seg" id="escala_nihss_seg" class="form-control" style="font-size: 14px;">
+                    <strong style="font-size: 12px; margin-top: 50px;">Escala NIHSS</strong>
+                    <select name="escala_nihss_seg" id="escala_nihss_seg" class="form-control" style="font-size: 12px;">
                         <option value="Seleccione">Seleccione</option>
                         <option value="1-4 Leve">1- 4 Leve</option>
                         <option value="5-15 Moderado">5- 15 Moderado</option>
@@ -170,16 +174,17 @@
     
                 <div class="form-header">
                     <h5 class="form-title" style="text-align: center;
+                            border-radius: 8px;
                             background-color:rgb(127, 184, 235);
                             color: aliceblue;
                             margin-top:15px;
-                            font-size: 14px;">
+                            font-size: 12px;">
                         RANKIN</h5>
                 </div>
     
                 <div class="col-md-6">
-                    <strong style="font-size: 14px; margin-top: 50px;">Seguimiento</strong>
-                    <select name="RANKIN_funcional_seg" id="RANKIN_funcional_seg" class="form-control" style="font-size: 14px;">
+                    <strong style="font-size: 12px; margin-top: 50px;">Seguimiento</strong>
+                    <select name="RANKIN_funcional_seg" id="RANKIN_funcional_seg" class="form-control" style="font-size: 12px;">
                         <option value="Seleccione">Seleccione</option>
                         <option value="Mes">Mes</option>
                         <option value="Tres Meses">Tres Meses</option>
@@ -190,8 +195,8 @@
     
     
                 <div class="col-md-6">
-                    <strong style="font-size: 14px; margin-top: 50px;">RANKIN</strong>
-                    <select name="rankin_seguimiento" id="rankin_seguimiento" class="form-control" style="font-size: 14px;">
+                    <strong style="font-size: 12px; margin-top: 50px;">RANKIN</strong>
+                    <select name="rankin_seguimiento" id="rankin_seguimiento" class="form-control" style="font-size: 12px;">
                         <option value="Seleccione">Seleccione</option>
                         <option value="0 Sin Sintomas A pesar de sintomas  realiza actividades cotidianas.">0 Sin Sintomas A pesar de sintomas realiza actividades cotidianas.</option>
                         <option value="2 Incapacidad Leve. Incapaz de realizar actividades  previas  pero capaz de  hacer alguna actividad sin asistencia .">2 Incapacidad Leve. Incapaz de realizar actividades previas pero capaz de hacer alguna actividad sin asistencia .</option>
@@ -203,16 +208,17 @@
 
                 <div class="form-header">
                     <h5 class="form-title" style="text-align: center;
+                            border-radius: 8px;
                             background-color:rgb(139, 93, 149,0.6);;
                             color: aliceblue;
                             margin-top:15px;
-                            font-size: 14px;">
+                            font-size: 12px;">
                         Motricity Index</h5>
                 </div>
 
                 <div class="col-md-6">
-                    <strong style="font-size: 14px; margin-top: 50px;">Seguimiento</strong>
-                    <select name="motricity_seg" id="Motricity_seg" class="form-control" style="font-size: 14px;">
+                    <strong style="font-size: 12px; margin-top: 50px;">Seguimiento</strong>
+                    <select name="motricity_seg" id="Motricity_seg" class="form-control" style="font-size: 12px;">
                         <option value="Seleccione">Seleccione</option>
                         <option value="Mes">Mes</option>
                         <option value="Tres Meses">Tres Meses</option>
@@ -222,22 +228,23 @@
                 </div>
 
                 <div class="col-md-6">
-                    <strong style="font-size: 14px;">Motricity Index </strong>
+                    <strong style="font-size: 12px;">Motricity Index </strong>
                     <input type="number" step="any" class="form-control" id="motri" name="motri" style="font-size: 13px;">
                 </div>
 
                 <div class="form-header">
                     <h5 class="form-title" style="text-align: center;
+                            border-radius: 8px;
                             background-color:rgb(237, 105, 127);
                             color: aliceblue;
                             margin-top:15px;
-                            font-size: 14px;">
+                            font-size: 12px;">
                         Marcha FAC</h5>
                 </div>
 
                 <div class="col-md-6">
-                    <strong style="font-size: 14px; margin-top: 50px;">Seguimiento</strong>
-                    <select name="marcha_seg" id="marcha_seg" class="form-control" style="font-size: 14px;">
+                    <strong style="font-size: 12px; margin-top: 50px;">Seguimiento</strong>
+                    <select name="marcha_seg" id="marcha_seg" class="form-control" style="font-size: 12px;">
                         <option value="Seleccione">Seleccione</option>
                         <option value="Mes">Mes</option>
                         <option value="Tres Meses">Tres Meses</option>
@@ -247,8 +254,8 @@
                 </div>
 
                 <div class="col-md-6">
-                    <strong style="font-size: 14px; margin-top: 50px;">Marcha FAC</strong>
-                    <select name="marcha" id="marcha" class="form-control" style="font-size: 14px;">
+                    <strong style="font-size: 12px; margin-top: 50px;">Marcha FAC</strong>
+                    <select name="marcha" id="marcha" class="form-control" style="font-size: 12px;">
                         <option value="Seleccione">Seleccione</option>
                         <option value="0 Sin deambulación">0 Sin deambulación</option>
                         <option value="1 Deambulación funcional">1 Deambulación funcional</option>

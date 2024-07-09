@@ -1,5 +1,5 @@
 <?php
-include ('php/controllers/consulta_seguimiento_n.controller.php');
+include('php/controllers/consulta_seguimiento_n.controller.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,11 +7,8 @@ include ('php/controllers/consulta_seguimiento_n.controller.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -85,7 +82,7 @@ include ('php/controllers/consulta_seguimiento_n.controller.php');
                 <td><?php echo $enfermedad_cardio ?></td>
             </tr>
             <tr>
-                <th scope="col" style="background-color: rgb(180, 153, 186)">Preventivo</th>
+                <th scope="col" style="background-color: rgb(180, 153, 186)">Tratamiento</th>
                 <th scope="col" style="background-color: rgb(180, 153, 186)"> </th>
             </tr>
             <tr>
@@ -93,13 +90,53 @@ include ('php/controllers/consulta_seguimiento_n.controller.php');
                 <td><?php echo $antiagregante ?></td>
             </tr>
             <tr>
-                <td class="estilo-celda">Antioagulante</td>
+                <td class="estilo-celda">Anticoagulante</td>
                 <td><?php echo $antioagulante ?></td>
             </tr>
             <tr>
                 <td class="estilo-celda">Estatinas</td>
                 <td><?php echo $estatinas ?></td>
             </tr>
+
+            <tr>
+                <td class="estilo-celda">Cerebrolisina</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Estatinas</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Dosis-Estatinas</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Tiempo-Estatinas</td>
+                <td></td>
+            </tr>
+
+
+            <tr>
+                <th scope="col" style="background-color: rgb(127, 184, 235)">Cerebrolisina</th>
+                <th scope="col" style="background-color: rgb(127, 184, 235)"> </th>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Cerebrolisina</td>
+                <td><?php echo $cerebrolisina ?></td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Dosis</td>
+                <td><?php echo $dosis_cerebro ?></td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Tiempo</td>
+                <td><?php echo $tiempo_cerebro ?></td>
+            </tr>
+
+
             <tr>
                 <th scope="col" style="background-color: rgb(237, 105, 127)">Trombolisis</th>
                 <th scope="col" style="background-color: rgb(237, 105, 127)"> </th>
@@ -124,30 +161,17 @@ include ('php/controllers/consulta_seguimiento_n.controller.php');
                 <td class="estilo-celda">Fecha de Sangrado</td>
                 <td><?php echo $fecha_sangrado ?></td>
             </tr>
+
             <tr>
-                <th scope="col" style="background-color: rgb(127, 184, 235)">Cerebrolisina</th>
-                <th scope="col" style="background-color: rgb(127, 184, 235)"> </th>
+                <th scope="col" style="background-color: rgb(180, 153, 186)">Escalas</th>
+                <th scope="col" style="background-color: rgb(180, 153, 186)"> </th>
             </tr>
-            <tr>
-                <td class="estilo-celda">Cerebrolisina</td>
-                <td><?php echo $cerebrolisina ?></td>
-            </tr>
-            <tr>
-                <td class="estilo-celda">Dosis</td>
-                <td><?php echo $dosis_cerebro ?></td>
-            </tr>
-            <tr>
-                <td class="estilo-celda">Tiempo</td>
-                <td><?php echo $tiempo_cerebro ?></td>
-            </tr>
+
             <tr>
                 <th scope="col" style="background-color: rgb(180, 153, 186)">NIHHS</th>
                 <th scope="col" style="background-color: rgb(180, 153, 186)"> </th>
             </tr>
-            <tr>
-                <td class="estilo-celda">Seguimiento</td>
-                <td><?php echo $nihss_seg ?></td>
-            </tr>
+           
             <tr>
                 <td class="estilo-celda">Escala NIHSS</td>
                 <td><?php echo $escala_nihss_seg ?></td>
@@ -156,14 +180,27 @@ include ('php/controllers/consulta_seguimiento_n.controller.php');
                 <th scope="col" style="background-color: rgb(237, 105, 127)">RANKIN</th>
                 <th scope="col" style="background-color: rgb(237, 105, 127)"> </th>
             </tr>
-            <tr>
-                <td class="estilo-celda">Seguimiento</td>
-                <td><?php echo $RANKIN_funcional_seg ?></td>
-            </tr>
+            
             <tr>
                 <td class="estilo-celda">RANKIN</td>
                 <td><?php echo $rankin_seguimiento ?></td>
             </tr>
+
+            <tr>
+                <th scope="col" style="background-color: rgb(127, 184, 235)">HAS-BLED</th>
+                <th scope="col" style="background-color: rgb(127, 184, 235)"> </th>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">Puntuación HAS-BLED</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Interpretación</td>
+                <td></td>
+            </tr>
+
+
             <tr>
                 <th scope="col" style="background-color: rgb(127, 184, 235)">CHADS2-VASc</th>
                 <th scope="col" style="background-color: rgb(127, 184, 235)"> </th>

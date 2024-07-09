@@ -428,79 +428,79 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Calcular CHADS2-VAS Score
+// // Calcular CHADS2-VAS Score
 
-function calcularPuntuacionCHADS2VASc() {
-    let puntuacion = 0;
+// function calcularPuntuacionCHADS2VASc() {
+//     let puntuacion = 0;
 
-    // Sumar puntos de los radios
-    let radiosEdad = document.querySelectorAll('input[name="edad"]:checked');
-    if (radiosEdad.length > 0) {
-        puntuacion += parseInt(radiosEdad[0].value);
-    }
+//     // Sumar puntos de los radios
+//     let radiosEdad = document.querySelectorAll('input[name="edad"]:checked');
+//     if (radiosEdad.length > 0) {
+//         puntuacion += parseInt(radiosEdad[0].value);
+//     }
 
-    let radiosSexo = document.querySelectorAll('input[name="sexo"]:checked');
-    if (radiosSexo.length > 0) {
-        puntuacion += parseInt(radiosSexo[0].value);
-    }
+//     let radiosSexo = document.querySelectorAll('input[name="sexo"]:checked');
+//     if (radiosSexo.length > 0) {
+//         puntuacion += parseInt(radiosSexo[0].value);
+//     }
 
-    // Sumar puntos de los checkboxes
-    let checkboxes = document.querySelectorAll('#Historia_insuf, #Diabetes_VC, #ACV_AIT, #HISTO_EVC, #HIPER_ACTUAL');
-    checkboxes.forEach(function (checkbox) {
-        if (checkbox.checked) {
-            puntuacion += parseInt(checkbox.value);
-        }
-    });
+//     // Sumar puntos de los checkboxes
+//     let checkboxes = document.querySelectorAll('#Historia_insuf, #Diabetes_VC, #ACV_AIT, #HISTO_EVC, #HIPER_ACTUAL');
+//     checkboxes.forEach(function (checkbox) {
+//         if (checkbox.checked) {
+//             puntuacion += parseInt(checkbox.value);
+//         }
+//     });
 
-    document.getElementById('puntuacion_VASc').value = puntuacion;
+//     document.getElementById('puntuacion_VASc').value = puntuacion;
 
-    // Determinar la interpretación y el riesgo AVC basado en la puntuación
-    let interpretacion = '';
-    let riesgoAVC = '';
+//     // Determinar la interpretación y el riesgo AVC basado en la puntuación
+//     let interpretacion = '';
+//     let riesgoAVC = '';
 
-    if (puntuacion <= 1) {
-        interpretacion = 'Riesgo bajo. Puede no requerir anticoagulación';
-        riesgoAVC = 'Menor de 1.3%';
-    } else if (puntuacion == 2) {
-        interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
-        riesgoAVC = '2.2%';
-    } else if (puntuacion == 3) {
-        interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
-        riesgoAVC = '3.2%';
-    } else if (puntuacion == 4) {
-        interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
-        riesgoAVC = '4.0%';
-    } else if (puntuacion == 5) {
-        interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
-        riesgoAVC = '6.7%';
-    } else if (puntuacion == 6) {
-        interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
-        riesgoAVC = '9.8%';
-    } else if (puntuacion == 7) {
-        interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
-        riesgoAVC = '9.6%';
-    } else if (puntuacion == 8) {
-        interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
-        riesgoAVC = '10.8%';
-    } else if (puntuacion == 9) {
-        interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
-        riesgoAVC = '15.2%';
-    } else {
-        interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
-        riesgoAVC = ''; // Manejar otros casos si es necesario
-    }
+//     if (puntuacion <= 1) {
+//         interpretacion = 'Riesgo bajo. Puede no requerir anticoagulación';
+//         riesgoAVC = 'Menor de 1.3%';
+//     } else if (puntuacion == 2) {
+//         interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
+//         riesgoAVC = '2.2%';
+//     } else if (puntuacion == 3) {
+//         interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
+//         riesgoAVC = '3.2%';
+//     } else if (puntuacion == 4) {
+//         interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
+//         riesgoAVC = '4.0%';
+//     } else if (puntuacion == 5) {
+//         interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
+//         riesgoAVC = '6.7%';
+//     } else if (puntuacion == 6) {
+//         interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
+//         riesgoAVC = '9.8%';
+//     } else if (puntuacion == 7) {
+//         interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
+//         riesgoAVC = '9.6%';
+//     } else if (puntuacion == 8) {
+//         interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
+//         riesgoAVC = '10.8%';
+//     } else if (puntuacion == 9) {
+//         interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
+//         riesgoAVC = '15.2%';
+//     } else {
+//         interpretacion = 'Riesgo moderado o alto. Es candidato a anticoagulación';
+//         riesgoAVC = ''; // Manejar otros casos si es necesario
+//     }
 
-    document.getElementById('interpretacion_VASc').value = interpretacion;
-    document.getElementById('riesgo_VASc').value = riesgoAVC;
-}
+//     document.getElementById('interpretacion_VASc').value = interpretacion;
+//     document.getElementById('riesgo_VASc').value = riesgoAVC;
+// }
 
-// Event listener para los radios y checkboxes
-document.addEventListener('DOMContentLoaded', function () {
-    let radiosYCheckboxes = document.querySelectorAll('input[type="radio"], input[type="checkbox"]');
+// // Event listener para los radios y checkboxes
+// document.addEventListener('DOMContentLoaded', function () {
+//     let radiosYCheckboxes = document.querySelectorAll('input[type="radio"], input[type="checkbox"]');
 
-    radiosYCheckboxes.forEach(function (element) {
-        element.addEventListener('change', function () {
-            calcularPuntuacionCHADS2VASc();
-        });
-    });
-});
+//     radiosYCheckboxes.forEach(function (element) {
+//         element.addEventListener('change', function () {
+//             calcularPuntuacionCHADS2VASc();
+//         });
+//     });
+// });
