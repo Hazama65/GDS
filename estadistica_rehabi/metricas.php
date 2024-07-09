@@ -51,7 +51,8 @@ require ('php/controllers/registros.controller.php');
                     <option value="">Seleccione</option>
                     <option value="L.T.C.H Monjaras Bernal Isis Giovana">L.T.C.H Monjaras Bernal Isis Giovana</option>
                     <option value="L.T.F  Estephanie García Martinez">L.T.F Estephanie García Martinez</option>
-                    <option value="L.T.F Aurea Guadalupe Hernández Salazar.">L.T.F Aurea Guadalupe Hernández Salazar.</option>
+                    <option value="L.T.F Aurea Guadalupe Hernández Salazar.">L.T.F Aurea Guadalupe Hernández Salazar.
+                    </option>
                     <option value="L.T.F Brenda Roxana Monjaras Bernal">L.T.F Brenda Roxana Monjaras Bernal</option>
                     <option value="L.T.F Monserrat Ocampo García">L.T.F Monserrat Ocampo García</option>
                     <option value="L.T.O Ana Violeta De La Paz Gonzalez">L.T.O Ana Violeta De La Paz Gonzalez</option>
@@ -65,7 +66,8 @@ require ('php/controllers/registros.controller.php');
 
             <div class="col-md-1">
                 <span style="font-size:13px; display: block;">Terapia ocupacional</span>
-                <input style="width: 30px; height: 30px;" type="checkbox" name="terapia_ocupacional" id="terapia_ocupacional">
+                <input style="width: 30px; height: 30px;" type="checkbox" name="terapia_ocupacional"
+                    id="terapia_ocupacional">
             </div>
 
             <div class="col-md-1">
@@ -92,6 +94,92 @@ require ('php/controllers/registros.controller.php');
     <div class="container">
 
         <div id="chartdiv_1"></div>
+    </div>
+
+    <div class="container">
+        <div class="container mt-5" style="margin-bottom: 125px; overflow-x: auto;">
+            <h2>Estadísticas de Terapias por Mes</h2>
+            <table class="table table-bordered" id="tablaEnfermeros">
+                <thead>
+                    <tr>
+                        <th>Mes</th>
+                        <th>Terapia Física</th>
+                        <th>Terapia Ocupacional</th>
+                        <th>Terapia de Lenguaje</th>
+                        <th>Aplicación de Férula</th>
+                        <th>Aplicación de Vendaje Enyesado</th>
+                        <th>Baño de Parafina</th>
+                        <th>CHC CF</th>
+                        <th>Corrientes Interferenciales</th>
+                        <th>Electroestimulación</th>
+                        <th>Ejercicio Asistido</th>
+                        <th>Ejercicio de Fisioterapia</th>
+                        <th>Hidroterapia en Tanque Terapéutico</th>
+                        <th>Hidroterapia en Tina Habbard</th>
+                        <th>Hidroterapia en Tina de Remolinos</th>
+                        <th>TENS</th>
+                        <th>Terapia Combinada USG Corriente Eléctrica</th>
+                        <th>Ultrasonido Terapéutico</th>
+                        <th>Tracción Cervical y Lumbar</th>
+                        <th>Rehabilitación Cardiaca</th>
+                        <th>Ejercicios Respiratorios</th>
+                        <th>Terapia Láser</th>
+                        <th>Toxina Botulínica</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>ENERO</td>
+                    </tr>
+                    <tr>
+                        <td>FEBRERO</td>
+                    </tr>
+                    <tr>
+                        <td>MARZO</td>
+                    </tr>
+                    <tr>
+                        <td>1er. Trim.</td>
+                    </tr>
+                    <tr>
+                        <td>ABRIL</td>
+                    </tr>
+                    <tr>
+                        <td>MAYO</td>
+                    </tr>
+                    <tr>
+                        <td>JUNIO</td>
+                    </tr>
+                    <tr>
+                        <td>SEMESTRE</td>
+                    </tr>
+                    <tr>
+                        <td>JULIO</td>
+                    </tr>
+                    <tr>
+                        <td>AGOSTO</td>
+                    </tr>
+                    <tr>
+                        <td>SEPTIEMBRE</td>
+                    </tr>
+                    <tr>
+                        <td>3er. Trim.</td>
+                    </tr>
+                    <tr>
+                        <td>OCTUBRE</td>
+                    </tr>
+                    <tr>
+                        <td>NOVIEMBRE</td>
+                    </tr>
+                    <tr>
+                        <td>DICIEMBRE</td>
+                    </tr>
+                    <tr>
+                        <td>4to. Trim.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <!-- <div class="container">
@@ -124,6 +212,7 @@ require ('php/controllers/registros.controller.php');
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 
     <script src="includes/graph.js"></script>
+    <script src="includes/table.js"></script>
 
 
     <script>
