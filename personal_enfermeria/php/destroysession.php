@@ -10,4 +10,5 @@ session_destroy();
 
 // Redirige al formulario de inicio de sesión o a la página de inicio
 header("Location: ../login/index.php");
+exit();
 ?>

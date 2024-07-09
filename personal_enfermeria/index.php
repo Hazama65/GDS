@@ -1,3 +1,15 @@
+<?php
+session_start();
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+
+if (!isset($_SESSION['valid_user'])) {
+  // El usuario no ha iniciado sesión, redirige de vuelta a la página de inicio de sesión
+  header('Location: login/index.php');
+  exit;
+}
+$username = $_SESSION['valid_user'];
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -11,11 +23,27 @@
 </head>
 
 <body>
-
-  <?php include 'components/navbar.php'; ?>
+  <?php if ($username == 'admin'): ?>
+    <?php include 'components/navbar.php'; ?>
+  <?php else: ?>
+    <?php include 'components/navbar_general.php'; ?>
+  <?php endif; ?>
 
   <div class="container mt-5">
     <h2 class="text-center mb-4">Personal Enfermería</h2>
+
+    <?php if ($username == 'admin'): ?>
+      <div class="control mb-3">
+        <a href="php/export.php" class="btn btn-success">
+          <i class="bi bi-file-earmark-excel"></i> Exportar a Excel
+        </a>
+      </div>
+    <?php else: ?>
+
+    <?php endif; ?>
+
+
+
     <input type="text" id="buscador" class="form-control mb-3" placeholder="Buscar...">
     <div class="table-responsive">
       <table class="table table-bordered table-hover">

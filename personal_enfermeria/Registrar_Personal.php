@@ -166,7 +166,7 @@ require ('php/controllers/datos.controller.php');
                     <option value="2026-2">2026-2</option>
                   </select>
                 </div>
-                
+
                 <div class="col-md-4">
                   <strong>Turno</strong>
                   <select class="form-control" name="turno" id="turno" required>
@@ -322,19 +322,20 @@ require ('php/controllers/datos.controller.php');
                   </select>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3" id="divFechaExpedicion_colegiacion" style="display: none;">
                   <strong>Fecha Expedición</strong>
                   <input type="date" class="form-control" id="fechaExpedicion_colegiacion"
-                    name="fechaExpedicion_colegiacion" required disabled>
+                    name="fechaExpedicion_colegiacion"
+                    onchange="calcularFechaVigencia('colegiacion')">
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3" id="divFechaVigencia_colegiacion" style="display: none;">
                   <strong>Vigencia Colegiación</strong>
                   <input type="date" class="form-control" id="fechaVigencia_colegiacion"
-                    name="fechaVigencia_colegiacion" readonly disabled>
+                    name="fechaVigencia_colegiacion" readonly>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3" id="divEstatus_colegiacion" style="display: none;">
                   <strong>Estatus Colegiación</strong>
                   <input type="text" class="form-control" id="estatus_colegiacion" name="estatus_colegiacion" readonly>
                 </div>
@@ -351,19 +352,20 @@ require ('php/controllers/datos.controller.php');
                   </select>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3" id="divFechaExpedicion_certificacion" style="display: none;">
                   <strong>Fecha Certificación</strong>
                   <input type="date" class="form-control" id="fechaExpedicion_certificacion"
-                    name="fechaExpedicion_certificacion" required disabled>
+                    name="fechaExpedicion_certificacion"
+                    onchange="calcularFechaVigencia('certificacion')">
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3" id="divFechaVigencia_certificacion" style="display: none;">
                   <strong>Vigencia Certificación</strong>
                   <input type="date" class="form-control" id="fechaVigencia_certificacion"
-                    name="fechaVigencia_certificacion" readonly disabled>
+                    name="fechaVigencia_certificacion" readonly>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3" id="divEstatus_certificacion" style="display: none;">
                   <strong>Estatus Certificación</strong>
                   <input type="text" class="form-control" id="estatus_certificacion" name="estatus_certificacion"
                     readonly>

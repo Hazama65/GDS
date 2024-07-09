@@ -17,14 +17,14 @@ $.ajax({
             datosPagina.forEach(enfermero => {
                 html += `
                     <tr>
-                        <td><img src="${enfermero.foto}" class="imagen-enfermero"></td>
-                        <td>${enfermero.noempleado}</td>
-                        <td>${enfermero.apellidoPaterno}</td>
-                        <td>${enfermero.apellidoMaterno}</td>
-                        <td>${enfermero.nombre}</td>    
-                        <td>${enfermero.codigo}</td>
-                        <td><a href="ver_personal.php?id=${enfermero.id_enfermero}">Ver</a></td>
-                        <td><a href="editar.php?id=${enfermero.id_enfermero}">Editar</a></td>
+                        <td><img src="${enfermero.foto || ''}" class="imagen-enfermero"></td>
+                        <td>${enfermero.noempleado || ''}</td>
+                        <td>${enfermero.apellidoPaterno || ''}</td>
+                        <td>${enfermero.apellidoMaterno || ''}</td>
+                        <td>${enfermero.nombre || ''}</td>    
+                        <td>${enfermero.codigo || ''}</td>
+                        <td><a href="ver_personal.php?id=${enfermero.id_enfermero || ''}">Ver</a></td>
+                        <td><a href="editar.php?id=${enfermero.id_enfermero || ''}">Editar</a></td>
                     </tr>
                 `;
             });
@@ -59,11 +59,11 @@ $.ajax({
         $("#buscador").on("input", function () {
             const valorBusqueda = $(this).val().toLowerCase();
             const resultados = data.filter(enfermero => 
-                enfermero.noEmpleado.toString().toLowerCase().includes(valorBusqueda) ||
-                enfermero.apellidoPaterno.toLowerCase().includes(valorBusqueda) ||
-                enfermero.apellidoMaterno.toLowerCase().includes(valorBusqueda) ||
-                enfermero.nombres.toLowerCase().includes(valorBusqueda) ||
-                enfermero.codigo.toLowerCase().includes(valorBusqueda)
+                (enfermero.noempleado && enfermero.noempleado.toString().toLowerCase().includes(valorBusqueda)) ||
+                (enfermero.apellidoPaterno && enfermero.apellidoPaterno.toLowerCase().includes(valorBusqueda)) ||
+                (enfermero.apellidoMaterno && enfermero.apellidoMaterno.toLowerCase().includes(valorBusqueda)) ||
+                (enfermero.nombre && enfermero.nombre.toLowerCase().includes(valorBusqueda)) ||
+                (enfermero.codigo && enfermero.codigo.toLowerCase().includes(valorBusqueda))
             );
 
             mostrarTablaEnfermeros(resultados, 1); // Mostrar resultados desde la primera página
