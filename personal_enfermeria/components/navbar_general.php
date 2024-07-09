@@ -12,9 +12,6 @@
                         <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="metricas.php">Métricas</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="Registrar_Personal.php">Registrar Personal</a>
                     </li>
                     <li class="nav-item">
