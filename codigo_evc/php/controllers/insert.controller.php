@@ -14,7 +14,8 @@
             $table_puertas         = 'puertas',
             $table_rehabilitacion  = 'rehabilitacion',
             $table_escalas         = 'escalas',
-            $table_secuelas        = 'secuelas'
+            $table_secuelas        = 'secuelas',
+            $table_escalas_salida  = 'escalas_salida'
         );
 
         $Data_pacientes = array(
@@ -35,7 +36,6 @@
             'face'         => $_POST['Face'],
             'arms'         => $_POST['arms'],
             'speech'       => $_POST['speech'],
-            'time'         => $_POST['resultado_time'],
             'id_paciente'  => $Result_Paciente
         );
 
@@ -141,7 +141,6 @@
             'rankin'       => $_POST['rank'],
             'motri'        => $_POST['motri'],
             'marcha'       => $_POST['marcha'],
-            'agatha'       => $_POST['agatha'],
             'id_paciente'  => $Result_Paciente
         );
         foreach ($Data_Escalas as $key => $value) {
@@ -169,6 +168,18 @@
             $Data_Secuelas[$key] = $connectionDB->escapeString($value);
         }
         $Result_Secuelas = $connectionDB->insertData($Tables[8],$Data_Secuelas);
+
+        $Data_escalas_salida = array(
+            'nihss_salida' => $_POST['nihss_salida'],
+            'Escala_gose'  => $_POST['Escala_gose'],
+            'id_paciente'   => $Result_Paciente
+        );
+
+        foreach ($Data_escalas_salida as $key => $value) {
+            $Data_escalas_salida[$key] = $connectionDB->escapeString($value);
+        }
+        $Result_Secuelas = $connectionDB->insertData($Tables[9],$Data_escalas_salida);
+
 
 
         

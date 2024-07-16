@@ -9,7 +9,7 @@
         $id_paciente = $_GET['idPaciente'];
         
 
-        $queryAllData = "SELECT dp.*,f.*,n.*,fr.*,evc.*,p.*,r.*,e.*,s.*
+        $queryAllData = "SELECT dp.*,f.*,n.*,fr.*,evc.*,p.*,r.*,e.*,s.*,es.*
         FROM datos_paciente dp
         LEFT JOIN fast f ON dp.id_paciente = f.id_paciente   
         LEFT JOIN nihss n ON dp.id_paciente = n.id_paciente
@@ -19,6 +19,7 @@
         LEFT JOIN rehabilitacion r ON dp.id_paciente = r.id_paciente
         LEFT JOIN escalas e ON dp.id_paciente = e.id_paciente
         LEFT JOIN secuelas s ON dp.id_paciente = s.id_paciente
+        LEFT JOIN escalas_salida es ON dp.id_paciente = es.id_paciente
         WHERE dp.id_paciente ='$id_paciente'";
 
         $AllData = $connectionDB->getRows($queryAllData);
@@ -36,7 +37,6 @@
                 $face = $data['face'];
                 $arms = $data['arms'];
                 $speech = $data['speech'];
-                $time = $data['time'];
                 $escala = $data['escala'];
                 $trombolisis = $data['trombolisis'];
                 $tpa = $data['tpa'];
@@ -96,6 +96,8 @@
                 $neuro = $data['neuro'];
                 $marcha = $data['marcha'];
                 $equilibrio = $data['equilibrio'];
+                $nihss_salida =$data['nihss_salida'];
+                $Escala_gose =$data['Escala_gose'];
 
 
             }

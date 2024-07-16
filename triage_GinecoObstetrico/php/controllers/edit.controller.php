@@ -34,6 +34,7 @@
                 $covid = $data['covid'];
                 $gesta = $data['gesta'];
                 $paras = $data['paras'];
+                $cesarea = $data['cesarea'];
                 $abortos = $data['abortos'];
                 $embarazos_ecto = $data['embarazos_ecto'];
                 $hijos_vivos = $data['hijos_vivos'];

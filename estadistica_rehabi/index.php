@@ -79,9 +79,6 @@ include ("modal/registrarpaciente.php");
                                 echo '<a href="editar_ER.php?id=' . $id_paciente . '">';
                                 echo '<button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Editar</button>';
                                 echo '</a>';
-                                echo '<a href="seguimiento.php?id=' . $id_paciente . '">';
-                                echo '<button type="button" class="btn btn-secondary" style="color:white; --bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Seguimiento</button>';
-                                echo '</a>';
                                 echo '</li>';
                             }
                             echo '</ul>';
@@ -101,18 +98,8 @@ include ("modal/registrarpaciente.php");
 
             <div class="col-7">
                 <div class="container">
-                    <!-- Tu código existente -->
-
-                    <!-- Agrega un div para contener el select dinámico -->
-                    <div id="Seguimiento_index" style="display: none;">
-                        <select name="paciente_seleccionado" class="col-6 form-select custom-select"
-                            id="paciente_seleccionado"
-                            style="background-color: #6c757d; color: white; margin-bottom:10px">
-                        </select>
-                    </div>
-
                     <div id="tabla-seguimiento" class="tabla-seguimiento"
-                        style="height: 350px; overflow-y: auto; margin-bottom: 20px;"></div>
+                        style="height: 450px; overflow-y: auto; margin-bottom: 20px;"></div>
 
                 </div> <!-- <div class="container"> -->
             </div> <!-- FINALIZA EL DIV class col 8 -->

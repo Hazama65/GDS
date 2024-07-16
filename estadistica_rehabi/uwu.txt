@@ -38,3 +38,79 @@ Toxina_Botulinica
 value="<?php echo $id_paciente; ?>"
 <?php if ($id_paciente == 'Si') echo "checked"; ?>
 <?php if ($id_paciente== '0')echo 'selected'; ?>
+
+
+
+
+
+sesiones_num_terapia_fisica
+primera_vez_terapia_fisica
+subsecuente_terapia_fisica
+terapias_ambulatorias_terapia_fisica
+terapias_hospitalizacion_terapia_fisica
+sesiones_num_terapia_ocupacional
+primera_vez_terapia_ocupacional
+subsecuente_terapia_ocupacional
+terapias_ambulatorias_terapia_ocupacional
+terapias_hospitalizacion_terapia_ocupacional
+sesiones_num_terapia_lenguaje
+primera_vez_terapia_lenguaje
+subsecuente_terapia_lenguaje
+terapias_ambulatorias_terapia_lenguaje
+terapias_hospitalizacion_terapia_lenguaje
+sesiones_num_aplicacion_ferula
+sesiones_num_Aplicacion_vendaje_enyesado
+sesiones_num_Baño_parafina
+sesiones_num_CHC_CF
+sesiones_num_Corrientes_interfereciales
+sesiones_num_Electroestimulacion
+sesiones_num_Ejercicio_Asistido
+sesiones_num_Ejercicio_Fisioterapia
+sesiones_num_Hidroterapia_TanqueTerapéutico
+sesiones_num_Hidroterapia_Tina_Habbard
+sesiones_num_Hidroterapia_Tina_Remolinos
+sesiones_num_TENS
+sesiones_num_TerapiacombinadaUSG_CorrienteEléctrica
+sesiones_num_Ultrasonido_Terapeutico
+sesiones_num_TraccionCervical_Lumbar
+sesiones_num_Rehabi_cardiaca
+sesiones_num_Ejercicios_respiratorio
+sesiones_num_Terapia_Laser
+sesiones_num_Toxina_Botulinica
+
+Número de Terapias fisicas
+Primera Vez
+Subsecuente
+Terapias ambulatorias
+Terapias en Hospitalización
+Número de Terapia ocupacional
+Primera Vez
+Subsecuente
+Terapias ambulatorias
+Terapias en Hospitalización
+Número de Terapia de lenguaje
+Primera Vez
+Subsecuente
+Terapias ambulatorias
+Terapias en Hospitalización
+Número de Aplicación de férula
+Número de Aplicación de vendaje enyesado
+Número de Baño de parafina
+Número de CHC/CF
+Número de Corrientes interfereciales
+Número de Electroestimulación
+Número de Ejercicio Asistido
+Número de Ejercicio de Fisioterapia
+Número de Hidroterapia/Tanque Terapéutico
+Número de Hidroterapia/Tina de Habbard
+Número de Hidroterapia/Tina de Remolinos
+Número de TENS
+Número de Terapia combinada USG y Corriente Eléctrica
+Número de Ultrasonido Terapéutico
+Número de Tracción Cervical y Lumbar
+Número de Rehabilitacion Cardíaca
+Número de Ejercicio respiratorio (R. Pulmonar)
+Número de Terapia Laser
+Número de Toxina Botulinica
+
+

@@ -4,6 +4,8 @@ $.ajax({
     dataType: 'json',
     success: function (data) {
 
+        let tbody = $('#tabla-datos');
+        tbody.empty(); // Vaciar la tabla antes de llenarla con nuevos datos
 
         let total_terapia_fisica = 0;
         let total_terapia_ocupacional = 0;
@@ -28,10 +30,7 @@ $.ajax({
         let total_Terapia_Laser = 0;
         let total_Toxina_Botulinica = 0;
 
-
-
         data.forEach(function (item) {
-
 
             let terapia_fisica = Number(item.total_terapia_fisica);
             let terapia_ocupacional = Number(item.total_terapia_ocupacional);
@@ -59,133 +58,110 @@ $.ajax({
             let total_especializado = terapia_ocupacional + terapia_lenguaje + Baño_parafina + CHC_CF + Corrientes_interfereciales + Electroestimulacion + Hidroterapia_TanqueTerapéutico + Hidroterapia_Tina_Habbard + Hidroterapia_Tina_Remolinos + TENS + TerapiacombinadaUSG_CorrienteEléctrica + Ultrasonido_Terapeutico + TraccionCervical_Lumbar + Rehabi_cardiaca + Ejercicios_respiratorio + Terapia_Laser + Toxina_Botulinica
 
 
-            total_terapia_fisica =+ terapia_fisica;
-            total_terapia_ocupacional =+ terapia_ocupacional;
-            total_terapia_lenguaje =+ terapia_lenguaje;
-            total_aplicacion_ferula =+ aplicacion_ferula;
-            total_Aplicacion_vendaje_enyesado =+ Aplicacion_vendaje_enyesado;
-            total_Baño_parafina =+ Baño_parafina;
-            total_CHC_CF =+ CHC_CF;
-            total_Corrientes_interfereciales =+ Corrientes_interfereciales;
-            total_Electroestimulacion =+ Electroestimulacion;
-            total_Ejercicio_Asistido =+ Ejercicio_Asistido;
-            total_Ejercicio_Fisioterapia =+ Ejercicio_Fisioterapia;
-            total_Hidroterapia_TanqueTerapéutico =+ Hidroterapia_TanqueTerapéutico;
-            total_Hidroterapia_Tina_Habbard =+ Hidroterapia_Tina_Habbard;
-            total_Hidroterapia_Tina_Remolinos =+ Hidroterapia_Tina_Remolinos;
-            total_TENS =+ TENS;
-            total_TerapiacombinadaUSG_CorrienteEléctrica =+ TerapiacombinadaUSG_CorrienteEléctrica;
-            total_Ultrasonido_Terapeutico =+ Ultrasonido_Terapeutico;
-            total_TraccionCervical_Lumbar =+ TraccionCervical_Lumbar;
-            total_Rehabi_cardiaca =+ Rehabi_cardiaca;
-            total_Ejercicios_respiratorio =+ Ejercicios_respiratorio;
-            total_Terapia_Laser =+ Terapia_Laser;
-            total_Toxina_Botulinica =+ Toxina_Botulinica;
+            total_terapia_fisica = + terapia_fisica;
+            total_terapia_ocupacional = + terapia_ocupacional;
+            total_terapia_lenguaje = + terapia_lenguaje;
+            total_aplicacion_ferula = + aplicacion_ferula;
+            total_Aplicacion_vendaje_enyesado = + Aplicacion_vendaje_enyesado;
+            total_Baño_parafina = + Baño_parafina;
+            total_CHC_CF = + CHC_CF;
+            total_Corrientes_interfereciales = + Corrientes_interfereciales;
+            total_Electroestimulacion = + Electroestimulacion;
+            total_Ejercicio_Asistido = + Ejercicio_Asistido;
+            total_Ejercicio_Fisioterapia = + Ejercicio_Fisioterapia;
+            total_Hidroterapia_TanqueTerapéutico = + Hidroterapia_TanqueTerapéutico;
+            total_Hidroterapia_Tina_Habbard = + Hidroterapia_Tina_Habbard;
+            total_Hidroterapia_Tina_Remolinos = + Hidroterapia_Tina_Remolinos;
+            total_TENS = + TENS;
+            total_TerapiacombinadaUSG_CorrienteEléctrica = + TerapiacombinadaUSG_CorrienteEléctrica;
+            total_Ultrasonido_Terapeutico = + Ultrasonido_Terapeutico;
+            total_TraccionCervical_Lumbar = + TraccionCervical_Lumbar;
+            total_Rehabi_cardiaca = + Rehabi_cardiaca;
+            total_Ejercicios_respiratorio = + Ejercicios_respiratorio;
+            total_Terapia_Laser = + Terapia_Laser;
+            total_Toxina_Botulinica = + Toxina_Botulinica;
 
-
-
-
-
-
-
-
-
-
-            tbody += `
-                <tr>
-                    <td>${row.mes}</td>
-                    <td>${row.total_terapia_fisica}</td>
-                    <td>${row.total_terapia_ocupacional}</td>
-                    <td>${row.total_terapia_lenguaje}</td>
-                    <td>${row.total_aplicacion_ferula}</td>
-                    <td>${row.total_Aplicacion_vendaje_enyesado}</td>
-                    <td>${row.total_Baño_parafina}</td>
-                    <td>${row.total_CHC_CF}</td>
-                    <td>${row.total_Corrientes_interfereciales}</td>
-                    <td>${row.total_Electroestimulacion}</td>
-                    <td>${row.total_Ejercicio_Asistido}</td>
-                    <td>${row.total_Ejercicio_Fisioterapia}</td>
-                    <td>${row.total_Hidroterapia_TanqueTerapéutico}</td>
-                    <td>${row.total_Hidroterapia_Tina_Habbard}</td>
-                    <td>${row.total_Hidroterapia_Tina_Remolinos}</td>
-                    <td>${row.total_TENS}</td>
-                    <td>${row.total_TerapiacombinadaUSG_CorrienteEléctrica}</td>
-                    <td>${row.total_Ultrasonido_Terapeutico}</td>
-                    <td>${row.total_TraccionCervical_Lumbar}</td>
-                    <td>${row.total_Rehabi_cardiaca}</td>
-                    <td>${row.total_Ejercicios_respiratorio}</td>
-                    <td>${row.total_Terapia_Laser}</td>
-                    <td>${row.total_Toxina_Botulinica}</td>
-                </tr>
-            `;
-        });
-        $('#tablaEnfermeros tbody').html(tbody);
-
-
-
-        let tbody = $('#tabla-recuento');
-        tbody.empty(); // Vaciar la tabla antes de llenarla con nuevos datos
-
-        // variables para almacenar los totales por columna
-        let totalLunes = 0;
-        let totalMartes = 0;
-        let totalMiercoles = 0;
-        let totalJueves = 0;
-        let totalViernes = 0;
-        let totalSabado = 0;
-        let totalDomingo = 0;
-
-        response.conteo_turnos.forEach(function (item) {
-            // Convertir los valores a números
-            let lunes = Number(item.total_lunes);
-            let martes = Number(item.total_martes);
-            let miercoles = Number(item.total_miercoles);
-            let jueves = Number(item.total_jueves);
-            let viernes = Number(item.total_viernes);
-            let sabado = Number(item.total_sabado);
-            let domingo = Number(item.total_domingo);
-
-            // Calcular el total por fila (turno)
-            let totalTurno = lunes + martes + miercoles + jueves + viernes + sabado + domingo;
-
-            // Agregar los valores a los totales por columna
-            totalLunes += lunes;
-            totalMartes += martes;
-            totalMiercoles += miercoles;
-            totalJueves += jueves;
-            totalViernes += viernes;
-            totalSabado += sabado;
-            totalDomingo += domingo;
-
-            // Crear una fila para la tabla
             let row = '<tr>' +
-                '<td>' + item.turno + '</td>' +
-                '<td>' + lunes + '</td>' +
-                '<td>' + martes + '</td>' +
-                '<td>' + miercoles + '</td>' +
-                '<td>' + jueves + '</td>' +
-                '<td>' + viernes + '</td>' +
-                '<td>' + sabado + '</td>' +
-                '<td>' + domingo + '</td>' +
-                '<td>' + totalTurno + '</td>' +
+                '<td>' + item.año + '</td>' +
+                '<td>' + item.mes + '</td>' +
+                '<td>' + terapia_fisica + '</td>' +
+                '<td>' + terapia_ocupacional + '</td>' +
+                '<td>' + terapia_lenguaje + '</td>' +
+                '<td>' + aplicacion_ferula + '</td>' +
+                '<td>' + Aplicacion_vendaje_enyesado + '</td>' +
+                '<td>' + Baño_parafina + '</td>' +
+                '<td>' + CHC_CF + '</td>' +
+                '<td>' + Corrientes_interfereciales + '</td>' +
+                '<td>' + Electroestimulacion + '</td>' +
+                '<td>' + Ejercicio_Asistido + '</td>' +
+                '<td>' + Ejercicio_Fisioterapia + '</td>' +
+                '<td>' + Hidroterapia_TanqueTerapéutico + '</td>' +
+                '<td>' + Hidroterapia_Tina_Habbard + '</td>' +
+                '<td>' + Hidroterapia_Tina_Remolinos + '</td>' +
+                '<td>' + TENS + '</td>' +
+                '<td>' + TerapiacombinadaUSG_CorrienteEléctrica + '</td>' +
+                '<td>' + Ultrasonido_Terapeutico + '</td>' +
+                '<td>' + TraccionCervical_Lumbar + '</td>' +
+                '<td>' + Rehabi_cardiaca + '</td>' +
+                '<td>' + Ejercicios_respiratorio + '</td>' +
+                '<td>' + Terapia_Laser + '</td>' +
+                '<td>' + Toxina_Botulinica + '</td>' +
+                '<td>' + total_especializado + '</td>' +
                 '</tr>';
-            tbody.append(row);
-        });
 
-        // Calcular el total general (sumando los totales de los días)
-        let totalGeneral = totalLunes + totalMartes + totalMiercoles + totalJueves + totalViernes + totalSabado + totalDomingo;
+            tbody.append(row);
+
+        });
+        let totalGeneral = total_terapia_ocupacional + total_terapia_lenguaje + total_Baño_parafina + total_CHC_CF + total_Corrientes_interfereciales + total_Electroestimulacion + total_Hidroterapia_TanqueTerapéutico + total_Hidroterapia_Tina_Habbard + total_Hidroterapia_Tina_Remolinos + total_TENS + total_TerapiacombinadaUSG_CorrienteEléctrica + total_Ultrasonido_Terapeutico + total_TraccionCervical_Lumbar + total_Rehabi_cardiaca + total_Ejercicios_respiratorio + total_Terapia_Laser + total_Toxina_Botulinica
+
 
         // Mostrar los totales por columna en el pie de la tabla
-        $('#total_lunes').text(totalLunes);
-        $('#total_martes').text(totalMartes);
-        $('#total_miercoles').text(totalMiercoles);
-        $('#total_jueves').text(totalJueves);
-        $('#total_viernes').text(totalViernes);
-        $('#total_sabado').text(totalSabado);
-        $('#total_domingo').text(totalDomingo);
-        $('#total_general').text(totalGeneral);
+        $('#total_terapia_fisica').text(total_terapia_fisica);
+        $('#total_terapia_ocupacional').text(total_terapia_ocupacional);
+        $('#total_terapia_lenguaje').text(total_terapia_lenguaje);
+        $('#total_aplicacion_ferula').text(total_aplicacion_ferula);
+        $('#total_Aplicacion_vendaje_enyesado').text(total_Aplicacion_vendaje_enyesado);
+        $('#total_Baño_parafina').text(total_Baño_parafina);
+        $('#total_CHC_CF').text(total_CHC_CF);
+        $('#total_Corrientes_interfereciales').text(total_Corrientes_interfereciales);
+        $('#total_Electroestimulacion').text(total_Electroestimulacion);
+        $('#total_Ejercicio_Asistido').text(total_Ejercicio_Asistido);
+        $('#total_Ejercicio_Fisioterapia').text(total_Ejercicio_Fisioterapia);
+        $('#total_Hidroterapia_TanqueTerapéutico').text(total_Hidroterapia_TanqueTerapéutico);
+        $('#total_Hidroterapia_Tina_Habbard').text(total_Hidroterapia_Tina_Habbard);
+        $('#total_Hidroterapia_Tina_Remolinos').text(total_Hidroterapia_Tina_Remolinos);
+        $('#total_TENS').text(total_TENS);
+        $('#total_TerapiacombinadaUSG_CorrienteEléctrica').text(total_TerapiacombinadaUSG_CorrienteEléctrica);
+        $('#total_Ultrasonido_Terapeutico').text(total_Ultrasonido_Terapeutico);
+        $('#total_TraccionCervical_Lumbar').text(total_TraccionCervical_Lumbar);
+        $('#total_Rehabi_cardiaca').text(total_Rehabi_cardiaca);
+        $('#total_Ejercicios_respiratorio').text(total_Ejercicios_respiratorio);
+        $('#total_Terapia_Laser').text(total_Terapia_Laser);
+        $('#total_Toxina_Botulinica').text(total_Toxina_Botulinica);
+        $('#totalGeneral').text(totalGeneral);
+
+
     },
     error: function (xhr, status, error) {
         console.error("Error al obtener los datos:", status, error);
     }
 });
+
+const exportToExcel = (tableId,Texto) => {
+    // Obtener la tabla DOM
+    let tabla = document.getElementById(tableId);
+
+    // Crear un nuevo libro de Excel
+    let workbook = XLSX.utils.book_new();
+
+    // Convertir la tabla a una hoja de Excel
+    let ws = XLSX.utils.table_to_sheet(tabla);
+
+    // Agregar la hoja al libro
+    XLSX.utils.book_append_sheet(workbook, ws, "Datos");
+
+    // Generar el archivo Excel y guardarlo
+    let date = new Date();
+    let filename = `Resumen ${Texto} ` + date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + ".xlsx";
+    XLSX.writeFile(workbook, filename);
+}

@@ -39,52 +39,54 @@ include('php/controllers/edit.controller.php');
 
     <form id="evc_update" method="POST">
         <div class="container">
+            <input type="hidden" id="id_paciente" name="id_paciente" value="<?php echo $id_paciente; ?>">
+
 
             <div class="row">
                 <div class="col-md-6" id="idnombre">
                     <strong style="font-size: 12px;">Nombre Completo</strong>
-                    <input id="nombre" name="nombre" type="text" class="control form-control" style="font-size: 12px;" required>
+                    <input id="nombre" name="nombre" type="text" class="control form-control" style="font-size: 12px;" required value="<?php echo $nombre_paciente; ?>">
                 </div>
 
                 <div class="col-md-6" id="idcurp">
                     <strong style="font-size: 12px;">CURP</strong>
-                    <input type="text" class="form-control" id="curp" name="curp" placeholder="CURP" style="font-size: 12px;">
+                    <input type="text" class="form-control" id="curp" name="curp" placeholder="CURP" style="font-size: 12px;" value="<?php echo $curp; ?>">
                 </div>
 
                 <div class="col-md-4">
                     <strong style="font-size: 12px; ">Fecha de Nacimiento</strong>
-                    <input id="fecha" name="fecha" type="date" onblur="curp2date();" class="control form-control" style="font-size: 12px;" readonly>
+                    <input id="fecha" name="fecha" type="date" onblur="curp2date();" class="control form-control" style="font-size: 12px;" readonly value="<?php echo $fecha_nacimiento; ?>">
                 </div>
 
                 <div class="col-md-4">
                     <strong style="font-size: 12px;">Sexo</strong>
-                    <input type="text" class="control form-control" id="sexo" onclick="curp2date();" name="sexo" style="font-size: 12px;" readonly>
+                    <input type="text" class="control form-control" id="sexo" onclick="curp2date();" name="sexo" style="font-size: 12px;" readonly value="<?php echo $sexo; ?>">
                 </div>
 
 
                 <div class="col-md-4">
                     <strong style="font-size: 12px;">Edad de Ingreso</strong>
-                    <input id="edad" name="edad" type="number" class="control form-control" style="font-size: 12px;" readonly>
+                    <input id="edad" name="edad" type="number" class="control form-control" style="font-size: 12px;" readonly value="<?php echo $edad; ?>">
                 </div>
 
                 <div class="col-md-6" style="display:none">
                     <strong style="font-size: 12px; ">Fecha</strong>
-                    <input id="fecha_Actual" name="fecha_Actual" type="date" class="control form-control" style="font-size: 12px;" readonly>
+                    <input id="fecha_Actual" name="fecha_Actual" type="date" class="control form-control" style="font-size: 12px;" readonly">
                 </div>
 
                 <div class="col-md-3" style="display:none">
                     <strong style="font-size: 12px; ">Horario</strong>
-                    <input id="tiempo" name="tiempo" type="time" class="control form-control" style="font-size: 12px;" style="display: none;" readonly>
+                    <input id="tiempo" name="tiempo" type="time" class="control form-control" style="font-size: 12px;" style="display: none;" readonly">
                 </div>
 
                 <div class="col-md-6">
                     <strong style="font-size: 12px; ">Fecha de Sintomas</strong>
-                    <input id="fecha_inicio" name="fecha_inicio" type="date" class="control form-control" style="font-size: 12px;">
+                    <input id="fecha_inicio" name="fecha_inicio" type="date" class="control form-control" style="font-size: 12px;" value="<?php echo $fecha_sintomas; ?>">
                 </div>
 
                 <div class="col-md-6">
                     <strong style="font-size: 12px; ">Inicio de Sintomas</strong>
-                    <input id="inicio_sintomas" name="inicio_sintomas" type="time" class="control form-control" style="font-size: 12px;">
+                    <input id="inicio_sintomas" name="inicio_sintomas" type="time" class="control form-control" style="font-size: 12px;" value="<?php echo $inicio_sintomas; ?>">
                 </div>
 
                 <!-- ************************Escala F.A.S.T*********************************** -->
@@ -105,27 +107,27 @@ include('php/controllers/edit.controller.php');
                         <strong style="font-size: 12px;">Cara</strong>
                         <i><a style="font-size: 12px; margin-top: 50px;" href="escalacincinnati.php" target="_blank">Instructivos</a></i>
                         <select name="Face" id="Face" class="form-control" style="font-size: 12px;">
-                            <option value="Seleccione">Seleccione</option>
-                            <option value="Normal">Normal</option>
-                            <option value="Alterado">Alterado</option>
+                            <option value="Seleccione"<?php if ($face== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                            <option value="Normal"<?php if ($face== 'Normal')echo 'selected'; ?>>Normal</option>
+                            <option value="Alterado"<?php if ($face== 'Alterado')echo 'selected'; ?>>Alterado</option>
                         </select>
                     </div>
 
                     <div class="col-md-4" id="escala_arms">
                         <strong style="font-size: 12px;">Brazos</strong>
                         <select name="arms" id="arms" class="form-control" style="font-size: 12px;">
-                            <option value="Seleccione">Seleccione</option>
-                            <option value="Normal">Normal</option>
-                            <option value="Alterado">Alterado</option>
+                            <option value="Seleccione"<?php if ($arms== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                            <option value="Normal"<?php if ($arms== 'Normal')echo 'selected'; ?>>Normal</option>
+                            <option value="Alterado"<?php if ($arms== 'Alterado')echo 'selected'; ?>>Alterado</option>
                         </select>
                     </div>
 
                     <div class="col-md-4" id="escala_speech">
                         <strong style="font-size: 12px;">Lenguaje</strong>
                         <select name="speech" id="speech" class="form-control" style="font-size: 12px;">
-                            <option value="Seleccione">Seleccione</option>
-                            <option value="Normal">Normal</option>
-                            <option value="Alterado">Alterado</option>
+                            <option value="Seleccione"<?php if ($speech== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                            <option value="Normal"<?php if ($speech== 'Normal')echo 'selected'; ?>>Normal</option>
+                            <option value="Alterado"<?php if ($speech== 'Alterado')echo 'selected'; ?>>Alterado</option>
                         </select>
                     </div>
 
@@ -154,11 +156,11 @@ include('php/controllers/edit.controller.php');
                     <i><a style="font-size: 12px; margin-top: 50px;" href="https://hraeigds.site/escalas/" target="_blank">Escala NIHSS</a></i>
                     <i><a style="font-size: 12px; margin-top: 50px;" href="guias.php" target="_blank">Instructivos</a></i>
                     <select name="nihss" id="nihss" class="form-control" style="font-size: 12px;" onchange="mostrarParametrosNihss()">
-                        <option value="Seleccione">Seleccione</option>
-                        <option value="1-4 Leve">1- 4 Leve</option>
-                        <option value="5-15 Moderado">5- 15 Moderado</option>
-                        <option value="16-20 Moderado Severo">16- 20 Moderado Severo</option>
-                        <option value="21-42 Severo">21- 42 Severo</option>
+                        <option value="Seleccione"<?php if ($escala== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                        <option value="1-4 Leve"<?php if ($escala== '1-4 Leve')echo 'selected'; ?>>1- 4 Leve</option>
+                        <option value="5-15 Moderado"<?php if ($escala== '5-15 Moderado')echo 'selected'; ?>>5- 15 Moderado</option>
+                        <option value="16-20 Moderado Severo"<?php if ($escala== '16-20 Moderado Severo')echo 'selected'; ?>>16- 20 Moderado Severo</option>
+                        <option value="21-42 Severo"<?php if ($escala== '21-42 Severo')echo 'selected'; ?>>21- 42 Severo</option>
                     </select>
                 </div>
 
@@ -171,8 +173,8 @@ include('php/controllers/edit.controller.php');
                         <div class="col-md-12" id="trombolisis">
                             <strong style="font-size: 12px; margin-top: 50px;">Trombolisis</strong>
                             <select name="trombolisis1" id="trombolisis1" class="form-control" style="font-size: 12px;" onchange="actualizarColorTrombolisis()">
-                                <option value="Negado">Negado</option>
-                                <option value="Si">Si</option>
+                                <option value="Negado"<?php if ($trombolisis== 'Negado')echo 'selected'; ?>>Negado</option>
+                                <option value="Si"<?php if ($trombolisis== 'Si')echo 'selected'; ?>>Si</option>
                             </select>
                         </div>
 
@@ -185,36 +187,36 @@ include('php/controllers/edit.controller.php');
                         <div class="col-md-6" id="si_rtpa" style="display: none;">
                             <strong style="font-size: 12px; margin-top: 50px;">r-TPA</strong>
                             <select name="vr_TPA_1" id="r_TPA_1" class="form-control" style="font-size: 12px;">
-                                <option value="Seleccione">Seleccione</option>
-                                <option value="Alteplasa">Alteplasa</option>
-                                <option value="Tenecteplasa">Tenecteplasa</option>
-                                <option value="Reteplasa">Reteplasa</option>
+                                <option value="Seleccione"<?php if ($tpa== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                                <option value="Alteplasa"<?php if ($tpa== 'Alteplasa')echo 'selected'; ?>>Alteplasa</option>
+                                <option value="Tenecteplasa"<?php if ($tpa== 'Tenecteplasa')echo 'selected'; ?>>Tenecteplasa</option>
+                                <option value="Reteplasa"<?php if ($tpa== 'Reteplasa')echo 'selected'; ?>>Reteplasa</option>
                             </select>
                         </div>
 
                         <div class="col-md-6" id="sangrado_1" style="display: none;">
                             <strong style="font-size: 12px; margin-top: 50px;">Sangrado</strong>
                             <select name="sangrado" id="sangrado" class="form-control" style="font-size: 12px;">
-                                <option value="Negado">Negado</option>
-                                <option value="Si">Si</option>
+                                <option value="Negado"<?php if ($sangrado== 'Negado')echo 'selected'; ?>>Negado</option>
+                                <option value="Si"<?php if ($sangrado== 'Si')echo 'selected'; ?>>Si</option>
                             </select>
                         </div>
 
                         <div class="col-md-6" id="nivel_1" style="display: none;">
                             <strong style="font-size: 12px; margin-top: 50px;">Nivel </strong>
                             <select name="nivel" id="nivel" class="form-control" style="font-size: 12px;">
-                                <option value="Seleccione">Seleccione</option>
-                                <option value="Cerebro">Cerebro</option>
-                                <option value="Encías">Encías</option>
-                                <option value="Genitourinario">Genitourinario</option>
-                                <option value="Gastrico">Gastrico</option>
-                                <option value="Otro">Otro</option>
+                                <option value="Seleccione"<?php if ($nivel== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                                <option value="Cerebro"<?php if ($nivel== 'Cerebro')echo 'selected'; ?>>Cerebro</option>
+                                <option value="Encías"<?php if ($nivel== 'Encías')echo 'selected'; ?>>Encías</option>
+                                <option value="Genitourinario"<?php if ($nivel== 'Genitourinario')echo 'selected'; ?>>Genitourinario</option>
+                                <option value="Gastrico"<?php if ($nivel== 'Gastrico')echo 'selected'; ?>>Gastrico</option>
+                                <option value="Otro"<?php if ($nivel== 'Otro')echo 'selected'; ?>>Otro</option>
                             </select>
                         </div>
 
                         <div class="col-md-6" id="fecha_sangrado_1" style="display: none;">
                             <strong style="font-size: 12px; margin-top: 50px;">Fecha de Sangrado</strong>
-                            <input type="date" class="control form-control" id="fecha_sangrado" name="fecha_sangrado" style="font-size: 12px;">
+                            <input type="date" class="control form-control" id="fecha_sangrado" name="fecha_sangrado" style="font-size: 12px;" value="<?php echo $fecha_sangrado; ?>">
                         </div>
 
                     </div>
@@ -235,47 +237,47 @@ include('php/controllers/edit.controller.php');
                 <div class="row"> <!-- DIV DE ROW DEL FACTOR DE RIESGO-->
 
                     <div class="col-md-4">
-                        <input type="checkbox" name="EVC" id="EVC" value="Ninguno" style="font-size:12px;">
+                        <input type="checkbox" name="EVC" id="EVC" value="Ninguno" style="font-size:12px;" <?php if ($evc == 'Si') echo "checked"; ?>>
                         <label for="EVC" style="font-size:12px;">Enfermedad Vascular Cerebral</label>
                     </div>
 
                     <div class="col-md-3">
-                        <input type="checkbox" name="Hipertension" id="Hipertension" value="Si" style="font-size: 12px;">
+                        <input type="checkbox" name="Hipertension" id="Hipertension" value="Si" style="font-size: 12px;" <?php if ($hipertension == 'Si') echo "checked"; ?>>
                         <label for="Hipertension" style="font-size: 12px;">Hipertensión</label>
                     </div>
 
                     <div class="col-md-2">
-                        <input type="checkbox" name="Diabetes" id="Diabetes" value="Si" style="font-size: 12px;">
+                        <input type="checkbox" name="Diabetes" id="Diabetes" value="Si" style="font-size: 12px;" <?php if ($diabetes == 'Si') echo "checked"; ?>>
                         <label for="Diabetes" style="font-size: 12px;">Diabetes</label>
                     </div>
 
                     <div class="col-md-3">
-                        <input type="checkbox" name="Tabaquismo" id="Tabaquismo" value="Si" style="font-size: 12px;">
+                        <input type="checkbox" name="Tabaquismo" id="Tabaquismo" value="Si" style="font-size: 12px;" <?php if ($tabaquismo == 'Si') echo "checked"; ?>>
                         <label for="Tabaquismo" style="font-size: 12px;">Tabaquismo</label>
                     </div>
 
 
                     <div class="col-md-4">
-                        <input type="checkbox" name="enfermedad_cardio" id="enfermedad_cardio" value="Si" style="font-size: 12px;">
+                        <input type="checkbox" name="enfermedad_cardio" id="enfermedad_cardio" value="Si" style="font-size: 12px;" <?php if ($enfcardio == 'Si') echo "checked"; ?>>
                         <label for="enfermedad_cardio" style="font-size: 12px;">Enfermedad Cardiovascular </label>
                     </div>
 
 
 
                     <div class="col-md-2">
-                        <input type="checkbox" name="Covid" id="Covid" value="Si" style="font-size: 12px;">
+                        <input type="checkbox" name="Covid" id="Covid" value="Si" style="font-size: 12px;" <?php if ($covid == 'Si') echo "checked"; ?>>
                         <label for="Covid" style="font-size: 12px;">Covid</label>
                     </div>
 
 
 
                     <div class="col-md-3 style= margin-top: 10px;">
-                        <input type="checkbox" name="Hiperlipidemia" id="Hiperlipidemia" value="Si" style="font-size: 12px;">
+                        <input type="checkbox" name="Hiperlipidemia" id="Hiperlipidemia" value="Si" style="font-size: 12px;" <?php if ($hiperlipidemia == 'Si') echo "checked"; ?>>
                         <label for="Hiperlipidemia" style="font-size: 12px;">Hiperlipidemia</label>
                     </div>
 
                     <div class="col-md-3">
-                        <input type="checkbox" name="Apnea" id="Apnea" value="Si" style="font-size: 12px;">
+                        <input type="checkbox" name="Apnea" id="Apnea" value="Si" style="font-size: 12px;" <?php if ($apnea == 'Si') echo "checked"; ?>>
                         <label for="Apnea" style="font-size: 12px;">Apnea de Sueño</label>
                     </div>
 
@@ -296,25 +298,25 @@ include('php/controllers/edit.controller.php');
                     <div class="col-md-4">
                         <strong style="font-size: 12px; margin-top: 50px;">Se Activa Código EVC</strong>
                         <select name="se_activa" id="se_activa" class="form-control" style="font-size: 12px;">
-                            <option value="Negado">Negado</option>
-                            <option value="Si">Si</option>
+                            <option value="Negado"<?php if ($activacion== 'Negado')echo 'selected'; ?>>Negado</option>
+                            <option value="Si"<?php if ($activacion== 'Si')echo 'selected'; ?>>Si</option>
                         </select>
                     </div>
 
                     <div class="col-md-4">
                         <strong style="font-size: 12px; margin-top: 50px;">Defunción</strong>
                         <select name="defuncion" id="defuncion" class="form-control" style="font-size: 12px;">
-                            <option value="Negado">Negado</option>
-                            <option value="Si">Si</option>
+                            <option value="Negado"<?php if ($defuncion== 'Negado')echo 'selected'; ?>>Negado</option>
+                            <option value="Si"<?php if ($defuncion== 'Si')echo 'selected'; ?>>Si</option>
                         </select>
                     </div>
 
                     <div class="col-md-4">
                         <strong style="font-size: 12px; margin-top: 50px;">Área</strong>
                         <select name="area" id="area" class="form-control" style="font-size: 12px;">
-                            <option value="Seleccione">Seleccione</option>
-                            <option value="Urgencias">Urgencias</option>
-                            <option value="Hospitalización">Hospitalización</option>
+                            <option value="Seleccione"<?php if ($area== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                            <option value="Urgencias"<?php if ($area== 'Urgencias')echo 'selected'; ?>>Urgencias</option>
+                            <option value="Hospitalización"<?php if ($area== 'Hospitalización')echo 'selected'; ?>>Hospitalización</option>
 
                         </select>
                     </div>
@@ -334,39 +336,39 @@ include('php/controllers/edit.controller.php');
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-5">
-                                    <input type="checkbox" name="pmau" id="pmau" value="Si" style="font-size:12px;">
+                                    <input type="checkbox" name="pmau" id="pmau" value="Si" style="font-size:12px;" <?php if ($evc == 'Si') echo "checked"; ?>>
                                     <label for="pmau" style="font-size:12px;">Personal Médico Adscrito Urgencias</label>
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="checkbox" name="pah" id="pah" value="Si" style="font-size:12px;">
+                                    <input type="checkbox" name="pah" id="pah" value="Si" style="font-size:12px;" <?php if ($evc == 'Si') echo "checked"; ?>>
                                     <label for="pah" style="font-size:12px;">Personal de Admisión Hospitalaria</label>
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="checkbox" name="peia" id="peia" value="Si" style="font-size:12px;">
+                                    <input type="checkbox" name="peia" id="peia" value="Si" style="font-size:12px;" <?php if ($evc == 'Si') echo "checked"; ?>>
                                     <label for="peia" style="font-size:12px;">Personal de Enfermería</label>
                                 </div>
                                 <div class="col-md-5">
-                                    <input type="checkbox" name="pim" id="pim" value="Si" style="font-size:12px;">
+                                    <input type="checkbox" name="pim" id="pim" value="Si" style="font-size:12px;" <?php if ($evc == 'Si') echo "checked"; ?>>
                                     <label for="pim" style="font-size:12px;">Personal de Imagenología</label>
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="checkbox" name="plio" id="plio" value="Si" style="font-size:12px;">
+                                    <input type="checkbox" name="plio" id="plio" value="Si" style="font-size:12px;" <?php if ($evc == 'Si') echo "checked"; ?>>
                                     <label for="plio" style="font-size:12px;">Personal de Laboratorio</label>
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="checkbox" name="pcisfa" id="pcisfa" value="Si" style="font-size:12px;">
+                                    <input type="checkbox" name="pcisfa" id="pcisfa" value="Si" style="font-size:12px;" <?php if ($evc == 'Si') echo "checked"; ?>>
                                     <label for="pcisfa" style="font-size:12px;">Personal de CISFA</label>
                                 </div>
                                 <div class="col-md-5">
-                                    <input type="checkbox" name="ts" id="ts" value="Si" style="font-size:12px;">
+                                    <input type="checkbox" name="ts" id="ts" value="Si" style="font-size:12px;" <?php if ($evc == 'Si') echo "checked"; ?>>
                                     <label for="ts" style="font-size:12px;">Trabajo Social</label>
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="checkbox" name="camillero" id="camillero" value="Si" style="font-size:12px;">
+                                    <input type="checkbox" name="camillero" id="camillero" value="Si" style="font-size:12px;" <?php if ($evc == 'Si') echo "checked"; ?>>
                                     <label for="camillero" style="font-size:12px;">Camillero</label>
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="checkbox" name="med_neuro" id="med_neuro" value="Si" style="font-size:12px;">
+                                    <input type="checkbox" name="med_neuro" id="med_neuro" value="Si" style="font-size:12px;" <?php if ($evc == 'Si') echo "checked"; ?>>
                                     <label for="med_neuro" style="font-size:12px;">Médico neurólogo</label>
                                 </div>
                             </div>

@@ -118,6 +118,11 @@
           </div>
 
           <div class="col-md-3">
+            <strong>Cesárea</strong>
+            <input id="cesarea" name="cesarea" type="number" class="control form-control" value="<?php echo $cesarea; ?>">
+          </div>
+
+          <div class="col-md-3">
             <strong>Abortos</strong>
             <input id="abortos" name="abortos" type="number" class="control form-control" value="<?php echo $abortos; ?>">
           </div>

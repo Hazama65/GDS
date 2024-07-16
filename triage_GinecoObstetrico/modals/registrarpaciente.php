@@ -76,6 +76,11 @@
               <strong>Paras</strong>
               <input id="paras" name="paras" type="number" class="control form-control" value="">
             </div>
+            
+            <div class="col-md-3">
+              <strong>Cesárea</strong>
+              <input id="cesarea" name="cesarea" type="number" class="control form-control" value="">
+            </div>
 
             <div class="col-md-3">
               <strong>Abortos</strong>

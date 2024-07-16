@@ -63,43 +63,33 @@ document.getElementById("sexo").value = "Mujer";
 }
 }
 
-// FECHA
-
-document.addEventListener("DOMContentLoaded", function () {
-    // Obtener la fecha actual
-    var fechaActual = new Date();
-
-    // Obtener el elemento de entrada de fecha
-    var fechaRegistroInput = document.getElementById("fecha_registro");
-
-    // Formatear la fecha actual como una cadena YYYY-MM-DD
-    var fechaFormateada = fechaActual.toISOString().split('T')[0];
-
-    // Establecer la fecha formateada como el valor predeterminado en el campo de entrada
-    fechaRegistroInput.value = fechaFormateada;
-});
-
-
-// TIPO DE CONSULTA
-
-document.addEventListener("DOMContentLoaded", function () {
-    // Obtener los elementos select y los divs que se deben mostrar/ocultar
-    var selectTipoConsulta = document.getElementById("tipo_consulta");
-    var divNumSesiones = document.getElementById("num_sesiones");
-
-    // Agregar un evento de cambio al elemento select
-    selectTipoConsulta.addEventListener("change", function () {
-        // Comprobar la opción seleccionada
-        if (selectTipoConsulta.value == "Subsecuente") {
-            // Si se selecciona "Subsecuente", mostrar el div correspondiente
-            divNumSesiones.style.display = "block";
-        } else {
-            // Si no se selecciona "Subsecuente", ocultar el div
-            divNumSesiones.style.display = "none";
-        }
-    });
-});
 
 
 
 
+
+function toggleFields(selectorId) {
+    const checkbox = document.getElementById(selectorId);
+    let sesiones_num = document.getElementById('div_sesiones_num_' + selectorId);
+    let primera_vez = document.getElementById('div_primera_vez_' + selectorId);
+    let subsecuente = document.getElementById('div_subsecuente_' + selectorId);
+    let terapias_ambulatorias = document.getElementById('div_terapias_ambulatorias_' + selectorId);
+    let terapias_hospitalizacion = document.getElementById('div_terapias_hospitalizacion_' + selectorId);
+
+
+    if (checkbox.checked) {
+        sesiones_num.style.display = 'block';
+        primera_vez.style.display = 'block';
+        subsecuente.style.display = 'block';
+        terapias_ambulatorias.style.display = 'block';
+        terapias_hospitalizacion.style.display = 'block';
+
+
+    } else {
+        sesiones_num.style.display = 'none';
+        primera_vez.style.display = 'none';
+        subsecuente.style.display = 'none';
+        terapias_ambulatorias.style.display = 'none';
+        terapias_hospitalizacion.style.display = 'none';
+    }
+}

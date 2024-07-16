@@ -7,23 +7,20 @@
         
         $Tables = array(
             $table_datos_paciente  = 'datos_paciente',
-            $table_procedimientos  = 'procedimientos',
-            $table_estadistica     = 'estadistica',
-            $table_estadistica_avd = 'estadistica_avd'
+            $table_procedimientos  = 'procedimientos'
         );
 
         $Data_pacientes = array(
             'nombre_terapeuta'  => $_POST['nombre_terapeuta'],
             'Turno_terapeuta'   => $_POST['Turno_terapeuta'],
-            'fecha_registro'    => $_POST['fecha_registro'],
             'nombre_paciente'   => $_POST['nombre_paciente'],
             'curp'              => $_POST['curp'],
             'fecha'             => $_POST['fecha'],
             'edad'              => $_POST['edad'],
             'sexo'              => $_POST['sexo'],
             'tipo_paciente'     => $_POST['tipo_paciente'],
-            'tipo_consulta'     => $_POST['tipo_consulta'],
-            'sesiones_num'      => $_POST['sesiones_num']
+            'fecha_inicio'      => $_POST['fecha_inicio'],
+            'fecha_fin'         => $_POST['fecha_fin']
         );
 
         foreach ($Data_pacientes as $key => $value) {
@@ -32,87 +29,44 @@
         $Result_pacientes = $connectionDB->insertData($Tables[0], $Data_pacientes);
 
         $Data_procedimientos = array(
-            'tipo_terapias'                          => $_POST['tipo_terapias'],
-            'terapia_fisica'                         => isset($_POST['terapia_fisica']) ? 'Si' : 'No',
-            'terapia_ocupacional'                    => isset($_POST['terapia_ocupacional']) ? 'Si' : 'No',
-            'terapia_lenguaje'                       => isset($_POST['terapia_lenguaje']) ? 'Si' : 'No',
-            'aplicacion_ferula'                      => isset($_POST['aplicacion_ferula']) ? 'Si' : 'No',
-            'Aplicacion_vendaje_enyesado'            => isset($_POST['Aplicacion_vendaje_enyesado']) ? 'Si' : 'No',
-            'Baño_parafina'                          => isset($_POST['Baño_parafina']) ? 'Si' : 'No',
-            'CHC_CF'                                 => isset($_POST['CHC_CF']) ? 'Si' : 'No',
-            'Corrientes_interfereciales'             => isset($_POST['Corrientes_interfereciales']) ? 'Si' : 'No',
-            'Electroestimulacion'                    => isset($_POST['Electroestimulacion']) ? 'Si' : 'No',
-            'Ejercicio_Asistido'                     => isset($_POST['Ejercicio_Asistido']) ? 'Si' : 'No',
-            'Ejercicio_Fisioterapia'                 => isset($_POST['Ejercicio_Fisioterapia']) ? 'Si' : 'No',
-            'Hidroterapia_TanqueTerapéutico'         => isset($_POST['Hidroterapia_TanqueTerapéutico']) ? 'Si' : 'No',
-            'Hidroterapia_Tina_Habbard'              => isset($_POST['Hidroterapia_Tina_Habbard']) ? 'Si' : 'No',
-            'Hidroterapia_Tina_Remolinos'            => isset($_POST['Hidroterapia_Tina_Remolinos']) ? 'Si' : 'No',
-            'TENS'                                   => isset($_POST['TENS']) ? 'Si' : 'No',
-            'TerapiacombinadaUSG_CorrienteEléctrica' => isset($_POST['TerapiacombinadaUSG_CorrienteEléctrica']) ? 'Si' : 'No',
-            'Ultrasonido_Terapeutico'                => isset($_POST['Ultrasonido_Terapeutico']) ? 'Si' : 'No',
-            'TraccionCervical_Lumbar'                => isset($_POST['TraccionCervical_Lumbar']) ? 'Si' : 'No',
-            'Rehabi_cardiaca'                        => isset($_POST['Rehabi_cardiaca']) ? 'Si' : 'No',
-            'Ejercicios_respiratorio'                => isset($_POST['Ejercicios_respiratorio']) ? 'Si' : 'No',
-            'Terapia_Laser'                          => isset($_POST['Terapia_Laser']) ? 'Si' : 'No',
-            'Toxina_Botulinica'                      => isset($_POST['Toxina_Botulinica']) ? 'Si' : 'No',
-            'id_paciente'                            => $Result_pacientes
+            'sesiones_num_terapia_fisica'                                      => $_POST['sesiones_num_terapia_fisica'],
+            'primera_vez_terapia_fisica'                                       => $_POST['primera_vez_terapia_fisica'],
+            'subsecuente_terapia_fisica'                                       => $_POST['subsecuente_terapia_fisica'],
+            'terapias_ambulatorias_terapia_fisica'                             => $_POST['terapias_ambulatorias_terapia_fisica'],
+            'terapias_hospitalizacion_terapia_fisica'                          => $_POST['terapias_hospitalizacion_terapia_fisica'],
+            'sesiones_num_terapia_ocupacional'                                 => $_POST['sesiones_num_terapia_ocupacional'],
+            'primera_vez_terapia_ocupacional'                                  => $_POST['primera_vez_terapia_ocupacional'],
+            'subsecuente_terapia_ocupacional'                                  => $_POST['subsecuente_terapia_ocupacional'],
+            'terapias_ambulatorias_terapia_ocupacional'                        => $_POST['terapias_ambulatorias_terapia_ocupacional'],
+            'terapias_hospitalizacion_terapia_ocupacional'                     => $_POST['terapias_hospitalizacion_terapia_ocupacional'],
+            'sesiones_num_terapia_lenguaje'                                    => $_POST['sesiones_num_terapia_lenguaje'],
+            'primera_vez_terapia_lenguaje'                                     => $_POST['primera_vez_terapia_lenguaje'],
+            'subsecuente_terapia_lenguaje'                                     => $_POST['subsecuente_terapia_lenguaje'],
+            'terapias_ambulatorias_terapia_lenguaje'                           => $_POST['terapias_ambulatorias_terapia_lenguaje'],
+            'terapias_hospitalizacion_terapia_lenguaje'                        => $_POST['terapias_hospitalizacion_terapia_lenguaje'],
+            'sesiones_num_aplicacion_ferula'                                   => $_POST['sesiones_num_aplicacion_ferula'],
+            'sesiones_num_Aplicacion_vendaje_enyesado'                         => $_POST['sesiones_num_Aplicacion_vendaje_enyesado'],
+            'sesiones_num_Baño_parafina'                                       => $_POST['sesiones_num_Baño_parafina'],
+            'sesiones_num_CHC_CF'                                              => $_POST['sesiones_num_CHC_CF'],
+            'sesiones_num_Corrientes_interfereciales'                          => $_POST['sesiones_num_Corrientes_interfereciales'],
+            'sesiones_num_Electroestimulacion'                                 => $_POST['sesiones_num_Electroestimulacion'],
+            'sesiones_num_Ejercicio_Asistido'                                  => $_POST['sesiones_num_Ejercicio_Asistido'],
+            'sesiones_num_Ejercicio_Fisioterapia'                              => $_POST['sesiones_num_Ejercicio_Fisioterapia'],
+            'sesiones_num_Hidroterapia_TanqueTerapéutico'                      => $_POST['sesiones_num_Hidroterapia_TanqueTerapéutico'],
+            'sesiones_num_Hidroterapia_Tina_Habbard'                           => $_POST['sesiones_num_Hidroterapia_Tina_Habbard'],
+            'sesiones_num_Hidroterapia_Tina_Remolinos'                         => $_POST['sesiones_num_Hidroterapia_Tina_Remolinos'],
+            'sesiones_num_TENS'                                                => $_POST['sesiones_num_TENS'],
+            'sesiones_num_TerapiacombinadaUSG_CorrienteEléctrica'              => $_POST['sesiones_num_TerapiacombinadaUSG_CorrienteEléctrica'],
+            'sesiones_num_Ultrasonido_Terapeutico'                             => $_POST['sesiones_num_Ultrasonido_Terapeutico'],
+            'sesiones_num_TraccionCervical_Lumbar'                             => $_POST['sesiones_num_TraccionCervical_Lumbar'],
+            'sesiones_num_Rehabi_cardiaca'                                     => $_POST['sesiones_num_Rehabi_cardiaca'],
+            'sesiones_num_Ejercicios_respiratorio'                             => $_POST['sesiones_num_Ejercicios_respiratorio'],
+            'sesiones_num_Terapia_Laser'                                       => $_POST['sesiones_num_Terapia_Laser'],
+            'sesiones_num_Toxina_Botulinica'                                   => $_POST['sesiones_num_Toxina_Botulinica'],
+            'id_paciente'                                                      => $Result_pacientes
         );
 
-        foreach ($Data_procedimientos as $key => $value) {
-            $Data_procedimientos[$key] = $connectionDB->escapeString($value);
-        }
         $connectionDB->insertData($Tables[1], $Data_procedimientos);
-
-
-        $Data_estadistica = array(
-            'id_paciente'    => $Result_pacientes,
-            'terapeuta'      => $_POST['nombre_terapeuta'],
-            'fecha'          => $_POST['fecha_registro'],
-            'turno'          => $_POST['Turno_terapeuta'],
-            't_fisica'       => isset($_POST['terapia_fisica']) ? 'Si' : 'No',
-            't_ocupacional'  => isset($_POST['terapia_ocupacional']) ? 'Si' : 'No',
-            't_lenguaje'     => isset($_POST['terapia_lenguaje']) ? 'Si' : 'No',
-            'tipo_paciente'  => $_POST['tipo_paciente'],
-            'tipo_consulta'  => $_POST['tipo_consulta'],
-            'tipo_terapias'  => $_POST['tipo_terapias'],
-        );
-
-        foreach ($Data_estadistica as $key => $value) {
-            $Data_estadistica[$key] = $connectionDB->escapeString($value);
-        }
-
-        $connectionDB->insertData($Tables[2], $Data_estadistica);
-
-
-        $Data_estadistica_avd = array(
-            'fecha'                                  => $_POST['fecha_registro'],
-            'terapia_fisica'                         => isset($_POST['terapia_fisica']) ? 'Si' : 'No',
-            'terapia_ocupacional'                    => isset($_POST['terapia_ocupacional']) ? 'Si' : 'No',
-            'terapia_lenguaje'                       => isset($_POST['terapia_lenguaje']) ? 'Si' : 'No',
-            'aplicacion_ferula'                      => isset($_POST['aplicacion_ferula']) ? 'Si' : 'No',
-            'Aplicacion_vendaje_enyesado'            => isset($_POST['Aplicacion_vendaje_enyesado']) ? 'Si' : 'No',
-            'Baño_parafina'                          => isset($_POST['Baño_parafina']) ? 'Si' : 'No',
-            'CHC_CF'                                 => isset($_POST['CHC_CF']) ? 'Si' : 'No',
-            'Corrientes_interfereciales'             => isset($_POST['Corrientes_interfereciales']) ? 'Si' : 'No',
-            'Electroestimulacion'                    => isset($_POST['Electroestimulacion']) ? 'Si' : 'No',
-            'Ejercicio_Asistido'                     => isset($_POST['Ejercicio_Asistido']) ? 'Si' : 'No',
-            'Ejercicio_Fisioterapia'                 => isset($_POST['Ejercicio_Fisioterapia']) ? 'Si' : 'No',
-            'Hidroterapia_TanqueTerapéutico'         => isset($_POST['Hidroterapia_TanqueTerapéutico']) ? 'Si' : 'No',
-            'Hidroterapia_Tina_Habbard'              => isset($_POST['Hidroterapia_Tina_Habbard']) ? 'Si' : 'No',
-            'Hidroterapia_Tina_Remolinos'            => isset($_POST['Hidroterapia_Tina_Remolinos']) ? 'Si' : 'No',
-            'TENS'                                   => isset($_POST['TENS']) ? 'Si' : 'No',
-            'TerapiacombinadaUSG_CorrienteEléctrica' => isset($_POST['TerapiacombinadaUSG_CorrienteEléctrica']) ? 'Si' : 'No',
-            'Ultrasonido_Terapeutico'                => isset($_POST['Ultrasonido_Terapeutico']) ? 'Si' : 'No',
-            'TraccionCervical_Lumbar'                => isset($_POST['TraccionCervical_Lumbar']) ? 'Si' : 'No',
-            'Rehabi_cardiaca'                        => isset($_POST['Rehabi_cardiaca']) ? 'Si' : 'No',
-            'Ejercicios_respiratorio'                => isset($_POST['Ejercicios_respiratorio']) ? 'Si' : 'No',
-            'Terapia_Laser'                          => isset($_POST['Terapia_Laser']) ? 'Si' : 'No',
-            'Toxina_Botulinica'                      => isset($_POST['Toxina_Botulinica']) ? 'Si' : 'No',
-            'id_paciente'                            => $Result_pacientes
-        );
-
-        $connectionDB->insertData($Tables[3], $Data_estadistica_avd);
-
 
         echo 'success';
     }

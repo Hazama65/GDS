@@ -40,6 +40,7 @@ if ($result) {
         'Prueba Covid',
         'Gestas',
         'Paras',
+        'Cesárea',
         'Abortos',
         'Embarazos Ectópicos',
         'Hijos Vivos',

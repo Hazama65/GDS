@@ -12,8 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $terapia_fisica = isset($_GET['terapia_fisica']) ? $_GET['terapia_fisica'] : '';
     $terapia_ocupacional = isset($_GET['terapia_ocupacional']) ? $_GET['terapia_ocupacional'] : '';
     $terapia_lenguaje = isset($_GET['terapia_lenguaje']) ? $_GET['terapia_lenguaje'] : '';
-    $fecha_1 = isset($_GET['fecha_1']) ? $_GET['fecha_1'] : '';
-    $fecha_2 = isset($_GET['fecha_2']) ? $_GET['fecha_2'] : '';
+    $fecha_1 = isset($_GET['fecha_1']) ? $_GET['fecha_1'] : '2020-01-30';
+    $fecha_2 = isset($_GET['fecha_2']) ? $_GET['fecha_2'] : '2055-12-30';
 
     // Inicializar un arreglo para contener las condiciones de la consulta
     $conditions = [];

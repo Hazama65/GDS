@@ -29,6 +29,7 @@
 
         $gesta              = $_POST['gesta'];
         $paras              = $_POST['paras'];
+        $cesarea            = $_POST['cesarea'];
         $abortos            = $_POST['abortos'];
         $embarazosectopicos = $_POST['embarazosectopicos'];
         $hijosvivos         = $_POST['hijosvivos'];
@@ -36,7 +37,7 @@
         $fechaFPP           = $_POST['fechaFPP'];
         $semanagestacion    = $_POST['semanagestacion'];
 
-        $queryAntecedentes = "INSERT INTO antecedentes_go VALUES ('$gesta','$paras','$abortos','$embarazosectopicos','$hijosvivos',
+        $queryAntecedentes = "INSERT INTO antecedentes_go VALUES ('$gesta','$paras',$cesarea,'$abortos','$embarazosectopicos','$hijosvivos',
         '$fechaFUM','$fechaFPP','$semanagestacion','$ultimoID')";
         $dataAntecedentes = $connectionDB -> ShotSimple($queryAntecedentes);
 

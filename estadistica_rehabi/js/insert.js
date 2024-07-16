@@ -27,7 +27,7 @@ const validation = async (alldata) => {
 
     
         const response = await httpClients.post(url, alldata);
-        // console.log(response);
+        console.log(response);
 
         hideLoadingOverlay();
         

@@ -15,7 +15,8 @@
             $table_puertas         = 'puertas',
             $table_rehabilitacion  = 'rehabilitacion',
             $table_escalas         = 'escalas',
-            $table_secuelas        = 'secuelas'
+            $table_secuelas        = 'secuelas',
+            $table_escalas_salida  = 'escalas_salida'
         );
 
         $updateColum ='id_paciente';
@@ -39,7 +40,6 @@
             'face'         => $_POST['Face'],
             'arms'         => $_POST['arms'],
             'speech'       => $_POST['speech'],
-            'time'         => $_POST['resultado_time']
         );
 
         $connectionDB->updateData($Tables[1],$update_fast,$updateColum,$updateId);
@@ -127,7 +127,6 @@
             'rankin'       => $_POST['rank'],
             'motri'        => $_POST['motri'],
             'marcha'       => $_POST['marcha'],
-            'agatha'       => $_POST['agatha']
         );
 
         $connectionDB->updateData($Tables[7],$update_Escalas,$updateColum,$updateId);
@@ -150,6 +149,14 @@
         );
 
         $connectionDB->updateData($Tables[8],$update_Secuelas,$updateColum,$updateId);
+
+        $update_escalas_salida = array(
+            'nihss_salida' => $_POST['nihss_salida'],
+            'Escala_gose'  => $_POST['Escala_gose'],
+            'id_paciente'   => $Result_Paciente
+        );
+
+        $connectionDB->updateData($Tables[9],$update_escalas_salida,$updateColum,$updateId);
 
         echo 'success';
     }

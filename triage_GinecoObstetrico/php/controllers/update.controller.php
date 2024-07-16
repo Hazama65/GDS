@@ -35,6 +35,7 @@
 
         $gesta              = $_POST['gesta'];
         $paras              = $_POST['paras'];
+        $cesarea            = $_POST['cesarea'];
         $abortos            = $_POST['abortos'];
         $embarazosectopicos = $_POST['embarazosectopicos'];
         $hijosvivos         = $_POST['hijosvivos'];
@@ -45,6 +46,7 @@
         $queryAntecedentes = "UPDATE antecedentes_go SET 
             gesta = '$gesta',
             paras = '$paras',
+            cesarea = '$cesarea',
             abortos = '$abortos',
             embarazos_ecto = '$embarazosectopicos',
             hijos_vivos = '$hijosvivos',

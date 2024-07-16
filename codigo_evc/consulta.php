@@ -468,12 +468,12 @@ include('php/controllers/consulta.controller.php');
 
                     <tr>
                         <td class="estilo-celda">Escala NIHSS Salida</td>
-                        <td></td>
+                        <td><?php echo $nihss_salida; ?></td>
                     </tr>
 
                     <tr>
                         <td class="estilo-celda">Escala GOSE</td>
-                        <td></td>
+                        <td><?php echo $Escala_gose; ?></td>
                     </tr>
 
 
