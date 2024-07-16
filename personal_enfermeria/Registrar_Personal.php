@@ -1,4 +1,14 @@
 <?php
+session_start();
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+
+if (!isset($_SESSION['valid_user'])) {
+  // El usuario no ha iniciado sesión, redirige de vuelta a la página de inicio de sesión
+  header('Location: login/index.php');
+  exit;
+}
+$username = $_SESSION['valid_user'];
 require ('php/controllers/datos.controller.php');
 ?>
 <!DOCTYPE html>
@@ -17,8 +27,11 @@ require ('php/controllers/datos.controller.php');
 
 <body>
 
-  <?php include 'components/navbar.php'; ?>
-
+  <?php if ($username == 'admin'): ?>
+    <?php include 'components/navbar.php'; ?>
+  <?php else: ?>
+    <?php include 'components/navbar_general.php'; ?>
+  <?php endif; ?>
 
   <div class="container mt-5">
     <div class="row justify-content-center">
@@ -284,7 +297,28 @@ require ('php/controllers/datos.controller.php');
 
                 <div class="col-md-8">
                   <strong>Especialidad</strong>
-                  <input type="text" class="form-control" id="grado_especialidad" name="grado_especialidad">
+                  <select class="form-control" id="grado_especialidad" name="grado_especialidad">
+                    <option value="">Seleccione...</option>
+                    <option value="Administración">Administración</option>
+                    <option value="Quirúrgica">Quirúrgica</option>
+                    <option value="Heridas y Estomas">Heridas y Estomas</option>
+                    <option value="Tanatología">Tanatología</option>
+                    <option value="Terapia Intravenosa">Terapia Intravenosa</option>
+                    <option value="Educación">Educación</option>
+                    <option value="Enfermería">Enfermería</option>
+                    <option value="Intensivista">Intensivista</option>
+                    <option value="Pediatría">Pediatría</option>
+                    <option value="Neonatos">Neonatos</option>
+                    <option value="Cardiología">Cardiología</option>
+                    <option value="Materno Infantil">Materno Infantil</option>
+                    <option value="Atención el hogar">Atención el hogar</option>
+                    <option value="Perinatal">Perinatal</option>
+                    <option value="Oncología">Oncología</option>
+                    <option value="Rehabilitación">Rehabilitación</option>
+                    <option value="Geriatría">Geriatría</option>
+                    <option value="Heridas">Heridas</option>
+                    <option value="Nefrología">Nefrología</option>
+                  </select>
                 </div>
 
                 <div class="col-md-4">
@@ -304,7 +338,12 @@ require ('php/controllers/datos.controller.php');
 
                 <div class="col-md-8">
                   <strong>Doctorado</strong>
-                  <input type="text" class="form-control" id="grado_doctorado" name="grado_doctorado">
+                  <select class="form-control" id="grado_doctorado" name="grado_doctorado">
+                    <option value="">Seleccione...</option>
+                    <option value="Educación">Educación</option>
+                    <option value="Administración">Administración</option>
+                    <option value="Investigación">Investigación</option>
+                  </select>
                 </div>
 
                 <div class="col-md-4">

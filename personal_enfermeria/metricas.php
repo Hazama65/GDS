@@ -1,3 +1,15 @@
+<?php
+session_start();
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+
+if (!isset($_SESSION['valid_user'])) {
+  // El usuario no ha iniciado sesión, redirige de vuelta a la página de inicio de sesión
+  header('Location: login/index.php');
+  exit;
+}
+$username = $_SESSION['valid_user'];
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -12,8 +24,11 @@
 
 <body>
 
-  <?php include 'components/navbar.php'; ?>
-
+  <?php if ($username == 'admin'): ?>
+    <?php include 'components/navbar.php'; ?>
+  <?php else: ?>
+    <?php include 'components/navbar_general.php'; ?>
+  <?php endif; ?>
 
   <div class="container mt-5">
     <div class="row justify-content-center">
@@ -137,7 +152,24 @@
     </div>
   </div>
 
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <div class="modal-content">
+          <div class="edicion-personal">
+            <h5 class="modal-title text-center">Datos Actuales</h5>
+          </div>
+          <div class="body-container">
+            <div class="titulo-personal">
+              <h6 class="bi bi-person-fill-add"> Resumen Especialidad</h6>
+            </div> <br>
+            <div id="chartdiv2"></div>
 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="container mt-5">
     <div class="row justify-content-center">

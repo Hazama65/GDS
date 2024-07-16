@@ -1,4 +1,14 @@
 <?php
+session_start();
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+
+if (!isset($_SESSION['valid_user'])) {
+  // El usuario no ha iniciado sesión, redirige de vuelta a la página de inicio de sesión
+  header('Location: login/index.php');
+  exit;
+}
+$username = $_SESSION['valid_user'];
 require ('php/controllers/ver_personal.controller.php');
 ?>
 <!DOCTYPE html>
@@ -15,8 +25,11 @@ require ('php/controllers/ver_personal.controller.php');
 
 <body>
 
-  <?php include 'components/navbar.php'; ?>
-
+  <?php if ($username == 'admin'): ?>
+    <?php include 'components/navbar.php'; ?>
+  <?php else: ?>
+    <?php include 'components/navbar_general.php'; ?>
+  <?php endif; ?>
 
   <div class="container mt-5">
     <div class="row">
@@ -293,8 +306,8 @@ require ('php/controllers/ver_personal.controller.php');
           <table class="tabla-datos">
             <thead>
               <tr>
-                <th scope="col">Curso</th>
-                <th scope="col">Elaboro</th>
+                <th scope="col">Nombre del Curso</th>
+                <th scope="col">¿Realizó?</th>
                 <th scope="col">Fecha Expedición</th>
               </tr>
             </thead>

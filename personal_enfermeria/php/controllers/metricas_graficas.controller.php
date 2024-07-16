@@ -14,12 +14,16 @@ $query_informacion_academica = "SELECT
 FROM informacion_academica; ";
 $data_informacion_academica = $connectionDB->getRows($query_informacion_academica);
 
-$query_genero = "SELECT genero,COUNT(genero) FROM datos_personal GROUP BY genero";
+$query_genero = "SELECT genero,COUNT(genero) as conteo FROM datos_personal GROUP BY genero";
 $data_genero = $connectionDB->getRows($query_genero);
+
+$query_especialidad = "SELECT grado_especialidad,COUNT(*) as conteo FROM informacion_academica GROUP BY grado_especialidad";
+$data_especialidad = $connectionDB->getRows($query_especialidad);
 
 $data = array(
     'informacion_academica' => $data_informacion_academica,
-    'genero' => $data_genero
+    'genero' => $data_genero, 
+    'especialidad' => $data_especialidad
 );
 
 echo json_encode($data);

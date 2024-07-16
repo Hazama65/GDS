@@ -1,4 +1,14 @@
 <?php
+session_start();
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+
+if (!isset($_SESSION['valid_user'])) {
+  // El usuario no ha iniciado sesión, redirige de vuelta a la página de inicio de sesión
+  header('Location: login/index.php');
+  exit;
+}
+$username = $_SESSION['valid_user'];
 include ('php/controllers/edit.controller.php');
 ?>
 <!DOCTYPE html>
@@ -16,8 +26,13 @@ include ('php/controllers/edit.controller.php');
 
 <body>
 
-  <?php include 'components/navbar.php'; ?>
+  <?php if ($username == 'admin'): ?>
+    <?php include 'components/navbar.php'; ?>
+  <?php else: ?>
+    <?php include 'components/navbar_general.php'; ?>
+  <?php endif; ?>
 
+  
   <div class="container mt-5">
     <div class="row justify-content-center">
       <div class="col-md-12">
@@ -335,8 +350,28 @@ include ('php/controllers/edit.controller.php');
 
                 <div class="col-md-8">
                   <strong>Especialidad</strong>
-                  <input type="text" class="form-control" id="grado_especialidad" name="grado_especialidad"
-                    value="<?php echo $grado_especialidad ?>">
+                  <select class="form-control" id="grado_especialidad" name="grado_especialidad">
+                    <option value=""<?php if ($grado_especialidad == '') echo 'selected'; ?>>Seleccione...</option>
+                    <option value="Administración"<?php if ($grado_especialidad == 'Administración') echo 'selected'; ?>>Administración</option>
+                    <option value="Quirúrgica"<?php if ($grado_especialidad == 'Quirúrgica') echo 'selected'; ?>>Quirúrgica</option>
+                    <option value="Heridas y Estomas"<?php if ($grado_especialidad == 'Heridas y Estomas') echo 'selected'; ?>>Heridas y Estomas</option>
+                    <option value="Tanatología"<?php if ($grado_especialidad == 'Tanatología') echo 'selected'; ?>>Tanatología</option>
+                    <option value="Terapia Intravenosa"<?php if ($grado_especialidad == 'Terapia Intravenosa') echo 'selected'; ?>>Terapia Intravenosa</option>
+                    <option value="Educación"<?php if ($grado_especialidad == 'Educación') echo 'selected'; ?>>Educación</option>
+                    <option value="Enfermería"<?php if ($grado_especialidad == 'Enfermería') echo 'selected'; ?>>Enfermería</option>
+                    <option value="Intensivista"<?php if ($grado_especialidad == 'Intensivista') echo 'selected'; ?>>Intensivista</option>
+                    <option value="Pediatría"<?php if ($grado_especialidad == 'Pediatría') echo 'selected'; ?>>Pediatría</option>
+                    <option value="Neonatos"<?php if ($grado_especialidad == 'Neonatos') echo 'selected'; ?>>Neonatos</option>
+                    <option value="Cardiología"<?php if ($grado_especialidad == 'Cardiología') echo 'selected'; ?>>Cardiología</option>
+                    <option value="Materno Infantil"<?php if ($grado_especialidad == 'Materno Infantil') echo 'selected'; ?>>Materno Infantil</option>
+                    <option value="Atención el hogar"<?php if ($grado_especialidad == 'Atención el hogar') echo 'selected'; ?>>Atención el hogar</option>
+                    <option value="Perinatal"<?php if ($grado_especialidad == 'Perinatal') echo 'selected'; ?>>Perinatal</option>
+                    <option value="Oncología"<?php if ($grado_especialidad == 'Oncología') echo 'selected'; ?>>Oncología</option>
+                    <option value="Rehabilitación"<?php if ($grado_especialidad == 'Rehabilitación') echo 'selected'; ?>>Rehabilitación</option>
+                    <option value="Geriatría"<?php if ($grado_especialidad == 'Geriatría') echo 'selected'; ?>>Geriatría</option>
+                    <option value="Heridas"<?php if ($grado_especialidad == 'Heridas') echo 'selected'; ?>>Heridas</option>
+                    <option value="Nefrología"<?php if ($grado_especialidad == 'Nefrología') echo 'selected'; ?>>Nefrología</option>
+                  </select>
                 </div>
 
                 <div class="col-md-4">
@@ -359,8 +394,12 @@ include ('php/controllers/edit.controller.php');
 
                 <div class="col-md-8">
                   <strong>Doctorado</strong>
-                  <input type="text" class="form-control" id="grado_doctorado" name="grado_doctorado"
-                    value="<?php echo $grado_doctorado ?>">
+                  <select class="form-control" id="grado_doctorado" name="grado_doctorado">
+                    <option value=""<?php if ($grado_doctorado == '') echo 'selected'; ?>>Seleccione...</option>
+                    <option value="Educación"<?php if ($grado_doctorado == 'Educación') echo 'selected'; ?>>Educación</option>
+                    <option value="Administración"<?php if ($grado_doctorado == 'Administración') echo 'selected'; ?>>Administración</option>
+                    <option value="Investigación"<?php if ($grado_doctorado == 'Investigación') echo 'selected'; ?>>Investigación</option>
+                  </select>
                 </div>
 
                 <div class="col-md-4">
