@@ -70,18 +70,17 @@ require ('php/controllers/registros.controller.php');
 
             <div class="col-md-1">
                 <span style="font-size:13px; display: block;">Terapia tipos fisica</span>
-                <input style="width: 30px; height: 30px;" type="checkbox" name="terapia_fisica" id="terapia_fisica">
+                <input style="width: 30px; height: 30px;" type="checkbox" name="terapia_fisica" id="terapia_fisica" value="terapia_fisica">
             </div>
 
             <div class="col-md-1">
                 <span style="font-size:13px; display: block;">Terapia ocupacional</span>
-                <input style="width: 30px; height: 30px;" type="checkbox" name="terapia_ocupacional"
-                    id="terapia_ocupacional">
+                <input style="width: 30px; height: 30px;" type="checkbox" name="terapia_ocupacional" id="terapia_ocupacional" value="terapia_ocupacional">
             </div>
 
             <div class="col-md-1">
                 <span style="font-size:13px; display: block;">Terapia de lenguaje</span>
-                <input style="width: 30px; height: 30px;" type="checkbox" name="terapia_lenguaje" id="terapia_lenguaje">
+                <input style="width: 30px; height: 30px;" type="checkbox" name="terapia_lenguaje" id="terapia_lenguaje" value="terapia_lenguaje">
             </div>
 
             <div class="col-md-2">
@@ -137,22 +136,12 @@ require ('php/controllers/registros.controller.php');
                 </select>
             </div>
 
-            <div class="col-md-2">
-                <span>Tipo de Terapia</span>
-                <select name="tipo_terapia" id="tipo_terapia" class="control form-control">
-                    <option value="">Seleccione</option>
-                    <option value="Terapias ambulatorias">Terapias ambulatorias</option>
-                    <option value="Terapias en Hospitalización">Terapias en Hospitalización</option>
-                </select>
-            </div>
-
-
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <span>Fecha Inicial</span>
                 <input type="date" name="fecha_1_tera" id="fecha_1_tera" class="control form-control">
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <span>Fecha Final</span>
                 <input type="date" name="fecha_2_tera" id="fecha_2_tera" class="control form-control">
             </div>

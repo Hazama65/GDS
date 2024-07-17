@@ -73,8 +73,14 @@
                 <br>
                 <a href="../login/index.php" class="btn btn-success">SCA</a>
             </div>
+            <div class="card">
+                <img src="img/" alt="Imagen 2">
+                <br>
+                <a href="../ganglio_cervical" class="btn btn-success">Ganglio Cervical</a>
+            </div>
             
         </div>
+        
     </div> <!-- es el div que cierra <div class="container" style="center">-->
 
     <footer style="font-size:8px;">

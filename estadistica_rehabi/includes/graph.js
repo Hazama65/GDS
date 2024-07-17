@@ -1,8 +1,8 @@
 function buscar() {
     let empleado = $("#empleado").val();
-    let terapia_fisica = $("#terapia_fisica").prop("checked") ? "Si" : "";
-    let terapia_ocupacional = $("#terapia_ocupacional").prop("checked") ? "Si" : "";
-    let terapia_lenguaje = $("#terapia_lenguaje").prop("checked") ? "Si" : "";
+    let terapia_fisica = $("#terapia_fisica").prop("checked") ? $("#terapia_fisica").val() : "";
+    let terapia_ocupacional = $("#terapia_ocupacional").prop("checked") ? $("#terapia_ocupacional").val() : "";
+    let terapia_lenguaje = $("#terapia_lenguaje").prop("checked") ? $("#terapia_lenguaje").val() : "";
     let fecha_1 = $("#fecha_1").val();
     let fecha_2 = $("#fecha_2").val();
 
@@ -20,7 +20,7 @@ function buscar() {
             fecha_2: fecha_2
         },
         success: function (data) {
-            // console.log(data);
+            console.log(data);
             setupChart(data);
         },
         error: function (xhr, status, error) {
@@ -39,6 +39,7 @@ $.ajax({
     success: function (data) {
 
 
+        console.log(data)
         setupChart(data);
 
     },
@@ -150,11 +151,11 @@ function setupChart(data) {
         legend.data.push(series);
     }
 
-    makeSeries("Pacientes", "pacientes", "#FF5733");
+    makeSeries("Total", "Total", "#FF5733");
     makeSeries("Adulto", "Adulto", "#33FF57");
     makeSeries("Pediatrico", "Pediatrico", "#3357FF");
-    makeSeries("sesiones", "sesiones", "#F39C12");
-    makeSeries("Primera Vez", "Primera Vez", "#8E44AD");
+    makeSeries("Sesiones", "Sesiones", "#F39C12");
+    makeSeries("Primera vez", "Primera vez", "#8E44AD");
     makeSeries("Subsecuente", "Subsecuente", "#3498DB");
     makeSeries("Terapias ambulatorias", "Terapias ambulatorias", "#E74C3C");
     makeSeries("Terapias en Hospitalización", "Terapias en Hospitalización", "#1ABC9C");
