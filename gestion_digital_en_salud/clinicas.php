@@ -38,7 +38,7 @@
 
     <!-- CARDS -->
 
-    <div class="container" style="center">
+    <div class="container" style="center;">
         <div class="cards">
             <div class="card">
                 <img src="img/anemia.jpeg" alt="Imagen 1">
