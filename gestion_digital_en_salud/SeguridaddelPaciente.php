@@ -10,7 +10,7 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
-    <title>Calidad</title>
+    <title>Seguridad del Paciente</title>
 </head>
 
 <body>
@@ -31,7 +31,7 @@
                             padding: 0 20px;
                             background-color: rgb(35,91,78,0.70);">
 
-        <strong style="margin: 0 auto; color: aliceblue; font-size:20px;">CALIDAD</strong>
+        <strong style="margin: 0 auto; color: aliceblue; font-size:20px;">Seguridad del Paciente</strong>
     </div>
 
 
@@ -41,31 +41,21 @@
     <div class= "container" style="center;">
         <div class="cards">
             <div class="card">
-                <img src="img/FormularioNoReporte.png" alt="Imagen 1">
+                <img src="img/eventosadversos.jpg" alt="Imagen 1">
                 <br>
-                <a href="../cuestionario/registros.php" class="btn btn-success">No Reporte</a>
+                <a href="../eventos" class="btn btn-success">Registro de Eventos Adversos</a>
             </div>
             <div class="card">
-                <img src="img/encuesta_satisfaccion.png" alt="Imagen 1">
+                <img src="img/erroresdemedicacion.jpg" alt="Imagen 1">
                 <br>
-                <a href="../encuesta_satisfaccion/registros.php" class="btn btn-success">Satisfaccion</a>
+                <a href="#" class="btn btn-success">Errores de Medicación</a>
             </div>
             <div class="card">
                 <img src="img/iaas.jpg" alt="Imagen 6">
                 <br>
-                <a href="../iaas" class="btn btn-success">IAAS</a>
+                <a href="#" class="btn btn-success">Tecnovigilancia</a>
             </div>
-            <div class="card">
-                <img src="img/tasa_iaas.jpg" alt="Imagen 7">
-                <br>
-                <a href="../tasa_iaas" class="btn btn-success">Tasa de IAAS</a>
-            </div>
-
-            <div class="card">
-                <img src="img/seguridad_px.jpg" alt="Imagen 7">
-                <br>
-                <a href="SeguridaddelPaciente" class="btn btn-success">Seguridad del Paciente</a>
-            </div>
+            
         </div>
     </div> <!-- es el div que cierra <div class="container" style="center">-->
     <footer style="font-size:8px;">
