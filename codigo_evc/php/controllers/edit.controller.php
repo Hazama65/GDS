@@ -8,7 +8,7 @@
         $id_paciente=$_GET['id'];
 
 
-        $query= "SELECT dp.*,f.*,n.*,fr.*,evc.*,p.*,r.*,e.*,s.*,es.*
+        $query= "SELECT dp.*,dp.id_paciente,f.*,n.*,fr.*,evc.*,p.*,r.*,e.*,s.*,es.*
         FROM datos_paciente dp
         LEFT JOIN fast f ON dp.id_paciente = f.id_paciente   
         LEFT JOIN nihss n ON dp.id_paciente = n.id_paciente
@@ -23,11 +23,9 @@
 
         $AllData = $connectionDB->getRows($query);
 
-
         if (!empty($AllData)) {
             foreach ($AllData as $data) {
 
-                $id_paciente= $data['id_paciente'];
                 $nombre_paciente = $data['nombre_paciente'];
                 $curp = $data['curp'];
                 $fecha_nacimiento = $data['fecha_nacimiento'];

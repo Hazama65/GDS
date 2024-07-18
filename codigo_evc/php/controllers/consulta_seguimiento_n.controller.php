@@ -37,6 +37,9 @@ if (isset($_GET['valorSeleccionado']) && isset($_GET['textoSeleccionado'])) {
             $antiagregante = $data['antiagregante'];
             $antioagulante = $data['antioagulante'];
             $estatinas = $data['estatinas'];
+            $Estatinas_med = $data['Estatinas_med'];
+            $dosis_Estatinas = $data['dosis_Estatinas'];
+            $tiempo_Estatinas = $data['tiempo_Estatinas'];
             $trombolisis = $data['trombolisis'];
             $r_TPA_1 = $data['r_TPA_1'];
             $sangrado = $data['sangrado'];
@@ -45,10 +48,10 @@ if (isset($_GET['valorSeleccionado']) && isset($_GET['textoSeleccionado'])) {
             $cerebrolisina = $data['cerebrolisina'];
             $dosis_cerebro = $data['dosis_cerebro'];
             $tiempo_cerebro = $data['tiempo_cerebro'];
-            $nihss_seg = $data['nihss_seg'];
             $escala_nihss_seg = $data['escala_nihss_seg'];
-            $RANKIN_funcional_seg = $data['RANKIN_funcional_seg'];
             $rankin_seguimiento = $data['rankin_seguimiento'];
+            $puntuacion_has = $data['puntuacion_has'] ;
+            $interpretacion_has = $data['interpretacion_has'];
             $chads = $data['chads'];
             $riesgo_chads = $data['riesgo_chads'];
 

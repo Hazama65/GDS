@@ -153,7 +153,6 @@
         $update_escalas_salida = array(
             'nihss_salida' => $_POST['nihss_salida'],
             'Escala_gose'  => $_POST['Escala_gose'],
-            'id_paciente'   => $Result_Paciente
         );
 
         $connectionDB->updateData($Tables[9],$update_escalas_salida,$updateColum,$updateId);

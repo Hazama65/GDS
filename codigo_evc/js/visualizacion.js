@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
             success: function (response) {
                 // Procesa la respuesta (supongamos que response es un array de opciones)
                 const opcionesSelect = JSON.parse(response);
-                console.log(opcionesSelect);
 
                 // Actualiza el contenido del select con las opciones obtenidas
                 const selectElement = document.getElementById('paciente_seleccionado');

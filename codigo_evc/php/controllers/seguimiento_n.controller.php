@@ -47,6 +47,9 @@
             'antiagregante'   => isset($_POST['antiagregante']) ? 'Si' : 'No',
             'antioagulante'   => isset($_POST['antioagulante']) ? 'Si' : 'No',
             'estatinas'       => isset($_POST['estatinas']) ? 'Si' : 'No',
+            'Estatinas_med'   => $_POST['Estatinas_med'],
+            'dosis_Estatinas' => $_POST['dosis_Estatinas'],
+            'tiempo_Estatinas'=> $_POST['tiempo_Estatinas'],
             'trombolisis'     => $_POST['trombolisis'],
             'r_TPA_1'         => $_POST['r_TPA_1'],
             'sangrado'        => $_POST['sangrado'],
@@ -73,10 +76,10 @@
         $connectionDB->insertData($Tables[3], $Data_cerebro);
 
         $Data_nrc = array(
-            'nihss_seg'            => $_POST['nihss_seg'],
             'escala_nihss_seg'     => $_POST['escala_nihss_seg'],
-            'RANKIN_funcional_seg' => $_POST['RANKIN_funcional_seg'],
             'rankin_seguimiento'   => $_POST['rankin_seguimiento'],
+            'puntuacion_has'       => $_POST ['puntuacion_has'],
+            'interpretacion_has'   => $_POST ['interpretacion_has'],
             'chads'                => $_POST['chads'],
             'riesgo_chads'         => $_POST['riesgo_chads'],
             'id_seguimiento'       => $Result_seguimiento

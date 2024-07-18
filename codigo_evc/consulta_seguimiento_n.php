@@ -99,23 +99,18 @@ include('php/controllers/consulta_seguimiento_n.controller.php');
             </tr>
 
             <tr>
-                <td class="estilo-celda">Cerebrolisina</td>
-                <td></td>
+                <td class="estilo-celda">Estatinas Medicamento</td>
+                <td><?php echo $Estatinas_med ?></td>
             </tr>
 
             <tr>
-                <td class="estilo-celda">Estatinas</td>
-                <td></td>
+                <td class="estilo-celda">Dosis-Dosis-Estatinas</td>
+                <td><?php echo $dosis_Estatinas ?></td>
             </tr>
 
             <tr>
-                <td class="estilo-celda">Dosis-Estatinas</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td class="estilo-celda">Tiempo-Estatinas</td>
-                <td></td>
+                <td class="estilo-celda">Tiempo-Tiempo-Estatinas</td>
+                <td><?php echo $tiempo_Estatinas ?></td>
             </tr>
 
 
@@ -193,11 +188,11 @@ include('php/controllers/consulta_seguimiento_n.controller.php');
 
             <tr>
                 <td class="estilo-celda">Puntuación HAS-BLED</td>
-                <td></td>
+                <td><?php echo $puntuacion_has ?></td>
             </tr>
             <tr>
                 <td class="estilo-celda">Interpretación</td>
-                <td></td>
+                <td><?php echo $interpretacion_has ?></td>
             </tr>
 
 

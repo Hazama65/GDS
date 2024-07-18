@@ -336,39 +336,39 @@ include('php/controllers/edit.controller.php');
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-5">
-                                    <input type="checkbox" name="pmau" id="pmau" value="Si" style="font-size:12px;" <?php if ($evc == 'Si') echo "checked"; ?>>
+                                    <input type="checkbox" name="pmau" id="pmau" value="Si" style="font-size:12px;" <?php if ($pmau == 'Si') echo "checked"; ?>>
                                     <label for="pmau" style="font-size:12px;">Personal Médico Adscrito Urgencias</label>
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="checkbox" name="pah" id="pah" value="Si" style="font-size:12px;" <?php if ($evc == 'Si') echo "checked"; ?>>
+                                    <input type="checkbox" name="pah" id="pah" value="Si" style="font-size:12px;" <?php if ($pah == 'Si') echo "checked"; ?>>
                                     <label for="pah" style="font-size:12px;">Personal de Admisión Hospitalaria</label>
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="checkbox" name="peia" id="peia" value="Si" style="font-size:12px;" <?php if ($evc == 'Si') echo "checked"; ?>>
+                                    <input type="checkbox" name="peia" id="peia" value="Si" style="font-size:12px;" <?php if ($peia == 'Si') echo "checked"; ?>>
                                     <label for="peia" style="font-size:12px;">Personal de Enfermería</label>
                                 </div>
                                 <div class="col-md-5">
-                                    <input type="checkbox" name="pim" id="pim" value="Si" style="font-size:12px;" <?php if ($evc == 'Si') echo "checked"; ?>>
+                                    <input type="checkbox" name="pim" id="pim" value="Si" style="font-size:12px;" <?php if ($pim == 'Si') echo "checked"; ?>>
                                     <label for="pim" style="font-size:12px;">Personal de Imagenología</label>
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="checkbox" name="plio" id="plio" value="Si" style="font-size:12px;" <?php if ($evc == 'Si') echo "checked"; ?>>
+                                    <input type="checkbox" name="plio" id="plio" value="Si" style="font-size:12px;" <?php if ($plio == 'Si') echo "checked"; ?>>
                                     <label for="plio" style="font-size:12px;">Personal de Laboratorio</label>
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="checkbox" name="pcisfa" id="pcisfa" value="Si" style="font-size:12px;" <?php if ($evc == 'Si') echo "checked"; ?>>
+                                    <input type="checkbox" name="pcisfa" id="pcisfa" value="Si" style="font-size:12px;" <?php if ($pcisfa == 'Si') echo "checked"; ?>>
                                     <label for="pcisfa" style="font-size:12px;">Personal de CISFA</label>
                                 </div>
                                 <div class="col-md-5">
-                                    <input type="checkbox" name="ts" id="ts" value="Si" style="font-size:12px;" <?php if ($evc == 'Si') echo "checked"; ?>>
+                                    <input type="checkbox" name="ts" id="ts" value="Si" style="font-size:12px;" <?php if ($ts == 'Si') echo "checked"; ?>>
                                     <label for="ts" style="font-size:12px;">Trabajo Social</label>
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="checkbox" name="camillero" id="camillero" value="Si" style="font-size:12px;" <?php if ($evc == 'Si') echo "checked"; ?>>
+                                    <input type="checkbox" name="camillero" id="camillero" value="Si" style="font-size:12px;" <?php if ($camillero == 'Si') echo "checked"; ?>>
                                     <label for="camillero" style="font-size:12px;">Camillero</label>
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="checkbox" name="med_neuro" id="med_neuro" value="Si" style="font-size:12px;" <?php if ($evc == 'Si') echo "checked"; ?>>
+                                    <input type="checkbox" name="med_neuro" id="med_neuro" value="Si" style="font-size:12px;" <?php if ($med_neuro == 'Si') echo "checked"; ?>>
                                     <label for="med_neuro" style="font-size:12px;">Médico neurólogo</label>
                                 </div>
                             </div>
@@ -394,77 +394,77 @@ include('php/controllers/edit.controller.php');
 
                 <div class="col-md-12">
                     <strong style="font-size: 12px; ">Hora de llegada Urgencias</strong>
-                    <input id="tiempo_urgencias" name="tiempo_urgencias" type="time" class="control form-control" style="font-size: 12px;">
+                    <input id="tiempo_urgencias" name="tiempo_urgencias" type="time" class="control form-control" style="font-size: 12px;" value="<?php echo $hora_llegada; ?>">
                 </div>
 
                 <div class="col-md-6">
                     <strong style="font-size: 12px; ">Hora de Atención TRIAGE</strong>
-                    <input id="tiempo_TRIAGE" name="tiempo_TRIAGE" type="time" class="control form-control" style="font-size: 12px;">
+                    <input id="tiempo_TRIAGE" name="tiempo_TRIAGE" type="time" class="control form-control" style="font-size: 12px;" value="<?php echo $hora_triage; ?>">
                 </div>
 
                 <div class="col-md-6">
                     <strong style="font-size: 12px;">Puerta-TRIAGE</strong>
-                    <input type="text" id="puerta_triage" name="puerta_triage" class="control form-control" style="font-size: 12px;" readonly>
+                    <input type="text" id="puerta_triage" name="puerta_triage" class="control form-control" style="font-size: 12px;" readonly value="<?php echo $puerta_triage; ?>">
                 </div>
 
                 <div class="col-md-6">
                     <strong style="font-size: 12px; ">Hora de Atención CHOQUE</strong>
-                    <input id="tiempo_CHOQUE" name="tiempo_CHOQUE" type="time" class="control form-control" style="font-size: 12px;">
+                    <input id="tiempo_CHOQUE" name="tiempo_CHOQUE" type="time" class="control form-control" style="font-size: 12px;" value="<?php echo $hora_choque; ?>">
                 </div>
 
                 <div class="col-md-6">
                     <strong style="font-size: 12px;">Puerta-URGENCIAS</strong>
-                    <input type="text" id="puerta_urgencias" name="puerta_urgencias" class="control form-control" style="font-size: 12px;" readonly>
+                    <input type="text" id="puerta_urgencias" name="puerta_urgencias" class="control form-control" style="font-size: 12px;" readonly value="<?php echo $puerta_urgencias; ?>">
                 </div>
 
                 <div class="col-md-6">
                     <strong style="font-size: 12px; ">Hora de Realización TAC</strong>
-                    <input id="tiempo_TAC" name="tiempo_TAC" type="time" class="control form-control" style="font-size: 12px;">
+                    <input id="tiempo_TAC" name="tiempo_TAC" type="time" class="control form-control" style="font-size: 12px;" value="<?php echo $hora_tac; ?>">
                 </div>
 
                 <div class="col-md-6">
                     <strong style="font-size: 12px;">Puerta-TAC</strong>
-                    <input type="text" id="puerta_tac" name="puerta_tac" class="control form-control" style="font-size: 12px;" readonly>
+                    <input type="text" id="puerta_tac" name="puerta_tac" class="control form-control" style="font-size: 12px;" readonly value="<?php echo $puerta_tac; ?>">
                 </div>
 
                 <div class="col-md-6">
                     <strong style="font-size: 12px; ">Hora de Atención Equipo Multidisciplinario</strong>
-                    <input id="tiempo_Multidisciplinario" name="tiempo_Multidisciplinario" type="time" class="control form-control" style="font-size: 12px;">
+                    <input id="tiempo_Multidisciplinario" name="tiempo_Multidisciplinario" type="time" class="control form-control" style="font-size: 12px;" value="<?php echo $hora_em; ?>">
                 </div>
 
                 <div class="col-md-6">
                     <strong style="font-size: 12px;">Puerta-MÉDICOS</strong>
-                    <input type="text" id="puerta_medicos" name="puerta_medicos" class="control form-control" style="font-size: 12px;" readonly>
+                    <input type="text" id="puerta_medicos" name="puerta_medicos" class="control form-control" style="font-size: 12px;" readonly value="<?php echo $puerta_medicos; ?>">
                 </div>
 
                 <div class="col-md-6">
                     <strong style="font-size: 12px; ">Hora de Inicio de Trombolisis</strong>
-                    <input id="tiempo_Trombolisis" name="tiempo_Trombolisis" type="time" class="control form-control" style="font-size: 12px;">
+                    <input id="tiempo_Trombolisis" name="tiempo_Trombolisis" type="time" class="control form-control" style="font-size: 12px;" value="<?php echo $hora_trombo; ?>">
                 </div>
 
                 <div class="col-md-6">
                     <strong style="font-size: 12px;">Puerta-AGUJA</strong>
-                    <input type="text" id="puerta_aguja" name="puerta_aguja" class="control form-control" style="font-size: 12px;" readonly>
+                    <input type="text" id="puerta_aguja" name="puerta_aguja" class="control form-control" style="font-size: 12px;" readonly value="<?php echo $puerta_aguja; ?>">
                 </div>
 
                 <div class="col-md-6">
                     <strong style="font-size: 12px; ">Hora de Ingreso a Terapia</strong>
-                    <input id="tiempo_Terapia" name="tiempo_Terapia" type="time" class="control form-control" style="font-size: 12px;">
+                    <input id="tiempo_Terapia" name="tiempo_Terapia" type="time" class="control form-control" style="font-size: 12px;" value="<?php echo $hora_terapia; ?>">
                 </div>
 
                 <div class="col-md-6">
                     <strong style="font-size: 12px;">Terapia Intensiva</strong>
-                    <input type="text" id="puerta_terapia" name="puerta_terapia" class="control form-control" style="font-size: 12px;" readonly>
+                    <input type="text" id="puerta_terapia" name="puerta_terapia" class="control form-control" style="font-size: 12px;" readonly value="<?php echo $terapia_intensiva; ?>">
                 </div>
 
                 <div class="col-md-6">
                     <strong style="font-size: 12px; ">Hora de TAC-Control</strong>
-                    <input id="tiempo_tac" name="tiempo_tac" type="time" class="control form-control" style="font-size: 12px;">
+                    <input id="tiempo_tac" name="tiempo_tac" type="time" class="control form-control" style="font-size: 12px;" value="<?php echo $hora_tac_control; ?>">
                 </div>
 
                 <div class="col-md-6">
                     <strong style="font-size: 12px;">TAC-Control</strong>
-                    <input type="text" id="puerta_taccontrol" name="puerta_taccontrol" class="control form-control" style="font-size: 12px;" readonly>
+                    <input type="text" id="puerta_taccontrol" name="puerta_taccontrol" class="control form-control" style="font-size: 12px;" readonly value="<?php echo $tac_control; ?>">
                 </div>
 
 
@@ -484,8 +484,8 @@ include('php/controllers/edit.controller.php');
                     <div class="col-md-6">
                         <strong style="font-size: 12px; margin-top: 50px;">Val. Inicial de Rehabilitación</strong>
                         <select name="Valoracioninicial_Rehabi" id="Valoracioninicial_Rehabi" class="form-control" style="font-size: 12px;">
-                            <option value="Negado">Negado</option>
-                            <option value="Si">Si</option>
+                            <option value="Negado"<?php if ($inicial== 'Negado')echo 'selected'; ?>>Negado</option>
+                            <option value="Si"<?php if ($inicial== 'Si')echo 'selected'; ?>>Si</option>
                         </select>
                     </div>
 
@@ -493,8 +493,8 @@ include('php/controllers/edit.controller.php');
                         <strong style="font-size: 12px; margin-top: 50px;">Val. Rehabilitación
                             Hospitalaria</strong>
                         <select name="valoracion_hospitalaria" id="valoracion_hospitalaria" class="form-control" style="font-size: 12px;">
-                            <option value="Negado">Negado</option>
-                            <option value="Si">Si</option>
+                            <option value="Negado"<?php if ($hospitalaria== 'Negado')echo 'selected'; ?>>Negado</option>
+                            <option value="Si"><?php if ($hospitalaria== 'Si')echo 'selected'; ?>Si</option>
                         </select>
                     </div>
 
@@ -519,18 +519,18 @@ include('php/controllers/edit.controller.php');
                     <div class="col-md-4">
                         <strong style="font-size: 12px; margin-top: 50px;">Dependencia Funcional</strong>
                         <select name="dependendcia_funcional" id="dependendcia_funcional" class="form-control" style="font-size: 12px;">
-                            <option value="Negado">Negado</option>
-                            <option value="Si">Si</option>
+                            <option value="Negado"<?php if ($df_nivel== 'Negado')echo 'selected'; ?>>Negado</option>
+                            <option value="Si"<?php if ($df_nivel== 'Si')echo 'selected'; ?>>Si</option>
                         </select>
                     </div>
 
                     <div class="col-md-4" id="depedencia" style="display:none">
                         <strong style="font-size: 12px; margin-top: 50px;">Dependencia Funcional-Nivel</strong>
                         <select name="dependendcia_tipo" id="dependendcia_tipo" class="form-control" style="font-size: 12px;">
-                            <option value="Seleccione">Seleccione</option>
-                            <option value="Leve">Leve</option>
-                            <option value="Moderado">Moderado</option>
-                            <option value="Severo">Severo</option>
+                            <option value="Seleccione"<?php if ($df== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                            <option value="Leve"<?php if ($df== 'Leve')echo 'selected'; ?>>Leve</option>
+                            <option value="Moderado"<?php if ($df== 'Moderado')echo 'selected'; ?>>Moderado</option>
+                            <option value="Severo"<?php if ($df== 'Severo')echo 'selected'; ?>>Severo</option>
                         </select>
                     </div>
 
@@ -539,60 +539,50 @@ include('php/controllers/edit.controller.php');
 
                     <div class="col-md-4">
                         <strong style="font-size: 12px;">FIM Inicial </strong>
-                        <input type="number" step="any" class="form-control" id="fim_inicial" name="fim_inicial" style="font-size: 12px;">
+                        <input type="number" step="any" class="form-control" id="fim_inicial" name="fim_inicial" style="font-size: 12px;" value="<?php echo $fim; ?>">
                     </div>
 
 
                     <div class="col-md-6">
                         <strong style="font-size: 12px; margin-top: 50px;">Barthel Inicial</strong>
                         <select name="bart" id="bart" class="form-control" style="font-size: 12px;">
-                            <option value="Seleccione">Seleccione</option>
-                            <option value="Menos de 20 dependencia Total">Menos de 20 dependencia Total
-                            </option>
-                            <option value="20-35 Dependencia Severa">20-35 Dependencia Severa</option>
-                            <option value="40-55 Dependencia Moderada">40-55 Dependencia Moderada</option>
-                            <option value="60-95 Dependencia Leve">60-95 Dependencia Leve</option>
-                            <option value="95-100 Independencia ">95-100 Independencia </option>
+                            <option value="Seleccione"<?php if ($barthel== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                            <option value="Menos de 20 dependencia Total"<?php if ($barthel== 'Menos de 20 dependencia Total')echo 'selected'; ?>>Menos de 20 dependencia Total</option>
+                            <option value="20-35 Dependencia Severa"<?php if ($barthel== '20-35 Dependencia Severa')echo 'selected'; ?>>20-35 Dependencia Severa</option>
+                            <option value="40-55 Dependencia Moderada"<?php if ($barthel== '40-55 Dependencia Moderada')echo 'selected'; ?>>40-55 Dependencia Moderada</option>
+                            <option value="60-95 Dependencia Leve"<?php if ($barthel== '60-95 Dependencia Leve')echo 'selected'; ?>>60-95 Dependencia Leve</option>
+                            <option value="95-100 Independencia "<?php if ($barthel== '95-100 Independencia')echo 'selected'; ?>>95-100 Independencia </option>
                         </select>
                     </div>
 
                     <div class="col-md-6">
                         <strong style="font-size: 12px; margin-top: 50px;">RANKIN</strong>
                         <select name="rank" id="rank" class="form-control" style="font-size: 12px;">
-                            <option value="Seleccione">Seleccione</option>
-                            <option value="0 Sin Sintomas A pesar de sintomas  realiza actividades cotidianas.">
-                                0 Sin Sintomas A pesar de sintomas realiza actividades cotidianas.</option>
-                            <option value="2 Incapacidad Leve. Incapaz de realizar actividades  previas  pero capaz de  hacer alguna actividad sin asistencia .">
-                                2 Incapacidad Leve. Incapaz de realizar actividades previas pero capaz de hacer
-                                alguna actividad sin asistencia .</option>
-                            <option value="3 Incapacidad Moderada  Requiere alguna ayuda pero capaz de caminar sin ayuda.">
-                                3 Incapacidad Moderada Requiere alguna ayuda pero capaz de caminar sin ayuda.
-                            </option>
-                            <option value="4 Incapacidad Moderadamente Severa. Incapaz de caminar sin ayuda e incapaz de realizar sus necesidades corporales sin ayuda">
-                                4 Incapacidad Moderadamente Severa. Incapaz de caminar sin ayuda e incapaz de
-                                realizar sus necesidades corporales sin ayuda</option>
-                            <option value="5 Incapacidad Severa  Confinado a cama,incontinente y requiere cuidado constante.">
-                                5 Incapacidad Severa Confinado a cama,incontinente y requiere cuidado constante.
+                            <option value="Seleccione"<?php if ($rankin== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                            <option value="0 Sin Sintomas A pesar de sintomas  realiza actividades cotidianas."<?php if ($rankin== '0 Sin Sintomas A pesar de sintomas  realiza actividades cotidianas.')echo 'selected'; ?>>0 Sin Sintomas A pesar de sintomas realiza actividades cotidianas.</option>
+                            <option value="2 Incapacidad Leve. Incapaz de realizar actividades  previas  pero capaz de  hacer alguna actividad sin asistencia ."<?php if ($rankin== '2 Incapacidad Leve. Incapaz de realizar actividades  previas  pero capaz de  hacer alguna actividad sin asistencia .')echo 'selected'; ?>>2 Incapacidad Leve. Incapaz de realizar actividades previas pero capaz de hacer alguna actividad sin asistencia .</option>
+                            <option value="3 Incapacidad Moderada  Requiere alguna ayuda pero capaz de caminar sin ayuda."<?php if ($rankin== '3 Incapacidad Moderada  Requiere alguna ayuda pero capaz de caminar sin ayuda.')echo 'selected'; ?>>3 Incapacidad Moderada Requiere alguna ayuda pero capaz de caminar sin ayuda.</option>
+                            <option value="4 Incapacidad Moderadamente Severa. Incapaz de caminar sin ayuda e incapaz de realizar sus necesidades corporales sin ayuda"<?php if ($rankin== '4 Incapacidad Moderadamente Severa. Incapaz de caminar sin ayuda e incapaz de realizar sus necesidades corporales sin ayuda')echo 'selected'; ?>>4 Incapacidad Moderadamente Severa. Incapaz de caminar sin ayuda e incapaz de realizar sus necesidades corporales sin ayuda</option>
+                            <option value="5 Incapacidad Severa  Confinado a cama,incontinente y requiere cuidado constante."<?php if ($rankin== '5 Incapacidad Severa  Confinado a cama,incontinente y requiere cuidado constante.')echo 'selected'; ?>>5 Incapacidad Severa Confinado a cama,incontinente y requiere cuidado constante.
                             </option>
                         </select>
                     </div>
 
                     <div class="col-md-6">
                         <strong style="font-size: 12px;">Motricity Index </strong>
-                        <input type="number" step="any" class="form-control" id="motri" name="motri" style="font-size: 12px;">
+                        <input type="number" step="any" class="form-control" id="motri" name="motri" style="font-size: 12px;" value="<?php echo $motri; ?>">
                     </div>
 
                     <div class="col-md-6">
                         <strong style="font-size: 12px; margin-top: 50px;">Marcha FAC</strong>
                         <select name="marcha" id="marcha" class="form-control" style="font-size: 12px;">
-                            <option value="Seleccione">Seleccione</option>
-                            <option value="0 Sin deambulación">0 Sin deambulación</option>
-                            <option value="1 Deambulación funcional">1 Deambulación funcional</option>
-                            <option value="2 Deambulación Hogar">2 Deambulación Hogar</option>
-                            <option value="3 Deambulación cerca de casa">3 Deambulación cerca de casa</option>
-                            <option value="4 Independiente en la comunidad">4 Independiente en la comunidad
-                            </option>
-                            <option value="5 Normal">5 Normal</option>
+                            <option value="Seleccione"<?php if ($marcha== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                            <option value="0 Sin deambulación"<?php if ($marcha== '0 Sin deambulación')echo 'selected'; ?>>0 Sin deambulación</option>
+                            <option value="1 Deambulación funcional"<?php if ($marcha== '1 Deambulación funcional')echo 'selected'; ?>>1 Deambulación funcional</option>
+                            <option value="2 Deambulación Hogar"<?php if ($marcha== '2 Deambulación Hogar')echo 'selected'; ?>>2 Deambulación Hogar</option>
+                            <option value="3 Deambulación cerca de casa"<?php if ($marcha== '3 Deambulación cerca de casa')echo 'selected'; ?>>3 Deambulación cerca de casa</option>
+                            <option value="4 Independiente en la comunidad"<?php if ($marcha== '4 Independiente en la comunidad')echo 'selected'; ?>>4 Independiente en la comunidad</option>
+                            <option value="5 Normal"<?php if ($marcha== '5 Normal')echo 'selected'; ?>>5 Normal</option>
                         </select>
                     </div>
 
@@ -616,9 +606,9 @@ include('php/controllers/edit.controller.php');
                 <div class="col-md-3">
                     <strong style="font-size: 12px;">Deglución</strong>
                     <select name="deglucion" id="deglucion" class="form-control" style="font-size: 12px;">
-                        <option value="Seleccione">Seleccione</option>
-                        <option value="Negado">Negado</option>
-                        <option value="Si">Si</option>
+                        <option value="Seleccione"<?php if ($deglucion== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                        <option value="Negado"<?php if ($deglucion== 'Negado')echo 'selected'; ?>>Negado</option>
+                        <option value="Si"<?php if ($deglucion== 'Si')echo 'selected'; ?>>Si</option>
                     </select>
                 </div>
 
@@ -626,90 +616,90 @@ include('php/controllers/edit.controller.php');
                 <div class="col-md-3">
                     <strong style="font-size: 12px;">Lenguaje</strong>
                     <select name="Lenguaje" id="Lenguaje" class="form-control" style="font-size: 12px;">
-                        <option value="Seleccione">Seleccione</option>
-                        <option value="Negado">Negado</option>
-                        <option value="Si">Si</option>
+                        <option value="Seleccione"<?php if ($lenguaje== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                        <option value="Negado"<?php if ($lenguaje== 'Negado')echo 'selected'; ?>>Negado</option>
+                        <option value="Si"<?php if ($lenguaje== 'Si')echo 'selected'; ?>>Si</option>
                     </select>
                 </div>
 
                 <div class="col-md-3">
                     <strong style="font-size: 12px;">Motor</strong>
                     <select name="Motor" id="Motor" class="form-control" style="font-size: 12px;">
-                        <option value="Seleccione">Seleccione</option>
-                        <option value="Negado">Negado</option>
-                        <option value="Si">Si</option>
+                        <option value="Seleccione"<?php if ($motor== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                        <option value="Negado"<?php if ($motor== 'Negado')echo 'selected'; ?>>Negado</option>
+                        <option value="Si"<?php if ($motor== 'Si')echo 'selected'; ?>>Si</option>
                     </select>
                 </div>
 
                 <div class="col-md-3" id="motor_extramidadsuperior" style="display: none">
                     <strong style="font-size: 12px;">Extremidad Superior</strong>
                     <select name="Extremidad_superior" id="Extremidad_superior" class="form-control" style="font-size: 12px;">
-                        <option value="Seleccione">Seleccione</option>
-                        <option value="Derecha">Derecha</option>
-                        <option value="Izquierda">Izquierda</option>
-                        <option value="Bilateral">Bilateral</option>
+                        <option value="Seleccione"<?php if ($extr_sup== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                        <option value="Derecha"<?php if ($extr_sup== 'Derecha')echo 'selected'; ?>>Derecha</option>
+                        <option value="Izquierda"<?php if ($extr_sup== 'Izquierda')echo 'selected'; ?>>Izquierda</option>
+                        <option value="Bilateral"<?php if ($extr_sup== 'Bilateral')echo 'selected'; ?>>Bilateral</option>
                     </select>
                 </div>
 
                 <div class="col-md-3" id="motor_extramidadinferior" style="display: none">
                     <strong style="font-size: 12px;">Extremidad Inferior</strong>
                     <select name="Extremidad_Inferior" id="Extremidad_Inferior" class="form-control" style="font-size: 12px;">
-                        <option value="Seleccione">Seleccione</option>
-                        <option value="Derecha">Derecha</option>
-                        <option value="Izquierda">Izquierda</option>
-                        <option value="Bilateral">Bilateral</option>
+                        <option value="Seleccione"<?php if ($extr_inf== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                        <option value="Derecha"<?php if ($extr_inf== 'Derecha')echo 'selected'; ?>>Derecha</option>
+                        <option value="Izquierda"<?php if ($extr_inf== 'Izquierda')echo 'selected'; ?>>Izquierda</option>
+                        <option value="Bilateral"<?php if ($extr_inf== 'Bilateral')echo 'selected'; ?>>Bilateral</option>
                     </select>
                 </div>
 
                 <div class="col-md-3">
                     <strong style="font-size: 12px;">Dolor</strong>
                     <select name="Dolor" id="Dolor" class="form-control" style="font-size: 12px;">
-                        <option value="Seleccione">Seleccione</option>
-                        <option value="Neuropatico">Neuropático</option>
-                        <option value="Somatico">Somatico</option>
+                        <option value="Seleccione"<?php if ($dolor== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                        <option value="Neuropatico"<?php if ($dolor== 'Neuropatico')echo 'selected'; ?>>Neuropático</option>
+                        <option value="Somatico"<?php if ($dolor== 'Somatico')echo 'selected'; ?>>Somatico</option>
                     </select>
                 </div>
 
                 <div class="col-md-3" id="dolor_neuropatico" style="display: none">
                     <strong style="font-size: 12px;">Tipo-Neuropático</strong>
-                    <input type="text" class="control form-control" id="neuropatico" name="neuropatico" style="font-size: 12px;">
+                    <input type="text" class="control form-control" id="neuropatico" name="neuropatico" style="font-size: 12px;" value="<?php echo $tipo_neuro; ?>">
                 </div>
 
                 <div class="col-md-3">
                     <strong style="font-size: 12px;">Cognitivo</strong>
                     <select name="Cognitivo" id="Cognitivo" class="form-control" style="font-size: 12px;">
-                        <option value="Seleccione">Seleccione</option>
-                        <option value="Si">Si</option>
-                        <option value="No">No</option>
+                        <option value="Seleccione"<?php if ($cognitivo== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                        <option value="Si"<?php if ($cognitivo== 'Si')echo 'selected'; ?>>Si</option>
+                        <option value="No"<?php if ($cognitivo== 'No')echo 'selected'; ?>>No</option>
                     </select>
                 </div>
 
                 <div class="col-md-3">
                     <strong style="font-size: 12px;">Interconsulta</strong>
                     <select name="interconsulta" id="interconsulta" class="form-control" style="font-size: 12px;">
-                        <option value="Seleccione">Seleccione</option>
-                        <option value="Si">Si</option>
-                        <option value="No">No</option>
+                        <option value="Seleccione"<?php if ($interconsulta== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                        <option value="Si"<?php if ($interconsulta== 'Si')echo 'selected'; ?>>Si</option>
+                        <option value="No"<?php if ($interconsulta== 'No')echo 'selected'; ?>>No</option>
                     </select>
                 </div>
 
                 <div class="col-md-3">
                     <strong style="font-size: 12px;">Neuropsicología</strong>
-                    <input type="text" class="control form-control" id="neuropsicologia" name="neuropsicologia" style="font-size: 12px;">
+                    <input type="text" class="control form-control" id="neuropsicologia" name="neuropsicologia" style="font-size: 12px;" value="<?php echo $neuro; ?>">
                 </div>
 
                 <div class="col-md-3">
                     <strong style="font-size: 12px;">Marcha</strong>
                     <select name="Marcha" id="Marcha" class="form-control" style="font-size: 12px;">
-                        <option value="Seleccione">Seleccione</option>
-                        <option value="Dependiente">Dependiente</option>
-                        <option value="Independiente">Independiente</option>
+                        <option value="Seleccione"<?php if ($marcha== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                        <option value="Dependiente"<?php if ($marcha== 'Dependiente')echo 'selected'; ?>>Dependiente</option>
+                        <option value="Independiente"<?php if ($marcha== 'Independiente')echo 'selected'; ?>>Independiente</option>
                     </select>
                 </div>
 
                 <div class="col-md-3">
                     <strong style="font-size: 12px;">Equilibrio</strong>
-                    <input type="text" class="control form-control" id="Equilibrio" name="Equilibrio" style="font-size: 12px;">
+                    <input type="text" class="control form-control" id="Equilibrio" name="Equilibrio" style="font-size: 12px;" value="<?php echo $equilibrio; ?>">
                 </div>
 
 
@@ -731,11 +721,11 @@ include('php/controllers/edit.controller.php');
                     <i><a style="font-size: 12px; margin-top: 50px;" href="https://hraeigds.site/escalas/" target="_blank">Escala NIHSS Salida</a></i>
                     <i><a style="font-size: 12px; margin-top: 50px;" href="guias.php" target="_blank">Instructivos</a></i>
                     <select name="nihss_salida" id="nihss_salida" class="form-control" style="font-size: 12px;" onchange="mostrarParametrosNihss()">
-                        <option value="Seleccione">Seleccione</option>
-                        <option value="1-4 Leve">1- 4 Leve</option>
-                        <option value="5-15 Moderado">5- 15 Moderado</option>
-                        <option value="16-20 Moderado Severo">16- 20 Moderado Severo</option>
-                        <option value="21-42 Severo">21- 42 Severo</option>
+                        <option value="Seleccione"<?php if ($nihss_salida== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                        <option value="1-4 Leve"<?php if ($nihss_salida== '1-4 Leve')echo 'selected'; ?>>1- 4 Leve</option>
+                        <option value="5-15 Moderado"<?php if ($nihss_salida== '5-15 Moderado')echo 'selected'; ?>>5- 15 Moderado</option>
+                        <option value="16-20 Moderado Severo"<?php if ($nihss_salida== '16-20 Moderado Severo')echo 'selected'; ?>>16- 20 Moderado Severo</option>
+                        <option value="21-42 Severo"<?php if ($nihss_salida== '21-42 Severo')echo 'selected'; ?>>21- 42 Severo</option>
                     </select>
                 </div>
 
@@ -746,22 +736,14 @@ include('php/controllers/edit.controller.php');
                     <strong style="font-size: 12px;">Escala GOSE</strong>
                     <i><a style="font-size: 12px; margin-top: 50px;" href="guiaGOSE.php" target="_blank">Instructivos</a></i>
                     <select name="Escala_gose" id="Escala_gose" class="form-select" style="font-size: 12px;">
-                        <option value="Seleccione">
-                            Seleccione</option>
-                        <option value="1. Muerte.">
-                            1. Muerte.</option>
-                        <option value="2. Estado vegetativo persistente.">
-                            2. Estado vegetativo persistente.</option>
-                        <option value="3. Discapacidad grave. Nivel inferior.">
-                            3. Discapacidad grave. Nivel inferior.</option>
-                        <option value="4. Discapacidad grave. Nivel superior.">
-                            4. Discapacidad grave. Nivel superior.</option>
-                        <option value=" 5. Discapacidad moderada. Nivel inferior.">
-                            5. Discapacidad moderada. Nivel inferior. </option>
-                        <option value=" 6. Discapacidad moderada. Nivel superior.">
-                            6. Discapacidad moderada. Nivel superior.</option>
-                        <option value="7. Buena recuperación. Nivel inferior.">
-                            7. Buena recuperación. Nivel inferior.</option>
+                        <option value="Seleccione"<?php if ($Escala_gose== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                        <option value="1. Muerte."<?php if ($Escala_gose== '1. Muerte.')echo 'selected'; ?>>1. Muerte.</option>
+                        <option value="2. Estado vegetativo persistente."<?php if ($Escala_gose== '2. Estado vegetativo persistente.')echo 'selected'; ?>>2. Estado vegetativo persistente.</option>
+                        <option value="3. Discapacidad grave. Nivel inferior."<?php if ($Escala_gose== '3. Discapacidad grave. Nivel inferior.')echo 'selected'; ?>>3. Discapacidad grave. Nivel inferior.</option>
+                        <option value="4. Discapacidad grave. Nivel superior."<?php if ($Escala_gose== '4. Discapacidad grave. Nivel superior.')echo 'selected'; ?>>4. Discapacidad grave. Nivel superior.</option>
+                        <option value="5. Discapacidad moderada. Nivel inferior."<?php if ($Escala_gose== '5. Discapacidad moderada. Nivel inferior.')echo 'selected'; ?>>5. Discapacidad moderada. Nivel inferior. </option>
+                        <option value="6. Discapacidad moderada. Nivel superior."<?php if ($Escala_gose== '6. Discapacidad moderada. Nivel superior.')echo 'selected'; ?>>6. Discapacidad moderada. Nivel superior.</option>
+                        <option value="7. Buena recuperación. Nivel inferior."<?php if ($Escala_gose== '7. Buena recuperación. Nivel inferior.')echo 'selected'; ?>>7. Buena recuperación. Nivel inferior.</option>
                     </select>
                 </div>
 
