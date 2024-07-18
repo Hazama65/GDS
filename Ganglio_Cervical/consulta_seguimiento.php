@@ -22,8 +22,8 @@ include('php/controllers/consulta_seguimiento.controller.php');
         <thead>
             
             <tr>
-                <th scope="col" style="background-color:rgb(247, 130, 72,0.8)"> Datos Generales</th>
-                <th scope="col" style="background-color:rgb(247, 130, 72,0.8);"> </th>
+                <th scope="col" style="background-color: rgb(129, 99, 139);"> Datos Generales</th>
+                <th scope="col" style="background-color: rgb(129, 99, 139);"> </th>
             </tr>
         </thead>
 
@@ -40,8 +40,8 @@ include('php/controllers/consulta_seguimiento.controller.php');
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.8);">Atención Clínica</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.8);"> </th>
+                <th scope="col"  style="background-color: rgb(129, 99, 139,0.5);">Atención Clínica</th>
+                <th scope="col" style="background-color: rgb(129, 99, 139,0.5);"> </th>
             </tr>
 
             <tr>
@@ -61,8 +61,8 @@ include('php/controllers/consulta_seguimiento.controller.php');
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.8);">Caracteristicas </th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.8);"> </th>
+                <th scope="col"  style="background-color: rgb(129, 99, 139,0.5);">Caracteristicas </th>
+                <th scope="col" style="background-color: rgb(129, 99, 139,0.5);"> </th>
             </tr>
 
             <tr>
@@ -138,8 +138,8 @@ include('php/controllers/consulta_seguimiento.controller.php');
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.8);">Otros</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.8);"> </th>
+                <th scope="col"  style="background-color: rgb(129, 99, 139,0.5);">Otros</th>
+                <th scope="col" style="background-color: rgb(129, 99, 139,0.5);"> </th>
             </tr>
 
             <tr>

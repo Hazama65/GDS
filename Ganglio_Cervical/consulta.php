@@ -30,8 +30,8 @@ if (!isset($_SESSION['valid_user'])) {
         <thead>
             
             <tr>
-                <th scope="col" style="background-color:rgb(247, 130, 72,0.8)"> Datos Generales</th>
-                <th scope="col" style="background-color:rgb(247, 130, 72,0.8);"> </th>
+                <th scope="col" style="background-color: rgb(129, 99, 139)"> Datos Generales</th>
+                <th scope="col" style="background-color: rgb(129, 99, 139);"> </th>
             </tr>
         </thead>
 
@@ -63,8 +63,8 @@ if (!isset($_SESSION['valid_user'])) {
 
             <!--ANTECEDENTES HEREDOFAMILIARES -->
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.4);"> Antecendentes Pesonales No Patológicos</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.4);"> </th>
+                <th scope="col"  style="background-color: rgb(129, 99, 139,0.4);"> Antecendentes Pesonales No Patológicos</th>
+                <th scope="col" style="background-color: rgb(129, 99, 139,0.4);"> </th>
             </tr>
 
             <tr>
@@ -73,8 +73,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(255, 209, 99);"> Tos crónica</th>
-                <th scope="col" style="background-color: rgb(255, 209, 99);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152);"> Tos crónica</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152);"> </th>
             </tr>
 
             <tr>
@@ -124,8 +124,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-            <th scope="col"  style="background-color: rgb(255, 209, 99);"> Tuberculosis</th>
-            <th scope="col" style="background-color: rgb(255, 209, 99);"> </th>
+            <th scope="col"  style="background-color: rgb(149, 118, 152);"> Tuberculosis</th>
+            <th scope="col" style="background-color: rgb(149, 118, 152);"> </th>
             </tr>
 
             <tr>
@@ -175,8 +175,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-            <th scope="col"  style="background-color: rgb(255, 209, 99);"> VIH</th>
-            <th scope="col" style="background-color: rgb(255, 209, 99);"> </th>
+            <th scope="col"  style="background-color: rgb(149, 118, 152);"> VIH</th>
+            <th scope="col" style="background-color: rgb(149, 118, 152);"> </th>
             </tr>
 
             <tr>
@@ -226,8 +226,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(255, 209, 99);"> Animales</th>
-                <th scope="col" style="background-color: rgb(255, 209, 99);">  </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152);"> Animales</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152);">  </th>
             </tr>
 
             <tr>
@@ -323,8 +323,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-            <th scope="col"  style="background-color: rgb(255, 209, 99);"> Viajes Recientes</th>
-            <th scope="col" style="background-color: rgb(255, 209, 99);"> </th>
+            <th scope="col"  style="background-color: rgb(149, 118, 152);"> Viajes Recientes</th>
+            <th scope="col" style="background-color: rgb(149, 118, 152);"> </th>
             </tr>
 
             <tr>
@@ -359,13 +359,13 @@ if (!isset($_SESSION['valid_user'])) {
 
 
             <tr>
-            <th scope="col"  style="background-color: rgb(247, 130, 72,0.8);">Vacunación Completa</th>
-            <th scope="col" style="background-color: rgb(247, 130, 72,0.8)"> </th>
+            <th scope="col"  style="background-color: rgb(149, 118, 152);">Vacunación Completa</th>
+            <th scope="col" style="background-color: rgb(149, 118, 152)"> </th>
             </tr>
 
             <tr>
-            <th scope="col"  style="background-color: rgb(247, 130, 72,0.3);">Nacimiento</th>
-            <th scope="col" style="background-color: rgb(247, 130, 72,0.3);"> </th>
+            <th scope="col"  style="background-color: rgb(149, 118, 152,0.4);">Nacimiento</th>
+            <th scope="col" style="background-color: rgb(149, 118, 152,0.4);"> </th>
             </tr>
 
             <tr>
@@ -379,8 +379,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-            <th scope="col"  style="background-color: rgb(247, 130, 72,0.3);">2 meses</th>
-            <th scope="col" style="background-color: rgb(247, 130, 72,0.3);"> </th>
+            <th scope="col"  style="background-color: rgb(149, 118, 152,0.4);">2 meses</th>
+            <th scope="col" style="background-color: rgb(149, 118, 152,0.4);"> </th>
             </tr>
 
             <tr>
@@ -404,8 +404,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.3);">4 meses</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.3);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152,0.4);">4 meses</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152,0.4);"> </th>
             </tr>
 
             <tr>
@@ -424,8 +424,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.3);">6 meses</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.3);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152,0.4);">6 meses</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152,0.4);"> </th>
             </tr>
 
             <tr>
@@ -445,8 +445,8 @@ if (!isset($_SESSION['valid_user'])) {
 
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.3);">7 meses</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.3);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152,0.4);">7 meses</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152,0.4);"> </th>
             </tr>
 
             <tr>
@@ -455,8 +455,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.3);">12 meses</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.3);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152,0.4);">12 meses</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152,0.4);"> </th>
             </tr>
 
             <tr>
@@ -470,8 +470,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.3);">18 meses</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.3);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152,0.4);">18 meses</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152,0.4);"> </th>
             </tr>
 
             <tr>
@@ -480,8 +480,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.3);">24 meses</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.3);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152,0.4);">24 meses</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152,0.4);"> </th>
             </tr>
 
             <tr>
@@ -490,8 +490,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.3);">36 meses</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.3);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152,0.4);">36 meses</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152,0.4);"> </th>
             </tr>
 
             <tr>
@@ -500,8 +500,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.3);">48 meses</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.3);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152,0.4);">48 meses</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152,0.4);"> </th>
             </tr>
 
             <tr>
@@ -515,8 +515,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.3);">59 meses</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.3);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152,0.4);">59 meses</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152,0.4);"> </th>
             </tr>
 
             <tr>
@@ -530,8 +530,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.3);">72 meses</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.3);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152,0.4);">72 meses</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152,0.4);"> </th>
             </tr>
 
             <tr>
@@ -540,8 +540,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.3);">11 años</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.3);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152,0.4);">11 años</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152,0.4);"> </th>
             </tr>
 
             <tr>
@@ -550,8 +550,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.8);">Antecendentes Pesonales Patológicos</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.8);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152);">Antecendentes Pesonales Patológicos</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152);"> </th>
             </tr>
 
             <tr>
@@ -642,8 +642,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.8);">Atención Clínica</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.8);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152);">Atención Clínica</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152);"> </th>
             </tr>
 
             <tr>
@@ -663,8 +663,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.8);">Caracteristicas </th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.8);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152);">Caracteristicas </th>
+                <th scope="col" style="background-color: rgb(149, 118, 152);"> </th>
             </tr>
 
             <tr>
@@ -740,8 +740,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.8);">Otros</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.8);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152);">Otros</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152);"> </th>
             </tr>
 
             <tr>
@@ -791,8 +791,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.8);">Etiología</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.8);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152);">Etiología</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152);"> </th>
             </tr>
 
             <tr>
@@ -852,8 +852,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.8);">Tratamiento Farmacológico para TB</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.8);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152);">Tratamiento Farmacológico para TB</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152);"> </th>
             </tr>
 
             <tr>
@@ -878,13 +878,13 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.8);">Laboratorios</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.8);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152);">Laboratorios</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152);"> </th>
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.3);">Biometría</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.3);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152,0.4);">Biometría</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152,0.4);"> </th>
             </tr>
 
             <tr>
@@ -949,8 +949,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.3);">PFH</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.3);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152,0.4);">PFH</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152,0.4);"> </th>
             </tr>
 
             <tr>
@@ -1024,8 +1024,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.3);">Serología</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.3);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152,0.4);">Serología</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152,0.4);"> </th>
             </tr>
 
             <tr>
@@ -1049,8 +1049,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.3);">Cultivo</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.3);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152,0.4);">Cultivo</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152,0.4);"> </th>
             </tr>
 
             <tr>
@@ -1064,8 +1064,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.3);">Tomografía</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.3);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152,0.4);">Tomografía</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152,0.4);"> </th>
             </tr>
 
             <tr>
@@ -1079,8 +1079,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.3);">Ultrasonido</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.3);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152,0.4);">Ultrasonido</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152,0.4);"> </th>
             </tr>
 
             <tr>
@@ -1094,8 +1094,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.3);">Biopsia</th>
-                <th scope="col" style="background-color: rgb(247, 130, 72,0.3);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152,0.4);">Biopsia</th>
+                <th scope="col" style="background-color: rgb(149, 118, 152,0.4);"> </th>
             </tr>
 
             <tr>
@@ -1109,8 +1109,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.8);">Referencia a Otra Institución</th>
-                <th scope="col" style="background-color:rgb(247, 130, 72,0.8);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152);">Referencia a Otra Institución</th>
+                <th scope="col" style="background-color: rgb(129, 99, 139);"> </th>
             </tr>
 
             <tr>
@@ -1129,8 +1129,8 @@ if (!isset($_SESSION['valid_user'])) {
             </tr>
 
             <tr>
-                <th scope="col"  style="background-color: rgb(247, 130, 72,0.8);">Alta</th>
-                <th scope="col" style="background-color:rgb(247, 130, 72,0.8);"> </th>
+                <th scope="col"  style="background-color: rgb(149, 118, 152);">Alta</th>
+                <th scope="col" style="background-color: rgb(129, 99, 139);"> </th>
             </tr>
 
             <tr>

@@ -1,32 +1,29 @@
-
-
 /* Estilo adicional para el header */
 .custom-header {
     background: #530256;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right,#e81c4c, #EA384D);
+    background: -webkit-linear-gradient(to right, #e81c4c, #EA384D);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right,#e81c4c, #EA384D);
+    background: linear-gradient(to right, #e81c4c, #EA384D);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height: 60px;
+    height: 40px;
     /* Ajusta la altura del encabezado según tus necesidades */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 15px;
     color: rgb(255, 255, 255);
-    /* Agregué color de texto blanco para mayor visibilidad */
-    font-size: 24px;;
+    /* Color de texto blanco para mayor visibilidad */
+    font-size: 15px;
 }
 
 /* Estilo para el texto del header */
 .header-text {
-    margin: 0; /* Elimina el margen predeterminado */
-    padding: 0; /* Elimina el relleno predeterminado */
+    margin: 0;
+    /* Elimina el margen predeterminado */
+    padding: 0;
+    /* Elimina el relleno predeterminado */
 }
-
-
-
 
 /* Estilos para el footer */
 .custom-footer {
@@ -35,11 +32,14 @@
     background: -webkit-linear-gradient(to right, #e81c4c, #EA384D);
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #e81c4c, #EA384D);
-    height: 50px;
+    height: 60px;
     display: flex;
-    flex-direction: column; /* Alinea los elementos en una columna */
-    justify-content: center; /* Alinea horizontalmente los elementos del footer */
-    align-items: center; /* Alinea verticalmente los elementos del footer */
+    flex-direction: column;
+    /* Alinea los elementos en una columna */
+    justify-content: center;
+    /* Alinea horizontalmente los elementos del footer */
+    align-items: center;
+    /* Alinea verticalmente los elementos del footer */
     padding: 0 20px;
     color: rgba(134, 134, 134, 0.794);
     font-size: 8px;
@@ -51,32 +51,34 @@
 
 /* Estilos para los elementos span dentro del footer */
 .custom-footer span {
-    line-height: 0.3; /* Ajusta el interlineado */
+    line-height: 0.3;
+    /* Ajusta el interlineado */
 }
-
-
 
 /* Estilo para el fondo de color del título del modal */
 .modal-title-bg {
-    background-color: #941574; /* Cambia esto al color que desees */
-    color: white; /* Cambia el color del texto si es necesario */
-    padding: 10px; /* Ajusta el relleno según sea necesario */
-    margin: 0; /* Ajusta el margen según sea necesario */
+    background-color: #941574;
+    /* Cambia esto al color que desees */
+    color: white;
+    /* Cambia el color del texto si es necesario */
+    padding: 10px;
+    /* Ajusta el relleno según sea necesario */
+    margin: 0;
+    /* Ajusta el margen según sea necesario */
 }
 
 .modal-title-bt {
     background-color: #C88E86;
-    color:white;
-    padding:10px;
-    margin:0;
+    color: white;
+    padding: 10px;
+    margin: 0;
 }
-
 
 .modal-title-fim {
     background-color: #7B7DAD;
-    color:white;
-    padding:10px;
-    margin:0;
+    color: white;
+    padding: 10px;
+    margin: 0;
 }
 
 .fim-puntaje {
@@ -86,7 +88,7 @@
     text-align: left;
 }
 
-.fim-pregunta{
+.fim-pregunta {
     margin-top: 12px;
     font-size: 14px;
 }
@@ -98,13 +100,16 @@
 
 
 
+
 /* Estilos para los colores de los select */
 .verde {
     background-color: rgb(176, 222, 176, 0.5);
 }
+
 .amarillo {
-    background-color: rgb(245, 249, 159, 0.5 );
+    background-color: rgb(245, 249, 159, 0.5);
 }
+
 .rojo {
     background-color: rgb(228, 166, 166, 0.5);
 }
@@ -112,7 +117,7 @@
 
 
 /* Estilos RANKIN */
-.rankin-header{
+.rankin-header {
     background-color: #89B2A2;
     color: aliceblue;
 }
@@ -122,35 +127,32 @@
 
 /* estilos Motricity index */
 
-.mi-header{
+.mi-header {
     background-color: rgb(189, 170, 121, 0.8);
     color: aliceblue;
 }
 
 
-.marcha-header{
+.marcha-header {
     background-color: #C28CA6;
     color: aliceblue
 }
 
 header {
-    background: #800080;
+    background: #008077;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right,#e81c4c, #EA384D);
+    background: -webkit-linear-gradient(to right, #e81c4c, #EA384D);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right,#e81c4c, #EA384D);
+    background: linear-gradient(to right, #e81c4c, #EA384D);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    height: 60px;
+    height: 50px;
     /* Ajusta la altura del encabezado según tus necesidades */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 15px;
     color: rgb(255, 255, 255);
-    /* Agregué color de texto blanco para mayor visibilidad */
-    
-
+    /* Color de texto blanco para mayor visibilidad */
 }
 
 header a {
@@ -161,33 +163,31 @@ header a {
     color: transparent;
     margin-top: 15px;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 14px;
     /* Aumenta el tamaño de la letra */
 }
 
-.estilomodal  {
-    
-background: linear-gradient(to right, #e81c4c, #71cdcc);
+.estilomodal {
+    background: linear-gradient(to right, #e81c4c, #71cdcc);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.estilomodal h1{
+.estilomodal h1 {
     display: inline;
     background: linear-gradient(to right, #FFFFFF, #FFFFFF);
     -webkit-background-clip: text;
-    color: transparent;  
+    color: transparent;
     margin-top: 15px;
     font-weight: bold;
     font-size: 24px;
-
 }
 
 footer {
     background: #009FFF;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right,#e81c4c, #EA384D);
+    background: -webkit-linear-gradient(to right, #e81c4c, #EA384D);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right,#e81c4c, #EA384D);
+    background: linear-gradient(to right, #e81c4c, #EA384D);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #ececec;
     text-align: center;
@@ -206,46 +206,77 @@ h5.bi {
     /* Ajusta la separación entre el ícono y el texto */
 }
 
+/* Estilo del campo de búsqueda */
 #search {
-    width: 80%;
+    width: 90%;
     padding: 10px;
-    margin: 10px;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: 1px solid rgba(20, 227, 220, 0.934);
+    font-size: 14px;
+    /* Tamaño de fuente más pequeño */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
 }
 
+/* Estilo de la lista de pacientes */
 #patient-list {
     list-style: none;
     padding: 0;
-    background-color: white;
+    background-color: #ffffff;
     /* Fondo blanco */
-    border: 1px solid rgba(179, 227, 20, 0.934);
+    border: 1px solid rgba(20, 227, 189, 0.934);
     /* Borde alrededor de la lista */
-    border-radius: 5px;
+    border-radius: 10px;
     /* Esquinas redondeadas */
-    margin: 10px;
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
 }
 
+/* Estilo de los elementos de la lista de pacientes */
 #patient-list li {
     margin: 0;
     /* Elimina el margen entre elementos */
-    padding: 10px;
+    padding: 8px;
     border-bottom: 1px solid #ddd;
     /* Borde inferior para separar pacientes */
+    font-size: 14px;
+    /* Tamaño de fuente más pequeño */
 }
 
+/* Elimina el borde inferior del último paciente */
 #patient-list li:last-child {
     border-bottom: none;
-    /* Elimina el borde inferior del último paciente */
 }
 
-/* Agrega un borde alrededor del contenedor de la tabla */
+/* Estilo del contenedor de la lista de pacientes */
 #patient-list-container {
+    background: #009FFF;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #d1cfe2, #ee9efa);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgb(234, 44, 77, 0.4), rgb(234, 44, 77));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    max-height: 500px;
+    /* Altura máxima del div */
+    overflow-y: auto;
+    /* Agrega scroll vertical si el contenido excede la altura máxima */
+    padding: 10px;
+    /* Espaciado opcional */
     border: 1px solid #ddd;
     /* Color y grosor del borde */
-    border-radius: 5px;
+    border-radius: 10px;
     /* Esquinas redondeadas */
-    padding: 10px;
-    /* Espacio alrededor de la tabla */
+    box-shadow: 0 4px 8px rgba(158, 13, 13, 0.724);
+    /* Sombra suave */
+    margin: 15px auto;
+    /* Centrado horizontal */
+    width: 90%;
+    /* Ancho del contenedor */
 }
+
+
 
 .custom-header {
     color: aliceblue;
@@ -257,21 +288,6 @@ h5.bi {
     /* Añade espaciado alrededor del contenido del encabezado */
 }
 
-/*SCROLL BUSCADOR*/
-#patient-list-container {
-    background: #009FFF;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #d1cfe2, #fa9f9e);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #d1cfe2, #fa9f9e);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    max-height: 800px;
-    /* Altura máxima del div */
-    overflow-y: auto;
-    /* Agrega scroll vertical si el contenido excede la altura máxima */
-    padding: 10px;
-    /* Espaciado opcional */
-}
 
 
 
@@ -320,7 +336,8 @@ h5.bi {
 
 .loading svg polyline {
     fill: none;
-    stroke-width: 6; /* Aumentar el grosor de la línea */
+    stroke-width: 6;
+    /* Aumentar el grosor de la línea */
     stroke-linecap: round;
     stroke-linejoin: round;
 }
@@ -333,7 +350,8 @@ h5.bi {
 .loading svg polyline#front {
     fill: none;
     stroke: #fb3437;
-    stroke-dasharray: 96, 288; /* Ajustar la longitud del dasharray y el dashoffset */
+    stroke-dasharray: 96, 288;
+    /* Ajustar la longitud del dasharray y el dashoffset */
     stroke-dashoffset: 384;
     animation: dash_682 1.4s linear infinite;
 }
@@ -346,4 +364,90 @@ h5.bi {
     to {
         stroke-dashoffset: 0;
     }
+}
+
+
+
+/* Estilos para checkboxes */
+input[type="checkbox"]+label {
+    color: rgb(98, 96, 96);
+    font-weight: bold;
+    line-height: 3em;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked+label {
+    color: rgb(31, 31, 32);
+}
+
+input[type="checkbox"]+label:before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    float: left;
+    margin: 0.5em 0.5em 0 0;
+    border: 2px solid #43464b;
+    background: #fff;
+}
+
+input[type="checkbox"]:checked+label:before {
+    border-color: #0fbf12;
+}
+
+input[type="checkbox"]:checked+label:after {
+    content: "";
+    width: 12px;
+    height: 6px;
+    border: 4px solid #0fbf12;
+    float: left;
+    margin-left: -1.95em;
+    border-right: 0;
+    border-top: 0;
+    margin-top: 1em;
+    border-radius: 100%;
+    transform: rotate(-55deg);
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked+label:before,
+input[type="radio"]:checked+label:before {
+    border-color: #0fbf12;
+}
+
+input[type="checkbox"]:checked:disabled+label,
+input[type="radio"]:checked:disabled+label {
+    background: #ccc;
+    color: #fff !important;
+}
+
+input[type="checkbox"]:checked:disabled+label:before,
+input[type="radio"]:checked:disabled+label:before {
+    border-color: #bdbdbd;
+}
+
+.content {
+    width: 95%;
+    padding: 1em;
+    box-sizing: border-box;
+    float: left;
+}
+
+fieldset {
+    padding: 1em;
+    border-color: #d4d4d4;
+    border-style: solid;
+    border-width: 1px;
+    background: #fff;
+    border-radius: 10px;
+    /* Cambia este valor según tu preferencia */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Ajusta estos valores según tu preferencia */
+}
+
+
+.hidden {
+    display: none;    
 }
