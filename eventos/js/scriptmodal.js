@@ -245,96 +245,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// TIPO DE RESPUESTA 
+
+// SELECCIONAR TIPO DE EVENTO 
 
 document.addEventListener("DOMContentLoaded", function () {
+    let selectTipoEvento = document.getElementById("Tipo_evento");
+    let divtip_adverso= document.getElementById("tip_adverso");
+    let divtip_centinela = document.getElementById("tip_centinela");
+    let divinfo_familiar = document.getElementById("info_familiar");
 
-    let SelectRespuesta = document.getElementById("respuesta");
-    let divTipoRespuestas = document.getElementById("respuesta_tipo");
+    selectTipoEvento.addEventListener("change", function () {
+        //  opción seleccionada
+        if (selectTipoEvento.value === "Evento Adverso") {
+            // Mostrar div de área ambulatorio y ocultar el de hospitalización
+            divtip_adverso.style.display = "block";
+            divtip_centinela.style.display = "none";
+            divinfo_familiar.style.display = "block"
 
-    SelectRespuesta.addEventListener("change", function () {
+        } else if (selectTipoEvento.value === "Centinela") {
+            // Mostrar div de hospitalización y ocultar el de área ambulatorio
 
-        if (SelectRespuesta.value === "Si") {
-            divTipoRespuestas.style.display = "block";
+            divtip_adverso.style.display = "none";
+            divtip_centinela.style.display = "block";
+            divinfo_familiar.style.display = "block"
+
+
         } else {
-            divTipoRespuestas.style.display = "none";
+            // Ocultar ambos divs si no se selecciona ninguna opción válida
+            divtip_adverso.style.display = "none";
+            divtip_centinela.style.display = "none";
+            divinfo_familiar.style.display = "none"
+
         }
     });
 });
-
-// Respuesta Corto Plazo
-document.addEventListener("DOMContentLoaded", function () {
-    let SelectRespuestaCorta = document.getElementById("Corto");
-    let divDescripcionRespuestaCorta = document.getElementById("desc_corto");
-
-    SelectRespuestaCorta.addEventListener("change", function () {
-        if (SelectRespuestaCorta.value === "Si") {
-            divDescripcionRespuestaCorta.style.display = "block";
-        } else {
-            divDescripcionRespuestaCorta.style.display = "none";
-        }
-    });
-});
-
-// Respuesta Mediano Plazo
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    let SelectRespuestaMediano = document.getElementById("Mediano");
-    let divDescripcionRespuestaMedia = document.getElementById("desc_mediano");
-
-    SelectRespuestaMediano.addEventListener("change", function () {
-        if (SelectRespuestaMediano.value === "Si") {
-            divDescripcionRespuestaMedia.style.display = "block";
-
-        }else {
-            divDescripcionRespuestaMedia.style.display = "none";
-        }
-    });
-});
-
-// Respuesta Largo Plazo
-
-document.addEventListener("DOMContentLoaded", function (){
-
-    let SelectRespuestaLarga = document.getElementById("Largo");
-    let divDescripcionRespuestaLarga = document.getElementById ("desc_largo");
-
-    SelectRespuestaLarga.addEventListener("change", function (){
-        if (SelectRespuestaLarga.value === "Si"){
-            divDescripcionRespuestaLarga.style.display = "block";
-
-        }else {
-            divDescripcionRespuestaLarga.style.display = "none";
-        }
-    });
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    let selectEstatus = document.getElementById("estatus");
-
-    selectEstatus.addEventListener("change", function () {
-        switch (selectEstatus.value) {
-            case "Solo Detectado":
-                selectEstatus.style.backgroundColor = "#e0e0e0";
-                break;
-            case "No hay respuesta":
-                selectEstatus.style.backgroundColor = "#f4444f";
-                break;
-            case "Respuesta":
-                selectEstatus.style.backgroundColor = "#f6bc66";
-                break;
-            case "Seguimiento":
-                selectEstatus.style.backgroundColor = "#b0f7b8";
-                break;
-            case "Cerrado Caso":
-                selectEstatus.style.backgroundColor = "#79addc";
-                break;
-            default:
-                selectEstatus.style.backgroundColor = "";
-                break;
-        }
-    });
-});
-

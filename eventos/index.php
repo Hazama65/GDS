@@ -30,7 +30,7 @@ include("modal/registropaciente.php");
 <body>
 
     <header>
-        <h5 class="bi bi-chat-square-text" style="color:rgb(243, 243, 243); margin-top: 15px;">Notificación De Eventos</h5>
+        <h5 class="bi bi-chat-square-text" style="color:rgb(243, 243, 243); margin-top: 10px;">Notificación De Eventos</h5>
         <br>
         <div style="padding: 20px; text-align: right;">
             <button type="button" class="btn btn-outline-light" id="cerrar-sesion-button" title="Cerrar sesión">
@@ -55,14 +55,14 @@ include("modal/registropaciente.php");
     <!-- ======================== AQUI INICIA EL BUSCADOR ======================== -->
     <div class="row">
 
-        <div class="col-4" width="100%" height="800px" style="margin-bottom: 100px; ">
+        <div class="col-4" width="100%" height="400px" style="margin-bottom: 100px; ">
             <div id="patient-list-container" style="background-color:rgb(245, 85, 85,0.8)">
-
                 <br>
                 <input type="text" id="search" placeholder="Buscar ...">
                 <ul id="patient-list">
 
-                <li class="patient-item" data-id-paciente="10">CHICO LOPEZ JESUS
+                <li class="patient-item bi bi-person-badge"  data-id-paciente="10">CHICO LOPEZ JESUS
+                
                     <a href="editar.php"><button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .60rem;"> Editar </button></a>
                 </li>
                 </ul>
@@ -121,6 +121,7 @@ include("modal/registropaciente.php");
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="js/visualizacion.js"></script>
     <script src="js/scriptmodal.js"></script>
+    <script src="js/scripteditar.js"></script>
     <script src="js/visualizacion_seg.js"></script>
 
 
