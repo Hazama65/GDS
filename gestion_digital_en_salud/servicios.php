@@ -43,49 +43,38 @@
             <div class="card">
                 <img src="img/ambulatoria.jpg" alt="Imagen 1">
                 <br>
-                <a href="../login/index.php" class="btn btn-success">Ambulatoria</a>
+                <a href="../ambulatoria" class="btn btn-success">Ambulatoria</a>
             </div>
             <div class="card">
                 <img src="img/endoscopia.jpg" alt="Imagen 2">
                 <br>
-                <a href="../login/index.php" class="btn btn-success">Endoscopia</a>
+                <a href="../endoscopia" class="btn btn-success">Endoscopia</a>
             </div>
             <div class="card">
                 <img src="img/folios.jpg" alt="Imagen 3">
                 <br>
-                <a href="../login/index.php" class="btn btn-success">Folios</a>
+                <a href="../folios" class="btn btn-success">Folios</a>
             </div>
             <div class="card">
                 <img src="img/interconsulta.jpg" alt="Imagen 4">
                 <br>
-                <a href="../login/index.php" class="btn btn-success">Interconsultas</a>
+                <a href="../interconsultas_mi" class="btn btn-success">Interconsultas</a>
             </div>
             <div class="card">
                 <img src="img/residentes.jpg" alt="Imagen 5">
                 <br>
-                <a href="../login/index.php" class="btn btn-success">Residentes</a>
+                <a href="../residentes" class="btn btn-success">Residentes</a>
             </div>
             <div class="card">
                 <img src="img/triage.jpg" alt="Imagen 5">
                 <br>
-                <a href="https://hraeigds.site/Triage_GinecoObstetrico/" class="btn btn-success">Triage
-                    Ginecoobstétrico</a>
+                <a href="../triage_GinecoObstetrico" class="btn btn-success">Triage Ginecoobstétrico</a>
             </div>
-            <div class="card">
-                <img src="img/iaas.jpg" alt="Imagen 6">
-                <br>
-                <a href="../login/index.php" class="btn btn-success">IAAS</a>
-            </div>
-            <div class="card">
-                <img src="img/tasa_iaas.jpg" alt="Imagen 7">
-                <br>
-                <a href="../login/index.php" class="btn btn-success">Tasa de IAAS</a>
-            </div>
-            <div class="card">
+            <!-- <div class="card">
                 <img src="img/investigador.jpg" alt="Imagen 8">
                 <br>
                 <a href="../login/index.php" class="btn btn-success">Protocolos de investigacion</a>
-            </div>
+            </div> -->
         </div>
     </div> <!-- es el div que cierra <div class="container" style="center">-->
 

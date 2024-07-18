@@ -42,15 +42,15 @@
             </div>
 
             <div class="card">
-                <img src="img/enfermeria_guardia.jpg" alt="Imagen 1">
+                <img src="img/guardias.jpg" alt="Imagen 1">
                 <br>
-                <a href="../login/index.php" class="btn btn-success">Guardias Enfermería</a>
+                <a href="../enfermeriaguardias/index.php" class="btn btn-success">Guardias Enfermería</a>
             </div>
 
             <div class="card">
-                <img src="img/electrocardiograma1.png" alt="Imagen 1">
+                <img src="img/entrega_urgencias.jpg" alt="Imagen 1">
                 <br>
-                <a href="../login/index.php" class="btn btn-success">Censo Urgencias</a>
+                <a href="../censo/index.php" class="btn btn-success">Entrega Urgencias</a>
             </div>
             <div class="card">
                 <img src="img/personal_enf.jpg" alt="Imagen 1">

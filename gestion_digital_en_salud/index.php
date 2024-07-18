@@ -99,6 +99,12 @@
                 <br>
                 <a href="patologias.php" class="btn btn-success">Patologías</a>
             </div>
+
+            <div class="card">
+                <img src="img/rehabilitacion.jpg" alt="Imagen 6">
+                <br>
+                <a href="rehabilitacion.php" class="btn btn-success">Rehabilitación</a>
+            </div>
             
         </div>
     </div>

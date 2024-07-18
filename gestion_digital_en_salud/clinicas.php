@@ -43,17 +43,17 @@
             <div class="card">
                 <img src="img/anemia.jpeg" alt="Imagen 1">
                 <br>
-                <a href="../login/index.php" class="btn btn-success">Anemias</a>
+                <a href="../anemia" class="btn btn-success">Anemias</a>
             </div>
             <div class="card">
                 <img src="img/hepatitisc.jpg" alt="Imagen 2">
                 <br>
-                <a href="../login/index.php" class="btn btn-success">Hepatitis C</a>
+                <a href="../hepatitisC" class="btn btn-success">Hepatitis C</a>
             </div>
             <div class="card">
                 <img src="img/lph.jpg" alt="Imagen 3">
                 <br>
-                <a href="../login/index.php" class="btn btn-success">LPH</a>
+                <a href="../lph" class="btn btn-success">LPH</a>
             </div>
 
             <!--
@@ -70,13 +70,13 @@
             <div class="card">
                 <img src="img/hemofilia.jpg" alt="Imagen 5">
                 <br>
-                <a href="../login/index.php" class="btn btn-success">Hemofilia</a>
+                <a href="../hemofilia" class="btn btn-success">Hemofilia</a>
             </div>
 
             <div class="card">
                 <img src="img/cancer_bucal.jpg" alt="Imagen 5">
                 <br>
-                <a href="../login/index.php" class="btn btn-success">Cáncer Bucal</a>
+                <a href="../cancer_bucal" class="btn btn-success">Cáncer Bucal</a>
             </div>
 
         </div>
@@ -86,7 +86,13 @@
             <div class="card">
                 <img src="img/cancer_mama.png" alt="Imagen 1">
                 <br>
-                <a href="../login/index.php" class="btn btn-success">Cáncer de Mama</a>
+                <a href="../cancer_mama" class="btn btn-success">Cáncer de Mama</a>
+            </div>
+
+            <div class="card">
+                <img src="img/evc.jpg" alt="Imagen 2">
+                <br>
+                <a href="../codigo_evc" class="btn btn-success">EVC</a>
             </div>
 
 
