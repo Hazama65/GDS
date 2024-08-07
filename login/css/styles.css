@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -27,10 +27,15 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     justify-content: space-between;
     color: rgb(16, 49, 43);
-    width: 100%; /* Asegura que el encabezado ocupe todo el ancho */
+    width: 100%;
+    /* Asegura que el encabezado ocupe todo el ancho */
     align-items: center;
     z-index: 99;
+    font-family: 'GMX', sans-serif;
+    /* Aquí se aplica la fuente GMX */
 }
+
+
 
 
 header a {
@@ -39,28 +44,30 @@ header a {
     color: #0a0a0a;
     text-decoration: none;
     font-weight: 500;
-    margin-left:15px ; 
+    margin-left: 15px;
 }
 
-header a::after{
-    content:'';
+header a::after {
+    content: '';
     position: absolute;
     left: 0;
-    bottom: -6px ;
+    bottom: -6px;
     width: 100%;
     height: 3px;
     background: #0c0c0c;
-    border-radius: 5px ;
+    border-radius: 5px;
     transform-origin: right;
     transform: scaleX(0);
     transition: transform .5s;
 }
 
-header a:hover::after{
+header a:hover::after {
     transform-origin: left;
     transform: scaleX(1);
 
 }
+
+
 
 /* recuadro Bienvenido */
 .login-container1 {
@@ -68,66 +75,85 @@ header a:hover::after{
     border-radius: 50px;
     box-shadow: 0 5px 7px rgba(0, 0, 0, 0.742);
     height: 500px;
-    width: 550PX;
+    width: 550px;
     max-width: 900px;
     transition: all 1s ease;
-    margin: 10px;
+    margin: 10px auto;
+    /* Centrar horizontalmente */
     border: transparent;
-
+    background: linear-gradient(135deg, rgb(242, 239, 232), rgb(242, 239, 232));
+    /* Gradiente de fondo */
 }
 
-.information{
-width: 60%;
-display: flex;
-align-items: center;
-text-align: center;
-background-color: #691C32;
-border-top-left-radius: 50px;
-border-bottom-left-radius: 50px;
 
+
+
+.information {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #691C32;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    font-family: 'GMX', sans-serif;
+    /* Aquí se aplica la fuente GMX */
+    color: #ffffff;
 }
 
-.info-childs{
-width: 100%;
-padding: 0 30px;
-
+.info-childs {
+    padding: 20px;
 }
 
-.information h2{
+.information h2 {
     font-size: 2.5rem;
     color: #ffffff;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .information p {
     margin: 15px 0;
-    color:#ededed;
-}
- /* Contenedor de iniciar sesion */
-.login-container{
-display: flex;
-align-items: center;
-justify-content: center;
-width: 90%;
-text-align: center;
-border: transparent;
+    color: #ededed;
+    animation: fadeIn 3s ease-in-out;
 }
 
+
+/* Contenedor de iniciar sesión */
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    text-align: center;
+    border: transparent;
+    background-color: #f2efe8;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    font-family: 'GMX', sans-serif; /* Aquí se aplica la fuente GMX */
+    animation: slideIn 1.5s ease-in-out;
+}
 
 h5 {
     font-size: 2em;
     color: #121212;
-    font-family:fantasy;
+    font-family: fantasy;
     text-align: center;
+    
 }
 
 .input-container {
     margin-bottom: 20px;
     text-align: left;
 }
+
 /* boton */
 .login-form {
     display: flex;
     flex-direction: column;
+    with: 100px;
 }
 
 /* usuario/contraseña */
@@ -137,7 +163,7 @@ label {
     color: #1b1d1a;
     margin-bottom: 15px;
     border-radius: 30px;
-    padding:0 10px ;
+    padding: 0 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
 }
 
@@ -147,13 +173,13 @@ input {
     background-color: rgba(244, 244, 244, 0.6);
     outline: none;
     border-radius: 50px;
-    color:#151414;
+    color: #151414;
     border-bottom: 1px solid #efefef;
 }
 
-input::after{
+input::after {
     content: '';
-    position:absolute ;
+    position: absolute;
     left: 0;
     bottom: -1px;
     width: 100%;
@@ -177,10 +203,10 @@ button {
 
 button:hover {
     background-color: rgba(233, 180, 162, 0.7);
-    color:#9F2241
+    color: #9F2241
 }
 
-footer {
+/* footer {
     background-color: rgb(16,49,43,0.8);
     color: rgba(152, 152, 153, 0.5);
     text-align: center;
@@ -188,20 +214,31 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+} */
+footer {
+    background-color: rgba(16, 49, 43, 0.8);
+    color: rgba(255, 252, 252, 0.814);
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: 'GMX', sans-serif;
+    /* Aquí se aplica la fuente GMX */
 }
 
 .fa-solid {
-    color:#000000;
+    color: #000000;
     font-size: 25px;
 }
 
 /* RESPONSIVE FORM */
 
-@media screen and  (max-width:750px){
-    html{
+@media screen and (max-width:750px) {
+    html {
         font-size: 12px;
     }
-    
+
 }
 
 /* Pantalla de carga */
@@ -221,7 +258,8 @@ footer {
 
 .loading svg polyline {
     fill: none;
-    stroke-width: 6; /* Aumentar el grosor de la línea */
+    stroke-width: 6;
+    /* Aumentar el grosor de la línea */
     stroke-linecap: round;
     stroke-linejoin: round;
 }
@@ -234,7 +272,8 @@ footer {
 .loading svg polyline#front {
     fill: none;
     stroke: #fb3437;
-    stroke-dasharray: 96, 288; /* Ajustar la longitud del dasharray y el dashoffset */
+    stroke-dasharray: 96, 288;
+    /* Ajustar la longitud del dasharray y el dashoffset */
     stroke-dashoffset: 384;
     animation: dash_682 1.4s linear infinite;
 }
@@ -246,5 +285,22 @@ footer {
 
     to {
         stroke-dashoffset: 0;
+    }
+}
+
+/* Ajustes responsivos */
+@media (max-width: 600px) {
+    .login-container1 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .information {
+        width: 100%;
+        border-radius: 50px 50px 0 0;
+    }
+
+    .login-container {
+        width: 100%;
     }
 }

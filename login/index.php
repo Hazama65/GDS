@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://fonts.googleapis.com/css2?family=GMX&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -66,7 +68,7 @@
         Hospital Regional de Alta Especialidad de Ixtapaluca
        <p style="font-size: 10px">
             Dirección de Operaciones - Subdirección de Tecnologías de la Información 
-            <br> Gestión Digital en Salud - 2023
+            <br> Gestión Digital en Salud - 2024
        </p> 
     </footer>
         

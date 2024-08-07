@@ -15,7 +15,7 @@
                 border-radius: 10px;
                 background-color: rgb(198, 79, 113);
                 color: aliceblue;
-                margin-top:c15px;
+                margin-top:15px;
                 font-size: 15px;
                 text-align: center;">Datos del Paciente</h4>
                 </div>
@@ -27,26 +27,32 @@
                         <input id="nombre_paciente" name="nombre_paciente" type="text" class="control form-control" value="" style="font-size: 12px;">
                     </div>
 
+
+
                     <div class="col-md-6">
-                        <strong style="font-size: 12px;">CURP</strong>
-                        <input id="curp" name="curp" type="text" class="control form-control" value="" style="font-size: 12px;">
-                    </div>
-
-                    <div class="col-md-3">
                         <strong style="font-size: 12px; ">Fecha de Nacimiento</strong>
-                        <input id="fecha" name="fecha" type="date" value="" onblur="curp2date();" class="control form-control" style="font-size: 12px;" readonly>
+                        <input id="fecha" name="fecha" type="date" value="" class="control form-control" style="font-size: 12px;">
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <strong style="font-size: 12px;">Edad</strong>
-                        <input id="edad" name="edad" type="text" class="control form-control" value="" style="font-size: 12px;" readonly>
+                        <input id="edad" name="edad" type="text" class="control form-control" value="" style="font-size: 12px;">
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <strong style="font-size: 12px;">Sexo</strong>
-                        <input type="text" class="control form-control" id="sexo" onclick="curp2date();" name="sexo" style="font-size: 12px;" readonly>
+                        <select name="sexo" id="sexo" class="form-select" style="font-size: 12px;">
+                            <option value="Seleccione">Seleccione</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                            <option value="Otro">Otro</option>
+                        </select>
                     </div>
 
-                    <div class="col-md-3">
+
+
+
+
+                    <div class="col-md-4">
                         <strong style="font-size: 12px;">Cama</strong>
                         <input type="number" class="control form-control" id="cama" name="cama" style="font-size: 12px;">
                     </div>
@@ -372,39 +378,39 @@
                         </select>
                     </div>
 
-                   
-                            <div class="col-md-6" id="tip_adverso" style="display:none;">
-                                <strong style="font-size: 12px;">Evento Adverso</strong>
-                                <select name="evento_tipoadv" id="evento_tipoadv" class="form-select" style="font-size: 12px;">
-                                    <option value="Seleccione">Seleccione</option>
-                                    <option value="Sin daño">Sin daño</option>
-                                    <option value="Leve">Leve</option>
-                                    <option value="Moderado">Moderado</option>
-                                    <option value="Grave">Grave</option>
-                                </select>
-                            </div>
 
-                            <div class="col-md-6" id="tip_centinela" style="display:none;">
-                                <strong style="font-size: 12px;">Evento Centinela</strong>
-                                <select name="evento_tipocenti" id="evento_tipocenti" class="form-select" style="font-size: 12px;">
-                                    <option value="Seleccione">Seleccione</option>
-                                    <option value="Sin daño">Sin daño</option>
-                                    <option value="Leve">Leve</option>
-                                    <option value="Moderado">Moderado</option>
-                                    <option value="Grave">Grave</option>
-                                </select>
-                            </div>
+                    <div class="col-md-6" id="tip_adverso" style="display:none;">
+                        <strong style="font-size: 12px;">Evento Adverso</strong>
+                        <select name="evento_tipoadv" id="evento_tipoadv" class="form-select" style="font-size: 12px;">
+                            <option value="Seleccione">Seleccione</option>
+                            <option value="Sin daño">Sin daño</option>
+                            <option value="Leve">Leve</option>
+                            <option value="Moderado">Moderado</option>
+                            <option value="Grave">Grave</option>
+                        </select>
+                    </div>
 
-                            <div class="col-md-6" id="info_familiar" style="display:none;">
-                                <strong style="font-size: 12px;">Se le brindo información al familiar</strong>
-                                <select name="infopx" id="infopx" class="form-select" style="font-size: 12px;">
-                                    <option value="Seleccione">Seleccione</option>
-                                    <option value="Si">Si</option>
-                                    <option value="No">No</option>
-                                </select>
-                            </div>
+                    <div class="col-md-6" id="tip_centinela" style="display:none;">
+                        <strong style="font-size: 12px;">Evento Centinela</strong>
+                        <select name="evento_tipocenti" id="evento_tipocenti" class="form-select" style="font-size: 12px;">
+                            <option value="Seleccione">Seleccione</option>
+                            <option value="Sin daño">Sin daño</option>
+                            <option value="Leve">Leve</option>
+                            <option value="Moderado">Moderado</option>
+                            <option value="Grave">Grave</option>
+                        </select>
+                    </div>
 
-                    
+                    <div class="col-md-6" id="info_familiar" style="display:none;">
+                        <strong style="font-size: 12px;">Se le brindo información al familiar</strong>
+                        <select name="infopx" id="infopx" class="form-select" style="font-size: 12px;">
+                            <option value="Seleccione">Seleccione</option>
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+
+
 
                     <!-- <div class="col-md-2">
                         <strong style="font-size: 12px;">CISP</strong>

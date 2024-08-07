@@ -451,3 +451,19 @@ fieldset {
 .hidden {
     display: none;    
 }
+
+
+/* Media query para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+    form {
+        width: 80%;
+    }
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    form {
+        width: 95%;
+        padding: 10px;
+    }
+}
