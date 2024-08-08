@@ -107,12 +107,12 @@
                         </div>
 
                         <div class="col-md-3">
-                            <strong style="font-size: 12px; ">Fecha Incio (Tratamiento)</strong>
+                            <strong style="font-size: 12px; ">Reporte de:</strong>
                             <input id="fecha_inicio" name="fecha_inicio" type="date" class="control form-control" style="font-size: 13px;" required>
                         </div>
 
                         <div class="col-md-3">
-                            <strong style="font-size: 14px; ">Fecha Fin (Tratamiento)</strong>
+                            <strong style="font-size: 14px; ">Reporte hasta:</strong>
                             <input id="fecha_fin" name="fecha_fin" type="date" class="control form-control" style="font-size: 13px;" required>
                         </div>
         

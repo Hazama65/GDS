@@ -1,87 +1,61 @@
-<?php 
+<?php
 
-    class Database {
+class Database {
 
-        var $numberRows;
-        var $last_id;
+    public $numberRows;
+    public $last_id;
 
-        private $host;
-        private $dbName;
-        private $username;
-        private $password;
+    private $host;
+    private $dbName;
+    private $username;
+    private $password;
+    private $connection;
 
-        public function __construct($host, $dbName, $username, $password){
-
-            $this->host = $host;
-            $this->dbName = $dbName;
-            $this->username = $username;
-            $this->password = $password;
-            
-        }
-
-        function getConnections(){
-
-            $connection = mysqli_connect($this->host,  $this->username, $this->password, $this->dbName);
-
-            if(!$connection){
-                printf("Could not connect to database");
-                exit();
-            }
-            $connection->set_charset("utf8");
-            return $connection;
-
-        }
-
-        function closeConnection($param){
-            mysqli_close($param);
-        }
-
-        //query to get All data
-        function getRows($params){
-
-            $all = array();
-            $this->numberRows;
-            $onConnection = $this->getConnections();
-
-            if( $resultado = mysqli_query($onConnection, $params) ){
-
-                $this->numberRows = $resultado->num_rows;
-
-                while($fila = $resultado->fetch_array() ){
-                    $all[]=$fila;
-                }
-
-                $this->closeConnection($onConnection);
-                return $all;
-
-            }
-
-        }
-
-        //Query to search an simple data
-        function getSimple($params){
-
-            $onConnection = $this->getConnections();
-            $rows = mysqli_query($onConnection, $params);
-            $records = $rows->fetch_array();
-
-            $this->closeConnection($onConnection);
-
-            return $records[0];
-        
-        }
-
-        //Basic Querys
-        function ShotSimple($param){
-            $oconn = $this->GetConnections();
-            mysqli_query($oconn,$param);
-            $this->last_id = $oconn->insert_id;
-            $this->closeConnection($oconn);
-        }
-
-
-
+    public function __construct($host, $dbName, $username, $password) {
+        $this->host = $host;
+        $this->dbName = $dbName;
+        $this->username = $username;
+        $this->password = $password;
+        $this->connect();
     }
 
+    private function connect() {
+        $dsn = "mysql:host={$this->host};dbname={$this->dbName};charset=utf8";
+        $options = [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+            PDO::ATTR_EMULATE_PREPARES => false,
+        ];
+
+        try {
+            $this->connection = new PDO($dsn, $this->username, $this->password, $options);
+        } catch (PDOException $e) {
+            die("Could not connect to the database: " . $e->getMessage());
+        }
+    }
+
+    public function getRows($query, $params = []) {
+        $stmt = $this->connection->prepare($query);
+        $stmt->execute($params);
+        $this->numberRows = $stmt->rowCount();
+        return $stmt->fetchAll();
+    }
+
+    public function getSimple($query, $params = []) {
+        $stmt = $this->connection->prepare($query);
+        $stmt->execute($params);
+        return $stmt->fetchColumn();
+    }
+
+    public function executeQuery($query, $params = []) {
+        $stmt = $this->connection->prepare($query);
+        $stmt->execute($params);
+        $this->last_id = $this->connection->lastInsertId();
+    }
+
+    public function closeConnection() {
+        $this->connection = null;
+    }
+}
 
 ?>

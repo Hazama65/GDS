@@ -64,7 +64,7 @@
             <div class="card">
                 <img src="img/seguridad_px.jpg" alt="Imagen 7">
                 <br>
-                <a href="SeguridaddelPaciente" class="btn btn-success">Seguridad del Paciente</a>
+                <a href="SeguridaddelPaciente.php" class="btn btn-success">Seguridad del Paciente</a>
             </div>
         </div>
     </div> <!-- es el div que cierra <div class="container" style="center">-->

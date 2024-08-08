@@ -1,8 +1,9 @@
 <?php
-    define('DB_HOST','srv961.hstgr.io');
-    define('DB_NAME','u772081794_usuarios');
-    define('DB_USERNAME','u772081794_usuarios');
-    define('DB_PASSWORD','^Jz>EIdio9');
+
+   define('DB_HOST','srv961.hstgr.io');
+   define('DB_NAME','u772081794_usuarios');
+   define('DB_USERNAME','u772081794_usuarios');
+   define('DB_PASSWORD','^Jz>EIdio9');
 
 
     // define('DB_HOST','sql5c75f.carrierzone.com');

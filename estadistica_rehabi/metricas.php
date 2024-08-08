@@ -1,4 +1,14 @@
 <?php
+session_start();
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+
+// Verifica si el usuario ha iniciado sesión y si tiene el sistema correcto
+if (!isset($_SESSION['valid_user']) || $_SESSION['system_type'] !== 'estadistica_rehab') {
+    // Si el usuario no ha iniciado sesión o no tiene permiso para este sistema
+    header('Location: ../login/index.php');
+    exit;
+}
 require ('php/controllers/registros.controller.php');
 ?>
 <!DOCTYPE html>

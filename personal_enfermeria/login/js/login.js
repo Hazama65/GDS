@@ -33,8 +33,7 @@ const validateLogin = async (formData) => {
 
         const typeToken = response[0].rol;
 
-
-        if(typeToken.trim() === '1' || typeToken.trim() === '2'){
+        if(typeToken === 1 || typeToken === 2){
             return setAlert.successAlert(
                 'La operación se ha completado correctamente.',
                 null,

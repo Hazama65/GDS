@@ -32,6 +32,65 @@ document.getElementById("nombre").addEventListener("input", function () {
   this.value = capitalizeFirstLetter(this.value);
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('guarderia').addEventListener('change', function() {
+    let guarderia = document.getElementById('guarderia').value;
+    let horas_guarderia = document.getElementById('horas_guarderia');
+    let hijos = document.getElementById('num_hijos');
+
+    if (guarderia === 'Si') {
+      horas_guarderia.style.display = 'block';
+      hijos.style.display = 'block';
+    } else {
+      horas_guarderia.style.display = 'none';
+      hijos.style.display = 'none';
+    }
+  });
+
+  document.getElementById('tipocontrato').addEventListener('change', function() {
+    let Contrato = document.getElementById('tipocontrato').value;
+    let fechaBasificacion = document.getElementById('fechaBas');
+
+    if (Contrato === 'Base') {
+      fechaBasificacion.style.display = 'block';
+    } else {
+      fechaBasificacion.style.display = 'none';
+    }
+  });
+
+  document.getElementById('Otro_empleo').addEventListener('change', function() {
+    let otro_empleo = document.getElementById('Otro_empleo').value;
+    let elemento1 = document.getElementById('div_antigüedad');
+    let elemento2 = document.getElementById('div_tipo_contratacion');
+    let elemento3 = document.getElementById('div_dependencia');
+
+    if (otro_empleo === 'Si') {
+      elemento1.style.display = 'block';
+      elemento2.style.display = 'block';
+      elemento3.style.display = 'block';
+
+    } else {
+      elemento1.style.display = 'none';
+      elemento2.style.display = 'none';
+      elemento3.style.display = 'none';
+    }
+  });
+
+  document.getElementById('tipo_contratacion').addEventListener('change', function() {
+    let tipo_contratacion = document.getElementById('tipo_contratacion').value;
+    let otro_tipo = document.getElementById('div_otro_contratacion');
+
+    if (tipo_contratacion === 'Otro') {
+      otro_tipo.style.display = 'block';
+
+    } else {
+      otro_tipo.style.display = 'none';
+    }
+  });
+
+
+});
+
 
 
 // Función para habilitar campos según la selección

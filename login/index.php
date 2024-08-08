@@ -16,11 +16,31 @@
         <a href="https://hraei.gob.mx/" target="_blank">HRAEI</a>
         <strong style="color:aliceblue;">|</strong>
 
-        <a href="../gestion_digital_en_salud/index.php">Inicio</a>
+        <a href="../main_page/index.php">Inicio</a>
         <strong style="color:aliceblue;">|</strong>
         <a href=""></a>
         
-        <a href="../gestion_digital_en_salud/clinicas.php">Clínicas</strong>
+        <a href="../main_page/clinicas.php">Clínicas</strong>
+        <strong style="color:aliceblue;">|</strong>
+        <a href="" target="_blank"></a>
+
+        <a href="../main_page/calidad.php">Calidad</strong>
+        <strong style="color:aliceblue;">|</strong>
+        <a href="" target="_blank"></a>
+
+        <a href="../main_page/enfermeria.php">Enfermeria</strong>
+        <strong style="color:aliceblue;">|</strong>
+        <a href="" target="_blank"></a>
+
+        <a href="../main_page/servicios.php">Servicios</strong>
+        <strong style="color:aliceblue;">|</strong>
+        <a href="" target="_blank"></a>
+
+        <a href="../main_page/patologias.php">Patologías</strong>
+        <strong style="color:aliceblue;">|</strong>
+        <a href="" target="_blank"></a>
+
+        <a href="../main_page/rehabilitacion.php">Rehabilitación</strong>
         <strong style="color:aliceblue;">|</strong>
         <a href="" target="_blank"></a>
     </header>
@@ -66,7 +86,7 @@
         Hospital Regional de Alta Especialidad de Ixtapaluca
        <p style="font-size: 10px">
             Dirección de Operaciones - Subdirección de Tecnologías de la Información 
-            <br> Gestión Digital en Salud - 2023
+            <br> Gestión Digital en Salud - 2024
        </p> 
     </footer>
         
