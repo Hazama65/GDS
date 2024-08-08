@@ -1,3 +1,3 @@
 <?php
-    header('Location: gestion_digital_en_salud/index.php');
+    header('Location: main_page/index.php');
 ?>

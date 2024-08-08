@@ -48,6 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'fechaExpedicion_certificacion' => $_POST['fechaExpedicion_certificacion'],
         'fechaVigencia_certificacion'   => $_POST['fechaVigencia_certificacion'],
         'estatus_certificacion'         => $_POST['estatus_certificacion'],
+        'competencias_profesionales'    => $_POST['competencias_profesionales'],
         'observaciones'                 => $_POST['observaciones']
     );
 
@@ -69,12 +70,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $Data_contrato = array(
         'noempleado'      => $_POST['noempleado'],
         'tipocontrato'    => $_POST['tipocontrato'],
+        'fechaBasificacion' => $_POST['fechaBasificacion'],
         'codigo'          => $_POST['codigo'],
         'puesto'          => $_POST['puesto'],
         'fechaIngreso'    => $_POST['fechaIngreso'],
         'ayo_curso'       => $_POST['ayo_curso'],
         'turno'           => $_POST['turno'],
         'servicio'        => $_POST['Servicio'],
+        'Otro_empleo'     => $_POST['Otro_empleo'],
+        'antigüedad'      => $_POST['antigüedad'],
+        'tipo_contratacion' => $_POST['tipo_contratacion'],
+        'otro_contratacion' => $_POST['otro_contratacion'],
+        'dependencia'     => $_POST['dependencia'],
+        'horario_de'      => $_POST['horario_de'],
+        'horario_a'       => $_POST['horario_a'],
+        'rotaciones'      => $_POST['rotaciones']
     );
 
     $connectionDB->updateData($Tables[2],$Data_contrato,$updateColum_contrato,$updateId);
@@ -156,7 +166,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'genero'                 => $_POST['genero'],
         'onomastico'             => $_POST['onomastico'],
         'edad'                   => $_POST['edad'],
+        'domicilio'              => $_POST['domicilio'],
+        'email'                  => $_POST['email'],
+        'telefono_personal'      => $_POST['telefono_personal'],
         'RFC'                    => $_POST['RFC'],
+        'guarderia'              => $_POST['guarderia'],
+        'tiempo_guarderia'       => isset($_POST['tiempo_guarderia']) ? $_POST['tiempo_guarderia'] : '',
+        'childrens_1'            => isset($_POST['childrens_1']) ? 'Si' : '',
+        'childrens_2'            => isset($_POST['childrens_2']) ? 'Si' : '',
+        'childrens_3'            => isset($_POST['childrens_3']) ? 'Si' : '',
+        'childrens_4'            => isset($_POST['childrens_4']) ? 'Si' : '',
         'contacto_emergencia'    => $_POST['contacto_emergencia'],
         'contacto'               => $_POST['contacto'],
         'no_contacto_emergencia' => $_POST['no_contacto_emergencia'],

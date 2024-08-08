@@ -8,7 +8,8 @@
     JOIN antecedentes_patologicos ap ON dp.id_paciente = ap.id_paciente
     JOIN laboratorio l ON dp.id_paciente = l.id_paciente
     JOIN usg_clinica uc ON dp.id_paciente = uc.id_paciente
-    JOIN tratamiento t ON dp.id_paciente = t.id_paciente";
+    JOIN tratamiento t ON dp.id_paciente = t.id_paciente
+    ORDER BY dp.nombre_paciente ASC";
     
 
 

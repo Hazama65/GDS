@@ -12,11 +12,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $query = "SELECT dp.*,ia.*,
     ctr.noempleado,
     ctr.tipocontrato,
+    ctr.fechaBasificacion,
     ctr.codigo,
     ctr.fechaIngreso,
     ctr.ayo_curso,
     ctr.foto,
     ctr.turno,
+    ctr.horario_de,
+    ctr.horario_a,
     ctr.dias_laborables,
     dl.*,co.*,cap.*,p.puesto,s.servicio
         FROM datos_personal dp
@@ -43,12 +46,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             $genero = $data['genero'];
             $onomastico = $data['onomastico'];
             $edad = $data['edad'];
+            $domicilio = $data['domicilio'];
+            $email = $data['email'];
+            $telefono_personal = $data['telefono_personal'];
             $RFC = $data['RFC'];
             $contacto_emergencia = $data['contacto_emergencia'];
             $contacto = $data['contacto'];
             $no_contacto_emergencia = $data['no_contacto_emergencia'];
             $noempleado = $data['noempleado'];
             $tipocontrato = $data['tipocontrato'];
+            $fechaBasificacion = $data['fechaBasificacion'];
             $codigo = $data['codigo'];
             $puesto = $data['puesto'];
             $fechaIngreso = $data['fechaIngreso'];
@@ -65,6 +72,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             ];
             $diasLaborales = implode(', ', array_filter($dias));
             $servicio = $data['servicio'];
+            $horario_de = $data['horario_de'];
+            $horario_a = $data['horario_a'];
             $foto = $data['foto'];
             $grado_tecnico = $data['grado_tecnico'];
             $cedula_tecnico = $data['cedula_tecnico'];

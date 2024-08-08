@@ -3,8 +3,9 @@ session_start();
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Pragma: no-cache");
 
-if (!isset($_SESSION['valid_user'])) {
-  // El usuario no ha iniciado sesión, redirige de vuelta a la página de inicio de sesión
+// Verificar si el usuario ha iniciado sesión y si tiene el sistema correcto
+if (!isset($_SESSION['valid_user']) || $_SESSION['system_type'] !== 'personal_enf') {
+  // El usuario no ha iniciado sesión o no tiene permiso para este sistema
   header('Location: login/index.php');
   exit;
 }
