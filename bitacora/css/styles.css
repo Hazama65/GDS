@@ -2,9 +2,9 @@
 .custom-header {
     background: #530256;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #701e31, #962841);
+    background: -webkit-linear-gradient(to right, #81638b, #7a6db2);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #701e31, #962841);
+    background: linear-gradient(to right, #81638b, #7a6db2);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 40px;
     /* Ajusta la altura del encabezado según tus necesidades */
@@ -29,9 +29,9 @@
 .custom-footer {
     background: #530256;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right,#701e31, #962841);
+    background: -webkit-linear-gradient(to right, #81638b, #7a6db2);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right,#701e31, #962841);
+    background: linear-gradient(to right, #81638b, #7a6db2);
     height: 60px;
     display: flex;
     flex-direction: column;
@@ -139,11 +139,11 @@
 }
 
 header {
-    background: #c57d56;
+    background: #008077;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right,#701e31, #962841);
+    background: -webkit-linear-gradient(to right, #81638b, #7a6db2);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right,#701e31, #962841);
+    background: linear-gradient(to right, #81638b, #7a6db2);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 50px;
     /* Ajusta la altura del encabezado según tus necesidades */
@@ -168,7 +168,7 @@ header a {
 }
 
 .estilomodal {
-    background: linear-gradient(to right,#701e31, #962841);
+    background: linear-gradient(to right, #81638b, #71cdcc);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -185,9 +185,9 @@ header a {
 footer {
     background: #009FFF;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #701e31, #962841);
+    background: -webkit-linear-gradient(to right, #81638b, #7a6db2);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #701e31, #962841);
+    background: linear-gradient(to right, #81638b, #7a6db2);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #ececec;
     text-align: center;
@@ -212,7 +212,7 @@ h5.bi {
     padding: 10px;
     margin: 10px auto;
     border-radius: 10px;
-    border: 1px solid rgba(227, 20, 20, 0.934);
+    border: 1px solid rgb(132, 158, 208);
     font-size: 14px;
     /* Tamaño de fuente más pequeño */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -225,7 +225,7 @@ h5.bi {
     padding: 0;
     background-color: #ffffff;
     /* Fondo blanco */
-    border: 1px solid rgba(180, 17, 17, 0.934);
+    border: 1px solid rgb(132, 158, 208);
     /* Borde alrededor de la lista */
     border-radius: 10px;
     /* Esquinas redondeadas */
@@ -254,9 +254,9 @@ h5.bi {
 #patient-list-container {
     background: #009FFF;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #d1cfe2, #ee9efa);
+    background: -webkit-linear-gradient(to right, #7a6db2, #81638b);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, rgb(234, 44, 77, 0.4), rgb(197, 125, 86));
+    background: linear-gradient(to right, rgb(129, 99, 139), rgb(122, 109, 178));
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     max-height: 500px;
     /* Altura máxima del div */
@@ -268,7 +268,7 @@ h5.bi {
     /* Color y grosor del borde */
     border-radius: 10px;
     /* Esquinas redondeadas */
-    box-shadow: 0 4px 8px rgba(158, 13, 13, 0.724);
+    box-shadow: 0 4px 8px rgb(122, 109, 178);
     /* Sombra suave */
     margin: 15px auto;
     /* Centrado horizontal */

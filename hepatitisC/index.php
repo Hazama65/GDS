@@ -70,7 +70,7 @@
         <!-- ======================== AQUI INICIA EL BUSCADOR ======================== -->
         <div class="row">
         <div class="col-4" width="100%" height="800px" style="margin-bottom: 100px; ">
-                <div id="patient-list-container" style="background-color:rgb(255, 228, 225,0.4)" >
+                <div id="patient-list-container" style="background-color:rgb(150, 40, 65)" >
 
                         <br>
                         <input type="text" id="search" placeholder="Buscar pacientes...">
@@ -127,6 +127,7 @@
     <script src="js/script.js"></script>
     <script src="js/scriptmodal.js"></script>
     <script src="js/visualizacion.js"></script>
+
 
     <script type="module">
         import { mainForm } from "./js/insert.js";

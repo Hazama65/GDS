@@ -54,25 +54,25 @@
                     </div>
 
                     <div class="col-md-6">
-                        <strong style="font-size: 12px;">CURP</strong>
-                        <input id="curp" name="curp" type="text" class="control form-control" value="" style="font-size: 12px;">
-                    </div>
-
-                    <div class="col-md-3">
                         <strong style="font-size: 12px; ">Fecha de Nacimiento</strong>
-                        <input id="fecha" name="fecha" type="date" value="" onblur="curp2date();" class="control form-control" style="font-size: 12px;" readonly>
+                        <input id="fecha" name="fecha" type="date" value="" class="control form-control" style="font-size: 12px;">
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <strong style="font-size: 12px;">Edad</strong>
-                        <input id="edad" name="edad" type="text" class="control form-control" value="" style="font-size: 12px;" readonly>
+                        <input id="edad" name="edad" type="text" class="control form-control" value="" style="font-size: 12px;">
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <strong style="font-size: 12px;">Sexo</strong>
-                        <input type="text" class="control form-control" id="sexo" onclick="curp2date();" name="sexo" style="font-size: 12px;" readonly>
+                        <select name="sexo" id="sexo" class="form-select" style="font-size: 12px;">
+                            <option value="Seleccione">Seleccione</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                            <option value="Otro">Otro</option>
+                        </select>
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <strong style="font-size: 12px;">Cama</strong>
                         <input type="number" class="control form-control" id="cama" name="cama" style="font-size: 12px;">
                     </div>
@@ -951,7 +951,7 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="container" id="caidas_tipo" style="display:none;" >
+                                                <div class="container" id="caidas_tipo" style="display:none;">
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <strong style="font-size: 12px;">Tipo de Caída</strong>
@@ -986,7 +986,7 @@
 
                                                 <!-- Recursos/gestión de la organización -->
 
-                                                <div class="col-md-6" id="Gestion_recursos" style="display:none;">
+                                                <div class="col-md-12" id="Gestion_recursos" style="display:none;">
                                                     <strong style="font-size: 12px;">Recursos/Gestión de la Organización</strong>
                                                     <select name="Recursos_Gestion" id="Recursos_Gestion" class="form-select" style="font-size: 12px;">
                                                         <option value="Seleccione">Seleccione</option>
@@ -1270,11 +1270,11 @@
                 </div>
 
 
-    </legend>
-    </fieldset>
+            </legend>
+        </fieldset>
 
 
-    <!-- 
+        <!-- 
             <div class="col-md-6">
                 <strong style="font-size: 12px;">Seguimiento</strong>
                 <input id="Seguimiento_seg" name="Seguimiento_seg" type="text" class="control form-control" value="" style="font-size: 12px;">
@@ -1283,8 +1283,8 @@
            -->
 
 
-    <div class="form-header">
-        <h4 class="form-title" style="text-align: left;
+        <div class="form-header">
+            <h4 class="form-title" style="text-align: left;
                             border-radius: 10px;
                             background-color: rgb(198, 79, 113);
                             color: aliceblue;
@@ -1292,129 +1292,129 @@
                             font-size: 13px;
                             text-align: center;">Evitabilidad</h4>
 
-    </div>
+        </div>
 
 
-    <fieldset>
-        <legend>
-            <div class="container">
+        <fieldset>
+            <legend>
+                <div class="container">
 
-                <div class="row">
+                    <div class="row">
 
-                    <div class="col-md-12">
-                        <strong style="font-size: 12px;">Era Evitable</strong>
-                        <select id="Evitabilidad" name="Evitabilidad" class="form-select" style="font-size: 12px;">
-                            <option value="Seleccione">Seleccione</option>
-                            <option value="Si">Si</option>
-                            <option value="No">No</option>
-                        </select>
+                        <div class="col-md-12">
+                            <strong style="font-size: 12px;">Era Evitable</strong>
+                            <select id="Evitabilidad" name="Evitabilidad" class="form-select" style="font-size: 12px;">
+                                <option value="Seleccione">Seleccione</option>
+                                <option value="Si">Si</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+
+
+                        <div class="container">
+                            <strong style="font-size: 12px;">Factores del Incidente</strong> <br>
+
+                            <fieldset>
+                                <legend>
+
+                                    <div class="row"> <!-- DIV DE ROW DEL FACTOR DE RIESGO-->
+
+                                        <div class="col-md-4">
+                                            <input type="checkbox" name="CaracteristicasPaciente" id="CaracteristicasPaciente" value="Relacionados Con Las Características Del Paciente." style="font-size:12px;">
+                                            <label for="CaracteristicasPaciente" style="font-size:12px;">Relacionados Con Las Características Del Paciente</label>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <input type="checkbox" name="IndividualesEquipo" id="IndividualesEquipo" value="Individuales Asociadas Con Los Integrantes Del Equipo." style="font-size: 12px;">
+                                            <label for="IndividualesEquipo" style="font-size: 12px;">Individuales Asociadas Con Los Integrantes Del Equipo</label>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <input type="checkbox" name="TrabajoEquipo" id="TrabajoEquipo" value="Relacionados Con El Trabajo En Equipo." style="font-size: 12px;">
+                                            <label for="TrabajoEquipo" style="font-size: 12px;">Relacionados Con El Trabajo En Equipo</label>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <input type="checkbox" name="AmbienteTrabajo" id="AmbienteTrabajo" value="Relacionados Con El Ambiente De Trabajo Y El Entorno." style="font-size: 12px;">
+                                            <label for="AmbienteTrabajo" style="font-size: 12px;">Relacionados Con El Ambiente De Trabajo Y El Entorno</label>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <input type="checkbox" name="OrganizacionalesEstablecimiento" id="OrganizacionalesEstablecimiento" value="Organizacionales Del Establecimiento De Atención Médica." style="font-size: 12px;">
+                                            <label for="OrganizacionalesEstablecimiento" style="font-size: 12px;">Organizacionales Del Establecimiento De Atención Médica</label>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <input type="checkbox" name="InstitucionalesExternos" id="InstitucionalesExternos" value="Institucionales O Del Ambiente Externo." style="font-size: 12px;">
+                                            <label for="InstitucionalesExternos" style="font-size: 12px;">Institucionales O Del Ambiente Externo</label>
+                                        </div>
+
+
+                                        <div class="col-md-4">
+                                            <input type="checkbox" name="Otro" id="Otro" value="Otro" style="font-size: 12px;">
+                                            <label for="Otro" style="font-size: 12px;">Otro</label>
+                                        </div>
+
+
+                                        <div class="col-md-8">
+                                            <input type="checkbox" name="AplicacionIndicaciones" id="AplicacionIndicaciones" value="Relacionados Con La Aplicación De Las Indicaciones, Protocolos, Manuales, Lineamientos Y Guías De Práctica Clínica." style="font-size: 12px;">
+                                            <label for="AplicacionIndicaciones" style="font-size: 12px;">Relacionados Con La Aplicación De Las Indicaciones, Protocolos, Manuales, Lineamientos Y Guías De Práctica Clínica</label>
+                                        </div>
+
+                                    </div>
+                                </legend>
+                            </fieldset>
+                        </div>
+
                     </div>
-
-
-                    <div class="container">
-                        <strong style="font-size: 12px;">Factores del Incidente</strong> <br>
-
-                        <fieldset>
-                            <legend>
-
-                                <div class="row"> <!-- DIV DE ROW DEL FACTOR DE RIESGO-->
-
-                                    <div class="col-md-4">
-                                        <input type="checkbox" name="CaracteristicasPaciente" id="CaracteristicasPaciente" value="Relacionados Con Las Características Del Paciente." style="font-size:12px;">
-                                        <label for="CaracteristicasPaciente" style="font-size:12px;">Relacionados Con Las Características Del Paciente</label>
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <input type="checkbox" name="IndividualesEquipo" id="IndividualesEquipo" value="Individuales Asociadas Con Los Integrantes Del Equipo." style="font-size: 12px;">
-                                        <label for="IndividualesEquipo" style="font-size: 12px;">Individuales Asociadas Con Los Integrantes Del Equipo</label>
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <input type="checkbox" name="TrabajoEquipo" id="TrabajoEquipo" value="Relacionados Con El Trabajo En Equipo." style="font-size: 12px;">
-                                        <label for="TrabajoEquipo" style="font-size: 12px;">Relacionados Con El Trabajo En Equipo</label>
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <input type="checkbox" name="AmbienteTrabajo" id="AmbienteTrabajo" value="Relacionados Con El Ambiente De Trabajo Y El Entorno." style="font-size: 12px;">
-                                        <label for="AmbienteTrabajo" style="font-size: 12px;">Relacionados Con El Ambiente De Trabajo Y El Entorno</label>
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <input type="checkbox" name="OrganizacionalesEstablecimiento" id="OrganizacionalesEstablecimiento" value="Organizacionales Del Establecimiento De Atención Médica." style="font-size: 12px;">
-                                        <label for="OrganizacionalesEstablecimiento" style="font-size: 12px;">Organizacionales Del Establecimiento De Atención Médica</label>
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <input type="checkbox" name="InstitucionalesExternos" id="InstitucionalesExternos" value="Institucionales O Del Ambiente Externo." style="font-size: 12px;">
-                                        <label for="InstitucionalesExternos" style="font-size: 12px;">Institucionales O Del Ambiente Externo</label>
-                                    </div>
-
-
-                                    <div class="col-md-4">
-                                        <input type="checkbox" name="Otro" id="Otro" value="Otro" style="font-size: 12px;">
-                                        <label for="Otro" style="font-size: 12px;">Otro</label>
-                                    </div>
-
-
-                                    <div class="col-md-8">
-                                        <input type="checkbox" name="AplicacionIndicaciones" id="AplicacionIndicaciones" value="Relacionados Con La Aplicación De Las Indicaciones, Protocolos, Manuales, Lineamientos Y Guías De Práctica Clínica." style="font-size: 12px;">
-                                        <label for="AplicacionIndicaciones" style="font-size: 12px;">Relacionados Con La Aplicación De Las Indicaciones, Protocolos, Manuales, Lineamientos Y Guías De Práctica Clínica</label>
-                                    </div>
-
-                                </div>
-                            </legend>
-                        </fieldset>
-                    </div>
-
                 </div>
-            </div>
-        </legend>
-    </fieldset>
+            </legend>
+        </fieldset>
 
 
 
 
-    <div class="form-header">
-        <h4 class="form-title" style="text-align: left;
+        <div class="form-header">
+            <h4 class="form-title" style="text-align: left;
                                         border-radius: 10px;
                                         background-color: rgb(198, 79, 113);
                                         color: aliceblue;
                                         margin-top:13px;
                                         font-size: 13px;
                                         text-align: center;">Registro</h4>
-    </div>
+        </div>
 
-    <fieldset>
-        <legend>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <strong style="font-size: 12px;">SREA</strong>
-                        <input id="SREA_seg" name="SREA_seg" type="number" class="control form-control" value="" style="font-size: 12px;">
-                    </div>
+        <fieldset>
+            <legend>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <strong style="font-size: 12px;">SREA</strong>
+                            <input id="SREA_seg" name="SREA_seg" type="number" class="control form-control" value="" style="font-size: 12px;">
+                        </div>
 
-                    <div class="col-md-12">
-                        <strong style="font-size: 12px;">Estatus</strong>
-                        <select id="estatus" name="estatus" class="form-select" style="font-size: 12px;">
-                            <option value="Seleccione">Seleccione</option>
-                            <option value="Solo Detectado">Solo Detectado</option>
-                            <option value="No hay respuesta">No hay respuesta</option>
-                            <option value="Respuesta">Respuesta</option>
-                            <option value="Seguimiento">Seguimiento</option>
-                            <option value="Cerrado Caso">Cerrado Caso</option>
-                        </select>
+                        <div class="col-md-12">
+                            <strong style="font-size: 12px;">Estatus</strong>
+                            <select id="estatus" name="estatus" class="form-select" style="font-size: 12px;">
+                                <option value="Seleccione">Seleccione</option>
+                                <option value="Solo Detectado">Solo Detectado</option>
+                                <option value="No hay respuesta">No hay respuesta</option>
+                                <option value="Respuesta">Respuesta</option>
+                                <option value="Seguimiento">Seguimiento</option>
+                                <option value="Cerrado Caso">Cerrado Caso</option>
+                            </select>
+                        </div>
+
                     </div>
-                    
                 </div>
-            </div>
-        </legend>
-    </fieldset>
+            </legend>
+        </fieldset>
 
     </div><br>
 
     <div style="display: flex; justify-content: flex-end; align-items: center;">
         <button type="submit" class="btn btn-primary" style="font-size: 14px; padding: 6px 14px;">Editar</button>
-    </div><br> 
+    </div><br>
 
     </div>
 
