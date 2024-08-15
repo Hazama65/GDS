@@ -1,5 +1,7 @@
 <?php
-require ('php/controllers/table.controller.php');
+    require ('php/controllers/table_desabasto.controller.php');
+// require ('php/controllers/table_search_desabasto.controller.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -43,66 +45,6 @@ require ('php/controllers/table.controller.php');
     <br>
 
     <!-- ESTE ES EL BLOQUE DE LOS BOTONES-->
-    <div class="container mt-4">
-        <div class="row">
-            <!-- Formulario de subida de archivo -->
-            <div class="col-md-6">
-                <div class="card mb-4">
-                    <div class="card-header">
-                        <h5 class="card-title">Subir Archivo de Excel</h5>
-                    </div>
-                    <div class="card-body">
-                        <form action="php/controllers/upload.controller.php" method="post" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <label for="file">Selecciona un archivo de Excel:</label>
-                                <input type="file" name="file" id="file" class="form-control-file" accept=".xlsx, .xls"
-                                    required>
-                            </div>
-                            <br>
-                            <button type="submit" class="btn btn-primary">Subir Archivo</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Botón para ver el historial de archivos -->
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="card-title">Historial de Archivos</h5>
-                    </div>
-                    <div class="card-body text-center">
-                        <button type="button" class="btn btn-success" data-toggle="modal"
-                            data-target="#historyModal">Ver
-                            Historial de Archivos</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal para el historial de archivos -->
-    <div class="modal fade" id="historyModal" tabindex="-1" role="dialog" aria-labelledby="historyModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="historyModalLabel">Historial de Archivos</h5>
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <ul id="fileList" class="list-group">
-                        <!-- Aquí se mostrarán los archivos -->
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
 
     <div class="container buscador" style="width: 50%">
         <div class="row" style="color: white;">
@@ -180,11 +122,7 @@ require ('php/controllers/table.controller.php');
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="https://cdn.datatables.net/2.1.3/js/dataTables.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/historial_modal.js"></script>
-    <script src="js/table.js"></script>
-    <script type="module" src="js/success.js"></script>
+    <script src="js/table_desabasto.js"></script>
 
 
 

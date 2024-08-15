@@ -1,7 +1,5 @@
 <?php
-require ('php/controllers/count_table.controller.php');
-include ("modal/registromedicamento.php");
-
+require('php/controllers/count_table.controller.php');
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +26,17 @@ include ("modal/registromedicamento.php");
 
     <!-- Estilos CSS personalizados -->
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .table-cg{
+            --bs-table-bg: #dda0dd;
+        }
+        .table-sandi{
+            --bs-table-bg: #98ff98;
+        }
+        .table-desabasto{
+            --bs-table-bg: #ffb6c1;
+        }
+    </style>
     <title>Nivel de Abasto</title>
 </head>
 
@@ -58,23 +67,7 @@ include ("modal/registromedicamento.php");
                         <legend>
                             <div class="row">
                                 <div class="col-md-1"></div>
-                                <button type="button" class="btn btn-circular" data-bs-toggle="modal"
-                                    data-bs-target="#registromedicamento">
-                                    <i class="bi bi-capsule"> </i>Registro Farmaco
-                                </button>
-                            </div>
-                        </legend>
-                    </fieldset>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="container">
-                    <fieldset class="fieldset-botones">
-                        <legend>
-                            <div class="row">
-                                <div class="col-md-1"></div>
-                                <button type="button" class="btn btn-circular"
-                                    onclick="location.href='table.php';">
+                                <button type="button" class="btn btn-circular" onclick="location.href='table.php';">
                                     Actualización de abasto
                                 </button>
                             </div>
@@ -82,10 +75,14 @@ include ("modal/registromedicamento.php");
                     </fieldset>
                 </div>
             </div>
+            <div class="col-md-10 d-flex justify-content-end">
+                <button style="margin-top: 45px;height: 40px;" id="download-pdf" class="btn btn-primary">Descargar PDF</button>
+            </div>
         </div>
     </div>
 
-    <div class="container mt-4" style="margin-bottom: 20px">
+
+    <div id="pdf-container" class="container mt-4" style="margin-bottom: 100px">
         <table class="table table-bordered">
             <thead>
                 <tr class="table-warning">
@@ -94,7 +91,6 @@ include ("modal/registromedicamento.php");
                     <th>Concepto</th>
                     <th>C/existencia</th>
                     <th>% de abasto</th>
-                    <th>OBSERVACION</th>
                 </tr>
             </thead>
             <tbody>
@@ -104,13 +100,11 @@ include ("modal/registromedicamento.php");
                     <td>Claves en catalogo HRAEI</td>
                     <td></td>
                     <td></td>
-                    <td></td>
                 </tr>
                 <!-- Fila 2 -->
                 <tr>
                     <td><?php echo $count_hraei_no_utilizado ?></td>
                     <td>Claves HRAEI sin utilizar</td>
-                    <td></td>
                     <td></td>
                     <td></td>
                 </tr>
@@ -120,29 +114,25 @@ include ("modal/registromedicamento.php");
                     <td>CLAVES ACTIVAS HRAEI</td>
                     <td><?php echo $count_hraei_existencia ?></td>
                     <td><?php echo $count_hraei_abasto . '%' ?></td>
-                    <td></td>
                 </tr>
                 <!-- Fila 4 -->
-                <tr>
+                <tr class="table-cg">
                     <td><?php echo $count_gc ?></td>
                     <td>Claves GC</td>
                     <td><?php echo $count_gc_existencia ?></td>
                     <td><?php echo $count_gc_abasto . '%' ?></td>
-                    <td></td>
                 </tr>
                 <!-- Fila 5 -->
-                <tr>
+                <tr class="table-sandi">
                     <td><?php echo $count_sadmi ?></td>
                     <td>Claves SADMI</td>
                     <td><?php echo $count_sadmi_existencia ?></td>
                     <td><?php echo $count_sadmi_abasto . '%' ?></td>
-                    <td></td>
                 </tr>
                 <!-- Fila 6 -->
                 <tr class="table-danger">
                     <td><?php echo $claves_total ?></td>
                     <td>CLAVES TOTAL DE CATALOGO</td>
-                    <td></td>
                     <td></td>
                     <td></td>
                 </tr>
@@ -152,7 +142,6 @@ include ("modal/registromedicamento.php");
                     <td>CLAVES CON EXISTENCIA</td>
                     <td></td>
                     <td></td>
-                    <td></td>
                 </tr>
                 <!-- Fila 8 -->
                 <tr class="table-info">
@@ -160,29 +149,25 @@ include ("modal/registromedicamento.php");
                     <td>NIVEL DE ABASTO</td>
                     <td></td>
                     <td></td>
-                    <td></td>
                 </tr>
                 <!-- Fila 9 -->
-                <tr>
-                    <td><?php echo $claves_desavasto ?></td>
-                    <td>CLAVES EN DESABASTO</td>
-                    <td></td>
+                <tr class="table-desabasto">
+                    <td><?php echo $claves_desabasto ?></td>
+                    <td><a href="desabasto.php">CLAVES EN DESABASTO</a></td>
                     <td></td>
                     <td></td>
                 </tr>
                 <!-- Fila 10 -->
                 <tr>
                     <td><?php echo $count_criticas ?></td>
-                    <td>Claves "CRITICAS"</td>
-                    <td></td>
+                    <td><a href="criticas.php">Claves 'CRITICAS'</a></td>
                     <td></td>
                     <td></td>
                 </tr>
                 <!-- Fila 11 -->
                 <tr>
-                    <td></td>
+                    <td><?php echo $count_existencia_mes ?></td>
                     <td>Claves con menos de 30 dias de inventario</td>
-                    <td></td>
                     <td></td>
                     <td></td>
                 </tr>
@@ -204,8 +189,8 @@ include ("modal/registromedicamento.php");
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="https://cdn.datatables.net/2.1.3/js/dataTables.js"></script>
-    <script src="js/scriptmodal.js"></script>
-    <script src="js/scripteditar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="js/download_table.js"></script>
 
 
 
