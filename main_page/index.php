@@ -105,6 +105,12 @@
                 <br>
                 <a href="rehabilitacion.php" class="btn btn-success">Rehabilitación</a>
             </div>
+
+            <div class="card">
+                <img src="" alt="Imagen 6">
+                <br>
+                <a href="cisfa.php" class="btn btn-success">CISFA</a>
+            </div>
             
         </div>
     </div>

@@ -1,4 +1,15 @@
 <?php
+session_start();
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+
+// Verificar si el usuario ha iniciado sesión y si tiene el sistema correcto
+if (!isset($_SESSION['valid_user']) || $_SESSION['system_type'] !== 'medicamentos') {
+    // El usuario no ha iniciado sesión o no tiene permiso para este sistema
+    header('Location: ../login/index.php');
+    exit;
+}
+$username = $_SESSION['valid_user'];
 require('php/controllers/count_table.controller.php');
 ?>
 
@@ -62,18 +73,22 @@ require('php/controllers/count_table.controller.php');
     <div class="container">
         <div class="row">
             <div class="col-md-2">
-                <div class="container">
-                    <fieldset class="fieldset-botones">
-                        <legend>
-                            <div class="row">
-                                <div class="col-md-1"></div>
-                                <button type="button" class="btn btn-circular" onclick="location.href='table.php';">
-                                    Actualización de abasto
-                                </button>
-                            </div>
-                        </legend>
-                    </fieldset>
-                </div>
+                <?php if ($username == 'abasto1'): ?>
+                    <div class="container">
+                        <fieldset class="fieldset-botones">
+                            <legend>
+                                <div class="row">
+                                    <div class="col-md-1"></div>
+                                    <button type="button" class="btn btn-circular" onclick="location.href='table.php';">
+                                        Actualización de abasto
+                                    </button>
+                                </div>
+                            </legend>
+                        </fieldset>
+                    </div>
+                <?php else: ?>
+
+                <?php endif; ?>
             </div>
             <div class="col-md-10 d-flex justify-content-end">
                 <button style="margin-top: 45px;height: 40px;" id="download-pdf" class="btn btn-primary">Descargar PDF</button>
@@ -191,6 +206,16 @@ require('php/controllers/count_table.controller.php');
     <script src="https://cdn.datatables.net/2.1.3/js/dataTables.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
     <script src="js/download_table.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cerrarSesionButton = document.getElementById('cerrar-sesion-button');
+
+            cerrarSesionButton.addEventListener('click', function () {
+                // Redirige al usuario a la página de cierre de sesión
+                window.location.href = 'php/destroysession.php';
+            });
+        });
+    </script>
 
 
 

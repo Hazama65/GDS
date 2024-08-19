@@ -50,7 +50,8 @@ const validateLogin = async (formData) => {
             'ar': '../artritis/index.php',
             'sca': '../sindrome_coronario/index.php',
             'rehabilitacion_censo': '../rehabilitacion/index.php',
-            'estadistica_rehab': '../estadistica_rehabi/index.php'
+            'estadistica_rehab': '../estadistica_rehabi/index.php',
+            'medicamentos': '../medicamentos/index.php'
         };
 
         if (redirectPaths[typeToken]) {
