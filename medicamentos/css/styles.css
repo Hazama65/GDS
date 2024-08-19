@@ -374,3 +374,9 @@ h5.bi {
     align-items: center; /* Centra verticalmente los elementos */
     gap: 1px; /* Espacio entre los elementos */
 }
+
+.buscador{
+    padding: 20px;
+    background-color: #203852;
+    border-radius: 5px;
+}
