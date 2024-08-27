@@ -16,6 +16,7 @@ try {
 }
 
 $success = false; // Variable para controlar el éxito de la operación
+$error_message = "Ocurrió un error desconocido."; // Mensaje de error por defecto
 
 // Verifica si se ha subido un archivo
 if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
@@ -53,6 +54,9 @@ if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
                 $stmt = $pdo->prepare("DELETE FROM tabla_medicamentos");
                 $stmt->execute();
 
+                $stmt = $pdo->prepare("ALTER TABLE tabla_medicamentos AUTO_INCREMENT = 1");
+                $stmt->execute();
+
                 foreach ($worksheet->getRowIterator() as $row) {
                     $cellIterator = $row->getCellIterator();
                     $cellIterator->setIterateOnlyExistingCells(false);
@@ -63,20 +67,20 @@ if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
                     }
 
                     if (count($data) === 7) {
-                        $clave = $data[0];
-                        $descripcion = $data[1];
-                        $existencia = $data[2];
+                        $clave = !empty($data[0]) ? $data[0] : '';
+                        $descripcion = !empty($data[1]) ? $data[1] : '';
+                        $existencia = !empty($data[2]) ? $data[2] : '0';
                         $cpm = !empty($data[3]) ? $data[3] : '0';
                         $meses_existencia = ($cpm != 0) ? round($existencia / $cpm) : 0;                        
                         $observaciones = !empty($data[5]) ? $data[5] : '';
-                        $status = $data[6];
-
+                        $status = !empty($data[6]) ? $data[6] : '';
+                    
                         // Inserta un nuevo registro con los valores de $data
                         $stmt = $pdo->prepare("INSERT INTO tabla_medicamentos 
                             (clave, descripcion, existencia, cpm, meses_existencia, observaciones, status) 
                             VALUES 
                             (:clave, :descripcion, :existencia, :cpm, :meses_existencia, :observaciones, :status)");
-
+                    
                         $stmt->execute(
                             [
                                 'clave' => $clave,
@@ -88,9 +92,12 @@ if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
                                 'status' => $status
                             ]
                         );
+                    
+                        // Elimina las filas donde la clave esté vacía
+                        $deleteStmt = $pdo->prepare("DELETE FROM tabla_medicamentos WHERE clave = ''");
+                        $deleteStmt->execute();
                     }
                 }
-
 
                 // Genera el timestamp (fecha y hora actual)
                 $timestamp = date('Y-m-d_H-i-s');
@@ -101,25 +108,41 @@ if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
                 $uploadFilePath = $uploadDir . $newFileName;
 
                 // Mueve el archivo a la carpeta de destino
-                rename($tempFilePath, $uploadFilePath);
-                $success = true; // La operación fue exitosa
+                try {
+                    if (!rename($tempFilePath, $uploadFilePath)) {
+                        throw new Exception("Error al mover el archivo a la carpeta de destino.");
+                    }
+                    $success = true; // La operación fue exitosa
+                } catch (Exception $e) {
+                    $error_message = "Error al mover el archivo: " . $e->getMessage();
+                    throw new Exception($error_message);
+                }
             }
 
         } catch (Exception $e) {
             // Maneja cualquier excepción que ocurra durante el procesamiento
-            echo "Error: " . $e->getMessage();
+            $error_message = "Error: " . $e->getMessage();
 
             // Elimina el archivo temporal si ocurre un error
             if (file_exists($tempFilePath)) {
                 unlink($tempFilePath);
             }
         }
+    } else {
+        $error_message = "Error al mover el archivo subido a la carpeta temporal.";
     }
+} else {
+    $error_message = "Error en la subida del archivo: " . $_FILES['file']['error'];
+}
+
+// Verifica si el mensaje de error está vacío antes de redirigir
+if (empty($error_message)) {
+    $error_message = "Ocurrió un error desconocido.";
 }
 
 if ($success) {
     header('Location: ../../table.php?status=success');
 } else {
-    header('Location: ../../table.php?status=error');
+    header('Location: ../../table.php?status=error&message=' . urlencode($error_message));
 }
 exit;

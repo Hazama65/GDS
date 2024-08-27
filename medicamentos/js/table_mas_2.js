@@ -6,7 +6,7 @@ $(document).ready(function () {
         "ordering": true,
         "info": true,
         "autoWidth": false,
-        "responsive": true,
+        // "responsive": true,
         "language": {
             "lengthMenu": "Mostrar _MENU_ registros por página",
             "zeroRecords": "No se encontraron registros",
@@ -49,14 +49,14 @@ $(document).ready(function () {
             }
 
             // Supongamos que la columna de existencia es la tercera columna (índice 2)
-            let existencia = row.find('td').eq(2);
+            let existencia = row.find('td').eq(4);
             let existencia_text = existencia.text().trim();
             let existencia_numb = parseFloat(existencia_text);
 
             if (existencia_numb === 0) {
                 existencia.css('background-color', '#ffb6c1');
-            } else if (existencia_numb >= 1) {
-                existencia.css('background-color', '#90ee90');
+            } else if (existencia_numb > 1) {
+                existencia.css('background-color', '#98ff98');
             } else if (existencia_numb < 0) {
                 existencia.css('background-color', '#87cefa');
             }
@@ -82,7 +82,7 @@ $(document).ready(function () {
         };
 
         $.ajax({
-            url: 'php/controllers/table_search.controller.php',
+            url: 'php/controllers/table_search_mas_2.controller.php',
             method: 'POST',
             data: filtros,
             dataType: 'json',

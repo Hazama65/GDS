@@ -73,18 +73,47 @@ const calculaIMC = () => {
     const tallaInput = document.getElementById('talla');
     const pesoInput = document.getElementById('peso');
     const imcInput = document.getElementById('imc');
+    const descripcionInput = document.getElementById('imcdescripcion');
+
 
     const talla = parseFloat(tallaInput.value.replace(',', '.'));
     const peso = parseFloat(pesoInput.value);
+    const imc = peso / (talla * talla);
+    const descripcion = obtenerDescripcionIMC(imc);
 
     if (talla && peso) {
-        const imc = peso / (talla * talla);
 
         imcInput.value = imc.toFixed(2);
+
+        descripcionInput.value = descripcion;
     } else {
         imcInput.value = '';
+        descripcionInput.value = '';
+
     }
+    
+
 }
+
+function obtenerDescripcionIMC(imc) {
+    if (imc < 18.5) {
+    return 'Bajo peso';
+    } else if (imc >= 18.5 && imc < 25) {
+    return 'Peso normal';
+    } else if (imc >= 25 && imc < 30) {
+    return 'Sobrepeso';
+    } else if (imc >= 30 && imc < 35) {
+    return 'Obesidad grado I';
+    } else if (imc >= 35 && imc < 40) {
+    return 'Obesidad grado II';
+    } else {
+    return 'Obesidad grado III';
+    }
+    }
+
+
+
+
 
 const resultado_sledai = () => {
     let switches = [
@@ -119,6 +148,7 @@ const resultado_sledai = () => {
 
     const actualizarResultado = () => {
         suma_sledai.value = resultadoActual;
+        cat_sledai(resultadoActual)
     };
 
     switches.forEach(switchElement => {
@@ -135,7 +165,72 @@ const resultado_sledai = () => {
             actualizarResultado();
         });
     });
+
+
+    function cat_sledai(sledai) {
+        let catego_sledai = document.getElementById('Categoria_sledai');
+
+        if (sledai >= 0 && sledai <= 2) {
+            catego_sledai.value = 'Sin Actividad';
+        }else if (sledai >= 3 && sledai <= 4) {
+            catego_sledai.value = 'Leve';
+        }else if (sledai >= 5 && sledai <= 7) {
+            catego_sledai.value = 'Moderado';
+        }else if (sledai >= 8) {
+            catego_sledai.value = 'Severo';
+        }else{
+            catego_sledai.value = '';
+        }
+
+
+
+    }
 };
+
+
+function mostrarOcultarGrosor() {
+    var valorSeleccionado = document.getElementById("doppler").value;
+    var campoGrosor = document.getElementById("campoGrosor");
+
+    if (valorSeleccionado === "Si") {
+        campoGrosor.style.display = "block";  // Mostrar el campo de grosor
+    } else {
+        campoGrosor.style.display = "none";   // Ocultar el campo de grosor
+    }
+}
+
+function mostrarGradoERC() {
+    var checkboxERC = document.getElementById("ERC");
+    var gradoERCContainer = document.getElementById("grado_ERC_container");
+
+    if (checkboxERC.checked) {
+        gradoERCContainer.style.display = "block";
+    } else {
+        gradoERCContainer.style.display = "none";
+    }
+}
+
+function mostrarMeno() {
+    var checkboxmeno = document.getElementById("menopausia");
+    var menoContainer = document.getElementById("menopausia_grad_container");
+
+    if (checkboxmeno.checked) {
+        menoContainer.style.display = "block";
+    } else {
+        menoContainer.style.display = "none";
+    }
+}
+
+function mostrarCausaDefuncion() {
+    var seleccion = document.getElementById("defuncion").value;
+    var causaDefuncionContainer = document.getElementById("causa_defuncion_container");
+
+    if (seleccion === "Si") {
+        causaDefuncionContainer.style.display = "block";
+    } else {
+        causaDefuncionContainer.style.display = "none";
+    }
+}
 
 // const visualizacion_tratamiento = () => {
 //     const Metrotexate = document.getElementById('Metrotexate');

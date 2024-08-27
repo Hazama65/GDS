@@ -23,9 +23,22 @@
                                 <input class="form-control" type="text" name="curp" id="curp" maxlength="18"
                                     minlength="18" onblur="curp2date()">
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-8">
                                 <strong>Nombre Completo</strong>
                                 <input class="form-control" type="text" name="nombre_completo" id="nombre_completo">
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <strong>Fecha de nacimiento</strong>
+                                <input class="form-control" type="date" name="birth_date" id="birth_date" readonly style="background-color: rgb(216, 214, 214);">
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Edad</strong>
+                                <input class="form-control" type="text" name="edad" id="edad" readonly style="background-color: rgb(216, 214, 214);">
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Sexo</strong>
+                                <input class="form-control" type="text" name="sex" id="sex" readonly style="background-color: rgb(216, 214, 214);">
                             </div>
                             <div class="col-md-4">
                                 <strong>Escolaridad</strong>
@@ -40,29 +53,36 @@
                                     <option value="Sin estudios">Sin estudios</option>
                                 </select>
                             </div>
+                            
                             <div class="col-md-4">
-                                <strong>Fecha de nacimiento</strong>
-                                <input class="form-control" type="date" name="birth_date" id="birth_date">
+                                <strong>Año de Diagnóstico</strong>
+                                <input class="form-control" type="text" pattern="\d{4}" maxlength="4" name="dx" id="dx" required>
+                                <small class="form-text text-muted">Ejemplo: 2024</small>
                             </div>
-                            <div class="col-md-4">
-                                <strong>Edad</strong>
-                                <input class="form-control" type="text" name="edad" id="edad">
-                            </div>
-                            <div class="col-md-4">
-                                <strong>Sexo</strong>
-                                <input class="form-control" type="text" name="sex" id="sex">
-                            </div>
+                            
                             <div class="col-md-4">
                                 <strong>Talla</strong>
-                                <input class="form-control" type="text" name="talla" id="talla">
+                                <input class="form-control" type="text" name="talla" id="talla" placeholder="Ej. 1.50" required>
+                                
                             </div>
+                            
                             <div class="col-md-4">
                                 <strong>Peso</strong>
                                 <input class="form-control" type="number" name="peso" id="peso" onblur="calculaIMC();">
                             </div>
                             <div class="col-md-4">
                                 <strong>IMC</strong>
-                                <input class="form-control" type="text" name="imc" id="imc" readonly>
+                                <input class="form-control" type="text" name="imc" id="imc" readonly style="background-color: rgb(216, 214, 214);">
+                            </div>
+
+                            <div class="col-md-4">
+                                <strong style="font-size: 14px;">Resultado IMC</strong>
+                                <input type="text" class="form-control" id="imcdescripcion" name="imcdescripcion" style="font-size: 13px;" readonly>
+                            </div>
+
+                            <div class="col-md-4">
+                                <strong>Tensión Arterial</strong>
+                                <input class="form-control" type="text" name="ta" id="ta">
                             </div>
                         </div> <!-- div row-->
 
@@ -87,6 +107,9 @@
                                     <div class="checkmark"></div>
                                 </label>
                             </div>
+
+                        
+
                             <div class="col-md-3">
                                 <span>Artritis Reumatoide</span>
                                 <label class="container">
@@ -101,6 +124,23 @@
                                     <div class="checkmark"></div>
                                 </label>
                             </div>
+
+                            <div class="col-md-3">
+                                <span>Enfermedad Mental</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Enfermedad_Mental" id="Enfermedad_Mental">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
+                            <div class="col-md-3">
+                                <span>Fibrilación Auricular</span>
+                                <label class="container">
+                                    <input type="checkbox" name="FA" id="FA">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
                             <div class="col-md-3">
                                 <span>Hipertensión Arterial</span>
                                 <label class="container">
@@ -108,6 +148,15 @@
                                     <div class="checkmark"></div>
                                 </label>
                             </div>
+
+                            <div class="col-md-3">
+                                <span>Migraña</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Migraña" id="Migraña">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
                             <div class="col-md-3">
                                 <span>Obesidad</span>
                                 <label class="container">
@@ -115,6 +164,16 @@
                                     <div class="checkmark"></div>
                                 </label>
                             </div>
+
+                            <div class="col-md-3">
+                                <span>SICA</span>
+                                <label class="container">
+                                    <input type="checkbox" name="SICA" id="SICA">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
+
                             <div class="col-md-3">
                                 <span>Sx Antifosfolípidos</span>
                                 <label class="container">
@@ -123,8 +182,109 @@
                                 </label>
                             </div>
 
+                            <div class="col-md-3">
+                                <span>Tabaquismo</span>
+                                <label class="container">
+                                    <input type="checkbox" name="tabaquismo" id="tabaquismo">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
+                            <div class="col-md-3">
+                                <span>Tratamiento antipsicotico</span>
+                                <label class="container">
+                                    <input type="checkbox" name="antipsicotico" id="antipsicotico">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
+                            <div class="col-md-3">
+                                <span>Tx disfunción erectil</span>
+                                <label class="container">
+                                    <input type="checkbox" name="erectil" id="erectil">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
+                            <div class="col-md-3">
+                                <span>S.O.P</span>
+                                <label class="container">
+                                    <input type="checkbox" name="sop" id="sop">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
+                            <div class="col-md-3">
+                                <span>Hipotiroidismo</span>
+                                <label class="container">
+                                    <input type="checkbox" name="hipotiroidismo" id="hipotiroidismo">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
+                            <div class="col-md-3">
+                                <span>Pre-Diabetes</span>
+                                <label class="container">
+                                    <input type="checkbox" name="prediabetes" id="prediabetes">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
+                            <div class="col-md-3">
+                                <span>Dislipidemia</span>
+                                <label class="container">
+                                    <input type="checkbox" name="dislipidemia" id="dislipidemia">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
+                            <div class="col-md-3">
+                                <span>Menopausia</span>
+                                <label class="container">
+                                    <input type="checkbox" name="menopausia" id="menopausia" onchange="mostrarMeno()">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
+                            <div class="col-md-3" id="menopausia_grad_container" style="display: none;">
+                                <strong style="font-size: 12px;">Etapa Menopausia</strong>
+                                <select class="form-control" name="menopausia_grad" id="menopausia_grad">
+                                    <option value="">Seleccione...</option>
+                                    <option value="Temprano">Temprano</option>
+                                    <option value="Tardio">Tardio</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-3">
+                                <span>Enfermedad Renal Crónica</span>
+                                <label class="container">
+                                    <input type="checkbox" name="ERC" id="ERC" onchange="mostrarGradoERC()">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            
+                            <div class="col-md-3" id="grado_ERC_container" style="display: none;">
+                                <strong style="font-size: 12px;">Grado ERC</strong>
+                                <select class="form-control" name="grado_ERC" id="grado_ERC">
+                                    <option value="">Seleccione...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+
 
                         </div>
+
+
+
+                       
+
+
+
+
 
                         <div class="form-header">
                             <h5 class="form-title">Laboratorios</h5>
@@ -195,6 +355,24 @@
                             <div class="col-md-3">
                                 <strong>Actividad Cardiaca</strong>
                                 <select class="form-control" name="ACA" id="ACA">
+                                    <option value="">Seleccione...</option>
+                                    <option value="Si">Si</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-3">
+                                <strong>Actividad Serosa</strong>
+                                <select class="form-control" name="ASA" id="ASA">
+                                    <option value="">Seleccione...</option>
+                                    <option value="Si">Si</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-3">
+                                <strong>Actividad Constitucional</strong>
+                                <select class="form-control" name="ACONS" id="ACONS">
                                     <option value="">Seleccione...</option>
                                     <option value="Si">Si</option>
                                     <option value="No">No</option>
@@ -444,7 +622,16 @@
                                 <input class="form-control" type="number" name="resultados_sledai"
                                     id="resultados_sledai" readonly>
                             </div>
+
+                            <div class="col-md-12">
+                                <strong>Categoria SLEDAI</strong>
+                                <input class="form-control" type="text" name="Categoria_sledai"
+                                    id="Categoria_sledai" readonly>
+                            </div>
+
                         </div>
+
+
 
                         <div class="form-header">
                             <h6 class="form-subtitle">Laboratorios</h6>
@@ -508,7 +695,167 @@
                                 </select>
                             </div>
 
+
+                            <div class="col-md-3">
+                                <strong>Urea</strong>
+                                <input class="form-control" type="number" name="Urea" id="Urea">
+                            </div>
+
+                            <div class="col-md-3">
+                                <strong>Colesterol</strong>
+                                <input class="form-control" type="number" name="Colesterol" id="Colesterol">
+                            </div>
+
+                            <div class="col-md-3">
+                                <strong>Trigliceridos</strong>
+                                <input class="form-control" type="number" name="Trigliceridos" id="Trigliceridos">
+                            </div>
+
+                            <div class="col-md-3">
+                                <strong>HDL</strong>
+                                <input class="form-control" type="number" name="HDL" id="HDL">
+                            </div>
+
+                            <div class="col-md-3">
+                                <strong>LDL</strong>
+                                <input class="form-control" type="number" name="LDL" id="LDL">
+                            </div>
+
+                            <div class="col-md-3">
+                                <strong>Relacion Colesteros HDL</strong>
+                                <input class="form-control" type="number" name="Colesteros_HDL" id="Colesteros_HDL">
+                            </div>
+
                         </div>
+
+                        <div class="form-header">
+                            <h6 class="form-subtitle">EGO</h6>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-4 center-items">
+                                <span>Hematuria</span>
+                                <label class="container">
+                                    <input type="checkbox" name="hematuria" id="hematuria">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
+                            <div class="col-md-4 center-items">
+                                <span>Cilindro</span>
+                                <label class="container">
+                                    <input type="checkbox" name="cilindro" id="cilindro">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
+                            <div class="col-md-4 center-items">
+                                <span>Piuria</span>
+                                <label class="container">
+                                    <input type="checkbox" name="piuria" id="piuria">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            
+                            
+                            
+                        </div>
+
+
+                        <div class="form-header">
+                            <h6 class="form-subtitle">USG Doppler Carotideo</h6>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <strong>USG Doppler Carotideo</strong>
+                                <select class="form-control" name="doppler" id="doppler" onchange="mostrarOcultarGrosor()">
+                                    <option value="">Seleccione...</option>
+                                    <option value="Si">Sí</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-12" id="campoGrosor" style="display: none;">
+                                <strong>Grosor capa intima media</strong>
+                                <input class="form-control" type="number" name="grosor" id="grosor">
+                            </div>
+                            
+                            <div class="col-md-12">
+                                <strong>USG Uso</strong>
+                                <select class="form-control" name="Uso" id="Uso">
+                                    <option value="">Seleccione...</option>
+                                    <option value="Derecha">Derecha</option>
+                                    <option value="Izquierda">Izquierda</option>
+                                </select>
+                            </div>
+                            
+                            
+                        </div>
+
+                        <div>
+
+                            <div class="form-header">
+                                <h6 class="form-subtitle">USG Carótida Derecha</h6>
+                            </div>
+    
+                            <div class="row">
+    
+                                <div class="col-md-12" id="campoGrosor">
+                                    <strong>Grosor</strong>
+                                    <input class="form-control" type="number" name="grosor_derecha" id="grosor_derecha">
+                                </div>
+    
+                                <div class="col-md-12" id="campoGrosor">
+                                    <strong>Clasificacion</strong>
+                                    <input class="form-control" type="number" name="clasificacion_derecha" id="clasificacion_derecha">
+                                </div>
+    
+                                <div class="col-md-12">
+                                    <strong>Placa Ateromatosa</strong>
+                                    <select class="form-control" name="placa_ateromatosa_derecha" id="placa_ateromatosa_derecha">
+                                        <option value="">Seleccione...</option>
+                                        <option value="Si">Sí</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </div>
+    
+                                
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="form-header">
+                                <h6 class="form-subtitle">USG Carótida Izquierda</h6>
+                            </div>
+    
+                            <div class="row">
+    
+                                <div class="col-md-12" id="campoGrosor">
+                                    <strong>Grosor</strong>
+                                    <input class="form-control" type="number" name="grosor_izquierda" id="grosor_izquierda">
+                                </div>
+    
+                                <div class="col-md-12" id="campoGrosor">
+                                    <strong>Clasificacion</strong>
+                                    <input class="form-control" type="number" name="clasificacion_izquierda" id="clasificacion_izquierda">
+                                </div>
+    
+                                <div class="col-md-12">
+                                    <strong>Placa Ateromatosa</strong>
+                                    <select class="form-control" name="placa_ateromatosa_izquierda" id="placa_ateromatosa_izquierda">
+                                        <option value="">Seleccione...</option>
+                                        <option value="Si">Sí</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+
 
                         <div class="form-header">
                             <h6 class="form-subtitle">Anticuerpos</h6>
@@ -598,7 +945,7 @@
                                 <strong>Biopsia Renal</strong>
                                 <select class="form-control" name="BR" id="BR">
                                     <option value="">Seleccione..</option>
-                                    <option value="Si">Si</option>
+                                    <option value="Si">Sí</option>
                                     <option value="No">No</option>
                                 </select>
                             </div>
@@ -731,6 +1078,7 @@
                                     <div class="checkmark"></div>
                                 </label>
                             </div>
+
                             <div class="col-md-4">
                                 <strong></strong>
                                 <strong>Apego a Tratamiento</strong>
@@ -741,6 +1089,95 @@
                                     <option value="Sin Apego">Sin Apego</option>
                                 </select>
                             </div>
+
+
+                            <div class="col-md-2">
+                                <span>Leflunomide</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Leflunomide" id="Leflunomide">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Dosis Semanal</strong>
+                                <input class="form-control" type="number" name="ds_Leflunomide" id="ds_Leflunomide">
+                            </div>
+
+                            <div class="col-md-2">
+                                <span>Glucocorticoide</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Glucocorticoide" id="Glucocorticoide">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Dosis Semanal</strong>
+                                <input class="form-control" type="number" name="ds_Glucocorticoide" id="ds_Glucocorticoide">
+                            </div>
+
+                            <div class="col-md-2">
+                                <span>Aspirina</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Aspirina" id="Aspirina">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Dosis Semanal</strong>
+                                <input class="form-control" type="number" name="ds_Aspirina" id="ds_Aspirina">
+                            </div>
+
+                            <div class="col-md-2">
+                                <span>Estatinas</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Estatinas" id="Estatinas">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Dosis Semanal</strong>
+                                <input class="form-control" type="number" name="ds_Estatinas" id="ds_Estatinas">
+                            </div>
+
+
+                            <div class="col-md-2">
+                                <span>Antihipertensivo</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Antihipertensivo" id="Antihipertensivo">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Dosis Semanal</strong>
+                                <input class="form-control" type="number" name="ds_Antihipertensivo" id="ds_Antihipertensivo">
+                            </div>
+
+                            <div class="col-md-2">
+                                <span>Antidiabético O.</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Antidiabetico" id="Antidiabetico">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Dosis Semanal</strong>
+                                <input class="form-control" type="number" name="ds_Antidiabetico" id="ds_Antidiabetico">
+                            </div>
+
+                            <div class="col-md-2">
+                                <span>Insulinas</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Insulinas" id="Insulinas">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Dosis Semanal</strong>
+                                <input class="form-control" type="number" name="ds_Insulinas" id="ds_Insulinas">
+                            </div>
+
+
+
                         </div>
 
                         <div class="form-header">
@@ -749,13 +1186,36 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <strong>Defuncion</strong>
-                                <select class="form-control" name="defuncion" id="defuncion">
+                                <select class="form-control" name="defuncion" id="defuncion" onchange="mostrarCausaDefuncion()">
                                     <option value="">Seleccione...</option>
                                     <option value="Si">Si</option>
                                     <option value="No">No</option>
                                 </select>
                             </div>
+                        
+                            <div class="col-md-12" id="causa_defuncion_container" style="display: none;">
+                                <strong>Causa Defunción</strong>
+                                <input class="form-control" type="text" name="causa_defuncion" id="causa_defuncion">
+                            </div>
                         </div>
+
+                    </div>
+
+
+
+                        <div class="form-header">
+                            <h5 class="form-title">NOTAS</h5>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12" class="input-group">
+                                <strong>Notas</strong>
+                                <textarea class="form-control" aria-label="With textarea" name="nota" id="nota"></textarea>
+                            </div>
+
+                        </div>
+
+
 
 
                     </div> <!-- DIV ROW LINEA 13 -->

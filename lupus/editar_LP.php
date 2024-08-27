@@ -70,11 +70,27 @@ include ('php/controllers/edit.controller.php');
                         <input class="form-control" type="text" name="curp" id="curp" maxlength="18" minlength="18"
                             onblur="curp2date()" value="<?php echo $curp; ?>">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-8">
                         <strong>Nombre Completo</strong>
                         <input class="form-control" type="text" name="nombre_completo" id="nombre_completo"
                             value="<?php echo $nombre_completo; ?>">
                     </div>
+
+                    <div class="col-md-4">
+                        <strong>Fecha de nacimiento</strong>
+                        <input class="form-control" type="date" name="birth_date" id="birth_date" value="<?php echo $fecha_nacimiento; ?>">
+                    </div>
+                    <div class="col-md-4">
+                        <strong>Edad</strong>
+                        <input class="form-control" type="text" name="edad" id="edad" value="<?php echo $edad; ?>">
+                    </div>
+                    <div class="col-md-4">
+                        <strong>Sexo</strong>
+                        <input class="form-control" type="text" name="sex" id="sex" value="<?php echo $sexo; ?>">
+                    </div>
+
+                    
+
                     <div class="col-md-4">
                         <strong>Escolaridad</strong>
                         <select class="form-control" name="escolaridad" id="escolaridad">
@@ -88,18 +104,13 @@ include ('php/controllers/edit.controller.php');
                             <option value="Sin estudios"<?php if ($escolaridad == 'Sin estudios') echo 'selected'; ?>>Sin estudios</option>
                         </select>
                     </div>
+
                     <div class="col-md-4">
-                        <strong>Fecha de nacimiento</strong>
-                        <input class="form-control" type="date" name="birth_date" id="birth_date" value="<?php echo $fecha_nacimiento; ?>">
-                    </div>
-                    <div class="col-md-4">
-                        <strong>Edad</strong>
-                        <input class="form-control" type="text" name="edad" id="edad" value="<?php echo $edad; ?>">
-                    </div>
-                    <div class="col-md-4">
-                        <strong>Sexo</strong>
-                        <input class="form-control" type="text" name="sex" id="sex" value="<?php echo $sexo; ?>">
-                    </div>
+                                <strong>Año de Diagnóstico</strong>
+                                <input class="form-control" type="text" pattern="\d{4}" maxlength="4" name="dx" id="dx" required>
+                                <small class="form-text text-muted">Ejemplo: 2024</small>
+                            </div>
+                    
                     <div class="col-md-4">
                         <strong>Talla</strong>
                         <input class="form-control" type="text" name="talla" id="talla" value="<?php echo $talla; ?>">
@@ -112,6 +123,11 @@ include ('php/controllers/edit.controller.php');
                         <strong>IMC</strong>
                         <input class="form-control" type="text" name="imc" id="imc" readonly value="<?php echo $imc; ?>">
                     </div>
+
+                    <div class="col-md-4">
+                                <strong>Tensión Arterial</strong>
+                                <input class="form-control" type="text" name="ta" id="ta">
+                            </div>
                 </div> <!-- div row-->
 
                 <div class="form-header">
@@ -170,6 +186,91 @@ include ('php/controllers/edit.controller.php');
                             <div class="checkmark"></div>
                         </label>
                     </div>
+
+                    <div class="col-md-3">
+                                <span>Enfermedad Mental</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Enfermedad Mental" id="Enfermedad Mental">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
+                            <div class="col-md-3">
+                                <span>Fibrilación Auricular</span>
+                                <label class="container">
+                                    <input type="checkbox" name="FA" id="FA">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
+                            <div class="col-md-3">
+                                <span>Hipertensión Arterial</span>
+                                <label class="container">
+                                    <input type="checkbox" name="HA" id="HA">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
+                            <div class="col-md-3">
+                                <span>Migraña</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Migraña" id="Migraña">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
+
+                            <div class="col-md-3">
+                                <span>SICA</span>
+                                <label class="container">
+                                    <input type="checkbox" name="SICA" id="SICA">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
+                            <div class="col-md-3">
+                                <span>Tabaquismo</span>
+                                <label class="container">
+                                    <input type="checkbox" name="tabaquismo" id="tabaquismo">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
+                            <div class="col-md-3">
+                                <span>Tratamiento antipsicotico</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Tratamiento antipsicotico" id="Tratamiento antipsicotico">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
+                            <div class="col-md-3">
+                                <span>Tx disfunción erectil</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Tratamiento disfunción erectil" id="Tratamiento disfunción erectil">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+
+                            <div class="col-md-3">
+                                <span>Enfermedad Renal Crónica</span>
+                                <label class="container">
+                                    <input type="checkbox" name="ERC" id="ERC" onchange="mostrarGradoERC()">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            
+                            <div class="col-md-3" id="grado_ERC_container" style="display: none;">
+                                <strong style="font-size: 12px;">Grado ERC</strong>
+                                <select class="form-control" name="grado_ERC" id="grado_ERC">
+                                    <option value="">Seleccione...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
 
 
                 </div>
@@ -248,6 +349,26 @@ include ('php/controllers/edit.controller.php');
                             <option value="No"<?php if ($ACA == 'No') echo 'selected'; ?>>No</option>
                         </select>
                     </div>
+
+                    <div class="col-md-3">
+                                <strong>Actividad Serosa</strong>
+                                <select class="form-control" name="AS" id="AS">
+                                    <option value="">Seleccione...</option>
+                                    <option value="Si">Si</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-3">
+                                <strong>Actividad Constitucional</strong>
+                                <select class="form-control" name="ACONS" id="ACONS">
+                                    <option value="">Seleccione...</option>
+                                    <option value="Si">Si</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+
+                    
 
                 </div>
 
@@ -507,6 +628,26 @@ include ('php/controllers/edit.controller.php');
                     </div>
                 </div>
 
+
+                <div class="form-header">
+                            <h6 class="form-subtitle">QRISK</h6>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <strong><a href="https://www.qrisk.org/" target="_blank">QRISK</a></strong>
+                                <input class="form-control" type="number" name="QRISK" id="QRISK">
+                            </div>
+                            
+
+                            <div class="col-md-6">
+                                <strong>Compromiso Vascular</strong>
+                                <input class="form-control" type="number" name="compromiso_vascular" id="compromiso_vascular">
+                            </div>
+
+                        </div>
+
                 <div class="form-header">
                     <h6 class="form-subtitle">Laboratorios</h6>
                 </div>
@@ -569,7 +710,53 @@ include ('php/controllers/edit.controller.php');
                         </select>
                     </div>
 
+                    
+
+                    <div class="col-md-3">
+                                <strong>Urea</strong>
+                                <input class="form-control" type="number" name="Urea" id="Urea">
+                            </div>
+
+                            <div class="col-md-3">
+                                <strong>Colesterol</strong>
+                                <input class="form-control" type="number" name="Colesterol" id="Colesterol">
+                            </div>
+
+                            <div class="col-md-3">
+                                <strong>Trigliceridos</strong>
+                                <input class="form-control" type="number" name="Trigliceridos" id="Trigliceridos">
+                            </div>
+
+                            <div class="col-md-3">
+                                <strong>Reacción Colesteros HDL</strong>
+                                <input class="form-control" type="number" name="HDL" id="HDL">
+                            </div>
+
                 </div>
+
+                <div class="form-header">
+                            <h6 class="form-subtitle">USG Doppler Carotideo</h6>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <strong>USG Doppler Carotideo</strong>
+                                <select class="form-control" name="doppler" id="doppler" onchange="mostrarOcultarGrosor()">
+                                    <option value="">Seleccione...</option>
+                                    <option value="Si">Sí</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-12" id="campoGrosor" style="display: none;">
+                                <strong>Grosor capa intima media</strong>
+                                <input class="form-control" type="number" name="grosor" id="grosor">
+                            </div>
+                            
+                            
+                            
+                        </div>
 
                 <div class="form-header">
                     <h6 class="form-subtitle">Anticuerpos</h6>
@@ -802,6 +989,80 @@ include ('php/controllers/edit.controller.php');
                             <option value="Sin Apego"<?php if ($AT == 'Sin Apego') echo 'selected'; ?>>Sin Apego</option>
                         </select>
                     </div>
+
+                    <div class="col-md-2">
+                                <span>Leflunomide</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Leflunomide" id="Leflunomide">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Dosis Semanal</strong>
+                                <input class="form-control" type="number" name="ds_Leflunomide" id="ds_Leflunomide">
+                            </div>
+
+                            <div class="col-md-2">
+                                <span>Glucocorticoide</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Glucocorticoide" id="Glucocorticoide">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Dosis Semanal</strong>
+                                <input class="form-control" type="number" name="ds_Glucocorticoide" id="ds_Glucocorticoide">
+                            </div>
+
+                            <div class="col-md-2">
+                                <span>Aspirina</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Aspirina" id="Aspirina">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Dosis Semanal</strong>
+                                <input class="form-control" type="number" name="ds_Aspirina" id="ds_Aspirina">
+                            </div>
+
+                            <div class="col-md-2">
+                                <span>Estatinas</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Estatinas" id="Estatinas">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Dosis Semanal</strong>
+                                <input class="form-control" type="number" name="ds_Estatinas" id="ds_Estatinas">
+                            </div>
+
+
+                            <div class="col-md-2">
+                                <span>Antihipertensivo</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Antihipertensivo" id="Antihipertensivo">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Dosis Semanal</strong>
+                                <input class="form-control" type="number" name="ds_Antihipertensivo" id="ds_Antihipertensivo">
+                            </div>
+
+                            <div class="col-md-2">
+                                <span>Antidiabético</span>
+                                <label class="container">
+                                    <input type="checkbox" name="Antidiabetico" id="Antidiabetico   ">
+                                    <div class="checkmark"></div>
+                                </label>
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Dosis Semanal</strong>
+                                <input class="form-control" type="number" name="ds_Antidiabetico" id="ds_Antidiabetico">
+                            </div>
+
                 </div>
 
                 <div class="form-header">
@@ -810,13 +1071,30 @@ include ('php/controllers/edit.controller.php');
                 <div class="row">
                     <div class="col-md-12">
                         <strong>Defuncion</strong>
-                        <select class="form-control" name="defuncion" id="defuncion">
+                        <select class="form-control" name="defuncion" id="defuncion" >
                             <option value=""<?php if ($defuncion == '') echo 'selected'; ?>>Seleccione...</option>
                             <option value="Si"<?php if ($defuncion == 'Si') echo 'selected'; ?>>Si</option>
                             <option value="No"<?php if ($defuncion == 'No') echo 'selected'; ?>>No</option>
                         </select>
                     </div>
+
+                    <div class="col-md-12" id="causa_defuncion_container">
+                                <strong>Causa Defunción</strong>
+                                <input class="form-control" type="text" name="causa_defuncion" id="causa_defuncion">
+                            </div>
                 </div>
+
+                <div class="form-header">
+                            <h5 class="form-title">NOTAS</h5>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12" class="input-group">
+                                <strong>Notas</strong>
+                                <textarea class="form-control" aria-label="With textarea" name="nota" id="nota"></textarea>
+                            </div>
+
+                        </div>
 
 
             </div> <!-- DIV ROW LINEA 13 -->

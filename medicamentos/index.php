@@ -39,13 +39,19 @@ require('php/controllers/count_table.controller.php');
     <link rel="stylesheet" href="css/styles.css">
     <style>
         .table-cg{
-            --bs-table-bg: #dda0dd;
+            --bs-table-bg: #;
         }
         .table-sandi{
-            --bs-table-bg: #98ff98;
+            --bs-table-bg: #;
+        }
+        .table-mas-2{
+            --bs-table-bg: #31e831;
+        }
+        .table-menos-2{
+            --bs-table-bg: #edd118;
         }
         .table-desabasto{
-            --bs-table-bg: #ffb6c1;
+            --bs-table-bg: #b00922;
         }
     </style>
     <title>Nivel de Abasto</title>
@@ -100,7 +106,7 @@ require('php/controllers/count_table.controller.php');
     <div id="pdf-container" class="container mt-4" style="margin-bottom: 100px">
         <table class="table table-bordered">
             <thead>
-                <tr class="table-warning">
+                <tr class="table-secondary">
                     <!-- Encabezados de columna -->
                     <th>Cantidad</th>
                     <th>Concepto</th>
@@ -124,68 +130,82 @@ require('php/controllers/count_table.controller.php');
                     <td></td>
                 </tr>
                 <!-- Fila 3 -->
-                <tr class="table-warning">
+                <tr>
                     <td><?php echo $count_hraei_activo ?></td>
                     <td>CLAVES ACTIVAS HRAEI</td>
                     <td><?php echo $count_hraei_existencia ?></td>
                     <td><?php echo $count_hraei_abasto . '%' ?></td>
                 </tr>
                 <!-- Fila 4 -->
-                <tr class="table-cg">
+                <tr>
                     <td><?php echo $count_gc ?></td>
                     <td>Claves GC</td>
                     <td><?php echo $count_gc_existencia ?></td>
                     <td><?php echo $count_gc_abasto . '%' ?></td>
                 </tr>
                 <!-- Fila 5 -->
-                <tr class="table-sandi">
+                <tr>
                     <td><?php echo $count_sadmi ?></td>
                     <td>Claves SADMI</td>
                     <td><?php echo $count_sadmi_existencia ?></td>
                     <td><?php echo $count_sadmi_abasto . '%' ?></td>
                 </tr>
                 <!-- Fila 6 -->
-                <tr class="table-danger">
+                <tr>
                     <td><?php echo $claves_total ?></td>
                     <td>CLAVES TOTAL DE CATALOGO</td>
                     <td></td>
                     <td></td>
                 </tr>
                 <!-- Fila 7 -->
-                <tr class="table-success">
+                <tr>
                     <td><?php echo $claves_total_existencia ?></td>
                     <td>CLAVES CON EXISTENCIA</td>
                     <td></td>
                     <td></td>
                 </tr>
                 <!-- Fila 8 -->
-                <tr class="table-info">
+                <tr>
                     <td><?php echo $nivel_abasto . '%' ?></td>
                     <td>NIVEL DE ABASTO</td>
                     <td></td>
                     <td></td>
                 </tr>
                 <!-- Fila 9 -->
+                <tr class="table-mas-2">
+                    <td><?php echo $count_mas_2 ?></td>
+                    <td><a href="mas_2.php">CLAVES CON MAS 2 MESES DE EXISTENCIA</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <!-- Fila 10 -->
+                <tr class="table-menos-2">
+                    <td><?php echo $count_menos_2 ?></td>
+                    <td><a href="menos_2.php">CLAVES CON MENOS 2 MESES DE EXISTENCIA</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <!-- Fila 11 -->
                 <tr class="table-desabasto">
                     <td><?php echo $claves_desabasto ?></td>
                     <td><a href="desabasto.php">CLAVES EN DESABASTO</a></td>
                     <td></td>
                     <td></td>
                 </tr>
-                <!-- Fila 10 -->
-                <tr>
+                <!-- Fila 12 -->
+                <tr class="table-info">
                     <td><?php echo $count_criticas ?></td>
                     <td><a href="criticas.php">Claves 'CRITICAS'</a></td>
                     <td></td>
                     <td></td>
                 </tr>
-                <!-- Fila 11 -->
-                <tr>
+                <!-- Fila 13 -->
+                <!-- <tr>
                     <td><?php echo $count_existencia_mes ?></td>
                     <td>Claves con menos de 30 dias de inventario</td>
                     <td></td>
                     <td></td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
     </div>
