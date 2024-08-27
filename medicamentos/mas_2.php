@@ -9,11 +9,11 @@ if (!isset($_SESSION['valid_user']) || $_SESSION['system_type'] !== 'medicamento
     header('Location: ../login/index.php');
     exit;
 }
-    require ('php/controllers/table_desabasto.controller.php');
+    require ('php/controllers/table_mas_2.controller.php');
 
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 
 <head>
@@ -142,7 +142,7 @@ if (!isset($_SESSION['valid_user']) || $_SESSION['system_type'] !== 'medicamento
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
     <script src="https://cdn.datatables.net/buttons/3.1.1/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/3.1.1/js/buttons.print.min.js"></script>
-    <script src="js/table_desabasto.js"></script>
+    <script src="js/table_mas_2.js"></script>
 
 
 

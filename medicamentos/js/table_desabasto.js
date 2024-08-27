@@ -20,6 +20,11 @@ $(document).ready(function () {
                 "next": "Siguiente",
                 "previous": "Anterior"
             }
+        },
+        "layout": {
+            topStart: {
+                buttons: ['pageLength', 'excel', 'pdf', 'print']
+            }
         }
     });
 
