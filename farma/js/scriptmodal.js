@@ -15,13 +15,22 @@ campos.forEach(function (campo) {
         });
     }
 });
+
+document.getElementById("curp").addEventListener("input", function () {
+    curp2date();
+});
+
 function curp2date() {
     // Obtener el valor del CURP ingresado
     var curp = document.getElementById("curp").value;
 
     // Verificar que el CURP tenga la longitud mínima necesaria para evitar errores
     if (curp.length < 18) {
-        alert("El CURP ingresado es demasiado corto.");
+        // Puedes limpiar los campos si el CURP es demasiado corto
+        document.getElementById("fecha").value = "";
+        document.getElementById("edad").value = "";
+        document.getElementById("sexo").value = "";
+        document.getElementById("mujer").style.display = "none";
         return;
     }
 
@@ -74,7 +83,7 @@ function curp2date() {
 
 
 
-document.getElementById("informante").addEventListener("change", function() {
+document.getElementById("informante").addEventListener("change", function () {
     let informanteSeleccionado = this.value;
 
     // Obtener los divs que deben mostrarse u ocultarse
@@ -98,7 +107,7 @@ document.getElementById("informante").addEventListener("change", function() {
 // Función para restablecer los valores de los campos dentro de un div
 function resetFields(container) {
     var inputs = container.querySelectorAll("input, select, textarea");
-    inputs.forEach(function(input) {
+    inputs.forEach(function (input) {
         if (input.type === "checkbox" || input.type === "radio") {
             input.checked = false;
         } else if (input.tagName.toLowerCase() === "select") {
@@ -108,3 +117,14 @@ function resetFields(container) {
         }
     });
 }
+
+
+window.onload = function () {
+    var today = new Date();
+    var yyyy = today.getFullYear();
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); // Los meses son 0-indexados en JavaScript
+    var dd = String(today.getDate()).padStart(2, '0');
+
+    var fechaActual = yyyy + '-' + mm + '-' + dd;
+    document.getElementById("fecha_reporte").value = fechaActual;
+};

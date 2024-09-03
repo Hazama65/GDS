@@ -1,6 +1,6 @@
 <?php
 
-include("modal/registropaciente.php");
+include("modal/registrotecno.php");
 
 ?>
 
@@ -24,13 +24,13 @@ include("modal/registropaciente.php");
 
     <!-- Estilos CSS personalizados -->
     <link rel="stylesheet" href="css/styles.css">
-    <title>Errores de Medicación</title>
+    <title>Tecnovigilancia</title>
 </head>
 
 <body>
 
     <header>
-        <h5 class="bi bi-clipboard-check-fill" style="color:rgb(243, 243, 243); margin-top: 10px;"> Errores de Medicación</h5>
+        <h5 class="bi bi-eye-fill" style="color:rgb(243, 243, 243); margin-top: 10px;">Tecnovigilancia</h5>
         <br>
         <div style="padding: 20px; text-align: right;">
             <button type="button" class="btn btn-outline-light" id="cerrar-sesion-button" title="Cerrar sesión">
@@ -41,48 +41,40 @@ include("modal/registropaciente.php");
     <br>
 
     <!-- ESTE ES EL BLOQUE DE LOS BOTONES-->
-
-
     <div style="padding: 20px;" class="btn-group" role="group" aria-label="Basic outlined example">
 
-        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#Eventos">
-            <i class="bi bi-chat-square-text-fill"> </i>Registro Paciente
+        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#tecnovigilancia">
+        <i class="bi bi-eye-fill"></i>Registro Paciente
         </button>
 
-    </div> <!-- cierre del <div class="btn-group" role="group" aria-label="Basic outlined example">-->
-    <br><br>
+    </div>
 
-    <!-- ======================== AQUI INICIA EL BUSCADOR ======================== -->
     <div class="container-fluid">
 
         <div class="col-4" width="100%" height="400px" style="margin-bottom: 100px; ">
-            <div id="patient-list-container" style="background-color:rgb(42, 157, 143,0.8)">
+            <div id="patient-list-container" style="background-color:rgb(76, 90, 116)">
                 <br>
                 <input type="text" id="search" placeholder="Buscar ...">
                 <ul id="patient-list">
 
-                <li class="patient-item bi bi-person-badge"  data-id-paciente="10">REYES ANSELMO LEONARDO
-                
-                    <a href="editar.php"><button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .60rem;"> Editar </button></a>
-                    <a href="seguimiento.php"><button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .60rem;"> Seguimiento </button></a>
-                </li>
+                    <li class="patient-item bi bi-person-badge" data-id-paciente="10">REYES ANSELMO LEONARDO
+
+                        <a href="editar.php"><button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .60rem;"> Editar </button></a>
+                        <a href="seguimiento.php"><button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .60rem;"> Seguimiento </button></a>
+                    </li>
                 </ul>
 
             </div> <!-- cierre del <div id="patient-list-container">-->
         </div> <!-- cierre del <div class="col-3">-->
-
-        <!-- ======================== AQUI FINALIZA EL BUSCADOR ======================== -->
-
-        <!-- ======================== AQUI INICIA LA TABLA ======================== -->
-
         <div class="col-7">
-            <div class="container ">
+            <div class="container">
                 <!-- Tu código existente -->
 
                 <!-- Agrega un div para contener el select dinámico -->
                 <div id="Seguimiento_index" style="display: none;">
                     <select name="paciente_seleccionado" class="col-6 form-select custom-select" id="paciente_seleccionado" style="background-color: #6c757d; color: white; margin-bottom:10px">
                     </select>
+
                 </div>
 
                 <iframe id="consulta" src="" frameborder="0" width="100%" height="800px" style="margin-bottom: 100px;"></iframe>
@@ -99,18 +91,21 @@ include("modal/registropaciente.php");
 
         <!-- ======================== AQUI FINALIZA LA TABLA ======================== -->
 
-
-        <div class="col-1">
-        </div>
     </div>
 
-    <!-- Contenedor para la pantalla de carga -->
-    <div id="loading-overlay" style="display: none;" class="loading">
-        <svg width="128px" height="96px">
-            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="back"></polyline>
-            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="front"></polyline>
-        </svg>
+
     </div>
+
+    <!-- ======================== AQUI FINALIZA EL BUSCADOR ======================== -->
+
+    <!-- ======================== AQUI INICIA LA TABLA ======================== -->
+
+
+
+
+
+    <!-- ======================== AQUI FINALIZA LA TABLA ======================== -->
+
 
 
 
@@ -125,15 +120,10 @@ include("modal/registropaciente.php");
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <!-- <script src="js/visualizacion.js"></script> -->
+    <script src="js/visualizacion.js"></script>
     <script src="js/scriptmodal.js"></script>
-    <!-- <script src="js/scripteditar.js"></script> -->
-    <!-- <script src="js/visualizacion_seg.js"></script> -->
-
-    <script type="module">
-        import { mainForm } from './js/insert.js';
-        mainForm();
-    </script>
+    <script src="js/scripteditar.js"></script>
+    <script src="js/visualizacion_seg.js"></script>
 
 
 

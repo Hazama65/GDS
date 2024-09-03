@@ -2,9 +2,9 @@
 .custom-header {
     background: #530256;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #cb0000, #9d0707);
+    background: -webkit-linear-gradient(to right, #203852, #849ed0);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #cb0000, #9d0707);
+    background: linear-gradient(to right, #203852, #849ed0);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 40px;
     /* Ajusta la altura del encabezado según tus necesidades */
@@ -29,9 +29,9 @@
 .custom-footer {
     background: #530256;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #cb0000, #9d0707);
+    background: -webkit-linear-gradient(to right, #203852, #849ed0);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #cb0000, #9d0707);
+    background: linear-gradient(to right, #203852, #849ed0);
     height: 60px;
     display: flex;
     flex-direction: column;
@@ -141,9 +141,9 @@
 header {
     background: #008077;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #cb0000, #9d0707);
+    background: -webkit-linear-gradient(to right, #203852, #849ed0);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #cb0000, #9d0707);
+    background: linear-gradient(to right, #203852, #849ed0);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 50px;
     /* Ajusta la altura del encabezado según tus necesidades */
@@ -168,7 +168,7 @@ header a {
 }
 
 .estilomodal {
-    background: linear-gradient(to right, #cb0000, #71cdcc);
+    background: linear-gradient(to right, #203852, #71cdcc);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -185,9 +185,9 @@ header a {
 footer {
     background: #009FFF;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #cb0000, #9d0707);
+    background: -webkit-linear-gradient(to right, #203852, #849ed0);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #cb0000, #9d0707);
+    background: linear-gradient(to right, #203852, #849ed0);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #ececec;
     text-align: center;
@@ -206,92 +206,6 @@ h5.bi {
     /* Ajusta la separación entre el ícono y el texto */
 }
 
-/* Estilo del campo de búsqueda */
-#search {
-    width: 90%;
-    padding: 10px;
-    margin: 10px auto;
-    border-radius: 10px;
-    border: 1px solid rgba(20, 227, 220, 0.934);
-    font-size: 14px;
-    /* Tamaño de fuente más pequeño */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Sombra suave */
-}
-
-/* Estilo de la lista de pacientes */
-#patient-list {
-    list-style: none;
-    padding: 0;
-    background-color: #ffffff;
-    /* Fondo blanco */
-    border: 1px solid rgba(20, 227, 189, 0.934);
-    /* Borde alrededor de la lista */
-    border-radius: 10px;
-    /* Esquinas redondeadas */
-    margin: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Sombra suave */
-}
-
-/* Estilo de los elementos de la lista de pacientes */
-#patient-list li {
-    margin: 0;
-    /* Elimina el margen entre elementos */
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-    /* Borde inferior para separar pacientes */
-    font-size: 14px;
-    /* Tamaño de fuente más pequeño */
-}
-
-/* Elimina el borde inferior del último paciente */
-#patient-list li:last-child {
-    border-bottom: none;
-}
-
-/* Estilo del contenedor de la lista de pacientes */
-#patient-list-container {
-    background: #009FFF;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #d1cfe2, #ee9efa);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, rgb(234, 44, 77, 0.4), rgb(234, 44, 77));
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    max-height: 500px;
-    /* Altura máxima del div */
-    overflow-y: auto;
-    /* Agrega scroll vertical si el contenido excede la altura máxima */
-    padding: 10px;
-    /* Espaciado opcional */
-    border: 1px solid #ddd;
-    /* Color y grosor del borde */
-    border-radius: 10px;
-    /* Esquinas redondeadas */
-    box-shadow: 0 4px 8px rgba(158, 13, 13, 0.724);
-    /* Sombra suave */
-    margin: 15px auto;
-    /* Centrado horizontal */
-    width: 90%;
-    /* Ancho del contenedor */
-}
-
-.patient-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 0;
-}
-
-.patient-name {
-    flex-grow: 1; /* Esto permitirá que el nombre ocupe el espacio disponible */
-    margin-right: 10px; /* Espacio entre el nombre y el botón */
-}
-
-.edit-btn {
-    text-align: right;
-}
-
 
 
 
@@ -305,6 +219,31 @@ h5.bi {
     /* Añade espaciado alrededor del contenido del encabezado */
 }
 
+
+
+.content {
+    width: 95%;
+    padding: 1em;
+    box-sizing: border-box;
+    float: left;
+}
+
+fieldset {
+    padding: 2em;
+    border-color: #d4d4d4;
+    border-style: solid;
+    border-width: 2px;
+    background: #fff;
+    border-radius: 10px;
+    /* Cambia este valor según tu preferencia */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Ajusta estos valores según tu preferencia */
+}
+
+
+.hidden {
+    display: none;    
+}
 
 
 
@@ -385,66 +324,6 @@ h5.bi {
 
 
 
-/* Estilos para checkboxes */
-input[type="checkbox"]+label {
-    color: rgb(98, 96, 96);
-    font-weight: bold;
-    line-height: 3em;
-    cursor: pointer;
-}
-
-input[type="checkbox"]:checked+label {
-    color: rgb(31, 31, 32);
-}
-
-input[type="checkbox"]+label:before {
-    content: "";
-    width: 12px;
-    height: 12px;
-    float: left;
-    margin: 0.5em 0.5em 0 0;
-    border: 2px solid #43464b;
-    background: #fff;
-}
-
-input[type="checkbox"]:checked+label:before {
-    border-color: #0fbf12;
-}
-
-input[type="checkbox"]:checked+label:after {
-    content: "";
-    width: 12px;
-    height: 6px;
-    border: 4px solid #0fbf12;
-    float: left;
-    margin-left: -1.95em;
-    border-right: 0;
-    border-top: 0;
-    margin-top: 1em;
-    border-radius: 100%;
-    transform: rotate(-55deg);
-}
-
-input[type="checkbox"] {
-    display: none;
-}
-
-input[type="checkbox"]:checked+label:before,
-input[type="radio"]:checked+label:before {
-    border-color: #0fbf12;
-}
-
-input[type="checkbox"]:checked:disabled+label,
-input[type="radio"]:checked:disabled+label {
-    background: #ccc;
-    color: #fff !important;
-}
-
-input[type="checkbox"]:checked:disabled+label:before,
-input[type="radio"]:checked:disabled+label:before {
-    border-color: #bdbdbd;
-}
-
 .content {
     width: 95%;
     padding: 1em;
@@ -452,18 +331,25 @@ input[type="radio"]:checked:disabled+label:before {
     float: left;
 }
 
-fieldset {
+.fieldset-botones {
+    padding: 1em;
+    border-color: #d4d4d4;
+    border-style: solid;
+    border-width: 5px;
+    background: #fff;
+    border-radius: 50px;
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.1);
+}
+
+.fieldset-otros {
     padding: 1em;
     border-color: #d4d4d4;
     border-style: solid;
     border-width: 1px;
     background: #fff;
     border-radius: 10px;
-    /* Cambia este valor según tu preferencia */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Ajusta estos valores según tu preferencia */
 }
-
 
 .hidden {
     display: none;    
@@ -483,4 +369,39 @@ fieldset {
         width: 95%;
         padding: 10px;
     }
+}
+
+
+
+.btn-circular {
+    width: 100px; /* Ajusta el tamaño según tu preferencia */
+    height: 39px; /* Debe ser igual al ancho para hacer el botón circular */
+    border-radius: 10px; /* Hace que el botón sea circular */
+    background-color: #0066ff; /* Color de fondo */
+    border: none; /* Elimina el borde */
+    color: white; /* Color del texto */
+    display: flex; /* Centra el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.2); /* Sombra para el botón */
+    transition: background-color 0.3s ease; /* Transición para el efecto hover */
+}
+
+.btn-circular:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
+    align-items: center; /* Centra verticalmente los elementos */
+    gap: 1px; /* Espacio entre los elementos */
+}
+
+.buscador{
+    padding: 20px;
+    background-color: #203852;
+    border-radius: 5px;
 }
