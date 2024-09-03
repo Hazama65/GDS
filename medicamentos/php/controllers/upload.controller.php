@@ -43,7 +43,8 @@ if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
                     $data[] = $cell->getValue();
                 }
 
-                if (count($data) !== 7) {
+                if (count($data) <= 6) {
+                    var_dump($data);
                     $valid = false;
                     throw new Exception("La fila " . $row->getRowIndex() . " contiene un número incorrecto de columnas: " . count($data));
                 }
@@ -66,38 +67,37 @@ if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
                         $data[] = $cell->getValue();
                     }
 
-                    if (count($data) === 7) {
-                        $clave = !empty($data[0]) ? $data[0] : '';
-                        $descripcion = !empty($data[1]) ? $data[1] : '';
-                        $existencia = !empty($data[2]) ? $data[2] : '0';
-                        $cpm = !empty($data[3]) ? $data[3] : '0';
-                        $meses_existencia = ($cpm != 0) ? round($existencia / $cpm) : 0;                        
-                        $observaciones = !empty($data[5]) ? $data[5] : '';
-                        $status = !empty($data[6]) ? $data[6] : '';
-                    
-                        // Inserta un nuevo registro con los valores de $data
-                        $stmt = $pdo->prepare("INSERT INTO tabla_medicamentos 
-                            (clave, descripcion, existencia, cpm, meses_existencia, observaciones, status) 
-                            VALUES 
-                            (:clave, :descripcion, :existencia, :cpm, :meses_existencia, :observaciones, :status)");
-                    
-                        $stmt->execute(
-                            [
-                                'clave' => $clave,
-                                'descripcion' => $descripcion,
-                                'existencia' => $existencia,
-                                'cpm' => $cpm,
-                                'meses_existencia' => $meses_existencia,
-                                'observaciones' => $observaciones,
-                                'status' => $status
-                            ]
-                        );
-                    
-                        // Elimina las filas donde la clave esté vacía
-                        $deleteStmt = $pdo->prepare("DELETE FROM tabla_medicamentos WHERE clave = ''");
-                        $deleteStmt->execute();
-                    }
+                    $clave = !empty($data[0]) ? $data[0] : '';
+                    $descripcion = !empty($data[1]) ? $data[1] : '';
+                    $existencia = !empty($data[2]) ? $data[2] : '0';
+                    $cpm = !empty($data[3]) ? $data[3] : '0';
+                    $meses_existencia = ($cpm != 0) ? round($existencia / $cpm) : 0;                        
+                    $observaciones = !empty($data[5]) ? $data[5] : '';
+                    $status = !empty($data[6]) ? $data[6] : '';
+                
+                    // Inserta un nuevo registro con los valores de $data
+                    $stmt = $pdo->prepare("INSERT INTO tabla_medicamentos 
+                        (clave, descripcion, existencia, cpm, meses_existencia, observaciones, status) 
+                        VALUES 
+                        (:clave, :descripcion, :existencia, :cpm, :meses_existencia, :observaciones, :status)");
+                
+                    $stmt->execute(
+                        [
+                            'clave' => $clave,
+                            'descripcion' => $descripcion,
+                            'existencia' => $existencia,
+                            'cpm' => $cpm,
+                            'meses_existencia' => $meses_existencia,
+                            'observaciones' => $observaciones,
+                            'status' => $status
+                        ]
+                    );
+                
+                    // Elimina las filas donde la clave esté vacía
+                    $deleteStmt = $pdo->prepare("DELETE FROM tabla_medicamentos WHERE clave = ''");
+                    $deleteStmt->execute();
                 }
+
 
                 // Genera el timestamp (fecha y hora actual)
                 $timestamp = date('Y-m-d_H-i-s');
