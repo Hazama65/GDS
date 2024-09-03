@@ -187,21 +187,9 @@ const resultado_sledai = () => {
     }
 };
 
-
-function mostrarOcultarGrosor() {
-    var valorSeleccionado = document.getElementById("doppler").value;
-    var campoGrosor = document.getElementById("campoGrosor");
-
-    if (valorSeleccionado === "Si") {
-        campoGrosor.style.display = "block";  // Mostrar el campo de grosor
-    } else {
-        campoGrosor.style.display = "none";   // Ocultar el campo de grosor
-    }
-}
-
 function mostrarGradoERC() {
-    var checkboxERC = document.getElementById("ERC");
-    var gradoERCContainer = document.getElementById("grado_ERC_container");
+    let checkboxERC = document.getElementById("ERC");
+    let gradoERCContainer = document.getElementById("grado_ERC_container");
 
     if (checkboxERC.checked) {
         gradoERCContainer.style.display = "block";
@@ -211,8 +199,8 @@ function mostrarGradoERC() {
 }
 
 function mostrarMeno() {
-    var checkboxmeno = document.getElementById("menopausia");
-    var menoContainer = document.getElementById("menopausia_grad_container");
+    let checkboxmeno = document.getElementById("menopausia");
+    let menoContainer = document.getElementById("menopausia_grad_container");
 
     if (checkboxmeno.checked) {
         menoContainer.style.display = "block";
@@ -222,13 +210,67 @@ function mostrarMeno() {
 }
 
 function mostrarCausaDefuncion() {
-    var seleccion = document.getElementById("defuncion").value;
-    var causaDefuncionContainer = document.getElementById("causa_defuncion_container");
+    let seleccion = document.getElementById("defuncion").value;
+    let causaDefuncionContainer = document.getElementById("causa_defuncion_container");
 
     if (seleccion === "Si") {
         causaDefuncionContainer.style.display = "block";
     } else {
         causaDefuncionContainer.style.display = "none";
+    }
+}
+
+function mostrarEgo() {
+    let ego_check = document.getElementById("ego_check");
+    let ego_container = document.getElementById("div_ego");
+
+    if (ego_check.checked) {
+        ego_container.style.display = "block";
+    } else {
+        ego_container.style.display = "none";
+    }
+}
+
+function mostrar_derecha() {
+    let Uso_derecha = document.getElementById("Uso_derecha");
+    let derecha_container = document.getElementById("derecha_div");
+
+    
+    if (Uso_derecha.checked) {
+        derecha_container.style.display = "block";
+        calculo_clasifcacion();
+    } else {
+        derecha_container.style.display = "none";
+    }
+}
+
+function mostrar_izquierda() {
+    let Uso_izquierda = document.getElementById("Uso_izquierda");
+    let izquierda_container = document.getElementById("izquierda_div");
+
+    if (Uso_izquierda.checked) {
+        izquierda_container.style.display = "block";
+    } else {
+        izquierda_container.style.display = "none";
+    }
+}
+
+
+function calculo_clasifcacion () {
+    let sexo = document.getElementById('sex').value;
+    let edad = document.getElementById('edad').value;
+
+    switch (sexo) {
+        case 'Hombre':
+            console.log(edad)
+            break;
+
+        case 'Mujer':
+
+            break;
+    
+        default:
+            break;
     }
 }
 

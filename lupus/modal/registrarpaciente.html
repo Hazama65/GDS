@@ -721,46 +721,57 @@
                                 <input class="form-control" type="number" name="LDL" id="LDL">
                             </div>
 
-                            <div class="col-md-3">
-                                <strong>Relacion Colesteros HDL</strong>
+                            <div class="col-md-5">
+                                <strong>Relacion Colestero HDL</strong>
                                 <input class="form-control" type="number" name="Colesteros_HDL" id="Colesteros_HDL">
                             </div>
 
-                        </div>
-
-                        <div class="form-header">
-                            <h6 class="form-subtitle">EGO</h6>
-                        </div>
-
-                        <div class="row">
-
                             <div class="col-md-4 center-items">
-                                <span>Hematuria</span>
+                                <span>EGO</span>
                                 <label class="container">
-                                    <input type="checkbox" name="hematuria" id="hematuria">
+                                    <input type="checkbox" name="ego_check" id="ego_check" onchange="mostrarEgo()">
                                     <div class="checkmark"></div>
                                 </label>
                             </div>
 
-                            <div class="col-md-4 center-items">
-                                <span>Cilindro</span>
-                                <label class="container">
-                                    <input type="checkbox" name="cilindro" id="cilindro">
-                                    <div class="checkmark"></div>
-                                </label>
+                        </div>
+
+                        <div id="div_ego" style="display: none;">
+                            <div class="form-header">
+                                <h6 class="form-subtitle">EGO</h6>
                             </div>
 
-                            <div class="col-md-4 center-items">
-                                <span>Piuria</span>
-                                <label class="container">
-                                    <input type="checkbox" name="piuria" id="piuria">
-                                    <div class="checkmark"></div>
-                                </label>
+                            <div class="row">
+    
+                                <div class="col-md-4 center-items">
+                                    <span>Hematuria</span>
+                                    <label class="container">
+                                        <input type="checkbox" name="hematuria_1" id="hematuria_1">
+                                        <div class="checkmark"></div>
+                                    </label>
+                                </div>
+    
+                                <div class="col-md-4 center-items">
+                                    <span>Cilindro</span>
+                                    <label class="container">
+                                        <input type="checkbox" name="cilindro_1" id="cilindro_1">
+                                        <div class="checkmark"></div>
+                                    </label>
+                                </div>
+    
+                                <div class="col-md-4 center-items">
+                                    <span>Piuria</span>
+                                    <label class="container">
+                                        <input type="checkbox" name="piuria_1" id="piuria_1">
+                                        <div class="checkmark"></div>
+                                    </label>
+                                </div>
+                                
+                                
+                                
                             </div>
-                            
-                            
-                            
                         </div>
+
 
 
                         <div class="form-header">
@@ -771,32 +782,39 @@
 
                             <div class="col-md-12">
                                 <strong>USG Doppler Carotideo</strong>
-                                <select class="form-control" name="doppler" id="doppler" onchange="mostrarOcultarGrosor()">
+                                <select class="form-control" name="doppler" id="doppler">
                                     <option value="">Seleccione...</option>
                                     <option value="Si">Sí</option>
                                     <option value="No">No</option>
                                 </select>
                             </div>
                             
-                            <div class="col-md-12" id="campoGrosor" style="display: none;">
-                                <strong>Grosor capa intima media</strong>
-                                <input class="form-control" type="number" name="grosor" id="grosor">
-                            </div>
-                            
                             <div class="col-md-12">
                                 <strong>USG Uso</strong>
-                                <select class="form-control" name="Uso" id="Uso">
-                                    <option value="">Seleccione...</option>
-                                    <option value="Derecha">Derecha</option>
-                                    <option value="Izquierda">Izquierda</option>
-                                </select>
+                                <div class="row">
+
+                                    <div class="col-md-2 center-items">
+                                        <span>Derecha</span>
+                                        <label class="container">
+                                            <input type="checkbox" name="Uso_derecha" id="Uso_derecha" onchange="mostrar_derecha()">
+                                            <div class="checkmark"></div>
+                                        </label>
+                                    </div>
+        
+                                    <div class="col-md-2 center-items">
+                                        <span>Izquierda</span>
+                                        <label class="container">
+                                            <input type="checkbox" name="Uso_izquierda" id="Uso_izquierda" onchange="mostrar_izquierda()">
+                                            <div class="checkmark"></div>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                             
                             
                         </div>
 
-                        <div>
-
+                        <div id="derecha_div" style="display: none;">
                             <div class="form-header">
                                 <h6 class="form-subtitle">USG Carótida Derecha</h6>
                             </div>
@@ -804,7 +822,7 @@
                             <div class="row">
     
                                 <div class="col-md-12" id="campoGrosor">
-                                    <strong>Grosor</strong>
+                                    <strong>Grosor de intima</strong>
                                     <input class="form-control" type="number" name="grosor_derecha" id="grosor_derecha">
                                 </div>
     
@@ -826,7 +844,7 @@
                             </div>
                         </div>
 
-                        <div>
+                        <div id="izquierda_div" style="display: none;">
                             <div class="form-header">
                                 <h6 class="form-subtitle">USG Carótida Izquierda</h6>
                             </div>
@@ -834,7 +852,7 @@
                             <div class="row">
     
                                 <div class="col-md-12" id="campoGrosor">
-                                    <strong>Grosor</strong>
+                                    <strong>Grosor de intima</strong>
                                     <input class="form-control" type="number" name="grosor_izquierda" id="grosor_izquierda">
                                 </div>
     

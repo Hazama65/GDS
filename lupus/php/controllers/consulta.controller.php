@@ -14,6 +14,7 @@
         JOIN act_lupica al ON dp.id_paciente = al.id_paciente
         JOIN sledai sl ON dp.id_paciente = sl.id_paciente
         JOIN laboratorio l ON dp.id_paciente = l.id_paciente
+        JOIN usg ug ON dp.id_paciente = ug.id_paciente        
         JOIN anticuerpos_renal_prono arp ON dp.id_paciente = arp.id_paciente
         JOIN tratamiento_defuncion td ON dp.id_paciente = td.id_paciente
         WHERE dp.id_paciente ='$id_paciente'";
@@ -32,6 +33,9 @@
                 $talla = $data['talla'];
                 $peso = $data['peso'];
                 $imc = $data['imc'];
+                $imcdescripcion = $data['imcdescripcion'];
+                $dx = $data['dx'];
+                $ta = $data['ta'];
                 $ninguno = $data['ninguno'];
                 $alcoholismo = $data['alcoholismo'];
                 $AR = $data['AR'];
@@ -39,6 +43,21 @@
                 $HA = $data['HA'];
                 $obesidad = $data['obesidad'];
                 $SA = $data['SA'];
+                $Enfermedad_Mental = $data['Enfermedad_Mental'];
+                $FA = $data['FA'];
+                $Migraña = $data['Migraña'];
+                $SICA = $data['SICA'];
+                $tabaquismo = $data['tabaquismo'];
+                $antipsicotico = $data['antipsicotico'];
+                $erectil = $data['erectil'];
+                $sop = $data['sop'];
+                $hipotiroidismo = $data['hipotiroidismo'];
+                $prediabetes = $data['prediabetes'];
+                $dislipidemia = $data['dislipidemia'];
+                $menopausia = $data['menopausia'];
+                $menopausia_grad = $data['menopausia_grad'];
+                $ERC = $data['ERC'];
+                $grado_ERC = $data['grado_ERC'];
                 $AA = $data['AA'];
                 $AC = $data['AC'];
                 $AH = $data['AH'];
@@ -47,6 +66,8 @@
                 $ARE = $data['ARE'];
                 $AM = $data['AM'];
                 $ACA = $data['ACA'];
+                $ASA = $data['ASA'];
+                $ACONS = $data['ACONS'];    
 
                 $registros_sledai = array(
                     'convulsion' => $data['convulsion'],
@@ -89,6 +110,7 @@
                 }
                 
                 $resultados_sledai = $data['resultados_sledai'];
+                $Categoria_sledai = $data['Categoria_sledai'];
                 $ASE = $data['ASE'];
                 $BUN = $data['BUN'];
                 $C3 = $data['C3'];
@@ -102,6 +124,24 @@
                 $hemoglobina = $data['hemoglobina'];
                 $VD = $data['VD'];
                 $AL = $data['AL'];
+                $Urea = $data['Urea'];
+                $Colesterol = $data['Colesterol'];
+                $Trigliceridos = $data['Trigliceridos'];
+                $HDL = $data['HDL'];
+                $LDL = $data['LDL'];
+                $Colesteros_HDL = $data['Colesteros_HDL'];
+                $hematuria_1 = $data['hematuria_1'];
+                $cilindro_1 = $data['cilindro_1'];
+                $piuria_1 = $data['piuria_1'];
+                $doppler = $data['doppler'];
+                $Uso_derecha = $data['Uso_derecha'];
+                $Uso_izquierda = $data['Uso_izquierda'];
+                $grosor_derecha = $data['grosor_derecha'];
+                $clasificacion_derecha = $data['clasificacion_derecha'];
+                $placa_ateromatosa_derecha = $data['placa_ateromatosa_derecha'];
+                $grosor_izquierda = $data['grosor_izquierda'];
+                $clasificacion_izquierda = $data['clasificacion_izquierda'];
+                $placa_ateromatosa_izquierda = $data['placa_ateromatosa_izquierda'];
                 $AC_DNA = $data['AC_DNA'];
                 $AC_SM = $data['AC_SM'];
                 $AC_RNP = $data['AC_RNP'];
@@ -129,8 +169,23 @@
                 $ds_ciclo = $data['ds_ciclo'];
                 $Rituximab = $data['Rituximab'];
                 $AT = $data['AT'];
+                $Leflunomide = $data['Leflunomide'];
+                $ds_Leflunomide = $data['ds_Leflunomide'];
+                $Glucocorticoide = $data['Glucocorticoide'];
+                $ds_Glucocorticoide = $data['ds_Glucocorticoide'];
+                $Aspirina = $data['Aspirina'];
+                $ds_Aspirina = $data['ds_Aspirina'];
+                $Estatinas = $data['Estatinas'];
+                $ds_Estatinas = $data['ds_Estatinas'];
+                $Antihipertensivo = $data['Antihipertensivo'];
+                $ds_Antihipertensivo = $data['ds_Antihipertensivo'];
+                $Antidiabetico = $data['Antidiabetico'];
+                $ds_Antidiabetico = $data['ds_Antidiabetico'];
+                $Insulinas = $data['Insulinas'];
+                $ds_Insulinas = $data['ds_Insulinas'];
                 $defuncion = $data['defuncion'];
-
+                $causa_defuncion = $data['causa_defuncion'];
+                $nota = $data['nota'];
 
             }
         }else {

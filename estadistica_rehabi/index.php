@@ -9,6 +9,7 @@ if (!isset($_SESSION['valid_user']) || $_SESSION['system_type'] !== 'estadistica
     header('Location: ../login/index.php');
     exit;
 }
+$username = $_SESSION['valid_user'];
 require ('php/controllers/registros.controller.php');
 include ("modal/registrarpaciente.php");
 ?>
@@ -50,19 +51,24 @@ include ("modal/registrarpaciente.php");
         <div style="padding: 20px;" class="btn-group" role="group" aria-label="Basic outlined example">
 
 
-        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#CancerMama">
-            <i class="bi bi-person-add"> </i> Paciente
-        </button>
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#CancerMama">
+                <i class="bi bi-person-add"> </i> Paciente
+            </button>
+            <?php if ($username == 'estadistica_rehab'): ?>
 
-            <a href="php/export.php" class="btn btn-success">
-                <i class="bi bi-file-earmark-excel"></i> Excel
-            </a>
+                <a href="php/export.php" class="btn btn-success">
+                    <i class="bi bi-file-earmark-excel"></i> Excel
+                </a>
 
-            <a href="metricas.php">
-                <button type="button" class="btn btn-primary" target="_blank">
-                    <i class="bi bi-bar-chart"></i> Gráficas
-                </button>
-            </a>
+                <a href="metricas.php">
+                    <button type="button" class="btn btn-primary" target="_blank">
+                        <i class="bi bi-bar-chart"></i> Gráficas
+                    </button>
+                </a>
+            <?php else: ?>
+
+            <?php endif; ?>
+
         </div> <!-- cierre del <div class="btn-group" role="group" aria-label="Basic outlined example">-->
         <br><br>
 

@@ -49,6 +49,10 @@ include ('php/controllers/consulta.controller.php');
                 <td><?php echo $fecha_nacimiento; ?> </td>
             </tr>
             <tr>
+                <td class="estilo-celda">Año de Diagnóstico</td>
+                <td><?php echo $dx; ?> </td>
+            </tr>
+            <tr>
                 <td class="estilo-celda">Edad</td>
                 <td><?php echo $edad; ?> </td>
             </tr>
@@ -67,6 +71,14 @@ include ('php/controllers/consulta.controller.php');
             <tr>
                 <td class="estilo-celda">IMC</td>
                 <td><?php echo $imc; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Resultado IMC</td>
+                <td><?php echo $imcdescripcion; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Tensión Arterial</td>
+                <td><?php echo $ta; ?> </td>
             </tr>
 
             <tr>
@@ -101,6 +113,66 @@ include ('php/controllers/consulta.controller.php');
             <tr>
                 <td class="estilo-celda">Sx Antifosfolípidos</td>
                 <td><?php echo $SA; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Enfermedad Mental</td>
+                <td><?php echo $Enfermedad_Mental; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Fibrilación Auricular</td>
+                <td><?php echo $FA; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Migraña</td>
+                <td><?php echo $Migraña; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">SICA</td>
+                <td><?php echo $SICA; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Tabaquismo</td>
+                <td><?php echo $tabaquismo; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Tratamiento antipsicotico</td>
+                <td><?php echo $antipsicotico; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Tx disfunción erectil</td>
+                <td><?php echo $erectil; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">S.O.P</td>
+                <td><?php echo $sop; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Hipotiroidismo</td>
+                <td><?php echo $hipotiroidismo; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Pre-Diabetes</td>
+                <td><?php echo $prediabetes; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Dislipidemia</td>
+                <td><?php echo $dislipidemia; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Menopausia</td>
+                <td><?php echo $menopausia; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Etapa Menopausia</td>
+                <td><?php echo $menopausia_grad; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Enfermedad Renal Crónica</td>
+                <td><?php echo $ERC; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Grado ERC</td>
+                <td><?php echo $grado_ERC; ?> </td>
             </tr>
 
             <tr>
@@ -140,6 +212,14 @@ include ('php/controllers/consulta.controller.php');
                 <td class="estilo-celda">Actividad Cardiaca</td>
                 <td><?php echo $ACA; ?> </td>
             </tr>
+            <tr>
+                <td class="estilo-celda">Actividad Serosa</td>
+                <td><?php echo $ASA; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Actividad Constitucional</td>
+                <td><?php echo $ACONS; ?> </td>
+            </tr>
 
             <tr>
                 <th scope="col">Calculo SLEDAI</th>
@@ -153,6 +233,10 @@ include ('php/controllers/consulta.controller.php');
             <tr>
                 <td class="estilo-celda">Resultado SLEDAI</td>
                 <td><?php echo $resultados_sledai; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Categoria SLEDAI</td>
+                <td><?php echo $Categoria_sledai; ?> </td>
             </tr>
 
             <tr>
@@ -212,6 +296,89 @@ include ('php/controllers/consulta.controller.php');
                 <td class="estilo-celda">Anticuerpo Lúpico</td>
                 <td><?php echo $AL; ?> </td>
             </tr>
+            <tr>
+                <td class="estilo-celda">Urea</td>
+                <td><?php echo $Urea; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Colesterol</td>
+                <td><?php echo $Colesterol; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Trigliceridos</td>
+                <td><?php echo $Trigliceridos; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">HDL</td>
+                <td><?php echo $HDL; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">LDL</td>
+                <td><?php echo $LDL; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Relacion Colesteros HDL</td>
+                <td><?php echo $Colesteros_HDL; ?> </td>
+            </tr>
+            <tr>
+                <th scope="col">EGO</th>
+                <th scope="col"> </th>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Hematuria</td>
+                <td><?php echo $hematuria_1; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Cilindro</td>
+                <td><?php echo $cilindro_1; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Piuria</td>
+                <td><?php echo $piuria_1; ?> </td>
+            </tr>
+
+            <tr>
+                <th scope="col">USG Doppler</th>
+                <th scope="col"> </th>
+            </tr>
+
+            <tr>
+                <td class="estilo-celda">USG Doppler Carotideo</td>
+                <td><?php echo $doppler; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Grosor capa intima media</td>
+                <td><?php echo $grosor; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">USG Uso</td>
+                <td><?php echo $Uso; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Grosor Derecho</td>
+                <td><?php echo $grosor_derecha; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Clasificacion Derecho</td>
+                <td><?php echo $clasificacion_derecha; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Placa Ateromatosa Derecho</td>
+                <td><?php echo $placa_ateromatosa_derecha; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Grosor Izquierdo</td>
+                <td><?php echo $grosor_izquierda; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Clasificacion Izquierdo</td>
+                <td><?php echo $clasificacion_izquierda; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Placa Ateromatosa Izquierdo</td>
+                <td><?php echo $placa_ateromatosa_izquierda; ?> </td>
+            </tr>
+
 
             <tr>
                 <th scope="col">Anticuerpos</th>
@@ -344,12 +511,76 @@ include ('php/controllers/consulta.controller.php');
                 <td><?php echo $AT; ?> </td>
             </tr>
             <tr>
+                <td class="estilo-celda">Leflunomide</td>
+                <td><?php echo $Leflunomide; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Dosis Semanal</td>
+                <td><?php echo $ds_Leflunomide; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Glucocorticoide</td>
+                <td><?php echo $Glucocorticoide; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Dosis Semanal</td>
+                <td><?php echo $ds_Glucocorticoide; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Aspirina</td>
+                <td><?php echo $Aspirina; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Dosis Semanal</td>
+                <td><?php echo $ds_Aspirina; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Estatinas</td>
+                <td><?php echo $Estatinas; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Dosis Semanal</td>
+                <td><?php echo $ds_Estatinas; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Antihipertensivo</td>
+                <td><?php echo $Antihipertensivo; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Dosis Semanal</td>
+                <td><?php echo $ds_Antihipertensivo; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Antidiabético O.</td>
+                <td><?php echo $Antidiabetico; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Dosis Semanal</td>
+                <td><?php echo $ds_Antidiabetico; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Insulinas</td>
+                <td><?php echo $Insulinas; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Dosis Semanal</td>
+                <td><?php echo $ds_Insulinas; ?> </td>
+            </tr>
+            <tr>
                 <th scope="col">Defunción</th>
                 <th scope="col"> </th>
             </tr>
             <tr>
                 <td class="estilo-celda">Defunción</td>
                 <td><?php echo $defuncion; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Causa Defunción</td>
+                <td><?php echo $causa_defuncion; ?> </td>
+            </tr>
+            <tr>
+                <td class="estilo-celda">Notas</td>
+                <td><?php echo $nota; ?> </td>
             </tr>
 
         </tbody>
