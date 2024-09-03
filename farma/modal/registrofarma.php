@@ -13,7 +13,7 @@
                 <div class="form-header">
                     <h4 class="form-title" style="text-align: left;
                 border-radius: 10px;
-                background-color: rgb(42, 157, 143);
+                background-color: rgb(118, 145, 178);
                 color: aliceblue;
                 margin-top:c15px;
                 font-size: 15px;
@@ -26,9 +26,6 @@
 
 
                             <div class="row">
-
-
-
 
                                 <div class="col-md-4">
                                     <strong style="font-size: 12px;">Nombre(s) del Paciente</strong>
@@ -73,7 +70,6 @@
                                 <div class="container" id="mujer" style="display:none;">
                                     <div class="row">
 
-
                                         <div class="col-md-4">
                                             <strong style="font-size: 12px; ">FUM</strong>
                                             <input id="FUM" name="FUM" type="date" value=""
@@ -103,7 +99,7 @@
                                 </div>
 
 
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <strong style="font-size: 12px;">Informante</strong>
                                     <select name="informante" id="informante" class="form-select" style="font-size: 12px;">
                                         <option value="">Seleccione</option>
@@ -126,7 +122,7 @@
                                                 <option value="Otro">Otro</option>
                                             </select>
                                         </div>
-
+  
 
                                         <div class="col-md-3">
                                             <strong style="font-size: 12px; ">Departamento</strong>
@@ -222,7 +218,7 @@
 
                                 <div class="col-md-6">
                                     <strong style="font-size: 12px; ">Cama</strong>
-                                    <input id="cama" name="cama" type="email" value=""
+                                    <input id="cama" name="cama" type="text" value=""
                                         class="control form-control" style="font-size: 12px;">
                                 </div>
 
@@ -300,11 +296,11 @@
                 <div class="form-header">
                     <h4 class="form-title" style="text-align: left;
                             border-radius: 10px;
-                            background-color: rgb(42, 157, 143);
+                            background-color: rgb(118, 145, 178);
                             color: aliceblue;
                             margin-top:15px;
                             font-size: 15px;
-                            text-align: center;">nombbre_notificacion</h4>
+                            text-align: center;">Notificación</h4>
                 </div>
                 <div class="container">
 
@@ -320,35 +316,30 @@
                                 </div>
 
                                 <div class="col-md-6">
-                                    <strong style="font-size: 12px;">Cargo </strong>
-                                    <input id="cargo" name="cargo" type="text" class="control form-control"
+                                    <strong style="font-size: 12px;">Fecha de reporte plataforma</strong>
+                                    <input id="fecha_reporte" name="fecha_reporte" type="date" class="control form-control"
                                         value="" style="font-size: 12px;">
                                 </div>
-
+                                
                                 <div class="col-md-6">
-                                    <strong style="font-size: 12px;">Utilización del Medicamento Erroneo en el Paciente</strong>
-                                    <select name="uti_medicamento" id="uti_medicamento" class="form-select" style="font-size: 12px;">
-                                        <option value="Seleccione">Seleccione</option>
-                                        <option value="No">No</option>
-                                        <option value="Si">Si</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <strong style="font-size: 12px;">Hubo Consecuncia en el Paciente</strong>
-                                    <select name="consecuencia_px" id="consecuencia_px" class="form-select" style="font-size: 12px;">
-                                        <option value="Seleccione">Seleccione</option>
-                                        <option value="No">No</option>
-                                        <option value="Si">Si</option>
-                                    </select>
+                                    <strong style="font-size: 12px; ">Medicamento Sospechoso</strong>
+                                    <input id="medicamento_sospechoso" name="medicamento_sospechoso" type="text" value=""
+                                        class="control form-control" style="font-size: 12px;">
                                 </div>
 
                                 <div class="col-md-12">
-                                    <strong style="font-size: 12px;">Descripción del Error</strong>
+                                    <strong style="font-size: 12px;">Descripción</strong>
                                     <textarea id="descripcion_error" name="descripcion_error" type="text" class="control form-control" value=""
                                         style="font-size: 12px;"
-                                        placeholder="Cual fue el Error y Agregar Sintomas en Caso de Presentarse"></textarea>
+                                        placeholder="Describa"></textarea>
                                 </div>
+
+                               
+
+
+                              
+
+                              
 
                                 <div class="col-md-4">
                                     <!-- Div para el espacio entre campos. -->

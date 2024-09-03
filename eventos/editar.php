@@ -41,7 +41,7 @@
                     <div class="form-header">
                         <h4 class="form-title" style="text-align: left;
                 border-radius: 10px;
-                background-color: rgb(198, 79, 113);
+                background-color: rgb(157, 7, 7);
                 color: aliceblue;
                 margin-top:15px;
                 font-size: 15px;
@@ -131,7 +131,7 @@
                             <div class="form-header">
                                 <h4 class="form-title" style="text-align: left;
                                     border-radius: 10px;
-                                    background-color: rgb(198, 79, 113,0.5);
+                                    background-color: rgb(203, 0, 0);
                                     color: aliceblue;
                                     margin-top:12px;
                                     font-size: 12px;
@@ -219,7 +219,7 @@
                             <div class="form-header">
                                 <h4 class="form-title" style="text-align: left;
                                     border-radius: 10px;
-                                    background-color: rgb(198, 79, 113,0.5);
+                                    background-color: rgb(203, 0, 0);
                                     color: aliceblue;
                                     margin-top:12px;
                                     font-size: 12px;
@@ -329,7 +329,7 @@
                     <div class="form-header">
                         <h4 class="form-title" style="text-align: left;
                 border-radius: 10px;
-                background-color: rgb(198, 79, 113);
+                background-color: rgb(157, 7, 7);
                 color: aliceblue;
                 margin-top:15px;
                 font-size: 15px;
@@ -468,7 +468,7 @@
                     <div class="form-header">
                         <h4 class="form-title" style="text-align: left;
                             border-radius: 10px;
-                            background-color: rgb(198, 79, 113);
+                            background-color: rgb(157, 7, 7);
                             color: aliceblue;
                             margin-top:15px;
                             font-size: 15px;
@@ -489,7 +489,7 @@
                                                         <div class="form-header">
                                                             <h4 class="form-title" style="text-align: left;
                                                             border-radius: 10px;
-                                                            background-color: rgb(93, 193, 185);
+                                                            background-color: rgb(203, 0, 0);
                                                             color: aliceblue;
                                                             margin-top:15px;
                                                             font-size: 13px;
@@ -1017,7 +1017,7 @@
                                 <div class="form-header">
                                     <h4 class="form-title" style="text-align: left;
                                         border-radius: 10px;
-                                        background-color:  rgb(93, 193, 185,0.5);
+                                        background-color:  rgb(203, 0, 0);
                                         color: aliceblue;
                                         margin-top:13px;
                                         font-size: 13px;
@@ -1050,7 +1050,7 @@
                                 <div class="form-header">
                                     <h4 class="form-title" style="text-align: left;
                                                 border-radius: 10px;
-                                                background-color:  rgb(93, 193, 185,0.5);
+                                                background-color:  rgb(203, 0, 0);
                                                 color: aliceblue;
                                                 margin-top:13px;
                                                 font-size: 13px;
@@ -1101,7 +1101,7 @@
         <div class="form-header">
             <h4 class="form-title" style="text-align: left;
                                         border-radius: 10px;
-                                        background-color: rgb(198, 79, 113);
+                                        background-color: rgb(157, 7, 7);
                                         color: aliceblue;
                                         margin-top:13px;
                                         font-size: 13px;
@@ -1286,7 +1286,7 @@
         <div class="form-header">
             <h4 class="form-title" style="text-align: left;
                             border-radius: 10px;
-                            background-color: rgb(198, 79, 113);
+                            background-color: rgb(157, 7, 7);
                             color: aliceblue;
                             margin-top:13px;
                             font-size: 13px;
@@ -1377,7 +1377,7 @@
         <div class="form-header">
             <h4 class="form-title" style="text-align: left;
                                         border-radius: 10px;
-                                        background-color: rgb(198, 79, 113);
+                                        background-color: rgb(157, 7, 7);
                                         color: aliceblue;
                                         margin-top:13px;
                                         font-size: 13px;

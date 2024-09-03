@@ -50,30 +50,20 @@
                                 <div class="row">
 
                                     <div class="col-md-4">
-                                        <strong style="font-size: 12px;">ID HRAEI</strong>
-                                        <input id="id_hraei" name="id_hraei" placeholder="EM/HRAEI/00000/2024" type="text"
-                                            class="control form-control" value="" style="font-size: 11px;" disabled>
+                                        <strong style="font-size: 12px;">Nombre del Paciente</strong>
+                                        <input id="nombre_paciente" name="nombre_paciente" type="text" class="control form-control"
+                                            value="" style="font-size: 12px;">
                                     </div>
+
 
                                     <div class="col-md-4">
-                                        <strong style="font-size: 12px; ">Fecha de Reporte en Plataforma</strong>
-                                        <input id="fecha" name="fecha" type="date" value="" onblur="curp2date();"
-                                            class="control form-control" style="font-size: 12px;">
+                                        <strong style="font-size: 12px;">Cama</strong>
+                                        <input id="cama" name="cama" type="text" class="control form-control" value=""
+                                            style="font-size: 12px;">
                                     </div>
+
 
                                     <div class="col-md-4">
-                                        <strong style="font-size: 12px; ">Fecha de Reporte en CIFV</strong>
-                                        <input id="fecha_cifv" name="fecha_cifv" type="date" value="" onblur="curp2date();"
-                                            class="control form-control" style="font-size: 12px;">
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <strong style="font-size: 12px; ">Fecha de Error de Medicación</strong>
-                                        <input id="fecha_medicacion" name="fecha_medicacion" type="date" value="" onblur="curp2date();"
-                                            class="control form-control" style="font-size: 12px;">
-                                    </div>
-
-                                    <div class="col-md-8">
                                         <strong style="font-size: 12px;">Servicio</strong>
                                         <select name="servicio" id="servicio" class="form-select" style="font-size: 12px;">
                                             <option value="Seleccione">Seleccione</option>
@@ -109,19 +99,6 @@
                                             <option value="UTIA">UTIA</option>
                                         </select>
                                     </div>
-
-
-                                    <div class="col-md-8">
-                                        <strong style="font-size: 12px;">Nombre del Paciente</strong>
-                                        <input id="nombre_paciente" name="nombre_paciente" type="text" class="control form-control"
-                                            value="" style="font-size: 12px;">
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <strong style="font-size: 12px;">Cama</strong>
-                                        <input id="cama" name="cama" type="text" class="control form-control" value=""
-                                            style="font-size: 12px;">
-                                    </div>
                                 </div>
                             </legend>
                         </fieldset>
@@ -140,16 +117,17 @@
                             <legend>
                                 <div class="row">
 
+
                                     <div class="col-md-6">
-                                        <strong style="font-size: 12px;">Nombre de quien notifica el caso</strong>
-                                        <input id="nombbre_notificacion" name="nombbre_notificacion" type="text" class="control form-control"
-                                            value="" style="font-size: 12px;">
+                                        <strong style="font-size: 12px; ">Fecha de Reporte (CIFV)</strong>
+                                        <input id="fecha_cifv" name="fecha_cifv" type="date" value=""
+                                            class="control form-control" style="font-size: 12px;">
                                     </div>
 
                                     <div class="col-md-6">
-                                        <strong style="font-size: 12px;">Cargo</strong>
-                                        <input id="cargo" name="cargo" type="text" class="control form-control"
-                                            value="" style="font-size: 12px;">
+                                        <strong style="font-size: 12px; ">Fecha de Error de Medicación</strong>
+                                        <input id="fecha_medicacion" name="fecha_medicacion" type="date" value=""
+                                            class="control form-control" style="font-size: 12px;">
                                     </div>
 
                                     <div class="col-md-6">
@@ -161,7 +139,8 @@
                                         </select>
                                     </div>
 
-                                    <div class="col-md-6 ">
+
+                                    <div class="col-md-6">
                                         <strong style="font-size: 12px;">Hubo Consecuncia en el Paciente</strong>
                                         <select name="consecuencia_px" id="consecuencia_px" class="form-select" style="font-size: 12px;">
                                             <option value="Seleccione">Seleccione</option>
@@ -170,16 +149,297 @@
                                         </select>
                                     </div>
 
+
+                                    <div class="col-md-12">
+                                        <strong style="font-size: 12px;">Medicamento Involucrado</strong>
+                                        <select name="realizo_investigacion" id="realizo_investigacion" class="form-select" style="font-size: 12px;">
+                                            <option value="">Seleccione</option>
+                                            <option value="Medicamentos Involucrados Uno">Medicamentos Involucrados Uno</option>
+                                            <option value="Medicamentos Involucrado Dos">Medicamentos Involucrado Dos</option>
+                                            <option value="Medicamentos Involucrado Tres">Medicamentos Involucrado Tres</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-6" id="un_medicamento">
+                                        <br>
+
+                                        <fieldset>
+                                            <legend>
+
+                                                <div class="form-header">
+                                                    <h4 class="form-title" style="text-align: left;
+                                                    border-radius: 10px;
+                                                    background-color: rgb(42, 157, 143,0.5);
+                                                    color: aliceblue;
+                                                    margin-top:12px;
+                                                    font-size: 12px;
+                                                    text-align: center;">Medicamentos Involucrado Uno </h4>
+                                                </div>
+                                                <div class="row">
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Denominación Genérica </strong>
+                                                        <input id="Denominacion" name="Denominacion" type="text" class="control form-control" value=""
+                                                            style="font-size: 12px;">
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Concentración</strong>
+                                                        <input id="Concentracion" name="Concentracion" type="text" class="control form-control" value=""
+                                                            style="font-size: 12px;">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Fabricante</strong>
+                                                        <input id="Fabricante" name="Fabricante" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">No.Lote</strong>
+                                                        <input id="Lote" name="Lote" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Caducidad</strong>
+                                                        <input id="Caducidad" name="Caducidad" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Forma Farmacéutica</strong>
+                                                        <input id="Forma" name="Forma" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Dosis</strong>
+                                                        <input id=" Dosis" name="Dosis" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Via de Administración</strong>
+                                                        <input id=" Via_Administracion" name="Via_Administracion" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Intervalo de Administración</strong>
+                                                        <input id=" Intervalo_Administracion" name="Intervalo_Administracion" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+                                                </div>
+
+                                            </legend>
+                                        </fieldset>
+                                    </div>
+
+
+                                    <div class="col-md-6" id="dos_medicamento">
+                                        <br>
+
+                                        <fieldset>
+                                            <legend>
+
+                                                <div class="form-header">
+                                                    <h4 class="form-title" style="text-align: left;
+                                                    border-radius: 10px;
+                                                    background-color: rgb(42, 157, 143,0.5);
+                                                    color: aliceblue;
+                                                    margin-top:12px;
+                                                    font-size: 12px;
+                                                    text-align: center;">Medicamentos Involucrado Dos</h4>
+                                                </div>
+                                                <div class="row">
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Denominación Genérica: </strong>
+                                                        <input id="Denominacion_1" name="Denominacion_1" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Concentración</strong>
+                                                        <input id="Concentracion1" name="Concentracion1" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Fabricante</strong>
+                                                        <input id="Fabricante1" name="Fabricante1" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">No.Lote</strong>
+                                                        <input id="Lote1" name="Lote1" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Caducidad</strong>
+                                                        <input id="Caducidad1" name="Caducidad1" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Forma Farmacéutica</strong>
+                                                        <input id="Forma1" name="Forma1" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Dosis</strong>
+                                                        <input id=" Dosis1" name="Dosis1" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Via de Administración</strong>
+                                                        <input id=" Via_Administracion1" name="Via_Administracion1" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Intervalo de Administración</strong>
+                                                        <input id=" Intervalo_Administracion1" name="Intervalo_Administracion1" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+
+                                                </div>
+
+                                            </legend>
+                                        </fieldset>
+                                    </div>
+
+                                    <div class="col-md-3">
+
+                                    </div>
+
+
+
+
+                                    <div class="col-md-6" id="tres_medicamento">
+                                        <br>
+
+                                        <fieldset>
+                                            <legend>
+
+
+
+                                                <div class="form-header">
+                                                    <h4 class="form-title" style="text-align: left;
+                                                    border-radius: 10px;
+                                                    background-color: rgb(42, 157, 143,0.5);
+                                                    color: aliceblue;
+                                                    margin-top:12px;
+                                                    font-size: 12px;
+                                                    text-align: center;">Medicamentos Involucrado Tres</h4>
+                                                </div>
+                                                <div class="row">
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Denominación Genérica: </strong>
+                                                        <input id="Denominacion_3" name="Denominacion_3" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Concentración</strong>
+                                                        <input id="Concentracion3" name="Concentracion3" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Fabricante</strong>
+                                                        <input id="Fabricante3" name="Fabricante3" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">No.Lote</strong>
+                                                        <input id="Lote3" name="Lote3" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Caducidad</strong>
+                                                        <input id="Caducidad3" name="Caducidad3" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Forma Farmacéutica</strong>
+                                                        <input id="Forma3" name="Forma3" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Dosis</strong>
+                                                        <input id=" Dosis3" name="Dosis3" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Via de Administración</strong>
+                                                        <input id=" Via_Administracion3" name="Via_Administracion3" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Intervalo de Administración</strong>
+                                                        <input id=" Intervalo_Administracion3" name="Intervalo_Administracion3" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+                                                </div>
+
+                                            </legend>
+                                        </fieldset>
+                                        <br>
+
+                                    </div>
+
+
+
                                     <div class="col-md-12">
                                         <strong style="font-size: 12px;">Descripción del Error</strong>
                                         <textarea id="descripcion_error" name="descripcion_error" type="text" class="control form-control" value=""
                                             style="font-size: 12px;"
                                             placeholder="Cual fue el Error y Agregar Sintomas en Caso de Presentarse"></textarea>
+                                        <br>
+
                                     </div>
+
+
+
+                                    <div class="col-md-6">
+                                        <strong style="font-size: 12px;">Nombre de quien notifica el caso</strong>
+                                        <input id="nombbre_notificacion" name="nombbre_notificacion" type="text" class="control form-control"
+                                            value="" style="font-size: 12px;">
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <strong style="font-size: 12px;">Cargo</strong>
+                                        <select name="cargo" id="cargo" class="form-select" style="font-size: 12px;">
+                                            <option value="">Seleccione</option>
+                                            <option value="Médico">Médico</option>
+                                            <option value="Enfermo(a)">Enferm(a)</option>
+                                            <option value="Farmaceutico">Farmaceutico</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+
+
+
+
+
 
                                     <div class="col-md-4">
                                         <!-- Div para el espacio entre campos. -->
                                     </div>
+
                                 </div>
                             </legend>
                         </fieldset>
@@ -190,10 +450,10 @@
                     <div class="form-header">
                         <h4 class="form-title" style="text-align: left;
                             border-radius: 10px;
-                            background-color: rgb(42, 157, 143);
+                            background-color: rgb(242, 77, 19);
                             color: aliceblue;
-                            margin-top:15px;
-                            font-size: 15px;
+                            margin-top:20px;
+                            font-size: 18px;
                             text-align: center;">Seguimiento</h4>
                     </div>
 
@@ -205,10 +465,64 @@
                                 <div class="row">
 
                                     <div class="col-md-6">
+                                        <strong style="font-size: 12px;">Validación del Evento</strong>
+                                        <select name="validacion_evento" id="validacion_evento" class="form-select" style="font-size: 12px;">
+                                            <option value="">Seleccione</option>
+                                            <option value="Si">Si</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-6" id="tipo_valevento" style="display:none;">
+                                        <strong style="font-size: 12px;">Tipo</strong>
+                                        <select name="tipo_evento" id="tipo_evento" class="form-select" style="font-size: 12px;">
+                                            <option value="">Seleccione</option>
+                                            <option value="Calidad">Calidad</option>
+                                            <option value="Tecnovigilancia">Tecnovigilancia</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="container" id="hraei_idmos" style="display:none;">
+                                        <div class="row">
+
+
+
+                                            <div class="col-md-4">
+                                                <strong style="font-size: 12px;">ID HRAEI</strong>
+                                                <input id="id_hraei" name="id_hraei" placeholder="EM/00000/2024" type="text"
+                                                    class="control form-control" value="" style="font-size: 12px;" disabled>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <strong style="font-size: 12px;">ID CIFV</strong>
+                                                <input id="id_CIFV" name="id_CIFV" placeholder="CIFV/HRAEI/00000/2024" type="text"
+                                                    class="control form-control" value="" style="font-size: 12px;" >
+                                            </div>
+
+
+
+                                            <div class="col-md-4">
+                                                <strong style="font-size: 12px;">ID VIGIFLOW</strong>
+                                                <input id="id_ESAVI" name="id_ESAVI" placeholder="MX-COFEPRIS-0000" type="text"
+                                                    class="control form-control" value="" style="font-size: 12px;">
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <strong style="font-size: 12px; ">Fecha de Reporte en Plataforma</strong>
+                                        <input id="fecha" name="fecha" type="date" value=""
+                                            class="control form-control" style="font-size: 12px;">
+                                    </div>
+
+                                    <!-- 
+                                    <div class="col-md-6">
                                         <strong style="font-size: 12px;">Nombre de quien notifica el Seguimiento</strong>
                                         <input id="nombbre_seguimiento" name="nombbre_seguimiento" type="text" class="control form-control"
                                             value="" style="font-size: 12px;">
-                                    </div>
+                                    </div> -->
 
                                     <div class="col-md-6">
                                         <strong style="font-size: 12px;">Tipo de Error</strong>
@@ -218,9 +532,15 @@
                                             <option value="Transcripción">Transcripción</option>
                                             <option value="Administración">Administración</option>
                                             <option value="Monitorización">Monitorización</option>
+                                            <option value="Validación">Validación</option>
+                                            <option value="Preparación">Preparación</option>
+                                            <option value="Dispensación">Dispensación</option>
                                             <option value="Otro">Otro</option>
                                         </select>
                                     </div>
+
+
+
 
                                     <div class="col-md-6">
                                         <strong style="font-size: 12px;">Error</strong>
@@ -244,6 +564,13 @@
                                             <option value="Otros">Otros</option>
                                         </select>
                                     </div>
+
+                                    <div class="col-md-6" id="TipoOtro_error" style="display:none;">
+                                        <strong style="font-size: 12px;">Otro</strong>
+                                        <input id="error_tipootro" name="error_tipootro" type="text" class="control form-control"
+                                            value="" style="font-size: 12px;">
+                                    </div>
+
 
 
 
@@ -325,7 +652,7 @@
                                         </select>
                                     </div>
 
-                                    <div class="col-md-4" id="un_medicamento" style="display:none;">
+                                    <div class="col-md-4" id="un_medicamento1">
                                         <br>
 
                                         <fieldset>
@@ -334,7 +661,7 @@
                                                 <div class="form-header">
                                                     <h4 class="form-title" style="text-align: left;
                                                     border-radius: 10px;
-                                                    background-color: rgb(42, 157, 14,0.5);
+                                                    background-color: rgb(242, 77, 19,0.5);
                                                     color: aliceblue;
                                                     margin-top:12px;
                                                     font-size: 12px;
@@ -344,36 +671,56 @@
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 11px;">Denominación Genérica </strong>
-                                                        <input id="Denominacion" name="Denominacion" type="text" class="control form-control" value=""
+                                                        <input id="Denominacion_editar1" name="Denominacion_editar1" type="text" class="control form-control" value=""
                                                             style="font-size: 12px;">
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 11px;">Concentración</strong>
-                                                        <input id="Concentracion" name="Concentracion" type="text" class="control form-control" value=""
+                                                        <input id="Concentracion_editar1" name="Concentracion_editar1" type="text" class="control form-control" value=""
                                                             style="font-size: 12px;">
                                                     </div>
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 11px;">Fabricante</strong>
-                                                        <input id="Fabricante" name="Fabricante" type="text" class="control form-control" value=""
+                                                        <input id="Fabricante_editar1" name="Fabricante_editar1" type="text" class="control form-control" value=""
                                                             style="font-size: 11px;">
                                                     </div>
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 11px;">No.Lote</strong>
-                                                        <input id="Lote" name="Lote" type="text" class="control form-control" value=""
+                                                        <input id="Lote_editar1" name="Lote_editar1" type="text" class="control form-control" value=""
                                                             style="font-size: 11px;">
                                                     </div>
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 11px;">Caducidad</strong>
-                                                        <input id="Caducidad" name="Caducidad" type="text" class="control form-control" value=""
+                                                        <input id="Caducidad_editar1" name="Caducidad_editar1" type="text" class="control form-control" value=""
                                                             style="font-size: 11px;">
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 11px;">Forma Farmacéutica</strong>
-                                                        <input id="Forma" name="Forma" type="text" class="control form-control" value=""
+                                                        <input id="Forma_editar1" name="Forma_editar1" type="text" class="control form-control" value=""
                                                             style="font-size: 11px;">
                                                     </div>
+
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Dosis</strong>
+                                                        <input id=" Dosis_editar1" name="Dosis_editar1" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Via de Administración</strong>
+                                                        <input id=" Via_Administracion_editar1" name="Via_Administracion_editar1" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Intervalo de Administración</strong>
+                                                        <input id=" Intervalo_Administracion_editar1" name="Intervalo_Administracion_editar1" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
 
                                                 </div>
 
@@ -382,7 +729,7 @@
                                     </div>
 
 
-                                    <div class="col-md-4" id="dos_medicamento" style="display:none;">
+                                    <div class="col-md-4" id="dos_medicamento_editar2">
                                         <br>
 
                                         <fieldset>
@@ -391,7 +738,7 @@
                                                 <div class="form-header">
                                                     <h4 class="form-title" style="text-align: left;
                                                     border-radius: 10px;
-                                                    background-color: rgb(42, 157, 14,0.5);
+                                                    background-color: rgb(242, 77, 19,0.5);
                                                     color: aliceblue;
                                                     margin-top:12px;
                                                     font-size: 12px;
@@ -401,35 +748,53 @@
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 11px;">Denominación Genérica: </strong>
-                                                        <input id="Denominacion_1" name="Denominacion_1" type="text" class="control form-control" value=""
+                                                        <input id="Denominacion_editar2" name="Denominacion_editar2" type="text" class="control form-control" value=""
                                                             style="font-size: 11px;">
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 11px;">Concentración</strong>
-                                                        <input id="Concentracion1" name="Concentracion1" type="text" class="control form-control" value=""
+                                                        <input id="Concentracion_editar2" name="Concentracion_editar2" type="text" class="control form-control" value=""
                                                             style="font-size: 11px;">
                                                     </div>
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 11px;">Fabricante</strong>
-                                                        <input id="Fabricante1" name="Fabricante1" type="text" class="control form-control" value=""
+                                                        <input id="Fabricante_editar2" name="Fabricante_editar2" type="text" class="control form-control" value=""
                                                             style="font-size: 11px;">
                                                     </div>
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 11px;">No.Lote</strong>
-                                                        <input id="Lote1" name="Lote1" type="text" class="control form-control" value=""
+                                                        <input id="Lote_editar2" name="Lote_editar2" type="text" class="control form-control" value=""
                                                             style="font-size: 11px;">
                                                     </div>
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 11px;">Caducidad</strong>
-                                                        <input id="Caducidad1" name="Caducidad1" type="text" class="control form-control" value=""
+                                                        <input id="Caducidad_editar2" name="Caducidad_editar2" type="text" class="control form-control" value=""
                                                             style="font-size: 11px;">
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 11px;">Forma Farmacéutica</strong>
-                                                        <input id="Forma1" name="Forma1" type="text" class="control form-control" value=""
+                                                        <input id="Forma_editar2" name="Forma_editar2" type="text" class="control form-control" value=""
                                                             style="font-size: 11px;">
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Dosis</strong>
+                                                        <input id=" Dosis_editar2" name="Dosis_editar2" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Via de Administración</strong>
+                                                        <input id=" Via_Administracion_editar2" name="Via_Administracion_editar2" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Intervalo de Administración</strong>
+                                                        <input id=" Intervalo_Administracion_editar2" name="Intervalo_Administracion_editar2" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
                                                     </div>
 
                                                 </div>
@@ -439,7 +804,7 @@
                                     </div>
 
 
-                                    <div class="col-md-4" id="tres_medicamento" style="display:none;">
+                                    <div class="col-md-4" id="tres_medicamento_editar3">
                                         <br>
 
                                         <fieldset>
@@ -450,7 +815,7 @@
                                                 <div class="form-header">
                                                     <h4 class="form-title" style="text-align: left;
                                                     border-radius: 10px;
-                                                    background-color: rgb(42, 157, 14,0.5);
+                                                    background-color: rgb(242, 77, 19,0.5);
                                                     color: aliceblue;
                                                     margin-top:12px;
                                                     font-size: 12px;
@@ -460,35 +825,54 @@
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 11px;">Denominación Genérica: </strong>
-                                                        <input id="Denominacion_3" name="Denominacion_3" type="text" class="control form-control" value=""
+                                                        <input id="Denominacion_editar3" name="Denominacion_editar3" type="text" class="control form-control" value=""
                                                             style="font-size: 11px;">
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 11px;">Concentración</strong>
-                                                        <input id="Concentracion3" name="Concentracion3" type="text" class="control form-control" value=""
+                                                        <input id="Concentracion_editar3" name="Concentracion_editar3" type="text" class="control form-control" value=""
                                                             style="font-size: 11px;">
                                                     </div>
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 11px;">Fabricante</strong>
-                                                        <input id="Fabricante3" name="Fabricante3" type="text" class="control form-control" value=""
+                                                        <input id="Fabricante_editar3" name="Fabricante_editar3" type="text" class="control form-control" value=""
                                                             style="font-size: 11px;">
                                                     </div>
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 11px;">No.Lote</strong>
-                                                        <input id="Lote3" name="Lote3" type="text" class="control form-control" value=""
+                                                        <input id="Lote_editar3" name="Lote_editar3" type="text" class="control form-control" value=""
                                                             style="font-size: 11px;">
                                                     </div>
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 11px;">Caducidad</strong>
-                                                        <input id="Caducidad3" name="Caducidad3" type="text" class="control form-control" value=""
+                                                        <input id="Caducidad_editar3" name="Caducidad_editar3" type="text" class="control form-control" value=""
                                                             style="font-size: 11px;">
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 11px;">Forma Farmacéutica</strong>
-                                                        <input id="Forma3" name="Forma3" type="text" class="control form-control" value=""
+                                                        <input id="Forma_editar3" name="Forma_editar3" type="text" class="control form-control" value=""
                                                             style="font-size: 11px;">
+                                                    </div>
+
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Dosis</strong>
+                                                        <input id=" Dosis_editar3" name="Dosis_editar3" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Via de Administración</strong>
+                                                        <input id=" Via_Administracion_editar3" name="Via_Administracion_editar3" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <strong style="font-size: 10px;">Intervalo de Administración</strong>
+                                                        <input id=" Intervalo_Administracion_editar3" name="Intervalo_Administracion_editar3" type="text" class="control form-control" value=""
+                                                            style="font-size: 10px;">
                                                     </div>
                                                 </div>
 
@@ -499,7 +883,7 @@
 
                                     <div class="col-md-12">
                                         <strong style="font-size: 12px;">Se Realizo Investigación</strong>
-                                        <select name="Medicamentos_Involucrado" id="Medicamentos_Involucrado" class="form-select" style="font-size: 12px;">
+                                        <select name="realizoInvestigacion" id="realizoInvestigacion" class="form-select" style="font-size: 12px;">
                                             <option value="">Seleccione</option>
                                             <option value="Si">Si</option>
                                             <option value="No">No</option>
@@ -589,44 +973,7 @@
 
 
 
-                                    <div class="row" id="investi_estrate" style="display:none;">
 
-
-
-                                        <div class="col-md-6" id="Investigacionconclusion">
-                                            <strong style="font-size: 12px;">Conclusión De La Investigación</strong>
-                                            <select name="conclusion_investigacion" id="conclusion_investigacion" class="form-select" style="font-size: 12px;">
-                                                <option value="Seleccione">Seleccione</option>
-                                                <option value="Si">Si</option>
-                                                <option value="No">No</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="col-md-12" id="descri_conclusion" style="display:none;">
-                                            <strong style="font-size: 12px;">Descripción de la Investigación</strong>
-                                            <textarea id="conclusiondes_investigacion" name="conclusiondes_investigacion" type="text" class="control form-control" value=""
-                                                style="font-size: 12px;"
-                                                placeholder="Describa"></textarea>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <strong style="font-size: 12px;">Estrategias De Prevención</strong>
-                                            <select name="estrategia_preve" id="estrategia_preve" class="form-select" style="font-size: 12px;">
-                                                <option value="Seleccione">Seleccione</option>
-                                                <option value="Si">Si</option>
-                                                <option value="No">No</option>
-                                            </select>
-                                        </div>
-
-
-                                        <div class="col-md-12" id="descri_prevencion" style="display:none;">
-                                            <strong style="font-size: 12px;">Descripción</strong>
-                                            <textarea id="prevencion_investigacion" name="prevencion_investigacion" type="text" class="control form-control" value=""
-                                                style="font-size: 12px;"
-                                                placeholder="Describa"></textarea>
-                                        </div>
-
-                                    </div>
 
 
 
@@ -648,7 +995,107 @@
                                                 placeholder="Describa"></textarea>
                                         </div>
 
+
+                                        <div class="col-md-6" id="archivocausaraiz" style="display:none;">
+                                            <label for="file" class="form-label" style="font-size: 12px; font-weight: bold;">Selecciona un archivo PDF:</label>
+                                            <input type="file" name="file" id="file" class="form-control" accept=".pdf" required>
+                                            <!-- <button type="submit" class="btn btn-primary mt-3" style="font-size: 12px; width: 100%;">Subir Archivo</button> -->
+                                        </div>
+
                                     </div>
+                                    <div class="container" id="investi_estrate" style="display:none;">
+
+
+                                        <div class="row">
+
+                                            <div class="col-md-6" id="Investigacionconclusion">
+                                                <strong style="font-size: 12px;">Conclusión De La Investigación</strong>
+                                                <select name="conclusion_investigacion" id="conclusion_investigacion" class="form-select" style="font-size: 12px;">
+                                                    <option value="Seleccione">Seleccione</option>
+                                                    <option value="Si">Si</option>
+                                                    <option value="No">No</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-md-12" id="descri_conclusion" style="display:none;">
+                                                <strong style="font-size: 12px;">Descripción de la Investigación</strong>
+                                                <textarea id="conclusiondes_investigacion" name="conclusiondes_investigacion" type="text" class="control form-control" value=""
+                                                    style="font-size: 12px;"
+                                                    placeholder="Describa"></textarea>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <strong style="font-size: 12px;">Estrategias De Prevención</strong>
+                                                <select name="estrategia_preve" id="estrategia_preve" class="form-select" style="font-size: 12px;">
+                                                    <option value="Seleccione">Seleccione</option>
+                                                    <option value="Si">Si</option>
+                                                    <option value="No">No</option>
+                                                </select>
+                                            </div>
+
+
+
+
+
+                                            <div class="col-md-12" id="descri_prevencion" style="display:none;">
+                                                <strong style="font-size: 12px;">Descripción</strong>
+                                                <textarea id="prevencion_investigacion" name="prevencion_investigacion" type="text" class="control form-control" value=""
+                                                    style="font-size: 12px;"
+                                                    placeholder="Describa"></textarea>
+                                            </div>
+
+
+                                        </div> <!-- CIERRE DE SEGUIMIENTO  -->
+
+                                    </div>
+
+
+                                    <div class="form-header">
+                                        <h4 class="form-title" style="text-align: left;
+                                                    border-radius: 10px;
+                                                    background-color: rgb(242, 77, 19);
+                                                    color: aliceblue;
+                                                    margin-top:12px;
+                                                    font-size: 12px;
+                                                    text-align: center;">Estatus</h4>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <strong style="font-size: 12px;">Estatus</strong>
+                                        <select name="Estatus" id="Estatus" class="form-select" style="font-size: 12px;">
+                                            <option value="">Seleccione</option>
+                                            <option value="Bajo Evaluación">Bajo Evaluación</option>
+                                            <option value="Cerrado">Cerrado</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <strong style="font-size: 12px;">Nombre del Encargado de Enfermeria </strong>
+                                        <input id="nombre_enfermeria" name="nombre_enfermeria" type="text" class="control form-control"
+                                            value="" style="font-size: 12px;">
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <strong style="font-size: 12px;">Nombre del Encargado de Área Médica</strong>
+                                        <input id="nombre_medico" name="nombre_medico" type="text" class="control form-control"
+                                            value="" style="font-size: 12px;">
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <strong style="font-size: 12px;">Nombre del Encargado CISFA</strong>
+                                        <input id="nombre_cisfa" name="nombre_cisfa" type="text" class="control form-control"
+                                            value="" style="font-size: 12px;">
+                                    </div>
+
+
+                                    <div class="col-md-3">
+                                        <strong style="font-size: 12px;">Nombre del Personal que Elabora</strong>
+                                        <input id="nombre_personallabora" name="nombre_personallabora" type="text" class="control form-control"
+                                            value="" style="font-size: 12px;">
+                                    </div>
+
+
+
 
 
 

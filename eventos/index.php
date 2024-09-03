@@ -56,7 +56,7 @@ include("modal/registropaciente.php");
     <div class="row">
 
         <div class="col-4" width="100%" height="400px" style="margin-bottom: 100px; ">
-            <div id="patient-list-container" style="background-color:rgb(245, 85, 85,0.8)">
+            <div id="patient-list-container" style="background-color:rgb(254, 0, 0)">
                 <br>
                 <input type="text" id="search" placeholder="Buscar ...">
                 <ul id="patient-list">
