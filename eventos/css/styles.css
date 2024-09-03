@@ -276,6 +276,23 @@ h5.bi {
     /* Ancho del contenedor */
 }
 
+.patient-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.patient-name {
+    flex-grow: 1; /* Esto permitirá que el nombre ocupe el espacio disponible */
+    margin-right: 10px; /* Espacio entre el nombre y el botón */
+}
+
+.edit-btn {
+    text-align: right;
+}
+
+
 
 
 .custom-header {

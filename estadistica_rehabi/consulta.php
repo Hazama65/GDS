@@ -1,4 +1,14 @@
 <?php
+session_start();
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+
+// Verifica si el usuario ha iniciado sesión y si tiene el sistema correcto
+if (!isset($_SESSION['valid_user']) || $_SESSION['system_type'] !== 'estadistica_rehab') {
+    // Si el usuario no ha iniciado sesión o no tiene permiso para este sistema
+    header('Location: ../login/index.php');
+    exit;
+}
 include ('php/controllers/consulta.controller.php');
 ?>
 <!DOCTYPE html>
@@ -73,12 +83,12 @@ include ('php/controllers/consulta.controller.php');
             </tr>
 
             <tr>
-                <td class="estilo-celda">Fecha Incio (Tratamiento)</td>
+                <td class="estilo-celda">Reporte de</td>
                 <td><?php echo $fecha_inicio; ?></td>
             </tr>
 
             <tr>
-                <td class="estilo-celda">Fecha Fin (Tratamiento)</td>
+                <td class="estilo-celda">Reporte hasta</td>
                 <td><?php echo $fecha_fin; ?></td>
             </tr>
 
@@ -95,19 +105,19 @@ include ('php/controllers/consulta.controller.php');
                 <td><?php echo $sesiones_num_terapia_fisica; ?></td>
             </tr>
             <tr>
-                <td class="estilo-celda">Primera Vez</td>
+                <td class="estilo-celda">Primera Vez (TF)</td>
                 <td><?php echo $primera_vez_terapia_fisica; ?></td>
             </tr>
             <tr>
-                <td class="estilo-celda">Subsecuente</td>
+                <td class="estilo-celda">Subsecuente (TF)</td>
                 <td><?php echo $subsecuente_terapia_fisica; ?></td>
             </tr>
             <tr>
-                <td class="estilo-celda">Terapias ambulatorias</td>
+                <td class="estilo-celda">Terapias ambulatorias (TF)</td>
                 <td><?php echo $terapias_ambulatorias_terapia_fisica; ?></td>
             </tr>
             <tr>
-                <td class="estilo-celda">Terapias en Hospitalización</td>
+                <td class="estilo-celda">Terapias en Hospitalización (TF)</td>
                 <td><?php echo $terapias_hospitalizacion_terapia_fisica; ?></td>
             </tr>
             <tr>
@@ -115,19 +125,19 @@ include ('php/controllers/consulta.controller.php');
                 <td><?php echo $sesiones_num_terapia_ocupacional; ?></td>
             </tr>
             <tr>
-                <td class="estilo-celda">Primera Vez</td>
+                <td class="estilo-celda">Primera Vez (TO)</td>
                 <td><?php echo $primera_vez_terapia_ocupacional; ?></td>
             </tr>
             <tr>
-                <td class="estilo-celda">Subsecuente</td>
+                <td class="estilo-celda">Subsecuente (TO)</td>
                 <td><?php echo $subsecuente_terapia_ocupacional; ?></td>
             </tr>
             <tr>
-                <td class="estilo-celda">Terapias ambulatorias</td>
+                <td class="estilo-celda">Terapias ambulatorias (TO)</td>
                 <td><?php echo $terapias_ambulatorias_terapia_ocupacional; ?></td>
             </tr>
             <tr>
-                <td class="estilo-celda">Terapias en Hospitalización</td>
+                <td class="estilo-celda">Terapias en Hospitalización (TO)</td>
                 <td><?php echo $terapias_hospitalizacion_terapia_ocupacional; ?></td>
             </tr>
             <tr>
@@ -135,19 +145,19 @@ include ('php/controllers/consulta.controller.php');
                 <td><?php echo $sesiones_num_terapia_lenguaje; ?></td>
             </tr>
             <tr>
-                <td class="estilo-celda">Primera Vez</td>
+                <td class="estilo-celda">Primera Vez (TL)</td>
                 <td><?php echo $primera_vez_terapia_lenguaje; ?></td>
             </tr>
             <tr>
-                <td class="estilo-celda">Subsecuente</td>
+                <td class="estilo-celda">Subsecuente (TL)</td>
                 <td><?php echo $subsecuente_terapia_lenguaje; ?></td>
             </tr>
             <tr>
-                <td class="estilo-celda">Terapias ambulatorias</td>
+                <td class="estilo-celda">Terapias ambulatorias (TL)</td>
                 <td><?php echo $terapias_ambulatorias_terapia_lenguaje; ?></td>
             </tr>
             <tr>
-                <td class="estilo-celda">Terapias en Hospitalización</td>
+                <td class="estilo-celda">Terapias en Hospitalización (TL)</td>
                 <td><?php echo $terapias_hospitalizacion_terapia_lenguaje; ?></td>
             </tr>
 

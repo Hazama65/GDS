@@ -104,7 +104,13 @@ include("modal/registropaciente.php");
         </div>
     </div>
 
-
+    <!-- Contenedor para la pantalla de carga -->
+    <div id="loading-overlay" style="display: none;" class="loading">
+        <svg width="128px" height="96px">
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="back"></polyline>
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="front"></polyline>
+        </svg>
+    </div>
 
 
 
@@ -119,10 +125,15 @@ include("modal/registropaciente.php");
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script src="js/visualizacion.js"></script>
+    <!-- <script src="js/visualizacion.js"></script> -->
     <script src="js/scriptmodal.js"></script>
-    <script src="js/scripteditar.js"></script>
-    <script src="js/visualizacion_seg.js"></script>
+    <!-- <script src="js/scripteditar.js"></script> -->
+    <!-- <script src="js/visualizacion_seg.js"></script> -->
+
+    <script type="module">
+        import { mainForm } from './js/insert.js';
+        mainForm();
+    </script>
 
 
 

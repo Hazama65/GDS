@@ -3,8 +3,9 @@ session_start();
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Pragma: no-cache");
 
-if (!isset($_SESSION['valid_user'])) {
-  // El usuario no ha iniciado sesión, redirige de vuelta a la página de inicio de sesión
+// Verificar si el usuario ha iniciado sesión y si tiene el sistema correcto
+if (!isset($_SESSION['valid_user']) || $_SESSION['system_type'] !== 'personal_enf') {
+  // El usuario no ha iniciado sesión o no tiene permiso para este sistema
   header('Location: login/index.php');
   exit;
 }
@@ -90,10 +91,70 @@ include ('php/controllers/edit.controller.php');
                 </div>
 
                 <div class="col-md-4">
+                  <strong>Domicilio</strong>
+                  <input type="text" class="form-control" id="domicilio" name="domicilio" required value="<?php echo $domicilio ?>">
+                </div>
+                <div class="col-md-4">
+                  <strong>Correo personal</strong>
+                  <input type="email" class="form-control" id="email" name="email" required value="<?php echo $email ?>">
+                </div>
+                <div class="col-md-4">
+                  <strong>Teléfono personal</strong>
+                  <input type="text" class="form-control" id="telefono_personal" name="telefono_personal" required value="<?php echo $telefono_personal ?>">
+                </div>
+
+                <div class="col-md-4">
                   <strong>RFC </strong>
                   <input type="text" class="form-control" id="RFC" name="RFC" required value="<?php echo $RFC ?>">
                 </div>
 
+              </div> <br>
+
+              <div class="row">
+                <div class="col-md-4">
+                  <strong>Guarderia</strong>
+                  <select name="guarderia" id="guarderia" class="control form-control" required>
+                    <option value=""<?php if ($guarderia == '') echo 'selected'; ?>>Selecciones</option>
+                    <option value="Si"<?php if ($guarderia == 'Si') echo 'selected'; ?>>Si</option>
+                    <option value="No"<?php if ($guarderia == 'No') echo 'selected'; ?>>No</option>
+                  </select>
+                </div>
+
+                <div class="col-md-2" id="horas_guarderia" style="display: none;">
+                  <strong>Hora guardería</strong>
+                  <div class="radio-container">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" id="entrada" name="tiempo_guarderia" value="Entrada" <?php if ($tiempo_guarderia == 'Entrada') echo "checked"; ?>>
+                      <label class="form-check-label" for="entrada">Entrada</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" id="salida" name="tiempo_guarderia" value="Salida" <?php if ($tiempo_guarderia == 'Salida') echo "checked"; ?>>
+                      <label class="form-check-label" for="salida">Salida</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6" id="num_hijos" style="display: none;">
+                  <strong>Hijos</strong>
+                  <div class="checkbox-container">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="childrens_1" name="childrens_1" <?php if ($childrens_1 == 'Si') echo "checked"; ?>>
+                      <label class="form-check-label" for="childrens_1">0 a 5 años</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="childrens_2" name="childrens_2" <?php if ($childrens_2 == 'Si') echo "checked"; ?>>
+                      <label class="form-check-label" for="childrens_2">6 a 10 años</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="childrens_3" name="childrens_3" <?php if ($childrens_3 == 'Si') echo "checked"; ?>>
+                      <label class="form-check-label" for="childrens_3">11 a 15 años</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="childrens_4" name="childrens_4" <?php if ($childrens_4 == 'Si') echo "checked"; ?>>
+                      <label class="form-check-label" for="childrens_4">más de 15 años</label>
+                    </div>
+                  </div>
+                </div>
               </div> <br>
 
               <div class="row">
@@ -166,12 +227,25 @@ include ('php/controllers/edit.controller.php');
                       echo 'selected'; ?>>Eventual</option>
                     <option value="Provisional Reservada" <?php if ($tipocontrato == 'Provisional Reservada')
                       echo 'selected'; ?>>Provisional Reservada</option>
+                    <option value="Base IMSS bienestar" <?php if ($tipocontrato == 'Base IMSS bienestar') 
+                      echo 'selected'; ?>>Base IMSS bienestar</option>
+                    <option value="Subdirectora" <?php if ($tipocontrato == 'Subdirectora') 
+                      echo 'selected'; ?>>Subdirectora</option>
+                    <option value="Interinato" <?php if ($tipocontrato == 'Interinato') 
+                      echo 'selected'; ?>>Interinato</option>
+                    <option value="Otros" <?php if ($tipocontrato == 'Otros') 
+                      echo 'selected'; ?>>Otros</option>
                   </select>
+                </div>
+
+                <div class="col-md-4" id="fechaBas" style="display: none;">
+                  <strong>Fecha de basificación</strong>
+                  <input type="date" class="form-control" id="fechaBasificacion" name="fechaBasificacion" value="<?php echo $fechaBasificacion ?>">
                 </div>
 
                 <div class="col-md-4">
                   <strong>Código</strong>
-                  <input type="number" class="form-control" id="codigo" name="codigo" value="<?php echo $codigo ?>"
+                  <input type="text" class="form-control" id="codigo" name="codigo" value="<?php echo $codigo ?>"
                     required>
                 </div>
 
@@ -300,8 +374,63 @@ include ('php/controllers/edit.controller.php');
                   </select>
                 </div>
 
+                <div class="col-md-4">
+                  <strong>Horario (De: )</strong>
+                  <input type="time" class="form-control" id="horario_de" name="horario_de" value="<?php echo $horario_de ?>">
+                </div>
 
+                <div class="col-md-4">
+                  <strong>Horario (A: )</strong>
+                  <input type="time" class="form-control" id="horario_a" name="horario_a" value="<?php echo $horario_a ?>">
+                </div>
 
+                <div class="col-md-4">
+                  <strong>Cuenta con otro empleo</strong>
+                  <select name="Otro_empleo" id="Otro_empleo" class="control form-control" required>
+                    <option value=""<?php if ($Otro_empleo == '') echo 'selected'; ?>>Selecciones</option>
+                    <option value="Si"<?php if ($Otro_empleo == 'Si') echo 'selected'; ?>>Si</option>
+                    <option value="No"<?php if ($Otro_empleo == 'No') echo 'selected'; ?>>No</option>
+                  </select>
+                </div>
+
+                <div class="col-md-4" id="div_antigüedad" style="display: none;">
+                  <strong>Antigüedad</strong>
+                  <input type="text" class="form-control" id="antigüedad" name="antigüedad" value="<?php echo $antigüedad ?>">
+                </div>
+
+                <div class="col-md-4" id="div_tipo_contratacion" style="display: none;">
+                  <strong>Tipo de Contratación</strong>
+                  <select name="tipo_contratacion" id="tipo_contratacion" class="control form-control">
+                    <option value=""<?php if ($tipo_contratacion == '') echo 'selected'; ?>>Selecciones</option>
+                    <option value="Base"<?php if ($tipo_contratacion == 'Base') echo 'selected'; ?>>Base</option>
+                    <option value="Eventual"<?php if ($tipo_contratacion == 'Eventual') echo 'selected'; ?>>Eventual</option>
+                    <option value="Otro"<?php if ($tipo_contratacion == 'Otro') echo 'selected'; ?>>Otro</option>
+                  </select>
+                </div>
+
+                <div class="col-md-4" id="div_otro_contratacion" style="display: none;">
+                  <strong>Otro (Contratación)</strong>
+                  <input type="text" class="form-control" id="otro_contratacion" name="otro_contratacion" value="<?php echo $otro_contratacion ?>">
+                </div>
+
+                <div class="col-md-4" id="div_dependencia" style="display: none;">
+                  <strong>Dependencia</strong>
+                  <select name="dependencia" id="dependencia" class="control form-control">
+                    <option value=""<?php if ($dependencia == '') echo 'selected'; ?>>Selecciones</option>
+                    <option value="IMSS"<?php if ($dependencia == 'IMSS') echo 'selected'; ?>>IMSS</option>
+                    <option value="ISSSTE"<?php if ($dependencia == 'ISSSTE') echo 'selected'; ?>>ISSSTE</option>
+                    <option value="PEMEX"<?php if ($dependencia == 'PEMEX') echo 'selected'; ?>>PEMEX</option>
+                    <option value="ISEM"<?php if ($dependencia == 'ISEM') echo 'selected'; ?>>ISEM</option>
+                    <option value="ISEMYM"<?php if ($dependencia == 'ISEMYM') echo 'selected'; ?>>ISEMYM</option>
+                    <option value="SSA"<?php if ($dependencia == 'SSA') echo 'selected'; ?>>SSA</option>
+                    <option value="IMSS BIENESTAR"<?php if ($dependencia == 'IMSS BIENESTAR') echo 'selected'; ?>>IMSS BIENESTAR</option>
+                  </select>
+                </div>
+
+                <div class="col-md-4">
+                  <strong>Servicios de rotación los últimos 5 años</strong>
+                  <input type="text" class="form-control" id="rotaciones" name="rotaciones" value="<?php echo $rotaciones ?>">
+                </div>
 
               </div><br>
 
@@ -474,6 +603,11 @@ include ('php/controllers/edit.controller.php');
                   <strong>Estatus Certificación</strong>
                   <input type="text" class="form-control" id="estatus_certificacion" name="estatus_certificacion"
                     readonly value="<?php echo $estatus_certificacion ?>">
+                </div>
+
+                <div class="col-md-12">
+                  <strong>Competencias profesionales</strong>
+                  <input type="text" class="form-control" id="competencias_profesionales" name="competencias_profesionales" value="<?php echo $competencias_profesionales ?>">
                 </div>
 
                 <div class="col-md-12">
@@ -1004,6 +1138,7 @@ include ('php/controllers/edit.controller.php');
               </div> <br>
               <br>
               <div class="text-right"> <!-- Agregamos la clase text-right para alinear el contenido a la derecha -->
+                <button type="hidden" class="btn btn-danger btn-sm" id="limpiarFormularioBtn">Limpiar</button>
                 <button type="submit" class="btn btn-success btn-sm">Guardar Cambios</button>
             </form>
           </div>

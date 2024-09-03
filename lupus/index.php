@@ -1,5 +1,5 @@
 <?php
-
+/*
 session_start();
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Pragma: no-cache");
@@ -9,11 +9,12 @@ if (!isset($_SESSION['valid_user'])) {
     header('Location: ../login/index.php');
     exit;
 }
-
+*/
 require ('php/controllers/registros.controller.php');
 
 include ("modal/registrarpaciente.html");
 ?>
+
 <!DOCTYPE html>
 
 
@@ -144,9 +145,10 @@ include ("modal/registrarpaciente.html");
 
 
     <footer>
-        <a>Hospital Regional de Alta Especialidad de Ixtapaluca</a>
+       
         <p style="font-size: 10px">
-            Gestión Digital en Salud - 2024
+        Hospital Regional de Alta Especialidad de Ixtapaluca 
+        <br>Gestión Digital en Salud - 2024
         </p>
     </footer>
 

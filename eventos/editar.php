@@ -1,3 +1,6 @@
+<?php
+    include ('php/controllers/edit.controller.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -1416,9 +1419,16 @@
         <button type="submit" class="btn btn-primary" style="font-size: 14px; padding: 6px 14px;">Editar</button>
     </div><br>
 
+
+
     </div>
 
-
+    <div id="loading-overlay" style="display: none;" class="loading">
+        <svg width="128px" height="96px">
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="back"></polyline>
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="front"></polyline>
+        </svg>
+    </div>
 
 
 
@@ -1426,6 +1436,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="js/scripteditar.js"></script>
+    <script type="module">
+        import { editForm } from "./js/update.js";
+        editForm();
+    </script>
 
 
 

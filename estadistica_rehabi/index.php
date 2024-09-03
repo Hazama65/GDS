@@ -1,4 +1,15 @@
 <?php
+session_start();
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+
+// Verifica si el usuario ha iniciado sesión y si tiene el sistema correcto
+if (!isset($_SESSION['valid_user']) || $_SESSION['system_type'] !== 'estadistica_rehab') {
+    // Si el usuario no ha iniciado sesión o no tiene permiso para este sistema
+    header('Location: ../login/index.php');
+    exit;
+}
+$username = $_SESSION['valid_user'];
 require ('php/controllers/registros.controller.php');
 include ("modal/registrarpaciente.php");
 ?>
@@ -40,19 +51,24 @@ include ("modal/registrarpaciente.php");
         <div style="padding: 20px;" class="btn-group" role="group" aria-label="Basic outlined example">
 
 
-        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#CancerMama">
-            <i class="bi bi-person-add"> </i> Paciente
-        </button>
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#CancerMama">
+                <i class="bi bi-person-add"> </i> Paciente
+            </button>
+            <?php if ($username == 'estadistica_rehab'): ?>
 
-            <a href="php/export.php" class="btn btn-success">
-                <i class="bi bi-file-earmark-excel"></i> Excel
-            </a>
+                <a href="php/export.php" class="btn btn-success">
+                    <i class="bi bi-file-earmark-excel"></i> Excel
+                </a>
 
-            <a href="metricas.php">
-                <button type="button" class="btn btn-primary" target="_blank">
-                    <i class="bi bi-bar-chart"></i> Gráficas
-                </button>
-            </a>
+                <a href="metricas.php">
+                    <button type="button" class="btn btn-primary" target="_blank">
+                        <i class="bi bi-bar-chart"></i> Gráficas
+                    </button>
+                </a>
+            <?php else: ?>
+
+            <?php endif; ?>
+
         </div> <!-- cierre del <div class="btn-group" role="group" aria-label="Basic outlined example">-->
         <br><br>
 
@@ -141,6 +157,17 @@ include ("modal/registrarpaciente.php");
     <script type="module">
         import { mainForm } from './js/insert.js';
         mainForm();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cerrarSesionButton = document.getElementById('cerrar-sesion-button');
+
+            cerrarSesionButton.addEventListener('click', function () {
+                // Redirige al usuario a la página de cierre de sesión
+                window.location.href = 'php/destroysession.php';
+            });
+        });
     </script>
 
 

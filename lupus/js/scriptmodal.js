@@ -73,18 +73,47 @@ const calculaIMC = () => {
     const tallaInput = document.getElementById('talla');
     const pesoInput = document.getElementById('peso');
     const imcInput = document.getElementById('imc');
+    const descripcionInput = document.getElementById('imcdescripcion');
+
 
     const talla = parseFloat(tallaInput.value.replace(',', '.'));
     const peso = parseFloat(pesoInput.value);
+    const imc = peso / (talla * talla);
+    const descripcion = obtenerDescripcionIMC(imc);
 
     if (talla && peso) {
-        const imc = peso / (talla * talla);
 
         imcInput.value = imc.toFixed(2);
+
+        descripcionInput.value = descripcion;
     } else {
         imcInput.value = '';
+        descripcionInput.value = '';
+
     }
+    
+
 }
+
+function obtenerDescripcionIMC(imc) {
+    if (imc < 18.5) {
+    return 'Bajo peso';
+    } else if (imc >= 18.5 && imc < 25) {
+    return 'Peso normal';
+    } else if (imc >= 25 && imc < 30) {
+    return 'Sobrepeso';
+    } else if (imc >= 30 && imc < 35) {
+    return 'Obesidad grado I';
+    } else if (imc >= 35 && imc < 40) {
+    return 'Obesidad grado II';
+    } else {
+    return 'Obesidad grado III';
+    }
+    }
+
+
+
+
 
 const resultado_sledai = () => {
     let switches = [
@@ -119,6 +148,7 @@ const resultado_sledai = () => {
 
     const actualizarResultado = () => {
         suma_sledai.value = resultadoActual;
+        cat_sledai(resultadoActual)
     };
 
     switches.forEach(switchElement => {
@@ -135,7 +165,114 @@ const resultado_sledai = () => {
             actualizarResultado();
         });
     });
+
+
+    function cat_sledai(sledai) {
+        let catego_sledai = document.getElementById('Categoria_sledai');
+
+        if (sledai >= 0 && sledai <= 2) {
+            catego_sledai.value = 'Sin Actividad';
+        }else if (sledai >= 3 && sledai <= 4) {
+            catego_sledai.value = 'Leve';
+        }else if (sledai >= 5 && sledai <= 7) {
+            catego_sledai.value = 'Moderado';
+        }else if (sledai >= 8) {
+            catego_sledai.value = 'Severo';
+        }else{
+            catego_sledai.value = '';
+        }
+
+
+
+    }
 };
+
+function mostrarGradoERC() {
+    let checkboxERC = document.getElementById("ERC");
+    let gradoERCContainer = document.getElementById("grado_ERC_container");
+
+    if (checkboxERC.checked) {
+        gradoERCContainer.style.display = "block";
+    } else {
+        gradoERCContainer.style.display = "none";
+    }
+}
+
+function mostrarMeno() {
+    let checkboxmeno = document.getElementById("menopausia");
+    let menoContainer = document.getElementById("menopausia_grad_container");
+
+    if (checkboxmeno.checked) {
+        menoContainer.style.display = "block";
+    } else {
+        menoContainer.style.display = "none";
+    }
+}
+
+function mostrarCausaDefuncion() {
+    let seleccion = document.getElementById("defuncion").value;
+    let causaDefuncionContainer = document.getElementById("causa_defuncion_container");
+
+    if (seleccion === "Si") {
+        causaDefuncionContainer.style.display = "block";
+    } else {
+        causaDefuncionContainer.style.display = "none";
+    }
+}
+
+function mostrarEgo() {
+    let ego_check = document.getElementById("ego_check");
+    let ego_container = document.getElementById("div_ego");
+
+    if (ego_check.checked) {
+        ego_container.style.display = "block";
+    } else {
+        ego_container.style.display = "none";
+    }
+}
+
+function mostrar_derecha() {
+    let Uso_derecha = document.getElementById("Uso_derecha");
+    let derecha_container = document.getElementById("derecha_div");
+
+    
+    if (Uso_derecha.checked) {
+        derecha_container.style.display = "block";
+        calculo_clasifcacion();
+    } else {
+        derecha_container.style.display = "none";
+    }
+}
+
+function mostrar_izquierda() {
+    let Uso_izquierda = document.getElementById("Uso_izquierda");
+    let izquierda_container = document.getElementById("izquierda_div");
+
+    if (Uso_izquierda.checked) {
+        izquierda_container.style.display = "block";
+    } else {
+        izquierda_container.style.display = "none";
+    }
+}
+
+
+function calculo_clasifcacion () {
+    let sexo = document.getElementById('sex').value;
+    let edad = document.getElementById('edad').value;
+
+    switch (sexo) {
+        case 'Hombre':
+            console.log(edad)
+            break;
+
+        case 'Mujer':
+
+            break;
+    
+        default:
+            break;
+    }
+}
 
 // const visualizacion_tratamiento = () => {
 //     const Metrotexate = document.getElementById('Metrotexate');

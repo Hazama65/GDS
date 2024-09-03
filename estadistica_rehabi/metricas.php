@@ -1,4 +1,14 @@
 <?php
+session_start();
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+
+// Verifica si el usuario ha iniciado sesión y si tiene el sistema correcto
+if (!isset($_SESSION['valid_user']) || $_SESSION['system_type'] !== 'estadistica_rehab') {
+    // Si el usuario no ha iniciado sesión o no tiene permiso para este sistema
+    header('Location: ../login/index.php');
+    exit;
+}
 require ('php/controllers/registros.controller.php');
 ?>
 <!DOCTYPE html>
@@ -42,19 +52,15 @@ require ('php/controllers/registros.controller.php');
                     <option value="">Seleccione</option>
                     <option value="L.T.F Ana Carolina Flores Morelos">L.T.F Ana Carolina Flores Morelos</option>
                     <option value="L.T.O Ana Violeta De La Paz Gonzalez">L.T.O Ana Violeta De La Paz Gonzalez</option>
-                    <option value="L.T.O Ana Violeta De La Paz Gonzalez">L.T.O Ana Violeta De La Paz Gonzalez</option>
                     <option value="L.T.C.H Fonseca Ayala Mariana">L.T.C.H Fonseca Ayala Mariana</option>
                     <option value="L.T.C.H Katia Mayte De La Paz Gonzalez">L.T.C.H Katia Mayte De La Paz Gonzalez</option>
                     <option value="L.T.C.H Monjaras Bernal Isis Giovana">L.T.C.H Monjaras Bernal Isis Giovana</option>
                     <option value="L.T.F Aurea Guadalupe Hernández Salazar.">L.T.F Aurea Guadalupe Hernández Salazar.</option>
-                    <option value="L.T.F Aurea Guadalupe Hernández Salazar.">L.T.F Aurea Guadalupe Hernández Salazar.</option>
-                    <option value="L.T.F Brenda Roxana Monjaras Bernal">L.T.F Brenda Roxana Monjaras Bernal</option>
                     <option value="L.T.F Brenda Roxana Monjaras Bernal">L.T.F Brenda Roxana Monjaras Bernal</option>
                     <option value="L.T.F Diana Carolina Villegas Bannack.">L.T.F Diana Carolina Villegas Bannack.</option>
                     <option value="L.T.F Estephanie García Martinez">L.T.F Estephanie García Martinez</option>
                     <option value="L.T.F Juan Carlos Reyna Mayorga">L.T.F Juan Carlos Reyna Mayorga</option>
                     <option value="L.T.F Maria Teresa De Jesus Perez Rios">L.T.F Maria Teresa De Jesus Perez Rios</option>
-                    <option value="L.T.F Monserrat Ocampo García">L.T.F Monserrat Ocampo García</option>
                     <option value="L.T.F Monserrat Ocampo García">L.T.F Monserrat Ocampo García</option>
                     <option value="L.T.F Najla Karina Gelista Tovar">L.T.F Najla Karina Gelista Tovar</option>
                     <option value="L.T.F Negrete Rubio David Israel">L.T.F Negrete Rubio David Israel</option>
@@ -110,19 +116,15 @@ require ('php/controllers/registros.controller.php');
                     <option value="">Seleccione</option>
                     <option value="L.T.F Ana Carolina Flores Morelos">L.T.F Ana Carolina Flores Morelos</option>
                     <option value="L.T.O Ana Violeta De La Paz Gonzalez">L.T.O Ana Violeta De La Paz Gonzalez</option>
-                    <option value="L.T.O Ana Violeta De La Paz Gonzalez">L.T.O Ana Violeta De La Paz Gonzalez</option>
                     <option value="L.T.C.H Fonseca Ayala Mariana">L.T.C.H Fonseca Ayala Mariana</option>
                     <option value="L.T.C.H Katia Mayte De La Paz Gonzalez">L.T.C.H Katia Mayte De La Paz Gonzalez</option>
                     <option value="L.T.C.H Monjaras Bernal Isis Giovana">L.T.C.H Monjaras Bernal Isis Giovana</option>
                     <option value="L.T.F Aurea Guadalupe Hernández Salazar.">L.T.F Aurea Guadalupe Hernández Salazar.</option>
-                    <option value="L.T.F Aurea Guadalupe Hernández Salazar.">L.T.F Aurea Guadalupe Hernández Salazar.</option>
-                    <option value="L.T.F Brenda Roxana Monjaras Bernal">L.T.F Brenda Roxana Monjaras Bernal</option>
                     <option value="L.T.F Brenda Roxana Monjaras Bernal">L.T.F Brenda Roxana Monjaras Bernal</option>
                     <option value="L.T.F Diana Carolina Villegas Bannack.">L.T.F Diana Carolina Villegas Bannack.</option>
                     <option value="L.T.F Estephanie García Martinez">L.T.F Estephanie García Martinez</option>
                     <option value="L.T.F Juan Carlos Reyna Mayorga">L.T.F Juan Carlos Reyna Mayorga</option>
                     <option value="L.T.F Maria Teresa De Jesus Perez Rios">L.T.F Maria Teresa De Jesus Perez Rios</option>
-                    <option value="L.T.F Monserrat Ocampo García">L.T.F Monserrat Ocampo García</option>
                     <option value="L.T.F Monserrat Ocampo García">L.T.F Monserrat Ocampo García</option>
                     <option value="L.T.F Najla Karina Gelista Tovar">L.T.F Najla Karina Gelista Tovar</option>
                     <option value="L.T.F Negrete Rubio David Israel">L.T.F Negrete Rubio David Israel</option>

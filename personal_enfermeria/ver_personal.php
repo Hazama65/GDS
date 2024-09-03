@@ -3,8 +3,9 @@ session_start();
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Pragma: no-cache");
 
-if (!isset($_SESSION['valid_user'])) {
-  // El usuario no ha iniciado sesión, redirige de vuelta a la página de inicio de sesión
+// Verificar si el usuario ha iniciado sesión y si tiene el sistema correcto
+if (!isset($_SESSION['valid_user']) || $_SESSION['system_type'] !== 'personal_enf') {
+  // El usuario no ha iniciado sesión o no tiene permiso para este sistema
   header('Location: login/index.php');
   exit;
 }
@@ -64,6 +65,21 @@ require ('php/controllers/ver_personal.controller.php');
               </tr>
 
               <tr>
+                <td>Domicilio</td>
+                <th><?php echo $domicilio ?></th>
+              </tr>
+
+              <tr>
+                <td>Correo personal</td>
+                <th><?php echo $email ?></th>
+              </tr>
+
+              <tr>
+                <td>Teléfono personal</td>
+                <th><?php echo $telefono_personal ?></th>
+              </tr>
+
+              <tr>
                 <td>RFC</td>
                 <th><?php echo $RFC ?></th>
               </tr>
@@ -116,6 +132,10 @@ require ('php/controllers/ver_personal.controller.php');
               <th><?php echo $tipocontrato ?></th>
             </tr>
             <tr>
+              <td>Fecha de basificación</td>
+              <th><?php echo $fechaBasificacion ?></th>
+            </tr>
+            <tr>
               <td>Código</td>
               <th><?php echo $codigo ?></th>
             </tr>
@@ -134,6 +154,10 @@ require ('php/controllers/ver_personal.controller.php');
             <tr>
               <td>Servicio</td>
               <th><?php echo $servicio ?></th>
+            </tr>
+            <tr>
+              <td>Horario</td>
+              <th><?php echo $horario_de ?> - <?php echo $horario_a ?></th>
             </tr>
           </table>
         </div>
