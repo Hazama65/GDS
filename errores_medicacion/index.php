@@ -61,11 +61,31 @@ include("modal/registropaciente.php");
                 <input type="text" id="search" placeholder="Buscar ...">
                 <ul id="patient-list">
 
-                <li class="patient-item bi bi-person-badge"  data-id-paciente="10">REYES ANSELMO LEONARDO
-                
-                    <a href="editar.php"><button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .60rem;"> Editar </button></a>
-                    <a href="seguimiento.php"><button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .60rem;"> Seguimiento </button></a>
-                </li>
+                <?php
+                    if (!empty($data)) {
+                        // Comienza a generar la lista de pacientes
+                        echo '<ul class="patient-list" >';
+                        foreach ($data as $datos) {
+                            $id_paciente = $datos["id_paciente"];
+                            $nombrePaciente = $datos["nombre_paciente"];
+
+                            // Genera un elemento de lista para cada paciente
+                            echo '<li class="patient-item" data-id-paciente="' . $id_paciente . '">';
+                            echo $nombrePaciente;
+                            echo '<a href="editar.php?id=' . $id_paciente . '">';
+                            echo '<button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Editar</button>';
+                            echo '</a>';
+                            echo '<a href="seguimiento.php?id=' . $id_paciente . '">';
+                            echo '<button type="button" class="btn btn-secondary" style="color:white; --bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Seguimiento</button>';
+                            echo '</a>';
+                            echo '</li>';
+                        }
+                        echo '</ul>';
+                    } else {
+                        echo "No se encontraron pacientes";
+                    }
+                ?>
+                    <!-- Aquí debe ir el script para consultar los pacientes en la base de datos-->
                 </ul>
 
             </div> <!-- cierre del <div id="patient-list-container">-->

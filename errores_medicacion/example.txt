@@ -107,3 +107,10 @@ nombre_enfermeria
 nombre_medico
 nombre_cisfa
 nombre_personallabora
+
+
+
+value="<?php echo $uwu; ?>"
+<?php if ($ewe== 'uwu')echo 'selected'; ?>
+
+

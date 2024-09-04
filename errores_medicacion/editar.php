@@ -1,3 +1,6 @@
+<?php
+include ('php/controllers/edit.controller.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,17 +51,19 @@
                         <fieldset>
                             <legend>
                                 <div class="row">
+                                <input type="hidden" id="id_paciente" name="id_paciente" value="<?php echo $id_paciente; ?>">
+
 
                                     <div class="col-md-4">
                                         <strong style="font-size: 12px;">Nombre del Paciente</strong>
                                         <input id="nombre_paciente" name="nombre_paciente" type="text" class="control form-control"
-                                            value="" style="font-size: 12px;">
+                                            value="<?php echo $nombre_paciente; ?>" style="font-size: 12px;">
                                     </div>
 
 
                                     <div class="col-md-4">
                                         <strong style="font-size: 12px;">Cama</strong>
-                                        <input id="cama" name="cama" type="text" class="control form-control" value=""
+                                        <input id="cama" name="cama" type="text" class="control form-control" value="<?php echo $cama; ?>"
                                             style="font-size: 12px;">
                                     </div>
 
@@ -66,37 +71,37 @@
                                     <div class="col-md-4">
                                         <strong style="font-size: 12px;">Servicio</strong>
                                         <select name="servicio" id="servicio" class="form-select" style="font-size: 12px;">
-                                            <option value="Seleccione">Seleccione</option>
-                                            <option value="Imagen">Imagen</option>
-                                            <option value="Laboratorio">Laboratorio</option>
-                                            <option value="Patología">Patología</option>
-                                            <option value="Urgencias">Urgencias</option>
-                                            <option value="Banco De Sangre">Banco De Sangre</option>
-                                            <option value="Quimioterapia">Quimioterapia</option>
-                                            <option value="Radioterapia">Radioterapia</option>
-                                            <option value="Braquiterapia">Braquiterapia</option>
-                                            <option value="Rehabilitación">Rehabilitación</option>
-                                            <option value="Endoscopia">Endoscopia</option>
-                                            <option value="Cirugía Ambulatoria">Cirugía Ambulatoria</option>
-                                            <option value="Hemodiálisis">Hemodiálisis</option>
-                                            <option value="Hematología">Hematología</option>
-                                            <option value="Hospitalización Pediatría">Hospitalización Pediatría</option>
-                                            <option value="Hospitalización 2do Piso">Hospitalización 2do Piso</option>
-                                            <option value="Hospitalización 3er Piso">Hospitalización 3er Piso</option>
-                                            <option value="Hospitalización 4to Piso">Hospitalización 4to Piso</option>
-                                            <option value="Gineco-Obstetricia">Gineco-Obstetricia</option>
-                                            <option value="Clínica De Heridas">Clínica De Heridas</option>
-                                            <option value="Clínica De Catéteres">Clínica De Catéteres</option>
-                                            <option value="Quirófano">Quirófano</option>
-                                            <option value="Clínica Del Dolor">Clínica Del Dolor</option>
-                                            <option value="Hemodinamia">Hemodinamia</option>
-                                            <option value="Inhaloterapia">Inhaloterapia</option>
-                                            <option value="UTIP">UTIP</option>
-                                            <option value="UTIHP">UTIHP</option>
-                                            <option value="UCIN">UCIN</option>
-                                            <option value="UTIN">UTIN</option>
-                                            <option value="UCIA">UCIA</option>
-                                            <option value="UTIA">UTIA</option>
+                                            <option value="Seleccione"<?php if ($servicio== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                                            <option value="Imagen"<?php if ($servicio== 'Imagen')echo 'selected'; ?>>Imagen</option>
+                                            <option value="Laboratorio"<?php if ($servicio== 'Laboratorio')echo 'selected'; ?>>Laboratorio</option>
+                                            <option value="Patología"<?php if ($servicio== 'Patología')echo 'selected'; ?>>Patología</option>
+                                            <option value="Urgencias"<?php if ($servicio== 'Urgencias')echo 'selected'; ?>>Urgencias</option>
+                                            <option value="Banco De Sangre"<?php if ($servicio== 'Banco De Sangre')echo 'selected'; ?>>Banco De Sangre</option>
+                                            <option value="Quimioterapia"<?php if ($servicio== 'Quimioterapia')echo 'selected'; ?>>Quimioterapia</option>
+                                            <option value="Radioterapia"<?php if ($servicio== 'Radioterapia')echo 'selected'; ?>>Radioterapia</option>
+                                            <option value="Braquiterapia"<?php if ($servicio== 'Braquiterapia')echo 'selected'; ?>>Braquiterapia</option>
+                                            <option value="Rehabilitación"<?php if ($servicio== 'Rehabilitación')echo 'selected'; ?>>Rehabilitación</option>
+                                            <option value="Endoscopia"<?php if ($servicio== 'Endoscopia')echo 'selected'; ?>>Endoscopia</option>
+                                            <option value="Cirugía Ambulatoria"<?php if ($servicio== 'Cirugía Ambulatoria')echo 'selected'; ?>>Cirugía Ambulatoria</option>
+                                            <option value="Hemodiálisis"<?php if ($servicio== 'Hemodiálisis')echo 'selected'; ?>>Hemodiálisis</option>
+                                            <option value="Hematología"<?php if ($servicio== 'Hematología')echo 'selected'; ?>>Hematología</option>
+                                            <option value="Hospitalización Pediatría"<?php if ($servicio== 'Hospitalización Pediatría')echo 'selected'; ?>>Hospitalización Pediatría</option>
+                                            <option value="Hospitalización 2do Piso"<?php if ($servicio== 'Hospitalización 2do Piso')echo 'selected'; ?>>Hospitalización 2do Piso</option>
+                                            <option value="Hospitalización 3er Piso"<?php if ($servicio== 'Hospitalización 3er Piso')echo 'selected'; ?>>Hospitalización 3er Piso</option>
+                                            <option value="Hospitalización 4to Piso"<?php if ($servicio== 'Hospitalización 4to Piso')echo 'selected'; ?>>Hospitalización 4to Piso</option>
+                                            <option value="Gineco-Obstetricia"<?php if ($servicio== 'Gineco-Obstetricia')echo 'selected'; ?>>Gineco-Obstetricia</option>
+                                            <option value="Clínica De Heridas"<?php if ($servicio== 'Clínica De Heridas')echo 'selected'; ?>>Clínica De Heridas</option>
+                                            <option value="Clínica De Catéteres"<?php if ($servicio== 'Clínica De Catéteres')echo 'selected'; ?>>Clínica De Catéteres</option>
+                                            <option value="Quirófano"<?php if ($servicio== 'Quirófano')echo 'selected'; ?>>Quirófano</option>
+                                            <option value="Clínica Del Dolor"<?php if ($servicio== 'Clínica Del Dolor')echo 'selected'; ?>>Clínica Del Dolor</option>
+                                            <option value="Hemodinamia"<?php if ($servicio== 'Hemodinamia')echo 'selected'; ?>>Hemodinamia</option>
+                                            <option value="Inhaloterapia"<?php if ($servicio== 'Inhaloterapia')echo 'selected'; ?>>Inhaloterapia</option>
+                                            <option value="UTIP"<?php if ($servicio== 'UTIP')echo 'selected'; ?>>UTIP</option>
+                                            <option value="UTIHP"<?php if ($servicio== 'UTIHP')echo 'selected'; ?>>UTIHP</option>
+                                            <option value="UCIN"<?php if ($servicio== 'UCIN')echo 'selected'; ?>>UCIN</option>
+                                            <option value="UTIN"<?php if ($servicio== 'UTIN')echo 'selected'; ?>>UTIN</option>
+                                            <option value="UCIA"<?php if ($servicio== 'UCIA')echo 'selected'; ?>>UCIA</option>
+                                            <option value="UTIA"<?php if ($servicio== 'UTIA')echo 'selected'; ?>>UTIA</option>
                                         </select>
                                     </div>
                                 </div>
@@ -120,22 +125,22 @@
 
                                     <div class="col-md-6">
                                         <strong style="font-size: 12px; ">Fecha de Reporte (CIFV)</strong>
-                                        <input id="fecha_cifv" name="fecha_cifv" type="date" value=""
+                                        <input id="fecha_cifv" name="fecha_cifv" type="date" value="<?php echo $fecha_cifv; ?>"
                                             class="control form-control" style="font-size: 12px;">
                                     </div>
 
                                     <div class="col-md-6">
                                         <strong style="font-size: 12px; ">Fecha de Error de Medicación</strong>
-                                        <input id="fecha_medicacion" name="fecha_medicacion" type="date" value=""
+                                        <input id="fecha_medicacion" name="fecha_medicacion" type="date" value="<?php echo $fecha_medicacion; ?>"
                                             class="control form-control" style="font-size: 12px;">
                                     </div>
 
                                     <div class="col-md-6">
                                         <strong style="font-size: 12px;">Utilización del Medicamento Erroneo en el Paciente</strong>
                                         <select name="uti_medicamento" id="uti_medicamento" class="form-select" style="font-size: 12px;">
-                                            <option value="Seleccione">Seleccione</option>
-                                            <option value="No">No</option>
-                                            <option value="Si">Si</option>
+                                            <option value="Seleccione"<?php if ($uti_medicamento== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                                            <option value="No"<?php if ($uti_medicamento== 'No')echo 'selected'; ?>>No</option>
+                                            <option value="Si"<?php if ($uti_medicamento== 'Si')echo 'selected'; ?>>Si</option>
                                         </select>
                                     </div>
 
@@ -143,9 +148,9 @@
                                     <div class="col-md-6">
                                         <strong style="font-size: 12px;">Hubo Consecuncia en el Paciente</strong>
                                         <select name="consecuencia_px" id="consecuencia_px" class="form-select" style="font-size: 12px;">
-                                            <option value="Seleccione">Seleccione</option>
-                                            <option value="No">No</option>
-                                            <option value="Si">Si</option>
+                                            <option value="Seleccione"<?php if ($consecuencia_px== 'Seleccione')echo 'selected'; ?>>Seleccione</option>
+                                            <option value="No"<?php if ($consecuencia_px== 'No')echo 'selected'; ?>>No</option>
+                                            <option value="Si"<?php if ($consecuencia_px== 'Si')echo 'selected'; ?>>Si</option>
                                         </select>
                                     </div>
 
@@ -153,10 +158,10 @@
                                     <div class="col-md-12">
                                         <strong style="font-size: 12px;">Medicamento Involucrado</strong>
                                         <select name="realizo_investigacion" id="realizo_investigacion" class="form-select" style="font-size: 12px;">
-                                            <option value="">Seleccione</option>
-                                            <option value="Medicamentos Involucrados Uno">Medicamentos Involucrados Uno</option>
-                                            <option value="Medicamentos Involucrado Dos">Medicamentos Involucrado Dos</option>
-                                            <option value="Medicamentos Involucrado Tres">Medicamentos Involucrado Tres</option>
+                                            <option value=""<?php if ($realizo_investigacion== '')echo 'selected'; ?>>Seleccione</option>
+                                            <option value="Medicamentos Involucrados Uno"<?php if ($realizo_investigacion== 'Medicamentos Involucrados Uno')echo 'selected'; ?>>Medicamentos Involucrados Uno</option>
+                                            <option value="Medicamentos Involucrado Dos"<?php if ($realizo_investigacion== 'Medicamentos Involucrado Dos')echo 'selected'; ?>>Medicamentos Involucrado Dos</option>
+                                            <option value="Medicamentos Involucrado Tres"<?php if ($realizo_investigacion== 'Medicamentos Involucrado Tres')echo 'selected'; ?>>Medicamentos Involucrado Tres</option>
                                         </select>
                                     </div>
 
@@ -179,53 +184,53 @@
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Denominación Genérica </strong>
-                                                        <input id="Denominacion" name="Denominacion" type="text" class="control form-control" value=""
+                                                        <input id="Denominacion" name="Denominacion" type="text" class="control form-control" value="<?php echo $Denominacion; ?>"
                                                             style="font-size: 12px;">
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Concentración</strong>
-                                                        <input id="Concentracion" name="Concentracion" type="text" class="control form-control" value=""
+                                                        <input id="Concentracion" name="Concentracion" type="text" class="control form-control" value="<?php echo $Concentracion; ?>"
                                                             style="font-size: 12px;">
                                                     </div>
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Fabricante</strong>
-                                                        <input id="Fabricante" name="Fabricante" type="text" class="control form-control" value=""
+                                                        <input id="Fabricante" name="Fabricante" type="text" class="control form-control" value="<?php echo $Fabricante; ?>"
                                                             style="font-size: 10px;">
                                                     </div>
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">No.Lote</strong>
-                                                        <input id="Lote" name="Lote" type="text" class="control form-control" value=""
+                                                        <input id="Lote" name="Lote" type="text" class="control form-control" value="<?php echo $Lote; ?>"
                                                             style="font-size: 10px;">
                                                     </div>
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Caducidad</strong>
-                                                        <input id="Caducidad" name="Caducidad" type="text" class="control form-control" value=""
+                                                        <input id="Caducidad" name="Caducidad" type="text" class="control form-control" value="<?php echo $Caducidad; ?>"
                                                             style="font-size: 10px;">
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Forma Farmacéutica</strong>
-                                                        <input id="Forma" name="Forma" type="text" class="control form-control" value=""
+                                                        <input id="Forma" name="Forma" type="text" class="control form-control" value="<?php echo $Forma; ?>"
                                                             style="font-size: 10px;">
                                                     </div>
 
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Dosis</strong>
-                                                        <input id="Dosis" name="Dosis" type="text" class="control form-control" value=""
+                                                        <input id="Dosis" name="Dosis" type="text" class="control form-control" value="<?php echo $Dosis; ?>"
                                                             style="font-size: 10px;">
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Via de Administración</strong>
-                                                        <input id="Via_Administracion" name="Via_Administracion" type="text" class="control form-control" value=""
+                                                        <input id="Via_Administracion" name="Via_Administracion" type="text" class="control form-control" value="<?php echo $Via_Administracion; ?>"
                                                             style="font-size: 10px;">
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Intervalo de Administración</strong>
-                                                        <input id="Intervalo_Administracion" name="Intervalo_Administracion" type="text" class="control form-control" value=""
+                                                        <input id="Intervalo_Administracion" name="Intervalo_Administracion" type="text" class="control form-control" value="<?php echo $Intervalo_Administracion; ?>"
                                                             style="font-size: 10px;">
                                                     </div>
 
