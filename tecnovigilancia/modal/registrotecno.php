@@ -35,17 +35,17 @@
 
                                 <div class="col-md-3">
                                     <strong style="font-size: 12PX; ">Fecha de Nacimiento</strong>
-                                    <input id="fecha" name="fecha" type="date" value="" class="control form-control" style="font-size: 12px;" readonly>
+                                    <input id="fecha" name="fecha" type="date" value="" class="control form-control" style="font-size: 12px;">
                                 </div>
 
                                 <div class="col-md-3">
                                     <strong style="font-size: 12PX;">Edad</strong>
-                                    <input id="edad" name="edad" type="number" class="control form-control" value="" style="font-size: 12px;" readonly>
+                                    <input id="edad" name="edad" type="number" class="control form-control" value="" style="font-size: 12px;">
                                 </div>
 
                                 <div class="col-md-2">
                                     <strong style="font-size: 12PX;">Sexo</strong>
-                                    <input type="text" class="control form-control" id="sexo" name="sexo" style="font-size: 12px;" readonly>
+                                    <input type="text" class="control form-control" id="sexo" name="sexo" style="font-size: 12px;">
                                 </div>
 
 
@@ -140,26 +140,14 @@
                                 </div>
 
 
-                                <div class="col-md-4" id="personal_Otro">
+                                <div class="col-md-4" id="personal_Otro" style="display:none;">
                                     <strong style="font-size: 12px;">Otro</strong>
                                     <input id="personotro" name="personotro" type="text" value=""
                                         class="control form-control" style="font-size: 12px;">
                                 </div>
 
 
-                                <div class="col-md-4">
-                                    <strong style="font-size: 12px;">Hospitalizacion</strong>
-                                    <select name="Hospitalizacion" id="Hospitalizacion" class="form-select" style="font-size: 12px;">
-                                        <option value="">Seleccione</option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                    </select>
-                                </div>
+            
 
                             </div>
 
@@ -253,6 +241,12 @@
                                         <option value="No Hubo Daño O Lesión">No Hubo Daño O Lesión</option>
                                         <option value="Otro">Otro</option>
                                     </select>
+                                </div>
+
+                                <div class="col-md-4" id="dañogenerado_Otro" style="display:none;">
+                                    <strong style="font-size: 12px;">Otro</strong>
+                                    <input id="generadootro_daño" name="generadootro_daño" type="text" value=""
+                                        class="control form-control" style="font-size: 12px;">
                                 </div>
 
 

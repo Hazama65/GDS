@@ -16,8 +16,8 @@
         <thead>
 
             <tr>
-                <th scope="col" style="background-color:rgb(62, 104, 170,0.5);"> Datos del Paciente </th>
-                <th scope="col" style="background-color: rgb(62, 104, 170,0.5);"> </th>
+                <th scope="col" style="background-color:rgb(42, 157, 143);"> Datos del Generales</th>
+                <th scope="col" style="background-color: rgb(42, 157, 143);"> </th>
             </tr>
         </thead>
 
@@ -29,11 +29,11 @@
                 <td></td>
             </tr>
             <tr>
-                <td class="estilo-celda">CURP</td>
+                <td class="estilo-celda">Cama</td>
                 <td></td>
             </tr>
             <tr>
-                <td class="estilo-celda">Fecha de Nacimiento</td>
+                <td class="estilo-celda">Servicio</td>
                 <td></td>
             </tr>
             <tr>

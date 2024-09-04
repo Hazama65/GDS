@@ -327,7 +327,7 @@ h5.bi {
 }
 
 .hidden {
-    display: none;    
+    display: none;
 }
 
 
@@ -349,30 +349,46 @@ h5.bi {
 
 
 .btn-circular {
-    width: 100px; /* Ajusta el tamaño según tu preferencia */
-    height: 39px; /* Debe ser igual al ancho para hacer el botón circular */
-    border-radius: 10px; /* Hace que el botón sea circular */
-    background-color: #0066ff; /* Color de fondo */
-    border: none; /* Elimina el borde */
-    color: white; /* Color del texto */
-    display: flex; /* Centra el contenido */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.2); /* Sombra para el botón */
-    transition: background-color 0.3s ease; /* Transición para el efecto hover */
+    width: 100px;
+    /* Ajusta el tamaño según tu preferencia */
+    height: 39px;
+    /* Debe ser igual al ancho para hacer el botón circular */
+    border-radius: 10px;
+    /* Hace que el botón sea circular */
+    background-color: #0066ff;
+    /* Color de fondo */
+    border: none;
+    /* Elimina el borde */
+    color: white;
+    /* Color del texto */
+    display: flex;
+    /* Centra el contenido */
+    justify-content: center;
+    /* Centra el contenido horizontalmente */
+    align-items: center;
+    /* Centra el contenido verticalmente */
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.2);
+    /* Sombra para el botón */
+    transition: background-color 0.3s ease;
+    /* Transición para el efecto hover */
 }
 
 .btn-circular:hover {
-    background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    background-color: #0056b3;
+    /* Cambia el color de fondo al pasar el mouse */
+    cursor: pointer;
+    /* Cambia el cursor al pasar el mouse */
 }
 
 
 .input-group {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
-    align-items: center; /* Centra verticalmente los elementos */
-    gap: 1px; /* Espacio entre los elementos */
+    flex-wrap: wrap;
+    /* Permite que los elementos se ajusten en varias líneas si es necesario */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    gap: 1px;
+    /* Espacio entre los elementos */
 }
 
 
@@ -619,36 +635,36 @@ fieldset {
 
 
 
-input[type="checkbox"]:checked + label:before,
-input[type="radio"]:checked + label:before {
+input[type="checkbox"]:checked+label:before,
+input[type="radio"]:checked+label:before {
     border-color: #0fbf12;
 }
 
-input[type="checkbox"]:checked:disabled + label,
-input[type="radio"]:checked:disabled + label {
+input[type="checkbox"]:checked:disabled+label,
+input[type="radio"]:checked:disabled+label {
     background: #ccc;
     color: #fff !important;
 }
 
-input[type="checkbox"]:checked:disabled + label:before,
-input[type="radio"]:checked:disabled + label:before {
+input[type="checkbox"]:checked:disabled+label:before,
+input[type="radio"]:checked:disabled+label:before {
     border-color: #bdbdbd;
 }
 
 
 /* Estilos para radio buttons */
-input[type="radio"] + label {
+input[type="radio"]+label {
     color: rgb(86, 82, 82);
     font-weight: bold;
     line-height: 3em;
     cursor: pointer;
 }
 
-input[type="radio"]:checked + label {
+input[type="radio"]:checked+label {
     color: rgb(17, 17, 17);
 }
 
-input[type="radio"] + label:before {
+input[type="radio"]+label:before {
     content: "";
     width: 20px;
     height: 20px;
@@ -660,7 +676,7 @@ input[type="radio"] + label:before {
 }
 
 
-input[type="radio"]:checked + label:before {
+input[type="radio"]:checked+label:before {
     border-color: #0fbf12;
     background: #0fbf12;
 }
@@ -669,7 +685,7 @@ input[type="radio"] {
     display: none;
 }
 
-input[type="radio"]:checked + label:after {
+input[type="radio"]:checked+label:after {
     content: "";
     width: 0;
     height: 0;
@@ -680,7 +696,43 @@ input[type="radio"]:checked + label:after {
     border-radius: 100%;
 }
 
+.semaforo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.semaforo {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    /* Ajusta según el tamaño deseado */
+    margin-top: 10px;
+}
+
+.circle {
+    width: 30px;
+    /* Ajusta el tamaño de los círculos */
+    height: 35px;
+    border-radius: 80%;
+    background-color: #ccc;
+    /* Color por defecto */
+    transition: background-color 0.3s ease;
+}
+
+.red.active {
+    background-color: red;
+}
+
+.yellow.active {
+    background-color: #fcad44;
+}
+
+.green.active {
+    background-color: green;
+}
+
 
 .hidden {
-    display: none;    
+    display: none;
 }

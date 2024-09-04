@@ -59,7 +59,7 @@ include("modal/registrotecno.php");
 
                     <li class="patient-item bi bi-person-badge" data-id-paciente="10">REYES ANSELMO LEONARDO
 
-                        <a href="editar.php"><button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .60rem;"> Editar </button></a>
+                       
                         <a href="seguimiento.php"><button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .60rem;"> Seguimiento </button></a>
                     </li>
                 </ul>
