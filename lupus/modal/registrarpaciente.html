@@ -782,14 +782,14 @@
 
                             <div class="col-md-12">
                                 <strong>USG Doppler Carotideo</strong>
-                                <select class="form-control" name="doppler" id="doppler">
+                                <select class="form-control" name="doppler" id="doppler" onchange="mostrarUso()">
                                     <option value="">Seleccione...</option>
                                     <option value="Si">Sí</option>
                                     <option value="No">No</option>
                                 </select>
                             </div>
                             
-                            <div class="col-md-12">
+                            <div class="col-md-12" id="div_uso_usg" style="display: none;">
                                 <strong>USG Uso</strong>
                                 <div class="row">
 
@@ -823,12 +823,12 @@
     
                                 <div class="col-md-12" id="campoGrosor">
                                     <strong>Grosor de intima</strong>
-                                    <input class="form-control" type="number" name="grosor_derecha" id="grosor_derecha">
+                                    <input class="form-control" type="number" name="grosor_derecha" id="grosor_derecha" step="0.01" min="0" onblur="calculo_clasifcacion()">
                                 </div>
     
                                 <div class="col-md-12" id="campoGrosor">
                                     <strong>Clasificacion</strong>
-                                    <input class="form-control" type="number" name="clasificacion_derecha" id="clasificacion_derecha">
+                                    <input class="form-control" type="text" name="clasificacion_derecha" id="clasificacion_derecha">
                                 </div>
     
                                 <div class="col-md-12">
@@ -853,12 +853,12 @@
     
                                 <div class="col-md-12" id="campoGrosor">
                                     <strong>Grosor de intima</strong>
-                                    <input class="form-control" type="number" name="grosor_izquierda" id="grosor_izquierda">
+                                    <input class="form-control" type="number" name="grosor_izquierda" id="grosor_izquierda" step="0.01" min="0" onblur="calculo_clasifcacion()">
                                 </div>
     
                                 <div class="col-md-12" id="campoGrosor">
                                     <strong>Clasificacion</strong>
-                                    <input class="form-control" type="number" name="clasificacion_izquierda" id="clasificacion_izquierda">
+                                    <input class="form-control" type="text" name="clasificacion_izquierda" id="clasificacion_izquierda">
                                 </div>
     
                                 <div class="col-md-12">

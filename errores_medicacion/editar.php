@@ -213,19 +213,19 @@
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Dosis</strong>
-                                                        <input id=" Dosis" name="Dosis" type="text" class="control form-control" value=""
+                                                        <input id="Dosis" name="Dosis" type="text" class="control form-control" value=""
                                                             style="font-size: 10px;">
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Via de Administración</strong>
-                                                        <input id=" Via_Administracion" name="Via_Administracion" type="text" class="control form-control" value=""
+                                                        <input id="Via_Administracion" name="Via_Administracion" type="text" class="control form-control" value=""
                                                             style="font-size: 10px;">
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Intervalo de Administración</strong>
-                                                        <input id=" Intervalo_Administracion" name="Intervalo_Administracion" type="text" class="control form-control" value=""
+                                                        <input id="Intervalo_Administracion" name="Intervalo_Administracion" type="text" class="control form-control" value=""
                                                             style="font-size: 10px;">
                                                     </div>
 
@@ -288,19 +288,19 @@
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Dosis</strong>
-                                                        <input id=" Dosis1" name="Dosis1" type="text" class="control form-control" value=""
+                                                        <input id="Dosis1" name="Dosis1" type="text" class="control form-control" value=""
                                                             style="font-size: 10px;">
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Via de Administración</strong>
-                                                        <input id=" Via_Administracion1" name="Via_Administracion1" type="text" class="control form-control" value=""
+                                                        <input id="Via_Administracion1" name="Via_Administracion1" type="text" class="control form-control" value=""
                                                             style="font-size: 10px;">
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Intervalo de Administración</strong>
-                                                        <input id=" Intervalo_Administracion1" name="Intervalo_Administracion1" type="text" class="control form-control" value=""
+                                                        <input id="Intervalo_Administracion1" name="Intervalo_Administracion1" type="text" class="control form-control" value=""
                                                             style="font-size: 10px;">
                                                     </div>
 
@@ -376,19 +376,19 @@
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Dosis</strong>
-                                                        <input id=" Dosis3" name="Dosis3" type="text" class="control form-control" value=""
+                                                        <input id="Dosis3" name="Dosis3" type="text" class="control form-control" value=""
                                                             style="font-size: 10px;">
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Via de Administración</strong>
-                                                        <input id=" Via_Administracion3" name="Via_Administracion3" type="text" class="control form-control" value=""
+                                                        <input id="Via_Administracion3" name="Via_Administracion3" type="text" class="control form-control" value=""
                                                             style="font-size: 10px;">
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Intervalo de Administración</strong>
-                                                        <input id=" Intervalo_Administracion3" name="Intervalo_Administracion3" type="text" class="control form-control" value=""
+                                                        <input id="Intervalo_Administracion3" name="Intervalo_Administracion3" type="text" class="control form-control" value=""
                                                             style="font-size: 10px;">
                                                     </div>
 
@@ -644,7 +644,7 @@
 
                                     <div class="col-md-12">
                                         <strong style="font-size: 12px;">Medicamento Involucrado</strong>
-                                        <select name="realizo_investigacion" id="realizo_investigacion" class="form-select" style="font-size: 12px;">
+                                        <select name="realizo_investigacion_1" id="realizo_investigacion_1" class="form-select" style="font-size: 12px;">
                                             <option value="">Seleccione</option>
                                             <option value="Medicamentos Involucrados Uno">Medicamentos Involucrados Uno</option>
                                             <option value="Medicamentos Involucrado Dos">Medicamentos Involucrado Dos</option>
@@ -705,19 +705,19 @@
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Dosis</strong>
-                                                        <input id=" Dosis_editar1" name="Dosis_editar1" type="text" class="control form-control" value=""
+                                                        <input id="Dosis_editar1" name="Dosis_editar1" type="text" class="control form-control" value=""
                                                             style="font-size: 10px;">
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Via de Administración</strong>
-                                                        <input id=" Via_Administracion_editar1" name="Via_Administracion_editar1" type="text" class="control form-control" value=""
+                                                        <input id="Via_Administracion_editar1" name="Via_Administracion_editar1" type="text" class="control form-control" value=""
                                                             style="font-size: 10px;">
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Intervalo de Administración</strong>
-                                                        <input id=" Intervalo_Administracion_editar1" name="Intervalo_Administracion_editar1" type="text" class="control form-control" value=""
+                                                        <input id="Intervalo_Administracion_editar1" name="Intervalo_Administracion_editar1" type="text" class="control form-control" value=""
                                                             style="font-size: 10px;">
                                                     </div>
 
@@ -781,19 +781,19 @@
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Dosis</strong>
-                                                        <input id=" Dosis_editar2" name="Dosis_editar2" type="text" class="control form-control" value=""
+                                                        <input id="Dosis_editar2" name="Dosis_editar2" type="text" class="control form-control" value=""
                                                             style="font-size: 10px;">
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Via de Administración</strong>
-                                                        <input id=" Via_Administracion_editar2" name="Via_Administracion_editar2" type="text" class="control form-control" value=""
+                                                        <input id="Via_Administracion_editar2" name="Via_Administracion_editar2" type="text" class="control form-control" value=""
                                                             style="font-size: 10px;">
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Intervalo de Administración</strong>
-                                                        <input id=" Intervalo_Administracion_editar2" name="Intervalo_Administracion_editar2" type="text" class="control form-control" value=""
+                                                        <input id="Intervalo_Administracion_editar2" name="Intervalo_Administracion_editar2" type="text" class="control form-control" value=""
                                                             style="font-size: 10px;">
                                                     </div>
 
@@ -859,19 +859,19 @@
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Dosis</strong>
-                                                        <input id=" Dosis_editar3" name="Dosis_editar3" type="text" class="control form-control" value=""
+                                                        <input id="Dosis_editar3" name="Dosis_editar3" type="text" class="control form-control" value=""
                                                             style="font-size: 10px;">
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Via de Administración</strong>
-                                                        <input id=" Via_Administracion_editar3" name="Via_Administracion_editar3" type="text" class="control form-control" value=""
+                                                        <input id="Via_Administracion_editar3" name="Via_Administracion_editar3" type="text" class="control form-control" value=""
                                                             style="font-size: 10px;">
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <strong style="font-size: 10px;">Intervalo de Administración</strong>
-                                                        <input id=" Intervalo_Administracion_editar3" name="Intervalo_Administracion_editar3" type="text" class="control form-control" value=""
+                                                        <input id="Intervalo_Administracion_editar3" name="Intervalo_Administracion_editar3" type="text" class="control form-control" value=""
                                                             style="font-size: 10px;">
                                                     </div>
                                                 </div>
@@ -911,7 +911,7 @@
 
                                             <div class="col-md-6" id="seleccion_archivo" style="display:none;">
                                                 <label for="file" class="form-label" style="font-size: 12px; font-weight: bold;">Selecciona un archivo PDF:</label>
-                                                <input type="file" name="file" id="file" class="form-control" accept=".pdf" required>
+                                                <input type="file" name="file_1" id="file" class="form-control" accept=".pdf" required>
                                                 <!-- <button type="submit" class="btn btn-primary mt-3" style="font-size: 12px; width: 100%;">Subir Archivo</button> -->
                                             </div>
 
@@ -998,7 +998,7 @@
 
                                         <div class="col-md-6" id="archivocausaraiz" style="display:none;">
                                             <label for="file" class="form-label" style="font-size: 12px; font-weight: bold;">Selecciona un archivo PDF:</label>
-                                            <input type="file" name="file" id="file" class="form-control" accept=".pdf" required>
+                                            <input type="file" name="file_2" id="file" class="form-control" accept=".pdf" required>
                                             <!-- <button type="submit" class="btn btn-primary mt-3" style="font-size: 12px; width: 100%;">Subir Archivo</button> -->
                                         </div>
 

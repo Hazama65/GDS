@@ -861,12 +861,12 @@ include ('php/controllers/edit.controller.php');
 
                         <div class="col-md-12" id="campoGrosor">
                             <strong>Grosor de intima</strong>
-                            <input class="form-control" type="number" name="grosor_derecha" id="grosor_derecha" value="<?php echo $grosor_derecha; ?>">
+                            <input class="form-control" type="number" name="grosor_derecha" id="grosor_derecha" step="0.01" min="0" value="<?php echo $grosor_derecha; ?>">
                         </div>
 
                         <div class="col-md-12" id="campoGrosor">
                             <strong>Clasificacion</strong>
-                            <input class="form-control" type="number" name="clasificacion_derecha" id="clasificacion_derecha" value="<?php echo $clasificacion_derecha; ?>">
+                            <input class="form-control" type="text" name="clasificacion_derecha" id="clasificacion_derecha" value="<?php echo $clasificacion_derecha; ?>" onblur="calculo_clasifcacion()">
                         </div>
 
                         <div class="col-md-12">
@@ -891,12 +891,12 @@ include ('php/controllers/edit.controller.php');
 
                         <div class="col-md-12" id="campoGrosor">
                             <strong>Grosor de intima</strong>
-                            <input class="form-control" type="number" name="grosor_izquierda" id="grosor_izquierda" value="<?php echo $grosor_izquierda; ?>">
+                            <input class="form-control" type="number" name="grosor_izquierda" id="grosor_izquierda" step="0.01" min="0" value="<?php echo $grosor_izquierda; ?>">
                         </div>
 
                         <div class="col-md-12" id="campoGrosor">
                             <strong>Clasificacion</strong>
-                            <input class="form-control" type="number" name="clasificacion_izquierda" id="clasificacion_izquierda" value="<?php echo $clasificacion_izquierda; ?>">
+                            <input class="form-control" type="text" name="clasificacion_izquierda" id="clasificacion_izquierda" value="<?php echo $clasificacion_izquierda; ?>" onblur="calculo_clasifcacion()">
                         </div>
 
                         <div class="col-md-12">

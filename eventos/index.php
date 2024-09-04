@@ -54,36 +54,45 @@ include("modal/registropaciente.php");
     <br><br>
 
     <!-- ======================== AQUI INICIA EL BUSCADOR ======================== -->
-    <div class="row">
 
-        <div class="col-4" width="100%" height="400px" style="margin-bottom: 100px; ">
-            <div id="patient-list-container" style="background-color:rgb(254, 0, 0)">
-                <br>
-                <input type="text" id="search" placeholder="Buscar ...">
-                <ul id="patient-list">
+    <div class="container-fluid">
 
-                <li class="patient-item bi bi-person-badge"  data-id-paciente="10">CHICO LOPEZ JESUS
-                
-                    <a href="editar.php"><button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .60rem;"> Editar </button></a>
-                </li>
-                </ul>
-
-            </div> <!-- cierre del <div id="patient-list-container">-->
-        </div> <!-- cierre del <div class="col-3">-->
-
-        <!-- ======================== AQUI FINALIZA EL BUSCADOR ======================== -->
-
-        <!-- ======================== AQUI INICIA LA TABLA ======================== -->
-
-        <div class="col-7">
-            <div class="container">
-                <!-- Tu código existente -->
-
-                <!-- Agrega un div para contener el select dinámico -->
-                <div id="Seguimiento_index" style="display: none;">
-                    <select name="paciente_seleccionado" class="col-6 form-select custom-select" id="paciente_seleccionado" style="background-color: #6c757d; color: white; margin-bottom:10px">
-                    </select>
-
+        <div class="row">
+    
+            <div class="col-4" width="100%" height="400px" style="margin-bottom: 100px; ">
+                <div id="patient-list-container" style="background-color:rgb(254, 0, 0)">
+                    <br>
+                    <input type="text" id="search" placeholder="Buscar ...">
+                    <ul id="patient-list">
+                        <?php
+                            if (!empty($data)) {
+                                // Comienza a generar la lista de pacientes
+                                echo '<ul class="patient-list" >';
+                                foreach ($data as $datos) {
+                                    $id_paciente = $datos["id_paciente"];
+                                    $nombrePaciente = $datos["nombre_paciente"];
+    
+                                    // Genera un elemento de lista para cada paciente
+                                    echo '<li class="patient-item" data-id-paciente="' . $id_paciente . '">';
+                                    echo $nombrePaciente;
+                                    echo '<a href="editar.php?id=' . $id_paciente . '">';
+                                    echo '<button type="button" class="btn btn-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Editar</button>';
+                                    echo '</a>';
+                                    echo '</li>';
+                                }
+                                echo '</ul>';
+                            } else {
+                                echo "No se encontraron pacientes";
+                            }
+                            ?>
+                    </ul>
+    
+                </div> <!-- cierre del <div id="patient-list-container">-->
+            </div> <!-- cierre del <div class="col-3">-->
+    
+            <div class="col-md-8">
+                <div class="container container-seguimiento">
+                    <div id="tabla-seguimiento" style="height: 500px; overflow-y: auto; margin-bottom: 100px;"></div>
                 </div>
             </div>
     

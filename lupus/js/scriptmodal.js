@@ -231,6 +231,17 @@ function mostrarEgo() {
     }
 }
 
+function mostrarUso() {
+    let seleccion = document.getElementById("doppler").value;
+    let usg = document.getElementById("div_uso_usg");
+
+    if (seleccion === "Si") {
+        usg.style.display = "block";
+    } else {
+        usg.style.display = "none";
+    }
+}
+
 function mostrar_derecha() {
     let Uso_derecha = document.getElementById("Uso_derecha");
     let derecha_container = document.getElementById("derecha_div");
@@ -238,7 +249,6 @@ function mostrar_derecha() {
     
     if (Uso_derecha.checked) {
         derecha_container.style.display = "block";
-        calculo_clasifcacion();
     } else {
         derecha_container.style.display = "none";
     }
@@ -259,19 +269,123 @@ function mostrar_izquierda() {
 function calculo_clasifcacion () {
     let sexo = document.getElementById('sex').value;
     let edad = document.getElementById('edad').value;
+    let grosor_derecha = document.getElementById('grosor_derecha').value;
+    let grosor_izquierda = document.getElementById('grosor_izquierda').value;
 
     switch (sexo) {
         case 'Hombre':
-            console.log(edad)
+            if (grosor_derecha != 0) {
+                let clasificacion = clasificarPorEdadYGrosor_hombre_derecha(edad, grosor_derecha);
+                document.getElementById('clasificacion_derecha').value = clasificacion;
+            }
+            if (grosor_izquierda != 0) {
+                let clasificacion = clasificarPorEdadYGrosor_hombre_izquierda(edad, grosor_izquierda);
+                document.getElementById('clasificacion_izquierda').value = clasificacion;
+            }
             break;
 
         case 'Mujer':
-
+            if (grosor_derecha != 0) {
+                let clasificacion = clasificarPorEdadYGrosor_mujer_derecha(edad, grosor_derecha);
+                document.getElementById('clasificacion_derecha').value = clasificacion;
+            }
+            if (grosor_izquierda != 0) {
+                let clasificacion = clasificarPorEdadYGrosor_mujer_izquierda(edad, grosor_izquierda);
+                document.getElementById('clasificacion_izquierda').value = clasificacion;
+            }
             break;
     
         default:
             break;
     }
+}
+
+function clasificarPorEdadYGrosor_hombre_derecha(edad, grosor) {
+    let resultado = "";
+    if (edad < 30) {
+        if (grosor >= 0.39 && grosor <= 0.42) resultado = "P25 (Bajo)";
+        else if (grosor >= 0.43 && grosor <= 0.47) resultado = "P50 (Medio)";
+        else if (grosor >= 0.48) resultado = "P75 (Alto)";
+    } else if (edad >= 31 && edad <= 40) {
+        if (grosor >= 0.42 && grosor <= 0.45) resultado = "P25 (Bajo)";
+        else if (grosor >= 0.46 && grosor <= 0.49) resultado = "P50 (Medio)";
+        else if (grosor >= 0.50) resultado = "P75 (Alto)";
+    } else if (edad >= 41 && edad <= 50) {
+        if (grosor >= 0.46 && grosor <= 0.49) resultado = "P25 (Bajo)";
+        else if (grosor >= 0.50 && grosor <= 0.56) resultado = "P50 (Medio)";
+        else if (grosor >= 0.57) resultado = "P75 (Alto)";
+    } else if (edad > 50) {
+        if (grosor >= 0.46 && grosor <= 0.51) resultado = "P25 (Bajo)";
+        else if (grosor >= 0.52 && grosor <= 0.61) resultado = "P50 (Medio)";
+        else if (grosor >= 0.62) resultado = "P75 (Alto)";
+    }
+    return resultado;
+}
+
+function clasificarPorEdadYGrosor_hombre_izquierda(edad, grosor) {
+    let resultado = "";
+    if (edad < 30) {
+        if (grosor >= 0.30 && grosor <= 0.43) resultado = "P25 (Bajo)";
+        else if (grosor >= 0.44 && grosor <= 0.46) resultado = "P50 (Medio)";
+        else if (grosor >= 0.47) resultado = "P75 (Alto)";
+    } else if (edad >= 31 && edad <= 40) {
+        if (grosor >= 0.44 && grosor <= 0.46) resultado = "P25 (Bajo)";
+        else if (grosor >= 0.47 && grosor <= 0.50) resultado = "P50 (Medio)";
+        else if (grosor >= 0.51) resultado = "P75 (Alto)";
+    } else if (edad >= 41 && edad <= 50) {
+        if (grosor >= 0.46 && grosor <= 0.50) resultado = "P25 (Bajo)";
+        else if (grosor >= 0.51 && grosor <= 0.56) resultado = "P50 (Medio)";
+        else if (grosor >= 0.57) resultado = "P75 (Alto)";
+    } else if (edad > 50) {
+        if (grosor >= 0.52 && grosor <= 0.58) resultado = "P25 (Bajo)";
+        else if (grosor >= 0.59 && grosor <= 0.63) resultado = "P50 (Medio)";
+        else if (grosor >= 0.64) resultado = "P75 (Alto)";
+    }
+    return resultado;
+}
+
+function clasificarPorEdadYGrosor_mujer_derecha(edad, grosor) {
+    let resultado = "";
+    if (edad < 30) {
+        if (grosor == 0.39) resultado = "P25 (Bajo)";
+        else if (grosor >= 0.40 && grosor <= 0.43) resultado = "P50 (Medio)";
+        else if (grosor >= 0.44) resultado = "P75 (Alto)";
+    } else if (edad >= 31 && edad <= 40) {
+        if (grosor >= 0.42 && grosor <= 0.44) resultado = "P25 (Bajo)";
+        else if (grosor >= 0.45 && grosor <= 0.48) resultado = "P50 (Medio)";
+        else if (grosor >= 0.49) resultado = "P75 (Alto)";
+    } else if (edad >= 41 && edad <= 50) {
+        if (grosor >= 0.44 && grosor <= 0.47) resultado = "P25 (Bajo)";
+        else if (grosor >= 0.48 && grosor <= 0.52) resultado = "P50 (Medio)";
+        else if (grosor >= 0.53) resultado = "P75 (Alto)";
+    } else if (edad > 50) {
+        if (grosor >= 0.50 && grosor <= 0.53) resultado = "P25 (Bajo)";
+        else if (grosor >= 0.54 && grosor <= 0.58) resultado = "P50 (Medio)";
+        else if (grosor >= 0.59) resultado = "P75 (Alto)";
+    }
+    return resultado;
+}
+
+function clasificarPorEdadYGrosor_mujer_izquierda(edad, grosor) {
+    let resultado = "";
+    if (edad < 30) {
+        if (grosor >= 0.42 && grosor <= 0.43) resultado = "P25 (Bajo)";
+        else if (grosor >= 0.44 && grosor <= 0.48) resultado = "P50 (Medio)";
+        else if (grosor >= 0.49) resultado = "P75 (Alto)";
+    } else if (edad >= 31 && edad <= 40) {
+        if (grosor >= 0.44 && grosor <= 0.46) resultado = "P25 (Bajo)";
+        else if (grosor >= 0.47 && grosor <= 0.56) resultado = "P50 (Medio)";
+        else if (grosor >= 0.57) resultado = "P75 (Alto)";
+    } else if (edad >= 41 && edad <= 50) {
+        if (grosor >= 0.50 && grosor <= 0.54) resultado = "P25 (Bajo)";
+        else if (grosor >= 0.55 && grosor <= 0.60) resultado = "P50 (Medio)";
+        else if (grosor >= 0.61) resultado = "P75 (Alto)";
+    } else if (edad > 50) {
+        if (grosor >= 0.53 && grosor <= 0.60) resultado = "P25 (Bajo)";
+        else if (grosor >= 0.61 && grosor <= 0.69) resultado = "P50 (Medio)";
+        else if (grosor >= 0.70) resultado = "P75 (Alto)";
+    }
+    return resultado;
 }
 
 // const visualizacion_tratamiento = () => {

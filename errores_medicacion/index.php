@@ -1,5 +1,5 @@
 <?php
-
+require ('php/controllers/registros.controller.php');
 include("modal/registropaciente.php");
 
 ?>

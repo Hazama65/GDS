@@ -347,12 +347,12 @@ include ('php/controllers/consulta.controller.php');
                 <td><?php echo $doppler; ?> </td>
             </tr>
             <tr>
-                <td class="estilo-celda">Grosor capa intima media</td>
-                <td><?php echo $grosor; ?> </td>
+                <td class="estilo-celda">USG Uso Derecha</td>
+                <td><?php echo $Uso_derecha; ?> </td>
             </tr>
             <tr>
-                <td class="estilo-celda">USG Uso</td>
-                <td><?php echo $Uso; ?> </td>
+                <td class="estilo-celda">USG Uso Izquierda</td>
+                <td><?php echo $Uso_izquierda; ?> </td>
             </tr>
             <tr>
                 <td class="estilo-celda">Grosor Derecho</td>
